@@ -54,7 +54,7 @@ const MONTHS = [
     season: 'Summer',
     festivals: [
       { name: 'Buddha Purnima', temples: 'Bodh Gaya, Buddhist temples, Sarnath', desc: "Buddha's enlightenment. International pilgrims. Bodh Gaya glows." },
-      { name: 'Narasimha Jayanti', temples: 'Ahobilam, Yadagirigutta, Simhachalam', desc: 'Lord Narasimha's appearance day.' },
+      { name: 'Narasimha Jayanti', temples: 'Ahobilam, Yadagirigutta, Simhachalam', desc: "Lord Narasimha's appearance day." },
     ],
     best_for: ['Uttarakhand', 'Bihar (Bodh Gaya)'],
     tip: 'Best weather window for Char Dham before monsoon arrives in June.',
@@ -94,7 +94,7 @@ const MONTHS = [
     season: 'Late Monsoon',
     festivals: [
       { name: 'Ganesh Chaturthi', temples: 'All Maharashtra, especially Pune (Dagdusheth, Kasba), Mumbai (Siddhivinayak)', desc: '10-day festival. Ashtavinayak circuit especially auspicious.' },
-      { name: 'Onam', temples: 'Kerala temples, Thrikkakara Vamana Temple', desc: 'Kerala's harvest festival. Thiruvonam at Thrikkakara is the most sacred.' },
+      { name: "Onam', temples: 'Kerala temples, Thrikkakara Vamana Temple', desc: 'Kerala's harvest festival. Thiruvonam at Thrikkakara is the most sacred." },
     ],
     best_for: ['Maharashtra', 'Kerala'],
     tip: 'Lalbaugcha Raja in Mumbai draws 1.5 million people for visarjan. Go early morning.',
@@ -113,7 +113,7 @@ const MONTHS = [
     month: 'November',
     season: 'Early Winter',
     festivals: [
-      { name: 'Diwali', temples: 'Kashi Vishwanath (Dev Deepawali), Ayodhya, Tirupati', desc: 'Varanasi\'s Dev Deepawali — 1 lakh diyas on the ghats — is the most magical sight in India.' },
+      { name: 'Diwali', temples: 'Kashi Vishwanath (Dev Deepawali), Ayodhya, Tirupati', desc: "Varanasi's Dev Deepawali — 1 lakh diyas on the ghats — is the most magical sight in India.' },
       { name: 'Sabarimala opening', temples: 'Sabarimala Ayyappa', desc: 'Annual pilgrimage season begins. 41-day vrat required. Millions in black.' },
     ],
     best_for: ['Varanasi', 'Ayodhya', 'Kerala'],

@@ -88,7 +88,7 @@ const CIRCUITS = [
     id: 'south-india-grand', name: 'South India Grand Circuit', region: 'Tamil Nadu + Kerala + Karnataka', icon: '🏰',
     temples: 20, days: '14–21', budget: '₹40,000–90,000',
     tags: ['Dravidian', 'UNESCO', 'All deities'],
-    desc: 'The grand tour of South India's temple heritage — Chola temples, Kerala shrines, Karnataka wonders.',
+    desc: "The grand tour of South India's temple heritage — Chola temples, Kerala shrines, Karnataka wonders.",
     stops: ['Brihadeeswarar', 'Srirangam', 'Meenakshi', 'Ramanathaswamy', 'Padmanabhaswamy', 'Guruvayur', 'Chamundeshwari', 'Hoysaleswara'],
   },
 ]
