@@ -337,7 +337,7 @@ export default function SignInForm() {
           align-items: center;
           gap: 1.25rem;
         }
-        .dyn-logo { height: 24px; width: auto; object-fit: contain; flex-shrink: 0; }
+        .dyn-logo { height: 36px; width: auto; object-fit: contain; flex-shrink: 0; }
         .dyn-credit {
           font-size: .65rem;
           color: var(--muted);
@@ -383,7 +383,7 @@ export default function SignInForm() {
           padding-bottom: 1.5rem;
           border-bottom: 1px solid var(--border);
         }
-        .dyn-top img { height: 30px; width: auto; }
+        .dyn-top img { height: 42px; width: auto; }
 
         .form-title {
           font-family: 'Cormorant Garamond', serif;
