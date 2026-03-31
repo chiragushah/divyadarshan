@@ -34,7 +34,7 @@ const NAV_GROUPS = [
       { label: 'Savings Goal', desc: 'Monthly savings tracker', href: '/yatra/goals', icon: '◎' },
       { label: 'Group Split', desc: 'Who owes whom', href: '/yatra/split', icon: '÷' },
       { label: 'My Journal', desc: 'Visit log & photo diary', href: '/yatra/journal', icon: '✦' },
-      { label: 'Temple Reviews', desc: 'Community ratings', href: '/yatra/reviews', icon: '★' },
+      { label: 'Temple Reviews', desc: 'Rate temples you visited', href: '/explore', icon: '★' },
     ],
   },
 ]

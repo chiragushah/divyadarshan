@@ -14,7 +14,7 @@ export async function middleware(request: NextRequest) {
   }
 
   // ── Always public ──────────────────────────────────
-  const PUBLIC = ['/auth/', '/api/auth', '/api/analytics', '/api/admin', '/api/health']
+  const PUBLIC = ['/auth/', '/api/auth', '/api/analytics', '/api/admin', '/api/health', '/api/announcement']
   if (PUBLIC.some(p => pathname.startsWith(p))) return NextResponse.next()
 
   // ── Get session token ──────────────────────────────
