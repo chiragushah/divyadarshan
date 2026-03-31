@@ -6,22 +6,43 @@ import Link from 'next/link'
 import { Loader2 } from 'lucide-react'
 
 const FEATURES = [
-  { icon: '🗺️', label: 'AI Yatra Planner', desc: 'Day-by-day itineraries powered by Claude AI' },
-  { icon: '🔴', label: 'Live Darshan',      desc: '56+ temples streaming live, right now' },
-  { icon: '💰', label: 'Savings Goals',     desc: 'Save for your next yatra with FinVerse' },
-  { icon: '📖', label: 'Pilgrimage Journal',desc: 'Log every temple — your spiritual passport' },
-  { icon: '👥', label: 'Group Split',       desc: 'Fair expense tracking for family yatras' },
-  { icon: '🎒', label: 'Smart Checklists',  desc: 'AI packing lists specific to your destination' },
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 0M9 12h6m-6 6h3m-9-3a9 9 0 1118 0 9 9 0 01-18 0z"/></svg>`,
+    label: 'AI Yatra Planner',
+    desc: 'Describe your destination and days — Claude AI generates a complete day-by-day itinerary with temple sequences, auspicious timings, accommodation recommendations, and local food suggestions.'
+  },
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`,
+    label: 'Live Temple Darshan',
+    desc: 'Watch live darshan from 56+ major temples across India — Tirupati, Kashi Vishwanath, Kedarnath, Vaishno Devi and more. Never miss aarti or festival celebrations again.'
+  },
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`,
+    label: 'Pilgrimage Journal',
+    desc: 'Log every temple you visit with personal notes, star ratings, and memories. Build a lifetime pilgrimage passport — a record of your entire spiritual journey across India.'
+  },
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>`,
+    label: 'Yatra Savings Goals',
+    desc: 'Set a monthly savings target for your dream pilgrimage. Track every deposit, visualize progress, and link to your FinVerse account to earn interest while you save.'
+  },
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/></svg>`,
+    label: 'Group Expense Split',
+    desc: 'Plan family or group pilgrimages without financial confusion. Log every shared expense, calculate individual settlements, and share a clean summary on WhatsApp in one tap.'
+  },
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>`,
+    label: 'Smart Packing Checklist',
+    desc: 'Gemini AI generates destination-specific packing lists. Kedarnath needs altitude gear and trekking boots. Tirupati needs dhoti. Amarnath needs permits. Done automatically.'
+  },
 ]
 
-const TEMPLES = [
-  { name: 'Kashi Vishwanath', location: 'Varanasi', deity: 'Shiva' },
-  { name: 'Tirupati Balaji', location: 'Tirupati', deity: 'Vishnu' },
-  { name: 'Meenakshi Temple', location: 'Madurai', deity: 'Shakti' },
-  { name: 'Kedarnath', location: 'Uttarakhand', deity: 'Shiva' },
-  { name: 'Siddhivinayak', location: 'Mumbai', deity: 'Ganesha' },
-  { name: 'Vaishno Devi', location: 'Jammu', deity: 'Shakti' },
-]
+const TRIVIA = {
+  fact: "The Brihadeeswarar Temple in Thanjavur, built by Raja Raja Chola I in 1010 CE, has a shadow that never falls on the ground at noon — the 216-foot vimana is positioned so precisely that at midday, its shadow disappears entirely. It was built over 1,000 years ago without modern engineering tools.",
+  temple: "Brihadeeswarar Temple, Thanjavur",
+  year: "1010 CE"
+}
 
 export default function SignInForm() {
   const router = useRouter()
@@ -62,71 +83,66 @@ export default function SignInForm() {
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-          --crimson: #3D0808;
-          --crimson-deep: #1A0303;
-          --crimson-mid: #5C0F0F;
-          --gold: #C9993A;
-          --gold-light: #EDD9A3;
-          --ivory: #FAF7F2;
-          --ivory-warm: #F5EFE4;
-          --ink: #1A1008;
-          --muted: rgba(237,224,196,.45);
+          --saffron: #C0570A;
+          --saffron-light: #E8772A;
+          --saffron-pale: #FFF3EB;
+          --gold: #B8860B;
+          --gold-light: #D4A82A;
+          --gold-pale: #FDF6E3;
+          --sandstone: #F5EFE4;
+          --sandstone-dark: #EDE5D8;
+          --ivory: #FDFAF6;
+          --ink: #1C1208;
+          --ink-mid: #3D2B1A;
+          --muted: #7A6555;
+          --muted-light: #A8937F;
+          --border: #E8DFD2;
+          --crimson: #6B1010;
+          --crimson-deep: #3D0808;
         }
+
+        html, body { height: 100%; }
 
         body {
           font-family: 'Outfit', sans-serif;
-          overflow: hidden;
-          height: 100vh;
+          background: var(--ivory);
+          color: var(--ink);
         }
 
+        /* ── SHELL ──────────────────────────────── */
         .auth-shell {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          height: 100vh;
-          overflow: hidden;
+          grid-template-columns: 55% 45%;
+          min-height: 100vh;
         }
 
         /* ── LEFT PANEL ─────────────────────────── */
         .left-panel {
-          background: linear-gradient(155deg, #1A0303 0%, #2D0505 40%, #3D0808 100%);
-          position: relative;
-          overflow: hidden;
+          background: var(--sandstone);
+          border-right: 1px solid var(--border);
           display: flex;
           flex-direction: column;
           padding: 2.5rem;
+          position: relative;
+          overflow: hidden;
         }
 
-        /* Ambient glow */
+        /* Subtle warm overlay pattern */
         .left-panel::before {
           content: '';
           position: absolute;
-          top: -20%;
-          right: -20%;
-          width: 500px; height: 500px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(201,153,58,.09) 0%, transparent 65%);
-          pointer-events: none;
-        }
-        .left-panel::after {
-          content: '';
-          position: absolute;
-          bottom: -10%;
-          left: -10%;
+          top: 0; right: 0;
           width: 400px; height: 400px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(92,15,15,.5) 0%, transparent 65%);
+          background: radial-gradient(circle, rgba(192,87,10,.05) 0%, transparent 70%);
           pointer-events: none;
         }
 
-        /* Decorative grid pattern */
-        .grid-overlay {
+        /* Top decorative border */
+        .top-accent {
           position: absolute;
-          inset: 0;
-          background-image:
-            linear-gradient(rgba(201,153,58,.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(201,153,58,.03) 1px, transparent 1px);
-          background-size: 40px 40px;
-          pointer-events: none;
+          top: 0; left: 0; right: 0;
+          height: 3px;
+          background: linear-gradient(to right, var(--saffron), var(--gold-light), var(--saffron));
         }
 
         /* Brand */
@@ -134,80 +150,81 @@ export default function SignInForm() {
           display: flex;
           align-items: center;
           gap: .75rem;
+          text-decoration: none;
+          margin-bottom: 2.5rem;
           position: relative;
           z-index: 1;
-          text-decoration: none;
         }
-        .brand-icon {
-          width: 40px; height: 40px;
-          background: linear-gradient(135deg, var(--gold), #A07828);
+        .brand-emblem {
+          width: 42px; height: 42px;
+          background: linear-gradient(135deg, var(--saffron) 0%, var(--crimson) 100%);
           border-radius: 10px;
           display: flex; align-items: center; justify-content: center;
-          font-size: 20px;
-          box-shadow: 0 4px 16px rgba(201,153,58,.3);
+          box-shadow: 0 3px 12px rgba(192,87,10,.25);
+          font-size: 22px;
         }
+        .brand-text { }
         .brand-name {
           font-family: 'Cormorant Garamond', serif;
-          font-size: 1.4rem;
+          font-size: 1.35rem;
           font-weight: 600;
-          color: var(--ivory);
+          color: var(--ink);
           letter-spacing: .01em;
+          line-height: 1.1;
+        }
+        .brand-tagline {
+          font-size: .65rem;
+          letter-spacing: .1em;
+          text-transform: uppercase;
+          color: var(--muted-light);
         }
 
-        /* Main copy */
-        .left-content {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+        /* Hero copy */
+        .left-hero {
+          margin-bottom: 2rem;
           position: relative;
           z-index: 1;
-          padding: 1rem 0 1rem;
         }
-
-        .left-eyebrow {
+        .hero-eyebrow {
           display: inline-flex;
           align-items: center;
-          gap: .5rem;
+          gap: .45rem;
           font-size: .65rem;
           font-weight: 600;
           letter-spacing: .15em;
           text-transform: uppercase;
-          color: var(--gold);
-          margin-bottom: 1.25rem;
+          color: var(--saffron);
+          margin-bottom: 1rem;
+          padding: .3rem .7rem;
+          background: rgba(192,87,10,.08);
+          border-radius: 100px;
+          border: 1px solid rgba(192,87,10,.15);
         }
         .live-dot {
           width: 6px; height: 6px;
           border-radius: 50%;
           background: #E74C3C;
-          animation: pulse 2s ease infinite;
+          animation: blink 2s ease infinite;
         }
-        @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: .4; }
-        }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
 
-        .left-headline {
+        .hero-headline {
           font-family: 'Cormorant Garamond', serif;
-          font-size: clamp(2rem, 3.5vw, 2.8rem);
-          font-weight: 300;
+          font-size: clamp(2rem, 3vw, 2.75rem);
+          font-weight: 400;
           line-height: 1.15;
-          color: var(--ivory);
+          color: var(--ink);
           margin-bottom: .75rem;
         }
-        .left-headline em {
+        .hero-headline em {
           font-style: italic;
-          background: linear-gradient(135deg, var(--gold-light), var(--gold));
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          color: var(--saffron);
         }
-
-        .left-subhead {
+        .hero-subhead {
           font-size: .9rem;
-          line-height: 1.7;
+          line-height: 1.75;
           color: var(--muted);
-          margin-bottom: 2rem;
-          max-width: 420px;
+          max-width: 460px;
         }
 
         /* Feature list */
@@ -215,74 +232,118 @@ export default function SignInForm() {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: .75rem;
-          margin-bottom: 2rem;
-        }
-        .feature-item {
-          display: flex;
-          align-items: flex-start;
-          gap: .6rem;
-          padding: .7rem .875rem;
-          background: rgba(255,255,255,.04);
-          border: 1px solid rgba(255,255,255,.07);
-          border-radius: 10px;
-          transition: all .2s;
-        }
-        .feature-item:hover {
-          background: rgba(201,153,58,.07);
-          border-color: rgba(201,153,58,.15);
-        }
-        .fi-icon {
-          font-size: 1.1rem;
-          line-height: 1;
-          flex-shrink: 0;
-          margin-top: 1px;
-        }
-        .fi-label {
-          font-size: .78rem;
-          font-weight: 500;
-          color: var(--ivory);
-          line-height: 1.2;
-        }
-        .fi-desc {
-          font-size: .68rem;
-          color: rgba(237,224,196,.35);
-          line-height: 1.4;
-          margin-top: 1px;
-        }
-
-        /* Temple ticker */
-        .temple-ticker {
+          margin-bottom: 1.75rem;
           position: relative;
           z-index: 1;
         }
-        .ticker-label {
-          font-size: .6rem;
-          font-weight: 600;
-          letter-spacing: .12em;
-          text-transform: uppercase;
-          color: rgba(237,224,196,.25);
-          margin-bottom: .6rem;
+        .feature-card {
+          background: white;
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 1rem;
+          transition: all .2s;
         }
-        .ticker-track {
-          display: flex;
-          gap: .6rem;
-          flex-wrap: wrap;
+        .feature-card:hover {
+          border-color: rgba(192,87,10,.25);
+          box-shadow: 0 2px 12px rgba(192,87,10,.08);
+          transform: translateY(-1px);
         }
-        .ticker-pill {
+        .fc-header {
           display: flex;
           align-items: center;
-          gap: .4rem;
-          padding: .3rem .7rem;
-          background: rgba(255,255,255,.04);
-          border: 1px solid rgba(255,255,255,.07);
-          border-radius: 100px;
-          font-size: .7rem;
-          color: rgba(237,224,196,.5);
-          white-space: nowrap;
+          gap: .6rem;
+          margin-bottom: .4rem;
         }
-        .ticker-pill span:first-child {
+        .fc-icon {
+          width: 28px; height: 28px;
+          color: var(--saffron);
+          flex-shrink: 0;
+        }
+        .fc-icon svg { width: 100%; height: 100%; }
+        .fc-label {
+          font-size: .82rem;
+          font-weight: 600;
+          color: var(--ink-mid);
+          line-height: 1.2;
+        }
+        .fc-desc {
+          font-size: .72rem;
+          line-height: 1.55;
+          color: var(--muted-light);
+          padding-left: .1rem;
+        }
+
+        /* Trivia box */
+        .trivia-box {
+          background: white;
+          border: 1px solid var(--border);
+          border-left: 3px solid var(--gold-light);
+          border-radius: 12px;
+          padding: 1rem 1.25rem;
+          margin-bottom: 1.75rem;
+          position: relative;
+          z-index: 1;
+        }
+        .trivia-header {
+          display: flex;
+          align-items: center;
+          gap: .5rem;
+          margin-bottom: .5rem;
+        }
+        .trivia-icon {
+          width: 18px; height: 18px;
           color: var(--gold);
+        }
+        .trivia-label {
+          font-size: .6rem;
+          font-weight: 700;
+          letter-spacing: .15em;
+          text-transform: uppercase;
+          color: var(--gold);
+        }
+        .trivia-temple {
+          font-size: .68rem;
+          color: var(--muted-light);
+          margin-left: auto;
+        }
+        .trivia-text {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: .95rem;
+          font-style: italic;
+          line-height: 1.6;
+          color: var(--ink-mid);
+        }
+
+        /* Footer */
+        .left-footer {
+          position: relative;
+          z-index: 1;
+          border-top: 1px solid var(--border);
+          padding-top: 1.25rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+        }
+        .dynaimers-credit {
           font-size: .65rem;
+          color: var(--muted-light);
+          line-height: 1.5;
+        }
+        .dynaimers-credit strong {
+          display: block;
+          color: var(--muted);
+          font-weight: 500;
+        }
+        .dynaimers-logo-wrap {
+          height: 28px;
+          flex-shrink: 0;
+        }
+        .dynaimers-logo-wrap img {
+          height: 100%;
+          width: auto;
+          object-fit: contain;
+          filter: brightness(.7) sepia(.2);
         }
 
         /* ── RIGHT PANEL ────────────────────────── */
@@ -297,50 +358,63 @@ export default function SignInForm() {
           position: relative;
         }
 
-        /* Top right back link */
         .back-link {
           position: absolute;
           top: 1.5rem;
           left: 1.5rem;
+          font-size: .78rem;
+          color: var(--muted-light);
+          text-decoration: none;
           display: flex;
           align-items: center;
-          gap: .4rem;
-          font-size: .78rem;
-          color: #9B8B7E;
-          text-decoration: none;
+          gap: .3rem;
           transition: color .2s;
         }
-        .back-link:hover { color: var(--crimson); }
+        .back-link:hover { color: var(--saffron); }
 
-        .form-card {
+        .form-wrap {
           width: 100%;
-          max-width: 400px;
+          max-width: 380px;
         }
 
-        .form-headline {
+        /* Dynaimers logo on white side */
+        .right-dynaimers {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 2rem;
+        }
+        .right-dynaimers img {
+          height: 32px;
+          width: auto;
+          object-fit: contain;
+        }
+
+        .form-title {
           font-family: 'Cormorant Garamond', serif;
           font-size: 2rem;
           font-weight: 500;
           color: var(--ink);
-          margin-bottom: .3rem;
-          line-height: 1.2;
+          margin-bottom: .25rem;
+          line-height: 1.15;
         }
-        .form-subhead {
-          font-size: .85rem;
-          color: #9B8B7E;
+        .form-sub {
+          font-size: .82rem;
+          color: var(--muted);
           margin-bottom: 1.75rem;
-          line-height: 1.5;
+          line-height: 1.55;
         }
 
-        /* Mode toggle */
-        .mode-toggle {
+        /* Tab toggle */
+        .tab-row {
           display: flex;
-          background: #F0EAE0;
+          background: var(--sandstone);
+          border: 1px solid var(--border);
           border-radius: 10px;
-          padding: 4px;
+          padding: 3px;
           margin-bottom: 1.5rem;
+          gap: 3px;
         }
-        .mode-btn {
+        .tab-btn {
           flex: 1;
           padding: .55rem;
           border: none;
@@ -351,38 +425,38 @@ export default function SignInForm() {
           cursor: pointer;
           transition: all .2s;
           background: transparent;
-          color: #9B8B7E;
+          color: var(--muted);
         }
-        .mode-btn.active {
+        .tab-btn.on {
           background: white;
           color: var(--ink);
-          box-shadow: 0 1px 4px rgba(0,0,0,.1);
+          box-shadow: 0 1px 4px rgba(0,0,0,.08);
         }
 
         /* Error */
-        .error-box {
-          padding: .75rem 1rem;
-          background: #FFF0F0;
-          border: 1px solid #FFCDD2;
+        .err {
+          padding: .7rem 1rem;
+          background: #FEF2F2;
+          border: 1px solid #FECACA;
           border-radius: 8px;
-          font-size: .82rem;
-          color: #C62828;
+          font-size: .8rem;
+          color: #B91C1C;
           margin-bottom: 1rem;
         }
 
-        /* Google button */
+        /* Google btn */
         .btn-google {
           width: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: .75rem;
+          gap: .7rem;
           padding: .8rem;
           background: white;
-          border: 1.5px solid #E5DDD5;
+          border: 1.5px solid var(--border);
           border-radius: 10px;
           font-family: 'Outfit', sans-serif;
-          font-size: .88rem;
+          font-size: .85rem;
           font-weight: 500;
           color: var(--ink);
           cursor: pointer;
@@ -390,46 +464,37 @@ export default function SignInForm() {
           margin-bottom: 1.25rem;
         }
         .btn-google:hover {
-          border-color: #C9993A;
-          box-shadow: 0 2px 12px rgba(201,153,58,.15);
+          border-color: var(--saffron);
+          box-shadow: 0 2px 12px rgba(192,87,10,.12);
         }
-        .btn-google:disabled { opacity: .6; cursor: not-allowed; }
+        .btn-google:disabled { opacity:.6; cursor:not-allowed; }
 
         /* Divider */
-        .divider {
+        .or-divider {
           display: flex;
           align-items: center;
-          gap: .75rem;
+          gap: .6rem;
           margin-bottom: 1.25rem;
         }
-        .divider-line {
-          flex: 1;
-          height: 1px;
-          background: #EDE6DC;
-        }
-        .divider-text {
-          font-size: .72rem;
-          color: #B8AA9E;
-          white-space: nowrap;
-        }
+        .or-line { flex:1; height:1px; background: var(--border); }
+        .or-text { font-size:.7rem; color: var(--muted-light); white-space:nowrap; }
 
-        /* Form fields */
-        .field {
-          margin-bottom: .875rem;
-        }
+        /* Fields */
+        .field { margin-bottom: .875rem; }
         .field label {
           display: block;
-          font-size: .75rem;
-          font-weight: 500;
-          color: #6B5B4E;
+          font-size: .72rem;
+          font-weight: 600;
+          color: var(--muted);
+          letter-spacing: .03em;
+          text-transform: uppercase;
           margin-bottom: .35rem;
-          letter-spacing: .02em;
         }
         .field input {
           width: 100%;
           padding: .75rem 1rem;
           background: white;
-          border: 1.5px solid #E5DDD5;
+          border: 1.5px solid var(--border);
           border-radius: 10px;
           font-family: 'Outfit', sans-serif;
           font-size: .88rem;
@@ -438,8 +503,8 @@ export default function SignInForm() {
           transition: all .2s;
         }
         .field input:focus {
-          border-color: var(--crimson);
-          box-shadow: 0 0 0 3px rgba(61,8,8,.08);
+          border-color: var(--saffron);
+          box-shadow: 0 0 0 3px rgba(192,87,10,.1);
         }
         .field input::placeholder { color: #C5B9AE; }
 
@@ -447,7 +512,7 @@ export default function SignInForm() {
         .btn-submit {
           width: 100%;
           padding: .85rem;
-          background: linear-gradient(135deg, var(--crimson) 0%, #5C0F0F 100%);
+          background: linear-gradient(135deg, var(--saffron) 0%, var(--crimson) 100%);
           color: white;
           border: none;
           border-radius: 10px;
@@ -455,186 +520,179 @@ export default function SignInForm() {
           font-size: .9rem;
           font-weight: 600;
           cursor: pointer;
-          transition: all .2s;
+          transition: all .25s;
           display: flex;
           align-items: center;
           justify-content: center;
           gap: .5rem;
           margin-top: .25rem;
+          letter-spacing: .01em;
         }
         .btn-submit:hover:not(:disabled) {
           transform: translateY(-1px);
-          box-shadow: 0 6px 20px rgba(61,8,8,.3);
+          box-shadow: 0 6px 20px rgba(192,87,10,.35);
         }
-        .btn-submit:disabled { opacity: .7; cursor: not-allowed; }
+        .btn-submit:disabled { opacity:.7; cursor:not-allowed; }
 
-        /* Trust badges */
-        .trust-strip {
+        /* Trust */
+        .trust-row {
           display: flex;
           align-items: center;
           justify-content: center;
           gap: 1.25rem;
           margin-top: 1.25rem;
           padding-top: 1.25rem;
-          border-top: 1px solid #EDE6DC;
+          border-top: 1px solid var(--border);
+          flex-wrap: wrap;
         }
         .trust-item {
           display: flex;
           align-items: center;
           gap: .35rem;
-          font-size: .72rem;
-          color: #B8AA9E;
+          font-size: .7rem;
+          color: var(--muted-light);
         }
-        .trust-icon { font-size: .9rem; }
+        .trust-item svg { width:14px; height:14px; color: var(--saffron); }
 
         /* Terms */
-        .terms-text {
+        .terms {
           text-align: center;
           font-size: .68rem;
-          color: #B8AA9E;
+          color: var(--muted-light);
           margin-top: 1rem;
           line-height: 1.6;
         }
-        .terms-text a {
-          color: var(--crimson);
-          text-decoration: none;
+        .terms a { color: var(--saffron); text-decoration: none; }
+        .terms a:hover { text-decoration: underline; }
+
+        /* Right footer */
+        .right-footer {
+          position: absolute;
+          bottom: 1rem;
+          left: 0; right: 0;
+          text-align: center;
+          font-size: .62rem;
+          color: var(--muted-light);
+          opacity: .6;
         }
-        .terms-text a:hover { text-decoration: underline; }
 
         /* ── RESPONSIVE ─────────────────────────── */
         @media (max-width: 900px) {
-          .auth-shell {
-            grid-template-columns: 1fr;
-            overflow: auto;
-            height: auto;
-            min-height: 100vh;
-          }
-          .left-panel {
-            padding: 1.75rem;
-            min-height: auto;
-          }
-          .feature-list {
-            grid-template-columns: 1fr 1fr;
-          }
-          body { overflow: auto; }
+          .auth-shell { grid-template-columns: 1fr; min-height: 100vh; }
+          .left-panel { padding: 1.75rem; }
+          .right-panel { padding: 1.75rem; min-height: 100vh; }
+          .right-footer { position: relative; margin-top: 1.5rem; bottom: auto; }
         }
-
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
           .feature-list { grid-template-columns: 1fr; }
-          .left-panel { padding: 1.5rem; }
-          .right-panel { padding: 1.5rem; }
-          .left-headline { font-size: 1.75rem; }
+          .left-panel { padding: 1.25rem; }
+          .right-panel { padding: 1.25rem; }
         }
       `}</style>
 
       <div className="auth-shell">
 
-        {/* ── LEFT — Value Proposition ── */}
+        {/* ─── LEFT PANEL ─────────────────────── */}
         <div className="left-panel">
-          <div className="grid-overlay" />
+          <div className="top-accent" />
 
           {/* Brand */}
           <Link href="/" className="brand">
-            <div className="brand-icon">🛕</div>
-            <span className="brand-name">DivyaDarshan</span>
+            <div className="brand-emblem">🛕</div>
+            <div className="brand-text">
+              <div className="brand-name">DivyaDarshan</div>
+              <div className="brand-tagline">India's Temple Explorer</div>
+            </div>
           </Link>
 
-          {/* Main content */}
-          <div className="left-content">
-            <div className="left-eyebrow">
+          {/* Hero */}
+          <div className="left-hero">
+            <div className="hero-eyebrow">
               <span className="live-dot" />
-              India's Temple Explorer
+              56 Temples Streaming Live
             </div>
-
-            <h1 className="left-headline">
+            <h1 className="hero-headline">
               Every sacred temple.<br />
               <em>One companion.</em>
             </h1>
-
-            <p className="left-subhead">
-              350+ temples, AI-powered yatra planning, live darshan streams,
-              and a complete pilgrimage toolkit — built for the modern Indian pilgrim.
+            <p className="hero-subhead">
+              India has over 2 million temples. Planning a pilgrimage means 
+              dozens of scattered tabs, outdated blogs, and guesswork. 
+              DivyaDarshan brings AI-powered planning, live darshan, savings tools, 
+              and community — into one thoughtfully designed platform.
             </p>
-
-            {/* Features grid */}
-            <div className="feature-list">
-              {FEATURES.map(f => (
-                <div key={f.label} className="feature-item">
-                  <span className="fi-icon">{f.icon}</span>
-                  <div>
-                    <div className="fi-label">{f.label}</div>
-                    <div className="fi-desc">{f.desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Temple ticker */}
-            <div className="temple-ticker">
-              <div className="ticker-label">Temples in our directory</div>
-              <div className="ticker-track">
-                {TEMPLES.map(t => (
-                  <div key={t.name} className="ticker-pill">
-                    <span>🛕</span>
-                    <span>{t.name}</span>
-                  </div>
-                ))}
-                <div className="ticker-pill">
-                  <span>+</span>
-                  <span>344 more</span>
-                </div>
-              </div>
-            </div>
           </div>
 
-          {/* Bottom stats */}
-          <div style={{ display: 'flex', gap: '2rem', position: 'relative', zIndex: 1 }}>
-            {[
-              { n: '350+', l: 'Temples' },
-              { n: '56',   l: 'Live' },
-              { n: '12',   l: 'Circuits' },
-              { n: '₹0',   l: 'Free' },
-            ].map(s => (
-              <div key={s.l}>
-                <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.4rem', fontWeight: 500, color: 'var(--gold-light)', lineHeight: 1 }}>{s.n}</div>
-                <div style={{ fontSize: '.65rem', letterSpacing: '.08em', textTransform: 'uppercase', color: 'rgba(237,224,196,.3)', marginTop: '.2rem' }}>{s.l}</div>
+          {/* Features */}
+          <div className="feature-list">
+            {FEATURES.map(f => (
+              <div key={f.label} className="feature-card">
+                <div className="fc-header">
+                  <div className="fc-icon" dangerouslySetInnerHTML={{ __html: f.icon }} />
+                  <span className="fc-label">{f.label}</span>
+                </div>
+                <p className="fc-desc">{f.desc}</p>
               </div>
             ))}
           </div>
+
+          {/* Temple Trivia */}
+          <div className="trivia-box">
+            <div className="trivia-header">
+              <svg className="trivia-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/>
+              </svg>
+              <span className="trivia-label">Temple Trivia</span>
+              <span className="trivia-temple">{TRIVIA.temple} · {TRIVIA.year}</span>
+            </div>
+            <p className="trivia-text">"{TRIVIA.fact}"</p>
+          </div>
+
+          {/* Footer */}
+          <div className="left-footer">
+            <div className="dynaimers-credit">
+              Conceptualized &amp; Designed by
+              <strong>Dynaimers Consulting Private Limited</strong>
+            </div>
+            <div className="dynaimers-logo-wrap">
+              <img src="/dynaimers-logo.jpg" alt="Dynaimers Consulting" />
+            </div>
+          </div>
         </div>
 
-        {/* ── RIGHT — Auth Form ── */}
+        {/* ─── RIGHT PANEL ────────────────────── */}
         <div className="right-panel">
-          <Link href="/" className="back-link">
-            ← Back to home
-          </Link>
+          <Link href="/" className="back-link">← Back</Link>
 
-          <div className="form-card">
+          <div className="form-wrap">
 
-            {/* Headline */}
-            <h2 className="form-headline">
-              {mode === 'signup' ? 'Start your yatra' : 'Welcome back'}
+            {/* Dynaimers logo on white background */}
+            <div className="right-dynaimers">
+              <img src="/dynaimers-logo.jpg" alt="Dynaimers" />
+            </div>
+
+            <h2 className="form-title">
+              {mode === 'signup' ? 'Begin your yatra' : 'Welcome back'}
             </h2>
-            <p className="form-subhead">
+            <p className="form-sub">
               {mode === 'signup'
-                ? 'Free forever. No credit card. Join thousands of pilgrims.'
-                : 'Sign in to access your temples, plans, and journal.'}
+                ? 'Free forever. No credit card required. Join thousands of pilgrims already planning smarter.'
+                : 'Sign in to access your temples, plans, journal and savings goals.'}
             </p>
 
-            {/* Mode toggle */}
-            <div className="mode-toggle">
-              <button className={`mode-btn ${mode === 'signup' ? 'active' : ''}`}
+            {/* Tab */}
+            <div className="tab-row">
+              <button className={`tab-btn ${mode === 'signup' ? 'on' : ''}`}
                 onClick={() => { setMode('signup'); setError('') }}>
                 Create Account
               </button>
-              <button className={`mode-btn ${mode === 'signin' ? 'active' : ''}`}
+              <button className={`tab-btn ${mode === 'signin' ? 'on' : ''}`}
                 onClick={() => { setMode('signin'); setError('') }}>
                 Sign In
               </button>
             </div>
 
-            {/* Error */}
-            {error && <div className="error-box">{error}</div>}
+            {error && <div className="err">{error}</div>}
 
             {/* Google */}
             <button className="btn-google" onClick={handleGoogle} disabled={googleLoading}>
@@ -649,14 +707,10 @@ export default function SignInForm() {
               Continue with Google
             </button>
 
-            {/* Divider */}
-            <div className="divider">
-              <div className="divider-line" />
-              <span className="divider-text">or continue with email</span>
-              <div className="divider-line" />
+            <div className="or-divider">
+              <div className="or-line" /><span className="or-text">or use email</span><div className="or-line" />
             </div>
 
-            {/* Email form */}
             <form onSubmit={handleEmail}>
               {mode === 'signup' && (
                 <div className="field">
@@ -667,15 +721,14 @@ export default function SignInForm() {
               )}
               <div className="field">
                 <label>Email Address</label>
-                <input type="email" placeholder="you@example.com" value={form.email} required
+                <input type="email" placeholder="you@example.com" required value={form.email}
                   onChange={e => setForm(f => ({ ...f, email: e.target.value }))} />
               </div>
               <div className="field">
-                <label>Password {mode === 'signup' && <span style={{ color: '#B8AA9E', fontWeight: 400 }}>(min 8 characters)</span>}</label>
-                <input type="password" placeholder="••••••••" value={form.password} required
-                  minLength={8} onChange={e => setForm(f => ({ ...f, password: e.target.value }))} />
+                <label>Password {mode === 'signup' && <span style={{fontWeight:400,textTransform:'none',letterSpacing:0}}> — min 8 characters</span>}</label>
+                <input type="password" placeholder="••••••••" required minLength={8} value={form.password}
+                  onChange={e => setForm(f => ({ ...f, password: e.target.value }))} />
               </div>
-
               <button type="submit" className="btn-submit" disabled={loading}>
                 {loading
                   ? <><Loader2 size={15} className="animate-spin" /> Please wait…</>
@@ -683,27 +736,29 @@ export default function SignInForm() {
               </button>
             </form>
 
-            {/* Trust badges */}
-            <div className="trust-strip">
+            {/* Trust */}
+            <div className="trust-row">
               <div className="trust-item">
-                <span className="trust-icon">🔒</span>
-                Secure & Private
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Secure &amp; Private
               </div>
               <div className="trust-item">
-                <span className="trust-icon">✨</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 Free Forever
               </div>
               <div className="trust-item">
-                <span className="trust-icon">🛕</span>
-                350+ Temples
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                No Credit Card
               </div>
             </div>
 
-            <p className="terms-text">
-              By continuing you agree to our{' '}
-              <Link href="/terms">Terms of Service</Link> and{' '}
-              <Link href="/privacy">Privacy Policy</Link>.
+            <p className="terms">
+              By continuing you agree to our <Link href="/terms">Terms</Link> &amp; <Link href="/privacy">Privacy Policy</Link>
             </p>
+          </div>
+
+          <div className="right-footer">
+            Conceptualized &amp; Designed by Dynaimers Consulting Private Limited
           </div>
         </div>
       </div>
