@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 import type { Metadata } from 'next'
 import connectDB from '@/lib/mongodb/connect'
 import { Temple } from '@/models'
