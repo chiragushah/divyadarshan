@@ -298,6 +298,19 @@ export default async function TemplePage({ params }: Props) {
               </div>
             )}
 
+
+            {t.official_website && (
+              <a href={t.official_website} target="_blank" rel="noopener"
+                className="card card-p flex items-center gap-3 hover:border-saffron transition-colors"
+                style={{ textDecoration:'none' }}>
+                <span style={{ fontSize:22 }}>🌐</span>
+                <div>
+                  <div style={{ fontWeight:600, fontSize:13, color:'var(--ink)' }}>Official Website</div>
+                  <div style={{ fontSize:11, color:'var(--muted2)', wordBreak:'break-all' }}>{t.official_website.replace('https://','')}</div>
+                </div>
+              </a>
+            )}
+
             {t.lat && t.lng && (
               <a href={`https://maps.google.com/?q=${t.lat},${t.lng}&query=${encodeURIComponent(t.name)}`}
                 target="_blank" rel="noopener"
