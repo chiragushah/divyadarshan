@@ -183,6 +183,45 @@ export default async function TemplePage({ params }: Props) {
               </div>
             )}
 
+
+            {/* ── HOW TO REACH ───────────────── */}
+            {t.how_to_reach && Object.keys(t.how_to_reach).length > 0 && (
+              <div className="mb-8">
+                <h2 className="font-serif text-2xl font-medium mb-1">How to Reach</h2>
+                <p className="text-sm mb-4" style={{ color:'var(--muted2)' }}>
+                  Airport, trains, buses, taxi costs — everything you need
+                </p>
+                <div className="card card-p" style={{ padding:0, overflow:'hidden' }}>
+                  {[
+                    { key:'by_air',     label:'By Air',     icon:'✈️' },
+                    { key:'by_train',   label:'By Train',   icon:'🚆' },
+                    { key:'by_bus',     label:'By Bus',     icon:'🚌' },
+                    { key:'by_taxi',    label:'By Taxi / Auto', icon:'🚕' },
+                    { key:'local_tips', label:'Local Tips', icon:'💡' },
+                  ].filter(item => t.how_to_reach[item.key]).map((item, idx, arr) => (
+                    <div key={item.key} style={{
+                      padding:'14px 18px',
+                      borderBottom: idx < arr.length-1 ? '1px solid var(--border)' : 'none',
+                      display:'grid',
+                      gridTemplateColumns:'32px 1fr',
+                      gap:12,
+                      alignItems:'flex-start',
+                    }}>
+                      <span style={{ fontSize:20, marginTop:1 }}>{item.icon}</span>
+                      <div>
+                        <div style={{ fontWeight:700, fontSize:12, textTransform:'uppercase', letterSpacing:'.06em', color:'var(--muted2)', marginBottom:4 }}>
+                          {item.label}
+                        </div>
+                        <div style={{ fontSize:13, lineHeight:1.65, color:'var(--ink)' }}>
+                          {t.how_to_reach[item.key]}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <ReviewsSection templeId={t.id} templeName={t.name} />
           </div>
 
