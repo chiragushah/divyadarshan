@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── GOOGLE FONTS ──────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap');
+
+/* ─── CSS VARIABLES ─────────────────────────────────────── */
+:root {
+  --crimson:    #3D0808;
+  --crim-dk:    #1A0303;
+  --crim-lt:    #5C0F0F;
+  --gold:       #9A7535;
+  --gold-lt:    #EDD9A3;
+  --gold-dk:    #7C5F2A;
+  --ivory:      #FAF7F2;
+  --ivory2:     #F5EFE4;
+  --ivory3:     #EDE3D0;
+  --ink:        #1A1008;
+  --muted:      #6B5B4E;
+  --muted2:     #9B8B7E;
+  --border:     #E8DDD2;
+  --border2:    #C8B8A8;
+  --white:      #FFFFFF;
+  --live:       #C0392B;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'Outfit', system-ui, sans-serif;
+  --r:          8px;
+  --sh1:        0 1px 3px rgba(18,10,6,.06), 0 1px 2px rgba(18,10,6,.04);
+  --sh2:        0 4px 16px rgba(18,10,6,.10), 0 2px 6px rgba(18,10,6,.06);
+  --sh3:        0 8px 32px rgba(18,10,6,.14);
+}
+
+/* ─── BASE ───────────────────────────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--ivory);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── TYPOGRAPHY ─────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+/* ─── SCROLLBAR ──────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--ivory2); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted2); }
+
+/* ─── SELECTION ──────────────────────────────────────────── */
+::selection { background: var(--gold-lt); color: var(--crimson); }
+
+/* ─── FOCUS ──────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--crimson);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* ─── COMPONENTS ─────────────────────────────────────────── */
+@layer components {
+
+  /* ── Buttons ─────────────────────────────────── */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 font-medium
+           rounded-lg transition-all duration-150 cursor-pointer
+           border-0 outline-none text-sm whitespace-nowrap;
+    font-family: var(--font-sans);
+  }
+  .btn:disabled { @apply opacity-50 cursor-not-allowed; }
+
+  .btn-primary {
+    @apply btn px-5 py-2.5 text-ivory-100;
+    background: var(--crimson);
+  }
+  .btn-primary:hover:not(:disabled) { background: var(--crim-lt); }
+
+  .btn-secondary {
+    @apply btn px-5 py-2.5;
+    background: var(--ivory2);
+    color: var(--ink);
+    border: 1px solid var(--border);
+  }
+  .btn-secondary:hover:not(:disabled) { border-color: var(--border2); }
+
+  .btn-gold {
+    @apply btn px-5 py-2.5;
+    background: var(--gold);
+    color: #fff;
+  }
+  .btn-gold:hover:not(:disabled) { background: var(--gold-dk); }
+
+  .btn-ghost {
+    @apply btn px-4 py-2;
+    color: var(--muted);
+    background: transparent;
+  }
+  .btn-ghost:hover:not(:disabled) {
+    background: var(--ivory2);
+    color: var(--ink);
+  }
+
+  .btn-sm  { @apply px-3 py-1.5 text-xs; }
+  .btn-lg  { @apply px-7 py-3.5 text-base; }
+  .btn-xl  { @apply px-9 py-4 text-lg; }
+
+  /* ── Cards ───────────────────────────────────── */
+  .card {
+    @apply bg-white rounded-xl border border-solid;
+    border-color: var(--border);
+    box-shadow: var(--sh1);
+  }
+  .card:hover { box-shadow: var(--sh2); }
+
+  .card-p { @apply p-5; }
+
+  /* ── Form Inputs ─────────────────────────────── */
+  .input {
+    @apply w-full px-3 py-2.5 rounded-lg border text-sm outline-none transition-colors;
+    font-family: var(--font-sans);
+    background: var(--ivory);
+    border-color: var(--border);
+    color: var(--ink);
+  }
+  .input:focus { border-color: var(--crimson); }
+  .input::placeholder { color: var(--muted2); }
+
+  .label {
+    @apply block text-xs font-semibold uppercase tracking-widest mb-1.5;
+    color: var(--muted);
+    font-family: var(--font-sans);
+  }
+
+  /* ── Badges ──────────────────────────────────── */
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold;
+  }
+  .badge-live {
+    @apply badge;
+    background: #FFEBEE;
+    color: var(--live);
+  }
+  .badge-gold {
+    @apply badge;
+    background: var(--gold-lt);
+    color: var(--gold-dk);
+    border: 1px solid #D4BC90;
+  }
+  .badge-crimson {
+    @apply badge;
+    background: #FFF0F0;
+    color: var(--crimson);
+  }
+
+  /* ── Section headings ────────────────────────── */
+  .section-title {
+    @apply text-xs font-bold uppercase tracking-widest mb-3;
+    color: var(--gold-dk);
+  }
+
+  /* ── Divider ─────────────────────────────────── */
+  .divider {
+    @apply border-0 border-t my-4;
+    border-color: var(--border);
+  }
+
+  /* ── Page header ─────────────────────────────── */
+  .page-header {
+    @apply bg-gradient-to-br from-crimson-900 to-crimson-800 px-6 py-10;
+  }
+  .page-header h1 {
+    @apply text-3xl font-medium text-ivory-100;
+    font-family: var(--font-serif);
+  }
+  .page-header p {
+    @apply mt-1.5 text-sm;
+    color: rgba(237,224,196,.6);
+  }
+
+  /* ── Skeleton loader ─────────────────────────── */
+  .skeleton {
+    @apply animate-pulse rounded;
+    background: var(--ivory3);
+  }
+}
+
+/* ─── LIVE DOT ANIMATION ─────────────────────────────────── */
+.live-dot {
+  @apply inline-block w-2 h-2 rounded-full mr-1.5;
+  background: var(--live);
+  animation: pulseLive 2s ease-in-out infinite;
+}
+@keyframes pulseLive {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .5; transform: scale(.85); }
+}
+
+/* ─── STAR RATING ────────────────────────────────────────── */
+.stars { color: #F59E0B; letter-spacing: 1px; }
+.stars-empty { color: var(--border2); }
+
+/* ─── PROSE (AI output) ──────────────────────────────────── */
+.ai-prose {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+.ai-prose strong { color: var(--crimson); font-weight: 600; }
+.ai-prose h3, .ai-prose h4 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  margin-top: 1.25rem;
+  margin-bottom: .375rem;
+  color: var(--ink);
+}
+.ai-prose ul, .ai-prose ol {
+  padding-left: 1.25rem;
+  margin-bottom: .75rem;
+}
+.ai-prose li { margin-bottom: .25rem; }
+.ai-prose p  { margin-bottom: .75rem; }
+.ai-prose hr { border-color: var(--border); margin: 1rem 0; }
