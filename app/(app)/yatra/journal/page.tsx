@@ -70,8 +70,8 @@ export default function JournalPage() {
   }
 
   // Stats
-  const uniqueStates = [...new Set(entries.map(e => e.state).filter(Boolean))].length
-  const uniqueDeities = [...new Set(entries.map(e => e.deity).filter(Boolean))].length
+  const uniqueStates = Array.from(new Set(entries.map((e: any) => e.state).filter(Boolean))).length
+  const uniqueDeities = Array.from(new Set(entries.map((e: any) => e.deity).filter(Boolean))).length
 
   if (status === 'unauthenticated') {
     return (
