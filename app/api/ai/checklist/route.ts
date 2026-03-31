@@ -1,68 +1,32 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { routeAI, SYSTEM_PROMPTS } from '@/lib/ai/router'
-import type { ChecklistInput } from '@/types'
+import { getServerSession } from 'next-auth'
+import { authOptions } from '@/lib/auth/options'
+import { aiRouter } from '@/lib/ai/router'
+import connectDB from '@/lib/mongodb/connect'
+import { AIUsageLog } from '@/models'
 
 export async function POST(req: NextRequest) {
+  const start = Date.now()
+  const session = await getServerSession(authOptions)
+  const body = await req.json()
+
   try {
-    const input: ChecklistInput = await req.json()
+    const result = await aiRouter.checklist(body)
+    const duration_ms = Date.now() - start
 
-    if (!input.destination) {
-      return NextResponse.json({ error: 'Destination is required' }, { status: 400 })
-    }
-
-    const userMessage = `
-Generate a complete packing checklist for:
-
-DESTINATION: ${input.destination}
-TRAVEL MODE: ${input.mode || 'Train'}
-DURATION: ${input.days || 3} days
-SEASON: ${input.season || 'winter'}
-PILGRIM TYPE: ${input.pilgrim_type || 'couple'}
-SPECIAL NEEDS: ${input.special_needs || 'none'}
-
-Return a JSON object with this structure:
-{
-  "categories": [
-    {
-      "name": "Category Name",
-      "items": [
-        {
-          "name": "Item name",
-          "priority": "must" | "recommended",
-          "note": "optional short note"
-        }
-      ]
-    }
-  ],
-  "destination_tips": ["tip1", "tip2", "tip3"],
-  "total_items": number
-}
-
-Be destination-specific. If Kedarnath → add altitude gear. If Tirupati → add dhoti. If Amarnath → add permits. Return only valid JSON.`
-
-    const response = await routeAI('checklist', SYSTEM_PROMPTS.checklist, userMessage, {
-      maxTokens: 2000,
+    await connectDB()
+    await AIUsageLog.create({
+      user_id:     session?.user?.id || 'anonymous',
+      user_email:  session?.user?.email || '',
+      feature:     'checklist',
+      provider:    'gemini',
+      duration_ms,
+      destination: body.destination || '',
+      success:     true,
     })
 
-    let checklist = null
-    try {
-      const clean = response.content.replace(/```json|```/g, '').trim()
-      checklist = JSON.parse(clean)
-    } catch {
-      // Return raw text if JSON parsing fails
-      return NextResponse.json({
-        raw: response.content,
-        provider: response.provider,
-      })
-    }
-
-    return NextResponse.json({
-      checklist,
-      provider: response.provider,
-      model: response.model,
-    })
-  } catch (error) {
-    console.error('Checklist error:', error)
-    return NextResponse.json({ error: 'Failed to generate checklist' }, { status: 500 })
+    return NextResponse.json(result)
+  } catch (err: any) {
+    return NextResponse.json({ error: err.message }, { status: 500 })
   }
 }

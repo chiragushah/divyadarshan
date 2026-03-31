@@ -2,34 +2,30 @@ import { getToken } from 'next-auth/jwt'
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-// Pages that are public (no login required)
-const PUBLIC_PATHS = [
-  '/auth/signin',
-  '/auth/signup', 
-  '/auth/error',
-  '/api/auth',
-]
-
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // Allow public paths
-  if (PUBLIC_PATHS.some(p => pathname.startsWith(p))) {
+  // ── Admin routes: handled by admin auth, not NextAuth ──
+  if (pathname.startsWith('/admin')) {
+    // Login page is always accessible
+    if (pathname === '/admin') return NextResponse.next()
+    // All other /admin/* routes require admin cookie
+    const adminToken = request.cookies.get('admin_token')?.value
+    if (!adminToken) {
+      return NextResponse.redirect(new URL('/admin', request.url))
+    }
     return NextResponse.next()
   }
 
-  // Allow API routes except protected ones
-  if (pathname.startsWith('/api/')) {
-    return NextResponse.next()
-  }
+  // ── Public paths — no login required ──────────────────
+  const PUBLIC = ['/auth/', '/api/auth', '/api/analytics', '/api/admin', '/api/health']
+  if (PUBLIC.some(p => pathname.startsWith(p))) return NextResponse.next()
 
-  // Check if user is authenticated
-  const token = await getToken({
-    req: request,
-    secret: process.env.NEXTAUTH_SECRET,
-  })
+  // ── Homepage — public ──────────────────────────────────
+  if (pathname === '/') return NextResponse.next()
 
-  // Not signed in — redirect to sign in
+  // ── Everything else requires NextAuth session ──────────
+  const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET })
   if (!token) {
     const signInUrl = new URL('/auth/signin', request.url)
     signInUrl.searchParams.set('callbackUrl', pathname)
@@ -40,14 +36,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: [
-    /*
-     * Match all paths except:
-     * - _next/static (static files)
-     * - _next/image (image optimization)
-     * - favicon.ico
-     * - public folder
-     */
-    '/((?!_next/static|_next/image|favicon.ico|.*\\..*|manifest.json).*)',
-  ],
+  matcher: ['/((?!_next/static|_next/image|favicon.ico|.*\\..*|manifest.json|dynaimers-logo.jpg).*)'],
 }
