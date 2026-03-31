@@ -1,47 +1,37 @@
 import { NextRequest, NextResponse } from 'next/server'
 import connectDB from '@/lib/mongodb/connect'
 import { AdminSession, SearchLog, AIUsageLog, PageViewLog, FinVerseClick } from '@/models'
-import { User } from '@/models'
 import mongoose from 'mongoose'
 
 async function verifyAdmin(req: NextRequest) {
   const token = req.cookies.get('admin_token')?.value
   if (!token) return false
   await connectDB()
-  const s = await AdminSession.findOne({ token, expires_at: { $gt: new Date() } })
-  return !!s
+  return !!(await AdminSession.findOne({ token, expires_at: { $gt: new Date() } }))
 }
 
 const AI_COST: Record<string, number> = { claude: 0.009, gemini: 0.0002, groq: 0.0001 }
 const USD_TO_INR = 83
 
-// Get users from both our User model AND NextAuth adapter collection
-async function getAllUsers(limit = 500) {
+// Smart user fetcher — tries all possible collections NextAuth might use
+async function getUsers(limit = 500, since?: Date) {
+  await connectDB()
   const db = mongoose.connection.db
-  if (!db) return []
-  
-  try {
-    // Try NextAuth users collection first
-    const nextAuthUsers = await db.collection('users').find({}).sort({ createdAt: -1 }).limit(limit).toArray()
-    if (nextAuthUsers.length > 0) return nextAuthUsers
-  } catch {}
-  
-  // Fall back to our User model
-  return await User.find().sort({ createdAt: -1 }).limit(limit).select('name email provider createdAt').lean()
-}
+  if (!db) return { users: [], total: 0, newCount: 0 }
 
-async function countAllUsers(since?: Date) {
-  const db = mongoose.connection.db
-  if (!db) return 0
-  
-  try {
-    const query = since ? { createdAt: { $gte: since } } : {}
-    const count = await db.collection('users').countDocuments(query)
-    if (count > 0) return count
-  } catch {}
-  
-  const query = since ? { createdAt: { $gte: since } } : {}
-  return await User.countDocuments(query)
+  // NextAuth adapter uses 'users' collection
+  // Our custom model also uses 'users' collection (mongoose pluralizes 'User' → 'users')
+  // So they should be the same collection!
+  const query: any = {}
+  if (since) query.createdAt = { $gte: since }
+
+  const [users, total, newCount] = await Promise.all([
+    db.collection('users').find({}).sort({ createdAt: -1 }).limit(limit).toArray(),
+    db.collection('users').countDocuments({}),
+    since ? db.collection('users').countDocuments({ createdAt: { $gte: since } }) : Promise.resolve(0),
+  ])
+
+  return { users, total, newCount }
 }
 
 export async function GET(req: NextRequest) {
@@ -52,16 +42,15 @@ export async function GET(req: NextRequest) {
   const type = searchParams.get('type') || 'overview'
   const days = parseInt(searchParams.get('days') || '30')
   const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000)
+  const db = mongoose.connection.db!
 
   if (type === 'overview') {
+    const { users: recentUsers, total: totalUsers, newCount: newUsers } = await getUsers(10, since)
+
     const [
-      totalUsers, newUsers,
       totalSearches, totalAI, aiByProvider, aiByFeature, failedAI,
-      totalPageViews, avgSession, topPages,
-      totalFinVerse, dailyUsers,
+      totalPageViews, avgSession, topPages, totalFinVerse, dailyUsers,
     ] = await Promise.all([
-      countAllUsers(),
-      countAllUsers(since),
       SearchLog.countDocuments({ createdAt: { $gte: since } }),
       AIUsageLog.countDocuments({ createdAt: { $gte: since } }),
       AIUsageLog.aggregate([{ $match: { createdAt: { $gte: since } } }, { $group: { _id: '$provider', count: { $sum: 1 } } }, { $sort: { count: -1 } }]),
@@ -71,32 +60,30 @@ export async function GET(req: NextRequest) {
       PageViewLog.aggregate([{ $match: { createdAt: { $gte: since } } }, { $group: { _id: null, avg: { $avg: '$duration_sec' } } }]),
       PageViewLog.aggregate([{ $match: { createdAt: { $gte: since } } }, { $group: { _id: '$page', views: { $sum: 1 }, avg_sec: { $avg: '$duration_sec' } } }, { $sort: { views: -1 } }, { $limit: 10 }]),
       FinVerseClick.countDocuments({ createdAt: { $gte: since } }),
-      (async () => {
-        const db = mongoose.connection.db
-        if (!db) return []
-        try {
-          return await db.collection('users').aggregate([
-            { $match: { createdAt: { $gte: new Date(Date.now() - 14*24*60*60*1000) } } },
-            { $group: { _id: { $dateToString: { format: '%Y-%m-%d', date: '$createdAt' } }, count: { $sum: 1 } } },
-            { $sort: { _id: 1 } }
-          ]).toArray()
-        } catch { return [] }
-      })(),
+      db.collection('users').aggregate([
+        { $match: { createdAt: { $gte: new Date(Date.now() - 14*24*60*60*1000) } } },
+        { $group: { _id: { $dateToString: { format: '%Y-%m-%d', date: '$createdAt' } }, count: { $sum: 1 } } },
+        { $sort: { _id: 1 } }
+      ]).toArray().catch(() => []),
     ])
 
     const aiCostINR = aiByProvider.reduce((sum: number, p: any) => sum + (p.count * (AI_COST[p._id] || 0) * USD_TO_INR), 0)
-    const avgSessionSec = Math.round(avgSession[0]?.avg || 0)
-    const recentUsers = await getAllUsers(10)
 
     return NextResponse.json({
-      overview: { totalUsers, newUsers, totalSearches, totalAI, failedAI, totalPageViews, avgSessionSec, totalFinVerse, aiCostINR: Math.round(aiCostINR * 100) / 100 },
-      aiByProvider, aiByFeature, topPages, recentUsers, dailyUsers,
+      overview: {
+        totalUsers, newUsers, totalSearches, totalAI, failedAI,
+        totalPageViews, avgSessionSec: Math.round(avgSession[0]?.avg || 0),
+        totalFinVerse, aiCostINR: Math.round(aiCostINR * 100) / 100,
+      },
+      aiByProvider, aiByFeature, topPages,
+      recentUsers: recentUsers.map((u: any) => ({ ...u, _id: u._id?.toString() })),
+      dailyUsers,
     })
   }
 
   if (type === 'users') {
-    const users = await getAllUsers(500)
-    return NextResponse.json({ users })
+    const { users } = await getUsers(500)
+    return NextResponse.json({ users: users.map((u: any) => ({ ...u, _id: u._id?.toString() })) })
   }
 
   if (type === 'user_detail') {
@@ -141,15 +128,14 @@ export async function GET(req: NextRequest) {
   }
 
   if (type === 'reviews') {
-    const db = mongoose.connection.db
-    const reviews = db ? await db.collection('reviews').find({}).sort({ createdAt: -1 }).limit(200).toArray() : []
-    return NextResponse.json({ reviews })
+    const reviews = await db.collection('reviews').find({}).sort({ createdAt: -1 }).limit(200).toArray()
+    return NextResponse.json({ reviews: reviews.map((r: any) => ({ ...r, _id: r._id?.toString() })) })
   }
 
   if (type === 'temples') {
-    const db = mongoose.connection.db
-    const temples = db ? await db.collection('temples').find({}).sort({ name: 1 }).project({ name:1, state:1, city:1, deity:1, type:1, has_live:1, rating_avg:1, rating_count:1, slug:1 }).toArray() : []
-    return NextResponse.json({ temples })
+    const temples = await db.collection('temples').find({}).sort({ name: 1 })
+      .project({ name:1, state:1, city:1, deity:1, type:1, has_live:1, rating_avg:1, rating_count:1, slug:1 }).toArray()
+    return NextResponse.json({ temples: temples.map((t: any) => ({ ...t, _id: t._id?.toString() })) })
   }
 
   return NextResponse.json({ error: 'Unknown type' }, { status: 400 })
