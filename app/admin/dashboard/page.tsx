@@ -92,6 +92,7 @@ const S = {
 export default function AdminDashboard() {
   const router = useRouter()
   const [tab, setTab]   = useState('overview')
+  const [sidebarOpen, setSidebarOpen] = useState(false)
   const [days, setDays] = useState(30)
   const [data, setData] = useState<any>(null)
   const [loading, setLoading] = useState(true)
@@ -182,12 +183,37 @@ export default function AdminDashboard() {
         ::-webkit-scrollbar-track{background:#0A0A0F;}
         ::-webkit-scrollbar-thumb{background:#2A2A35;border-radius:2px;}
         @keyframes spin{to{transform:rotate(360deg)}}
+        @media(max-width:768px){
+          .shell{grid-template-columns:1fr!important;}
+          .sidebar{display:none;position:fixed;inset:0;z-index:200;width:260px;}
+          .sidebar.open{display:flex!important;}
+          .main{padding:16px!important;}
+          .mobile-header{display:flex!important;}
+          table{font-size:11px;}
+          th,td{padding:8px 10px!important;}
+        }
+        .mobile-header{
+          display:none;
+          align-items:center;
+          justify-content:space-between;
+          padding:12px 16px;
+          background:#0F0F18;
+          border-bottom:1px solid #1E1E2E;
+          margin:-28px -28px 20px;
+        }
+        .hamburger{background:none;border:none;color:#F0F0F5;cursor:pointer;padding:4px;}
+        .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:199;}
+        .overlay.show{display:block;}
+
       `}</style>
 
       <div style={S.shell}>
 
+        {/* Mobile overlay */}
+        {sidebarOpen && <div className="overlay show" onClick={() => setSidebarOpen(false)} />}
+
         {/* SIDEBAR */}
-        <div style={S.sidebar}>
+        <div style={S.sidebar} className={sidebarOpen ? 'open' : ''}>
           <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:24, paddingBottom:20, borderBottom:'1px solid #1E1E2E' }}>
             <div style={{ width:34, height:34, background:'linear-gradient(135deg,#C0570A,#9A4208)', borderRadius:8, display:'flex', alignItems:'center', justifyContent:'center', fontSize:16 }}>🛡️</div>
             <div>

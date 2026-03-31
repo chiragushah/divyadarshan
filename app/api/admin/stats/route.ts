@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import connectDB from '@/lib/mongodb/connect'
-import { AdminSession, SearchLog, AIUsageLog, PageViewLog, FinVerseClick, Announcement } from '@/models'
-import { User, Temple, Review } from '@/models'
+import { AdminSession, SearchLog, AIUsageLog, PageViewLog, FinVerseClick } from '@/models'
+import { User } from '@/models'
+import mongoose from 'mongoose'
 
 async function verifyAdmin(req: NextRequest) {
   const token = req.cookies.get('admin_token')?.value
@@ -11,9 +12,37 @@ async function verifyAdmin(req: NextRequest) {
   return !!s
 }
 
-// AI cost per request (USD approx)
 const AI_COST: Record<string, number> = { claude: 0.009, gemini: 0.0002, groq: 0.0001 }
 const USD_TO_INR = 83
+
+// Get users from both our User model AND NextAuth adapter collection
+async function getAllUsers(limit = 500) {
+  const db = mongoose.connection.db
+  if (!db) return []
+  
+  try {
+    // Try NextAuth users collection first
+    const nextAuthUsers = await db.collection('users').find({}).sort({ createdAt: -1 }).limit(limit).toArray()
+    if (nextAuthUsers.length > 0) return nextAuthUsers
+  } catch {}
+  
+  // Fall back to our User model
+  return await User.find().sort({ createdAt: -1 }).limit(limit).select('name email provider createdAt').lean()
+}
+
+async function countAllUsers(since?: Date) {
+  const db = mongoose.connection.db
+  if (!db) return 0
+  
+  try {
+    const query = since ? { createdAt: { $gte: since } } : {}
+    const count = await db.collection('users').countDocuments(query)
+    if (count > 0) return count
+  } catch {}
+  
+  const query = since ? { createdAt: { $gte: since } } : {}
+  return await User.countDocuments(query)
+}
 
 export async function GET(req: NextRequest) {
   if (!(await verifyAdmin(req))) return NextResponse.json({ error: 'Unauthorised' }, { status: 401 })
@@ -24,85 +53,52 @@ export async function GET(req: NextRequest) {
   const days = parseInt(searchParams.get('days') || '30')
   const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000)
 
-  // ── OVERVIEW ─────────────────────────────────────
   if (type === 'overview') {
     const [
       totalUsers, newUsers,
       totalSearches, totalAI, aiByProvider, aiByFeature, failedAI,
       totalPageViews, avgSession, topPages,
-      totalFinVerse, totalReviews, totalTemples,
-      recentUsers,
-      // Retention: users who logged in 2+ times
-      retentionData,
-      // Daily new users for chart
-      dailyUsers,
+      totalFinVerse, dailyUsers,
     ] = await Promise.all([
-      User.countDocuments(),
-      User.countDocuments({ createdAt: { $gte: since } }),
+      countAllUsers(),
+      countAllUsers(since),
       SearchLog.countDocuments({ createdAt: { $gte: since } }),
       AIUsageLog.countDocuments({ createdAt: { $gte: since } }),
-      AIUsageLog.aggregate([
-        { $match: { createdAt: { $gte: since } } },
-        { $group: { _id: '$provider', count: { $sum: 1 } } },
-        { $sort: { count: -1 } }
-      ]),
-      AIUsageLog.aggregate([
-        { $match: { createdAt: { $gte: since } } },
-        { $group: { _id: '$feature', count: { $sum: 1 } } },
-        { $sort: { count: -1 } }
-      ]),
+      AIUsageLog.aggregate([{ $match: { createdAt: { $gte: since } } }, { $group: { _id: '$provider', count: { $sum: 1 } } }, { $sort: { count: -1 } }]),
+      AIUsageLog.aggregate([{ $match: { createdAt: { $gte: since } } }, { $group: { _id: '$feature', count: { $sum: 1 } } }, { $sort: { count: -1 } }]),
       AIUsageLog.countDocuments({ success: false, createdAt: { $gte: since } }),
       PageViewLog.countDocuments({ createdAt: { $gte: since } }),
-      PageViewLog.aggregate([
-        { $match: { createdAt: { $gte: since } } },
-        { $group: { _id: null, avg: { $avg: '$duration_sec' } } }
-      ]),
-      PageViewLog.aggregate([
-        { $match: { createdAt: { $gte: since } } },
-        { $group: { _id: '$page', views: { $sum: 1 }, avg_sec: { $avg: '$duration_sec' } } },
-        { $sort: { views: -1 } }, { $limit: 10 }
-      ]),
+      PageViewLog.aggregate([{ $match: { createdAt: { $gte: since } } }, { $group: { _id: null, avg: { $avg: '$duration_sec' } } }]),
+      PageViewLog.aggregate([{ $match: { createdAt: { $gte: since } } }, { $group: { _id: '$page', views: { $sum: 1 }, avg_sec: { $avg: '$duration_sec' } } }, { $sort: { views: -1 } }, { $limit: 10 }]),
       FinVerseClick.countDocuments({ createdAt: { $gte: since } }),
-      Review.countDocuments(),
-      Temple.countDocuments(),
-      User.find().sort({ createdAt: -1 }).limit(10).select('name email provider createdAt').lean(),
-      // Retention (users active last 7 days vs last 30 days)
-      PageViewLog.distinct('user_email', { createdAt: { $gte: new Date(Date.now() - 7*24*60*60*1000) }, user_email: { $ne: '' } }),
-      // Daily new users (last 14 days)
-      User.aggregate([
-        { $match: { createdAt: { $gte: new Date(Date.now() - 14*24*60*60*1000) } } },
-        { $group: { _id: { $dateToString: { format: '%Y-%m-%d', date: '$createdAt' } }, count: { $sum: 1 } } },
-        { $sort: { _id: 1 } }
-      ]),
+      (async () => {
+        const db = mongoose.connection.db
+        if (!db) return []
+        try {
+          return await db.collection('users').aggregate([
+            { $match: { createdAt: { $gte: new Date(Date.now() - 14*24*60*60*1000) } } },
+            { $group: { _id: { $dateToString: { format: '%Y-%m-%d', date: '$createdAt' } }, count: { $sum: 1 } } },
+            { $sort: { _id: 1 } }
+          ]).toArray()
+        } catch { return [] }
+      })(),
     ])
 
-    // AI cost calculation
-    const aiCostINR = aiByProvider.reduce((sum: number, p: any) => {
-      return sum + (p.count * (AI_COST[p._id] || 0) * USD_TO_INR)
-    }, 0)
-
+    const aiCostINR = aiByProvider.reduce((sum: number, p: any) => sum + (p.count * (AI_COST[p._id] || 0) * USD_TO_INR), 0)
     const avgSessionSec = Math.round(avgSession[0]?.avg || 0)
+    const recentUsers = await getAllUsers(10)
 
     return NextResponse.json({
-      overview: {
-        totalUsers, newUsers, totalSearches, totalAI, failedAI,
-        totalPageViews, avgSessionSec, totalFinVerse,
-        totalReviews, totalTemples,
-        aiCostINR: Math.round(aiCostINR * 100) / 100,
-        activeUsersLast7d: retentionData.length,
-      },
+      overview: { totalUsers, newUsers, totalSearches, totalAI, failedAI, totalPageViews, avgSessionSec, totalFinVerse, aiCostINR: Math.round(aiCostINR * 100) / 100 },
       aiByProvider, aiByFeature, topPages, recentUsers, dailyUsers,
     })
   }
 
-  // ── USERS ─────────────────────────────────────────
   if (type === 'users') {
-    const users = await User.find().sort({ createdAt: -1 }).limit(500)
-      .select('name email provider createdAt').lean()
+    const users = await getAllUsers(500)
     return NextResponse.json({ users })
   }
 
-  // ── USER DETAIL ────────────────────────────────────
   if (type === 'user_detail') {
     const email = searchParams.get('email')
     if (!email) return NextResponse.json({ error: 'Email required' }, { status: 400 })
@@ -115,51 +111,45 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ searches, ai, pageviews, finverse })
   }
 
-  // ── SEARCHES ──────────────────────────────────────
   if (type === 'searches') {
-    const searches = await SearchLog.find({ createdAt: { $gte: since } })
-      .sort({ createdAt: -1 }).limit(300).lean()
+    const searches = await SearchLog.find({ createdAt: { $gte: since } }).sort({ createdAt: -1 }).limit(300).lean()
     return NextResponse.json({ searches })
   }
 
-  // ── AI USAGE ──────────────────────────────────────
   if (type === 'ai') {
-    const ai = await AIUsageLog.find({ createdAt: { $gte: since } })
-      .sort({ createdAt: -1 }).limit(300).lean()
-    const failed = await AIUsageLog.find({ success: false, createdAt: { $gte: since } })
-      .sort({ createdAt: -1 }).limit(50).lean()
+    const [ai, failed] = await Promise.all([
+      AIUsageLog.find({ createdAt: { $gte: since } }).sort({ createdAt: -1 }).limit(300).lean(),
+      AIUsageLog.find({ success: false, createdAt: { $gte: since } }).sort({ createdAt: -1 }).limit(50).lean(),
+    ])
     return NextResponse.json({ ai, failed })
   }
 
-  // ── PAGE VIEWS ────────────────────────────────────
   if (type === 'pageviews') {
-    const views = await PageViewLog.find({ createdAt: { $gte: since } })
-      .sort({ createdAt: -1 }).limit(300).lean()
-    const topTemples = await PageViewLog.aggregate([
-      { $match: { page: { $regex: '^/temple/' }, createdAt: { $gte: since } } },
-      { $group: { _id: '$page', views: { $sum: 1 }, avg_sec: { $avg: '$duration_sec' } } },
-      { $sort: { views: -1 } }, { $limit: 20 }
+    const [views, topTemples] = await Promise.all([
+      PageViewLog.find({ createdAt: { $gte: since } }).sort({ createdAt: -1 }).limit(300).lean(),
+      PageViewLog.aggregate([{ $match: { page: { $regex: '^/temple/' }, createdAt: { $gte: since } } }, { $group: { _id: '$page', views: { $sum: 1 }, avg_sec: { $avg: '$duration_sec' } } }, { $sort: { views: -1 } }, { $limit: 20 }]),
     ])
     return NextResponse.json({ views, topTemples })
   }
 
-  // ── FINVERSE ──────────────────────────────────────
   if (type === 'finverse') {
-    const clicks = await FinVerseClick.find({ createdAt: { $gte: since } })
-      .sort({ createdAt: -1 }).limit(200).lean()
-    const bySrc = await FinVerseClick.aggregate([
-      { $match: { createdAt: { $gte: since } } },
-      { $group: { _id: '$source', count: { $sum: 1 } } },
-      { $sort: { count: -1 } }
+    const [clicks, bySrc] = await Promise.all([
+      FinVerseClick.find({ createdAt: { $gte: since } }).sort({ createdAt: -1 }).limit(200).lean(),
+      FinVerseClick.aggregate([{ $match: { createdAt: { $gte: since } } }, { $group: { _id: '$source', count: { $sum: 1 } } }, { $sort: { count: -1 } }]),
     ])
     return NextResponse.json({ clicks, bySrc })
   }
 
-  // ── REVIEWS ───────────────────────────────────────
   if (type === 'reviews') {
-    const reviews = await Review.find().sort({ createdAt: -1 }).limit(200)
-      .populate('temple', 'name slug').lean()
+    const db = mongoose.connection.db
+    const reviews = db ? await db.collection('reviews').find({}).sort({ createdAt: -1 }).limit(200).toArray() : []
     return NextResponse.json({ reviews })
+  }
+
+  if (type === 'temples') {
+    const db = mongoose.connection.db
+    const temples = db ? await db.collection('temples').find({}).sort({ name: 1 }).project({ name:1, state:1, city:1, deity:1, type:1, has_live:1, rating_avg:1, rating_count:1, slug:1 }).toArray() : []
+    return NextResponse.json({ temples })
   }
 
   return NextResponse.json({ error: 'Unknown type' }, { status: 400 })
