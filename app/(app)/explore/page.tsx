@@ -39,7 +39,7 @@ export default async function ExplorePage({ searchParams }: Props) {
   const allStates = await Temple.distinct('state')
   const states = allStates.sort()
 
-  const data = temples.map(t => ({ ...t, id: t._id.toString() }))
+  const data = temples.map((t: any) => ({ ...t, id: t._id.toString() }))
 
   return (
     <ExploreClient
