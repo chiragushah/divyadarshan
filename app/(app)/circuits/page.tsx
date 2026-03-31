@@ -32,7 +32,7 @@ const CIRCUITS = [
     id: 'shakti-peetha', name: 'Shakti Peetha Circuit', region: 'All India', icon: '⚡',
     temples: 51, days: '21–30', budget: '₹1,00,000+',
     tags: ['Lifetime', 'Shakti', 'All India'],
-    desc: '51 sites where Sati's body parts fell. From Kamakhya in Assam to Kanyakumari in the south.',
+    desc: "51 sites where Sati's body parts fell. From Kamakhya in Assam to Kanyakumari in the south.",
     stops: ['Kamakhya', 'Kalighat', 'Vaishno Devi', 'Jwala Ji', 'Chamundeshwari', 'Kanchi Kamakshi', 'Kanyakumari', 'Kolhapur Mahalaxmi'],
   },
   {

@@ -22,11 +22,11 @@ const MONTHS = [
     month: 'February',
     season: 'Late Winter',
     festivals: [
-      { name: 'Mahashivratri', temples: 'All 12 Jyotirlingas, Kedarnath (winter darshan)', desc: 'Shiva's great night. Temples stay open all night. Millions fast.' },
-      { name: 'Vasant Panchami', temples: 'Saraswati temples across India', desc: 'Goddess Saraswati's birthday. Students seek blessings.' },
+      { name: 'Mahashivratri', temples: 'All 12 Jyotirlingas, Kedarnath (winter darshan)', desc: "Shiva's great night. Temples stay open all night. Millions fast." },
+      { name: 'Vasant Panchami', temples: 'Saraswati temples across India', desc: "Goddess Saraswati's birthday. Students seek blessings." },
     ],
     best_for: ['Ujjain', 'Varanasi', 'All Jyotirlinga'],
-    tip: 'Mahashivratri is among India's biggest pilgrimages. Ujjain gets 1 crore+ pilgrims.',
+    tip: "Mahashivratri is among India's biggest pilgrimages. Ujjain gets 1 crore+ pilgrims.",
   },
   {
     month: 'March',
@@ -34,10 +34,10 @@ const MONTHS = [
     festivals: [
       { name: 'Holi', temples: 'Vrindavan, Mathura, Barsana', desc: 'World-famous colour festival in Braj region. Laddu Holi, Lathmar Holi.' },
       { name: 'Gangaur', temples: 'Rajasthan temples (Udaipur, Jaipur)', desc: 'Goddess Parvati festival. Beautiful processions.' },
-      { name: 'Ram Navami', temples: 'Ram Lalla Ayodhya, Chitrakoot', desc: 'Lord Rama's birthday. Ayodhya transforms with celebrations.' },
+      { name: 'Ram Navami', temples: 'Ram Lalla Ayodhya, Chitrakoot', desc: "Lord Rama's birthday. Ayodhya transforms with celebrations." },
     ],
     best_for: ['Vrindavan', 'Mathura', 'Ayodhya'],
-    tip: 'Vrindavan Holi (Phulera Dooj through Rang Panchami) is bucket-list material.',
+    tip: "Vrindavan Holi (Phulera Dooj through Rang Panchami) is bucket-list material.",
   },
   {
     month: 'April',
@@ -53,7 +53,7 @@ const MONTHS = [
     month: 'May',
     season: 'Summer',
     festivals: [
-      { name: 'Buddha Purnima', temples: 'Bodh Gaya, Buddhist temples, Sarnath', desc: 'Buddha's enlightenment. International pilgrims. Bodh Gaya glows.' },
+      { name: 'Buddha Purnima', temples: 'Bodh Gaya, Buddhist temples, Sarnath', desc: "Buddha's enlightenment. International pilgrims. Bodh Gaya glows." },
       { name: 'Narasimha Jayanti', temples: 'Ahobilam, Yadagirigutta, Simhachalam', desc: 'Lord Narasimha's appearance day.' },
     ],
     best_for: ['Uttarakhand', 'Bihar (Bodh Gaya)'],
@@ -63,7 +63,7 @@ const MONTHS = [
     month: 'June',
     season: 'Pre-Monsoon',
     festivals: [
-      { name: 'Rath Yatra', temples: 'Puri Jagannath (main), Serampore, Mahesh', desc: 'Lord Jagannath's chariot procession. Millions pull the rath. One of India's most extraordinary sights.' },
+      { name: 'Rath Yatra', temples: 'Puri Jagannath (main), Serampore, Mahesh', desc: "Lord Jagannath's chariot procession. Millions pull the rath. One of India's most extraordinary sights." },
       { name: 'Ashadhi Ekadashi (Wari)', temples: 'Pandharpur Vitthal', desc: 'Lakhs of Varkaris walk to Pandharpur singing abhangas.' },
     ],
     best_for: ['Puri', 'Pandharpur'],
@@ -73,7 +73,7 @@ const MONTHS = [
     month: 'July',
     season: 'Monsoon',
     festivals: [
-      { name: 'Kanwar Yatra', temples: 'Baidyanath Deoghar, Haridwar, Kashi Vishwanath', desc: 'Millions carry Ganga water on foot for 100km+ to offer to Shiva. One of India's most intense pilgrimages.' },
+      { name: 'Kanwar Yatra', temples: 'Baidyanath Deoghar, Haridwar, Kashi Vishwanath', desc: "Millions carry Ganga water on foot for 100km+ to offer to Shiva. One of India's most intense pilgrimages." },
       { name: 'Guru Purnima', temples: 'All math and guru temples', desc: 'Day of the spiritual teacher. Ashrams and temples full of devotees.' },
     ],
     best_for: ['Jharkhand', 'Varanasi', 'Haridwar'],
@@ -83,7 +83,7 @@ const MONTHS = [
     month: 'August',
     season: 'Monsoon',
     festivals: [
-      { name: 'Janmashtami', temples: 'Mathura Krishna Janmabhoomi, Vrindavan, Dwarka, Udupi', desc: 'Krishna's birthday. Midnight celebrations, dahi-handi. Vrindavan is the epicentre.' },
+      { name: 'Janmashtami', temples: 'Mathura Krishna Janmabhoomi, Vrindavan, Dwarka, Udupi', desc: "Krishna's birthday. Midnight celebrations, dahi-handi. Vrindavan is the epicentre." },
       { name: 'Amarnath Yatra closes', temples: 'Amarnath Cave', desc: 'Last chance of the season to see the ice Shivalinga.' },
     ],
     best_for: ['Mathura', 'Vrindavan', 'Dwarka'],
@@ -117,7 +117,7 @@ const MONTHS = [
       { name: 'Sabarimala opening', temples: 'Sabarimala Ayyappa', desc: 'Annual pilgrimage season begins. 41-day vrat required. Millions in black.' },
     ],
     best_for: ['Varanasi', 'Ayodhya', 'Kerala'],
-    tip: 'Dev Deepawali in Varanasi falls on Kartik Purnima — 5 days after Diwali. Don\'t miss it.',
+    tip: "Dev Deepawali in Varanasi falls on Kartik Purnima — 5 days after Diwali. Don\'t miss it.",
   },
   {
     month: 'December',
