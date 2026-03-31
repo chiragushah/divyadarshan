@@ -35,12 +35,12 @@ export async function GET(req: NextRequest) {
   if (live === 'true') filter.has_live = true
 
   const [temples, total] = await Promise.all([
-    Temple.find(filter).sort({ name: 1 }).skip(skip).limit(limit).lean(),
+    Temple.find(filter).sort({ name: 1 }).skip(skip).limit(limit).lean() as any,
     Temple.countDocuments(filter),
   ])
 
   // Normalise _id → id for frontend compatibility
-  const data = temples.map(t => ({ ...t, id: t._id.toString() }))
+  const data = temples.map((t: any) => ({ ...t, id: t._id.toString() }))
 
   return NextResponse.json({ data, total, page, per_page: limit, has_more: total > skip + limit })
 }

@@ -17,8 +17,8 @@ async function getFeaturedTemples() {
   const temples = await Temple.find({ has_live: true })
     .select('slug name state city deity type has_live rating_avg rating_count categories image_url')
     .limit(8)
-    .lean()
-  return temples.map(t => ({ ...t, id: t._id.toString() }))
+    .lean() as any
+  return temples.map((t: any) => ({ ...t, id: t._id.toString() }))
 }
 
 export default async function HomePage() {

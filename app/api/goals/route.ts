@@ -11,9 +11,9 @@ export async function GET(req: NextRequest) {
   await connectDB()
   const goals = await SavingsGoal.find({ user_id: session.user.id })
     .sort({ createdAt: -1 })
-    .lean()
+    .lean() as any
 
-  return NextResponse.json({ data: goals.map(g => ({ ...g, id: g._id.toString() })) })
+  return NextResponse.json({ data: goals.map((g: any) => ({ ...g, id: g._id.toString() })) })
 }
 
 export async function POST(req: NextRequest) {

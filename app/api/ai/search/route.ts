@@ -20,11 +20,11 @@ export async function POST(req: NextRequest) {
       .sort({ score: { $meta: 'textScore' } })
       .limit(6)
       .select('slug name state city deity type has_live rating_avg')
-      .lean()
+      .lean() as any
 
     if (dbResults.length >= 3) {
       return NextResponse.json({
-        results: dbResults.map(t => ({ ...t, id: t._id.toString() })),
+        results: dbResults.map((t: any) => ({ ...t, id: t._id.toString() })),
         source: 'database',
       })
     }

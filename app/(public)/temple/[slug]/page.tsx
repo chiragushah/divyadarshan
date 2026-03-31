@@ -9,7 +9,7 @@ interface Props { params: { slug: string } }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   await connectDB()
-  const temple = await Temple.findOne({ slug: params.slug }).select('name state city deity description').lean()
+  const temple = await Temple.findOne({ slug: params.slug }).select('name state city deity description').lean() as any as any
   if (!temple) return { title: 'Temple Not Found' }
   return {
     title: `${temple.name} — ${temple.city}, ${temple.state}`,
@@ -23,13 +23,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export async function generateStaticParams() {
   await connectDB()
-  const temples = await Temple.find().select('slug').lean()
-  return temples.map(t => ({ slug: t.slug }))
+  const temples = await Temple.find().select('slug').lean() as any
+  return temples.map((t: any) => ({ slug: t.slug }))
 }
 
 export default async function TemplePage({ params }: Props) {
   await connectDB()
-  const temple = await Temple.findOne({ slug: params.slug }).lean()
+  const temple = await Temple.findOne({ slug: params.slug }).lean() as any as any
   if (!temple) notFound()
 
   const related = await Temple.find({
@@ -38,7 +38,7 @@ export default async function TemplePage({ params }: Props) {
   })
     .select('slug name state city deity has_live rating_avg image_url')
     .limit(4)
-    .lean()
+    .lean() as any as any[]
 
   const t = { ...temple, id: temple._id.toString() }
 

@@ -104,7 +104,7 @@ export default function JournalPage() {
             { label: 'Temples Visited', value: entries.length },
             { label: 'States Covered', value: uniqueStates },
             { label: 'Deities Worshipped', value: uniqueDeities },
-          ].map(s => (
+          ].map((s: any) => (
             <div key={s.label} className="card card-p text-center">
               <div className="font-serif text-3xl font-medium" style={{ color: 'var(--crimson)' }}>{s.value}</div>
               <div className="text-xs mt-1" style={{ color: 'var(--muted2)' }}>{s.label}</div>
@@ -143,7 +143,7 @@ export default function JournalPage() {
             <div>
               <label className="label">Rating</label>
               <div className="flex gap-1 mt-1">
-                {[1,2,3,4,5].map(s => (
+                {[1,2,3,4,5].map((s: any) => (
                   <button key={s} type="button" onClick={() => set('stars', s)} className="text-2xl transition-transform hover:scale-110">
                     {s <= form.stars ? '★' : '☆'}
                   </button>

@@ -31,7 +31,7 @@ export default async function ExplorePage({ searchParams }: Props) {
   if (searchParams.live === 'true') filter.has_live = true
 
   const [temples, total] = await Promise.all([
-    Temple.find(filter).sort({ name: 1 }).skip(skip).limit(limit).lean(),
+    Temple.find(filter).sort({ name: 1 }).skip(skip).limit(limit).lean() as any,
     Temple.countDocuments(filter),
   ])
 

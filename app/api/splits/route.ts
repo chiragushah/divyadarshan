@@ -9,8 +9,8 @@ export async function GET(req: NextRequest) {
   if (!session?.user?.id) return NextResponse.json({ error: 'Auth required' }, { status: 401 })
 
   await connectDB()
-  const splits = await GroupSplit.find({ user_id: session.user.id }).sort({ updatedAt: -1 }).lean()
-  return NextResponse.json({ data: splits.map(s => ({ ...s, id: s._id.toString() })) })
+  const splits = await GroupSplit.find({ user_id: session.user.id }).sort({ updatedAt: -1 }).lean() as any
+  return NextResponse.json({ data: splits.map((s: any) => ({ ...s, id: s._id.toString() })) })
 }
 
 export async function POST(req: NextRequest) {

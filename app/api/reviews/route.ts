@@ -18,9 +18,9 @@ export async function GET(req: NextRequest) {
     .sort({ createdAt: -1 })
     .limit(50)
     .populate('user_id', 'name image')
-    .lean()
+    .lean() as any
 
-  const data = reviews.map(r => ({
+  const data = reviews.map((r: any) => ({
     ...r,
     id: r._id.toString(),
     user: r.user_id,
