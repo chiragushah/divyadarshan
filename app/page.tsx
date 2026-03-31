@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "DivyaDarshan — Every Sacred Temple. One Companion.",
-  description: 'Discover 350+ sacred temples across India. AI-powered yatra planning, live darshan, pilgrimage circuits, savings goals.',
+  description: 'Discover 294+ sacred temples across India. AI-powered yatra planning, live darshan, pilgrimage circuits, savings goals.',
 }
 
 const FEATURES = [
@@ -179,7 +179,7 @@ export default function LandingPage() {
         {/* STATS */}
         <div style={{ maxWidth:900, margin:'0 auto', padding:'0 1.5rem 4rem' }}>
           <div className="stats">
-            {[['350+','Sacred Temples'],['56','Live Streams'],['12','Pilgrimage Circuits'],['₹0','Free Forever']].map(([n,l]) => (
+            {[['294+','Sacred Temples'],['56','Live Streams'],['12','Pilgrimage Circuits'],['₹0','Free Forever']].map(([n,l]) => (
               <div key={l} style={{ textAlign:'center' }}>
                 <div className="stat-num">{n}</div>
                 <div className="stat-label">{l}</div>
@@ -213,7 +213,7 @@ export default function LandingPage() {
           <div className="steps">
             {[
               ['01','Create free account','Sign up with Google or email. 30 seconds.'],
-              ['02','Find your temple','350+ temples with timings, festivals and live streams.'],
+              ['02','Find your temple','294+ temples with timings, festivals and live streams.'],
               ['03','Plan with AI','Tell the AI your destination — get a complete itinerary.'],
               ['04','Save & go','Set a savings goal, track progress, and start your yatra.'],
             ].map(([n,t,d]) => (

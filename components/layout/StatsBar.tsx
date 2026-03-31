@@ -2,14 +2,14 @@
 import { useEffect, useState } from 'react'
 
 const DEFAULT_STATS = [
-  { value: '59', label: 'Sacred Temples' },
+  { value: '294', label: 'Sacred Temples' },
   { value: '56', label: 'Live Darshan Streams' },
   { value: '12', label: 'Pilgrimage Circuits' },
   { value: '28', label: 'States Covered' },
 ]
 
 export default function StatsBar() {
-  const [templeCount, setTempleCount] = useState('59')
+  const [templeCount, setTempleCount] = useState('294')
 
   useEffect(() => {
     fetch('/api/health')
