@@ -234,6 +234,74 @@ export default async function TemplePage({ params }: Props) {
               </div>
             )}
 
+            {/* —— RECOMMENDED POOJAS ——————————————— */}
+            {t.poojas && t.poojas.length > 0 && (
+              <div className="mb-8">
+                <h2 className="font-serif text-2xl font-medium mb-1">Recommended Poojas</h2>
+                <p className="text-sm mb-4" style={{ color:'var(--muted2)' }}>
+                  Sacred rituals this temple is known for
+                </p>
+                <style>{`
+                  .pooja-card { border:1.5px solid var(--border); border-radius:12px; padding:14px 16px; background:#fff; margin-bottom:10px; }
+                  .pooja-card.famous { border-color:rgba(192,87,10,.3); background:rgba(192,87,10,.03); }
+                  .pooja-badge { display:inline-block; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; padding:2px 8px; border-radius:4px; margin-bottom:6px; }
+                  .pooja-badge.famous { background:rgba(192,87,10,.12); color:var(--saffron); }
+                  .pooja-badge.regular { background:rgba(22,101,52,.1); color:#166534; }
+                  .pooja-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:8px; }
+                  .pooja-meta-item { display:flex; align-items:center; gap:4px; font-size:11px; color:var(--muted2); }
+                `}</style>
+                <div>
+                  {t.poojas.map((pooja: any, i: number) => (
+                    <div key={i} className={`pooja-card${pooja.is_famous ? ' famous' : ''}`}>
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex-1">
+                          <div>
+                            <span className={`pooja-badge ${pooja.is_famous ? 'famous' : 'regular'}`}>
+                              {pooja.is_famous ? '⭐ Most Famous' : '🪔 Recommended'}
+                            </span>
+                          </div>
+                          <div style={{ fontWeight:700, fontSize:15, color:'var(--ink)', marginBottom:4 }}>
+                            {pooja.name}
+                          </div>
+                          <div style={{ fontSize:13, lineHeight:1.65, color:'var(--muted)' }}>
+                            {pooja.description}
+                          </div>
+                          {pooja.best_for && (
+                            <div style={{ fontSize:11, marginTop:6, color:'var(--muted2)' }}>
+                              🙏 Best for: <strong style={{ color:'var(--ink)' }}>{pooja.best_for}</strong>
+                            </div>
+                          )}
+                          <div className="pooja-meta">
+                            {pooja.price && (
+                              <span className="pooja-meta-item">
+                                💰 <strong style={{ color:'var(--ink)' }}>{pooja.price}</strong>
+                              </span>
+                            )}
+                            {pooja.duration && (
+                              <span className="pooja-meta-item">
+                                ⏱️ {pooja.duration}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                        {pooja.booking_url && (
+                          <a href={pooja.booking_url} target="_blank" rel="noopener"
+                            style={{
+                              flexShrink:0, padding:'6px 14px',
+                              background:'var(--crimson)', color:'white',
+                              borderRadius:8, fontSize:12, fontWeight:600,
+                              textDecoration:'none', whiteSpace:'nowrap',
+                            }}>
+                            Book →
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* —— BOOK & AFFILIATE ———————————————— */}
             <div className="mb-8">
               <h2 className="font-serif text-2xl font-medium mb-1">Plan & Book</h2>

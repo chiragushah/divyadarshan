@@ -1,5 +1,15 @@
 import mongoose, { Schema, model, models, Document } from 'mongoose'
 
+export interface IPooja {
+  name: string           // e.g. "Rudrabhishek", "Sahasranamarchana"
+  description: string    // what it is, significance
+  price?: string         // e.g. "₹500", "₹1,100 – ₹5,100"
+  duration?: string      // e.g. "45 minutes", "2 hours"
+  booking_url?: string   // link to book online if available
+  is_famous?: boolean    // mark as "temple's most famous pooja"
+  best_for?: string      // e.g. "wealth", "health", "marriage", "moksha"
+}
+
 export interface ILiveSlot {
   day: 'everyday' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat' | 'sun'
   time: string   // e.g. "06:00", "12:00", "19:00"
@@ -26,7 +36,8 @@ export interface ITemple extends Document {
   categories: string[]
   has_live: boolean
   live_url?: string
-  live_schedule?: ILiveSlot[]   // ← NEW: structured schedule for live darshan
+  live_schedule?: ILiveSlot[]
+  poojas?: IPooja[]              // ← Recommended poojas at this temple
   lat?: number
   lng?: number
   image_url?: string
@@ -35,6 +46,16 @@ export interface ITemple extends Document {
   createdAt: Date
   updatedAt: Date
 }
+
+const PoojaSchema = new Schema<IPooja>({
+  name:        { type: String, required: true },
+  description: { type: String, required: true },
+  price:       { type: String },
+  duration:    { type: String },
+  booking_url: { type: String },
+  is_famous:   { type: Boolean, default: false },
+  best_for:    { type: String },
+}, { _id: false })
 
 const LiveSlotSchema = new Schema<ILiveSlot>({
   day:   { type: String, default: 'everyday' },
@@ -63,7 +84,8 @@ const TempleSchema = new Schema<ITemple>(
     categories:           { type: [String], default: [], index: true },
     has_live:             { type: Boolean, default: false, index: true },
     live_url:             { type: String },
-    live_schedule:        { type: [LiveSlotSchema], default: [] },  // ← NEW
+    live_schedule:        { type: [LiveSlotSchema], default: [] },
+    poojas:               { type: [PoojaSchema], default: [] },  // ← Recommended poojas
     lat:                  { type: Number },
     lng:                  { type: Number },
     image_url:            { type: String },
