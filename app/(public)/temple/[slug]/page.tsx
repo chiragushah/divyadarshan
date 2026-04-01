@@ -346,7 +346,7 @@ export default async function TemplePage({ params }: Props) {
               <p className="text-xs mb-4" style={{ color:'rgba(237,224,196,.7)' }}>
                 Get a complete AI-planned itinerary to {t.name}.
               </p>
-              <Link href={`/plan?destination=${encodeURIComponent(t.name)}`}
+              <Link href={`/plan?destination=${encodeURIComponent(t.name)}&city=${encodeURIComponent(t.city || '')}&state=${encodeURIComponent(t.state || '')}&deity=${encodeURIComponent(t.deity || '')}`}
                 className="btn w-full justify-center text-sm"
                 style={{ background:'var(--gold-lt)', color:'var(--crimson)' }}>
                 Generate Itinerary →

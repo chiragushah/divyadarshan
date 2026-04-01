@@ -1,16 +1,44 @@
 'use client'
 export const dynamic = 'force-dynamic'
-import { useState } from 'react'
+import { useState, useEffect, Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { Loader2 } from 'lucide-react'
 import Link from 'next/link'
 import { finverseLink } from '@/lib/utils'
 
-export default function PlannerPage() {
-  const [form, setForm] = useState({ from: '', to: '', mode: 'Train', days: 3, pilgrims: 2, deity: '', notes: '' })
-  const [result, setResult] = useState('')
+function PlannerForm() {
+  const searchParams = useSearchParams()
+
+  // Read params passed from temple detail page
+  const destination = searchParams.get('destination') || ''
+  const deity       = searchParams.get('deity') || ''
+  const city        = searchParams.get('city') || ''
+  const state       = searchParams.get('state') || ''
+  const prefilledFrom = destination || city || state
+
+  const [form, setForm] = useState({
+    from:     '',
+    to:       destination,
+    mode:     'Train',
+    days:     3,
+    pilgrims: 2,
+    deity:    deity,
+    notes:    city && state ? `Temple located in ${city}, ${state}.` : '',
+  })
+  const [result, setResult]   = useState('')
   const [loading, setLoading] = useState(false)
   const [provider, setProvider] = useState('')
-  const [error, setError] = useState('')
+  const [error, setError]     = useState('')
+
+  // Re-sync if params change (e.g. navigating from a different temple)
+  useEffect(() => {
+    setForm(f => ({
+      ...f,
+      to:    destination || f.to,
+      deity: deity || f.deity,
+      notes: city && state ? `Temple located in ${city}, ${state}.` : f.notes,
+    }))
+  }, [destination, deity, city, state])
 
   const set = (k: string, v: any) => setForm(f => ({ ...f, [k]: v }))
 
@@ -20,14 +48,19 @@ export default function PlannerPage() {
     setLoading(true); setResult(''); setError('')
     try {
       const res = await fetch('/api/ai/planner', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form),
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
       })
       const data = await res.json()
       if (data.error) { setError(data.error); return }
       setResult(data.itinerary)
       setProvider(data.provider)
-    } catch { setError('Something went wrong. Please try again.') }
-    finally { setLoading(false) }
+    } catch {
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -41,50 +74,124 @@ export default function PlannerPage() {
         </p>
       </div>
 
+      {/* Pre-filled banner */}
+      {prefilledFrom && (
+        <div className="flex items-center gap-3 px-4 py-3 rounded-xl mb-5 text-sm"
+          style={{ background: 'rgba(192,87,10,.08)', border: '1.5px solid rgba(192,87,10,.2)', color: 'var(--saffron)' }}>
+          <span style={{ fontSize: 18 }}>🛕</span>
+          <div>
+            <span className="font-semibold">Pre-filled from temple: </span>
+            <span>{destination}</span>
+            {city && state && <span className="ml-1" style={{ color: 'var(--muted2)', fontSize: 12 }}>({city}, {state})</span>}
+          </div>
+          <button
+            onClick={() => setForm({ from: '', to: '', mode: 'Train', days: 3, pilgrims: 2, deity: '', notes: '' })}
+            className="ml-auto text-xs underline"
+            style={{ color: 'var(--muted2)' }}>
+            Clear
+          </button>
+        </div>
+      )}
+
       {/* Form */}
       <div className="card card-p mb-6">
         <form onSubmit={generate}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
             <div>
               <label className="label">Starting City</label>
-              <input className="input" placeholder="e.g. Mumbai, Delhi, Pune…" value={form.from} onChange={e => set('from', e.target.value)} required />
+              <input
+                className="input"
+                placeholder="e.g. Mumbai, Delhi, Pune…"
+                value={form.from}
+                onChange={e => set('from', e.target.value)}
+                required
+              />
             </div>
+
             <div>
               <label className="label">Destination / Yatra</label>
-              <input className="input" placeholder="e.g. Char Dham, Varanasi, Tirupati…" value={form.to} onChange={e => set('to', e.target.value)} required />
+              <input
+                className="input"
+                placeholder="e.g. Char Dham, Varanasi, Tirupati…"
+                value={form.to}
+                onChange={e => set('to', e.target.value)}
+                required
+              />
             </div>
+
             <div>
               <label className="label">Travel Mode</label>
               <select className="input" value={form.mode} onChange={e => set('mode', e.target.value)}>
-                {['Train', 'Flight', 'Road / Car', 'Bus', 'Mixed'].map(m => <option key={m}>{m}</option>)}
+                {['Train', 'Flight', 'Road / Car', 'Bus', 'Mixed'].map(m => (
+                  <option key={m}>{m}</option>
+                ))}
               </select>
             </div>
+
             <div>
               <label className="label">Duration (Days)</label>
-              <input className="input" type="number" min={1} max={30} value={form.days} onChange={e => set('days', parseInt(e.target.value))} />
+              <input
+                className="input"
+                type="number"
+                min={1}
+                max={30}
+                value={form.days}
+                onChange={e => set('days', parseInt(e.target.value))}
+              />
             </div>
+
             <div>
               <label className="label">Number of Pilgrims</label>
-              <input className="input" type="number" min={1} max={20} value={form.pilgrims} onChange={e => set('pilgrims', parseInt(e.target.value))} />
+              <input
+                className="input"
+                type="number"
+                min={1}
+                max={20}
+                value={form.pilgrims}
+                onChange={e => set('pilgrims', parseInt(e.target.value))}
+              />
             </div>
+
             <div>
               <label className="label">Deity Focus (optional)</label>
-              <input className="input" placeholder="e.g. Shiva, Vishnu, Devi…" value={form.deity} onChange={e => set('deity', e.target.value)} />
+              <input
+                className="input"
+                placeholder="e.g. Shiva, Vishnu, Devi…"
+                value={form.deity}
+                onChange={e => set('deity', e.target.value)}
+              />
             </div>
+
             <div className="md:col-span-2">
               <label className="label">Special Requests (optional)</label>
-              <textarea className="input h-20 resize-none" placeholder="Budget trip, elderly pilgrims, specific festivals, vegetarian only, no trekking…"
-                value={form.notes} onChange={e => set('notes', e.target.value)} />
+              <textarea
+                className="input h-20 resize-none"
+                placeholder="Budget trip, elderly pilgrims, specific festivals, vegetarian only, no trekking…"
+                value={form.notes}
+                onChange={e => set('notes', e.target.value)}
+              />
             </div>
           </div>
-          <button type="submit" disabled={loading || !form.from || !form.to} className="btn btn-primary mt-5 w-full md:w-auto">
-            {loading ? <><Loader2 size={16} className="animate-spin" /> Generating Itinerary…</> : 'Generate Pilgrimage Plan'}
+
+          <button
+            type="submit"
+            disabled={loading || !form.from || !form.to}
+            className="btn btn-primary mt-5 w-full md:w-auto">
+            {loading
+              ? <><Loader2 size={16} className="animate-spin" /> Generating Itinerary…</>
+              : 'Generate Pilgrimage Plan'}
           </button>
         </form>
       </div>
 
       {/* Error */}
-      {error && <div className="card card-p mb-4 text-sm" style={{ background: '#FFF0F0', color: 'var(--live)', borderColor: '#FFCDD2' }}>{error}</div>}
+      {error && (
+        <div className="card card-p mb-4 text-sm"
+          style={{ background: '#FFF0F0', color: 'var(--live)', borderColor: '#FFCDD2' }}>
+          {error}
+        </div>
+      )}
 
       {/* Result */}
       {result && (
@@ -93,45 +200,79 @@ export default function PlannerPage() {
             <h2 className="font-serif text-2xl font-medium">Your Yatra Plan</h2>
             <div className="flex items-center gap-3">
               <span className="badge-gold text-[10px]">Generated by Claude</span>
-              <button onClick={() => {
-                navigator.clipboard.writeText(result)
-              }} className="btn btn-secondary btn-sm">Copy</button>
+              <button
+                onClick={() => navigator.clipboard.writeText(result)}
+                className="btn btn-secondary btn-sm">
+                Copy
+              </button>
             </div>
           </div>
 
-          <div className="ai-prose" dangerouslySetInnerHTML={{ __html: result.replace(/\n/g, '<br/>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+          <div className="ai-prose"
+            dangerouslySetInnerHTML={{
+              __html: result
+                .replace(/\n/g, '<br/>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            }}
+          />
 
           {/* Bridge cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 pt-6 border-t" style={{ borderColor: 'var(--border)' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 pt-6 border-t"
+            style={{ borderColor: 'var(--border)' }}>
             <div className="card card-p" style={{ borderColor: 'var(--border2)' }}>
               <h4 className="font-serif text-lg font-medium mb-1">How much will this cost?</h4>
-              <p className="text-xs mb-3" style={{ color: 'var(--muted)' }}>Get a detailed cost breakdown with the Yatra Budget calculator.</p>
-              <Link href={`/plan/budget?destination=${encodeURIComponent(form.to)}&pilgrims=${form.pilgrims}`} className="btn btn-secondary btn-sm w-full justify-center">
+              <p className="text-xs mb-3" style={{ color: 'var(--muted)' }}>
+                Get a detailed cost breakdown with the Yatra Budget calculator.
+              </p>
+              <Link
+                href={`/plan/budget?destination=${encodeURIComponent(form.to)}&pilgrims=${form.pilgrims}`}
+                className="btn btn-secondary btn-sm w-full justify-center">
                 Calculate Budget →
               </Link>
             </div>
             <div className="card card-p" style={{ borderColor: 'var(--border2)' }}>
               <h4 className="font-serif text-lg font-medium mb-1">Start saving for this yatra</h4>
-              <p className="text-xs mb-3" style={{ color: 'var(--muted)' }}>Set a monthly savings goal and track progress until you're ready to go.</p>
-              <Link href={`/yatra/goals?yatra=${encodeURIComponent(form.to)}`} className="btn btn-gold btn-sm w-full justify-center">
+              <p className="text-xs mb-3" style={{ color: 'var(--muted)' }}>
+                Set a monthly savings goal and track progress until you're ready to go.
+              </p>
+              <Link
+                href={`/yatra/goals?yatra=${encodeURIComponent(form.to)}`}
+                className="btn btn-gold btn-sm w-full justify-center">
                 Set Savings Goal →
               </Link>
             </div>
           </div>
 
           {/* FinVerse CTA */}
-          <div className="mt-4 rounded-xl p-4 flex items-center justify-between gap-4" style={{ background: 'var(--ivory2)', border: '1px solid var(--border)' }}>
+          <div className="mt-4 rounded-xl p-4 flex items-center justify-between gap-4"
+            style={{ background: 'var(--ivory2)', border: '1px solid var(--border)' }}>
             <div>
               <div className="text-xs font-semibold" style={{ color: 'var(--gold-dk)' }}>Powered by FinVerse</div>
-              <p className="text-sm font-medium" style={{ color: 'var(--ink)' }}>Open a dedicated Yatra Fund and start saving today</p>
+              <p className="text-sm font-medium" style={{ color: 'var(--ink)' }}>
+                Open a dedicated Yatra Fund and start saving today
+              </p>
             </div>
             <a href={finverseLink({ action: 'savings', goal_name: form.to, utm_content: 'planner' })}
-              target="_blank" rel="noopener" className="btn btn-gold btn-sm whitespace-nowrap">
+              target="_blank" rel="noopener"
+              className="btn btn-gold btn-sm whitespace-nowrap">
               Open Yatra Fund →
             </a>
           </div>
         </div>
       )}
     </div>
+  )
+}
+
+// Wrap in Suspense so useSearchParams works correctly in Next.js 14
+export default function PlannerPage() {
+  return (
+    <Suspense fallback={
+      <div className="max-w-4xl mx-auto px-6 py-10 flex items-center justify-center">
+        <Loader2 size={24} className="animate-spin" style={{ color: 'var(--crimson)' }} />
+      </div>
+    }>
+      <PlannerForm />
+    </Suspense>
   )
 }
