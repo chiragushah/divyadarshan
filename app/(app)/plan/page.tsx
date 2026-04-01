@@ -6,6 +6,234 @@ import { Loader2 } from 'lucide-react'
 import Link from 'next/link'
 import { finverseLink } from '@/lib/utils'
 
+// ── Itinerary Renderer ─────────────────────────────────────────────────────
+function ItineraryRenderer({ text }: { text: string }) {
+  const lines = text.split('\n').filter(l => l.trim())
+
+  type Block =
+    | { type: 'day';  title: string; items: string[] }
+    | { type: 'tips'; items: string[] }
+    | { type: 'note'; text: string }
+
+  const blocks: Block[] = []
+  let current: Block | null = null
+
+  for (const raw of lines) {
+    const line = raw.trim()
+
+    // Day heading — "Day 1:", "Day 1 –", "DAY 1"
+    const dayMatch = line.match(/^(day\s*\d+[:\-–—]?\s*.*)$/i)
+    if (dayMatch) {
+      if (current) blocks.push(current)
+      current = { type: 'day', title: line.replace(/^day\s*/i, 'Day '), items: [] }
+      continue
+    }
+
+    // Tips / Notes section heading
+    if (/^(tips?|important|note|reminder|advice|budget|cost|things to (note|know)|travel tip)/i.test(line)) {
+      if (current) blocks.push(current)
+      current = { type: 'tips', items: [] }
+      continue
+    }
+
+    // Bullet / list items
+    const isBullet = /^[-•*–—]/.test(line)
+    if (current && (current.type === 'day' || current.type === 'tips') && isBullet) {
+      current.items.push(line.replace(/^[-•*–—]\s*/, ''))
+      continue
+    }
+
+    // Continuation inside a day block
+    if (current?.type === 'day' && !isBullet && line.length > 0) {
+      current.items.push(line)
+      continue
+    }
+
+    // Generic note
+    if (line.length > 0) {
+      if (current) blocks.push(current)
+      current = { type: 'note', text: line }
+      blocks.push(current)
+      current = null
+    }
+  }
+  if (current) blocks.push(current)
+
+  const DAY_COLORS = [
+    { bg: 'rgba(192,87,10,.07)',  border: 'rgba(192,87,10,.25)',  badge: '#C0570A', badgeBg: 'rgba(192,87,10,.12)' },
+    { bg: 'rgba(22,101,52,.07)',  border: 'rgba(22,101,52,.25)',  badge: '#166534', badgeBg: 'rgba(22,101,52,.12)' },
+    { bg: 'rgba(30,64,175,.07)',  border: 'rgba(30,64,175,.25)',  badge: '#1E40AF', badgeBg: 'rgba(30,64,175,.12)' },
+    { bg: 'rgba(109,40,217,.07)', border: 'rgba(109,40,217,.25)', badge: '#6D28D9', badgeBg: 'rgba(109,40,217,.12)' },
+    { bg: 'rgba(190,18,60,.07)',  border: 'rgba(190,18,60,.25)',  badge: '#BE123C', badgeBg: 'rgba(190,18,60,.12)' },
+  ]
+
+  // Bold inline **text**
+  const renderBold = (str: string) => {
+    const parts = str.split(/\*\*(.*?)\*\*/g)
+    return parts.map((p, i) =>
+      i % 2 === 1
+        ? <strong key={i} style={{ color: 'var(--ink)', fontWeight: 700 }}>{p}</strong>
+        : <span key={i}>{p}</span>
+    )
+  }
+
+  // Time tag e.g. "(9:00 AM)" → highlighted
+  const renderLine = (line: string) => {
+    const withTime = line.replace(/\((\d{1,2}:\d{2}\s*(?:AM|PM))\)/gi,
+      '<span class="time-tag">$1</span>')
+    return <span dangerouslySetInnerHTML={{ __html:
+      withTime.replace(/\*\*(.*?)\*\*/g, '<strong style="color:var(--ink);font-weight:700">$1</strong>')
+    }} />
+  }
+
+  let dayCount = 0
+
+  return (
+    <>
+      <style>{`
+        .time-tag {
+          display:inline-block;
+          background:rgba(192,87,10,.1);
+          color:var(--saffron);
+          font-size:10px;
+          font-weight:600;
+          padding:1px 6px;
+          border-radius:4px;
+          margin-left:4px;
+          vertical-align:middle;
+        }
+        .day-item {
+          display:flex;
+          align-items:flex-start;
+          gap:10px;
+          padding:8px 0;
+          border-bottom:1px solid var(--border);
+          font-size:13.5px;
+          line-height:1.65;
+          color:var(--muted);
+        }
+        .day-item:last-child { border-bottom:none; }
+        .day-dot {
+          width:6px; height:6px; border-radius:50%;
+          margin-top:7px; flex-shrink:0;
+        }
+        .tip-item {
+          display:flex;
+          align-items:flex-start;
+          gap:10px;
+          padding:7px 0;
+          font-size:13px;
+          color:var(--muted);
+          line-height:1.6;
+        }
+      `}</style>
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+        {blocks.map((block, i) => {
+
+          if (block.type === 'day') {
+            const c = DAY_COLORS[dayCount % DAY_COLORS.length]
+            dayCount++
+            return (
+              <div key={i} style={{
+                background: c.bg,
+                border: `1.5px solid ${c.border}`,
+                borderRadius: 14,
+                overflow: 'hidden',
+              }}>
+                {/* Day header */}
+                <div style={{
+                  padding: '10px 16px',
+                  borderBottom: `1px solid ${c.border}`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 10,
+                }}>
+                  <span style={{
+                    background: c.badgeBg,
+                    color: c.badge,
+                    fontSize: 11,
+                    fontWeight: 700,
+                    textTransform: 'uppercase',
+                    letterSpacing: '.07em',
+                    padding: '3px 10px',
+                    borderRadius: 6,
+                  }}>
+                    {block.title}
+                  </span>
+                </div>
+                {/* Day items */}
+                {block.items.length > 0 && (
+                  <div style={{ padding: '4px 16px 10px' }}>
+                    {block.items.map((item, j) => (
+                      <div key={j} className="day-item">
+                        <span className="day-dot" style={{ background: c.badge }} />
+                        <span>{renderLine(item)}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )
+          }
+
+          if (block.type === 'tips') {
+            return (
+              <div key={i} style={{
+                background: 'rgba(234,179,8,.07)',
+                border: '1.5px solid rgba(234,179,8,.3)',
+                borderRadius: 14,
+                overflow: 'hidden',
+              }}>
+                <div style={{
+                  padding: '10px 16px',
+                  borderBottom: '1px solid rgba(234,179,8,.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 8,
+                }}>
+                  <span style={{ fontSize: 16 }}>💡</span>
+                  <span style={{
+                    fontSize: 11,
+                    fontWeight: 700,
+                    textTransform: 'uppercase',
+                    letterSpacing: '.07em',
+                    color: '#92400E',
+                  }}>Yatra Tips</span>
+                </div>
+                <div style={{ padding: '4px 16px 10px' }}>
+                  {block.items.map((item, j) => (
+                    <div key={j} className="tip-item">
+                      <span style={{ fontSize: 14, marginTop: 2 }}>✦</span>
+                      <span>{renderBold(item)}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )
+          }
+
+          if (block.type === 'note') {
+            return (
+              <p key={i} style={{
+                fontSize: 14,
+                lineHeight: 1.7,
+                color: 'var(--muted)',
+                padding: '4px 0',
+              }}>
+                {renderBold(block.text)}
+              </p>
+            )
+          }
+
+          return null
+        })}
+      </div>
+    </>
+  )
+}
+
+// ── Planner Form ─────────────────────────────────────────────────────────────
 function PlannerForm() {
   const searchParams = useSearchParams()
 
@@ -196,25 +424,17 @@ function PlannerForm() {
       {/* Result */}
       {result && (
         <div className="card card-p">
-          <div className="flex items-center justify-between mb-5">
+          {/* Header */}
+          <div className="flex items-center justify-between mb-6">
             <h2 className="font-serif text-2xl font-medium">Your Yatra Plan</h2>
-            <div className="flex items-center gap-3">
-              <span className="badge-gold text-[10px]">Generated by Claude</span>
-              <button
-                onClick={() => navigator.clipboard.writeText(result)}
-                className="btn btn-secondary btn-sm">
-                Copy
-              </button>
-            </div>
+            <button
+              onClick={() => navigator.clipboard.writeText(result)}
+              className="btn btn-secondary btn-sm">
+              📋 Copy
+            </button>
           </div>
 
-          <div className="ai-prose"
-            dangerouslySetInnerHTML={{
-              __html: result
-                .replace(/\n/g, '<br/>')
-                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-            }}
-          />
+          <ItineraryRenderer text={result} />
 
           {/* Bridge cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 pt-6 border-t"
