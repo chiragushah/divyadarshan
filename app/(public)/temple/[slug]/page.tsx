@@ -6,6 +6,7 @@ import { Temple } from '@/models'
 import ReviewsSection from '@/components/temple/ReviewsSection'
 import ReportButton from '@/components/temple/ReportButton'
 import MarkVisited from '@/components/temple/MarkVisited'
+import LiveDarshanStatus from '@/components/temple/LiveDarshanStatus'
 
 interface Props { params: { slug: string } }
 
@@ -127,11 +128,12 @@ export default async function TemplePage({ params }: Props) {
               </span>
             </div>
 
-            {t.has_live && t.live_url && (
-              <a href={t.live_url} target="_blank" rel="noopener"
-                className="btn btn-primary mb-8 flex items-center gap-2 w-fit">
-                <span className="live-dot" /> Watch Live Darshan
-              </a>
+            {t.has_live && (
+              <LiveDarshanStatus
+                liveUrl={t.live_url}
+                liveSchedule={t.live_schedule}
+                timing={t.timing}
+              />
             )}
 
             {/* —— FACILITIES ——————————————————————— */}
