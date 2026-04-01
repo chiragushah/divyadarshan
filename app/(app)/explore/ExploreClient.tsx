@@ -1,7 +1,7 @@
 'use client'
 export const dynamic = 'force-dynamic'
 import { useState } from 'react'
-import { useRouter, useSearchParams, usePathname } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 import TempleCard from '@/components/temple/TempleCard'
 import type { Temple } from '@/types'
 
@@ -23,11 +23,14 @@ interface Props {
 export default function ExploreClient({ initialTemples, total, page, states, activeFilters }: Props) {
   const router = useRouter()
   const pathname = usePathname()
-  const searchParams = useSearchParams()
   const activeTab = activeFilters.tab || 'directory'
 
+  // ✅ Fixed: build URL from activeFilters prop instead of useSearchParams()
   const update = (key: string, value: string) => {
-    const p = new URLSearchParams(searchParams.toString())
+    const p = new URLSearchParams()
+    Object.entries(activeFilters).forEach(([k, v]) => {
+      if (v) p.set(k, v)
+    })
     if (value) p.set(key, value); else p.delete(key)
     p.delete('page')
     router.push(`${pathname}?${p.toString()}`)
