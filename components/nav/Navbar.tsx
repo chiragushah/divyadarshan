@@ -21,6 +21,7 @@ const NAV_GROUPS = [
     id: 'plan',
     label: 'Plan',
     items: [
+      { label: 'Yatra Packages', desc: 'Curated pilgrimage circuits', href: '/packages', icon: '🛕' },
       { label: 'AI Planner', desc: 'Day-wise yatra itinerary', href: '/plan', icon: '→' },
       { label: 'Yatra Budget', desc: 'Detailed cost estimator', href: '/plan/budget', icon: '₹' },
       { label: 'Packing List', desc: 'Destination-specific', href: '/plan/checklist', icon: '✓' },

@@ -4,6 +4,8 @@ import Link from 'next/link'
 import connectDB from '@/lib/mongodb/connect'
 import { Temple } from '@/models'
 import ReviewsSection from '@/components/temple/ReviewsSection'
+import ReportButton from '@/components/temple/ReportButton'
+import MarkVisited from '@/components/temple/MarkVisited'
 
 interface Props { params: { slug: string } }
 
@@ -106,14 +108,22 @@ export default async function TemplePage({ params }: Props) {
             )}
 
             <h1 className="font-serif text-4xl font-medium mb-2">{t.name}</h1>
-            <p className="text-sm mb-6" style={{ color:'var(--muted2)' }}>
-              {t.deity} · {t.type} · {t.city}, {t.state}
-            </p>
+            <div className="flex items-center justify-between mb-4">
+              <p className="text-sm" style={{ color:'var(--muted2)' }}>{t.deity} · {t.type} · {t.city}, {t.state}</p>
+              <MarkVisited templeSlug={t.slug} templeName={t.name} />
+            </div>
 
             {/* Description */}
             <p className="text-base leading-relaxed mb-4" style={{ color:'var(--muted)' }}>
               {t.extended_description || t.description}
             </p>
+
+            <div className="flex items-center justify-between mb-6">
+              <ReportButton templeSlug={t.slug} templeName={t.name} />
+              <span className="text-xs px-2 py-1 rounded" style={{ background:'var(--sandstone)', color:'var(--muted2)' }}>
+                Last updated: {new Date(t.updatedAt || t.createdAt || Date.now()).toLocaleDateString('en-IN', { month:'short', year:'numeric' })}
+              </span>
+            </div>
 
             {t.has_live && t.live_url && (
               <a href={t.live_url} target="_blank" rel="noopener"
@@ -221,6 +231,69 @@ export default async function TemplePage({ params }: Props) {
                 </div>
               </div>
             )}
+
+
+            {/* ── BOOK & AFFILIATE ────────────── */}
+            <div className="mb-8">
+              <h2 className="font-serif text-2xl font-medium mb-1">Plan & Book</h2>
+              <p className="text-sm mb-4" style={{ color:'var(--muted2)' }}>Hotels, trains, buses — everything for your yatra</p>
+
+              {/* Darshan booking for major temples */}
+              {t.official_website && (t.slug === 'tirumala-venkateswara-temple' || t.slug === 'vaishno-devi-shrine' || t.slug === 'shirdi-sai-baba-samadhi' || t.slug === 'kedarnath-temple') && (
+                <a href={
+                  t.slug === 'tirumala-venkateswara-temple' ? 'https://tirupati.org/darshan' :
+                  t.slug === 'vaishno-devi-shrine' ? 'https://maavaishnodevi.org/registration' :
+                  t.slug === 'shirdi-sai-baba-samadhi' ? 'https://online.shrisaibabasansthan.org' :
+                  t.slug === 'kedarnath-temple' ? 'https://registrationandtouristcare.uk.gov.in' : '#'
+                } target="_blank" rel="noopener"
+                  className="flex items-center gap-3 p-3 rounded-xl mb-3 text-sm font-medium"
+                  style={{ background:'rgba(192,87,10,.08)', border:'1.5px solid rgba(192,87,10,.2)', color:'var(--saffron)', textDecoration:'none' }}>
+                  <span style={{ fontSize:18 }}>🎟️</span>
+                  <div>
+                    <div style={{ fontWeight:700 }}>Book Official Darshan Slot</div>
+                    <div style={{ fontSize:11, opacity:.7 }}>Skip the queue — book online in advance</div>
+                  </div>
+                  <span className="ml-auto">→</span>
+                </a>
+              )}
+
+              {/* Affiliate buttons */}
+              <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+                {[
+                  { icon:'🏨', label:'Hotels Nearby', sub:'MakeMyTrip', url:`https://www.makemytrip.com/hotels/${encodeURIComponent(t.city+' '+t.state+' hotels')}` },
+                  { icon:'🚆', label:'Train Tickets', sub:'IRCTC', url:`https://www.irctc.co.in/nget/train-search` },
+                  { icon:'🚌', label:'Bus Tickets', sub:'RedBus', url:`https://www.redbus.in/search?fromCityName=${encodeURIComponent(t.city)}` },
+                  { icon:'✈️', label:'Flights', sub:'EaseMyTrip', url:`https://www.easemytrip.com/flight` },
+                ].map(b => (
+                  <a key={b.label} href={b.url} target="_blank" rel="noopener"
+                    style={{ display:'flex', alignItems:'center', gap:10, padding:'10px 12px', border:'1.5px solid var(--border)', borderRadius:10, textDecoration:'none', transition:'all .2s' }}
+                    onMouseOver={e => (e.currentTarget.style.borderColor = 'var(--crimson)')}
+                    onMouseOut={e => (e.currentTarget.style.borderColor = 'var(--border)')}>
+                    <span style={{ fontSize:20 }}>{b.icon}</span>
+                    <div>
+                      <div style={{ fontSize:12, fontWeight:700, color:'var(--ink)' }}>{b.label}</div>
+                      <div style={{ fontSize:10, color:'var(--muted2)' }}>via {b.sub}</div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+
+              {/* FinVerse Savings CTA */}
+              <div className="mt-3 p-3 rounded-xl" style={{ background:'linear-gradient(135deg, var(--crimson), #4a0a0a)', color:'white' }}>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div style={{ fontWeight:700, fontSize:13 }}>💰 Save for this Yatra</div>
+                    <div style={{ fontSize:11, opacity:.75, marginTop:2 }}>Open a dedicated yatra savings fund on FinVerse. Earn interest while you save.</div>
+                  </div>
+                  <a href={`https://finverse.app?utm_source=divyadarshan&utm_temple=${t.slug}`}
+                    target="_blank" rel="noopener"
+                    style={{ flexShrink:0, marginLeft:12, padding:'6px 12px', background:'rgba(255,255,255,.15)', borderRadius:8, fontSize:11, fontWeight:600, color:'white', textDecoration:'none', border:'1px solid rgba(255,255,255,.2)' }}
+                    onClick={() => fetch('/api/analytics/finverse', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ source: `temple/${t.slug}`, campaign:'savings_cta' }) })}>
+                    Open Fund →
+                  </a>
+                </div>
+              </div>
+            </div>
 
             <ReviewsSection templeId={t.id} templeName={t.name} />
           </div>
