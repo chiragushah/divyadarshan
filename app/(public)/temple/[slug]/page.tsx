@@ -27,8 +27,8 @@ export async function generateStaticParams() {
 }
 
 const FACILITY_ICONS: Record<string, string> = {
-  toilets: '🚻', parking: '🅿️', drinking_water: '💧', prasad: '🪔',
-  cloak_room: '🧳', accommodation: '🏨', wheelchair: '♿', atm: '🏧',
+  toilets: '🚻', parking: '🅿️', drinking_water: '🚰', prasad: '🍬',
+  cloak_room: '🎒', accommodation: '🏨', wheelchair: '♿', atm: '🏧',
   medical: '🏥', free_meals: '🍱',
 }
 const FACILITY_LABELS: Record<string, string> = {
@@ -68,6 +68,8 @@ export default async function TemplePage({ params }: Props) {
         .nearby-item:last-child { border-bottom:none; }
         .nearby-dot { width:6px; height:6px; border-radius:50%; background:var(--crimson); margin-top:5px; flex-shrink:0; }
         .toilet-banner { background:linear-gradient(135deg,rgba(22,163,74,.08),rgba(22,163,74,.04)); border:1.5px solid rgba(22,163,74,.2); border-radius:12px; padding:14px 16px; margin-bottom:12px; }
+        .book-btn { display:flex; align-items:center; gap:10px; padding:10px 12px; border:1.5px solid var(--border); border-radius:10px; text-decoration:none; transition:border-color .2s; }
+        .book-btn:hover { border-color:var(--crimson); }
         @media(max-width:600px){ .fac-grid { grid-template-columns:1fr; } }
       `}</style>
 
@@ -81,7 +83,7 @@ export default async function TemplePage({ params }: Props) {
         </nav>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* ── MAIN ───────────────────────────── */}
+          {/* —— MAIN ————————————————————————————————— */}
           <div className="lg:col-span-2">
             {/* Hero image */}
             <div className="rounded-2xl overflow-hidden mb-6 aspect-video flex items-center justify-center relative"
@@ -132,7 +134,7 @@ export default async function TemplePage({ params }: Props) {
               </a>
             )}
 
-            {/* ── FACILITIES ─────────────────── */}
+            {/* —— FACILITIES ——————————————————————— */}
             {Object.keys(facilities).length > 0 && (
               <div className="mb-8">
                 <h2 className="font-serif text-2xl font-medium mb-1">Facilities & Amenities</h2>
@@ -140,7 +142,6 @@ export default async function TemplePage({ params }: Props) {
                   What to expect when you visit
                 </p>
 
-                {/* Toilets banner — prominent */}
                 {facilities.toilets && (
                   <div className="toilet-banner">
                     <div className="flex items-start gap-3">
@@ -162,7 +163,7 @@ export default async function TemplePage({ params }: Props) {
                       return (
                         <div key={key} className={`fac-item ${isYes?'yes':isNo?'no':'partial'}`}>
                           <div className="fac-header">
-                            <span className="fac-icon">{FACILITY_ICONS[key] || '📌'}</span>
+                            <span className="fac-icon">{FACILITY_ICONS[key] || '📎'}</span>
                             <span className="fac-label">{FACILITY_LABELS[key] || key}</span>
                           </div>
                           <div className="fac-value">{String(val)}</div>
@@ -173,7 +174,7 @@ export default async function TemplePage({ params }: Props) {
               </div>
             )}
 
-            {/* ── NEARBY PLACES ──────────────── */}
+            {/* —— NEARBY PLACES ———————————————————— */}
             {nearby.length > 0 && (
               <div className="mb-8">
                 <h2 className="font-serif text-2xl font-medium mb-1">Places Nearby</h2>
@@ -193,8 +194,7 @@ export default async function TemplePage({ params }: Props) {
               </div>
             )}
 
-
-            {/* ── HOW TO REACH ───────────────── */}
+            {/* —— HOW TO REACH ————————————————————— */}
             {t.how_to_reach && Object.keys(t.how_to_reach).length > 0 && (
               <div className="mb-8">
                 <h2 className="font-serif text-2xl font-medium mb-1">How to Reach</h2>
@@ -203,11 +203,11 @@ export default async function TemplePage({ params }: Props) {
                 </p>
                 <div className="card card-p" style={{ padding:0, overflow:'hidden' }}>
                   {[
-                    { key:'by_air',     label:'By Air',     icon:'✈️' },
-                    { key:'by_train',   label:'By Train',   icon:'🚆' },
-                    { key:'by_bus',     label:'By Bus',     icon:'🚌' },
+                    { key:'by_air',     label:'By Air',         icon:'✈️' },
+                    { key:'by_train',   label:'By Train',       icon:'🚅' },
+                    { key:'by_bus',     label:'By Bus',         icon:'🚌' },
                     { key:'by_taxi',    label:'By Taxi / Auto', icon:'🚕' },
-                    { key:'local_tips', label:'Local Tips', icon:'💡' },
+                    { key:'local_tips', label:'Local Tips',     icon:'💡' },
                   ].filter(item => t.how_to_reach[item.key]).map((item, idx, arr) => (
                     <div key={item.key} style={{
                       padding:'14px 18px',
@@ -232,8 +232,7 @@ export default async function TemplePage({ params }: Props) {
               </div>
             )}
 
-
-            {/* ── BOOK & AFFILIATE ────────────── */}
+            {/* —— BOOK & AFFILIATE ———————————————— */}
             <div className="mb-8">
               <h2 className="font-serif text-2xl font-medium mb-1">Plan & Book</h2>
               <p className="text-sm mb-4" style={{ color:'var(--muted2)' }}>Hotels, trains, buses — everything for your yatra</p>
@@ -257,18 +256,15 @@ export default async function TemplePage({ params }: Props) {
                 </a>
               )}
 
-              {/* Affiliate buttons */}
+              {/* Affiliate buttons — hover handled via CSS .book-btn class */}
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
                 {[
                   { icon:'🏨', label:'Hotels Nearby', sub:'MakeMyTrip', url:`https://www.makemytrip.com/hotels/${encodeURIComponent(t.city+' '+t.state+' hotels')}` },
-                  { icon:'🚆', label:'Train Tickets', sub:'IRCTC', url:`https://www.irctc.co.in/nget/train-search` },
-                  { icon:'🚌', label:'Bus Tickets', sub:'RedBus', url:`https://www.redbus.in/search?fromCityName=${encodeURIComponent(t.city)}` },
-                  { icon:'✈️', label:'Flights', sub:'EaseMyTrip', url:`https://www.easemytrip.com/flight` },
+                  { icon:'🚅', label:'Train Tickets',  sub:'IRCTC',       url:`https://www.irctc.co.in/nget/train-search` },
+                  { icon:'🚌', label:'Bus Tickets',    sub:'RedBus',      url:`https://www.redbus.in/search?fromCityName=${encodeURIComponent(t.city)}` },
+                  { icon:'✈️', label:'Flights',        sub:'EaseMyTrip',  url:`https://www.easemytrip.com/flight` },
                 ].map(b => (
-                  <a key={b.label} href={b.url} target="_blank" rel="noopener"
-                    style={{ display:'flex', alignItems:'center', gap:10, padding:'10px 12px', border:'1.5px solid var(--border)', borderRadius:10, textDecoration:'none', transition:'all .2s' }}
-                    onMouseOver={e => (e.currentTarget.style.borderColor = 'var(--crimson)')}
-                    onMouseOut={e => (e.currentTarget.style.borderColor = 'var(--border)')}>
+                  <a key={b.label} href={b.url} target="_blank" rel="noopener" className="book-btn">
                     <span style={{ fontSize:20 }}>{b.icon}</span>
                     <div>
                       <div style={{ fontSize:12, fontWeight:700, color:'var(--ink)' }}>{b.label}</div>
@@ -287,8 +283,7 @@ export default async function TemplePage({ params }: Props) {
                   </div>
                   <a href={`https://finverse.app?utm_source=divyadarshan&utm_temple=${t.slug}`}
                     target="_blank" rel="noopener"
-                    style={{ flexShrink:0, marginLeft:12, padding:'6px 12px', background:'rgba(255,255,255,.15)', borderRadius:8, fontSize:11, fontWeight:600, color:'white', textDecoration:'none', border:'1px solid rgba(255,255,255,.2)' }}
-                    onClick={() => fetch('/api/analytics/finverse', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ source: `temple/${t.slug}`, campaign:'savings_cta' }) })}>
+                    style={{ flexShrink:0, marginLeft:12, padding:'6px 12px', background:'rgba(255,255,255,.15)', borderRadius:8, fontSize:11, fontWeight:600, color:'white', textDecoration:'none', border:'1px solid rgba(255,255,255,.2)' }}>
                     Open Fund →
                   </a>
                 </div>
@@ -298,7 +293,7 @@ export default async function TemplePage({ params }: Props) {
             <ReviewsSection templeId={t.id} templeName={t.name} />
           </div>
 
-          {/* ── SIDEBAR ───────────────────────── */}
+          {/* —— SIDEBAR ————————————————————————————— */}
           <div className="space-y-4">
             <div className="card card-p">
               <h3 className="font-serif text-xl font-medium mb-4">Temple Information</h3>
@@ -328,7 +323,7 @@ export default async function TemplePage({ params }: Props) {
                     const isNo = String(val).startsWith('❌')
                     return (
                       <div key={key} style={{ display:'flex', alignItems:'center', gap:6, fontSize:11 }}>
-                        <span style={{ fontSize:14 }}>{FACILITY_ICONS[key] || '📌'}</span>
+                        <span style={{ fontSize:14 }}>{FACILITY_ICONS[key] || '📎'}</span>
                         <span style={{ color: isYes ? '#166534' : isNo ? '#991B1B' : '#92400E', fontWeight:500 }}>
                           {FACILITY_LABELS[key] || key}
                         </span>
@@ -370,7 +365,6 @@ export default async function TemplePage({ params }: Props) {
                 <div className="text-xs" style={{ color:'var(--muted2)' }}>{t.rating_count} reviews</div>
               </div>
             )}
-
 
             {t.official_website && (
               <a href={t.official_website} target="_blank" rel="noopener"
