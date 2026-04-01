@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import { useState } from 'react'
 import type { Temple } from '@/types'
 
 interface Props {
@@ -19,37 +20,88 @@ function getBg(deity?: string): string {
   if (d.includes('murugan') || d.includes('subramanya')) return 'linear-gradient(135deg,#3a1a6b,#1a0a40)'
   if (d.includes('lakshmi')) return 'linear-gradient(135deg,#7a6a1a,#4a3a08)'
   if (d.includes('jain') || d.includes('multiple')) return 'linear-gradient(135deg,#2a5a3a,#1a3a2a)'
-  return 'linear-gradient(135deg,var(--crimson),#6B3030)'
+  return 'linear-gradient(135deg,#6B1010,#3D0808)'
 }
 
-function TempleImage({ url, name, deity, liveLabel, ratingLabel, height = 'h-44' }:
-  { url?: string; name?: string; deity?: string; liveLabel?: boolean; ratingLabel?: number; height?: string }) {
-  const initial = name?.charAt(0) || '🛕'
+// Deity emoji for fallback card
+function getEmoji(deity?: string): string {
+  const d = (deity || '').toLowerCase()
+  if (d.includes('shiva') || d.includes('shankar')) return '🕉️'
+  if (d.includes('vishnu') || d.includes('venkat') || d.includes('balaji')) return '🪷'
+  if (d.includes('krishna') || d.includes('jagannath')) return '🦚'
+  if (d.includes('durga') || d.includes('kali') || d.includes('shakti') || d.includes('devi')) return '🪬'
+  if (d.includes('ganesha') || d.includes('ganesh') || d.includes('vinayak')) return '🐘'
+  if (d.includes('rama') || d.includes('hanuman')) return '🙏'
+  if (d.includes('murugan') || d.includes('subramanya')) return '🌟'
+  if (d.includes('lakshmi')) return '🪔'
+  if (d.includes('jain')) return '☸️'
+  return '🛕'
+}
+
+function TempleImage({
+  url, name, deity, liveLabel, ratingLabel, height = 'h-44'
+}: {
+  url?: string
+  name?: string
+  deity?: string
+  liveLabel?: boolean
+  ratingLabel?: number
+  height?: string
+}) {
+  const [imgFailed, setImgFailed] = useState(false)
+  const showFallback = !url || imgFailed
+
   return (
-    <div className={`relative ${height} flex items-center justify-center text-5xl font-serif font-bold overflow-hidden`}
-      style={{ background: getBg(deity) }}>
-      {url && (
+    <div
+      className={`relative ${height} flex items-center justify-center overflow-hidden`}
+      style={{ background: getBg(deity) }}
+    >
+      {/* Real image */}
+      {url && !imgFailed && (
         <img
           src={url}
-          alt={name || ''}
+          alt=""
           className="w-full h-full object-cover absolute inset-0"
-          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+          loading="lazy"
+          onError={() => setImgFailed(true)}
         />
       )}
-      {!url && (
-        <span style={{ color: 'rgba(255,255,255,.2)', fontSize: '3rem', position: 'relative', zIndex: 1 }}>
-          {initial}
-        </span>
+
+      {/* Fallback — shown when no url or image fails */}
+      {showFallback && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2"
+          style={{ background: getBg(deity) }}>
+          <span style={{ fontSize: '2.8rem', lineHeight: 1 }}>{getEmoji(deity)}</span>
+          <span style={{
+            color: 'rgba(255,255,255,0.75)',
+            fontSize: '11px',
+            fontWeight: 600,
+            textTransform: 'uppercase',
+            letterSpacing: '0.08em',
+            textAlign: 'center',
+            padding: '0 16px',
+            lineHeight: 1.4,
+          }}>
+            {name}
+          </span>
+        </div>
       )}
-      <div className="absolute bottom-0 left-0 right-0 h-16"
-        style={{ background: 'linear-gradient(to top, rgba(0,0,0,.5), transparent)' }} />
+
+      {/* Bottom gradient overlay */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
+        style={{ background: 'linear-gradient(to top, rgba(0,0,0,.55), transparent)' }} />
+
+      {/* Live badge */}
       {liveLabel && (
         <span className="absolute top-3 left-3 badge-live" style={{ zIndex: 2 }}>
           <span className="live-dot" /> Live
         </span>
       )}
+
+      {/* Rating */}
       {ratingLabel && ratingLabel > 0 ? (
-        <span className="absolute bottom-2 right-3 text-xs font-semibold" style={{ color: '#EDD9A3', zIndex: 2 }}>
+        <span className="absolute bottom-2 right-3 text-xs font-semibold"
+          style={{ color: '#EDD9A3', zIndex: 2 }}>
           ★ {ratingLabel}
         </span>
       ) : null}
@@ -62,8 +114,13 @@ export default function TempleCard({ temple, compact }: Props) {
     return (
       <Link href={`/temple/${temple.slug}`}
         className="card group overflow-hidden hover:-translate-y-0.5 transition-all duration-200 block">
-        <TempleImage url={temple.image_url} name={temple.name} deity={temple.deity}
-          liveLabel={temple.has_live} height="aspect-video" />
+        <TempleImage
+          url={temple.image_url}
+          name={temple.name}
+          deity={temple.deity}
+          liveLabel={temple.has_live}
+          height="h-32"
+        />
         <div className="p-3">
           <h3 className="font-serif text-sm font-medium leading-tight truncate" style={{ color: 'var(--ink)' }}>
             {temple.name}
@@ -79,8 +136,13 @@ export default function TempleCard({ temple, compact }: Props) {
   return (
     <Link href={`/temple/${temple.slug}`}
       className="card group overflow-hidden hover:-translate-y-1 transition-all duration-200 flex flex-col block">
-      <TempleImage url={temple.image_url} name={temple.name} deity={temple.deity}
-        liveLabel={temple.has_live} ratingLabel={temple.rating_avg} />
+      <TempleImage
+        url={temple.image_url}
+        name={temple.name}
+        deity={temple.deity}
+        liveLabel={temple.has_live}
+        ratingLabel={temple.rating_avg}
+      />
 
       <div className="p-4 flex-1 flex flex-col">
         {temple.categories && temple.categories.length > 0 && (
