@@ -4,20 +4,28 @@ import { authOptions } from '@/lib/auth/options'
 import { routeAI, SYSTEM_PROMPTS } from '@/lib/ai/router'
 import connectDB from '@/lib/mongodb/connect'
 import { AIUsageLog } from '@/models'
-
 export const dynamic = 'force-dynamic'
 
 export async function POST(req: NextRequest) {
   const start = Date.now()
   const session = await getServerSession(authOptions)
   const body = await req.json()
-  const { destination, days, pilgrims, budget, transport, special_requests } = body
 
-  const userMessage = `Plan a ${days}-day pilgrimage to ${destination} for ${pilgrims || 1} pilgrim(s).
-Budget: ${budget || 'moderate'} per person.
-Transport: ${transport || 'mixed'}.
-${special_requests ? `Special requests: ${special_requests}` : ''}
-Please provide a detailed day-by-day itinerary.`
+  // ✅ Fixed: match exact field names sent by the planner form
+  const { from, to, mode, days, pilgrims, deity, notes } = body
+
+  const userMessage = `Plan a ${days || 3}-day pilgrimage to ${to} for ${pilgrims || 2} pilgrim(s).
+Starting from: ${from}.
+Travel mode: ${mode || 'Mixed'}.
+${deity ? `Deity focus: ${deity}.` : ''}
+${notes ? `Additional context: ${notes}` : ''}
+
+Please provide:
+1. A detailed day-by-day itinerary with timings
+2. Key temples and darshan spots to visit
+3. Recommended accommodation near the temple
+4. Local food and prasad tips
+5. Important tips and things to know before visiting`
 
   try {
     const result = await routeAI('planner', SYSTEM_PROMPTS.planner, userMessage, { maxTokens: 3000 })
@@ -30,11 +38,12 @@ Please provide a detailed day-by-day itinerary.`
       feature:     'planner',
       provider:    result.provider,
       duration_ms,
-      destination: destination || '',
+      destination: to || '',
       success:     true,
     }).catch(() => {})
 
     return NextResponse.json({ itinerary: result.content, provider: result.provider })
+
   } catch (err: any) {
     await connectDB()
     await AIUsageLog.create({
@@ -46,6 +55,7 @@ Please provide a detailed day-by-day itinerary.`
       success:     false,
       error_msg:   err.message,
     }).catch(() => {})
+
     return NextResponse.json({ error: err.message }, { status: 500 })
   }
 }
