@@ -436,6 +436,50 @@ function PlannerForm() {
 
           <ItineraryRenderer text={result} />
 
+          {/* ── PLAN & BOOK ── */}
+          <div className="mt-8 pt-6 border-t" style={{ borderColor: 'var(--border)' }}>
+            <h3 className="font-serif text-xl font-medium mb-1">Plan & Book Your Trip</h3>
+            <p className="text-xs mb-4" style={{ color: 'var(--muted2)' }}>
+              From <strong>{form.from}</strong> to <strong>{form.to}</strong> — book everything in one place
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+              {[
+                {
+                  icon: '🏨',
+                  label: 'Hotels in ' + form.to,
+                  sub: 'MakeMyTrip',
+                  url: 'https://www.makemytrip.com/hotels/' + encodeURIComponent(form.to.toLowerCase().replace(/ /g, '-')) + '/hotels-in-' + encodeURIComponent(form.to.toLowerCase().replace(/ /g, '-')) + '.html',
+                },
+                {
+                  icon: '🚅',
+                  label: 'Trains from ' + form.from,
+                  sub: 'IRCTC',
+                  url: 'https://www.irctc.co.in/nget/train-search',
+                },
+                {
+                  icon: '🚌',
+                  label: 'Buses to ' + form.to,
+                  sub: 'RedBus',
+                  url: 'https://www.redbus.in/bus-tickets/' + encodeURIComponent(form.from.toLowerCase().replace(/ /g, '-')) + '-to-' + encodeURIComponent(form.to.toLowerCase().replace(/ /g, '-')),
+                },
+                {
+                  icon: '✈️',
+                  label: 'Flights to ' + form.to,
+                  sub: 'MakeMyTrip',
+                  url: 'https://www.makemytrip.com/flights/',
+                },
+              ].map(b => (
+                <a key={b.label} href={b.url} target="_blank" rel="noopener" className="book-btn">
+                  <span style={{ fontSize: 20 }}>{b.icon}</span>
+                  <div>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink)' }}>{b.label}</div>
+                    <div style={{ fontSize: 10, color: 'var(--muted2)' }}>via {b.sub}</div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
           {/* Bridge cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 pt-6 border-t"
             style={{ borderColor: 'var(--border)' }}>

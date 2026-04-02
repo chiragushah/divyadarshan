@@ -405,22 +405,39 @@ export default async function TemplePage({ params }: Props) {
               )}
 
               {/* Affiliate buttons — hover handled via CSS .book-btn class */}
-              <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
-                {[
-                  { icon:'🏨', label:'Hotels Nearby', sub:'MakeMyTrip', url: t.booking_links?.hotels  || `https://www.google.com/search?q=hotels+near+${encodeURIComponent(t.name)}` },
-                  { icon:'🚅', label:'Train Tickets',  sub:'IRCTC',      url: t.booking_links?.trains  || 'https://www.irctc.co.in/nget/train-search' },
-                  { icon:'🚌', label:'Bus Tickets',    sub:'RedBus',     url: t.booking_links?.buses   || `https://www.google.com/search?q=bus+to+${encodeURIComponent(t.city)}` },
-                  { icon:'✈️', label:'Flights',        sub:'MakeMyTrip', url: t.booking_links?.flights || `https://www.google.com/search?q=flights+to+${encodeURIComponent(t.city)}` },
-                ].map(b => (
-                  <a key={b.label} href={b.url} target="_blank" rel="noopener" className="book-btn">
-                    <span style={{ fontSize:20 }}>{b.icon}</span>
+              <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginBottom:12 }}>
+                {t.booking_links?.hotels && (
+                  <a href={t.booking_links.hotels} target="_blank" rel="noopener" className="book-btn">
+                    <span style={{ fontSize:20 }}>🏨</span>
                     <div>
-                      <div style={{ fontSize:12, fontWeight:700, color:'var(--ink)' }}>{b.label}</div>
-                      <div style={{ fontSize:10, color:'var(--muted2)' }}>via {b.sub}</div>
+                      <div style={{ fontSize:12, fontWeight:700, color:'var(--ink)' }}>Hotels Nearby</div>
+                      <div style={{ fontSize:10, color:'var(--muted2)' }}>via MakeMyTrip</div>
                     </div>
                   </a>
-                ))}
+                )}
+                {t.booking_links?.trains && (
+                  <a href={t.booking_links.trains} target="_blank" rel="noopener" className="book-btn">
+                    <span style={{ fontSize:20 }}>🚅</span>
+                    <div>
+                      <div style={{ fontSize:12, fontWeight:700, color:'var(--ink)' }}>Train Tickets</div>
+                      <div style={{ fontSize:10, color:'var(--muted2)' }}>via IRCTC</div>
+                    </div>
+                  </a>
+                )}
               </div>
+
+              {/* Plan Yatra CTA — for accurate trains, buses, flights */}
+              <Link
+                href={`/plan?destination=${encodeURIComponent(t.name)}&city=${encodeURIComponent(t.city||'')}&state=${encodeURIComponent(t.state||'')}&deity=${encodeURIComponent(t.deity||'')}`}
+                className="flex items-center gap-3 p-3 rounded-xl mb-3 text-sm font-medium"
+                style={{ background:'rgba(192,87,10,.08)', border:'1.5px solid rgba(192,87,10,.2)', color:'var(--saffron)', textDecoration:'none' }}>
+                <span style={{ fontSize:18 }}>🗺️</span>
+                <div>
+                  <div style={{ fontWeight:700 }}>Plan your full journey</div>
+                  <div style={{ fontSize:11, opacity:.7 }}>Get trains, buses & flights based on your starting city</div>
+                </div>
+                <span className="ml-auto">→</span>
+              </Link>
 
               {/* FinVerse Savings CTA */}
               <div className="mt-3 p-3 rounded-xl" style={{ background:'linear-gradient(135deg, var(--crimson), #4a0a0a)', color:'white' }}>
