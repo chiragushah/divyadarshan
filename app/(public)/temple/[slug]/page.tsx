@@ -181,18 +181,96 @@ export default async function TemplePage({ params }: Props) {
               <div className="mb-8">
                 <h2 className="font-serif text-2xl font-medium mb-1">Places Nearby</h2>
                 <p className="text-sm mb-4" style={{ color:'var(--muted2)' }}>
-                  Extend your visit — temples, heritage, nature
+                  Extend your visit — temples, heritage, nature and more
                 </p>
-                <div className="card card-p">
-                  <ul className="nearby-list">
-                    {nearby.map((place: string, i: number) => (
-                      <li key={i} className="nearby-item">
-                        <span className="nearby-dot" />
-                        <span>{place}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <style>{`
+                  .nearby-type-temple   { background:rgba(192,87,10,.1);  color:#7a3a08; }
+                  .nearby-type-heritage { background:rgba(109,40,217,.1); color:#4c1d95; }
+                  .nearby-type-nature   { background:rgba(22,163,74,.1);  color:#166534; }
+                  .nearby-type-food     { background:rgba(234,179,8,.15); color:#78350f; }
+                  .nearby-type-market   { background:rgba(59,130,246,.1); color:#1e40af; }
+                  .nearby-type-ashram   { background:rgba(190,18,60,.1);  color:#9f1239; }
+                  .nearby-type-default  { background:rgba(120,113,108,.1);color:#44403c; }
+                  .nearby-rich-item { display:grid; grid-template-columns:36px 1fr; gap:12px; padding:12px 0; border-bottom:1px solid var(--border); align-items:flex-start; }
+                  .nearby-rich-item:last-child { border-bottom:none; }
+                  .nearby-type-badge { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:.07em; padding:2px 7px; border-radius:4px; display:inline-block; margin-bottom:3px; }
+                `}</style>
+
+                {(() => {
+                  const TYPE_ICONS: Record<string,string> = {
+                    temple:'🛕', heritage:'🏛️', nature:'🌿', food:'🍽️', market:'🛍️', ashram:'🧘', default:'📍'
+                  }
+                  const TYPE_LABELS: Record<string,string> = {
+                    temple:'Temple', heritage:'Heritage', nature:'Nature', food:'Food & Stay', market:'Market', ashram:'Ashram', default:'Nearby'
+                  }
+                  // Support both old string[] and new object[] format
+                  const isRich = nearby.length > 0 && typeof nearby[0] === 'object'
+
+                  if (isRich) {
+                    // Group by type
+                    const grouped: Record<string, any[]> = {}
+                    nearby.forEach((p: any) => {
+                      const t = p.type || 'default'
+                      if (!grouped[t]) grouped[t] = []
+                      grouped[t].push(p)
+                    })
+                    const order = ['temple','heritage','nature','ashram','food','market','default']
+                    const sorted = order.filter(k => grouped[k]).flatMap(k => grouped[k])
+
+                    return (
+                      <div className="card card-p" style={{ padding:0, overflow:'hidden' }}>
+                        {/* Type filter pills */}
+                        <div style={{ padding:'12px 16px', borderBottom:'1px solid var(--border)', display:'flex', flexWrap:'wrap', gap:6 }}>
+                          {Object.keys(grouped).map(type => (
+                            <span key={type} className={`nearby-type-badge nearby-type-${type}`}>
+                              {TYPE_ICONS[type] || '📍'} {TYPE_LABELS[type] || type} ({grouped[type].length})
+                            </span>
+                          ))}
+                        </div>
+                        <div style={{ padding:'0 16px' }}>
+                          {sorted.map((place: any, i: number) => (
+                            <div key={i} className="nearby-rich-item">
+                              <div style={{
+                                width:36, height:36, borderRadius:10, display:'flex',
+                                alignItems:'center', justifyContent:'center', fontSize:18, flexShrink:0,
+                                background:'var(--ivory2)',
+                              }}>
+                                {TYPE_ICONS[place.type] || '📍'}
+                              </div>
+                              <div>
+                                <div style={{ display:'flex', alignItems:'center', gap:8, flexWrap:'wrap', marginBottom:2 }}>
+                                  <span style={{ fontWeight:700, fontSize:13, color:'var(--ink)' }}>{place.name}</span>
+                                  {place.distance && (
+                                    <span style={{ fontSize:11, color:'var(--muted2)', background:'var(--ivory2)', padding:'1px 7px', borderRadius:4 }}>
+                                      📍 {place.distance}
+                                    </span>
+                                  )}
+                                </div>
+                                {place.description && (
+                                  <div style={{ fontSize:12, color:'var(--muted)', lineHeight:1.6 }}>{place.description}</div>
+                                )}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )
+                  }
+
+                  // Fallback: old plain string format
+                  return (
+                    <div className="card card-p">
+                      <ul className="nearby-list">
+                        {nearby.map((place: string, i: number) => (
+                          <li key={i} className="nearby-item">
+                            <span className="nearby-dot" />
+                            <span>{place}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )
+                })()}
               </div>
             )}
 
