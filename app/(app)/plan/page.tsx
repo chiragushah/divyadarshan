@@ -460,13 +460,13 @@ function PlannerForm() {
                   icon: '🚌',
                   label: 'Buses to ' + form.to,
                   sub: 'RedBus',
-                  url: 'https://www.redbus.in/bus-tickets/' + form.from.toLowerCase().replace(/ /g, '-') + '-to-' + form.to.toLowerCase().replace(/ /g, '-'),
+                  url: 'https://www.google.com/search?q=redbus+' + form.from.replace(/ /g,'+') + '+to+' + form.to.replace(/ /g,'+'),
                 },
                 {
                   icon: '✈️',
                   label: 'Flights to ' + form.to,
                   sub: 'Google Flights',
-                  url: 'https://www.google.com/travel/flights/search?tfs=CBwQARoeagcIARIDIEJPTXIHCAESA0lOQQ&hl=en&q=flights+from+' + encodeURIComponent(form.from) + '+to+' + encodeURIComponent(form.to),
+                  url: 'https://www.google.com/search?q=flights+from+' + form.from.replace(/ /g,'+') + '+to+' + form.to.replace(/ /g,'+'),
                 },
               ].map(b => (
                 <a key={b.label} href={b.url} target="_blank" rel="noopener" className="book-btn">
