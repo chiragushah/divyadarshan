@@ -436,7 +436,7 @@ function PlannerForm() {
 
           <ItineraryRenderer text={result} />
 
-          {/* ── PLAN & BOOK ── */}
+              {/* ── PLAN & BOOK ── */}
           <div className="mt-8 pt-6 border-t" style={{ borderColor: 'var(--border)' }}>
             <h3 className="font-serif text-xl font-medium mb-1">Plan & Book Your Trip</h3>
             <p className="text-xs mb-4" style={{ color: 'var(--muted2)' }}>
@@ -447,8 +447,8 @@ function PlannerForm() {
                 {
                   icon: '🏨',
                   label: 'Hotels in ' + form.to,
-                  sub: 'MakeMyTrip',
-                  url: 'https://www.makemytrip.com/hotels/' + encodeURIComponent(form.to.toLowerCase().replace(/ /g, '-')) + '/hotels-in-' + encodeURIComponent(form.to.toLowerCase().replace(/ /g, '-')) + '.html',
+                  sub: 'Google Hotels',
+                  url: 'https://www.google.com/travel/hotels/' + encodeURIComponent(form.to + ', India'),
                 },
                 {
                   icon: '🚅',
@@ -460,13 +460,13 @@ function PlannerForm() {
                   icon: '🚌',
                   label: 'Buses to ' + form.to,
                   sub: 'RedBus',
-                  url: 'https://www.redbus.in/bus-tickets/' + encodeURIComponent(form.from.toLowerCase().replace(/ /g, '-')) + '-to-' + encodeURIComponent(form.to.toLowerCase().replace(/ /g, '-')),
+                  url: 'https://www.redbus.in/bus-tickets/' + form.from.toLowerCase().replace(/ /g, '-') + '-to-' + form.to.toLowerCase().replace(/ /g, '-'),
                 },
                 {
                   icon: '✈️',
                   label: 'Flights to ' + form.to,
-                  sub: 'MakeMyTrip',
-                  url: 'https://www.makemytrip.com/flights/',
+                  sub: 'Google Flights',
+                  url: 'https://www.google.com/travel/flights/search?tfs=CBwQARoeagcIARIDIEJPTXIHCAESA0lOQQ&hl=en&q=flights+from+' + encodeURIComponent(form.from) + '+to+' + encodeURIComponent(form.to),
                 },
               ].map(b => (
                 <a key={b.label} href={b.url} target="_blank" rel="noopener" className="book-btn">
