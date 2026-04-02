@@ -407,10 +407,10 @@ export default async function TemplePage({ params }: Props) {
               {/* Affiliate buttons — hover handled via CSS .book-btn class */}
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
                 {[
-                  { icon:'🏨', label:'Hotels Nearby', sub:'MakeMyTrip', url:`https://www.makemytrip.com/hotels/hotel-listing/#cityCode=${encodeURIComponent(t.city)}&country=IN` },
-                  { icon:'🚅', label:'Train Tickets',  sub:'IRCTC',       url:`https://www.irctc.co.in/nget/train-search` },
-                  { icon:'🚌', label:'Bus Tickets',    sub:'RedBus',      url:`https://www.redbus.in/search?fromCityName=${encodeURIComponent(t.city)}&toCityName=${encodeURIComponent(t.city)}` },
-                  { icon:'✈️', label:'Flights',        sub:'EaseMyTrip',  url:`https://www.easemytrip.com/flights/search?dep=${encodeURIComponent(t.city)}&ar=DEL&dd=${new Date().toISOString().slice(0,10)}` },
+                  { icon:'🏨', label:'Hotels Nearby', sub:'MakeMyTrip', url: t.booking_links?.hotels  || `https://www.google.com/search?q=hotels+near+${encodeURIComponent(t.name)}` },
+                  { icon:'🚅', label:'Train Tickets',  sub:'IRCTC',      url: t.booking_links?.trains  || 'https://www.irctc.co.in/nget/train-search' },
+                  { icon:'🚌', label:'Bus Tickets',    sub:'RedBus',     url: t.booking_links?.buses   || `https://www.google.com/search?q=bus+to+${encodeURIComponent(t.city)}` },
+                  { icon:'✈️', label:'Flights',        sub:'MakeMyTrip', url: t.booking_links?.flights || `https://www.google.com/search?q=flights+to+${encodeURIComponent(t.city)}` },
                 ].map(b => (
                   <a key={b.label} href={b.url} target="_blank" rel="noopener" className="book-btn">
                     <span style={{ fontSize:20 }}>{b.icon}</span>
