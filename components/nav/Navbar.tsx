@@ -4,45 +4,49 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 const PAGE_GROUP: Record<string, string> = {
   "/explore": "Explore",
   "/temple": "Explore",
   "/circuits": "Explore",
   "/calendar": "Explore",
-  "/planner": "Plan",
-  "/packing": "Plan",
-  "/budget": "Plan",
-  "/journal": "My Yatra",
-  "/savings": "My Yatra",
-  "/group-split": "My Yatra",
+  "/plan": "Plan",
+  "/plan/checklist": "Plan",
+  "/plan/budget": "Plan",
+  "/plan/calendar": "Plan",
+  "/yatra/journal": "My Yatra",
+  "/yatra/goals": "My Yatra",
+  "/yatra/split": "My Yatra",
+  "/yatra/group": "My Yatra",
+  "/profile": "My Yatra",
 };
 
 const NAV_GROUPS = [
   {
     label: "Explore",
     items: [
-      { href: "/explore", label: "🛕 Temple Directory" },
-      { href: "/circuits", label: "🗺️ Pilgrimage Circuits" },
-      { href: "/calendar", label: "📅 Festival Calendar" },
+      { href: "/explore", label: "Temple Directory", desc: "Browse 350+ sacred temples" },
+      { href: "/circuits", label: "Pilgrimage Circuits", desc: "Curated yatra routes" },
+      { href: "/calendar", label: "Festival Calendar", desc: "Upcoming festivals & events" },
     ],
   },
   {
     label: "Plan",
     items: [
-      { href: "/planner", label: "🤖 AI Yatra Planner" },
-      { href: "/packing", label: "🎒 Packing Checklist" },
-      { href: "/budget", label: "💰 Budget Calculator" },
+      { href: "/plan", label: "AI Yatra Planner", desc: "Personalised pilgrimage plan" },
+      { href: "/plan/checklist", label: "Packing Checklist", desc: "What to carry for your yatra" },
+      { href: "/plan/budget", label: "Budget Calculator", desc: "Estimate your yatra costs" },
     ],
   },
   {
     label: "My Yatra",
     items: [
-      { href: "/journal", label: "📔 My Journal" },
-      { href: "/savings", label: "🪙 Savings Goals" },
-      { href: "/group-split", label: "👥 Group Split" },
-      { href: "/yatra/group", label: "🗺️ Group Yatras" },
-      { href: "/profile", label: "🙏 My Profile" },
+      { href: "/yatra/journal", label: "My Journal", desc: "Document your yatra memories" },
+      { href: "/yatra/goals", label: "Savings Goals", desc: "Save for your next pilgrimage" },
+      { href: "/yatra/group", label: "Group Yatras", desc: "Travel together from any city" },
+      { href: "/yatra/split", label: "Group Split", desc: "Split travel expenses" },
+      { href: "/profile", label: "My Profile", desc: "Visits, recommendations & goals" },
     ],
   },
 ];
@@ -53,67 +57,93 @@ export default function Navbar() {
   const [openGroup, setOpenGroup] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const activeGroup = PAGE_GROUP[pathname] ?? null;
+  const activeGroup = PAGE_GROUP[pathname] ?? 
+    Object.entries(PAGE_GROUP).find(([key]) => pathname.startsWith(key))?.[1] ?? null;
 
   return (
-    <nav className="bg-white border-b border-orange-100 sticky top-0 z-50 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav style={{
+      background: '#FFFFFF',
+      borderBottom: '1.5px solid #E8E8E8',
+      position: 'sticky',
+      top: 0,
+      zIndex: 50,
+      boxShadow: '0 1px 3px rgba(0,0,0,.04)',
+    }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', height: 60, gap: 8 }}>
+
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl">🙏</span>
-            <span className="text-xl font-bold text-orange-600">
-              DivyaDarshan
-            </span>
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, marginRight: 32, textDecoration: 'none', flexShrink: 0 }}>
+            <div style={{
+              width: 32, height: 32, background: 'linear-gradient(135deg, #8B1A1A, #C0570A)',
+              borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontSize: 16,
+            }}>🛕</div>
+            <div>
+              <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 17, color: '#111111', lineHeight: 1 }}>
+                DivyaDarshan
+              </div>
+              <div style={{ fontSize: 9, color: '#AAAAAA', textTransform: 'uppercase', letterSpacing: '0.12em', lineHeight: 1, marginTop: 2 }}>
+                Temple Explorer
+              </div>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex" style={{ alignItems: 'center', gap: 2, flex: 1 }}>
             {NAV_GROUPS.map((group) => (
               <div
                 key={group.label}
-                className="relative"
+                style={{ position: 'relative' }}
                 onMouseEnter={() => setOpenGroup(group.label)}
                 onMouseLeave={() => setOpenGroup(null)}
               >
-                <button
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 ${
-                    activeGroup === group.label
-                      ? "bg-orange-100 text-orange-700"
-                      : "text-gray-600 hover:bg-orange-50 hover:text-orange-600"
-                  }`}
-                >
+                <button style={{
+                  display: 'flex', alignItems: 'center', gap: 5,
+                  padding: '8px 14px', borderRadius: 8, border: 'none', cursor: 'pointer',
+                  background: activeGroup === group.label ? '#FFF5F5' : 'transparent',
+                  color: activeGroup === group.label ? '#8B1A1A' : '#555555',
+                  fontWeight: activeGroup === group.label ? 600 : 500,
+                  fontSize: 14,
+                  fontFamily: "'Inter', sans-serif",
+                  transition: 'all 0.15s',
+                }}>
                   {group.label}
-                  <svg
-                    className={`w-4 h-4 transition-transform ${
-                      openGroup === group.label ? "rotate-180" : ""
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
+                  <ChevronDown size={13} style={{
+                    transform: openGroup === group.label ? 'rotate(180deg)' : 'rotate(0)',
+                    transition: 'transform 0.2s',
+                    opacity: 0.6,
+                  }} />
                 </button>
 
                 {openGroup === group.label && (
-                  <div className="absolute top-full left-0 mt-1 w-52 bg-white rounded-xl shadow-lg border border-orange-100 py-2 z-50">
+                  <div style={{
+                    position: 'absolute', top: '100%', left: 0, marginTop: 4,
+                    width: 240, background: '#FFFFFF',
+                    border: '1.5px solid #E8E8E8', borderRadius: 12,
+                    boxShadow: '0 8px 32px rgba(0,0,0,.1)',
+                    padding: '6px',
+                    zIndex: 100,
+                  }}>
                     {group.items.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className={`flex items-center px-4 py-2.5 text-sm transition-colors ${
-                          pathname === item.href
-                            ? "bg-orange-50 text-orange-700 font-medium"
-                            : "text-gray-700 hover:bg-orange-50 hover:text-orange-600"
-                        }`}
-                      >
-                        {item.label}
+                      <Link key={item.href} href={item.href} style={{
+                        display: 'flex', flexDirection: 'column',
+                        padding: '10px 12px', borderRadius: 8,
+                        textDecoration: 'none',
+                        background: pathname === item.href ? '#FFF5F5' : 'transparent',
+                        transition: 'background 0.1s',
+                      }}
+                      onMouseEnter={e => {
+                        if (pathname !== item.href) (e.currentTarget as HTMLElement).style.background = '#FAFAFA'
+                      }}
+                      onMouseLeave={e => {
+                        if (pathname !== item.href) (e.currentTarget as HTMLElement).style.background = 'transparent'
+                      }}>
+                        <span style={{
+                          fontSize: 14, fontWeight: 500,
+                          color: pathname === item.href ? '#8B1A1A' : '#111111',
+                        }}>{item.label}</span>
+                        <span style={{ fontSize: 12, color: '#AAAAAA', marginTop: 1 }}>{item.desc}</span>
                       </Link>
                     ))}
                   </div>
@@ -123,32 +153,53 @@ export default function Navbar() {
           </div>
 
           {/* Auth Buttons */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex" style={{ alignItems: 'center', gap: 10, marginLeft: 'auto' }}>
             {session ? (
-              <div className="flex items-center gap-3">
-                <span className="text-sm text-gray-600">
-                  {session.user?.name?.split(" ")[0]}
-                </span>
-                <button
-                  onClick={() => signOut()}
-                  className="px-4 py-2 text-sm text-gray-600 hover:text-red-600 transition-colors"
-                >
-                  Sign Out
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <Link href="/profile" style={{
+                  display: 'flex', alignItems: 'center', gap: 8,
+                  padding: '6px 12px', borderRadius: 100, border: '1.5px solid #E8E8E8',
+                  textDecoration: 'none', fontSize: 13, fontWeight: 500, color: '#333333',
+                  background: '#FFFFFF', transition: 'all 0.15s',
+                }}>
+                  <div style={{
+                    width: 24, height: 24, borderRadius: '50%',
+                    background: 'linear-gradient(135deg, #8B1A1A, #C0570A)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: 10, fontWeight: 700, color: 'white',
+                    overflow: 'hidden',
+                  }}>
+                    {session.user?.image
+                      ? <img src={session.user.image} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="" />
+                      : (session.user?.name?.[0] || 'U')}
+                  </div>
+                  {session.user?.name?.split(' ')[0]}
+                </Link>
+                <button onClick={() => signOut()} style={{
+                  padding: '6px 14px', borderRadius: 8, border: '1.5px solid #E8E8E8',
+                  background: 'transparent', cursor: 'pointer', fontSize: 13,
+                  color: '#888888', fontFamily: "'Inter', sans-serif", fontWeight: 500,
+                  transition: 'all 0.15s',
+                }}>
+                  Sign out
                 </button>
               </div>
             ) : (
               <>
-                <Link
-                  href="/auth/signin"
-                  className="px-4 py-2 text-sm font-medium text-orange-600 hover:text-orange-700 transition-colors"
-                >
-                  Sign In
+                <Link href="/auth/signin" style={{
+                  padding: '8px 16px', borderRadius: 8, fontSize: 14, fontWeight: 500,
+                  color: '#555555', textDecoration: 'none', transition: 'color 0.15s',
+                  fontFamily: "'Inter', sans-serif",
+                }}>
+                  Sign in
                 </Link>
-                <Link
-                  href="/auth/signup"
-                  className="px-4 py-2 text-sm font-medium bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
-                >
-                  Get Started
+                <Link href="/auth/signup" style={{
+                  padding: '8px 18px', borderRadius: 8, fontSize: 14, fontWeight: 600,
+                  background: '#8B1A1A', color: 'white', textDecoration: 'none',
+                  fontFamily: "'Inter', sans-serif", transition: 'all 0.15s',
+                  border: '1.5px solid #8B1A1A',
+                }}>
+                  Get started
                 </Link>
               </>
             )}
@@ -156,83 +207,64 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-orange-50"
+            className="md:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {mobileOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
+            style={{
+              marginLeft: 'auto', padding: 8, borderRadius: 8,
+              border: '1.5px solid #E8E8E8', background: 'white',
+              cursor: 'pointer', display: 'flex', alignItems: 'center',
+            }}>
+            {mobileOpen ? <X size={18} color="#333" /> : <Menu size={18} color="#333" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-orange-100 px-4 pb-4">
+        <div style={{
+          background: '#FFFFFF', borderTop: '1.5px solid #E8E8E8',
+          padding: '12px 24px 20px',
+        }}>
           {NAV_GROUPS.map((group) => (
-            <div key={group.label} className="pt-3">
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider px-2 mb-1">
-                {group.label}
-              </p>
+            <div key={group.label} style={{ marginBottom: 16 }}>
+              <p style={{
+                fontSize: 11, fontWeight: 700, textTransform: 'uppercase',
+                letterSpacing: '0.08em', color: '#AAAAAA', padding: '8px 4px 4px',
+              }}>{group.label}</p>
               {group.items.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
+                <Link key={item.href} href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`flex items-center px-3 py-2.5 text-sm rounded-lg transition-colors ${
-                    pathname === item.href
-                      ? "bg-orange-50 text-orange-700 font-medium"
-                      : "text-gray-700 hover:bg-orange-50"
-                  }`}
-                >
+                  style={{
+                    display: 'block', padding: '10px 12px', borderRadius: 8,
+                    fontSize: 15, fontWeight: 500, textDecoration: 'none',
+                    color: pathname === item.href ? '#8B1A1A' : '#333333',
+                    background: pathname === item.href ? '#FFF5F5' : 'transparent',
+                    marginBottom: 2,
+                  }}>
                   {item.label}
                 </Link>
               ))}
             </div>
           ))}
-          <div className="pt-4 border-t border-gray-100 mt-3 flex flex-col gap-2">
+          <div style={{ borderTop: '1.5px solid #E8E8E8', paddingTop: 16, marginTop: 8, display: 'flex', flexDirection: 'column', gap: 8 }}>
             {session ? (
-              <button
-                onClick={() => signOut()}
-                className="w-full py-2.5 text-sm font-medium text-red-600 border border-red-200 rounded-lg"
-              >
-                Sign Out
-              </button>
+              <button onClick={() => signOut()} style={{
+                width: '100%', padding: '12px', borderRadius: 8, border: '1.5px solid #E8E8E8',
+                background: 'white', cursor: 'pointer', fontSize: 15, color: '#DC2626',
+                fontFamily: "'Inter', sans-serif", fontWeight: 500,
+              }}>Sign out</button>
             ) : (
               <>
-                <Link
-                  href="/auth/signin"
-                  onClick={() => setMobileOpen(false)}
-                  className="w-full py-2.5 text-sm font-medium text-center text-orange-600 border border-orange-200 rounded-lg"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  href="/auth/signup"
-                  onClick={() => setMobileOpen(false)}
-                  className="w-full py-2.5 text-sm font-medium text-center bg-orange-600 text-white rounded-lg"
-                >
-                  Get Started
-                </Link>
+                <Link href="/auth/signin" onClick={() => setMobileOpen(false)} style={{
+                  display: 'block', textAlign: 'center', padding: '12px', borderRadius: 8,
+                  border: '1.5px solid #E8E8E8', fontSize: 15, color: '#333333',
+                  fontWeight: 500, textDecoration: 'none',
+                }}>Sign in</Link>
+                <Link href="/auth/signup" onClick={() => setMobileOpen(false)} style={{
+                  display: 'block', textAlign: 'center', padding: '12px', borderRadius: 8,
+                  background: '#8B1A1A', fontSize: 15, color: 'white',
+                  fontWeight: 600, textDecoration: 'none',
+                }}>Get started</Link>
               </>
             )}
           </div>
