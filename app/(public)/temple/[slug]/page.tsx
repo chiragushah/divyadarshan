@@ -407,10 +407,10 @@ export default async function TemplePage({ params }: Props) {
               {/* Affiliate buttons — hover handled via CSS .book-btn class */}
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
                 {[
-                  { icon:'🏨', label:'Hotels Nearby', sub:'MakeMyTrip', url:`https://www.makemytrip.com/hotels/${encodeURIComponent(t.city+' '+t.state+' hotels')}` },
+                  { icon:'🏨', label:'Hotels Nearby', sub:'MakeMyTrip', url:`https://www.makemytrip.com/hotels/hotel-listing/#cityCode=${encodeURIComponent(t.city)}&country=IN` },
                   { icon:'🚅', label:'Train Tickets',  sub:'IRCTC',       url:`https://www.irctc.co.in/nget/train-search` },
-                  { icon:'🚌', label:'Bus Tickets',    sub:'RedBus',      url:`https://www.redbus.in/search?fromCityName=${encodeURIComponent(t.city)}` },
-                  { icon:'✈️', label:'Flights',        sub:'EaseMyTrip',  url:`https://www.easemytrip.com/flight` },
+                  { icon:'🚌', label:'Bus Tickets',    sub:'RedBus',      url:`https://www.redbus.in/search?fromCityName=${encodeURIComponent(t.city)}&toCityName=${encodeURIComponent(t.city)}` },
+                  { icon:'✈️', label:'Flights',        sub:'EaseMyTrip',  url:`https://www.easemytrip.com/flights/search?dep=${encodeURIComponent(t.city)}&ar=DEL&dd=${new Date().toISOString().slice(0,10)}` },
                 ].map(b => (
                   <a key={b.label} href={b.url} target="_blank" rel="noopener" className="book-btn">
                     <span style={{ fontSize:20 }}>{b.icon}</span>
