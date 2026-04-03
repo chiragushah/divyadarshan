@@ -65,17 +65,15 @@ Please provide:
 
 Keep it concise and practical.`
 
-    const Groq = (await import('groq')).default
-    const groq = new Groq({ apiKey: process.env.GROQ_API_KEY })
-    const completion = await groq.chat.completions.create({
-      model: 'llama-3.3-70b-versatile',
-      messages: [{ role: 'user', content: prompt }],
-      max_tokens: 800,
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${process.env.GROQ_API_KEY}` },
+      body: JSON.stringify({ model: 'llama-3.3-70b-versatile', messages: [{ role: 'user', content: prompt }], max_tokens: 800 }),
     })
-    const plan = completion.choices[0]?.message?.content || ''
+    const json = await response.json()
+    const plan = json.choices?.[0]?.message?.content || ''
     const costMatch = plan.match(/₹[\d,]+/)
     const estimatedCost = costMatch ? parseInt(costMatch[0].replace(/[₹,]/g, '')) * persons : 4000 * persons
-
     return NextResponse.json({ plan, estimated_cost: estimatedCost })
   }
 
@@ -102,14 +100,13 @@ Create a day-by-day itinerary covering:
 
 Format as Day 1, Day 2 etc. with clear headings.`
 
-    const Groq = (await import('groq')).default
-    const groq = new Groq({ apiKey: process.env.GROQ_API_KEY })
-    const completion = await groq.chat.completions.create({
-      model: 'llama-3.3-70b-versatile',
-      messages: [{ role: 'user', content: prompt }],
-      max_tokens: 2500,
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${process.env.GROQ_API_KEY}` },
+      body: JSON.stringify({ model: 'llama-3.3-70b-versatile', messages: [{ role: 'user', content: prompt }], max_tokens: 2500 }),
     })
-    return NextResponse.json({ itinerary: completion.choices[0]?.message?.content || '' })
+    const json = await response.json()
+    return NextResponse.json({ itinerary: json.choices?.[0]?.message?.content || '' })
   }
 
   if (!body.planId) {
