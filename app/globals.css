@@ -53,6 +53,19 @@
   --r:          10px;
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans:  'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Legacy aliases for backward compatibility */
+  --sandstone:      #F7F7F7;
+  --off-white:      #FAFAFA;
+  --ink-2:          #333333;
+  --ink-3:          #555555;
+  --muted-light:    #AAAAAA;
+  --border-saffron: #E8C4A0;
+  --saffron-pale:   #FFF5F0;
+  --saffron-dark:   #9A4208;
+  --saffron-light:  #F0844A;
+  --gold-light:     #C8A84B;
+  --crimson-deep:   #5C0F0F;
 }
 
 /* ── BASE ────────────────────────────────────────────────────────────────── */
