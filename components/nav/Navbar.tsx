@@ -178,3 +178,4 @@ export default function Navbar() {
     </nav>
   );
 }
+{ href: "/admin-request", label: "Admin Access", desc: "Request admin panel access" },

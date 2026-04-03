@@ -540,3 +540,4 @@ export default function PlannerPage() {
     </Suspense>
   )
 }
+import ItineraryRenderer from '@/components/ItineraryRenderer'
