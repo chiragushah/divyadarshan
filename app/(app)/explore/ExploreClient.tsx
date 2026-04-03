@@ -70,44 +70,77 @@ export default function ExploreClient({ initialTemples, total, page, states, act
     router.push(`${pathname}?${p.toString()}`)
   }
 
-  // ── Fetch nearby temples from Overpass (OpenStreetMap) ───────────────────────
+  // ── Fetch nearby temples via Overpass (OpenStreetMap) ────────────────────────
   async function fetchNearby(lat: number, lon: number, radius: number) {
     setLocLoading(true)
     setLocationError('')
     try {
-      const r = radius * 1000 // metres
+      const r = radius * 1000
+      // Broad query: all places of worship + historic temples, no religion filter
+      // Indian temples are often untagged or tagged inconsistently
       const query = `
-        [out:json][timeout:25];
+        [out:json][timeout:30];
         (
-          node["amenity"="place_of_worship"]["religion"="hindu"](around:${r},${lat},${lon});
-          way["amenity"="place_of_worship"]["religion"="hindu"](around:${r},${lat},${lon});
+          node["amenity"="place_of_worship"](around:${r},${lat},${lon});
+          way["amenity"="place_of_worship"](around:${r},${lat},${lon});
+          node["historic"="temple"](around:${r},${lat},${lon});
+          way["historic"="temple"](around:${r},${lat},${lon});
+          node["building"="temple"](around:${r},${lat},${lon});
+          way["building"="temple"](around:${r},${lat},${lon});
         );
-        out center 40;
+        out center tags 60;
       `
       const res  = await fetch('https://overpass-api.de/api/interpreter', {
         method: 'POST',
         body: `data=${encodeURIComponent(query)}`,
       })
       const data = await res.json()
+
+      // Keywords to identify Hindu/Indian temples
+      const hinduKeywords = [
+        'temple', 'mandir', 'mandap', 'devasthan', 'deul',
+        'vithal', 'vitthal', 'vithoba', 'pandurang',
+        'shiva', 'shankar', 'mahadev', 'mahादेव',
+        'ganesh', 'ganapati', 'vinayak',
+        'ram', 'hanuman', 'maruti',
+        'devi', 'durga', 'mata', 'ambika', 'ambaji', 'amba',
+        'vishnu', 'laxmi', 'lakshmi', 'narayan',
+        'krishna', 'balaji', 'tirupati', 'venkatesh',
+        'murugan', 'ayyappa', 'subrahmanya',
+        'jagannath', 'kali', 'bhavani',
+        'swami', 'math', 'peetham', 'kshetram',
+      ]
+
       const results = (data.elements || [])
         .map((el: any) => {
-          const elLat = el.lat ?? el.center?.lat
-          const elLon = el.lon ?? el.center?.lon
-          const dist  = getDistance(lat, lon, elLat, elLon)
+          const elLat  = el.lat ?? el.center?.lat
+          const elLon  = el.lon ?? el.center?.lon
+          const name   = el.tags?.name || el.tags?.['name:en'] || el.tags?.['name:hi'] || ''
+          const religion = (el.tags?.religion || '').toLowerCase()
+          const nameLower = name.toLowerCase()
+
+          // Include if: Hindu religion tag OR name contains a Hindu temple keyword
+          const isHindu = religion === 'hindu' ||
+            hinduKeywords.some(kw => nameLower.includes(kw))
+
+          if (!isHindu || !name || !elLat || !elLon) return null
+
           return {
             id:       el.id,
-            name:     el.tags?.name || el.tags?.['name:en'] || 'Hindu Temple',
+            name,
+            address:  [el.tags?.['addr:street'], el.tags?.['addr:city'] || el.tags?.['addr:district']]
+                        .filter(Boolean).join(', '),
             city:     el.tags?.['addr:city'] || el.tags?.['addr:district'] || '',
             state:    el.tags?.['addr:state'] || '',
             deity:    el.tags?.deity || el.tags?.['deity:name'] || '',
-            distance: dist,
+            distance: getDistance(lat, lon, elLat, elLon),
             lat:      elLat,
             lon:      elLon,
-            source:   'osm',
           }
         })
-        .filter((t: any) => t.name !== 'Hindu Temple' || t.city) // skip completely unnamed
+        .filter(Boolean)
         .sort((a: any, b: any) => a.distance - b.distance)
+
       setNearbyTemples(results)
     } catch {
       setLocationError('Could not fetch nearby temples. Please check your connection and try again.')
