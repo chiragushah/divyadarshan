@@ -11,6 +11,7 @@ const PAGE_GROUP: Record<string, string> = {
   "/plan": "Plan", "/plan/checklist": "Plan", "/plan/budget": "Plan",
   "/yatra/journal": "My Yatra", "/yatra/goals": "My Yatra",
   "/yatra/split": "My Yatra", "/yatra/group": "My Yatra", "/profile": "My Yatra",
+  "/admin-request": "My Yatra",
 };
 
 const NAV_GROUPS = [
@@ -38,6 +39,7 @@ const NAV_GROUPS = [
       { href: "/yatra/group", label: "Group Yatras", desc: "Travel together from any city" },
       { href: "/yatra/split", label: "Group Split", desc: "Split travel expenses" },
       { href: "/profile", label: "My Profile", desc: "Visits, recommendations & goals" },
+      { href: "/admin-request", label: "Admin Access", desc: "Request admin panel access" },
     ],
   },
 ];
@@ -149,7 +151,6 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div style={{ background: '#FFFFFF', borderTop: '1.5px solid #E8E8E8', padding: '12px 24px 20px' }}>
-          {/* Mobile logo */}
           <div style={{ paddingBottom: 16, marginBottom: 8, borderBottom: '1px solid #F0F0F0' }}>
             <Logo variant="horizontal" size="sm" />
           </div>
@@ -178,4 +179,3 @@ export default function Navbar() {
     </nav>
   );
 }
-{ href: "/admin-request", label: "Admin Access", desc: "Request admin panel access" },
