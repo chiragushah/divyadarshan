@@ -12,6 +12,7 @@ const PAGE_GROUP: Record<string, string> = {
   "/yatra/journal": "My Yatra", "/yatra/goals": "My Yatra",
   "/yatra/split": "My Yatra", "/yatra/group": "My Yatra", "/profile": "My Yatra",
   "/admin-request": "My Yatra",
+  "/yatra/manage": "My Yatra",
 };
 
 const NAV_GROUPS = [
@@ -39,7 +40,8 @@ const NAV_GROUPS = [
       { href: "/yatra/group", label: "Group Yatras", desc: "Travel together from any city" },
       { href: "/yatra/split", label: "Group Split", desc: "Split travel expenses" },
       { href: "/profile", label: "My Profile", desc: "Visits, recommendations & goals" },
-      { href: "/admin-request", label: "Admin Access", desc: "Request admin panel access" },
+      { href: "/yatra/manage", label: "My Yatra Plans", desc: "Manage your group yatras" },
+      { href: "/admin-request", label: "Become Organiser", desc: "Create group yatras for pilgrims" },
     ],
   },
 ];
