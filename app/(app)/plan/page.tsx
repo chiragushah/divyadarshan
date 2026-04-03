@@ -6,6 +6,7 @@ import { Loader2 } from 'lucide-react'
 import Link from 'next/link'
 import { finverseLink } from '@/lib/utils'
 import ItineraryRenderer from '@/components/ItineraryRenderer'
+import PlanActionBar from '@/components/PlanActionBar'
 
 // ── Planner Form ─────────────────────────────────────────────────────────────
 function PlannerForm() {
@@ -201,14 +202,10 @@ function PlannerForm() {
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <h2 className="font-serif text-2xl font-medium">Your Yatra Plan</h2>
-            <button
-              onClick={() => navigator.clipboard.writeText(result)}
-              className="btn btn-secondary btn-sm">
-              📋 Copy
-            </button>
           </div>
 
           <ItineraryRenderer text={result} />
+          <PlanActionBar itinerary={result} form={form} />
 
               {/* ── PLAN & BOOK ── */}
           <div className="mt-8 pt-6 border-t" style={{ borderColor: 'var(--border)' }}>
