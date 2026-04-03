@@ -17,7 +17,7 @@ const MONTH_FESTIVALS: Record<number, { festival: string; deities: string[]; sta
   1:  [{ festival: 'Makar Sankranti', deities: ['Surya', 'Vishnu'], states: ['Gujarat', 'Tamil Nadu', 'Andhra Pradesh'], desc: 'Sun temples and Vishnu temples are especially auspicious this month.' }],
   2:  [{ festival: 'Maha Shivratri', deities: ['Shiva'], states: ['Uttar Pradesh', 'Madhya Pradesh', 'Karnataka', 'Tamil Nadu'], desc: 'The great night of Shiva — visit Jyotirlinga temples for blessings.' }],
   3:  [{ festival: 'Holi & Ram Navami', deities: ['Krishna', 'Rama', 'Vishnu'], states: ['Uttar Pradesh', 'Rajasthan', 'Madhya Pradesh'], desc: 'Visit Krishna temples in Vrindavan and Ram temples across the country.' }],
-  4:  [{ festival: 'Chaitra Navratri', deities: ['Durga', 'Shakti', 'Devi'], states: ['Gujarat', 'Rajasthan', 'West Bengal', 'Himachal Pradesh'], desc: 'Devi temples are filled with devotion during the nine holy nights.' }],
+  4:  [{ festival: 'Chaitra Navratri & Ram Navami', deities: ['Durga', 'Shakti', 'Devi', 'Rama', 'Vishnu'], states: ['Gujarat', 'Rajasthan', 'West Bengal', 'Himachal Pradesh', 'Uttar Pradesh'], desc: 'Devi temples during the nine holy nights, and Ram temples for Ram Navami — both celebrated in Chaitra month.' }],
   5:  [{ festival: 'Akshaya Tritiya', deities: ['Vishnu', 'Lakshmi'], states: ['Odisha', 'Maharashtra', 'Kerala'], desc: 'An auspicious day for Vishnu and Lakshmi worship.' }],
   6:  [{ festival: 'Jagannath Rath Yatra', deities: ['Vishnu', 'Krishna'], states: ['Odisha'], desc: 'Lord Jagannath\'s chariot festival — visit Puri and nearby Vishnu temples.' }],
   7:  [{ festival: 'Guru Purnima', deities: ['Shiva', 'Vishnu'], states: ['Uttar Pradesh', 'Maharashtra', 'Karnataka'], desc: 'Pay respects to divine gurus — sacred to all traditions.' }],
@@ -171,16 +171,18 @@ export default function ExploreClient({ initialTemples, total, page, states, act
   // ── Filter temples for This Month based on deity + state match ───────────────
   const seasonalTemples = (() => {
     if (!monthFestivals.length) return initialTemples
-    const deities  = monthFestivals.flatMap(f => f.deities).map(d => d.toLowerCase())
+    const deities    = monthFestivals.flatMap(f => f.deities).map(d => d.toLowerCase())
     const festStates = monthFestivals.flatMap(f => f.states)
-    // Score: 2 pts for deity match, 1 pt for state match — sort by score descending
     return [...initialTemples]
       .map(t => {
         const templeDeity = ((t as any).deity || '').toLowerCase()
         const templeState = (t as any).state || ''
+        const templeCategories = ((t as any).categories || []).join(' ').toLowerCase()
+        // Flexible match: check if any festival deity appears anywhere in temple's deity string
         const deityScore  = deities.some(d => templeDeity.includes(d)) ? 2 : 0
         const stateScore  = festStates.includes(templeState) ? 1 : 0
-        return { ...t, _score: deityScore + stateScore }
+        const catScore    = deities.some(d => templeCategories.includes(d)) ? 1 : 0
+        return { ...t, _score: deityScore + stateScore + catScore }
       })
       .filter((t: any) => t._score > 0)
       .sort((a: any, b: any) => b._score - a._score)
