@@ -12,7 +12,7 @@ export const AI_ROUTING: Record<AITask, AIProvider> = {
   chat:      'groq',
   checklist: 'gemini',
   seasonal:  'gemini',
-  planner:   'claude',
+  planner:   'groq',
 }
 
 export const AI_MODELS: Record<AIProvider, string> = {
