@@ -14,7 +14,7 @@ function parseItinerary(text: string): Block[] {
   let current: Block | null = null
 
   for (const raw of lines) {
-    const line = raw.trim()
+    const line = raw.trim().replace(/^\*+/, "").replace(/\*+$/, "")
 
     // Day heading
     const dayMatch = line.match(/^(day\s*(\d+))[:\-–—]?\s*(.*)?$/i)
