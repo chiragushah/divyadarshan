@@ -19,3 +19,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     </>
   )
 }
+import Footer from '@/components/Footer'
+
+// inside return, after {children}:
+<Footer />
