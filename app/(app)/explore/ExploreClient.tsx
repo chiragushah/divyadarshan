@@ -52,10 +52,11 @@ export default function ExploreClient({ initialTemples, total, page, states, act
   const activeTab = activeFilters.tab || 'directory'
 
   // ── Nearby state ─────────────────────────────────────────────────────────────
-  const [userCoords, setUserCoords]     = useState<{ lat: number; lon: number } | null>(null)
+  const [userCoords, setUserCoords]       = useState<{ lat: number; lon: number } | null>(null)
   const [locationError, setLocationError] = useState('')
-  const [locLoading, setLocLoading]     = useState(false)
-  const [nearbyTemples, setNearbyTemples] = useState<(Temple & { distance: number })[]>([])
+  const [locLoading, setLocLoading]       = useState(false)
+  const [nearbyTemples, setNearbyTemples] = useState<any[]>([])
+  const [radiusKm, setRadiusKm]           = useState(10)
 
   // ── This Month state ─────────────────────────────────────────────────────────
   const currentMonth = new Date().getMonth() + 1
@@ -69,29 +70,64 @@ export default function ExploreClient({ initialTemples, total, page, states, act
     router.push(`${pathname}?${p.toString()}`)
   }
 
+  // ── Fetch nearby temples from Overpass (OpenStreetMap) ───────────────────────
+  async function fetchNearby(lat: number, lon: number, radius: number) {
+    setLocLoading(true)
+    setLocationError('')
+    try {
+      const r = radius * 1000 // metres
+      const query = `
+        [out:json][timeout:25];
+        (
+          node["amenity"="place_of_worship"]["religion"="hindu"](around:${r},${lat},${lon});
+          way["amenity"="place_of_worship"]["religion"="hindu"](around:${r},${lat},${lon});
+        );
+        out center 40;
+      `
+      const res  = await fetch('https://overpass-api.de/api/interpreter', {
+        method: 'POST',
+        body: `data=${encodeURIComponent(query)}`,
+      })
+      const data = await res.json()
+      const results = (data.elements || [])
+        .map((el: any) => {
+          const elLat = el.lat ?? el.center?.lat
+          const elLon = el.lon ?? el.center?.lon
+          const dist  = getDistance(lat, lon, elLat, elLon)
+          return {
+            id:       el.id,
+            name:     el.tags?.name || el.tags?.['name:en'] || 'Hindu Temple',
+            city:     el.tags?.['addr:city'] || el.tags?.['addr:district'] || '',
+            state:    el.tags?.['addr:state'] || '',
+            deity:    el.tags?.deity || el.tags?.['deity:name'] || '',
+            distance: dist,
+            lat:      elLat,
+            lon:      elLon,
+            source:   'osm',
+          }
+        })
+        .filter((t: any) => t.name !== 'Hindu Temple' || t.city) // skip completely unnamed
+        .sort((a: any, b: any) => a.distance - b.distance)
+      setNearbyTemples(results)
+    } catch {
+      setLocationError('Could not fetch nearby temples. Please check your connection and try again.')
+    } finally {
+      setLocLoading(false)
+    }
+  }
+
   // ── Request geolocation when Nearby tab is activated ─────────────────────────
   useEffect(() => {
     if (activeTab !== 'nearby') return
-    if (userCoords) return // already have it
+    if (userCoords) return
     setLocLoading(true)
-    setLocationError('')
     navigator.geolocation.getCurrentPosition(
       pos => {
         const { latitude, longitude } = pos.coords
         setUserCoords({ lat: latitude, lon: longitude })
-        setLocLoading(false)
-        // Sort temples by distance
-        const withDist = initialTemples
-          .filter((t: any) => t.location?.coordinates?.length === 2)
-          .map((t: any) => ({
-            ...t,
-            distance: getDistance(latitude, longitude, t.location.coordinates[1], t.location.coordinates[0]),
-          }))
-          .sort((a, b) => a.distance - b.distance)
-          .slice(0, 24)
-        setNearbyTemples(withDist)
+        fetchNearby(latitude, longitude, radiusKm)
       },
-      err => {
+      () => {
         setLocationError('Could not get your location. Please allow location access and try again.')
         setLocLoading(false)
       },
@@ -147,44 +183,101 @@ export default function ExploreClient({ initialTemples, total, page, states, act
             {locLoading && (
               <div className="flex flex-col items-center justify-center py-20 gap-4">
                 <div style={{ fontSize: 40 }}>📍</div>
-                <p className="text-sm" style={{ color: 'var(--muted)' }}>Finding temples near you…</p>
+                <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>Finding temples near you…</p>
+                <p className="text-xs" style={{ color: 'var(--muted)' }}>Searching OpenStreetMap for Hindu temples in your area</p>
               </div>
             )}
+
             {locationError && (
               <div className="card card-p text-center py-12">
                 <div style={{ fontSize: 40, marginBottom: 12 }}>🗺️</div>
                 <p className="font-serif text-xl font-medium mb-2">Location access needed</p>
                 <p className="text-sm mb-4" style={{ color: 'var(--muted)' }}>{locationError}</p>
-                <button className="btn btn-primary" onClick={() => { setUserCoords(null); setNearbyTemples([]); }}>
+                <button className="btn btn-primary" onClick={() => { setUserCoords(null); setNearbyTemples([]); fetchNearby(0, 0, radiusKm) }}>
                   Try Again
                 </button>
               </div>
             )}
-            {!locLoading && !locationError && nearbyTemples.length > 0 && (
+
+            {!locLoading && !locationError && userCoords && (
               <>
-                <div className="flex items-center gap-2 mb-6">
-                  <span style={{ fontSize: 20 }}>📍</span>
-                  <div>
-                    <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>Temples near you</p>
-                    <p className="text-xs" style={{ color: 'var(--muted)' }}>Sorted by distance from your current location</p>
+                {/* Header + radius selector */}
+                <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
+                  <div className="flex items-center gap-2">
+                    <span style={{ fontSize: 20 }}>📍</span>
+                    <div>
+                      <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>
+                        {nearbyTemples.length} temples found nearby
+                      </p>
+                      <p className="text-xs" style={{ color: 'var(--muted)' }}>
+                        Within {radiusKm}km · via OpenStreetMap
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs" style={{ color: 'var(--muted)' }}>Radius:</span>
+                    {[5, 10, 25, 50].map(r => (
+                      <button key={r}
+                        onClick={() => { setRadiusKm(r); fetchNearby(userCoords.lat, userCoords.lon, r) }}
+                        className="px-3 py-1 rounded-full text-xs font-semibold transition-all"
+                        style={{
+                          background: radiusKm === r ? 'var(--crimson)' : 'var(--bg)',
+                          color: radiusKm === r ? 'white' : 'var(--muted)',
+                          border: `1px solid ${radiusKm === r ? 'var(--crimson)' : 'var(--border)'}`,
+                        }}>
+                        {r}km
+                      </button>
+                    ))}
                   </div>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {nearbyTemples.map((temple: any) => (
-                    <div key={temple.id} className="relative">
-                      <TempleCard temple={temple} />
-                      <div className="absolute top-2 right-2 px-2 py-0.5 rounded-full text-xs font-semibold"
-                        style={{ background: 'rgba(0,0,0,0.65)', color: 'white', backdropFilter: 'blur(4px)' }}>
-                        {temple.distance < 1
-                          ? `${Math.round(temple.distance * 1000)}m`
-                          : `${Math.round(temple.distance)}km`}
+
+                {nearbyTemples.length === 0 ? (
+                  <div className="text-center py-16">
+                    <div style={{ fontSize: 40, marginBottom: 12 }}>🛕</div>
+                    <p className="text-sm" style={{ color: 'var(--muted2)' }}>
+                      No temples found within {radiusKm}km. Try a larger radius.
+                    </p>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {nearbyTemples.map((temple: any) => (
+                      <div key={temple.id} className="card card-p flex items-start gap-4"
+                        style={{ borderColor: 'var(--border)' }}>
+                        {/* Distance badge */}
+                        <div className="flex-shrink-0 flex flex-col items-center justify-center rounded-xl"
+                          style={{ width: 56, height: 56, background: 'var(--pastel-red)', border: '1.5px solid #FFCCCC' }}>
+                          <span style={{ fontSize: 18 }}>🛕</span>
+                          <span style={{ fontSize: 10, fontWeight: 700, color: 'var(--crimson)' }}>
+                            {temple.distance < 1
+                              ? `${Math.round(temple.distance * 1000)}m`
+                              : `${temple.distance.toFixed(1)}km`}
+                          </span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-serif font-semibold text-sm leading-tight mb-1 truncate"
+                            style={{ color: 'var(--ink)' }}>
+                            {temple.name}
+                          </p>
+                          {(temple.city || temple.state) && (
+                            <p className="text-xs mb-1 truncate" style={{ color: 'var(--muted)' }}>
+                              {[temple.city, temple.state].filter(Boolean).join(', ')}
+                            </p>
+                          )}
+                          {temple.deity && (
+                            <span className="inline-block px-2 py-0.5 rounded-full text-xs"
+                              style={{ background: 'rgba(192,87,10,0.08)', color: 'var(--saffron)' }}>
+                              {temple.deity}
+                            </span>
+                          )}
+                          <a href={`https://www.google.com/maps/search/?api=1&query=${temple.lat},${temple.lon}`}
+                            target="_blank" rel="noopener"
+                            className="block text-xs mt-2 underline"
+                            style={{ color: 'var(--crimson)' }}>
+                            Get Directions →
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-                {nearbyTemples.length === 0 && (
-                  <div className="text-center py-16 text-sm" style={{ color: 'var(--muted2)' }}>
-                    No temples with location data found nearby.
+                    ))}
                   </div>
                 )}
               </>
