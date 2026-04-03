@@ -6,7 +6,7 @@ export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   // ── Admin routes ───────────────────────────────────
-  if (pathname.startsWith('/admin')) {
+  if (pathname.startsWith('/admin') && !pathname.startsWith('/admin-request')) {
     if (pathname === '/admin') return NextResponse.next()
     const adminToken = request.cookies.get('admin_token')?.value
     if (!adminToken) return NextResponse.redirect(new URL('/admin', request.url))
@@ -41,3 +41,4 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: ['/((?!_next/static|_next/image|favicon.ico|.*\\..*|manifest.json|dynaimers-logo.jpg).*)'],
 }
+
