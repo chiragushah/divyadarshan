@@ -12,23 +12,21 @@ const TABS = [
   { id: 'seasonal',  label: '📅 This Month' },
 ]
 
-// ── Month → Festival mapping ──────────────────────────────────────────────────
 const MONTH_FESTIVALS: Record<number, { festival: string; deities: string[]; states: string[]; desc: string }[]> = {
   1:  [{ festival: 'Makar Sankranti', deities: ['Surya', 'Vishnu'], states: ['Gujarat', 'Tamil Nadu', 'Andhra Pradesh'], desc: 'Sun temples and Vishnu temples are especially auspicious this month.' }],
   2:  [{ festival: 'Maha Shivratri', deities: ['Shiva'], states: ['Uttar Pradesh', 'Madhya Pradesh', 'Karnataka', 'Tamil Nadu'], desc: 'The great night of Shiva — visit Jyotirlinga temples for blessings.' }],
   3:  [{ festival: 'Holi & Ram Navami', deities: ['Krishna', 'Rama', 'Vishnu'], states: ['Uttar Pradesh', 'Rajasthan', 'Madhya Pradesh'], desc: 'Visit Krishna temples in Vrindavan and Ram temples across the country.' }],
-  4:  [{ festival: 'Chaitra Navratri & Ram Navami', deities: ['Durga', 'Shakti', 'Devi', 'Rama', 'Vishnu'], states: ['Gujarat', 'Rajasthan', 'West Bengal', 'Himachal Pradesh', 'Uttar Pradesh'], desc: 'Devi temples during the nine holy nights, and Ram temples for Ram Navami — both celebrated in Chaitra month.' }],
+  4:  [{ festival: 'Chaitra Navratri & Ram Navami', deities: ['Durga', 'Shakti', 'Devi', 'Rama', 'Vishnu'], states: ['Gujarat', 'Rajasthan', 'West Bengal', 'Himachal Pradesh', 'Uttar Pradesh'], desc: 'Devi temples during the nine holy nights, and Ram temples for Ram Navami.' }],
   5:  [{ festival: 'Akshaya Tritiya', deities: ['Vishnu', 'Lakshmi'], states: ['Odisha', 'Maharashtra', 'Kerala'], desc: 'An auspicious day for Vishnu and Lakshmi worship.' }],
-  6:  [{ festival: 'Jagannath Rath Yatra', deities: ['Vishnu', 'Krishna'], states: ['Odisha'], desc: 'Lord Jagannath\'s chariot festival — visit Puri and nearby Vishnu temples.' }],
+  6:  [{ festival: 'Jagannath Rath Yatra', deities: ['Vishnu', 'Krishna'], states: ['Odisha'], desc: 'Lord Jagannath chariot festival — visit Puri and nearby Vishnu temples.' }],
   7:  [{ festival: 'Guru Purnima', deities: ['Shiva', 'Vishnu'], states: ['Uttar Pradesh', 'Maharashtra', 'Karnataka'], desc: 'Pay respects to divine gurus — sacred to all traditions.' }],
-  8:  [{ festival: 'Janmashtami & Onam', deities: ['Krishna', 'Vishnu'], states: ['Uttar Pradesh', 'Rajasthan', 'Kerala', 'Tamil Nadu'], desc: 'Krishna\'s birthday — Mathura, Vrindavan and Kerala temples celebrate grandly.' }],
+  8:  [{ festival: 'Janmashtami & Onam', deities: ['Krishna', 'Vishnu'], states: ['Uttar Pradesh', 'Rajasthan', 'Kerala', 'Tamil Nadu'], desc: "Krishna's birthday — Mathura, Vrindavan and Kerala temples celebrate grandly." }],
   9:  [{ festival: 'Ganesh Chaturthi', deities: ['Ganesha'], states: ['Maharashtra', 'Karnataka', 'Andhra Pradesh', 'Tamil Nadu'], desc: 'Ganesha temples across India celebrate with great fervour.' }],
-  10: [{ festival: 'Navratri & Dussehra', deities: ['Durga', 'Shakti', 'Devi', 'Rama'], states: ['Gujarat', 'West Bengal', 'Himachal Pradesh', 'Karnataka'], desc: 'Goddess temples light up for nine nights — especially in Gujarat and Bengal.' }],
-  11: [{ festival: 'Diwali & Kartik Purnima', deities: ['Lakshmi', 'Vishnu', 'Rama'], states: ['Uttar Pradesh', 'Rajasthan', 'Gujarat', 'Maharashtra'], desc: 'Lakshmi temples are especially auspicious; Varanasi glows on Kartik Purnima.' }],
-  12: [{ festival: 'Vaikunta Ekadashi', deities: ['Vishnu', 'Balaji', 'Venkateshwara'], states: ['Tamil Nadu', 'Andhra Pradesh', 'Karnataka', 'Kerala'], desc: 'The most sacred day for Vishnu worship — visit Vaishnava temples.' }],
+  10: [{ festival: 'Navratri & Dussehra', deities: ['Durga', 'Shakti', 'Devi', 'Rama'], states: ['Gujarat', 'West Bengal', 'Himachal Pradesh', 'Karnataka'], desc: 'Goddess temples light up for nine nights.' }],
+  11: [{ festival: 'Diwali & Kartik Purnima', deities: ['Lakshmi', 'Vishnu', 'Rama'], states: ['Uttar Pradesh', 'Rajasthan', 'Gujarat', 'Maharashtra'], desc: 'Lakshmi temples are especially auspicious.' }],
+  12: [{ festival: 'Vaikunta Ekadashi', deities: ['Vishnu', 'Balaji', 'Venkateshwara'], states: ['Tamil Nadu', 'Andhra Pradesh', 'Karnataka', 'Kerala'], desc: 'The most sacred day for Vishnu worship.' }],
 }
 
-// ── Haversine distance (km) ───────────────────────────────────────────────────
 function getDistance(lat1: number, lon1: number, lat2: number, lon2: number): number {
   const R = 6371
   const dLat = (lat2 - lat1) * Math.PI / 180
@@ -51,15 +49,13 @@ export default function ExploreClient({ initialTemples, total, page, states, act
   const pathname = usePathname()
   const activeTab = activeFilters.tab || 'directory'
 
-  // ── Nearby state ─────────────────────────────────────────────────────────────
-  const [userCoords, setUserCoords]       = useState<{ lat: number; lon: number } | null>(null)
-  const [locationError, setLocationError] = useState('')
-  const [locLoading, setLocLoading]       = useState(false)
-  const [nearbyTemples, setNearbyTemples] = useState<any[]>([])
-  const [radiusKm, setRadiusKm]           = useState(10)
+  const [userCoords,     setUserCoords]     = useState<{ lat: number; lon: number } | null>(null)
+  const [locationError,  setLocationError]  = useState('')
+  const [locLoading,     setLocLoading]     = useState(false)
+  const [nearbyTemples,  setNearbyTemples]  = useState<any[]>([])
+  const [radiusKm,       setRadiusKm]       = useState(10)
 
-  // ── This Month state ─────────────────────────────────────────────────────────
-  const currentMonth = new Date().getMonth() + 1
+  const currentMonth   = new Date().getMonth() + 1
   const monthFestivals = MONTH_FESTIVALS[currentMonth] || []
 
   const update = (key: string, value: string) => {
@@ -70,14 +66,11 @@ export default function ExploreClient({ initialTemples, total, page, states, act
     router.push(`${pathname}?${p.toString()}`)
   }
 
-  // ── Fetch nearby temples via Overpass (OpenStreetMap) ────────────────────────
   async function fetchNearby(lat: number, lon: number, radius: number) {
     setLocLoading(true)
     setLocationError('')
     try {
       const r = radius * 1000
-      // Broad query: all places of worship + historic temples, no religion filter
-      // Indian temples are often untagged or tagged inconsistently
       const query = `
         [out:json][timeout:30];
         (
@@ -95,52 +88,34 @@ export default function ExploreClient({ initialTemples, total, page, states, act
         body: `data=${encodeURIComponent(query)}`,
       })
       const data = await res.json()
-
-      // Keywords to identify Hindu/Indian temples
       const hinduKeywords = [
-        'temple', 'mandir', 'mandap', 'devasthan', 'deul',
-        'vithal', 'vitthal', 'vithoba', 'pandurang',
-        'shiva', 'shankar', 'mahadev', 'mahादेव',
-        'ganesh', 'ganapati', 'vinayak',
-        'ram', 'hanuman', 'maruti',
-        'devi', 'durga', 'mata', 'ambika', 'ambaji', 'amba',
-        'vishnu', 'laxmi', 'lakshmi', 'narayan',
-        'krishna', 'balaji', 'tirupati', 'venkatesh',
-        'murugan', 'ayyappa', 'subrahmanya',
-        'jagannath', 'kali', 'bhavani',
-        'swami', 'math', 'peetham', 'kshetram',
+        'temple','mandir','mandap','devasthan','deul','vithal','vitthal','vithoba','pandurang',
+        'shiva','shankar','mahadev','ganesh','ganapati','vinayak','ram','hanuman','maruti',
+        'devi','durga','mata','ambika','ambaji','amba','vishnu','laxmi','lakshmi','narayan',
+        'krishna','balaji','tirupati','venkatesh','murugan','ayyappa','jagannath','kali',
+        'bhavani','swami','math','peetham','kshetram',
       ]
-
       const results = (data.elements || [])
         .map((el: any) => {
-          const elLat  = el.lat ?? el.center?.lat
-          const elLon  = el.lon ?? el.center?.lon
-          const name   = el.tags?.name || el.tags?.['name:en'] || el.tags?.['name:hi'] || ''
+          const elLat    = el.lat ?? el.center?.lat
+          const elLon    = el.lon ?? el.center?.lon
+          const name     = el.tags?.name || el.tags?.['name:en'] || el.tags?.['name:hi'] || ''
           const religion = (el.tags?.religion || '').toLowerCase()
-          const nameLower = name.toLowerCase()
-
-          // Include if: Hindu religion tag OR name contains a Hindu temple keyword
-          const isHindu = religion === 'hindu' ||
-            hinduKeywords.some(kw => nameLower.includes(kw))
-
+          const nameLow  = name.toLowerCase()
+          const isHindu  = religion === 'hindu' || hinduKeywords.some(kw => nameLow.includes(kw))
           if (!isHindu || !name || !elLat || !elLon) return null
-
           return {
-            id:       el.id,
-            name,
-            address:  [el.tags?.['addr:street'], el.tags?.['addr:city'] || el.tags?.['addr:district']]
-                        .filter(Boolean).join(', '),
-            city:     el.tags?.['addr:city'] || el.tags?.['addr:district'] || '',
-            state:    el.tags?.['addr:state'] || '',
-            deity:    el.tags?.deity || el.tags?.['deity:name'] || '',
+            id: el.id, name,
+            address: [el.tags?.['addr:street'], el.tags?.['addr:city'] || el.tags?.['addr:district']].filter(Boolean).join(', '),
+            city:  el.tags?.['addr:city'] || el.tags?.['addr:district'] || '',
+            state: el.tags?.['addr:state'] || '',
+            deity: el.tags?.deity || el.tags?.['deity:name'] || '',
             distance: getDistance(lat, lon, elLat, elLon),
-            lat:      elLat,
-            lon:      elLon,
+            lat: elLat, lon: elLon,
           }
         })
         .filter(Boolean)
         .sort((a: any, b: any) => a.distance - b.distance)
-
       setNearbyTemples(results)
     } catch {
       setLocationError('Could not fetch nearby temples. Please check your connection and try again.')
@@ -149,7 +124,6 @@ export default function ExploreClient({ initialTemples, total, page, states, act
     }
   }
 
-  // ── Request geolocation when Nearby tab is activated ─────────────────────────
   useEffect(() => {
     if (activeTab !== 'nearby') return
     if (userCoords) return
@@ -168,7 +142,6 @@ export default function ExploreClient({ initialTemples, total, page, states, act
     )
   }, [activeTab])
 
-  // ── Filter temples for This Month based on deity + state match ───────────────
   const seasonalTemples = (() => {
     if (!monthFestivals.length) return initialTemples
     const deities    = monthFestivals.flatMap(f => f.deities).map(d => d.toLowerCase())
@@ -177,11 +150,10 @@ export default function ExploreClient({ initialTemples, total, page, states, act
       .map(t => {
         const templeDeity = ((t as any).deity || '').toLowerCase()
         const templeState = (t as any).state || ''
-        const templeCategories = ((t as any).categories || []).join(' ').toLowerCase()
-        // Flexible match: check if any festival deity appears anywhere in temple's deity string
+        const templeCats  = ((t as any).categories || []).join(' ').toLowerCase()
         const deityScore  = deities.some(d => templeDeity.includes(d)) ? 2 : 0
         const stateScore  = festStates.includes(templeState) ? 1 : 0
-        const catScore    = deities.some(d => templeCategories.includes(d)) ? 1 : 0
+        const catScore    = deities.some(d => templeCats.includes(d)) ? 1 : 0
         return { ...t, _score: deityScore + stateScore + catScore }
       })
       .filter((t: any) => t._score > 0)
@@ -212,7 +184,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
 
       <div className="max-w-7xl mx-auto px-4 py-8">
 
-        {/* ── NEARBY TAB ─────────────────────────────────────────────────── */}
+        {/* NEARBY TAB */}
         {activeTab === 'nearby' && (
           <div>
             {locLoading && (
@@ -222,38 +194,29 @@ export default function ExploreClient({ initialTemples, total, page, states, act
                 <p className="text-xs" style={{ color: 'var(--muted)' }}>Searching OpenStreetMap for Hindu temples in your area</p>
               </div>
             )}
-
             {locationError && (
               <div className="card card-p text-center py-12">
                 <div style={{ fontSize: 40, marginBottom: 12 }}>🗺️</div>
                 <p className="font-serif text-xl font-medium mb-2">Location access needed</p>
                 <p className="text-sm mb-4" style={{ color: 'var(--muted)' }}>{locationError}</p>
-                <button className="btn btn-primary" onClick={() => { setUserCoords(null); setNearbyTemples([]); fetchNearby(0, 0, radiusKm) }}>
-                  Try Again
-                </button>
+                <button className="btn btn-primary" onClick={() => { setUserCoords(null); setNearbyTemples([]); }}>Try Again</button>
               </div>
             )}
-
             {!locLoading && !locationError && userCoords && (
               <>
-                {/* Header + radius selector */}
                 <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
                   <div className="flex items-center gap-2">
                     <span style={{ fontSize: 20 }}>📍</span>
                     <div>
-                      <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>
-                        {nearbyTemples.length} temples found nearby
-                      </p>
-                      <p className="text-xs" style={{ color: 'var(--muted)' }}>
-                        Within {radiusKm}km · via OpenStreetMap
-                      </p>
+                      <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>{nearbyTemples.length} temples found nearby</p>
+                      <p className="text-xs" style={{ color: 'var(--muted)' }}>Within {radiusKm}km · via OpenStreetMap</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-xs" style={{ color: 'var(--muted)' }}>Radius:</span>
                     {[5, 10, 25, 50].map(r => (
                       <button key={r}
-                        onClick={() => { setRadiusKm(r); fetchNearby(userCoords.lat, userCoords.lon, r) }}
+                        onClick={() => { setRadiusKm(r); if (userCoords) fetchNearby(userCoords.lat, userCoords.lon, r) }}
                         className="px-3 py-1 rounded-full text-xs font-semibold transition-all"
                         style={{
                           background: radiusKm === r ? 'var(--crimson)' : 'var(--bg)',
@@ -265,49 +228,35 @@ export default function ExploreClient({ initialTemples, total, page, states, act
                     ))}
                   </div>
                 </div>
-
                 {nearbyTemples.length === 0 ? (
                   <div className="text-center py-16">
                     <div style={{ fontSize: 40, marginBottom: 12 }}>🛕</div>
-                    <p className="text-sm" style={{ color: 'var(--muted2)' }}>
-                      No temples found within {radiusKm}km. Try a larger radius.
-                    </p>
+                    <p className="text-sm" style={{ color: 'var(--muted2)' }}>No temples found within {radiusKm}km. Try a larger radius.</p>
                   </div>
                 ) : (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {nearbyTemples.map((temple: any) => (
-                      <div key={temple.id} className="card card-p flex items-start gap-4"
-                        style={{ borderColor: 'var(--border)' }}>
-                        {/* Distance badge */}
+                      <div key={temple.id} className="card card-p flex items-start gap-4" style={{ borderColor: 'var(--border)' }}>
                         <div className="flex-shrink-0 flex flex-col items-center justify-center rounded-xl"
                           style={{ width: 56, height: 56, background: 'var(--pastel-red)', border: '1.5px solid #FFCCCC' }}>
-                          <span style={{ fontSize: 18 }}>🛕</span>
+                          <span style={{ fontSize: 20 }}>🛕</span>
                           <span style={{ fontSize: 10, fontWeight: 700, color: 'var(--crimson)' }}>
-                            {temple.distance < 1
-                              ? `${Math.round(temple.distance * 1000)}m`
-                              : `${temple.distance.toFixed(1)}km`}
+                            {temple.distance < 1 ? `${Math.round(temple.distance * 1000)}m` : `${temple.distance.toFixed(1)}km`}
                           </span>
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="font-serif font-semibold text-sm leading-tight mb-1 truncate"
-                            style={{ color: 'var(--ink)' }}>
-                            {temple.name}
-                          </p>
-                          {(temple.city || temple.state) && (
-                            <p className="text-xs mb-1 truncate" style={{ color: 'var(--muted)' }}>
-                              {[temple.city, temple.state].filter(Boolean).join(', ')}
+                          <p className="font-serif font-semibold text-sm leading-tight mb-1" style={{ color: 'var(--ink)' }}>{temple.name}</p>
+                          {(temple.address || temple.city || temple.state) && (
+                            <p className="text-xs mb-1 line-clamp-1" style={{ color: 'var(--muted)' }}>
+                              {temple.address || [temple.city, temple.state].filter(Boolean).join(', ')}
                             </p>
                           )}
                           {temple.deity && (
-                            <span className="inline-block px-2 py-0.5 rounded-full text-xs"
-                              style={{ background: 'rgba(192,87,10,0.08)', color: 'var(--saffron)' }}>
-                              {temple.deity}
-                            </span>
+                            <span className="inline-block px-2 py-0.5 rounded-full text-xs mb-1"
+                              style={{ background: 'rgba(192,87,10,0.08)', color: 'var(--saffron)' }}>{temple.deity}</span>
                           )}
                           <a href={`https://www.google.com/maps/search/?api=1&query=${temple.lat},${temple.lon}`}
-                            target="_blank" rel="noopener"
-                            className="block text-xs mt-2 underline"
-                            style={{ color: 'var(--crimson)' }}>
+                            target="_blank" rel="noopener" className="block text-xs mt-1 underline" style={{ color: 'var(--crimson)' }}>
                             Get Directions →
                           </a>
                         </div>
@@ -320,10 +269,9 @@ export default function ExploreClient({ initialTemples, total, page, states, act
           </div>
         )}
 
-        {/* ── THIS MONTH TAB ──────────────────────────────────────────────── */}
+        {/* THIS MONTH TAB */}
         {activeTab === 'seasonal' && (
           <div>
-            {/* Festival banner */}
             {monthFestivals.map((f, i) => (
               <div key={i} className="rounded-2xl p-5 mb-6 flex gap-4 items-start"
                 style={{ background: 'linear-gradient(135deg, #FFF5F0, #FFF8F0)', border: '1.5px solid #FFD9B3' }}>
@@ -345,62 +293,44 @@ export default function ExploreClient({ initialTemples, total, page, states, act
                 </div>
               </div>
             ))}
-
-            {/* Recommended temples */}
             <div className="flex items-center justify-between mb-5">
-              <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>
-                Recommended temples to visit this month
-              </p>
+              <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>Recommended temples to visit this month</p>
               <p className="text-xs" style={{ color: 'var(--muted)' }}>{seasonalTemples.length} temples</p>
             </div>
-
             {seasonalTemples.length > 0 ? (
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {seasonalTemples.map((temple: any) => (
-                  <TempleCard key={temple.id} temple={temple} />
-                ))}
+                {seasonalTemples.map((temple: any) => <TempleCard key={temple.id} temple={temple} />)}
               </div>
             ) : (
-              <div className="text-center py-16 text-sm" style={{ color: 'var(--muted2)' }}>
-                No specific temples found for this month.
-              </div>
+              <div className="text-center py-16 text-sm" style={{ color: 'var(--muted2)' }}>No specific temples found for this month.</div>
             )}
           </div>
         )}
 
-        {/* ── DIRECTORY / DARSHAN TABS (existing behaviour) ───────────────── */}
+        {/* DIRECTORY / DARSHAN TABS */}
         {(activeTab === 'directory' || activeTab === 'darshan') && (
           <>
-            {/* Search + Filters */}
             <div className="flex flex-wrap gap-3 mb-6">
-              <input
-                type="text"
-                placeholder="Search temples, cities, deities…"
-                defaultValue={activeFilters.q || ''}
-                className="input flex-1 min-w-[200px] max-w-sm"
+              <input type="text" placeholder="Search temples, cities, deities…"
+                defaultValue={activeFilters.q || ''} className="input flex-1 min-w-[200px] max-w-sm"
                 onChange={e => {
                   clearTimeout((window as any)._st)
                   ;(window as any)._st = setTimeout(() => update('q', e.target.value), 400)
-                }}
-              />
+                }} />
               <select className="input w-auto" value={activeFilters.state || ''} onChange={e => update('state', e.target.value)}>
                 <option value="">All States</option>
                 {states.map(s => <option key={s} value={s}>{s}</option>)}
               </select>
               <select className="input w-auto" value={activeFilters.deity || ''} onChange={e => update('deity', e.target.value)}>
                 <option value="">All Deities</option>
-                {['Shiva', 'Vishnu', 'Durga/Shakti', 'Ganesha', 'Krishna', 'Rama', 'Murugan', 'Hanuman'].map(d => (
+                {['Shiva','Vishnu','Durga/Shakti','Ganesha','Krishna','Rama','Murugan','Hanuman'].map(d => (
                   <option key={d} value={d}>{d}</option>
                 ))}
               </select>
               {Object.values(activeFilters).some(Boolean) && (
-                <button onClick={() => router.push('/explore')} className="btn btn-ghost btn-sm text-xs">
-                  Clear filters ×
-                </button>
+                <button onClick={() => router.push('/explore')} className="btn btn-ghost btn-sm text-xs">Clear filters ×</button>
               )}
             </div>
-
-            {/* Results count */}
             <div className="flex items-center justify-between mb-5">
               <p className="text-sm" style={{ color: 'var(--muted)' }}>
                 {activeFilters.category && <><strong style={{ color: 'var(--crimson)' }}>{activeFilters.category}</strong> · </>}
@@ -408,37 +338,23 @@ export default function ExploreClient({ initialTemples, total, page, states, act
                 {activeTab === 'darshan' && <span className="ml-2" style={{ color: 'var(--live)' }}>🔴 Live only</span>}
               </p>
               {activeFilters.category && (
-                <button onClick={() => update('category', '')} className="text-xs" style={{ color: 'var(--crimson)' }}>
-                  Clear filter ×
-                </button>
+                <button onClick={() => update('category', '')} className="text-xs" style={{ color: 'var(--crimson)' }}>Clear filter ×</button>
               )}
             </div>
-
-            {/* Grid */}
             {initialTemples.length === 0 ? (
               <div className="text-center py-16 text-sm" style={{ color: 'var(--muted2)' }}>
                 No temples found. <button onClick={() => router.push('/explore')} className="underline">Clear filters</button>
               </div>
             ) : (
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {initialTemples.map(temple => (
-                  <TempleCard key={temple.id} temple={temple} />
-                ))}
+                {initialTemples.map(temple => <TempleCard key={temple.id} temple={temple} />)}
               </div>
             )}
-
-            {/* Pagination */}
             {total > 48 && (
               <div className="flex justify-center gap-2 mt-10">
-                {page > 1 && (
-                  <button onClick={() => update('page', String(page - 1))} className="btn btn-secondary btn-sm">← Previous</button>
-                )}
-                <span className="btn btn-ghost btn-sm" style={{ color: 'var(--muted)' }}>
-                  Page {page} of {Math.ceil(total / 48)}
-                </span>
-                {page < Math.ceil(total / 48) && (
-                  <button onClick={() => update('page', String(page + 1))} className="btn btn-secondary btn-sm">Next →</button>
-                )}
+                {page > 1 && <button onClick={() => update('page', String(page - 1))} className="btn btn-secondary btn-sm">← Previous</button>}
+                <span className="btn btn-ghost btn-sm" style={{ color: 'var(--muted)' }}>Page {page} of {Math.ceil(total / 48)}</span>
+                {page < Math.ceil(total / 48) && <button onClick={() => update('page', String(page + 1))} className="btn btn-secondary btn-sm">Next →</button>}
               </div>
             )}
           </>
