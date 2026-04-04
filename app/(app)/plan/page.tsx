@@ -71,6 +71,7 @@ function PlannerForm() {
   }
 
   return (
+    <>
     <div className="max-w-4xl mx-auto px-6 py-10">
       {/* Header */}
       <div className="mb-8">
@@ -350,6 +351,14 @@ function PlannerForm() {
 
         />
       )}
+      {showPlanModal && (
+        <PlanMyTripModal
+          form={form}
+          itinerary={result}
+          user={session?.user}
+          onClose={() => setShowPlanModal(false)}
+        />
+      )}
     </>
   )
 }
@@ -368,7 +377,8 @@ export default function PlannerPage() {
           user={session?.user}
           onClose={() => setShowPlanModal(false)}
 
-      </div>
+    </div>
+    </>
     }>
       <PlannerForm />
     </Suspense>
