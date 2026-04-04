@@ -348,7 +348,6 @@ function PlannerForm() {
       )}
     </div>
 
-      {/* Plan My Trip Modal */}
       {showPlanModal && (
         <PlanMyTripModal
           form={form}
@@ -357,6 +356,7 @@ function PlannerForm() {
           onClose={() => setShowPlanModal(false)}
         />
       )}
+    </>
   )
 }
 

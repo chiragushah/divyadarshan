@@ -522,7 +522,7 @@ export default async function TemplePage({ params }: Props) {
                       <div className="flex-1 min-w-0">
                         <div style={{ fontWeight:600, fontSize:12, color:'var(--ink)' }}>Official Website</div>
                         <div style={{ fontSize:10, color:'var(--muted2)', overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap' }}>
-                          {(t.website || t.official_website || '').replace(/https?:\/\//,'').replace(/\/$/,'')}
+                          {(t.website || t.official_website || '').replace('https://','').replace('http://','')}
                         </div>
                       </div>
                       <span style={{ color:'var(--saffron)', fontSize:12 }}>→</span>
