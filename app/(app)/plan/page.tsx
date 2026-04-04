@@ -1,12 +1,14 @@
 'use client'
 export const dynamic = 'force-dynamic'
 import { useState, useEffect, Suspense } from 'react'
+import { useSession } from 'next-auth/react'
 import { useSearchParams } from 'next/navigation'
 import { Loader2 } from 'lucide-react'
 import Link from 'next/link'
 import { finverseLink } from '@/lib/utils'
 import ItineraryRenderer from '@/components/ItineraryRenderer'
 import PlanActionBar from '@/components/PlanActionBar'
+import PlanMyTripModal from '@/components/PlanMyTripModal'
 
 // ── Planner Form ─────────────────────────────────────────────────────────────
 function PlannerForm() {
@@ -32,6 +34,8 @@ function PlannerForm() {
   const [loading, setLoading] = useState(false)
   const [provider, setProvider] = useState('')
   const [error, setError]     = useState('')
+  const [showPlanModal, setShowPlanModal] = useState(false)
+  const { data: session } = useSession()
 
   // Re-sync if params change (e.g. navigating from a different temple)
   useEffect(() => {
@@ -278,6 +282,53 @@ function PlannerForm() {
             </div>
           </div>
 
+          {/* Plan My Trip — Premium CTA */}
+          <div className="mt-4 rounded-2xl overflow-hidden"
+            style={{ border: '2px solid var(--crimson)' }}>
+            <div style={{ background: 'var(--crimson)', padding: '16px 20px' }}>
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <div className="text-xs font-bold uppercase tracking-widest mb-1"
+                    style={{ color: 'rgba(237,224,196,0.7)' }}>Premium Service</div>
+                  <h3 className="font-serif text-xl font-semibold text-white">
+                    Want us to plan this trip for you?
+                  </h3>
+                  <p className="text-sm mt-1" style={{ color: 'rgba(237,224,196,0.8)' }}>
+                    Our travel experts handle hotels, darshan slots, trains and local guides — end to end.
+                  </p>
+                </div>
+                <span style={{ fontSize: 36, flexShrink: 0 }}>🛕</span>
+              </div>
+              <div className="flex flex-wrap gap-3 mt-4">
+                {[
+                  '✓ Personalised itinerary',
+                  '✓ Hotel & train bookings',
+                  '✓ VIP darshan slots',
+                  '✓ Local guide coordination',
+                ].map(f => (
+                  <span key={f} style={{
+                    background: 'rgba(255,255,255,0.12)',
+                    color: 'white', fontSize: 11, fontWeight: 600,
+                    padding: '3px 10px', borderRadius: 20,
+                    border: '1px solid rgba(255,255,255,0.2)',
+                  }}>{f}</span>
+                ))}
+              </div>
+            </div>
+            <div style={{ background: 'var(--ivory2)', padding: '14px 20px' }}
+              className="flex items-center justify-between gap-4">
+              <p className="text-xs" style={{ color: 'var(--muted)' }}>
+                No payment now · Expert contacts you in 24 hrs · Pay only after approval
+              </p>
+              <button
+                onClick={() => setShowPlanModal(true)}
+                className="btn btn-primary whitespace-nowrap"
+                style={{ background: 'var(--crimson)', flexShrink: 0 }}>
+                Plan My Trip →
+              </button>
+            </div>
+          </div>
+
           {/* FinVerse CTA */}
           <div className="mt-4 rounded-xl p-4 flex items-center justify-between gap-4"
             style={{ background: 'var(--ivory2)', border: '1px solid var(--border)' }}>
@@ -296,6 +347,16 @@ function PlannerForm() {
         </div>
       )}
     </div>
+
+      {/* Plan My Trip Modal */}
+      {showPlanModal && (
+        <PlanMyTripModal
+          form={form}
+          itinerary={result}
+          user={session?.user}
+          onClose={() => setShowPlanModal(false)}
+        />
+      )}
   )
 }
 
