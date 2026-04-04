@@ -24,23 +24,10 @@ const TESTIMONIALS = [
 function TilakLogo() {
   return (
     <a href="/" className="nav-brand">
-      <svg width="28" height="40" viewBox="0 0 32 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="5" r="5" fill="#C0570A" opacity="0.15"/>
-        <circle cx="16" cy="5" r="3.6" fill="#C0570A"/>
-        <circle cx="16" cy="5" r="1.5" fill="#FFF0E8"/>
-        <path d="M 12.5 10 C 8 18 8 26 10 34 C 11 38 12 41 11.5 46"
-          stroke="#8B1A1A" strokeWidth="2.8" strokeLinecap="round"/>
-        <path d="M 19.5 10 C 24 18 24 26 22 34 C 21 38 20 41 20.5 46"
-          stroke="#8B1A1A" strokeWidth="2.8" strokeLinecap="round"/>
-      </svg>
-      <div>
-        <div className="nav-name">DivyaDarshan</div>
-        <div className="nav-sub">India's Temple Explorer</div>
-      </div>
+      <img src="/divyadarshan-logo.png" alt="DivyaDarshan" style={{ height: 56, width: "auto", objectFit: "contain" }} />
     </a>
   )
 }
-
 export default function LandingPage() {
   return (
     <>

@@ -6,7 +6,7 @@ interface LogoProps {
 }
 
 export default function Logo({ variant = 'horizontal', size = 'md', className = '' }: LogoProps) {
-  const heights = { sm: 36, md: 48, lg: 72 }
+  const heights = { sm: 48, md: 64, lg: 96 }
   const h = heights[size]
 
   if (variant === 'mark') {
