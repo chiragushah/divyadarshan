@@ -24,7 +24,7 @@ const TESTIMONIALS = [
 function TilakLogo() {
   return (
     <a href="/" className="nav-brand">
-      <img src="/divyadarshan-logo.png" alt="DivyaDarshan" style={{ height: 56, width: "auto", objectFit: "contain" }} />
+      <img src="/divyadarshan-logo.png" alt="DivyaDarshan" style={{ height: 72, width: "auto", objectFit: "contain" }} />
     </a>
   )
 }

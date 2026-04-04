@@ -193,7 +193,7 @@ export default function SignInForm() {
             </div>
 
             <div className="left-foot">
-              <img src="/dynaimers-logo.jpg" alt="Dynaimers" className="dyn-logo" />
+              <img src="/divyadarshan-logo.png" alt="DivyaDarshan" className="dyn-logo" />
               <div className="dyn-credit">Conceptualized &amp; Designed by<br /><strong>Dynaimers Consulting Private Limited</strong></div>
             </div>
           </div>
@@ -203,7 +203,7 @@ export default function SignInForm() {
             <Link href="/" className="back">← Back to home</Link>
             <div className="form-box">
               <div className="dyn-top">
-                <img src="/dynaimers-logo.jpg" alt="Dynaimers Consulting" />
+                <img src="/divyadarshan-logo.png" alt="DivyaDarshan" />
               </div>
               <h2 className="form-title">{mode === 'signup' ? 'Begin your yatra' : 'Welcome back'}</h2>
               <p className="form-sub">{mode === 'signup' ? 'Free forever. No credit card. Join thousands planning smarter pilgrimages.' : 'Sign in to access your temples, plans, journal and savings goals.'}</p>
