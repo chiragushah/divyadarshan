@@ -38,6 +38,16 @@ function getEmoji(deity?: string): string {
   return '🛕'
 }
 
+
+// Proxy Wikimedia images to avoid hotlinking blocks
+function proxyUrl(url?: string): string | undefined {
+  if (!url) return undefined
+  if (url.includes('wikimedia.org') || url.includes('wikipedia.org')) {
+    return `/api/image-proxy?url=${encodeURIComponent(url)}`
+  }
+  return url
+}
+
 function TempleImage({
   url, name, deity, liveLabel, ratingLabel, height = 'h-44'
 }: {
@@ -49,7 +59,8 @@ function TempleImage({
   height?: string
 }) {
   const [imgFailed, setImgFailed] = useState(false)
-  const showFallback = !url || imgFailed
+  const proxied = proxyUrl(url)
+  const showFallback = !proxied || imgFailed
 
   return (
     <div
@@ -57,9 +68,9 @@ function TempleImage({
       style={{ background: getBg(deity) }}
     >
       {/* Real image */}
-      {url && !imgFailed && (
+      {proxied && !imgFailed && (
         <img
-          src={url}
+          src={proxied}
           alt=""
           className="w-full h-full object-cover absolute inset-0"
           loading="lazy"

@@ -90,7 +90,7 @@ export default async function TemplePage({ params }: Props) {
             <div className="rounded-2xl overflow-hidden mb-6 aspect-video flex items-center justify-center relative"
               style={{ background:'linear-gradient(135deg, var(--crimson), var(--crim-lt))' }}>
               {t.image_url
-                ? <img src={t.image_url} alt={t.name} className="w-full h-full object-cover" />
+                ? <img src={t.image_url.includes('wikimedia') ? `/api/image-proxy?url=${encodeURIComponent(t.image_url)}` : t.image_url} alt={t.name} className="w-full h-full object-cover" />
                 : <span className="text-8xl font-serif font-bold" style={{ color:'rgba(255,255,255,.15)' }}>{t.name.charAt(0)}</span>}
               {t.has_live && (
                 <div className="absolute top-4 left-4">
@@ -587,17 +587,7 @@ export default async function TemplePage({ params }: Props) {
                 </a>
 
                 {/* Hotels - MakeMyTrip */}
-                <a href={`https://www.makemytrip.com/hotels/hotel-listing/?checkin=${new Date().toISOString().slice(0,10).replace(/-/g,'')}&checkout=${new Date(Date.now()+86400000).toISOString().slice(0,10).replace(/-/g,'')}&city=${encodeURIComponent(t.city)}&country=IN&searchText=${encodeURIComponent(t.city)}`}
-                  target="_blank" rel="noopener"
-                  className="flex items-center gap-3 p-2.5 rounded-xl transition-colors"
-                  style={{ background:'rgba(0,81,186,0.06)', border:'1px solid rgba(0,81,186,0.15)', textDecoration:'none' }}>
-                  <span style={{ fontSize:18 }}>🏨</span>
-                  <div className="flex-1">
-                    <div style={{ fontWeight:600, fontSize:12, color:'var(--ink)' }}>Hotels in {t.city}</div>
-                    <div style={{ fontSize:10, color:'var(--muted2)' }}>via MakeMyTrip</div>
-                  </div>
-                  <span style={{ color:'#0051BA', fontSize:12 }}>→</span>
-                </a>
+                
 
                 {/* Hotels - Google Hotels */}
                 <a href={`https://www.google.com/travel/hotels/${encodeURIComponent(t.city + ', ' + t.state + ', India')}`}
