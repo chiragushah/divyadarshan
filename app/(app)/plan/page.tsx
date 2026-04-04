@@ -10,11 +10,10 @@ import ItineraryRenderer from '@/components/ItineraryRenderer'
 import PlanActionBar from '@/components/PlanActionBar'
 import PlanMyTripModal from '@/components/PlanMyTripModal'
 
-// ── Planner Form ─────────────────────────────────────────────────────────────
 function PlannerForm() {
   const searchParams = useSearchParams()
+  const { data: session } = useSession()
 
-  // Read params passed from temple detail page
   const destination = searchParams.get('destination') || ''
   const deity       = searchParams.get('deity') || ''
   const city        = searchParams.get('city') || ''
@@ -30,14 +29,12 @@ function PlannerForm() {
     deity:    deity,
     notes:    city && state ? `Temple located in ${city}, ${state}.` : '',
   })
-  const [result, setResult]   = useState('')
-  const [loading, setLoading] = useState(false)
+  const [result,   setResult]   = useState('')
+  const [loading,  setLoading]  = useState(false)
   const [provider, setProvider] = useState('')
-  const [error, setError]     = useState('')
+  const [error,    setError]    = useState('')
   const [showPlanModal, setShowPlanModal] = useState(false)
-  const { data: session } = useSession()
 
-  // Re-sync if params change (e.g. navigating from a different temple)
   useEffect(() => {
     setForm(f => ({
       ...f,
@@ -105,29 +102,16 @@ function PlannerForm() {
       <div className="card card-p mb-6">
         <form onSubmit={generate}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
             <div>
               <label className="label">Starting City</label>
-              <input
-                className="input"
-                placeholder="e.g. Mumbai, Delhi, Pune…"
-                value={form.from}
-                onChange={e => set('from', e.target.value)}
-                required
-              />
+              <input className="input" placeholder="e.g. Mumbai, Delhi, Pune…"
+                value={form.from} onChange={e => set('from', e.target.value)} required />
             </div>
-
             <div>
               <label className="label">Destination / Yatra</label>
-              <input
-                className="input"
-                placeholder="e.g. Char Dham, Varanasi, Tirupati…"
-                value={form.to}
-                onChange={e => set('to', e.target.value)}
-                required
-              />
+              <input className="input" placeholder="e.g. Char Dham, Varanasi, Tirupati…"
+                value={form.to} onChange={e => set('to', e.target.value)} required />
             </div>
-
             <div>
               <label className="label">Travel Mode</label>
               <select className="input" value={form.mode} onChange={e => set('mode', e.target.value)}>
@@ -136,55 +120,29 @@ function PlannerForm() {
                 ))}
               </select>
             </div>
-
             <div>
               <label className="label">Duration (Days)</label>
-              <input
-                className="input"
-                type="number"
-                min={1}
-                max={30}
-                value={form.days}
-                onChange={e => set('days', parseInt(e.target.value))}
-              />
+              <input className="input" type="number" min={1} max={30}
+                value={form.days} onChange={e => set('days', parseInt(e.target.value))} />
             </div>
-
             <div>
               <label className="label">Number of Pilgrims</label>
-              <input
-                className="input"
-                type="number"
-                min={1}
-                max={20}
-                value={form.pilgrims}
-                onChange={e => set('pilgrims', parseInt(e.target.value))}
-              />
+              <input className="input" type="number" min={1} max={20}
+                value={form.pilgrims} onChange={e => set('pilgrims', parseInt(e.target.value))} />
             </div>
-
             <div>
               <label className="label">Deity Focus (optional)</label>
-              <input
-                className="input"
-                placeholder="e.g. Shiva, Vishnu, Devi…"
-                value={form.deity}
-                onChange={e => set('deity', e.target.value)}
-              />
+              <input className="input" placeholder="e.g. Shiva, Vishnu, Devi…"
+                value={form.deity} onChange={e => set('deity', e.target.value)} />
             </div>
-
             <div className="md:col-span-2">
               <label className="label">Special Requests (optional)</label>
-              <textarea
-                className="input h-20 resize-none"
+              <textarea className="input h-20 resize-none"
                 placeholder="Budget trip, elderly pilgrims, specific festivals, vegetarian only, no trekking…"
-                value={form.notes}
-                onChange={e => set('notes', e.target.value)}
-              />
+                value={form.notes} onChange={e => set('notes', e.target.value)} />
             </div>
           </div>
-
-          <button
-            type="submit"
-            disabled={loading || !form.from || !form.to}
+          <button type="submit" disabled={loading || !form.from || !form.to}
             className="btn btn-primary mt-5 w-full md:w-auto">
             {loading
               ? <><Loader2 size={16} className="animate-spin" /> Generating Itinerary…</>
@@ -204,7 +162,6 @@ function PlannerForm() {
       {/* Result */}
       {result && (
         <div className="card card-p">
-          {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <h2 className="font-serif text-2xl font-medium">Your Yatra Plan</h2>
           </div>
@@ -212,7 +169,42 @@ function PlannerForm() {
           <ItineraryRenderer text={result} />
           <PlanActionBar itinerary={result} form={form} />
 
-              {/* ── PLAN & BOOK ── */}
+          {/* Plan My Trip — Premium CTA */}
+          <div className="mt-6 rounded-2xl overflow-hidden" style={{ border: '2px solid var(--crimson)' }}>
+            <div style={{ background: 'var(--crimson)', padding: '16px 20px' }}>
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <div className="text-xs font-bold uppercase tracking-widest mb-1"
+                    style={{ color: 'rgba(237,224,196,0.7)' }}>Premium Service</div>
+                  <h3 className="font-serif text-xl font-semibold text-white">Want us to plan this trip for you?</h3>
+                  <p className="text-sm mt-1" style={{ color: 'rgba(237,224,196,0.8)' }}>
+                    Our travel experts handle hotels, darshan slots, trains and local guides — end to end.
+                  </p>
+                </div>
+                <span style={{ fontSize: 36, flexShrink: 0 }}>🛕</span>
+              </div>
+              <div className="flex flex-wrap gap-2 mt-3">
+                {['✓ Personalised itinerary', '✓ Hotel & train bookings', '✓ VIP darshan slots', '✓ Local guide coordination'].map(f => (
+                  <span key={f} style={{
+                    background: 'rgba(255,255,255,0.12)', color: 'white', fontSize: 11, fontWeight: 600,
+                    padding: '3px 10px', borderRadius: 20, border: '1px solid rgba(255,255,255,0.2)',
+                  }}>{f}</span>
+                ))}
+              </div>
+            </div>
+            <div style={{ background: 'var(--ivory2)', padding: '14px 20px' }}
+              className="flex items-center justify-between gap-4">
+              <p className="text-xs" style={{ color: 'var(--muted)' }}>
+                No payment now · Expert contacts you in 24 hrs · Pay only after approval
+              </p>
+              <button onClick={() => setShowPlanModal(true)}
+                className="btn btn-primary whitespace-nowrap" style={{ flexShrink: 0 }}>
+                Plan My Trip →
+              </button>
+            </div>
+          </div>
+
+          {/* PLAN & BOOK */}
           <div className="mt-8 pt-6 border-t" style={{ borderColor: 'var(--border)' }}>
             <h3 className="font-serif text-xl font-medium mb-1">Plan & Book Your Trip</h3>
             <p className="text-xs mb-4" style={{ color: 'var(--muted2)' }}>
@@ -220,30 +212,14 @@ function PlannerForm() {
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
               {[
-                {
-                  icon: '🏨',
-                  label: 'Hotels in ' + form.to,
-                  sub: 'Google Hotels',
-                  url: 'https://www.google.com/travel/hotels/' + encodeURIComponent(form.to + ', India'),
-                },
-                {
-                  icon: '🚅',
-                  label: 'Trains from ' + form.from,
-                  sub: 'IRCTC',
-                  url: 'https://www.irctc.co.in/nget/train-search',
-                },
-                {
-                  icon: '🚌',
-                  label: 'Buses to ' + form.to,
-                  sub: 'RedBus',
-                  url: 'https://www.google.com/search?q=redbus+' + form.from.replace(/ /g,'+') + '+to+' + form.to.replace(/ /g,'+'),
-                },
-                {
-                  icon: '✈️',
-                  label: 'Flights to ' + form.to,
-                  sub: 'Google Flights',
-                  url: 'https://www.google.com/search?q=flights+from+' + form.from.replace(/ /g,'+') + '+to+' + form.to.replace(/ /g,'+'),
-                },
+                { icon: '🏨', label: 'Hotels in ' + form.to, sub: 'Google Hotels',
+                  url: 'https://www.google.com/travel/hotels/' + encodeURIComponent(form.to + ', India') },
+                { icon: '🚂', label: 'Trains from ' + form.from, sub: 'IRCTC',
+                  url: 'https://www.irctc.co.in/nget/train-search' },
+                { icon: '🚌', label: 'Buses to ' + form.to, sub: 'RedBus',
+                  url: 'https://www.google.com/search?q=redbus+' + form.from.replace(/ /g,'+') + '+to+' + form.to.replace(/ /g,'+') },
+                { icon: '✈️', label: 'Flights to ' + form.to, sub: 'Google Flights',
+                  url: 'https://www.google.com/search?q=flights+from+' + form.from.replace(/ /g,'+') + '+to+' + form.to.replace(/ /g,'+') },
               ].map(b => (
                 <a key={b.label} href={b.url} target="_blank" rel="noopener" className="book-btn">
                   <span style={{ fontSize: 20 }}>{b.icon}</span>
@@ -264,8 +240,7 @@ function PlannerForm() {
               <p className="text-xs mb-3" style={{ color: 'var(--muted)' }}>
                 Get a detailed cost breakdown with the Yatra Budget calculator.
               </p>
-              <Link
-                href={`/plan/budget?destination=${encodeURIComponent(form.to)}&pilgrims=${form.pilgrims}`}
+              <Link href={`/plan/budget?destination=${encodeURIComponent(form.to)}&pilgrims=${form.pilgrims}`}
                 className="btn btn-secondary btn-sm w-full justify-center">
                 Calculate Budget →
               </Link>
@@ -275,58 +250,10 @@ function PlannerForm() {
               <p className="text-xs mb-3" style={{ color: 'var(--muted)' }}>
                 Set a monthly savings goal and track progress until you're ready to go.
               </p>
-              <Link
-                href={`/yatra/goals?yatra=${encodeURIComponent(form.to)}`}
+              <Link href={`/yatra/goals?yatra=${encodeURIComponent(form.to)}`}
                 className="btn btn-gold btn-sm w-full justify-center">
                 Set Savings Goal →
               </Link>
-            </div>
-          </div>
-
-          {/* Plan My Trip — Premium CTA */}
-          <div className="mt-4 rounded-2xl overflow-hidden"
-            style={{ border: '2px solid var(--crimson)' }}>
-            <div style={{ background: 'var(--crimson)', padding: '16px 20px' }}>
-              <div className="flex items-start justify-between gap-3">
-                <div>
-                  <div className="text-xs font-bold uppercase tracking-widest mb-1"
-                    style={{ color: 'rgba(237,224,196,0.7)' }}>Premium Service</div>
-                  <h3 className="font-serif text-xl font-semibold text-white">
-                    Want us to plan this trip for you?
-                  </h3>
-                  <p className="text-sm mt-1" style={{ color: 'rgba(237,224,196,0.8)' }}>
-                    Our travel experts handle hotels, darshan slots, trains and local guides — end to end.
-                  </p>
-                </div>
-                <span style={{ fontSize: 36, flexShrink: 0 }}>🛕</span>
-              </div>
-              <div className="flex flex-wrap gap-3 mt-4">
-                {[
-                  '✓ Personalised itinerary',
-                  '✓ Hotel & train bookings',
-                  '✓ VIP darshan slots',
-                  '✓ Local guide coordination',
-                ].map(f => (
-                  <span key={f} style={{
-                    background: 'rgba(255,255,255,0.12)',
-                    color: 'white', fontSize: 11, fontWeight: 600,
-                    padding: '3px 10px', borderRadius: 20,
-                    border: '1px solid rgba(255,255,255,0.2)',
-                  }}>{f}</span>
-                ))}
-              </div>
-            </div>
-            <div style={{ background: 'var(--ivory2)', padding: '14px 20px' }}
-              className="flex items-center justify-between gap-4">
-              <p className="text-xs" style={{ color: 'var(--muted)' }}>
-                No payment now · Expert contacts you in 24 hrs · Pay only after approval
-              </p>
-              <button
-                onClick={() => setShowPlanModal(true)}
-                className="btn btn-primary whitespace-nowrap"
-                style={{ background: 'var(--crimson)', flexShrink: 0 }}>
-                Plan My Trip →
-              </button>
             </div>
           </div>
 
@@ -340,8 +267,7 @@ function PlannerForm() {
               </p>
             </div>
             <a href={finverseLink({ action: 'savings', goal_name: form.to, utm_content: 'planner' })}
-              target="_blank" rel="noopener"
-              className="btn btn-gold btn-sm whitespace-nowrap">
+              target="_blank" rel="noopener" className="btn btn-gold btn-sm whitespace-nowrap">
               Open Yatra Fund →
             </a>
           </div>
@@ -349,36 +275,24 @@ function PlannerForm() {
       )}
     </div>
 
-        />
-      )}
-      {showPlanModal && (
-        <PlanMyTripModal
-          form={form}
-          itinerary={result}
-          user={session?.user}
-          onClose={() => setShowPlanModal(false)}
-        />
-      )}
+    {showPlanModal && (
+      <PlanMyTripModal
+        form={form}
+        itinerary={result}
+        user={session?.user}
+        onClose={() => setShowPlanModal(false)}
+      />
+    )}
     </>
   )
 }
 
-// Wrap in Suspense so useSearchParams works correctly in Next.js 14
 export default function PlannerPage() {
   return (
     <Suspense fallback={
       <div className="max-w-4xl mx-auto px-6 py-10 flex items-center justify-center">
         <Loader2 size={24} className="animate-spin" style={{ color: 'var(--crimson)' }} />
-
-      {showPlanModal && (
-        <PlanMyTripModal
-          form={form}
-          itinerary={result}
-          user={session?.user}
-          onClose={() => setShowPlanModal(false)}
-
-    </div>
-    </>
+      </div>
     }>
       <PlannerForm />
     </Suspense>
