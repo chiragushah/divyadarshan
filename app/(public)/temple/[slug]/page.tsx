@@ -561,13 +561,13 @@ export default async function TemplePage({ params }: Props) {
               <div className="space-y-2">
 
                 {/* TripAdvisor */}
-                <a href={`https://www.tripadvisor.in/Search?q=${encodeURIComponent(t.name + ' ' + t.city)}`}
+                <a href={`https://www.google.com/search?q=${encodeURIComponent(t.name + " " + t.city)}+reviews+temple`}
                   target="_blank" rel="noopener"
                   className="flex items-center gap-3 p-2.5 rounded-xl transition-colors hover:opacity-90"
-                  style={{ background:'#00AA6C', textDecoration:'none' }}>
-                  <span style={{ fontSize:18 }}>🟢</span>
+                  style={{ background:'#4285F4', textDecoration:'none' }}>
+                  <span style={{ fontSize:18 }}>⭐</span>
                   <div className="flex-1">
-                    <div style={{ fontWeight:700, fontSize:12, color:'white' }}>TripAdvisor Reviews</div>
+                    <div style={{ fontWeight:700, fontSize:12, color:'white' }}>Google Reviews</div>
                     <div style={{ fontSize:10, color:'rgba(255,255,255,0.8)' }}>Read traveller reviews & tips</div>
                   </div>
                   <span style={{ color:'white', fontSize:12 }}>→</span>
@@ -626,7 +626,7 @@ export default async function TemplePage({ params }: Props) {
                 </a>
 
                 {/* Bus - RedBus */}
-                <a href={`https://www.redbus.in/bus-tickets/bus-to-${encodeURIComponent(t.city.toLowerCase().replace(/ /g,'-'))}`}
+                <a href={`https://www.google.com/search?q=bus+to+${encodeURIComponent(t.city)}+India`}
                   target="_blank" rel="noopener"
                   className="flex items-center gap-3 p-2.5 rounded-xl transition-colors"
                   style={{ background:'rgba(210,43,43,0.06)', border:'1px solid rgba(210,43,43,0.15)', textDecoration:'none' }}>
