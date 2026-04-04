@@ -555,7 +555,7 @@ export default async function TemplePage({ params }: Props) {
               </div>
             )}
 
-            {/* ── Find & Book Online ── */
+            {/* Find & Book Online */}
             <div className="card card-p">
               <h3 className="font-serif text-lg font-medium mb-3">Find & Book Online</h3>
               <div className="space-y-2">
