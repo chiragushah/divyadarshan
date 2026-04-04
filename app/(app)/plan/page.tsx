@@ -348,12 +348,6 @@ function PlannerForm() {
       )}
     </div>
 
-      {showPlanModal && (
-        <PlanMyTripModal
-          form={form}
-          itinerary={result}
-          user={session?.user}
-          onClose={() => setShowPlanModal(false)}
         />
       )}
     </>
@@ -366,6 +360,14 @@ export default function PlannerPage() {
     <Suspense fallback={
       <div className="max-w-4xl mx-auto px-6 py-10 flex items-center justify-center">
         <Loader2 size={24} className="animate-spin" style={{ color: 'var(--crimson)' }} />
+
+      {showPlanModal && (
+        <PlanMyTripModal
+          form={form}
+          itinerary={result}
+          user={session?.user}
+          onClose={() => setShowPlanModal(false)}
+
       </div>
     }>
       <PlannerForm />
