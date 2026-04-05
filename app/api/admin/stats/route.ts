@@ -138,5 +138,29 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ temples: temples.map((t: any) => ({ ...t, _id: t._id?.toString() })) })
   }
 
+  if (type === 'plan_requests') {
+    try {
+      const TripPlanRequest = (await import('@/models/TripPlanRequest')).default || (await import('@/models')).TripPlanRequest
+      const planRequests = await TripPlanRequest.find().sort({ createdAt: -1 }).limit(100).lean()
+      return NextResponse.json({ planRequests })
+    } catch(e) { return NextResponse.json({ planRequests: [] }) }
+  }
+
+  if (type === 'shared_plans') {
+    try {
+      const SharedPlan = (await import('@/models/SharedPlan')).SharedPlan
+      const sharedPlans = await SharedPlan.find().sort({ createdAt: -1 }).limit(100).lean()
+      return NextResponse.json({ sharedPlans })
+    } catch(e) { return NextResponse.json({ sharedPlans: [] }) }
+  }
+
+  if (type === 'admin_reqs') {
+    try {
+      const AdminRequest = mongoose.models.AdminRequest || mongoose.model('AdminRequest', new mongoose.Schema({ name:String, email:String, experience:String, groups_led:Number, status:{type:String,default:'pending'} }, { strict:false, timestamps:true }))
+      const adminRequests = await AdminRequest.find().sort({ createdAt: -1 }).lean()
+      return NextResponse.json({ adminRequests })
+    } catch(e) { return NextResponse.json({ adminRequests: [] }) }
+  }
+
   return NextResponse.json({ error: 'Unknown type' }, { status: 400 })
 }
