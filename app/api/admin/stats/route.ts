@@ -170,5 +170,13 @@ export async function GET(req: NextRequest) {
     } catch(e) { return NextResponse.json({ contributions: [] }) }
   }
 
+  if (type === 'recommendations') {
+    try {
+      const { TempleRecommendation } = await import('@/models/TempleRecommendation')
+      const recommendations = await TempleRecommendation.find().sort({ createdAt: -1 }).limit(200).lean()
+      return NextResponse.json({ recommendations })
+    } catch(e) { return NextResponse.json({ recommendations: [] }) }
+  }
+
   return NextResponse.json({ error: 'Unknown type' }, { status: 400 })
 }
