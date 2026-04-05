@@ -103,7 +103,7 @@ export default function SignInForm() {
         .back:hover { color:var(--saffron); }
         .form-box { width:100%; max-width:370px; }
         .dyn-top { display:flex; justify-content:center; margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid var(--border); }
-        .dyn-top img { height:60px; width:auto; object-fit:contain; }
+        .dyn-top img { height:80px; width:auto; object-fit:contain; }
         .form-title { font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--ink); margin-bottom:.3rem; line-height:1.15; }
         .form-sub { font-size:.83rem; color:var(--muted); margin-bottom:1.75rem; line-height:1.6; }
         .tabs { display:flex; background:white; border:1.5px solid var(--border); border-radius:10px; padding:3px; margin-bottom:1.5rem; gap:3px; }

@@ -6,8 +6,8 @@ interface LogoProps {
 }
 
 export default function Logo({ variant = 'horizontal', size = 'md', className = '' }: LogoProps) {
-  const heights: Record<string, number> = { sm: 52, md: 68, lg: 96 }
-  const h = heights[size] || 68
+  const heights: Record<string, number> = { sm: 64, md: 88, lg: 120 }
+  const h = heights[size] || 88
 
   return (
     <div className={`flex items-center ${className}`} style={{ lineHeight: 0 }}>

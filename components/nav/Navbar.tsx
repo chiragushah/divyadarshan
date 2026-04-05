@@ -58,7 +58,7 @@ export default function Navbar() {
   return (
     <nav style={{ background: '#FFFFFF', borderBottom: '1.5px solid #E8E8E8', position: 'sticky', top: 0, zIndex: 50, boxShadow: '0 1px 3px rgba(0,0,0,.04)' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', height: 80, gap: 8 }}>
+        <div style={{ display: 'flex', alignItems: 'center', height: 96, gap: 8 }}>
 
           {/* Logo */}
           <Link href="/" style={{ marginRight: 32, textDecoration: 'none', flexShrink: 0 }}>
