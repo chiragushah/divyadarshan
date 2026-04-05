@@ -164,6 +164,9 @@ export default function ExploreClient({ initialTemples, total, page, states, act
 
   return (
     <div>
+      <div className="max-w-7xl mx-auto px-4 pt-6">
+        <RecommendTempleButton variant="banner" />
+      </div>
       {/* Tab bar */}
       <div className="border-b bg-white" style={{ borderColor: 'var(--border)' }}>
         <div className="max-w-7xl mx-auto px-4 flex gap-0 overflow-x-auto">
