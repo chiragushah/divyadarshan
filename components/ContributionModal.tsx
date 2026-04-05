@@ -45,7 +45,7 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
   const finalAmount = form.customAmt ? parseInt(form.customAmt) : form.amount
 
   const submit = async () => {
-    if (!form.name || !form.email) { setError('Name and email are required'); return }
+    if (!form.name || !form.email || !form.phone) { setError('Name, email and mobile number are required'); return }
     if (finalAmount < 5000) { setError('Minimum contribution is Rs. 5,000'); return }
     setLoading(true); setError('')
     try {
@@ -203,7 +203,7 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
                 {[
                   { k:'name',       label:'Full Name *',          ph:'Your full name',             type:'text'  },
                   { k:'email',      label:'Email Address *',      ph:'your@email.com',             type:'email' },
-                  { k:'phone',      label:'Phone Number',         ph:'+91 98765 43210',            type:'tel'   },
+                  { k:'phone',      label:'Mobile Number *',       ph:'+91 98765 43210',            type:'tel'   },
                   { k:'city',       label:'City',                 ph:'e.g. Mumbai, Delhi, Pune',   type:'text'  },
                   { k:'occupation', label:'Occupation',           ph:'e.g. Doctor, Entrepreneur',  type:'text'  },
                 ].map(({ k, label, ph, type }) => (

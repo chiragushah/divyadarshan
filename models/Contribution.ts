@@ -17,7 +17,7 @@ export interface IContribution extends Document {
 const ContributionSchema = new Schema<IContribution>({
   name:       { type: String, required: true },
   email:      { type: String, required: true },
-  phone:      { type: String, default: '' },
+  phone:      { type: String, required: true },
   city:       { type: String, default: '' },
   occupation: { type: String, default: '' },
   amount:     { type: Number, required: true, min: 5000 },
