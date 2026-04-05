@@ -162,5 +162,13 @@ export async function GET(req: NextRequest) {
     } catch(e) { return NextResponse.json({ adminRequests: [] }) }
   }
 
+  if (type === 'contributions') {
+    try {
+      const { Contribution } = await import('@/models/Contribution')
+      const contributions = await Contribution.find().sort({ createdAt: -1 }).limit(500).lean()
+      return NextResponse.json({ contributions })
+    } catch(e) { return NextResponse.json({ contributions: [] }) }
+  }
+
   return NextResponse.json({ error: 'Unknown type' }, { status: 400 })
 }

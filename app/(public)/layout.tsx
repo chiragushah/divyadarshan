@@ -1,4 +1,5 @@
 import Navbar from '@/components/nav/Navbar'
+import ContributionBanner from '@/components/ContributionBanner'
 
 export default function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
