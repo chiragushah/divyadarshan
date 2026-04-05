@@ -183,7 +183,7 @@ export default function SignInForm() {
             </div>
 
             <div className="left-foot">
-              <img src="/divyadarshan-logo.png" alt="DivyaDarshan" className="dyn-logo" />
+              <img src="/dynaimers-logo.jpg" alt="Dynaimers Consulting" className="dyn-logo" />
               <div className="dyn-credit">Conceptualized &amp; Designed by<br /><strong>Dynaimers Consulting Private Limited</strong></div>
             </div>
           </div>
