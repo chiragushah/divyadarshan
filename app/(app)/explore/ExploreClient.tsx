@@ -1,4 +1,6 @@
 'use client'
+import dynamic from 'next/dynamic'
+const RecommendTempleButton = dynamic(() => import('@/components/RecommendTempleButton'), { ssr: false })
 export const dynamic = 'force-dynamic'
 import { useState, useEffect } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
