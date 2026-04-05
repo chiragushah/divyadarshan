@@ -27,7 +27,8 @@ function TilakLogo() {
       <img src="/divyadarshan-logo.png" alt="DivyaDarshan" style={{ height:88, width:"auto", objectFit:"contain" }} />
     </a>
   )
-}port Link from 'next/link'
+}
+import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
