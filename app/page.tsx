@@ -72,8 +72,7 @@ const TESTIMONIALS = [
   { quote: 'First app that actually understands what a pilgrim needs — not just a tourist. I have visited 23 Jyotirlingas using it.', name: 'Savitri Deshpande', loc: 'Nashik' },
   { quote: 'The group split feature saved our Ashtavinayak family trip. 6 people, 8 days, all expenses settled on WhatsApp.', name: 'Vikram Mehta', loc: 'Ahmedabad' },
 ]
-
-port Link from 'next/link'
+import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
