@@ -95,7 +95,7 @@ export default function SignInForm() {
         .trivia-source { font-size:.6rem; color:var(--muted); margin-left:auto; }
         .trivia-text { font-family:'Playfair Display',serif; font-size:.95rem; font-style:italic; font-weight:500; line-height:1.65; color:var(--ink-2); }
         .left-foot { margin-top:auto; padding-top:1.5rem; border-top:1.5px solid var(--border); display:flex; align-items:center; gap:1.25rem; }
-        .dyn-logo { height:36px; width:auto; object-fit:contain; flex-shrink:0; }
+        .dyn-logo { height:48px; width:auto; object-fit:contain; flex-shrink:0; }
         .dyn-credit { font-size:.63rem; color:var(--muted); line-height:1.5; }
         .dyn-credit strong { font-weight:600; color:var(--ink-3); }
         .right { background:var(--off-white); border-left:1px solid var(--border); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:2.5rem 2.5rem 4rem; position:relative; overflow-y:auto; }
@@ -103,7 +103,7 @@ export default function SignInForm() {
         .back:hover { color:var(--saffron); }
         .form-box { width:100%; max-width:370px; }
         .dyn-top { display:flex; justify-content:center; margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid var(--border); }
-        .dyn-top img { height:42px; width:auto; }
+        .dyn-top img { height:60px; width:auto; object-fit:contain; }
         .form-title { font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--ink); margin-bottom:.3rem; line-height:1.15; }
         .form-sub { font-size:.83rem; color:var(--muted); margin-bottom:1.75rem; line-height:1.6; }
         .tabs { display:flex; background:white; border:1.5px solid var(--border); border-radius:10px; padding:3px; margin-bottom:1.5rem; gap:3px; }
@@ -149,7 +149,7 @@ export default function SignInForm() {
         <div className="shell">
           {/* LEFT */}
           <div className="left">
-            <Link href="/" className="brand">
+            <Link href="/" className="brand" style={{ marginBottom: '3rem' }}>
               <svg width="28" height="40" viewBox="0 0 32 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="16" cy="5" r="5" fill="#C0570A" opacity="0.15"/>
                 <circle cx="16" cy="5" r="3.6" fill="#C0570A"/>

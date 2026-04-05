@@ -23,12 +23,11 @@ const TESTIMONIALS = [
 
 function TilakLogo() {
   return (
-    <a href="/" className="nav-brand">
-      <img src="/divyadarshan-logo.png" alt="DivyaDarshan" style={{ height: 72, width: "auto", objectFit: "contain" }} />
+    <a href="/" className="nav-brand" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+      <img src="/divyadarshan-logo.png" alt="DivyaDarshan" style={{ height: 64, width: 'auto', objectFit: 'contain' }} />
     </a>
   )
-}
-export default function LandingPage() {
+}export default function LandingPage() {
   return (
     <>
       <style>{`
