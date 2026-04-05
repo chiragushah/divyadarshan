@@ -149,18 +149,8 @@ export default function SignInForm() {
         <div className="shell">
           {/* LEFT */}
           <div className="left">
-            <Link href="/" className="brand" style={{ marginBottom: '3rem' }}>
-              <svg width="28" height="40" viewBox="0 0 32 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="16" cy="5" r="5" fill="#C0570A" opacity="0.15"/>
-                <circle cx="16" cy="5" r="3.6" fill="#C0570A"/>
-                <circle cx="16" cy="5" r="1.5" fill="#FFF0E8"/>
-                <path d="M 12.5 10 C 8 18 8 26 10 34 C 11 38 12 41 11.5 46" stroke="#8B1A1A" strokeWidth="2.8" strokeLinecap="round"/>
-                <path d="M 19.5 10 C 24 18 24 26 22 34 C 21 38 20 41 20.5 46" stroke="#8B1A1A" strokeWidth="2.8" strokeLinecap="round"/>
-              </svg>
-              <div>
-                <div className="brand-name">DivyaDarshan</div>
-                <div className="brand-sub">India's Temple Explorer</div>
-              </div>
+            <Link href="/" style={{ display:'flex', alignItems:'center', marginBottom:'2rem', textDecoration:'none' }}>
+              <img src="/divyadarshan-logo.png" alt="DivyaDarshan" style={{ height:72, width:'auto', objectFit:'contain' }} />
             </Link>
 
             <div className="hero">
