@@ -21,6 +21,7 @@ const NAV_GROUPS = [
     items: [
       { href: "/explore", label: "Temple Directory", desc: "Browse 350+ sacred temples" },
       { href: "/circuits", label: "Pilgrimage Circuits", desc: "Curated yatra routes" },
+      { href: "/manifest", label: "Manifest", desc: "Sacred Sankalp intentions" },
       { href: "/manifest", label: "Manifest — Sankalp", desc: "Sacred intentions with deity guidance" },
       { href: "/calendar", label: "Festival Calendar", desc: "Upcoming festivals & events" },
     ],
