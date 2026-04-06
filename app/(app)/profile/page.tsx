@@ -1,5 +1,4 @@
 'use client'
-import { useEffect, useState } from 'react'
 import BadgeCard from '@/components/BadgeCard'
 export const dynamic = 'force-dynamic'
 import { useState, useEffect } from 'react'
