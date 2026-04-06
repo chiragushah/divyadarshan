@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Outfit } from 'next/font/google'
 import { SessionProvider } from './providers'
 import { Toaster } from 'react-hot-toast'
 import './globals.css'
+import PWAInstaller from '@/components/PWAInstaller'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }}
           />
         </SessionProvider>
+            <PWAInstaller />
       </body>
     </html>
   )
