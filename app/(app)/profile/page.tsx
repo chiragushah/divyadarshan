@@ -1,4 +1,6 @@
 'use client'
+import { useEffect, useState } from 'react'
+import BadgeCard from '@/components/BadgeCard'
 export const dynamic = 'force-dynamic'
 import { useState, useEffect } from 'react'
 import { useSession, signOut } from 'next-auth/react'
@@ -40,6 +42,11 @@ export default function ProfilePage() {
   const [recommendations, setRecommendations] = useState<Temple[]>([])
   const [goals, setGoals]             = useState<SavingsGoal[]>([])
   const [loading, setLoading]         = useState(true)
+
+  const [badgeData, setBadgeData] = useState({ amount: 0, recs: 0, badge: null as any })
+  useEffect(() => {
+    fetch('/api/user-badge').then(r => r.json()).then(d => setBadgeData(d)).catch(() => {})
+  }, [])
   const [activeTab, setActiveTab]     = useState<'visited'|'recommendations'|'goals'>('visited')
 
   useEffect(() => {
@@ -454,6 +461,8 @@ export default function ProfilePage() {
           )}
         </>
       )}
-    </div>
+    <div style={{ maxWidth:800, margin:'32px auto 0', padding:'0 24px 40px' }}>
+        <BadgeCard contributionAmount={badgeData.amount} approvedRecs={badgeData.recs} />
+      </div></div>
   )
 }

@@ -28,6 +28,8 @@ function PlannerForm() {
     pilgrims: 2,
     deity:    deity,
     auspicious_date: '',
+    is_international: false,
+    country: '',
     notes:    city && state ? `Temple located in ${city}, ${state}.` : '',
   })
   const [result,   setResult]   = useState('')
@@ -85,6 +87,14 @@ function PlannerForm() {
     purnima:   '#1E40AF',
     amavasya:  '#4B5563',
   }
+
+  const COUNTRIES = [
+    'United States','United Kingdom','Canada','Australia','New Zealand',
+    'United Arab Emirates','Singapore','Malaysia','Germany','France',
+    'Netherlands','Switzerland','Sweden','Japan','Hong Kong','South Africa',
+    'Bahrain','Kuwait','Qatar','Oman','Kenya','Tanzania','Mauritius',
+    'Sri Lanka','Nepal','Bangladesh','Fiji','Trinidad & Tobago','Other',
+  ]
   const upcomingDates = AUSPICIOUS_DATES.filter(d => d.date >= new Date().toISOString().slice(0,10)).slice(0, 12)
 
 
@@ -100,6 +110,7 @@ function PlannerForm() {
           ...form,
           notes: [
             form.notes,
+            form.is_international ? `INTERNATIONAL TRAVELLER FROM ${form.country || 'abroad'}: Include (1) best international airports to fly into India for this destination (2) approximate international flight costs in USD and INR (3) recommended arrival city and onward train/flight to destination (4) currency exchange tips (5) SIM card and travel insurance advice (6) NRI-friendly accommodation options (7) any visa requirements to note (8) total trip budget in both USD and INR.` : '',
             form.auspicious_date ? `IMPORTANT: The pilgrim wants to travel on or around ${form.auspicious_date} which is ${(AUSPICIOUS_DATES || []).find((d: any) => d.date === form.auspicious_date)?.label || 'an auspicious date'}. Please align the itinerary so they arrive and do main darshan on this sacred day.` : ''
           ].filter(Boolean).join(' ')
         }),
@@ -154,6 +165,32 @@ function PlannerForm() {
               <label className="label">Starting City</label>
               <input className="input" placeholder="e.g. Mumbai, Delhi, Pune…"
                 value={form.from} onChange={e => set('from', e.target.value)} required />
+            </div>
+                        {/* International Traveller Toggle */}
+            <div className="md:col-span-2">
+              <div style={{ display:'flex', alignItems:'center', gap:12, padding:'14px 16px', borderRadius:12, border:'1.5px solid', borderColor: form.is_international ? '#1E40AF' : 'var(--border)', background: form.is_international ? '#EFF6FF' : 'var(--ivory2)', cursor:'pointer', transition:'all 0.2s' }}
+                onClick={() => set('is_international', !form.is_international)}>
+                <div style={{ width:20, height:20, borderRadius:4, border:'2px solid', borderColor: form.is_international ? '#1E40AF' : 'var(--border)', background: form.is_international ? '#1E40AF' : 'white', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, transition:'all 0.15s' }}>
+                  {form.is_international && <span style={{ color:'white', fontSize:13, fontWeight:700 }}>✓</span>}
+                </div>
+                <div>
+                  <div style={{ fontWeight:600, fontSize:14, color: form.is_international ? '#1E40AF' : 'var(--ink)' }}>
+                    ✈️ I am travelling from outside India
+                  </div>
+                  <div style={{ fontSize:12, color:'var(--muted2)', marginTop:2 }}>
+                    AI will include international flights, forex, visa tips and NRI-friendly hotels
+                  </div>
+                </div>
+              </div>
+              {form.is_international && (
+                <div style={{ marginTop:10 }}>
+                  <label className="label">Your Country</label>
+                  <select className="input" value={form.country} onChange={e => set('country', e.target.value)}>
+                    <option value="">Select your country…</option>
+                    {COUNTRIES.map(c => <option key={c} value={c}>{c}</option>)}
+                  </select>
+                </div>
+              )}
             </div>
             <div>
               <label className="label">Destination / Yatra</label>
