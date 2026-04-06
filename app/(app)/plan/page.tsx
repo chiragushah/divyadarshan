@@ -27,6 +27,7 @@ function PlannerForm() {
     days:     3,
     pilgrims: 2,
     deity:    deity,
+    auspicious_date: '',
     notes:    city && state ? `Temple located in ${city}, ${state}.` : '',
   })
   const [result,   setResult]   = useState('')
@@ -46,6 +47,47 @@ function PlannerForm() {
 
   const set = (k: string, v: any) => setForm(f => ({ ...f, [k]: v }))
 
+  // Auspicious dates 2026
+  const AUSPICIOUS_DATES = [
+    { date: '2026-01-14', label: 'Makar Sankranti', type: 'festival' },
+    { date: '2026-01-26', label: 'Basant Panchami', type: 'festival' },
+    { date: '2026-02-11', label: 'Mahashivratri', type: 'major' },
+    { date: '2026-02-26', label: 'Holi', type: 'festival' },
+    { date: '2026-03-13', label: 'Ram Navami', type: 'major' },
+    { date: '2026-03-20', label: 'Hanuman Jayanti', type: 'major' },
+    { date: '2026-04-06', label: 'Ekadashi (Papamochani)', type: 'ekadashi' },
+    { date: '2026-04-13', label: 'Purnima (Chaitra)', type: 'purnima' },
+    { date: '2026-04-14', label: 'Baisakhi / Tamil New Year', type: 'festival' },
+    { date: '2026-04-21', label: 'Ekadashi (Kamada)', type: 'ekadashi' },
+    { date: '2026-04-28', label: 'Amavasya', type: 'amavasya' },
+    { date: '2026-05-05', label: 'Ekadashi (Varuthini)', type: 'ekadashi' },
+    { date: '2026-05-12', label: 'Purnima (Vaishakha)', type: 'purnima' },
+    { date: '2026-05-20', label: 'Ekadashi (Mohini)', type: 'ekadashi' },
+    { date: '2026-06-03', label: 'Ekadashi (Apara)', type: 'ekadashi' },
+    { date: '2026-06-11', label: 'Purnima (Jyeshtha)', type: 'purnima' },
+    { date: '2026-06-18', label: 'Ekadashi (Nirjala) — Most sacred', type: 'ekadashi' },
+    { date: '2026-07-10', label: 'Purnima / Guru Purnima', type: 'purnima' },
+    { date: '2026-08-03', label: 'Hariyali Teej', type: 'festival' },
+    { date: '2026-08-09', label: 'Purnima (Shravana)', type: 'purnima' },
+    { date: '2026-08-14', label: 'Janmashtami', type: 'major' },
+    { date: '2026-09-17', label: 'Ganesh Chaturthi', type: 'major' },
+    { date: '2026-10-01', label: 'Navratri begins', type: 'major' },
+    { date: '2026-10-12', label: 'Dussehra', type: 'festival' },
+    { date: '2026-10-20', label: 'Kojagiri Purnima', type: 'purnima' },
+    { date: '2026-11-01', label: 'Diwali', type: 'major' },
+    { date: '2026-11-05', label: 'Chhath Puja', type: 'festival' },
+    { date: '2026-12-18', label: 'Purnima (Margashirsha)', type: 'purnima' },
+  ]
+  const AUSPICIOUS_COLORS: Record<string,string> = {
+    major:     '#8B1A1A',
+    festival:  '#C0570A',
+    ekadashi:  '#166534',
+    purnima:   '#1E40AF',
+    amavasya:  '#4B5563',
+  }
+  const upcomingDates = AUSPICIOUS_DATES.filter(d => d.date >= new Date().toISOString().slice(0,10)).slice(0, 12)
+
+
   const generate = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!form.from || !form.to) return
@@ -54,7 +96,13 @@ function PlannerForm() {
       const res = await fetch('/api/ai/planner', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          notes: [
+            form.notes,
+            form.auspicious_date ? `IMPORTANT: The pilgrim wants to travel on or around ${form.auspicious_date} which is ${(AUSPICIOUS_DATES || []).find((d: any) => d.date === form.auspicious_date)?.label || 'an auspicious date'}. Please align the itinerary so they arrive and do main darshan on this sacred day.` : ''
+          ].filter(Boolean).join(' ')
+        }),
       })
       const data = await res.json()
       if (data.error) { setError(data.error); return }

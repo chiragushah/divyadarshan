@@ -41,6 +41,10 @@ export interface ITemple extends Document {
   lat?: number
   lng?: number
   image_url?: string
+  open_months?: number[]       // e.g. [5,6,7,8,9,10,11] = May-Nov open
+  closed_months?: number[]     // e.g. [11,12,1,2,3,4] = Nov-Apr closed
+  seasonal_note?: string       // e.g. "Opens on Akshaya Tritiya, closes on Bhai Dooj"
+  is_seasonal?: boolean
   rating_avg: number
   rating_count: number
   createdAt: Date
