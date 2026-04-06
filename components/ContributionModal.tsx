@@ -75,7 +75,7 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
     <div style={overlay} onClick={onClose}>
       <div style={{ background:'white', borderRadius:20, padding:40, maxWidth:480, width:'100%', textAlign:'center' }} onClick={e => e.stopPropagation()}>
         <div style={{ fontSize:64, marginBottom:16 }}>🙏</div>
-        <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:26, color:'#8B1A1A', marginBottom:12 }}>Thank You, {form.name.split(' ')[0]}!</h2>
+        <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:26, color:'#8B1A1A', marginBottom:12 }}>Thank You for Donating Wisely! 🙏</h2>
         <p style={{ color:'#6B5B4E', lineHeight:1.7, marginBottom:8 }}>
           We've received your interest in contributing <strong style={{ color:'#8B1A1A' }}>{fmtINR(finalAmount)}</strong> to DivyaDarshan's mission.
         </p>
@@ -101,8 +101,8 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
         {/* Header */}
         <div style={{ background:'linear-gradient(135deg, #8B1A1A, #C0570A)', padding:'24px 28px', position:'relative', flexShrink:0 }}>
           <button onClick={onClose} style={{ position:'absolute', top:16, right:16, background:'rgba(255,255,255,0.15)', border:'none', color:'white', width:32, height:32, borderRadius:'50%', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center' }}><X size={16}/></button>
-          <div style={{ fontSize:11, fontWeight:700, letterSpacing:'.15em', color:'rgba(237,224,196,0.7)', textTransform:'uppercase', marginBottom:6 }}>Partner With Us</div>
-          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:24, color:'white', margin:'0 0 6px' }}>Support DivyaDarshan's Mission</h2>
+          <div style={{ fontSize:11, fontWeight:700, letterSpacing:'.15em', color:'rgba(237,224,196,0.7)', textTransform:'uppercase', marginBottom:6 }}>Donate Wisely · Support Entrepreneurs</div>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:24, color:'white', margin:'0 0 6px' }}>Contribute to DivyaDarshan</h2>
           <p style={{ color:'rgba(237,224,196,0.85)', fontSize:13, lineHeight:1.6, margin:0 }}>
             This is not a donation — it is a contribution towards building India's most trusted temple platform for pilgrims.
           </p>
@@ -123,7 +123,7 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
             <div style={{ padding:28 }}>
               {/* Noble cause */}
               <div style={{ background:'#FFF8F0', border:'1.5px solid #C0570A', borderRadius:14, padding:20, marginBottom:24 }}>
-                <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:16, color:'#8B1A1A', marginBottom:12 }}>Where Your Contribution Goes</h3>
+                <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:16, color:'#8B1A1A', marginBottom:12 }}>Where Every Rupee Goes</h3>
                 <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
                   {[
                     { icon:'🛕', title:'Temple Volunteers', desc:'Hire people to verify, enrich and add new temple data across India' },
@@ -156,11 +156,11 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
 
               {/* Important note */}
               <div style={{ background:'#F0F9FF', border:'1px solid #BAE6FD', borderRadius:10, padding:14, marginBottom:24, fontSize:13, color:'#1E40AF', lineHeight:1.6 }}>
-                <strong>Important:</strong> DivyaDarshan is not a trust or NGO. This is a voluntary contribution to support our platform's growth. We believe in transparent, community-funded development. You are partnering with a mission, not making a charitable donation.
+                <strong>Donate Wisely:</strong> DivyaDarshan is not a trust or NGO — we are entrepreneurs building India's most trusted pilgrimage platform. Your contribution goes directly to temple volunteers, old age home collaborations and technology — zero middlemen, zero administrative cuts. You fund builders, not bureaucracy.
               </div>
 
               <button onClick={() => setStep('form')} style={{ width:'100%', background:'#8B1A1A', color:'white', border:'none', borderRadius:12, padding:'15px 0', fontWeight:700, fontSize:16, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', gap:8 }}>
-                <Heart size={18}/> I Want to Contribute →
+                💛 Yes, I Want to Contribute →
               </button>
             </div>
           )}
@@ -240,12 +240,12 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
                   borderRadius:10, padding:'14px 0', fontWeight:700, fontSize:15, cursor: loading ? 'not-allowed' : 'pointer',
                   display:'flex', alignItems:'center', justifyContent:'center', gap:8
                 }}>
-                  <Heart size={16}/>
-                  {loading ? 'Submitting…' : `Submit — ${fmtINR(finalAmount)}`}
+                  💛
+                  {loading ? 'Submitting…' : `Contribute ${fmtINR(finalAmount)}`}
                 </button>
               </div>
               <p style={{ textAlign:'center', fontSize:11, color:'#A89B8C', marginTop:12 }}>
-                By submitting, our team will contact you within 24 hours. No payment is collected now.
+                Donate wisely — 100% goes to our mission. No middlemen, no admin cuts. Our team will contact you within 24 hours.
               </p>
             </div>
           )}

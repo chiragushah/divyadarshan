@@ -699,7 +699,7 @@ export default function AdminDashboard() {
               <div style={S.section}>
                 <div style={S.secHead}>
                   <span style={{ fontWeight:700, fontSize:14 }}>Contribution Interests ({data?.contributions?.length||0})</span>
-                  <span style={{ fontSize:12, color:C.muted2 }}>Sorted by latest first</span>
+                  <span style={{ fontSize:12, color:C.muted2 }}>Donate Wisely campaign — sorted by latest</span>
                 </div>
                 {data?.contributions?.length ? (
                   <table><thead><tr>
