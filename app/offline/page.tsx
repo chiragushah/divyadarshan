@@ -1,4 +1,4 @@
-export default function OfflinePage() {
+'use client'\nexport default function OfflinePage() {
   return (
     <div style={{ minHeight:'100vh', display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column', gap:16, background:'#FDFAF6', padding:24, textAlign:'center' }}>
       <div style={{ fontSize:64 }}>&#128701;</div>
