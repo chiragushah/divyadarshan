@@ -118,8 +118,21 @@ export default function ExploreClient({ initialTemples, total, page, states, act
         .filter(Boolean)
         .sort((a: any, b: any) => a.distance - b.distance)
       setNearbyTemples(results)
-    } catch {
-      setLocationError('Could not fetch nearby temples. Please check your connection and try again.')
+    } catch (err: any) {
+      console.error('Nearby fetch error:', err)
+      // Fallback: fetch from our own DB using lat/lon
+      try {
+        const fallbackRes = await fetch(`/api/temples?nearby=1&lat=${lat}&lon=${lon}&radius=${radius}`)
+        const fallbackData = await fallbackRes.json()
+        if (fallbackData.temples?.length > 0) {
+          setNearbyTemples(fallbackData.temples)
+          setLocationError('')
+        } else {
+          setLocationError('No temples found nearby. Try increasing the search radius.')
+        }
+      } catch {
+        setLocationError('Could not fetch nearby temples. The map service may be temporarily unavailable. Please try again.')
+      }
     } finally {
       setLocLoading(false)
     }

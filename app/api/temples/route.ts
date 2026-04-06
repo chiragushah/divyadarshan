@@ -5,6 +5,38 @@ export const dynamic = 'force-dynamic'
 
 export async function GET(req: NextRequest) {
   await connectDB()
+
+  // Nearby temples using Haversine distance
+  const nearby = searchParams.get('nearby')
+  if (nearby === '1') {
+    const lat = parseFloat(searchParams.get('lat') || '0')
+    const lon = parseFloat(searchParams.get('lon') || '0')
+    const radius = parseFloat(searchParams.get('radius') || '50')
+    
+    if (lat && lon) {
+      // Get all temples with coordinates
+      const allTemples = await Temple.find({ lat: { $exists: true, $ne: 0 }, lng: { $exists: true, $ne: 0 } })
+        .select('name slug city state deity type image_url lat lng has_live rating_avg categories')
+        .lean()
+      
+      // Haversine distance calculation
+      const haversine = (lat1: number, lon1: number, lat2: number, lon2: number) => {
+        const R = 6371
+        const dLat = (lat2 - lat1) * Math.PI / 180
+        const dLon = (lon2 - lon1) * Math.PI / 180
+        const a = Math.sin(dLat/2) ** 2 + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLon/2) ** 2
+        return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
+      }
+      
+      const nearby = allTemples
+        .map((t: any) => ({ ...t, distance: haversine(lat, lon, t.lat, t.lng) }))
+        .filter((t: any) => t.distance <= radius)
+        .sort((a: any, b: any) => a.distance - b.distance)
+        .slice(0, 30)
+      
+      return NextResponse.json({ temples: nearby })
+    }
+  }
   const { searchParams } = new URL(req.url)
 
   const q        = searchParams.get('q')
