@@ -1,10 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import connectDB from '@/lib/mongodb/connect'
 import { Temple } from '@/models'
+
 export const dynamic = 'force-dynamic'
 
 export async function GET(req: NextRequest) {
   await connectDB()
+  const { searchParams } = new URL(req.url)
 
   // Nearby temples using Haversine distance
   const nearby = searchParams.get('nearby')
@@ -12,14 +14,12 @@ export async function GET(req: NextRequest) {
     const lat = parseFloat(searchParams.get('lat') || '0')
     const lon = parseFloat(searchParams.get('lon') || '0')
     const radius = parseFloat(searchParams.get('radius') || '50')
-    
+
     if (lat && lon) {
-      // Get all temples with coordinates
       const allTemples = await Temple.find({ lat: { $exists: true, $ne: 0 }, lng: { $exists: true, $ne: 0 } })
         .select('name slug city state deity type image_url lat lng has_live rating_avg categories')
         .lean()
-      
-      // Haversine distance calculation
+
       const haversine = (lat1: number, lon1: number, lat2: number, lon2: number) => {
         const R = 6371
         const dLat = (lat2 - lat1) * Math.PI / 180
@@ -27,17 +27,16 @@ export async function GET(req: NextRequest) {
         const a = Math.sin(dLat/2) ** 2 + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLon/2) ** 2
         return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
       }
-      
-      const nearby = allTemples
-        .map((t: any) => ({ ...t, distance: haversine(lat, lon, t.lat, t.lng) }))
-        .filter((t: any) => t.distance <= radius)
-        .sort((a: any, b: any) => a.distance - b.distance)
+
+      const results = (allTemples as any[])
+        .map(t => ({ ...t, distance: haversine(lat, lon, t.lat, t.lng) }))
+        .filter(t => t.distance <= radius)
+        .sort((a, b) => a.distance - b.distance)
         .slice(0, 30)
-      
-      return NextResponse.json({ temples: nearby })
+
+      return NextResponse.json({ temples: results })
     }
   }
-  const { searchParams } = new URL(req.url)
 
   const q        = searchParams.get('q')
   const state    = searchParams.get('state')
@@ -51,7 +50,6 @@ export async function GET(req: NextRequest) {
   const page     = parseInt(searchParams.get('page') || '1')
 
   const filter: Record<string, any> = {}
-
   if (slugs) {
     filter.slug = { $in: slugs.split(',') }
   } else {
@@ -69,7 +67,6 @@ export async function GET(req: NextRequest) {
   }
 
   const sortObj: Record<string, any> = sort === 'rating' ? { rating_avg: -1 } : { name: 1 }
-
   const [temples, total] = await Promise.all([
     Temple.find(filter).sort(sortObj).skip((page-1)*limit).limit(limit).lean(),
     Temple.countDocuments(filter),
