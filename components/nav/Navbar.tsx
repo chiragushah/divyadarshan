@@ -21,8 +21,6 @@ const NAV_GROUPS = [
     items: [
       { href: "/explore", label: "Temple Directory", desc: "Browse 350+ sacred temples" },
       { href: "/circuits", label: "Pilgrimage Circuits", desc: "Curated yatra routes" },
-      { href: "/manifest", label: "Manifest", desc: "Sacred Sankalp intentions" },
-      { href: "/manifest", label: "Manifest — Sankalp", desc: "Sacred intentions with deity guidance" },
       { href: "/calendar", label: "Festival Calendar", desc: "Upcoming festivals & events" },
     ],
   },
@@ -69,6 +67,9 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex" style={{ alignItems: 'center', gap: 2, flex: 1 }}>
+            <Link href="/manifest" style={{ display:'flex', alignItems:'center', gap:6, padding:'8px 14px', borderRadius:9, background:'linear-gradient(135deg,rgba(139,26,26,0.08),rgba(192,87,10,0.08))', border:'1px solid rgba(139,26,26,0.15)', color:'var(--crimson)', fontWeight:700, fontSize:13, textDecoration:'none', whiteSpace:'nowrap' as const }}>
+              🙏 Manifest
+            </Link>
             {NAV_GROUPS.map((group) => (
               <div key={group.label} style={{ position: 'relative' }}
                 onMouseEnter={() => setOpenGroup(group.label)}
