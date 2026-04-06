@@ -112,6 +112,16 @@ export default async function TemplePage({ params }: Props) {
             )}
 
             <h1 className="font-serif text-4xl font-medium mb-2">{t.name}</h1>
+            {(t.is_seasonal || t.open_months?.length > 0) && (
+              <div className="mb-3">
+                <TempleStatusBadge
+                  open_months={t.open_months}
+                  closed_months={t.closed_months}
+                  seasonal_note={t.seasonal_note}
+                  is_seasonal={t.is_seasonal}
+                />
+              </div>
+            )}
             <div className="flex items-center justify-between mb-4">
               <p className="text-sm" style={{ color:'var(--muted2)' }}>{t.deity} · {t.type} · {t.city}, {t.state}</p>
               <MarkVisited templeSlug={t.slug} templeName={t.name} />
