@@ -11,6 +11,7 @@ export default function ContributionBanner() {
     <>
       {/* Floating button */}
       <button
+        data-contribution-btn="true"
         onClick={() => setOpen(true)}
         style={{
           position: 'fixed', bottom: 28, right: 24, zIndex: 998,
