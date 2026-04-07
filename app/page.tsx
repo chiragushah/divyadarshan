@@ -3,233 +3,186 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "DivyaDarshan — India's Complete Temple & Pilgrimage Companion",
-  description: 'Discover 362 sacred temples across India. AI yatra planning, live darshan, Sankalp manifestation, pilgrimage circuits, savings goals and community verified data.',
+  description: 'Discover 362 sacred temples across India. AI yatra planning, Sankalp manifestation, Navagraha shanti, live darshan, community verified data.',
 }
 
 const FEATURES = [
-  {
-    icon: '🙏', title: 'Manifest — Write Your Sankalp',
-    desc: 'Set sacred intentions with deity guidance, Navagraha shlokas and YouTube pronunciation links. Mark fulfilment and plan your gratitude yatra.',
-    href: '/manifest', tag: 'New',
-  },
-  {
-    icon: '🤖', title: 'AI Yatra Planner',
-    desc: 'Tell our AI your destination, days and budget. Get a complete day-by-day pilgrimage itinerary with temple sequences, timings, accommodation and insider tips.',
-    href: '/plan', tag: '',
-  },
-  {
-    icon: '📺', title: 'Live Darshan',
-    desc: 'Watch live darshan from 46+ major temples — Tirupati, Kashi Vishwanath, Kedarnath, Vaishno Devi and more, anytime from anywhere in the world.',
-    href: '/explore?tab=darshan', tag: '',
-  },
-  {
-    icon: '🛕', title: '362 Verified Temples',
-    desc: 'Every temple has facilities info, wheelchair access, how to reach, nearby places, dress code, timings and festivals — verified by our pilgrim community.',
-    href: '/explore', tag: '',
-  },
-  {
-    icon: '🪐', title: 'Navagraha Shanti Guide',
-    desc: 'Complete mantras for all 9 planets with Sanskrit shlokas, transliteration, meanings and YouTube links for correct pronunciation.',
-    href: '/manifest?tab=navagraha', tag: 'New',
-  },
-  {
-    icon: '💰', title: 'Yatra Savings Goals',
-    desc: 'Set a monthly savings target for your dream pilgrimage. Track deposits, plan budgets and link to FinVerse to earn interest while your fund grows.',
-    href: '/yatra/goals', tag: '',
-  },
-  {
-    icon: '📔', title: 'Pilgrimage Journal',
-    desc: 'Log every temple you visit. Build a lifetime pilgrimage passport — a permanent spiritual record of your sacred journey across India.',
-    href: '/yatra/journal', tag: '',
-  },
-  {
-    icon: '👥', title: 'Group Yatra Planner',
-    desc: 'Organise family pilgrimages with seat tracking, expense splitting and instant WhatsApp sharing. Open or private group yatras.',
-    href: '/yatra/group', tag: '',
-  },
-  {
-    icon: '✅', title: 'Community Data Verification',
-    desc: 'Pilgrims who visit temples verify accuracy of timings, facilities and directions. Your experience helps thousands of future pilgrims.',
-    href: '/explore', tag: 'New',
-  },
-]
-
-const STATS = [
-  { number: '362', label: 'Sacred Temples' },
-  { number: '46', label: 'Live Darshan Streams' },
-  { number: '28', label: 'States Covered' },
-  { number: '100%', label: 'Free to Use' },
-]
-
-const DEITIES = [
-  { name: 'Ganesha', emoji: '🐘', desc: 'New beginnings' },
-  { name: 'Shiva', emoji: '🔱', desc: 'Healing & peace' },
-  { name: 'Lakshmi', emoji: '🌸', desc: 'Wealth & abundance' },
-  { name: 'Durga', emoji: '⚔️', desc: 'Strength & protection' },
-  { name: 'Krishna', emoji: '🪈', desc: 'Love & devotion' },
-  { name: 'Hanuman', emoji: '💪', desc: 'Courage & health' },
-  { name: 'Saraswati', emoji: '📚', desc: 'Knowledge & wisdom' },
-  { name: 'Parvati', emoji: '🌙', desc: 'Marriage & family' },
+  { icon: '🙏', title: 'Manifest — Sacred Sankalp', desc: 'Write your sacred intention, dedicate it to the right deity, and commit to a gratitude yatra when it manifests. Guided by ancient Indian Sankalp tradition.' },
+  { icon: '🤖', title: 'AI Yatra Planner', desc: 'Tell our AI your destination, days and budget. Get a complete day-by-day pilgrimage itinerary with temple sequences, timings, accommodation and insider tips.' },
+  { icon: '🪐', title: 'Navagraha Shanti Guide', desc: 'Sanskrit shlokas, beej mantras and YouTube pronunciation links for all 9 planets. Know which graha to appease for health, wealth, marriage and career.' },
+  { icon: '📺', title: 'Live Darshan', desc: 'Watch live darshan from 46+ major temples — Tirupati, Kashi Vishwanath, Kedarnath, Vaishno Devi and more, anytime from anywhere in the world.' },
+  { icon: '🛕', title: '362 Verified Temples', desc: 'Every temple has facilities, wheelchair access, how to reach, nearby places, dress code and timings — verified by pilgrims who actually visited.' },
+  { icon: '💰', title: 'Yatra Savings Goals', desc: 'Set a monthly savings target for your dream pilgrimage. Track deposits and link to FinVerse to earn interest while your sacred fund grows.' },
+  { icon: '📔', title: 'Pilgrimage Journal', desc: 'Log every temple you visit. Build a lifetime pilgrimage passport — a permanent spiritual record of your sacred journey across India.' },
+  { icon: '👥', title: 'Group Yatra Planner', desc: 'Organise family pilgrimages with seat tracking, shared expense splitting and instant WhatsApp sharing. Open or private group yatras.' },
+  { icon: '✅', title: 'Community Verification', desc: 'Pilgrims who visit temples verify accuracy of timings and facilities. Your on-ground experience helps thousands of future pilgrims plan better.' },
 ]
 
 const TESTIMONIALS = [
   { quote: 'The AI planner gave me a complete Char Dham itinerary in 2 minutes. It knew which temple opens first in the season.', name: 'Ramesh Kulkarni', loc: 'Pune' },
-  { quote: 'The Manifest feature is unlike anything I have seen. I wrote my Sankalp, dedicated it to Siddhivinayak, and kept faith. It worked.', name: 'Priya Sharma', loc: 'Mumbai' },
-  { quote: 'First app that actually understands what a pilgrim needs — not just a tourist. I have visited 23 Jyotirlingas using it.', name: 'Savitri Deshpande', loc: 'Nashik' },
-  { quote: 'The Navagraha shlokas with YouTube links changed my daily morning routine. I now chant correctly with the right pronunciation.', name: 'Vikram Mehta', loc: 'Ahmedabad' },
+  { quote: 'The Manifest feature is unlike anything I have seen. I wrote my Sankalp for my daughter's marriage, dedicated it to Parvati Mata, and kept faith. Jai Mata Di.', name: 'Sunita Joshi', loc: 'Mumbai' },
+  { quote: 'The Navagraha shlokas with YouTube links changed my daily morning routine. I now chant correctly with the right pronunciation every day.', name: 'Vikram Mehta', loc: 'Ahmedabad' },
 ]
+
+function TilakLogo() {
+  return (
+    <a href="/" className="nav-brand" style={{ display:'flex', alignItems:'center', textDecoration:'none' }}>
+      <img src="/divyadarshan-logo.png" alt="DivyaDarshan" style={{ height:88, width:'auto', objectFit:'contain' }} />
+    </a>
+  )
+}
 
 export default function HomePage() {
   return (
-    <main style={{ fontFamily: "'Inter', sans-serif", color: '#1A0A00', background: '#FDFAF6' }}>
+    <>
+      <style>{`
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Inter',sans-serif;background:#FDFAF6;color:#1A0A00}
+        .pub-nav{background:#fff;border-bottom:1.5px solid #EDE8E0;padding:0 24px;position:sticky;top:0;z-index:50;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+        .pub-nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:80px}
+        .nav-brand{display:flex;align-items:center;text-decoration:none;gap:10px}
+        .nav-links{display:flex;gap:8px;align-items:center}
+        .nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:#555;text-decoration:none;transition:all .15s}
+        .nav-links a:hover{background:#FFF5F5;color:#8B1A1A}
+        .btn-primary{background:#8B1A1A;color:white!important;border-radius:8px;padding:9px 20px;font-weight:600;font-size:14px}
+        .btn-primary:hover{background:#6B1212!important}
+        .hero{text-align:center;padding:80px 24px 60px;max-width:800px;margin:0 auto}
+        .hero-badge{display:inline-flex;align-items:center;gap:6px;background:#FFF5F0;border:1.5px solid #FFD4B8;border-radius:100px;padding:6px 16px;font-size:12px;font-weight:600;color:#C0570A;letter-spacing:.04em;margin-bottom:28px}
+        .live-dot{width:7px;height:7px;border-radius:50%;background:#E74C3C;animation:blink 2s ease infinite}
+        @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+        h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:700;line-height:1.1;letter-spacing:-0.02em;color:#1A0A00;margin-bottom:20px}
+        h1 em{font-style:italic;color:#C0570A}
+        .hero-sub{font-size:1.1rem;line-height:1.75;color:#6B5B4E;max-width:560px;margin:0 auto 36px}
+        .hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+        .cta-main{background:#8B1A1A;color:white;padding:14px 28px;border-radius:100px;font-size:15px;font-weight:700;text-decoration:none;transition:all .2s}
+        .cta-main:hover{background:#6B1212;transform:translateY(-1px)}
+        .cta-sec{background:white;color:#8B1A1A;padding:14px 28px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;border:2px solid #8B1A1A;transition:all .2s}
+        .cta-sec:hover{background:#FFF5F5}
+        .stats{max-width:900px;margin:0 auto;padding:40px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1.5px solid #EDE8E0;border-bottom:1.5px solid #EDE8E0;text-align:center}
+        .stat-n{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:#8B1A1A}
+        .stat-l{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#A89B8C;margin-top:4px}
+        .section{max-width:1100px;margin:0 auto;padding:64px 24px}
+        .section-label{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#C0570A;margin-bottom:12px}
+        .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:#1A0A00;margin-bottom:16px}
+        .section-sub{font-size:1rem;line-height:1.75;color:#6B5B4E;max-width:540px}
+        .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+        @media(max-width:768px){.features-grid{grid-template-columns:1fr 1fr}}
+        @media(max-width:480px){.features-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+        .feat-card{background:white;border:1.5px solid #EDE8E0;border-radius:16px;padding:24px;transition:all .2s}
+        .feat-card:hover{border-color:#C0570A;box-shadow:0 4px 20px rgba(192,87,10,.1);transform:translateY(-2px)}
+        .feat-icon{font-size:28px;margin-bottom:14px}
+        .feat-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#1A0A00;margin-bottom:8px}
+        .feat-desc{font-size:13px;line-height:1.7;color:#6B5B4E}
+        .testimonials{background:white;border-top:1.5px solid #EDE8E0;border-bottom:1.5px solid #EDE8E0;padding:64px 24px}
+        .t-grid{max-width:1000px;margin:40px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+        @media(max-width:768px){.t-grid{grid-template-columns:1fr}}
+        .t-card{background:#FDFAF6;border:1.5px solid #EDE8E0;border-radius:14px;padding:24px}
+        .t-quote{font-size:14px;line-height:1.75;color:#3D2B1F;margin-bottom:16px;font-style:italic}
+        .t-name{font-size:13px;font-weight:700;color:#8B1A1A}
+        .t-loc{font-size:11px;color:#A89B8C;margin-top:2px}
+        .cta-section{text-align:center;padding:80px 24px;max-width:600px;margin:0 auto}
+        .footer{background:#1A0A00;color:rgba(237,224,196,.6);padding:40px 24px;text-align:center;font-size:13px}
+        .footer-logo{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px}
+        .footer-logo-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#EDD9A3}
+        .footer-logo-sub{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(237,224,196,.5)}
+      `}</style>
 
-      {/* Hero */}
-      <section style={{ background: 'linear-gradient(160deg, #8B1A1A 0%, #3D0000 60%, #1A0A00 100%)', color: 'white', padding: '80px 24px 100px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(192,87,10,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(139,26,26,0.2) 0%, transparent 50%)', pointerEvents: 'none' }} />
-        <div style={{ maxWidth: 760, margin: '0 auto', position: 'relative' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 100, padding: '6px 16px', fontSize: 12, fontWeight: 600, letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: 24, color: '#FFD4B0' }}>
-            🙏 India's Most Complete Temple Platform
-          </div>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 6vw, 64px)', fontWeight: 700, lineHeight: 1.15, marginBottom: 20, letterSpacing: '-0.02em' }}>
-            Every Sacred Temple.<br />
-            <span style={{ color: '#FFD4B0' }}>One Divine Companion.</span>
-          </h1>
-          <p style={{ fontSize: 'clamp(15px, 2vw, 19px)', color: 'rgba(255,255,255,0.82)', lineHeight: 1.75, marginBottom: 36, maxWidth: 580, margin: '0 auto 36px' }}>
-            362 temples. AI pilgrimage planning. Sacred Sankalp manifestation. Navagraha shanti. Live darshan. All free. All for pilgrims.
-          </p>
-          <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/explore" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '14px 28px', background: 'white', color: '#8B1A1A', borderRadius: 12, fontWeight: 700, fontSize: 15, textDecoration: 'none', boxShadow: '0 4px 20px rgba(0,0,0,0.2)' }}>
-              🛕 Explore Temples
-            </Link>
-            <Link href="/manifest" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '14px 28px', background: 'rgba(255,255,255,0.12)', color: 'white', border: '1.5px solid rgba(255,255,255,0.3)', borderRadius: 12, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
-              🙏 Write Your Sankalp
-            </Link>
-            <Link href="/plan" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '14px 28px', background: 'rgba(255,255,255,0.12)', color: 'white', border: '1.5px solid rgba(255,255,255,0.3)', borderRadius: 12, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
-              🤖 Plan My Yatra
-            </Link>
+      {/* Navbar */}
+      <nav className="pub-nav">
+        <div className="pub-nav-inner">
+          <TilakLogo />
+          <div className="nav-links">
+            <Link href="/explore">Explore Temples</Link>
+            <Link href="/plan">Plan Yatra</Link>
+            <Link href="/auth/signin">Sign In</Link>
+            <Link href="/auth/signup" className="btn-primary">Start Free →</Link>
           </div>
         </div>
-      </section>
+      </nav>
+
+      {/* Hero */}
+      <div className="hero">
+        <div className="hero-badge">
+          <span className="live-dot" />
+          46 TEMPLES STREAMING LIVE NOW
+        </div>
+        <h1>Every sacred temple.<br /><em>One divine companion.</em></h1>
+        <p className="hero-sub">
+          India has over 2 million temples. Planning a pilgrimage means dozens of scattered tabs and outdated guides.
+          DivyaDarshan brings AI yatra planning, sacred Sankalp manifestation, Navagraha shanti, live darshan and community verified data into one platform — free forever.
+        </p>
+        <div className="hero-ctas">
+          <Link href="/auth/signup" className="cta-main">Begin Your Yatra — Free →</Link>
+          <Link href="/manifest" className="cta-sec">🙏 Write Your Sankalp</Link>
+          <Link href="/explore?tab=darshan" className="cta-sec">Watch Live Darshan</Link>
+        </div>
+      </div>
 
       {/* Stats */}
-      <section style={{ background: 'white', borderBottom: '1.5px solid #F0EAE4' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '32px 24px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16, textAlign: 'center' }}>
-          {STATS.map(s => (
-            <div key={s.label}>
-              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 700, color: '#8B1A1A' }}>{s.number}</div>
-              <div style={{ fontSize: 13, color: '#A89B8C', fontWeight: 500, marginTop: 4 }}>{s.label}</div>
+      <div className="stats">
+        <div><div className="stat-n">362</div><div className="stat-l">Sacred Temples</div></div>
+        <div><div className="stat-n">46</div><div className="stat-l">Live Streams</div></div>
+        <div><div className="stat-n">9+9</div><div className="stat-l">Deities & Navagraha</div></div>
+        <div><div className="stat-n">₹0</div><div className="stat-l">Free Forever</div></div>
+      </div>
+
+      {/* Features */}
+      <div className="section">
+        <div className="section-label">Everything for your spiritual journey</div>
+        <h2 className="section-title">Built for pilgrims,<br />not tourists.</h2>
+        <p className="section-sub">From writing your Sankalp to planning your yatra to verifying temple data — every feature designed around what a pilgrim actually needs.</p>
+        <div className="features-grid">
+          {FEATURES.map(f => (
+            <div key={f.title} className="feat-card">
+              <div className="feat-icon">{f.icon}</div>
+              <div className="feat-title">{f.title}</div>
+              <p className="feat-desc">{f.desc}</p>
             </div>
           ))}
         </div>
-      </section>
-
-      {/* Manifest Feature — Prominent */}
-      <section style={{ background: 'linear-gradient(135deg, #FFF8F0, #FFF0E8)', borderBottom: '1.5px solid #FFD4B0', padding: '60px 24px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
-            <span style={{ background: '#8B1A1A', color: 'white', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 100, textTransform: 'uppercase', letterSpacing: '.08em' }}>New Feature</span>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center' }}>
-            <div>
-              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(26px, 4vw, 38px)', color: '#8B1A1A', marginBottom: 16, lineHeight: 1.3 }}>
-                Manifest — The Ancient Art of Sankalp
-              </h2>
-              <p style={{ fontSize: 15, color: '#4A3728', lineHeight: 1.85, marginBottom: 20 }}>
-                Long before "manifestation" entered modern vocabulary, India had <strong>Sankalp</strong> — a sacred vow made before a deity. Write your intention, dedicate it to the right deity, and commit to a gratitude yatra when it manifests.
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 24 }}>
-                {['9 deities with Sanskrit shlokas + YouTube pronunciation links', 'Navagraha Shanti mantras for all 9 planets with beej mantras', 'Private intention journal with fulfilment tracking', 'Gratitude Yatra planning when your Sankalp manifests'].map(f => (
-                  <div key={f} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
-                    <span style={{ color: '#C0570A', fontWeight: 700, flexShrink: 0 }}>✓</span>
-                    <span style={{ fontSize: 14, color: '#4A3728' }}>{f}</span>
-                  </div>
-                ))}
-              </div>
-              <Link href="/manifest" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '13px 24px', background: '#8B1A1A', color: 'white', borderRadius: 12, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
-                🙏 Explore Manifest
-              </Link>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-              {DEITIES.map(d => (
-                <div key={d.name} style={{ background: 'white', border: '1.5px solid #FFD4B0', borderRadius: 14, padding: '16px 14px', textAlign: 'center' }}>
-                  <div style={{ fontSize: 28, marginBottom: 8 }}>{d.emoji}</div>
-                  <div style={{ fontWeight: 700, fontSize: 14, color: '#8B1A1A' }}>{d.name}</div>
-                  <div style={{ fontSize: 11, color: '#A89B8C', marginTop: 3 }}>{d.desc}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* All Features */}
-      <section style={{ padding: '70px 24px', background: '#FDFAF6' }}>
-        <div style={{ maxWidth: 1000, margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.15em', color: '#C0570A', marginBottom: 12 }}>Everything You Need</div>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(26px, 4vw, 36px)', color: '#8B1A1A', marginBottom: 14 }}>Built for the Modern Pilgrim</h2>
-            <p style={{ color: '#6B5B4E', maxWidth: 520, margin: '0 auto', lineHeight: 1.7, fontSize: 15 }}>From intention to yatra to gratitude — DivyaDarshan is with you at every step of your spiritual journey.</p>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
-            {FEATURES.map(f => (
-              <Link key={f.title} href={f.href} style={{ background: 'white', border: '1.5px solid #E8E0D4', borderRadius: 16, padding: '24px 22px', textDecoration: 'none', transition: 'all 0.2s', display: 'block', position: 'relative' }}>
-                {f.tag && <span style={{ position: 'absolute', top: 16, right: 16, background: '#FFF0F0', color: '#8B1A1A', fontSize: 10, fontWeight: 700, padding: '2px 8px', borderRadius: 100, border: '1px solid #FECACA' }}>{f.tag}</span>}
-                <div style={{ fontSize: 32, marginBottom: 14 }}>{f.icon}</div>
-                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 17, color: '#8B1A1A', marginBottom: 10, lineHeight: 1.3 }}>{f.title}</h3>
-                <p style={{ fontSize: 13, color: '#6B5B4E', lineHeight: 1.75 }}>{f.desc}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* Testimonials */}
-      <section style={{ background: 'white', borderTop: '1.5px solid #F0EAE4', padding: '70px 24px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.15em', color: '#C0570A', marginBottom: 12 }}>Pilgrim Stories</div>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(24px, 4vw, 34px)', color: '#8B1A1A' }}>From Fellow Pilgrims</h2>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20 }}>
-            {TESTIMONIALS.map((t, i) => (
-              <div key={i} style={{ background: '#FFF8F0', border: '1.5px solid #FFD4B0', borderRadius: 16, padding: 28 }}>
-                <div style={{ fontSize: 32, marginBottom: 14, color: '#C0570A' }}>"</div>
-                <p style={{ fontSize: 14, color: '#4A3728', lineHeight: 1.85, marginBottom: 20, fontStyle: 'italic' }}>{t.quote}</p>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                  <div style={{ width: 36, height: 36, borderRadius: '50%', background: '#8B1A1A', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 14 }}>{t.name[0]}</div>
-                  <div>
-                    <div style={{ fontWeight: 700, fontSize: 13, color: '#1A0A00' }}>{t.name}</div>
-                    <div style={{ fontSize: 12, color: '#A89B8C' }}>{t.loc}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+      <div className="testimonials">
+        <div style={{ maxWidth:1000, margin:'0 auto', textAlign:'center' }}>
+          <div className="section-label">Pilgrim Stories</div>
+          <h2 className="section-title">Stories from fellow pilgrims</h2>
         </div>
-      </section>
+        <div className="t-grid">
+          {TESTIMONIALS.map(t => (
+            <div key={t.name} className="t-card">
+              <p className="t-quote">"{t.quote}"</p>
+              <div className="t-name">{t.name}</div>
+              <div className="t-loc">{t.loc}</div>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* CTA */}
-      <section style={{ background: 'linear-gradient(135deg, #8B1A1A, #3D0000)', padding: '70px 24px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 600, margin: '0 auto' }}>
-          <div style={{ fontSize: 48, marginBottom: 20 }}>🛕</div>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(26px, 4vw, 38px)', color: 'white', marginBottom: 16, lineHeight: 1.3 }}>
-            Begin Your Sacred Journey
-          </h2>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 16, lineHeight: 1.7, marginBottom: 32 }}>
-            Join thousands of pilgrims who plan their yatras, write their sankalpas and track their spiritual journey on DivyaDarshan. Free forever.
-          </p>
-          <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/auth/signup" style={{ padding: '14px 32px', background: 'white', color: '#8B1A1A', borderRadius: 12, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
-              Create Free Account
-            </Link>
-            <Link href="/explore" style={{ padding: '14px 32px', background: 'rgba(255,255,255,0.12)', color: 'white', border: '1.5px solid rgba(255,255,255,0.3)', borderRadius: 12, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
-              Explore Temples
-            </Link>
-          </div>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 12, marginTop: 20 }}>No credit card. No ads. No spam. Pure pilgrimage. 🙏</p>
+      <div className="cta-section">
+        <div className="section-label">Join thousands of pilgrims</div>
+        <h2 className="section-title">Begin your sacred journey today</h2>
+        <p className="section-sub" style={{ margin:'16px auto 32px' }}>Free forever. No credit card. No ads. Write your Sankalp, plan your yatra, track your pilgrimage — all in one place.</p>
+        <div className="hero-ctas">
+          <Link href="/auth/signup" className="cta-main">Create Free Account →</Link>
+          <Link href="/manifest" className="cta-sec">🙏 Write Your Sankalp</Link>
         </div>
-      </section>
+      </div>
 
-    </main>
+      {/* Footer */}
+      <footer className="footer">
+        <div className="footer-logo">
+          <img src="/divyadarshan-logo.png" alt="DivyaDarshan" style={{ height:48, width:'auto', objectFit:'contain' }} />
+        </div>
+        <p>© 2026 DivyaDarshan · Built with 🙏 for pilgrims across India</p>
+        <p style={{ marginTop:8 }}>
+          <Link href="/explore" style={{ color:'rgba(237,224,196,.5)', textDecoration:'none', margin:'0 12px' }}>Explore</Link>
+          <Link href="/manifest" style={{ color:'rgba(237,224,196,.5)', textDecoration:'none', margin:'0 12px' }}>Manifest</Link>
+          <Link href="/plan" style={{ color:'rgba(237,224,196,.5)', textDecoration:'none', margin:'0 12px' }}>Plan</Link>
+          <Link href="/auth/signin" style={{ color:'rgba(237,224,196,.5)', textDecoration:'none', margin:'0 12px' }}>Sign In</Link>
+        </p>
+      </footer>
+    </>
   )
 }
