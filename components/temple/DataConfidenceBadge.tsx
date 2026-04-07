@@ -21,7 +21,7 @@ export default function DataConfidenceBadge({ verifiedCount = 0, reportCount = 0
 
   return (
     <div style={{ display:'inline-flex', alignItems:'center', gap:6, padding:'4px 10px', borderRadius:100, background:'#FEF3C7', border:'1px solid #FDE68A', fontSize:12, color:'#92400E' }}>
-      ℹ️ Details AI-assisted · Help verify by marking as visited
+      ℹ️ Information sourced from public records · Being verified by our pilgrim community
     </div>
   )
 }
