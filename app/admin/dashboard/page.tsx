@@ -6,7 +6,7 @@ import {
   TrendingUp, Clock, Star, MapPin, AlertTriangle,
   Download, Megaphone, Plus, Pencil, Trash2, X, Check,
   BarChart2, IndianRupee, RefreshCw, ChevronRight, Route, Zap, Send,
-  FileText, Share2, UserCheck, Bell, Heart
+  FileText, Share2, UserCheck, Bell, Heart, AlertTriangle
 } from 'lucide-react'
 
 const fmt  = (n: number) => (n || 0).toLocaleString('en-IN')
@@ -36,6 +36,7 @@ const TABS = [
   { id:'group_yatra',  icon: Route,        label:'Group Yatra'     },
   { id:'contributions', icon: Heart,        label:'Contributions'   },
   { id:'recommendations',icon: MapPin,       label:'Temple Recs'     },
+  { id:'reports',        icon: AlertTriangle, label:'Reports'         },
 ]
 
 // ── Brand colors ──────────────────────────────────────────────────────────────
@@ -674,6 +675,87 @@ export default function AdminDashboard() {
                     ))}
                   </tbody></table>
                 ) : <div style={S.empty}>No recommendations yet.</div>}
+              </div>
+            </div>
+          )}
+
+
+          {tab==='reports' && (
+            <div>
+              <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:14, marginBottom:24 }}>
+                {[
+                  { label:'Total Reports', value: data?.reports?.length||0, color:C.crimson },
+                  { label:'New', value: data?.reports?.filter((r:any)=>r.status==='new').length||0, color:C.amber },
+                  { label:'Fixed', value: data?.reports?.filter((r:any)=>r.status==='fixed').length||0, color:C.green },
+                  { label:'Verifications', value: data?.verifications?.length||0, color:C.blue },
+                ].map((stat:any) => (
+                  <div key={stat.label} style={{ background:C.surface, border:`1.5px solid ${C.border}`, borderRadius:12, padding:'18px 20px' }}>
+                    <div style={{ fontSize:10, fontWeight:700, textTransform:'uppercase' as const, letterSpacing:'.1em', color:C.muted2, marginBottom:8 }}>{stat.label}</div>
+                    <div style={{ fontSize:26, fontWeight:700, color:stat.color }}>{stat.value}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div style={S.section}>
+                <div style={S.secHead}>
+                  <span style={{ fontWeight:700, fontSize:14 }}>Incorrect Data Reports ({data?.reports?.length||0})</span>
+                  <span style={{ fontSize:12, color:C.muted2 }}>From Report buttons + post-visit verification</span>
+                </div>
+                {data?.reports?.length ? (
+                  <table><thead><tr>
+                    <th style={S.th}>Temple</th><th style={S.th}>Field</th><th style={S.th}>Issue</th><th style={S.th}>Correct Info</th><th style={S.th}>Source</th><th style={S.th}>Status</th><th style={S.th}>Date</th><th style={S.th}>Action</th>
+                  </tr></thead><tbody>
+                    {data.reports.map((r:any) => (
+                      <tr key={r._id}>
+                        <td style={{ ...S.td, fontWeight:600 }}>{r.temple_name}</td>
+                        <td style={S.td}><span style={S.badge(C.blue,C.blueBg)}>{r.field}</span></td>
+                        <td style={{ ...S.td, maxWidth:180, overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap', fontSize:12 }}>{r.issue}</td>
+                        <td style={{ ...S.td, maxWidth:160, overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap', fontSize:12, color:C.green }}>{r.correct_info||'—'}</td>
+                        <td style={S.td}><span style={S.badge(r.source==='post_visit_verification'?C.saffron:C.muted2, r.source==='post_visit_verification'?C.amberBg:C.surface2)}>{r.source==='post_visit_verification'?'Post-visit':'Manual'}</span></td>
+                        <td style={S.td}><span style={S.badge(r.status==='new'?C.amber:r.status==='fixed'?C.green:C.muted2, r.status==='new'?C.amberBg:r.status==='fixed'?C.greenBg:C.surface2)}>{r.status}</span></td>
+                        <td style={{ ...S.td, color:C.muted2 }}>{ago(r.createdAt)}</td>
+                        <td style={S.td}>
+                          <select defaultValue={r.status} onChange={async (e:any) => {
+                            await fetch('/api/report',{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:r._id,status:e.target.value})})
+                            load()
+                          }} style={{ fontSize:12, padding:'4px 8px' }}>
+                            <option value="new">New</option>
+                            <option value="reviewed">Reviewed</option>
+                            <option value="fixed">Fixed</option>
+                            <option value="dismissed">Dismissed</option>
+                          </select>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody></table>
+                ) : <div style={S.empty}>No reports yet. Reports appear when pilgrims click "Report incorrect information" or flag inaccuracies after visiting.</div>}
+              </div>
+
+              <div style={S.section}>
+                <div style={S.secHead}>
+                  <span style={{ fontWeight:700, fontSize:14 }}>Post-Visit Verifications ({data?.verifications?.length||0})</span>
+                  <span style={{ fontSize:12, color:C.muted2 }}>Accuracy feedback from pilgrims who visited</span>
+                </div>
+                {data?.verifications?.length ? (
+                  <table><thead><tr>
+                    <th style={S.th}>Temple</th><th style={S.th}>User</th><th style={S.th}>Rating</th><th style={S.th}>Timing OK</th><th style={S.th}>Facilities OK</th><th style={S.th}>Wheelchair OK</th><th style={S.th}>Directions OK</th><th style={S.th}>Date</th>
+                  </tr></thead><tbody>
+                    {data.verifications.map((v:any) => (
+                      <tr key={v._id}>
+                        <td style={{ ...S.td, fontWeight:600 }}>{v.temple_name}</td>
+                        <td style={{ ...S.td, color:C.muted, fontSize:12 }}>{v.user_email}</td>
+                        <td style={S.td}>{'★'.repeat(v.rating||0)}</td>
+                        {['timing','facilities','wheelchair','directions'].map(k => (
+                          <td key={k} style={S.td}>
+                            {v.answers?.[k+'_accurate'] === true ? <span style={{ color:C.green }}>✓ Yes</span> :
+                             v.answers?.[k+'_accurate'] === false ? <span style={{ color:C.red }}>✗ No</span> : '—'}
+                          </td>
+                        ))}
+                        <td style={{ ...S.td, color:C.muted2 }}>{ago(v.createdAt)}</td>
+                      </tr>
+                    ))}
+                  </tbody></table>
+                ) : <div style={S.empty}>No verifications yet. They appear when pilgrims complete the post-visit accuracy check.</div>}
               </div>
             </div>
           )}

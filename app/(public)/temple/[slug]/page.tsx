@@ -5,6 +5,7 @@ import connectDB from '@/lib/mongodb/connect'
 import { Temple } from '@/models'
 import ReviewsSection from '@/components/temple/ReviewsSection'
 import TempleStatusBadge from '@/components/temple/TempleStatusBadge'
+import DataConfidenceBadge from '@/components/temple/DataConfidenceBadge'
 import ReportButton from '@/components/temple/ReportButton'
 import MarkVisited from '@/components/temple/MarkVisited'
 import LiveDarshanStatus from '@/components/temple/LiveDarshanStatus'
@@ -125,6 +126,7 @@ export default async function TemplePage({ params }: Props) {
             <div className="flex items-center justify-between mb-4">
               <p className="text-sm" style={{ color:'var(--muted2)' }}>{t.deity} · {t.type} · {t.city}, {t.state}</p>
               <MarkVisited templeSlug={t.slug} templeName={t.name} />
+              <DataConfidenceBadge />
             </div>
 
             {/* Description */}

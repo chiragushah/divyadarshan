@@ -178,5 +178,20 @@ export async function GET(req: NextRequest) {
     } catch(e) { return NextResponse.json({ recommendations: [] }) }
   }
 
+  if (type === 'reports') {
+    try {
+      const mongoose = (await import('mongoose')).default
+      const ReportSchema = new mongoose.Schema({ temple_slug:String, temple_name:String, field:String, issue:String, correct_info:String, user_email:String, status:{type:String,default:'new'}, source:String }, { timestamps:true, strict:false })
+      const Report = mongoose.models.Report || mongoose.model('Report', ReportSchema)
+      const VerificationSchema = new mongoose.Schema({ temple_slug:String, temple_name:String, user_email:String, answers:Object, rating:Number, createdAt:Date }, { strict:false })
+      const Verification = mongoose.models.Verification || mongoose.model('Verification', VerificationSchema)
+      const [reports, verifications] = await Promise.all([
+        Report.find().sort({ createdAt: -1 }).limit(200).lean(),
+        Verification.find().sort({ createdAt: -1 }).limit(100).lean(),
+      ])
+      return NextResponse.json({ reports, verifications })
+    } catch(e) { return NextResponse.json({ reports: [], verifications: [] }) }
+  }
+
   return NextResponse.json({ error: 'Unknown type' }, { status: 400 })
 }
