@@ -16,6 +16,7 @@ const FEATURES = [
   { icon: '📔', title: 'Pilgrimage Journal', desc: 'Log every temple you visit. Build a lifetime pilgrimage passport — a permanent spiritual record of your sacred journey across India.' },
   { icon: '👥', title: 'Group Yatra Planner', desc: 'Organise family pilgrimages with seat tracking, shared expense splitting and instant WhatsApp sharing. Open or private group yatras.' },
   { icon: '✅', title: 'Community Verification', desc: 'Pilgrims who visit temples verify accuracy of timings and facilities. Your on-ground experience helps thousands of future pilgrims plan better.' },
+  { icon: '🚌', title: 'Pilgrimage Booking — Coming Soon', desc: 'Book complete pilgrimage packages — Char Dham, Jyotirlinga circuits, Ashtavinayak and more. All-inclusive with transport, accommodation and temple guidance.' },
 ]
 
 const TESTIMONIALS = [
