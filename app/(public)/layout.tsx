@@ -8,6 +8,7 @@ export default function PublicLayout({ children }: { children: React.ReactNode }
       <main className="min-h-screen" style={{ background: 'var(--ivory)' }}>
         {children}
       </main>
+      <ContributionBanner />
     </>
   )
 }
