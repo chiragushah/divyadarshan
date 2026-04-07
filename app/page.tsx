@@ -20,7 +20,7 @@ const FEATURES = [
 
 const TESTIMONIALS = [
   { quote: 'The AI planner gave me a complete Char Dham itinerary in 2 minutes. It knew which temple opens first in the season.', name: 'Ramesh Kulkarni', loc: 'Pune' },
-  { quote: 'The Manifest feature is unlike anything I have seen. I wrote my Sankalp for my daughter's marriage, dedicated it to Parvati Mata, and kept faith. Jai Mata Di.', name: 'Sunita Joshi', loc: 'Mumbai' },
+  { quote: 'The Manifest feature is unlike anything I have seen. I wrote my Sankalp for my daughter’s marriage, dedicated it to Parvati Mata, and kept faith. Jai Mata Di.', name: 'Sunita Joshi', loc: 'Mumbai' },
   { quote: 'The Navagraha shlokas with YouTube links changed my daily morning routine. I now chant correctly with the right pronunciation every day.', name: 'Vikram Mehta', loc: 'Ahmedabad' },
 ]
 
