@@ -81,10 +81,10 @@ export default function HomePage() {
         .t-name{font-size:13px;font-weight:700;color:#8B1A1A}
         .t-loc{font-size:11px;color:#A89B8C;margin-top:2px}
         .cta-section{text-align:center;padding:80px 24px;max-width:600px;margin:0 auto}
-        .footer{background:#1A0A00;color:rgba(237,224,196,.6);padding:40px 24px;text-align:center;font-size:13px}
+        .footer{background:white;border-top:1.5px solid #EDE8E0;color:#6B5B4E;padding:40px 24px;text-align:center;font-size:13px}
         .footer-logo{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px}
-        .footer-logo-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#EDD9A3}
-        .footer-logo-sub{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(237,224,196,.5)}
+        .footer-logo-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#8B1A1A}
+        .footer-logo-sub{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#A89B8C}
       `}</style>
 
       {/* Navbar */}
@@ -172,15 +172,17 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="footer">
-        <div className="footer-logo">
-          <img src="/divyadarshan-logo.png" alt="DivyaDarshan" style={{ height:48, width:'auto', objectFit:'contain' }} />
+        <p style={{ fontSize:12, color:'#A89B8C', marginBottom:8, letterSpacing:'.06em', textTransform:'uppercase', fontWeight:600 }}>Conceptualized and Developed by</p>
+        <div className="footer-logo" style={{ marginBottom:8 }}>
+          <img src="/dynaimers-logo.png" alt="Dynaimers Consulting" style={{ height:40, width:'auto', objectFit:'contain' }} />
         </div>
+        <p style={{ fontWeight:600, color:'#4A3728', marginBottom:4 }}>Dynaimers Consulting Pvt. Ltd.</p>
         <p>© 2026 DivyaDarshan · Built with 🙏 for pilgrims across India</p>
         <p style={{ marginTop:8 }}>
-          <Link href="/explore" style={{ color:'rgba(237,224,196,.5)', textDecoration:'none', margin:'0 12px' }}>Explore</Link>
-          <Link href="/manifest" style={{ color:'rgba(237,224,196,.5)', textDecoration:'none', margin:'0 12px' }}>Manifest</Link>
-          <Link href="/plan" style={{ color:'rgba(237,224,196,.5)', textDecoration:'none', margin:'0 12px' }}>Plan</Link>
-          <Link href="/auth/signin" style={{ color:'rgba(237,224,196,.5)', textDecoration:'none', margin:'0 12px' }}>Sign In</Link>
+          <Link href="/explore" style={{ color:'#A89B8C', textDecoration:'none', margin:'0 12px' }}>Explore</Link>
+          <Link href="/manifest" style={{ color:'#A89B8C', textDecoration:'none', margin:'0 12px' }}>Manifest</Link>
+          <Link href="/plan" style={{ color:'#A89B8C', textDecoration:'none', margin:'0 12px' }}>Plan</Link>
+          <Link href="/auth/signin" style={{ color:'#A89B8C', textDecoration:'none', margin:'0 12px' }}>Sign In</Link>
         </p>
       </footer>
     </>
