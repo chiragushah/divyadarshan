@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "DivyaDarshan — India's Complete Temple & Pilgrimage Companion",
-  description: 'Discover 362 sacred temples across India. AI yatra planning, Sankalp manifestation, Navagraha shanti, live darshan, community verified data.',
+  description: 'Discover 378 sacred temples across India. AI yatra planning, Sankalp manifestation, Navagraha shanti, live darshan, community verified data.',
 }
 
 const FEATURES = [
@@ -11,7 +11,7 @@ const FEATURES = [
   { icon: '🤖', title: 'AI Yatra Planner', desc: 'Tell our AI your destination, days and budget. Get a complete day-by-day pilgrimage itinerary with temple sequences, timings, accommodation and insider tips.' },
   { icon: '🪐', title: 'Navagraha Shanti Guide', desc: 'Sanskrit shlokas, beej mantras and YouTube pronunciation links for all 9 planets. Know which graha to appease for health, wealth, marriage and career.' },
   { icon: '📺', title: 'Live Darshan', desc: 'Watch live darshan from 46+ major temples — Tirupati, Kashi Vishwanath, Kedarnath, Vaishno Devi and more, anytime from anywhere in the world.' },
-  { icon: '🛕', title: '362 Verified Temples', desc: 'Every temple has facilities, wheelchair access, how to reach, nearby places, dress code and timings — verified by pilgrims who actually visited.' },
+  { icon: '🛕', title: '378 Verified Temples', desc: 'Every temple has facilities, wheelchair access, how to reach, nearby places, dress code and timings — verified by pilgrims who actually visited.' },
   { icon: '💰', title: 'Yatra Savings Goals', desc: 'Set a monthly savings target for your dream pilgrimage. Track deposits and link to FinVerse to earn interest while your sacred fund grows.' },
   { icon: '📔', title: 'Pilgrimage Journal', desc: 'Log every temple you visit. Build a lifetime pilgrimage passport — a permanent spiritual record of your sacred journey across India.' },
   { icon: '👥', title: 'Group Yatra Planner', desc: 'Organise family pilgrimages with seat tracking, shared expense splitting and instant WhatsApp sharing. Open or private group yatras.' },
@@ -122,7 +122,7 @@ export default function HomePage() {
 
       {/* Stats */}
       <div className="stats">
-        <div><div className="stat-n">379</div><div className="stat-l">Sacred Temples</div></div>
+        <div><div className="stat-n">378</div><div className="stat-l">Sacred Temples</div></div>
         <div><div className="stat-n">46</div><div className="stat-l">Live Streams</div></div>
         <div><div className="stat-n">9+9</div><div className="stat-l">Deities & Navagraha</div></div>
         <div><div className="stat-n">₹0</div><div className="stat-l">Free Forever</div></div>
