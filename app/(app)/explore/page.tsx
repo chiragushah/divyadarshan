@@ -52,6 +52,7 @@ export default async function ExplorePage({ searchParams }: Props) {
       jain:        { $or: [{ type: { $in: ['Jain', 'Jain Temple'] } }, { categories: { $regex: 'Jain', $options: 'i' } }] },
       buddhist:    { $or: [{ type: 'Buddhist' }, { categories: { $regex: 'Buddha', $options: 'i' } }] },
       sikh:        { type: 'Sikh' },
+      swaminarayan: { $or: [{ deity: { $regex: 'Swaminarayan|Sahajanand', $options: 'i' } }, { type: { $regex: 'Swaminarayan', $options: 'i' } }] },
     }
     if (religionFilters[r]) Object.assign(filter, religionFilters[r])
   }

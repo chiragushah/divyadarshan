@@ -363,6 +363,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
                   <option value="jain">Jain</option>
                   <option value="buddhist">Buddhist</option>
                   <option value="sikh">Sikh</option>
+                  <option value="swaminarayan">Swaminarayan</option>
                 </optgroup>
               </select>
               {Object.values(activeFilters).some(Boolean) && (
