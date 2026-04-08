@@ -16,6 +16,7 @@ const FEATURES = [
   { icon: '📔', title: 'Pilgrimage Journal', desc: 'Log every temple you visit. Build a lifetime pilgrimage passport — a permanent spiritual record of your sacred journey across India.' },
   { icon: '👥', title: 'Group Yatra Planner', desc: 'Organise family pilgrimages with seat tracking, shared expense splitting and instant WhatsApp sharing. Open or private group yatras.' },
   { icon: '✅', title: 'Community Verification', desc: 'Pilgrims who visit temples verify accuracy of timings and facilities. Your on-ground experience helps thousands of future pilgrims plan better.' },
+  { icon: '🧳', title: 'Expert Pilgrimage Planning', desc: 'Want us to plan your yatra end to end? Our travel experts handle hotels, darshan slots, trains and local guides. No payment now — expert contacts you in 24 hrs.' },
   { icon: '🚌', title: 'Pilgrimage Booking — Coming Soon', desc: 'Book complete pilgrimage packages — Char Dham, Jyotirlinga circuits, Ashtavinayak and more. All-inclusive with transport, accommodation and temple guidance.' },
 ]
 
@@ -140,6 +141,27 @@ export default function HomePage() {
               <p className="feat-desc">{f.desc}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Expert Planning Banner */}
+      <div style={{ background:'#8B1A1A', padding:'48px 24px', margin:'0' }}>
+        <div style={{ maxWidth:900, margin:'0 auto', display:'flex', alignItems:'center', justifyContent:'space-between', gap:32, flexWrap:'wrap' }}>
+          <div style={{ flex:1, minWidth:280 }}>
+            <div style={{ fontSize:11, fontWeight:700, textTransform:'uppercase', letterSpacing:'.12em', color:'rgba(255,255,255,0.6)', marginBottom:10 }}>Premium Service</div>
+            <h2 className="section-title" style={{ color:'white', fontSize:'clamp(22px,3vw,32px)', marginBottom:14 }}>Want us to plan your yatra end to end?</h2>
+            <p style={{ color:'rgba(255,255,255,0.82)', fontSize:15, lineHeight:1.7, marginBottom:20 }}>Our travel experts handle hotels, darshan slots, trains and local guides — so you focus only on the spiritual journey.</p>
+            <div style={{ display:'flex', flexWrap:'wrap', gap:10, marginBottom:28 }}>
+              {['✓ Personalised itinerary','✓ Hotel & train bookings','✓ VIP darshan slots','✓ Local guide coordination'].map(f => (
+                <span key={f} style={{ background:'rgba(255,255,255,0.12)', border:'1px solid rgba(255,255,255,0.2)', borderRadius:100, padding:'5px 14px', fontSize:13, color:'white', fontWeight:500 }}>{f}</span>
+              ))}
+            </div>
+            <div style={{ background:'white', borderRadius:12, padding:'16px 20px', display:'flex', alignItems:'center', justifyContent:'space-between', gap:16, flexWrap:'wrap' }}>
+              <p style={{ fontSize:13, color:'#6B5B4E', margin:0 }}>No payment now · Expert contacts you in 24 hrs · Pay only after approval</p>
+              <a href="/plan" style={{ background:'#8B1A1A', color:'white', padding:'11px 24px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', whiteSpace:'nowrap', flexShrink:0 }}>Plan My Trip →</a>
+            </div>
+          </div>
+          <div style={{ fontSize:96, flexShrink:0 }}>🛕</div>
         </div>
       </div>
 
