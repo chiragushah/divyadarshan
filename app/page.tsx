@@ -122,7 +122,7 @@ export default function HomePage() {
 
       {/* Stats */}
       <div className="stats">
-        <div><div className="stat-n">362</div><div className="stat-l">Sacred Temples</div></div>
+        <div><div className="stat-n">379</div><div className="stat-l">Sacred Temples</div></div>
         <div><div className="stat-n">46</div><div className="stat-l">Live Streams</div></div>
         <div><div className="stat-n">9+9</div><div className="stat-l">Deities & Navagraha</div></div>
         <div><div className="stat-n">₹0</div><div className="stat-l">Free Forever</div></div>
