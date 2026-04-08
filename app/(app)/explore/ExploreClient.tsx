@@ -344,6 +344,27 @@ export default function ExploreClient({ initialTemples, total, page, states, act
                   <option key={d} value={d}>{d}</option>
                 ))}
               </select>
+              <select className="input w-auto" value={activeFilters.religion || ''} onChange={e => update('religion', e.target.value)}>
+                <option value="">All Religions</option>
+                <optgroup label="Hindu">
+                  <option value="hindu">All Hindu</option>
+                  <option value="shaiva">Shaiva (Shiva)</option>
+                  <option value="vaishnava">Vaishnava (Vishnu/Krishna)</option>
+                  <option value="shakta">Shakta (Devi/Durga)</option>
+                  <option value="smarta">Smarta / Mixed</option>
+                  <option value="ganapatya">Ganapatya (Ganesha)</option>
+                  <option value="saura">Saura (Surya/Sun)</option>
+                  <option value="skanda">Skanda (Murugan/Kartikeya)</option>
+                  <option value="nath">Nath Sampradaya</option>
+                  <option value="ramakrishna">Ramakrishna Mission</option>
+                  <option value="iskcon">ISKCON / Vaishnava</option>
+                </optgroup>
+                <optgroup label="Other Dharmic">
+                  <option value="jain">Jain</option>
+                  <option value="buddhist">Buddhist</option>
+                  <option value="sikh">Sikh</option>
+                </optgroup>
+              </select>
               {Object.values(activeFilters).some(Boolean) && (
                 <button onClick={() => router.push('/explore')} className="btn btn-ghost btn-sm text-xs">Clear filters ×</button>
               )}

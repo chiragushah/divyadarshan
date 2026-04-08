@@ -66,6 +66,30 @@ export async function GET(req: NextRequest) {
     if (exclude)  filter.slug = { $nin: exclude.split(',') }
   }
 
+
+  // Religion filter
+  const religion = searchParams.get('religion')
+  if (religion) {
+    const religionMap: Record<string, any> = {
+      'hindu':       { type: { $nin: ['Jain', 'Jain Temple', 'Buddhist', 'Sikh'] } },
+      'shaiva':      { $or: [{ deity: { $regex: 'Shiva|Shankar|Mahadev|Lingam', $options: 'i' } }, { type: { $in: ['Jyotirlinga', 'Panch Kedar', 'Pancha Bhuta'] } }] },
+      'vaishnava':   { $or: [{ deity: { $regex: 'Vishnu|Krishna|Rama|Balaji|Narayan|Jagannath', $options: 'i' } }, { type: { $in: ['Divya Desam', 'Char Dham'] } }] },
+      'shakta':      { $or: [{ deity: { $regex: 'Durga|Shakti|Devi|Kali|Parvati|Mata|Bhavani|Kamakshi|Meenakshi', $options: 'i' } }, { type: { $in: ['Shakti Peetha'] } }] },
+      'ganapatya':   { deity: { $regex: 'Ganesha|Ganapati|Vinayak', $options: 'i' } },
+      'saura':       { deity: { $regex: 'Surya|Sun', $options: 'i' } },
+      'skanda':      { deity: { $regex: 'Murugan|Kartikeya|Skanda|Subramanya', $options: 'i' } },
+      'nath':        { type: 'Nath Sampradaya' },
+      'ramakrishna': { type: 'Ramakrishna' },
+      'iskcon':      { deity: { $regex: 'Krishna|ISKCON', $options: 'i' } },
+      'smarta':      { type: { $in: ['Mixed', 'Folk Deity'] } },
+      'jain':        { $or: [{ type: { $in: ['Jain', 'Jain Temple'] } }, { categories: { $regex: 'Jain', $options: 'i' } }] },
+      'buddhist':    { $or: [{ type: 'Buddhist' }, { categories: { $regex: 'Buddha', $options: 'i' } }] },
+      'sikh':        { type: 'Sikh' },
+    }
+    if (religionMap[religion]) {
+      Object.assign(filter, religionMap[religion])
+    }
+  }
   const sortObj: Record<string, any> = sort === 'rating' ? { rating_avg: -1 } : { name: 1 }
   const [temples, total] = await Promise.all([
     Temple.find(filter).sort(sortObj).skip((page-1)*limit).limit(limit).lean(),
