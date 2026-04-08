@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 interface Props {
-  searchParams: { q?: string; state?: string; deity?: string; category?: string; live?: string; page?: string; tab?: string }
+  searchParams: { q?: string; state?: string; deity?: string; category?: string; live?: string; page?: string; tab?: string; religion?: string }
 }
 
 export default async function ExplorePage({ searchParams }: Props) {
@@ -34,6 +34,27 @@ export default async function ExplorePage({ searchParams }: Props) {
   if (searchParams.live === 'true') filter.has_live = true
   // ← FIX: Live Darshan tab also filters by has_live
   if (searchParams.tab === 'darshan') filter.has_live = true
+  // Religion filter
+  if (searchParams.religion) {
+    const r = searchParams.religion
+    const religionFilters: Record<string, any> = {
+      hindu:       { type: { $nin: ['Jain', 'Jain Temple', 'Buddhist', 'Sikh'] } },
+      shaiva:      { $or: [{ deity: { $regex: 'Shiva|Shankar|Mahadev|Lingam', $options: 'i' } }, { type: { $in: ['Jyotirlinga', 'Panch Kedar', 'Pancha Bhuta', 'Navagraha'] } }] },
+      vaishnava:   { $or: [{ deity: { $regex: 'Vishnu|Krishna|Rama|Balaji|Narayan|Jagannath|Vitthal|Vithoba', $options: 'i' } }, { type: { $in: ['Divya Desam', 'Char Dham'] } }] },
+      shakta:      { $or: [{ deity: { $regex: 'Durga|Shakti|Devi|Kali|Parvati|Mata|Bhavani|Kamakshi|Meenakshi|Amba|Chamunda', $options: 'i' } }, { type: 'Shakti Peetha' }] },
+      ganapatya:   { deity: { $regex: 'Ganesha|Ganapati|Vinayak', $options: 'i' } },
+      saura:       { deity: { $regex: 'Surya|Sun', $options: 'i' } },
+      skanda:      { deity: { $regex: 'Murugan|Kartikeya|Skanda|Subramanya', $options: 'i' } },
+      nath:        { type: 'Nath Sampradaya' },
+      ramakrishna: { type: 'Ramakrishna' },
+      iskcon:      { deity: { $regex: 'Krishna|ISKCON', $options: 'i' } },
+      smarta:      { type: { $in: ['Mixed', 'Folk Deity'] } },
+      jain:        { $or: [{ type: { $in: ['Jain', 'Jain Temple'] } }, { categories: { $regex: 'Jain', $options: 'i' } }] },
+      buddhist:    { $or: [{ type: 'Buddhist' }, { categories: { $regex: 'Buddha', $options: 'i' } }] },
+      sikh:        { type: 'Sikh' },
+    }
+    if (religionFilters[r]) Object.assign(filter, religionFilters[r])
+  }
 
   const [temples, total] = await Promise.all([
     Temple.find(filter).sort({ name: 1 }).skip(skip).limit(limit).lean() as any,
