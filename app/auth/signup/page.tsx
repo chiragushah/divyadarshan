@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Loader2 } from 'lucide-react'
 import GoogleTranslate from '@/components/translate/GoogleTranslate'
-import GoogleTranslate from '@/components/translate/GoogleTranslate'
 
 export default function SignUpPage() {
   const router = useRouter()
