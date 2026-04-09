@@ -152,6 +152,7 @@ export default async function TemplePage({ params }: Props) {
 
             {/* —— FACILITIES ——————————————————————— */}
             {Object.keys(facilities).length > 0 && (
+              <div className="mb-8">
               {/* Live Darshan Player */}
               {t.has_live && t.live_url && (
                 <LiveDarshanPlayer
@@ -160,8 +161,6 @@ export default async function TemplePage({ params }: Props) {
                   channelId={(t as any).youtube_channel_id}
                 />
               )}
-
-              <div className="mb-8">
                 <h2 className="font-serif text-2xl font-medium mb-1">Facilities & Amenities</h2>
                 <p className="text-sm mb-4" style={{ color:'var(--muted2)' }}>
                   What to expect when you visit
@@ -764,5 +763,3 @@ export default async function TemplePage({ params }: Props) {
     </>
   )
 }
-
-
