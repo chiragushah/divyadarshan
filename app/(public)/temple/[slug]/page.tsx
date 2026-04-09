@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import connectDB from '@/lib/mongodb/connect'
 import { Temple } from '@/models'
+import LiveDarshanPlayer from '@/components/temple/LiveDarshanPlayer'
 import ReviewsSection from '@/components/temple/ReviewsSection'
 import TempleStatusBadge from '@/components/temple/TempleStatusBadge'
 import DataConfidenceBadge from '@/components/temple/DataConfidenceBadge'
@@ -754,3 +755,13 @@ export default async function TemplePage({ params }: Props) {
     </>
   )
 }
+              {/* Live Darshan Player */}
+              {t.has_live && t.live_url && (
+                <LiveDarshanPlayer
+                  liveUrl={t.live_url}
+                  templeName={t.name}
+                  channelId={t.youtube_channel_id}
+                />
+              )}
+
+
