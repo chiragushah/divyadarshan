@@ -63,7 +63,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
     const p = new URLSearchParams()
     Object.entries(activeFilters).forEach(([k, v]) => { if (v) p.set(k, v) })
     if (value) p.set(key, value); else p.delete(key)
-    p.delete('page')
+    if (key !== 'page') p.delete('page')
     router.push(`${pathname}?${p.toString()}`)
   }
 
