@@ -1,4 +1,5 @@
 'use client'
+// v2 - no external branding
 import { useState } from 'react'
 
 interface Props {
@@ -73,21 +74,7 @@ export default function LiveDarshanPlayer({ liveUrl, templeName, channelId }: Pr
         <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: 12, marginLeft: 4 }}>
           {templeName}
         </span>
-        <div style={{ marginLeft: 'auto', display: 'flex', gap: 8 }}>
-          <a
-            href={liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              fontSize: 11, color: 'rgba(255,255,255,0.6)',
-              textDecoration: 'none', padding: '4px 10px',
-              border: '1px solid rgba(255,255,255,0.15)',
-              borderRadius: 6,
-            }}
-          >
-            ↗ YouTube
-          </a>
-        </div>
+
       </div>
 
       {/* Player Area */}
@@ -122,10 +109,10 @@ export default function LiveDarshanPlayer({ liveUrl, templeName, channelId }: Pr
                 boxShadow: '0 4px 20px rgba(239,68,68,0.5)',
               }}>▶</div>
               <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13, margin: 0 }}>
-                Click to watch Live Darshan
+                Watch Live Darshan
               </p>
               <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 11, margin: 0 }}>
-                Stream opens on DivyaDarshan • Muted by default
+                Available during aarti timings • 5:00 AM · 12:00 PM · 7:00 PM
               </p>
             </>
           ) : (
@@ -214,7 +201,7 @@ export default function LiveDarshanPlayer({ liveUrl, templeName, channelId }: Pr
         borderTop: '1px solid rgba(255,255,255,0.06)',
       }}>
         <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>
-          🙏 Live stream powered by temple's official YouTube channel • Available during aarti timings
+          🙏 Live stream from the temple's official channel • Available during aarti timings
         </span>
       </div>
     </div>
