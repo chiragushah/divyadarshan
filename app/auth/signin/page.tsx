@@ -1,11 +1,12 @@
-import GoogleTranslate from "@/components/translate/GoogleTranslate"
+import GoogleTranslate from '@/components/translate/GoogleTranslate'
 import { Suspense } from 'react'
 import SignInForm from './SignInForm'
 
 export default function SignInPage() {
   return (
-    <div className="fixed top-4 right-4 z-50"><GoogleTranslate /></div>
-    <Suspense fallback={
+    <>
+      <div style={{ position: 'fixed', top: 16, right: 16, zIndex: 50 }}><GoogleTranslate /></div>
+      <Suspense fallback={
       <div style={{
         minHeight: '100vh',
         display: 'flex',
@@ -22,5 +23,6 @@ export default function SignInPage() {
     }>
       <SignInForm />
     </Suspense>
+    </>
   )
 }
