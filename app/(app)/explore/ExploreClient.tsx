@@ -1,6 +1,6 @@
 'use client'
 import RecommendTempleButton from '@/components/RecommendTempleButton'
-export const dynamic = 'force-dynamic'
+
 import { useState, useEffect } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import TempleCard from '@/components/temple/TempleCard'
