@@ -57,6 +57,10 @@ export default function SignUpPage() {
 
   return (
     <>
+      <div style={{ position: 'fixed', top: 16, right: 16, zIndex: 50 }}>
+        <GoogleTranslate />
+      </div>
+    <>
       <div style={{position:"fixed",top:16,right:16,zIndex:50}}><GoogleTranslate /></div>
     <div style={{ minHeight:'100vh', background:'#FDFAF6', display:'flex', alignItems:'center', justifyContent:'center', padding:16, fontFamily:"'Inter',sans-serif" }}>
       <div style={{ width:'100%', maxWidth:440 }}>
@@ -143,5 +147,6 @@ export default function SignUpPage() {
         </p>
       </div>
     </div>
+    </>
   )
 }
