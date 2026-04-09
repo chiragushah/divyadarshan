@@ -17,6 +17,63 @@ const MONTH_FESTIVALS: Record<number, { festival: string; deities: string[]; sta
   1:  [{ festival: 'Makar Sankranti', deities: ['Surya', 'Vishnu'], states: ['Gujarat', 'Tamil Nadu', 'Andhra Pradesh'], desc: 'Sun temples and Vishnu temples are especially auspicious this month.' }],
   2:  [{ festival: 'Maha Shivratri', deities: ['Shiva'], states: ['Uttar Pradesh', 'Madhya Pradesh', 'Karnataka', 'Tamil Nadu'], desc: 'The great night of Shiva — visit Jyotirlinga temples for blessings.' }],
   3:  [{ festival: 'Holi & Ram Navami', deities: ['Krishna', 'Rama', 'Vishnu'], states: ['Uttar Pradesh', 'Rajasthan', 'Madhya Pradesh'], desc: 'Visit Krishna temples in Vrindavan and Ram temples across the country.' }],
+  4:  [{ festival: 'Hanuman Jayanti & Akshaya Tritiya', deities: ['Hanuman', 'Vishnu', 'Lakshmi', 'Rama'], states: ['Uttar Pradesh', 'Rajasthan', 'Maharashtra', 'Karnataka', 'Gujarat'], desc: 'Hanuman Jayanti on April 12 — visit Hanuman temples across India. Akshaya Tritiya on April 30 — auspicious day for Vishnu and Lakshmi temples.' }],se client'
+import RecommendTempleButton from '@/components/RecommendTempleButton'
+export const dynamic = 'force-dynamic'
+import { useState, useEffect } from 'react'
+import { useRouter, usePathname } from 'next/navigation'
+import TempleCard from '@/components/temple/TempleCard'
+import type { Temple } from '@/types'
+
+const TABS = [
+  { id: 'directory', label: 'All Temples' },
+  { id: 'darshan',   label: '🔴 Live Darshan' },
+  { id: 'nearby',    label: '📍 Nearby' },
+  { id: 'seasonal',  label: '📅 This Month' },
+]
+
+const MONTH_FESTIVALS: Record<number, { festival: string; deities: string[]; states: string[]; desc: string }[]> = {
+  1:  [{ festival: 'Makar Sankranti', deities: ['Surya', 'Vishnu'], states: ['Gujarat', 'Tamil Nadu', 'Andhra Pradesh'], desc: 'Sun temples and Vishnu temples are especially auspicious this month.' }],
+  2:  [{ festival: 'Maha Shivratri', deities: ['Shiva'], states: ['Uttar Pradesh', 'Madhya Pradesh', 'Karnataka', 'Tamil Nadu'], desc: 'The great night of Shiva — visit Jyotirlinga temples for blessings.' }],
+  3:  [{ festival: 'Holi & Ram Navami', deities: ['Krishna', 'Rama', 'Vishnu'], states: ['Uttar Pradesh', 'Rajasthan', 'Madhya Pradesh'], desc: 'Visit Krishna temples in Vrindavan and Ram temples across the country.' }],
+  4:  [{ festival: 'Hanuman Jayanti & Akshaya Tritiya', deities: ['Hanuman', 'Vishnu', 'Lakshmi', 'Rama'], states: ['Uttar Pradesh', 'Rajasthan', 'Maharashtra', 'Karnataka', 'Gujarat'], desc: 'Hanuman Jayanti on April 12 — visit Hanuman temples across India. Akshaya Tritiya on April 30 — auspicious day for Vishnu and Lakshmi temples.' }],se client'
+import RecommendTempleButton from '@/components/RecommendTempleButton'
+export const dynamic = 'force-dynamic'
+import { useState, useEffect } from 'react'
+import { useRouter, usePathname } from 'next/navigation'
+import TempleCard from '@/components/temple/TempleCard'
+import type { Temple } from '@/types'
+
+const TABS = [
+  { id: 'directory', label: 'All Temples' },
+  { id: 'darshan',   label: '🔴 Live Darshan' },
+  { id: 'nearby',    label: '📍 Nearby' },
+  { id: 'seasonal',  label: '📅 This Month' },
+]
+
+const MONTH_FESTIVALS: Record<number, { festival: string; deities: string[]; states: string[]; desc: string }[]> = {
+  1:  [{ festival: 'Makar Sankranti', deities: ['Surya', 'Vishnu'], states: ['Gujarat', 'Tamil Nadu', 'Andhra Pradesh'], desc: 'Sun temples and Vishnu temples are especially auspicious this month.' }],
+  2:  [{ festival: 'Maha Shivratri', deities: ['Shiva'], states: ['Uttar Pradesh', 'Madhya Pradesh', 'Karnataka', 'Tamil Nadu'], desc: 'The great night of Shiva — visit Jyotirlinga temples for blessings.' }],
+  3:  [{ festival: 'Holi & Ram Navami', deities: ['Krishna', 'Rama', 'Vishnu'], states: ['Uttar Pradesh', 'Rajasthan', 'Madhya Pradesh'], desc: 'Visit Krishna temples in Vrindavan and Ram temples across the country.' }],
+  4:  [{ festival: 'Hanuman Jayanti & Akshaya Tritiya', deities: ['Hanuman', 'Vishnu', 'Lakshmi', 'Rama'], states: ['Uttar Pradesh', 'Rajasthan', 'Maharashtra', 'Karnataka', 'Gujarat'], desc: 'Hanuman Jayanti on April 12 — visit Hanuman temples across India. Akshaya Tritiya on April 30 — auspicious day for Vishnu and Lakshmi temples.' }],se client'
+import RecommendTempleButton from '@/components/RecommendTempleButton'
+export const dynamic = 'force-dynamic'
+import { useState, useEffect } from 'react'
+import { useRouter, usePathname } from 'next/navigation'
+import TempleCard from '@/components/temple/TempleCard'
+import type { Temple } from '@/types'
+
+const TABS = [
+  { id: 'directory', label: 'All Temples' },
+  { id: 'darshan',   label: '🔴 Live Darshan' },
+  { id: 'nearby',    label: '📍 Nearby' },
+  { id: 'seasonal',  label: '📅 This Month' },
+]
+
+const MONTH_FESTIVALS: Record<number, { festival: string; deities: string[]; states: string[]; desc: string }[]> = {
+  1:  [{ festival: 'Makar Sankranti', deities: ['Surya', 'Vishnu'], states: ['Gujarat', 'Tamil Nadu', 'Andhra Pradesh'], desc: 'Sun temples and Vishnu temples are especially auspicious this month.' }],
+  2:  [{ festival: 'Maha Shivratri', deities: ['Shiva'], states: ['Uttar Pradesh', 'Madhya Pradesh', 'Karnataka', 'Tamil Nadu'], desc: 'The great night of Shiva — visit Jyotirlinga temples for blessings.' }],
+  3:  [{ festival: 'Holi & Ram Navami', deities: ['Krishna', 'Rama', 'Vishnu'], states: ['Uttar Pradesh', 'Rajasthan', 'Madhya Pradesh'], desc: 'Visit Krishna temples in Vrindavan and Ram temples across the country.' }],
   4:  [{ festival: 'Chaitra Navratri & Ram Navami', deities: ['Durga', 'Shakti', 'Devi', 'Rama', 'Vishnu'], states: ['Gujarat', 'Rajasthan', 'West Bengal', 'Himachal Pradesh', 'Uttar Pradesh'], desc: 'Devi temples during the nine holy nights, and Ram temples for Ram Navami.' }],
   5:  [{ festival: 'Akshaya Tritiya', deities: ['Vishnu', 'Lakshmi'], states: ['Odisha', 'Maharashtra', 'Kerala'], desc: 'An auspicious day for Vishnu and Lakshmi worship.' }],
   6:  [{ festival: 'Jagannath Rath Yatra', deities: ['Vishnu', 'Krishna'], states: ['Odisha'], desc: 'Lord Jagannath chariot festival — visit Puri and nearby Vishnu temples.' }],
