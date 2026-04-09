@@ -1,3 +1,4 @@
+import GoogleTranslate from "@/components/translate/GoogleTranslate"
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
@@ -90,6 +91,7 @@ export default function HomePage() {
       `}</style>
 
       {/* Navbar */}
+      <div style={{position:"fixed",top:16,right:16,zIndex:50,display:"none"}} className="md:block"><GoogleTranslate /></div>
       <nav className="pub-nav">
         <div className="pub-nav-inner">
           <TilakLogo />
