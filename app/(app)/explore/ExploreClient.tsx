@@ -18,7 +18,7 @@ const MONTH_FESTIVALS: Record<number, { festival: string; deities: string[]; sta
   2:  [{ festival: 'Maha Shivratri', deities: ['Shiva'], states: ['Uttar Pradesh', 'Madhya Pradesh', 'Karnataka', 'Tamil Nadu'], desc: 'The great night of Shiva — visit Jyotirlinga temples for blessings.' }],
   3:  [{ festival: 'Holi & Ram Navami', deities: ['Krishna', 'Rama', 'Vishnu'], states: ['Uttar Pradesh', 'Rajasthan', 'Madhya Pradesh'], desc: 'Visit Krishna temples in Vrindavan and Ram temples across the country.' }],
   4:  [{ festival: 'Hanuman Jayanti & Akshaya Tritiya', deities: ['Hanuman', 'Vishnu', 'Lakshmi', 'Rama'], states: ['Uttar Pradesh', 'Rajasthan', 'Maharashtra', 'Karnataka', 'Gujarat'], desc: 'Hanuman Jayanti on April 12 — visit Hanuman temples across India. Akshaya Tritiya on April 30 — auspicious day for Vishnu and Lakshmi temples.' }],
-'use client'
+
 import RecommendTempleButton from '@/components/RecommendTempleButton'
 export const dynamic = 'force-dynamic'
 import { useState, useEffect } from 'react'
