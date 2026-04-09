@@ -185,7 +185,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
         <div className="max-w-7xl mx-auto px-4 flex gap-0 overflow-x-auto">
           {TABS.map(tab => (
             <button key={tab.id}
-              onClick={() => update('tab', tab.id === 'directory' ? '' : tab.id)}
+              onClick={() => { update('tab', tab.id === 'directory' ? '' : tab.id); if(tab.id==='seasonal'){ setTimeout(()=>update('religion',''),0) } }}
               className="px-5 py-3.5 text-sm whitespace-nowrap border-b-2 transition-all"
               style={{
                 borderColor: activeTab === tab.id ? 'var(--crimson)' : 'transparent',
