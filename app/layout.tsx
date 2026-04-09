@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Outfit } from 'next/font/google'
 import { SessionProvider } from './providers'
 import { Toaster } from 'react-hot-toast'
 import './globals.css'
+import GoogleTranslate from "@/components/translate/GoogleTranslate"
 import PWAInstaller from '@/components/PWAInstaller'
 
 const cormorant = Cormorant_Garamond({
@@ -68,6 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </SessionProvider>
             <PWAInstaller />
+            <div className="fixed top-4 right-4 z-50 hidden md:block"><GoogleTranslate /></div>
       </body>
     </html>
   )
