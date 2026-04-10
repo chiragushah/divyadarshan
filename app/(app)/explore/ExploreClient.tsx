@@ -71,60 +71,72 @@ export default function ExploreClient({ initialTemples, total, page, states, act
     setLocLoading(true)
     setLocationError('')
     try {
-      // Query our DB first using Haversine
+      // Step 1: Query our own DB first using Haversine — most accurate for Indian temples
       const dbRes = await fetch(`/api/temples?nearby=1&lat=${lat}&lon=${lon}&radius=${radius}&limit=48`)
-      let dbTemples: any[] = []
-      if (dbRes.ok) {
-        const dbData = await dbRes.json()
-        dbTemples = (dbData.temples || []).map((t: any) => ({ ...t, _source: 'db' }))
+      const dbData = await dbRes.json()
+
+      if (dbData.temples && dbData.temples.length > 0) {
+        setNearbyTemples(dbData.temples)
+        setLocationError('')
+        setLocLoading(false)
+        return
       }
 
-      // Also query Overpass for local temples not in our DB
-      let overpassTemples: any[] = []
-      try {
-        const r = Math.min(radius * 1000, 25000) // cap at 25km for Overpass
-        const query = `[out:json][timeout:20];(node["amenity"="place_of_worship"](around:${r},${lat},${lon});way["amenity"="place_of_worship"](around:${r},${lat},${lon}););out center tags 30;`
-        const overpassRes = await fetch('https://overpass-api.de/api/interpreter', {
-          method: 'POST',
-          body: `data=${encodeURIComponent(query)}`,
-          signal: AbortSignal.timeout(15000),
+      // Step 2: Fallback to Overpass API if our DB has no results
+      const r = radius * 1000
+      const query = `
+        [out:json][timeout:25];
+        (
+          node["amenity"="place_of_worship"](around:${r},${lat},${lon});
+          way["amenity"="place_of_worship"](around:${r},${lat},${lon});
+          node["historic"="temple"](around:${r},${lat},${lon});
+          way["historic"="temple"](around:${r},${lat},${lon});
+        );
+        out center tags 40;
+      `
+      const res = await fetch('https://overpass-api.de/api/interpreter', {
+        method: 'POST',
+        body: `data=${encodeURIComponent(query)}`,
+      })
+      const data = await res.json()
+      const hinduKeywords = [
+        'temple','mandir','mandap','devasthan','deul','vithal','vitthal','vithoba','pandurang',
+        'shiva','shankar','mahadev','ganesh','ganapati','vinayak','ram','hanuman','maruti',
+        'devi','durga','kali','saraswati','lakshmi','parvati','mata','bhavani',
+        'vishnu','narayan','krishna','balaji','tirupati','gurudwara','church','mosque','jain',
+      ]
+      const results = (data.elements || [])
+        .filter((el: any) => {
+          const name = el.tags?.name || el.tags?.['name:en'] || el.tags?.['name:hi'] || ''
+          const religion = (el.tags?.religion || '').toLowerCase()
+          const nameLow = name.toLowerCase()
+          return religion === 'hindu' || religion === 'sikh' || religion === 'jain' ||
+            hinduKeywords.some(kw => nameLow.includes(kw))
         })
-        if (overpassRes.ok) {
-          const data = await overpassRes.json()
-          const dbNames = new Set(dbTemples.map((t: any) => (t.name || '').toLowerCase()))
-          const keywords = ['temple','mandir','devasthan','shiva','ganesh','vishnu','devi','krishna','rama','hanuman','gurudwara','jain','basadi']
-          overpassTemples = (data.elements || [])
-            .filter((el: any) => {
-              const name = (el.tags?.name || el.tags?.['name:en'] || el.tags?.['name:hi'] || '').trim()
-              if (!name || name.length < 3) return false
-              if (dbNames.has(name.toLowerCase())) return false
-              const religion = (el.tags?.religion || '').toLowerCase()
-              const nameLow = name.toLowerCase()
-              return religion === 'hindu' || religion === 'sikh' || religion === 'jain' || religion === 'buddhist' ||
-                keywords.some(kw => nameLow.includes(kw))
-            })
-            .slice(0, 15) // limit Overpass to 15 results
-            .map((el: any) => {
-              const name = el.tags?.name || el.tags?.['name:en'] || el.tags?.['name:hi'] || 'Temple'
-              const elLat = el.lat || el.center?.lat
-              const elLon = el.lon || el.center?.lon
-              const distKm = elLat && elLon
-                ? Math.round(Math.sqrt(Math.pow((elLat - lat) * 111, 2) + Math.pow((elLon - lon) * 111 * Math.cos(lat * Math.PI / 180), 2)) * 10) / 10
-                : null
-              return { id: String(el.id), name, city: el.tags?.['addr:city'] || '', state: el.tags?.['addr:state'] || '', deity: el.tags?.deity || '', image_url: '', blob_image_url: '', slug: '', _source: 'overpass', distance_km: distKm }
-            })
-        }
-      } catch(e) {
-        // Overpass failed — just use DB results
-        console.log('Overpass fallback failed, using DB only')
-      }
-
-      const combined = [...dbTemples, ...overpassTemples]
+        .map((el: any) => {
+          const name = el.tags?.name || el.tags?.['name:en'] || el.tags?.['name:hi'] || 'Temple'
+          const elLat = el.lat || el.center?.lat
+          const elLon = el.lon || el.center?.lon
+          const distKm = elLat && elLon
+            ? Math.round(Math.sqrt(Math.pow((elLat - lat) * 111, 2) + Math.pow((elLon - lon) * 111 * Math.cos(lat * Math.PI / 180), 2)) * 10) / 10
+            : null
+          return {
+            id: el.id?.toString(),
+            name,
+            city: el.tags?.['addr:city'] || el.tags?.['addr:district'] || '',
+            state: el.tags?.['addr:state'] || '',
+            deity: el.tags?.['deity'] || '',
+            image_url: '',
+            blob_image_url: '',
+            slug: '',
+            distance_km: distKm,
+          }
+        })
         .sort((a: any, b: any) => (a.distance_km || 999) - (b.distance_km || 999))
         .slice(0, 48)
 
-      if (combined.length > 0) {
-        setNearbyTemples(combined)
+      if (results.length > 0) {
+        setNearbyTemples(results)
         setLocationError('')
       } else {
         setLocationError('No temples found nearby. Try increasing the search radius.')
