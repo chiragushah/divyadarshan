@@ -145,12 +145,6 @@ export default function Navbar() {
               </>
             )}
           </div>
-
-          {/* Google Translate */}
-          <div className="hidden md:flex" style={{ alignItems: 'center', marginLeft: 8 }}>
-            <GoogleTranslate />
-          </div>
-
           {/* Mobile toggle */}
           <button className="md:hidden" onClick={() => setMobileOpen(!mobileOpen)}
             style={{ marginLeft: 'auto', padding: 8, borderRadius: 8, border: '1.5px solid #E8E8E8', background: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
@@ -202,7 +196,7 @@ export default function Navbar() {
           {/* Language Selector on mobile */}
           <div style={{ marginBottom: 12 }}>
             <div style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase' as const, letterSpacing: '.08em', color: '#AAAAAA', marginBottom: 8 }}>🌐 Select Language</div>
-            <GoogleTranslate />
+            
           </div>
 
           {/* PWA Install button on mobile */}
