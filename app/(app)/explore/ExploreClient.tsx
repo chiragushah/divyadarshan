@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 import RecommendTempleButton from '@/components/RecommendTempleButton'
 export const dynamic = 'force-dynamic'
 import { useState, useEffect } from 'react'
@@ -8,9 +8,9 @@ import type { Temple } from '@/types'
 
 const TABS = [
   { id: 'directory', label: 'All Temples' },
-  { id: 'darshan',   label: 'ðŸ”´ Live Darshan' },
-  { id: 'nearby',    label: 'ðŸ“ Nearby' },
-  { id: 'seasonal',  label: 'ðŸ“… This Month' },
+  { id: 'darshan',   label: 'Live Darshan' },
+  { id: 'nearby',    label: 'Nearby' },
+  { id: 'seasonal',  label: 'This Month' },
 ]
 
 const MONTH_FESTIVALS: Record<number, { festival: string; deities: string[]; states: string[]; desc: string }[]> = {
