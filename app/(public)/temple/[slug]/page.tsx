@@ -152,6 +152,26 @@ export default async function TemplePage({ params }: Props) {
 
             {/* —— FACILITIES ——————————————————————— */}
             {Object.keys(facilities).length > 0 && (
+              {/* Google Maps */}
+              {t.lat && t.lng && (
+                <div style={{ marginBottom: 24, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t.name + ' ' + t.city + ' ' + t.state)}&center=${t.lat},${t.lng}`}
+                    target="_blank" rel="noopener noreferrer"
+                    style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#fff', border:'1.5px solid var(--border)', borderRadius:10, padding:'10px 18px', textDecoration:'none', fontSize:13, fontWeight:600, color:'var(--ink)' }}
+                  >
+                    📍 View on Google Maps
+                  </a>
+                  <a
+                    href={`https://www.google.com/maps/dir/?api=1&destination=${t.lat},${t.lng}`}
+                    target="_blank" rel="noopener noreferrer"
+                    style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#fff', border:'1.5px solid var(--border)', borderRadius:10, padding:'10px 18px', textDecoration:'none', fontSize:13, fontWeight:600, color:'var(--ink)' }}
+                  >
+                    🧭 Get Directions
+                  </a>
+                </div>
+              )}
+
               <div className="mb-8">
               {/* Live Darshan Player */}
               {t.has_live && t.live_url && (
@@ -226,6 +246,19 @@ export default async function TemplePage({ params }: Props) {
                     temple:'Temple', heritage:'Heritage', nature:'Nature', food:'Food & Stay', market:'Market', ashram:'Ashram', default:'Nearby'
                   }
                   // Support both old string[] and new object[] format
+                {/* Google Maps Embed */}
+                {t.lat && t.lng && (
+                  <div style={{ borderRadius:12, overflow:'hidden', border:'1.5px solid var(--border)', marginBottom:16 }}>
+                    <iframe
+                      src={`https://www.google.com/maps?q=${t.lat},${t.lng}&z=15&output=embed`}
+                      width="100%" height="260"
+                      style={{ border:'none', display:'block' }}
+                      allowFullScreen loading="lazy"
+                      title={`Map of ${t.name}`}
+                    />
+                  </div>
+                )}
+
                   const isRich = nearby.length > 0 && typeof nearby[0] === 'object'
 
                   if (isRich) {
