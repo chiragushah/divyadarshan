@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Logo from "@/components/Logo"
-import GoogleTranslate from "@/components/translate/GoogleTranslate";
 
 const PAGE_GROUP: Record<string, string> = {
   "/explore": "Explore", "/temple": "Explore", "/circuits": "Explore", "/calendar": "Explore",
