@@ -1,5 +1,6 @@
-'use client'
+﻿'use client'
 import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 declare global {
   interface Window {
@@ -8,11 +9,27 @@ declare global {
   }
 }
 
+// Google Translate rewrites DOM including hidden CSRF inputs.
+// Auth pages must never be translated â€” it breaks NextAuth sign-in.
+const SKIP_PATHS = ['/auth/signin', '/auth/signup', '/auth/error', '/auth/verify']
+
 export default function GoogleTranslate() {
+  const pathname = usePathname()
+
   useEffect(() => {
-    // Remove any existing script
+    if (SKIP_PATHS.some(p => pathname?.startsWith(p))) {
+      // Clean up widget and clear googtrans cookie on auth pages
+      const el = document.getElementById('google_translate_element')
+      if (el) el.innerHTML = ''
+      const existing = document.getElementById('google-translate-script')
+      if (existing) existing.remove()
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + window.location.hostname
+      return
+    }
+
     const existingScript = document.getElementById('google-translate-script')
-    if (existingScript) existingScript.remove()
+    if (existingScript) return
 
     window.googleTranslateElementInit = () => {
       if (window.google?.translate?.TranslateElement) {
@@ -27,17 +44,18 @@ export default function GoogleTranslate() {
     }
 
     const script = document.createElement('script')
-    script.id = 'google-translate-script'
-    script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
+    script.id    = 'google-translate-script'
+    script.src   = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
     script.async = true
     document.body.appendChild(script)
-  }, [])
+  }, [pathname])
+
+  if (SKIP_PATHS.some(p => pathname?.startsWith(p))) return null
 
   return (
     <>
       <div id="google_translate_element" style={{ display: 'inline-flex', alignItems: 'center' }} />
       <style>{`
-        /* Clean up Google Translate widget styling */
         .goog-te-gadget {
           font-family: 'Inter', sans-serif !important;
           font-size: 13px !important;
@@ -57,26 +75,17 @@ export default function GoogleTranslate() {
         .goog-te-gadget-simple .goog-te-menu-value span:last-child {
           display: none !important;
         }
-        .goog-te-gadget img {
-          display: none !important;
-        }
-        /* Hide the top bar Google adds */
-        .goog-te-banner-frame {
-          display: none !important;
-        }
-        body {
-          top: 0 !important;
-        }
-        /* Style the dropdown */
+        .goog-te-gadget img { display: none !important; }
+        .goog-te-banner-frame { display: none !important; }
+        iframe.skiptranslate { display: none !important; }
+        body { top: 0 !important; position: static !important; }
         .goog-te-menu-frame {
           border-radius: 12px !important;
           border: 1.5px solid #E8E0D4 !important;
           box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important;
           overflow: hidden !important;
         }
-        .goog-te-menu2 {
-          border-radius: 12px !important;
-        }
+        .goog-te-menu2 { border-radius: 12px !important; }
         .goog-te-menu2-item div {
           font-family: 'Inter', sans-serif !important;
           font-size: 13px !important;
