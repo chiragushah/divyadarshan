@@ -4,7 +4,6 @@ import { signIn } from 'next-auth/react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Loader2 } from 'lucide-react'
-import GoogleTranslate from '@/components/translate/GoogleTranslate'
 
 export default function SignUpPage() {
   const router = useRouter()
@@ -56,8 +55,7 @@ export default function SignUpPage() {
   const lbl = { fontSize:11, fontWeight:700, textTransform:'uppercase' as const, letterSpacing:'.06em', color:'#A89B8C', display:'block', marginBottom:5 }
 
   return (
-    <div style={{ minHeight:'100vh', position:'relative', background:'#FDFAF6', display:'flex', alignItems:'center', justifyContent:'center', padding:16, fontFamily:"'Inter',sans-serif" }}>
-      <div style={{ position:'absolute', top:16, right:16, zIndex:50 }}><GoogleTranslate /></div>
+    <div style={{ minHeight:'100vh',  background:'#FDFAF6', display:'flex', alignItems:'center', justifyContent:'center', padding:16, fontFamily:"'Inter',sans-serif" }}>
       <div style={{ width:'100%', maxWidth:440 }}>
         {/* Logo */}
         <div style={{ textAlign:'center', marginBottom:32 }}>

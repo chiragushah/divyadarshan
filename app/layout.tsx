@@ -4,6 +4,8 @@ import { SessionProvider } from './providers'
 import { Toaster } from 'react-hot-toast'
 import './globals.css'
 import PWAInstaller from '@/components/PWAInstaller'
+import dynamic from 'next/dynamic'
+const GoogleTranslate = dynamic(() => import('@/components/translate/GoogleTranslate'), { ssr: false })
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -68,6 +70,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </SessionProvider>
             <PWAInstaller />
+            <div style={{ position: 'fixed', bottom: 20, right: 20, zIndex: 9999 }}>
+              <GoogleTranslate />
+            </div>
       </body>
     </html>
   )
