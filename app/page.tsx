@@ -97,8 +97,7 @@ export default function HomePage() {
             <Link href="/plan">Plan Yatra</Link>
             <Link href="/auth/signin">Sign In</Link>
             <Link href="/auth/signup" className="btn-primary">Start Free →</Link>
-            <div className="hidden md:block ml-2"><GoogleTranslate /></div>
-          </div>
+            </div>
         </div>
       </nav>
 
