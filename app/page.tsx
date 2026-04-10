@@ -89,9 +89,7 @@ export default function HomePage() {
         .footer-logo-sub{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#A89B8C}
       `}</style>
 
-      {/* Navbar */}
-      <div style={{position:"fixed",top:16,right:16,zIndex:50,display:"none"}} className="md:block"><GoogleTranslate /></div>
-      <nav className="pub-nav">
+      {/* Navbar */}      <nav className="pub-nav">
         <div className="pub-nav-inner">
           <TilakLogo />
           <div className="nav-links">
