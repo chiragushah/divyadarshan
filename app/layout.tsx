@@ -70,9 +70,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </SessionProvider>
             <PWAInstaller />
-            <div style={{position:"fixed",bottom:16,right:16,zIndex:9999}}><GoogleTranslate /></div>
+            
             <div style={{ position: 'fixed', bottom: 20, right: 20, zIndex: 9999 }}>
-              <GoogleTranslate />
             </div>
       </body>
     </html>
