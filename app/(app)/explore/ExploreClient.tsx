@@ -71,20 +71,30 @@ export default function ExploreClient({ initialTemples, total, page, states, act
     setLocLoading(true)
     setLocationError('')
     try {
+      // Step 1: Query our own DB first using Haversine — most accurate for Indian temples
+      const dbRes = await fetch(`/api/temples?nearby=1&lat=${lat}&lon=${lon}&radius=${radius}&limit=48`)
+      const dbData = await dbRes.json()
+
+      if (dbData.temples && dbData.temples.length > 0) {
+        setNearbyTemples(dbData.temples)
+        setLocationError('')
+        setLocLoading(false)
+        return
+      }
+
+      // Step 2: Fallback to Overpass API if our DB has no results
       const r = radius * 1000
       const query = `
-        [out:json][timeout:30];
+        [out:json][timeout:25];
         (
           node["amenity"="place_of_worship"](around:${r},${lat},${lon});
           way["amenity"="place_of_worship"](around:${r},${lat},${lon});
           node["historic"="temple"](around:${r},${lat},${lon});
           way["historic"="temple"](around:${r},${lat},${lon});
-          node["building"="temple"](around:${r},${lat},${lon});
-          way["building"="temple"](around:${r},${lat},${lon});
         );
-        out center tags 60;
+        out center tags 40;
       `
-      const res  = await fetch('https://overpass-api.de/api/interpreter', {
+      const res = await fetch('https://overpass-api.de/api/interpreter', {
         method: 'POST',
         body: `data=${encodeURIComponent(query)}`,
       })
@@ -92,47 +102,48 @@ export default function ExploreClient({ initialTemples, total, page, states, act
       const hinduKeywords = [
         'temple','mandir','mandap','devasthan','deul','vithal','vitthal','vithoba','pandurang',
         'shiva','shankar','mahadev','ganesh','ganapati','vinayak','ram','hanuman','maruti',
-        'devi','durga','mata','ambika','ambaji','amba','vishnu','laxmi','lakshmi','narayan',
-        'krishna','balaji','tirupati','venkatesh','murugan','ayyappa','jagannath','kali',
-        'bhavani','swami','math','peetham','kshetram',
+        'devi','durga','kali','saraswati','lakshmi','parvati','mata','bhavani',
+        'vishnu','narayan','krishna','balaji','tirupati','gurudwara','church','mosque','jain',
       ]
       const results = (data.elements || [])
-        .map((el: any) => {
-          const elLat    = el.lat ?? el.center?.lat
-          const elLon    = el.lon ?? el.center?.lon
-          const name     = el.tags?.name || el.tags?.['name:en'] || el.tags?.['name:hi'] || ''
+        .filter((el: any) => {
+          const name = el.tags?.name || el.tags?.['name:en'] || el.tags?.['name:hi'] || ''
           const religion = (el.tags?.religion || '').toLowerCase()
-          const nameLow  = name.toLowerCase()
-          const isHindu  = religion === 'hindu' || hinduKeywords.some(kw => nameLow.includes(kw))
-          if (!isHindu || !name || !elLat || !elLon) return null
+          const nameLow = name.toLowerCase()
+          return religion === 'hindu' || religion === 'sikh' || religion === 'jain' ||
+            hinduKeywords.some(kw => nameLow.includes(kw))
+        })
+        .map((el: any) => {
+          const name = el.tags?.name || el.tags?.['name:en'] || el.tags?.['name:hi'] || 'Temple'
+          const elLat = el.lat || el.center?.lat
+          const elLon = el.lon || el.center?.lon
+          const distKm = elLat && elLon
+            ? Math.round(Math.sqrt(Math.pow((elLat - lat) * 111, 2) + Math.pow((elLon - lon) * 111 * Math.cos(lat * Math.PI / 180), 2)) * 10) / 10
+            : null
           return {
-            id: el.id, name,
-            address: [el.tags?.['addr:street'], el.tags?.['addr:city'] || el.tags?.['addr:district']].filter(Boolean).join(', '),
-            city:  el.tags?.['addr:city'] || el.tags?.['addr:district'] || '',
+            id: el.id?.toString(),
+            name,
+            city: el.tags?.['addr:city'] || el.tags?.['addr:district'] || '',
             state: el.tags?.['addr:state'] || '',
-            deity: el.tags?.deity || el.tags?.['deity:name'] || '',
-            distance: getDistance(lat, lon, elLat, elLon),
-            lat: elLat, lon: elLon,
+            deity: el.tags?.['deity'] || '',
+            image_url: '',
+            blob_image_url: '',
+            slug: '',
+            distance_km: distKm,
           }
         })
-        .filter(Boolean)
-        .sort((a: any, b: any) => a.distance - b.distance)
-      setNearbyTemples(results)
+        .sort((a: any, b: any) => (a.distance_km || 999) - (b.distance_km || 999))
+        .slice(0, 48)
+
+      if (results.length > 0) {
+        setNearbyTemples(results)
+        setLocationError('')
+      } else {
+        setLocationError('No temples found nearby. Try increasing the search radius.')
+      }
     } catch (err: any) {
       console.error('Nearby fetch error:', err)
-      // Fallback: fetch from our own DB using lat/lon
-      try {
-        const fallbackRes = await fetch(`/api/temples?nearby=1&lat=${lat}&lon=${lon}&radius=${radius}`)
-        const fallbackData = await fallbackRes.json()
-        if (fallbackData.temples?.length > 0) {
-          setNearbyTemples(fallbackData.temples)
-          setLocationError('')
-        } else {
-          setLocationError('No temples found nearby. Try increasing the search radius.')
-        }
-      } catch {
-        setLocationError('Could not fetch nearby temples. The map service may be temporarily unavailable. Please try again.')
-      }
+      setLocationError('Could not fetch nearby temples. Please try again.')
     } finally {
       setLocLoading(false)
     }
