@@ -93,8 +93,12 @@ export default function ExploreClient({ initialTemples, total, page, states, act
           if (!name || !elLat || !elLon) return null
           const nameLow  = name.toLowerCase()
           const religion = (el.tags?.religion || '').toLowerCase()
-          const isIndian = ['hindu','jain','sikh','buddhist',''].includes(religion)
-            && INDIAN_KEYWORDS.some(kw => nameLow.includes(kw))
+          // Include if: known Indian religion OR name matches Indian keyword
+          // Exclude: churches, mosques, synagogues etc
+          const EXCLUDE = ['christian','muslim','jewish','islam']
+          if (EXCLUDE.includes(religion)) return null
+          const isIndian = ['hindu','jain','sikh','buddhist'].includes(religion)
+            || INDIAN_KEYWORDS.some(kw => nameLow.includes(kw))
           if (!isIndian) return null
           return {
             id: el.id, name,
