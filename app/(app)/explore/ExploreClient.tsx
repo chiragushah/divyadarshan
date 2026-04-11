@@ -93,13 +93,11 @@ export default function ExploreClient({ initialTemples, total, page, states, act
           if (!name || !elLat || !elLon) return null
           const nameLow  = name.toLowerCase()
           const religion = (el.tags?.religion || '').toLowerCase()
-          // Include if: known Indian religion OR name matches Indian keyword
-          // Exclude: churches, mosques, synagogues etc
-          const EXCLUDE = ['christian','muslim','jewish','islam']
-          if (EXCLUDE.includes(religion)) return null
-          const isIndian = ['hindu','jain','sikh','buddhist'].includes(religion)
-            || INDIAN_KEYWORDS.some(kw => nameLow.includes(kw))
-          if (!isIndian) return null
+          // Only exclude clearly non-Indian religions (churches, mosques, synagogues)
+          const SKIP_RELIGIONS = ['christian', 'muslim', 'jewish', 'islam', 'bahai', 'zoroastrian']
+          if (SKIP_RELIGIONS.includes(religion)) return null
+          // Must have a name
+          if (!name) return null
           return {
             id: el.id, name,
             address: [el.tags?.['addr:street'], el.tags?.['addr:city'] || el.tags?.['addr:district']].filter(Boolean).join(', '),
@@ -211,7 +209,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-xs" style={{ color: 'var(--muted)' }}>Radius:</span>
-                    {[5,10,25,50].map(r => (
+                    {[10,25,50,100].map(r => (
                       <button key={r} onClick={() => { setRadiusKm(r); if (userCoords) fetchNearby(userCoords.lat, userCoords.lon, r) }}
                         className="px-3 py-1 rounded-full text-xs font-semibold transition-all"
                         style={{ background: radiusKm===r?'var(--crimson)':'var(--bg)', color: radiusKm===r?'white':'var(--muted)', border: `1px solid ${radiusKm===r?'var(--crimson)':'var(--border)'}` }}>
