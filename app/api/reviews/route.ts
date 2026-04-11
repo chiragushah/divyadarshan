@@ -1,3 +1,4 @@
+import { rateLimit, getIP, rateLimitResponse } from '@/lib/security'
 import { NextRequest, NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth/options'
@@ -30,6 +31,9 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  const ip = getIP(req as any)
+  const rl = rateLimit(ip, 'reviews', { limit: 5, windowMs: 3600000 })
+  if (!rl.allowed) return rateLimitResponse(rl.resetIn)
   const session = await getServerSession(authOptions)
   if (!session?.user?.id) return NextResponse.json({ error: 'Auth required' }, { status: 401 })
 

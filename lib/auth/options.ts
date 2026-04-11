@@ -9,6 +9,7 @@ import { User } from '@/models'
 export const authOptions: NextAuthOptions = {
   adapter: MongoDBAdapter(clientPromise) as any,
 
+  session: { strategy: 'jwt' as const, maxAge: 7 * 24 * 60 * 60, updateAge: 24 * 60 * 60 },
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,

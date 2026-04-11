@@ -1,10 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import connectDB from '@/lib/mongodb/connect'
 import { Temple } from '@/models'
+import { rateLimit, sanitizeQuery, getIP, rateLimitResponse } from '@/lib/security'
 
 export const dynamic = 'force-dynamic'
 
 export async function GET(req: NextRequest) {
+  const ip = getIP(req as any)
+  const rl = rateLimit(ip, 'temples', { limit: 60, windowMs: 60000 })
+  if (!rl.allowed) return rateLimitResponse(rl.resetIn)
   await connectDB()
   const { searchParams } = new URL(req.url)
 
@@ -38,7 +42,7 @@ export async function GET(req: NextRequest) {
     }
   }
 
-  const q        = searchParams.get('q')
+  const q        = sanitizeQuery(searchParams.get('q') || '')
   const state    = searchParams.get('state')
   const deity    = searchParams.get('deity')
   const category = searchParams.get('category')
