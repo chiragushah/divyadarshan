@@ -52,7 +52,7 @@ export default function AdminLogin() {
       <div className="card">
         <div className="logo">
           <div className="logo-icon">🛡️</div>
-          <span className="logo-title">DivyaDarshan</span>
+          <span className="logo-title">DivyaDarshanam</span>
         </div>
         <span className="badge">Admin Portal · Restricted Access</span>
         <h1>Admin Sign In</h1>

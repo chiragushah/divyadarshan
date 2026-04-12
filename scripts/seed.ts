@@ -1,5 +1,5 @@
 /**
- * DivyaDarshan — MongoDB Seed Script
+ * DivyaDarshanam — MongoDB Seed Script
  * Seeds all 348 temples into MongoDB Atlas
  *
  * Run with:  npm run seed
@@ -50,7 +50,7 @@ function slugify(text: string): string {
 }
 
 // ─── TEMPLE DATA ─────────────────────────────────────────
-// Source: Converted from the DivyaDarshan HTML prototype
+// Source: Converted from the DivyaDarshanam HTML prototype
 const TEMPLES_RAW = [
   { n:"Kashi Vishwanath Temple",    st:"Uttar Pradesh",   ci:"Varanasi",         de:"Shiva",          ty:"Jyotirlinga",        lv:true,  lu:"https://www.youtube.com/@ShriKashiVishwanathTemple", d:"One of holiest Jyotirlinga shrines on the western Ganges bank. Shiva's eternal abode. The golden spire is iconic worldwide.", f:"Mahashivratri, Shravan Somvar, Dev Deepawali", tm:"3AM-11PM",       bt:"Oct-Mar",       dc:"Traditional attire preferred", cat:["Jyotirlinga"], lat:25.3109, lng:83.0107 },
   { n:"Ram Lalla Temple",           st:"Uttar Pradesh",   ci:"Ayodhya",          de:"Rama",            ty:"Vaishnava",          lv:true,  lu:"https://srjbtkshetra.org/",                          d:"Newly consecrated grand temple at Lord Rama's birthplace. Inaugurated January 2024. A monumental milestone for Hindu civilisation.", f:"Ram Navami, Diwali, Vivah Panchami", tm:"6:30AM-10PM", bt:"Oct-Mar", dc:"Traditional attire mandatory", cat:["Ramayana"], lat:26.7955, lng:82.1988 },

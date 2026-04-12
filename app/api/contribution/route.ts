@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
       const amountFormatted = new Intl.NumberFormat('en-IN', { style:'currency', currency:'INR', maximumFractionDigits:0 }).format(amount)
 
       await transporter.sendMail({
-        from: `"DivyaDarshan" <${process.env.SMTP_USER || process.env.EMAIL_FROM}>`,
+        from: `"DivyaDarshanam" <${process.env.SMTP_USER || process.env.EMAIL_FROM}>`,
         to: 'chirag@dynaimers.com',
         subject: `Interested in contribution - ${name}`,
         html: `
@@ -74,7 +74,7 @@ export async function POST(req: NextRequest) {
 <div class="wrap">
   <div class="hdr">
     <h1>New Contribution Interest</h1>
-    <p>Someone wants to support DivyaDarshan's mission</p>
+    <p>Someone wants to support DivyaDarshanam's mission</p>
   </div>
   <div class="body">
     <div class="amount-box">
@@ -93,7 +93,7 @@ export async function POST(req: NextRequest) {
     </div>
     ${message ? `<div class="msg"><div class="lbl">Message from ${name}</div><div class="val">${message}</div></div>` : ''}
   </div>
-  <div class="footer">DivyaDarshan · India's Temple Explorer · divyadarshan.in</div>
+  <div class="footer">DivyaDarshanam · India's Temple Explorer · divyadarshanam.in</div>
 </div>
 </body>
 </html>

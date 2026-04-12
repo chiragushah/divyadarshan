@@ -33,9 +33,9 @@ export default function PWAInstaller() {
 
   return (
     <div style={{ position:'fixed', bottom:80, left:16, right:16, zIndex:9990, background:'white', borderRadius:16, padding:'16px 20px', boxShadow:'0 8px 32px rgba(0,0,0,0.15)', border:'1.5px solid #E8E0D4', display:'flex', alignItems:'center', gap:14 }}>
-      <img src='/divyadarshan-logo.png' alt='DivyaDarshan' style={{ width:44, height:44, objectFit:'contain', flexShrink:0 }} />
+      <img src='/divyadarshanam-logo.png' alt='DivyaDarshanam' style={{ width:44, height:44, objectFit:'contain', flexShrink:0 }} />
       <div style={{ flex:1 }}>
-        <div style={{ fontWeight:700, fontSize:14, color:'#1A0A00' }}>Install DivyaDarshan</div>
+        <div style={{ fontWeight:700, fontSize:14, color:'#1A0A00' }}>Install DivyaDarshanam</div>
         <div style={{ fontSize:12, color:'#6B5B4E', marginTop:2 }}>Add to home screen for quick access to your yatra</div>
       </div>
       <div style={{ display:'flex', gap:8 }}>

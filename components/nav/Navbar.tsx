@@ -139,7 +139,7 @@ export default function Navbar() {
           ))}
           <button onClick={() => { setMobileOpen(false); (document.querySelector("[data-contribution-btn]") as HTMLElement)?.click() }}
             style={{ width:"100%", padding:"12px 0", borderRadius:12, border:"none", background:"linear-gradient(135deg,#8B1A1A,#C0570A)", color:"white", fontWeight:700, fontSize:14, cursor:"pointer", marginBottom:12, display:"flex", alignItems:"center", justifyContent:"center", gap:8 }}>
-            💛 Contribute to DivyaDarshan
+            💛 Contribute to DivyaDarshanam
           </button>
           <div style={{ marginBottom:16, padding:"12px 16px", borderRadius:10, border:"1px solid #F0F0F0", background:"#FAFAFA" }}>
             <div style={{ fontSize:11, fontWeight:700, textTransform:"uppercase", letterSpacing:".08em", color:"#AAAAAA", marginBottom:8 }}>🌐 Select Language</div>

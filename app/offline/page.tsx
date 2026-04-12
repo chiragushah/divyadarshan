@@ -9,7 +9,7 @@ export default function OfflinePage() {
   useEffect(() => {
     // Check what pages are available in cache
     if ('caches' in window) {
-      caches.open('divyadarshan-v2-pages').then(cache => {
+      caches.open('divyadarshanam-v2-pages').then(cache => {
         cache.keys().then(keys => {
           const pages = keys
             .map(k => new URL(k.url).pathname)
@@ -76,7 +76,7 @@ export default function OfflinePage() {
       </div>
 
       <p style={{ fontSize: 11, color: '#C0B4A8', maxWidth: 300 }}>
-        DivyaDarshan works offline for pages you have visited before. Visit more pages while online to expand offline access.
+        DivyaDarshanam works offline for pages you have visited before. Visit more pages while online to expand offline access.
       </p>
     </div>
   )

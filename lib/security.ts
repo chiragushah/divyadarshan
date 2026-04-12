@@ -1,4 +1,4 @@
-// Shared security utilities for DivyaDarshan
+// Shared security utilities for DivyaDarshanam
 
 const rateLimitStore = new Map()
 

@@ -35,7 +35,7 @@ async function getWikipediaImage(pageTitle) {
   try {
     const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(pageTitle)}`
     const res = await fetch(url, {
-      headers: { 'User-Agent': 'DivyaDarshan/1.0 (https://divyadarshan.in)' },
+      headers: { 'User-Agent': 'DivyaDarshanam/1.0 (https://divyadarshanam.in)' },
       signal: AbortSignal.timeout(15000)
     })
     if (!res.ok) return null
@@ -47,7 +47,7 @@ async function getWikipediaImage(pageTitle) {
 async function downloadAndUpload(imageUrl, slug) {
   try {
     const res = await fetch(imageUrl, {
-      headers: { 'User-Agent': 'DivyaDarshan/1.0', 'Referer': 'https://en.wikipedia.org/' },
+      headers: { 'User-Agent': 'DivyaDarshanam/1.0', 'Referer': 'https://en.wikipedia.org/' },
       signal: AbortSignal.timeout(25000)
     })
     if (!res.ok) return null

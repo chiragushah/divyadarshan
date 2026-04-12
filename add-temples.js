@@ -1,5 +1,5 @@
 /**
- * DivyaDarshan — 350+ Temple Seed (runs directly with Node.js)
+ * DivyaDarshanam — 350+ Temple Seed (runs directly with Node.js)
  * Usage: node add-temples.js
  */
 
@@ -478,7 +478,7 @@ const TEMPLES = [
 
 // ══════════════════════════════════════════════════════════════════════
 async function main() {
-  console.log(`\n🛕 DivyaDarshan Temple Seed`)
+  console.log(`\n🛕 DivyaDarshanam Temple Seed`)
   console.log(`📊 Total temples to seed: ${TEMPLES.length}`)
   console.log(`\n🔗 Connecting to MongoDB...`)
 

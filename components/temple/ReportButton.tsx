@@ -51,7 +51,7 @@ export default function ReportButton({ templeSlug, templeName }: { templeSlug: s
               <div style={{ textAlign:'center', padding:'20px 0' }}>
                 <div style={{ fontSize:40, marginBottom:12 }}>🙏</div>
                 <h3 style={{ fontFamily:'serif', fontSize:20, marginBottom:8 }}>Thank You!</h3>
-                <p style={{ color:'var(--muted)', fontSize:13 }}>Your report helps keep DivyaDarshan accurate for all pilgrims. We will review and update within 48 hours.</p>
+                <p style={{ color:'var(--muted)', fontSize:13 }}>Your report helps keep DivyaDarshanam accurate for all pilgrims. We will review and update within 48 hours.</p>
                 <button onClick={() => setOpen(false)} style={{ marginTop:16, padding:'8px 20px', background:'var(--crimson)', color:'white', border:'none', borderRadius:8, cursor:'pointer', fontSize:13 }}>
                   Close
                 </button>

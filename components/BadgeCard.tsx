@@ -54,7 +54,7 @@ export default function BadgeCard({ contributionAmount, approvedRecs, compact = 
             <span style={{ fontSize:32 }}>{current.emoji}</span>
             <div>
               <div style={{ fontWeight:700, fontSize:16, color:current.color }}>{current.name}</div>
-              <div style={{ fontSize:12, color:'#6B5B4E' }}>Thank you for supporting DivyaDarshan's mission 🙏</div>
+              <div style={{ fontSize:12, color:'#6B5B4E' }}>Thank you for supporting DivyaDarshanam's mission 🙏</div>
             </div>
           </div>
           <div style={{ fontSize:12, fontWeight:600, color:current.color, marginBottom:6 }}>Your perks:</div>

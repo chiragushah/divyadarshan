@@ -1,4 +1,4 @@
-# DivyaDarshan 🛕
+# DivyaDarshanam 🛕
 
 India's Temple Explorer & Yatra Planner — Next.js + MongoDB Atlas + AI
 
@@ -9,8 +9,8 @@ India's Temple Explorer & Yatra Planner — Next.js + MongoDB Atlas + AI
 ## Quick Start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/divyadarshan.git
-cd divyadarshan
+git clone https://github.com/YOUR_USERNAME/divyadarshanam.git
+cd divyadarshanam
 npm install
 cp .env.example .env.local   # fill in your keys
 npm run seed                  # load temples into MongoDB
@@ -21,7 +21,7 @@ npm run dev                   # http://localhost:3000
 
 ```bash
 git init && git add . && git commit -m "Initial commit"
-git remote add origin https://github.com/YOUR_USERNAME/divyadarshan.git
+git remote add origin https://github.com/YOUR_USERNAME/divyadarshanam.git
 git push -u origin main
 # Then: vercel.com → New Project → Import repo → Add env vars → Deploy
 ```

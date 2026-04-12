@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
         auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
       })
       await transporter.sendMail({
-        from: `"DivyaDarshan" <${process.env.SMTP_USER}>`,
+        from: `"DivyaDarshanam" <${process.env.SMTP_USER}>`,
         to: 'chirag@dynaimers.com',
         subject: `New Temple Recommendation - ${name} (${city}, ${state})`,
         html: `<h2>New Temple Recommendation</h2>

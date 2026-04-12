@@ -1,5 +1,5 @@
 // lib/badges.ts
-// Badge calculation for DivyaDarshan contributors
+// Badge calculation for DivyaDarshanam contributors
 
 export interface Badge {
   id:       string
@@ -56,7 +56,7 @@ export const BADGES: Badge[] = [
     minRecs:   25,
     perks: [
       'All Silver perks',
-      'Name on DivyaDarshan website permanently',
+      'Name on DivyaDarshanam website permanently',
       'Exclusive Gold yatra experiences',
       'Direct line to founding team',
       'Annual recognition ceremony invite',
@@ -73,7 +73,7 @@ export const BADGES: Badge[] = [
     minRecs:   50,
     perks: [
       'All Gold perks',
-      'Co-create DivyaDarshan features',
+      'Co-create DivyaDarshanam features',
       'Advisory board membership',
       'Revenue share on referred users',
       'Lifetime premium access',

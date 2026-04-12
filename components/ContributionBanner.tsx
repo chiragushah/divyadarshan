@@ -1,5 +1,5 @@
 'use client'
-// Updated messaging — Contribute to DivyaDarshan
+// Updated messaging — Contribute to DivyaDarshanam
 import { useState } from 'react'
 import ContributionModal from './ContributionModal'
 import { Heart } from 'lucide-react'
@@ -24,7 +24,7 @@ export default function ContributionBanner() {
           animation: 'pulse-btn 3s ease-in-out infinite',
         }}>
         💛
-        Contribute to DivyaDarshan
+        Contribute to DivyaDarshanam
       </button>
       <style>{`
         @keyframes pulse-btn {

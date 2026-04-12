@@ -8,7 +8,7 @@ async function main() {
   // Test with a simple text upload first
   try {
     console.log('\nTesting Blob upload...')
-    const blob = await put('test/hello.txt', 'Hello DivyaDarshan!', {
+    const blob = await put('test/hello.txt', 'Hello DivyaDarshanam!', {
       access: 'public',
       token: token,
     })
@@ -22,7 +22,7 @@ async function main() {
   console.log('\nTesting image download from Wikipedia...')
   try {
     const res = await fetch('https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Kashi_Vishwanath_Temple.jpg/800px-Kashi_Vishwanath_Temple.jpg', {
-      headers: { 'User-Agent': 'DivyaDarshan/1.0' }
+      headers: { 'User-Agent': 'DivyaDarshanam/1.0' }
     })
     console.log('Download status:', res.status, res.statusText)
     console.log('Content-Type:', res.headers.get('content-type'))

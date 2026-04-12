@@ -1,5 +1,5 @@
 /**
- * DivyaDarshan — Temple Facilities & Nearby Places Updater
+ * DivyaDarshanam — Temple Facilities & Nearby Places Updater
  * Adds toilets, parking, facilities, nearby places to all temples
  * Usage: node update-temple-facilities.js
  */

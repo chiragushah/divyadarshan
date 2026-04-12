@@ -57,7 +57,7 @@ export default function RecommendTempleModal({ onClose }: { onClose: () => void 
         <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:24, color:'#8B1A1A', marginBottom:12 }}>Thank You!</h2>
         <p style={{ color:'#6B5B4E', lineHeight:1.7, marginBottom:20 }}>
           We have received your recommendation for <strong style={{ color:'#8B1A1A' }}>{form.name}</strong> in {form.city}, {form.state}.
-          Our team will verify the details and add it to DivyaDarshan if validated.
+          Our team will verify the details and add it to DivyaDarshanam if validated.
         </p>
         <button onClick={onClose} style={{ background:'#8B1A1A', color:'white', border:'none', borderRadius:10, padding:'12px 32px', fontWeight:700, fontSize:15, cursor:'pointer' }}>
           Continue Exploring

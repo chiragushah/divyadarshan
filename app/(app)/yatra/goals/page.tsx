@@ -381,7 +381,7 @@ function GoalsPageInner() {
             Open a dedicated Yatra Savings Account — earn interest while you save
           </p>
           <p className="text-xs mt-0.5" style={{ color: 'var(--muted)' }}>
-            Linked to your DivyaDarshan goals. Track savings in both apps.
+            Linked to your DivyaDarshanam goals. Track savings in both apps.
           </p>
         </div>
         <a href={finverseLink({ action: 'savings', utm_content: 'goals_banner' })}

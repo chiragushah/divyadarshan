@@ -475,11 +475,11 @@ export default function ManifestLanding() {
             {[
               {
                 title: 'This is a Reflective Tool, Not a Religious Service',
-                text: 'DivyaDarshan\'s Manifest feature is designed as a personal reflection and intention-setting tool, inspired by the ancient Indian practice of Sankalp. It is not a religious service, not a puja booking platform, and does not represent any temple authority, religious institution or spiritual organisation.',
+                text: 'DivyaDarshanam\'s Manifest feature is designed as a personal reflection and intention-setting tool, inspired by the ancient Indian practice of Sankalp. It is not a religious service, not a puja booking platform, and does not represent any temple authority, religious institution or spiritual organisation.',
               },
               {
                 title: 'We Do Not Guarantee Any Outcomes',
-                text: 'Writing a Sankalp on DivyaDarshan does not guarantee any result — spiritual, material, financial, medical or otherwise. Manifestation depends entirely on your own actions, effort, circumstances and the grace of the universe. DivyaDarshan makes no promises of divine intervention, miracles or outcomes of any kind.',
+                text: 'Writing a Sankalp on DivyaDarshanam does not guarantee any result — spiritual, material, financial, medical or otherwise. Manifestation depends entirely on your own actions, effort, circumstances and the grace of the universe. DivyaDarshanam makes no promises of divine intervention, miracles or outcomes of any kind.',
               },
               {
                 title: 'Not a Substitute for Professional Advice',
@@ -491,11 +491,11 @@ export default function ManifestLanding() {
               },
               {
                 title: 'YouTube Links are User-Directed Searches',
-                text: 'The "Listen on YouTube" buttons open YouTube search results — they do not link to any specific video. DivyaDarshan does not own, endorse or take responsibility for any video that appears in these results. Please use your own judgement when choosing which video to follow.',
+                text: 'The "Listen on YouTube" buttons open YouTube search results — they do not link to any specific video. DivyaDarshanam does not own, endorse or take responsibility for any video that appears in these results. Please use your own judgement when choosing which video to follow.',
               },
               {
                 title: 'We Respect All Faiths',
-                text: 'This feature draws from Hindu philosophical traditions but is open and accessible to all faiths and belief systems. DivyaDarshan does not promote any one religion over another and deeply respects the diversity of spiritual practices across India and the world.',
+                text: 'This feature draws from Hindu philosophical traditions but is open and accessible to all faiths and belief systems. DivyaDarshanam does not promote any one religion over another and deeply respects the diversity of spiritual practices across India and the world.',
               },
               {
                 title: 'Your Data is Private',
@@ -511,7 +511,7 @@ export default function ManifestLanding() {
             <div style={{ background: '#8B1A1A', borderRadius: 12, padding: 20, marginTop: 8 }}>
               <p style={{ fontSize: 14, color: 'white', lineHeight: 1.8, margin: 0, fontStyle: 'italic', textAlign: 'center' }}>
                 "Write with faith. Act with effort. Trust the journey.<br />
-                DivyaDarshan is simply a sacred digital space for your intentions — nothing more, nothing less. 🙏"
+                DivyaDarshanam is simply a sacred digital space for your intentions — nothing more, nothing less. 🙏"
               </p>
             </div>
           </div>

@@ -1,5 +1,5 @@
 // lib/export/planExport.ts
-// Rich branded PDF and DOCX export for DivyaDarshan yatra plans
+// Rich branded PDF and DOCX export for DivyaDarshanam yatra plans
 import jsPDF from 'jspdf'
 import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, BorderStyle, ShadingType, TableCell, TableRow, Table, WidthType, Header, ImageRun } from 'docx'
 
@@ -76,7 +76,7 @@ export async function downloadPlanAsPDF(
     rgb(C.gold)
     doc.setFontSize(7)
     doc.setFont('helvetica', 'normal')
-    doc.text('DivyaDarshan  |  India\'s Temple Explorer  |  divyadarshan.in', W / 2, H - 4.5, { align: 'center' })
+    doc.text('DivyaDarshanam  |  India\'s Temple Explorer  |  divyadarshanam.in', W / 2, H - 4.5, { align: 'center' })
     rgb(C.muted)
     doc.text(`${form.from} -> ${form.to}`, W - M, H - 4.5, { align: 'right' })
     y = 5
@@ -105,7 +105,7 @@ export async function downloadPlanAsPDF(
   rgb(C.crimson)
   doc.setFontSize(16)
   doc.setFont('helvetica', 'bold')
-  doc.text('DivyaDarshan', M + 8, 24)
+  doc.text('DivyaDarshanam', M + 8, 24)
   rgb(C.saffron)
   doc.setFontSize(7)
   doc.setFont('helvetica', 'normal')
@@ -336,12 +336,12 @@ export async function downloadPlanAsPDF(
   rgb(C.gold)
   doc.setFontSize(7)
   doc.setFont('helvetica', 'normal')
-  doc.text('DivyaDarshan  |  India\'s Temple Explorer  |  divyadarshan.in', W / 2, H - 4.5, { align: 'center' })
+  doc.text('DivyaDarshanam  |  India\'s Temple Explorer  |  divyadarshanam.in', W / 2, H - 4.5, { align: 'center' })
   rgb(C.saffron)
   doc.text('Plan your next yatra at divyadarshan-psi.vercel.app', W - M, H - 4.5, { align: 'right' })
 
   // Save
-  const filename = `DivyaDarshan-Yatra-${form.to.replace(/[^a-zA-Z0-9]/g, '-')}.pdf`
+  const filename = `DivyaDarshanam-Yatra-${form.to.replace(/[^a-zA-Z0-9]/g, '-')}.pdf`
   doc.save(filename)
 }
 
@@ -364,7 +364,7 @@ export async function downloadPlanAsWord(
   }))
 
   children.push(new Paragraph({
-    children: [new TextRun({ text: 'DivyaDarshan - India\'s Temple Explorer', size: 18, color: 'C0570A', font: 'Arial', italics: true })],
+    children: [new TextRun({ text: 'DivyaDarshanam - India\'s Temple Explorer', size: 18, color: 'C0570A', font: 'Arial', italics: true })],
     alignment: AlignmentType.CENTER,
     spacing: { after: 200 },
   }))
@@ -491,7 +491,7 @@ export async function downloadPlanAsWord(
 
   // Footer
   children.push(new Paragraph({
-    children: [new TextRun({ text: 'DivyaDarshan  |  India\'s Temple Explorer  |  divyadarshan-psi.vercel.app  |  Planned with love for pilgrims', size: 16, color: 'AAAAAA', italics: true, font: 'Arial' })],
+    children: [new TextRun({ text: 'DivyaDarshanam  |  India\'s Temple Explorer  |  divyadarshan-psi.vercel.app  |  Planned with love for pilgrims', size: 16, color: 'AAAAAA', italics: true, font: 'Arial' })],
     alignment: AlignmentType.CENTER,
     spacing: { before: 200 },
     border: { top: { style: BorderStyle.SINGLE, size: 4, color: 'C0570A', space: 6 } },
@@ -511,7 +511,7 @@ export async function downloadPlanAsWord(
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
   a.href = url
-  a.download = `DivyaDarshan-Yatra-${form.to.replace(/[^a-zA-Z0-9]/g, '-')}.docx`
+  a.download = `DivyaDarshanam-Yatra-${form.to.replace(/[^a-zA-Z0-9]/g, '-')}.docx`
   a.click()
   URL.revokeObjectURL(url)
 }

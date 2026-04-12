@@ -26,7 +26,7 @@ function getDirectImageUrl(url) {
 
 async function downloadWithRetry(url, retries = 3) {
   const headers = {
-    'User-Agent': 'DivyaDarshan/1.0 (https://divyadarshan.in; chirag@dynaimers.com) node-fetch',
+    'User-Agent': 'DivyaDarshanam/1.0 (https://divyadarshanam.in; chirag@dynaimers.com) node-fetch',
     'Accept': 'image/jpeg,image/png,image/*',
     'Referer': 'https://en.wikipedia.org/',
   }

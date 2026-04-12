@@ -1,4 +1,4 @@
-// DivyaDarshan Logo
+// DivyaDarshanam Logo
 interface LogoProps {
   variant?: 'full' | 'horizontal' | 'mark'
   size?: 'sm' | 'md' | 'lg'
@@ -12,8 +12,8 @@ export default function Logo({ variant = 'horizontal', size = 'md', className = 
   return (
     <div className={`flex items-center ${className}`} style={{ lineHeight: 0 }}>
       <img
-        src="/divyadarshan-logo.png"
-        alt="DivyaDarshan"
+        src="/divyadarshanam-logo.png"
+        alt="DivyaDarshanam"
         style={{ height: h, width: 'auto', objectFit: 'contain', display: 'block' }}
       />
     </div>

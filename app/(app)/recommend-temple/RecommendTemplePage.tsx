@@ -14,7 +14,7 @@ export default function RecommendTemplePage() {
         <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:36, color:'#8B1A1A', marginBottom:12 }}>Recommend a Temple</h1>
         <p style={{ fontSize:16, color:'#6B5B4E', lineHeight:1.7 }}>
           Know a sacred temple that is not yet in our directory? Help thousands of pilgrims discover it.
-          Our team will verify the details and add it to DivyaDarshan.
+          Our team will verify the details and add it to DivyaDarshanam.
         </p>
       </div>
 
@@ -23,7 +23,7 @@ export default function RecommendTemplePage() {
         {[
           { step:'1', icon:'📝', title:'Fill the Form', desc:'Share temple name, location, deity and any details you know' },
           { step:'2', icon:'🔍', title:'We Verify', desc:'Our team of volunteers confirms the details on ground' },
-          { step:'3', icon:'🛕', title:'Temple Added', desc:'The temple goes live on DivyaDarshan for all pilgrims' },
+          { step:'3', icon:'🛕', title:'Temple Added', desc:'The temple goes live on DivyaDarshanam for all pilgrims' },
         ].map(item => (
           <div key={item.step} style={{ background:'white', border:'1.5px solid #E8E0D4', borderRadius:14, padding:20, textAlign:'center' }}>
             <div style={{ width:32, height:32, background:'#8B1A1A', color:'white', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:700, fontSize:14, margin:'0 auto 12px' }}>{item.step}</div>

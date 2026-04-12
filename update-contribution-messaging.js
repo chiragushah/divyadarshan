@@ -10,11 +10,11 @@ banner = banner.replace(
 )
 banner = banner.replace(
   'Partner With Us',
-  'Contribute to DivyaDarshan'
+  'Contribute to DivyaDarshanam'
 )
 banner = banner.replace(
   "'use client'",
-  "'use client'\n// Updated messaging — Contribute to DivyaDarshan"
+  "'use client'\n// Updated messaging — Contribute to DivyaDarshanam"
 )
 
 fs.writeFileSync('components/ContributionBanner.tsx', banner, 'utf8')
@@ -30,8 +30,8 @@ modal = modal.replace(
 )
 
 modal = modal.replace(
-  `<h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:24, color:'white', margin:'0 0 6px' }}>Support DivyaDarshan's Mission</h2>`,
-  `<h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:24, color:'white', margin:'0 0 6px' }}>Contribute to DivyaDarshan</h2>`
+  `<h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:24, color:'white', margin:'0 0 6px' }}>Support DivyaDarshanam's Mission</h2>`,
+  `<h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:24, color:'white', margin:'0 0 6px' }}>Contribute to DivyaDarshanam</h2>`
 )
 
 modal = modal.replace(
@@ -51,8 +51,8 @@ modal = modal.replace(
 
 // Important note - update the blue disclaimer box
 modal = modal.replace(
-  `<strong>Important:</strong> DivyaDarshan is not a trust or NGO. This is a voluntary contribution to support our platform's growth. We believe in transparent, community-funded development. You are partnering with a mission, not making a charitable donation.`,
-  `<strong>Donate Wisely:</strong> DivyaDarshan is not a trust or NGO — we are entrepreneurs building India's most trusted pilgrimage platform. Your contribution goes directly to temple volunteers, old age home collaborations and technology — zero middlemen, zero administrative cuts. You fund builders, not bureaucracy.`
+  `<strong>Important:</strong> DivyaDarshanam is not a trust or NGO. This is a voluntary contribution to support our platform's growth. We believe in transparent, community-funded development. You are partnering with a mission, not making a charitable donation.`,
+  `<strong>Donate Wisely:</strong> DivyaDarshanam is not a trust or NGO — we are entrepreneurs building India's most trusted pilgrimage platform. Your contribution goes directly to temple volunteers, old age home collaborations and technology — zero middlemen, zero administrative cuts. You fund builders, not bureaucracy.`
 )
 
 // Step 1 button text
@@ -102,8 +102,8 @@ const paths = [
 paths.forEach(p => {
   if (fs.existsSync(p)) {
     let c = fs.readFileSync(p, 'utf8')
-    c = c.replace(/Partner With Us/g, 'Contribute to DivyaDarshan')
-    c = c.replace(/Support DivyaDarshan's Mission/g, 'Donate Wisely — Support Entrepreneurs')
+    c = c.replace(/Partner With Us/g, 'Contribute to DivyaDarshanam')
+    c = c.replace(/Support DivyaDarshanam's Mission/g, 'Donate Wisely — Support Entrepreneurs')
     fs.writeFileSync(p, c, 'utf8')
     console.log(`✅ ${p}: updated`)
   }
@@ -125,7 +125,7 @@ fs.writeFileSync(adminPath, admin, 'utf8')
 console.log('✅ Admin dashboard: subtitle updated')
 
 console.log('\n🎉 All messaging updated! Summary of changes:')
-console.log('   Button:  "Contribute to DivyaDarshan"')
+console.log('   Button:  "Contribute to DivyaDarshanam"')
 console.log('   Tagline: "Donate Wisely — Support Entrepreneurs, Not Middlemen"')
 console.log('   Disclaimer: Updated to reflect entrepreneur/builder framing')
 console.log('   Success screen: "Thank You for Donating Wisely!"')

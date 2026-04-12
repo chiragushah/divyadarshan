@@ -14,8 +14,8 @@ export async function GET(req: NextRequest) {
   try {
     const res = await fetch(url, {
       headers: {
-        'User-Agent': 'DivyaDarshan/1.0 (https://divyadarshan.in; contact@divyadarshan.in)',
-        'Referer': 'https://divyadarshan.in',
+        'User-Agent': 'DivyaDarshanam/1.0 (https://divyadarshanam.in; contact@divyadarshanam.in)',
+        'Referer': 'https://divyadarshanam.in',
       },
     })
 

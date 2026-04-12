@@ -5,7 +5,7 @@ import { Temple } from '@/models'
 import ExploreClient from './ExploreClient'
 
 export const metadata: Metadata = {
-  title: 'Explore Temples — DivyaDarshan',
+  title: 'Explore Temples — DivyaDarshanam',
   description: 'Browse 294+ sacred temples across India. Filter by deity, state, live darshan and more.',
 }
 

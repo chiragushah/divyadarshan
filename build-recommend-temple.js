@@ -102,7 +102,7 @@ export async function POST(req: NextRequest) {
       })
 
       await transporter.sendMail({
-        from: \`"DivyaDarshan" <\${process.env.SMTP_USER}>\`,
+        from: \`"DivyaDarshanam" <\${process.env.SMTP_USER}>\`,
         to: 'chirag@dynaimers.com',
         subject: \`New Temple Recommendation - \${name} (\${city}, \${state})\`,
         html: \`
@@ -124,7 +124,7 @@ export async function POST(req: NextRequest) {
 <body><div class="wrap">
   <div class="hdr">
     <h1>New Temple Recommendation</h1>
-    <p>A pilgrim has suggested a temple to add to DivyaDarshan</p>
+    <p>A pilgrim has suggested a temple to add to DivyaDarshanam</p>
   </div>
   <div class="body">
     <div class="section-title">Temple Details</div>
@@ -149,7 +149,7 @@ export async function POST(req: NextRequest) {
       \${body.recommender_note ? \`<div class="field full"><div class="lbl">Note</div><div class="val">\${body.recommender_note}</div></div>\` : ''}
     </div>
   </div>
-  <div class="footer">DivyaDarshan · India's Temple Explorer · divyadarshan.in</div>
+  <div class="footer">DivyaDarshanam · India's Temple Explorer · divyadarshanam.in</div>
 </div></body></html>
         \`,
       })
@@ -280,7 +280,7 @@ export default function RecommendTempleModal({ onClose }: { onClose: () => void 
           We've received your recommendation for <strong style={{ color:'#8B1A1A' }}>{form.name}</strong> in {form.city}, {form.state}.
         </p>
         <p style={{ color:'#6B5B4E', lineHeight:1.7, marginBottom:24 }}>
-          Our team will review and verify the details. If approved, it will be added to DivyaDarshan's directory.
+          Our team will review and verify the details. If approved, it will be added to DivyaDarshanam's directory.
         </p>
         <div style={{ background:'#FFF8F0', border:'1px solid #C0570A', borderRadius:12, padding:14, marginBottom:24 }}>
           <p style={{ fontSize:13, color:'#8B1A1A', fontStyle:'italic' }}>

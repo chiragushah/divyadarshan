@@ -18,9 +18,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const temple = await Temple.findOne({ slug: params.slug }).select('name state city deity description').lean() as any
   if (!temple) return { title: 'Temple Not Found' }
   return {
-    title: `${temple.name} — ${temple.city}, ${temple.state} | DivyaDarshan`,
+    title: `${temple.name} — ${temple.city}, ${temple.state} | DivyaDarshanam`,
     description: `${temple.name} in ${temple.city}, ${temple.state}. Dedicated to ${temple.deity}. ${temple.description?.slice(0, 140)}...`,
-    openGraph: { title: `${temple.name} | DivyaDarshan`, description: temple.description?.slice(0, 160) },
+    openGraph: { title: `${temple.name} | DivyaDarshanam`, description: temple.description?.slice(0, 160) },
   }
 }
 
@@ -493,7 +493,7 @@ export default async function TemplePage({ params }: Props) {
                     <div style={{ fontWeight:700, fontSize:13 }}>💰 Save for this Yatra</div>
                     <div style={{ fontSize:11, opacity:.75, marginTop:2 }}>Open a dedicated yatra savings fund on FinVerse. Earn interest while you save.</div>
                   </div>
-                  <a href={`https://finverse.app?utm_source=divyadarshan&utm_temple=${t.slug}`}
+                  <a href={`https://finverse.app?utm_source=divyadarshanam&utm_temple=${t.slug}`}
                     target="_blank" rel="noopener"
                     style={{ flexShrink:0, marginLeft:12, padding:'6px 12px', background:'rgba(255,255,255,.15)', borderRadius:8, fontSize:11, fontWeight:600, color:'white', textDecoration:'none', border:'1px solid rgba(255,255,255,.2)' }}>
                     Open Fund →

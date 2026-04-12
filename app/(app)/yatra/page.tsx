@@ -2,7 +2,7 @@ export const dynamic = 'force-dynamic'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-export const metadata: Metadata = { title: 'My Yatra — DivyaDarshan' }
+export const metadata: Metadata = { title: 'My Yatra — DivyaDarshanam' }
 
 export default function YatraPage() {
   return (

@@ -1,5 +1,5 @@
 /**
- * DivyaDarshan — How To Reach Updater
+ * DivyaDarshanam — How To Reach Updater
  * Adds airport, railway, bus, taxi info to all temples
  * Usage: node update-how-to-reach.js
  */

@@ -83,7 +83,7 @@ export default function Footer() {
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <Logo variant="mark" size="sm" />
             <p style={{ fontSize: 13, color: '#AAAAAA', fontFamily: "'Inter', sans-serif" }}>
-              © {new Date().getFullYear()} DivyaDarshan. Built with 🙏 by Dynaimers Consulting.
+              © {new Date().getFullYear()} DivyaDarshanam. Built with 🙏 by Dynaimers Consulting.
             </p>
           </div>
           <div style={{ display: 'flex', gap: 20 }}>

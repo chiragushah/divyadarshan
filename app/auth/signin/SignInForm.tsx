@@ -150,13 +150,13 @@ export default function SignInForm() {
           {/* LEFT */}
           <div className="left">
             <Link href="/" style={{ display:'flex', alignItems:'center', marginBottom:'2rem', textDecoration:'none' }}>
-              <img src="/divyadarshan-logo.png" alt="DivyaDarshan" style={{ height:72, width:'auto', objectFit:'contain' }} />
+              <img src="/divyadarshanam-logo.png" alt="DivyaDarshanam" style={{ height:72, width:'auto', objectFit:'contain' }} />
             </Link>
 
             <div className="hero">
               <div className="eyebrow"><span className="ldot" /> 56 Temples Streaming Live Now</div>
               <h1>Every sacred temple.<br /><em>One companion.</em></h1>
-              <p className="hero-body">India has over 2 million temples. Planning a pilgrimage means dozens of scattered tabs, outdated blogs, and guesswork on auspicious dates. DivyaDarshan brings AI-powered planning, live darshan streams, savings tools, and a pilgrim community — into one platform.</p>
+              <p className="hero-body">India has over 2 million temples. Planning a pilgrimage means dozens of scattered tabs, outdated blogs, and guesswork on auspicious dates. DivyaDarshanam brings AI-powered planning, live darshan streams, savings tools, and a pilgrim community — into one platform.</p>
             </div>
 
             <div className="divider-line" />
@@ -193,7 +193,7 @@ export default function SignInForm() {
             <Link href="/" className="back">← Back to home</Link>
             <div className="form-box">
               <div className="dyn-top">
-                <img src="/divyadarshan-logo.png" alt="DivyaDarshan" />
+                <img src="/divyadarshanam-logo.png" alt="DivyaDarshanam" />
               </div>
               <h2 className="form-title">{mode === 'signup' ? 'Begin your yatra' : 'Welcome back'}</h2>
               <p className="form-sub">{mode === 'signup' ? 'Free forever. No credit card. Join thousands planning smarter pilgrimages.' : 'Sign in to access your temples, plans, journal and savings goals.'}</p>

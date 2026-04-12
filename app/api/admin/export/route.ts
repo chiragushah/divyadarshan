@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
   return new NextResponse(csv, {
     headers: {
       'Content-Type': 'text/csv',
-      'Content-Disposition': `attachment; filename="divyadarshan-users-${new Date().toISOString().split('T')[0]}.csv"`,
+      'Content-Disposition': `attachment; filename="divyadarshanam-users-${new Date().toISOString().split('T')[0]}.csv"`,
     }
   })
 }

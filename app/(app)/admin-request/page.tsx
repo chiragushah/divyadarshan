@@ -89,7 +89,7 @@ export default function AdminRequestPage() {
               <CheckCircle size={40} style={{ color: '#16A34A', margin: '0 auto 12px' }} />
               <h2 className="font-serif text-2xl font-medium mb-2">Access Approved! 🎉</h2>
               <p className="text-sm mb-4" style={{ color: 'var(--muted)' }}>
-                You now have admin access to DivyaDarshan.
+                You now have admin access to DivyaDarshanam.
               </p>
               <Link href="/admin/dashboard" className="btn btn-primary">
                 Open Admin Dashboard →
@@ -101,7 +101,7 @@ export default function AdminRequestPage() {
               <XCircle size={40} style={{ color: '#DC2626', margin: '0 auto 12px' }} />
               <h2 className="font-serif text-2xl font-medium mb-2">Request Not Approved</h2>
               <p className="text-sm" style={{ color: 'var(--muted)' }}>
-                Your request was not approved. Contact us at admin@divyadarshan.in for more information.
+                Your request was not approved. Contact us at admin@divyadarshanam.in for more information.
               </p>
             </>
           )}
@@ -176,7 +176,7 @@ export default function AdminRequestPage() {
       )}
 
       <p className="text-center text-xs mt-6" style={{ color: 'var(--muted)' }}>
-        Questions? Contact <a href="mailto:admin@divyadarshan.in" style={{ color: 'var(--crimson)' }}>admin@divyadarshan.in</a>
+        Questions? Contact <a href="mailto:admin@divyadarshanam.in" style={{ color: 'var(--crimson)' }}>admin@divyadarshanam.in</a>
       </p>
     </div>
   )

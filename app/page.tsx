@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "DivyaDarshan — India's Complete Temple & Pilgrimage Companion",
+  title: "DivyaDarshanam — India's Complete Temple & Pilgrimage Companion",
   description: 'Discover 422 sacred temples across India. AI yatra planning, Sankalp manifestation, Navagraha shanti, live darshan, community verified data.',
 }
 
@@ -29,7 +29,7 @@ const TESTIMONIALS = [
 function TilakLogo() {
   return (
     <a href="/" className="nav-brand" style={{ display:'flex', alignItems:'center', textDecoration:'none' }}>
-      <img src="/divyadarshan-logo.png" alt="DivyaDarshan" style={{ height:88, width:'auto', objectFit:'contain' }} />
+      <img src="/divyadarshanam-logo.png" alt="DivyaDarshanam" style={{ height:88, width:'auto', objectFit:'contain' }} />
     </a>
   )
 }
@@ -110,7 +110,7 @@ export default function HomePage() {
         <h1>Every sacred temple.<br /><em>One divine companion.</em></h1>
         <p className="hero-sub">
           India has over 2 million temples. Planning a pilgrimage means dozens of scattered tabs and outdated guides.
-          DivyaDarshan brings AI yatra planning, sacred Sankalp manifestation, Navagraha shanti, live darshan and community verified data into one platform — free forever.
+          DivyaDarshanam brings AI yatra planning, sacred Sankalp manifestation, Navagraha shanti, live darshan and community verified data into one platform — free forever.
         </p>
         <div className="hero-ctas">
           <Link href="/auth/signup" className="cta-main">Begin Your Yatra — Free →</Link>
@@ -199,7 +199,7 @@ export default function HomePage() {
           <img src="/dynaimers-logo.png" alt="Dynaimers Consulting" style={{ height:40, width:'auto', objectFit:'contain' }} />
         </div>
         <p style={{ fontWeight:600, color:'#4A3728', marginBottom:4 }}>Dynaimers Consulting Pvt. Ltd.</p>
-        <p>© 2026 DivyaDarshan · Built with 🙏 for pilgrims across India</p>
+        <p>© 2026 DivyaDarshanam · Built with 🙏 for pilgrims across India</p>
         <p style={{ marginTop:8 }}>
           <Link href="/explore" style={{ color:'#A89B8C', textDecoration:'none', margin:'0 12px' }}>Explore</Link>
           <Link href="/manifest" style={{ color:'#A89B8C', textDecoration:'none', margin:'0 12px' }}>Manifest</Link>

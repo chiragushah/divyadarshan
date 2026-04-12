@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Festival Calendar — DivyaDarshan',
+  title: 'Festival Calendar — DivyaDarshanam',
   description: 'Month-wise guide to Hindu temple festivals and pilgrimage seasons across India.',
 }
 

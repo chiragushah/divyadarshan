@@ -45,7 +45,7 @@ export function finverseLink(params: {
 }): string {
   const base = process.env.NEXT_PUBLIC_FINVERSE_URL || 'https://finverse.app'
   const utm = {
-    utm_source: 'divyadarshan',
+    utm_source: 'divyadarshanam',
     utm_medium: 'app',
     utm_campaign: 'yatra_fund',
     utm_content: params.utm_content || params.action,

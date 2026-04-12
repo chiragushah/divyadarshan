@@ -17,7 +17,7 @@ const INTERESTS = [
 const BENEFITS = [
   { icon: '🏆', title: 'Temple Explorer Partner', desc: 'Credited on our contributors page permanently' },
   { icon: '🔔', title: 'Early Access', desc: 'First access to all new features before public launch' },
-  { icon: '🎖️', title: 'Partner Badge', desc: 'Special Partner badge on your DivyaDarshan profile' },
+  { icon: '🎖️', title: 'Partner Badge', desc: 'Special Partner badge on your DivyaDarshanam profile' },
   { icon: '📞', title: 'Priority Support', desc: 'Direct access to our team for any help you need' },
   { icon: '📊', title: 'Impact Reports', desc: 'Quarterly reports on how your contribution is being used' },
   { icon: '🛕', title: 'Special Programs', desc: 'Exclusive partner-only yatra programs and experiences' },
@@ -77,7 +77,7 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
         <div style={{ fontSize:64, marginBottom:16 }}>🙏</div>
         <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:26, color:'#8B1A1A', marginBottom:12 }}>Thank You for Donating Wisely! 🙏</h2>
         <p style={{ color:'#6B5B4E', lineHeight:1.7, marginBottom:8 }}>
-          We've received your interest in contributing <strong style={{ color:'#8B1A1A' }}>{fmtINR(finalAmount)}</strong> to DivyaDarshan's mission.
+          We've received your interest in contributing <strong style={{ color:'#8B1A1A' }}>{fmtINR(finalAmount)}</strong> to DivyaDarshanam's mission.
         </p>
         <p style={{ color:'#6B5B4E', lineHeight:1.7, marginBottom:24 }}>
           Our team will reach out to you at <strong>{form.email}</strong> within 24 hours to discuss next steps. A confirmation has been sent to our team.
@@ -102,7 +102,7 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
         <div style={{ background:'linear-gradient(135deg, #8B1A1A, #C0570A)', padding:'24px 28px', position:'relative', flexShrink:0 }}>
           <button onClick={onClose} style={{ position:'absolute', top:16, right:16, background:'rgba(255,255,255,0.15)', border:'none', color:'white', width:32, height:32, borderRadius:'50%', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center' }}><X size={16}/></button>
           <div style={{ fontSize:11, fontWeight:700, letterSpacing:'.15em', color:'rgba(237,224,196,0.7)', textTransform:'uppercase', marginBottom:6 }}>Donate Wisely · Support Entrepreneurs</div>
-          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:24, color:'white', margin:'0 0 6px' }}>Contribute to DivyaDarshan</h2>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:24, color:'white', margin:'0 0 6px' }}>Contribute to DivyaDarshanam</h2>
           <p style={{ color:'rgba(237,224,196,0.85)', fontSize:13, lineHeight:1.6, margin:0 }}>
             This is not a donation — it is a contribution towards building India's most trusted temple platform for pilgrims.
           </p>
@@ -156,7 +156,7 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
 
               {/* Important note */}
               <div style={{ background:'#F0F9FF', border:'1px solid #BAE6FD', borderRadius:10, padding:14, marginBottom:24, fontSize:13, color:'#1E40AF', lineHeight:1.6 }}>
-                <strong>Donate Wisely:</strong> DivyaDarshan is not a trust or NGO — we are entrepreneurs building India's most trusted pilgrimage platform. Your contribution goes directly to temple volunteers, old age home collaborations and technology — zero middlemen, zero administrative cuts. You fund builders, not bureaucracy.
+                <strong>Donate Wisely:</strong> DivyaDarshanam is not a trust or NGO — we are entrepreneurs building India's most trusted pilgrimage platform. Your contribution goes directly to temple volunteers, old age home collaborations and technology — zero middlemen, zero administrative cuts. You fund builders, not bureaucracy.
               </div>
 
               <button onClick={() => setStep('form')} style={{ width:'100%', background:'#8B1A1A', color:'white', border:'none', borderRadius:12, padding:'15px 0', fontWeight:700, fontSize:16, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', gap:8 }}>
@@ -225,7 +225,7 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
 
               <div style={{ marginBottom:20 }}>
                 <label style={{ fontSize:11, fontWeight:700, textTransform:'uppercase', letterSpacing:'.06em', color:'#A89B8C', display:'block', marginBottom:5 }}>Why do you want to contribute? (optional)</label>
-                <textarea value={form.message} onChange={e => set('message', e.target.value)} rows={3} placeholder="Tell us what inspired you to support DivyaDarshan's mission…"
+                <textarea value={form.message} onChange={e => set('message', e.target.value)} rows={3} placeholder="Tell us what inspired you to support DivyaDarshanam's mission…"
                   style={{ width:'100%', padding:'10px 14px', borderRadius:10, border:'1.5px solid #E8E0D4', fontSize:13, outline:'none', color:'#1A0A00', resize:'none' }} />
               </div>
 
