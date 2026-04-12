@@ -29,7 +29,7 @@ const TESTIMONIALS = [
 function TilakLogo() {
   return (
     <a href="/" className="nav-brand" style={{ display:'flex', alignItems:'center', textDecoration:'none' }}>
-      <img src="/divyadarshanam-logo.png" alt="DivyaDarshanam" style={{ height:88, width:'auto', objectFit:'contain' }} />
+      <img src="/divyadarshan-logo.png" alt="DivyaDarshanam" style={{ height:88, width:'auto', objectFit:'contain' }} />
     </a>
   )
 }
@@ -196,7 +196,7 @@ export default function HomePage() {
       <footer className="footer">
         <p style={{ fontSize:12, color:'#A89B8C', marginBottom:8, letterSpacing:'.06em', textTransform:'uppercase', fontWeight:600 }}>Conceptualized and Developed by</p>
         <div className="footer-logo" style={{ marginBottom:8 }}>
-          <img src="/dynaimers-logo.png" alt="Dynaimers Consulting" style={{ height:40, width:'auto', objectFit:'contain' }} />
+          <img src="/dynaimers-logo.jpg" alt="Dynaimers Consulting" style={{ height:40, width:'auto', objectFit:'contain' }} />
         </div>
         <p style={{ fontWeight:600, color:'#4A3728', marginBottom:4 }}>Dynaimers Consulting Pvt. Ltd.</p>
         <p>© 2026 DivyaDarshanam · Built with 🙏 for pilgrims across India</p>
