@@ -236,7 +236,7 @@ export default function AdminDashboard() {
         <div style={S.sidebar}>
           {/* Logo */}
           <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:24, paddingBottom:20, borderBottom:`1px solid ${C.border}` }}>
-            <img src="/divyadarshan-logo.png" alt="DivyaDarshanam" style={{ height:44, width:'auto', objectFit:'contain' }} />
+            <img src="/divyadarshanam-logo.svg" alt="DivyaDarshanam" style={{ height:44, width:'auto', objectFit:'contain' }} />
           </div>
           <div style={{ fontSize:10, fontWeight:700, textTransform:'uppercase', letterSpacing:'.12em', color:C.muted2, padding:'0 8px 10px' }}>Admin Portal</div>
 
