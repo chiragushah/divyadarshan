@@ -150,7 +150,7 @@ export default function SignInForm() {
           {/* LEFT */}
           <div className="left">
             <Link href="/" style={{ display:'flex', alignItems:'center', marginBottom:'2rem', textDecoration:'none' }}>
-              <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height:90, width:'auto', objectFit:'contain' }} />
+              <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height:120, width:'auto', objectFit:'contain' }} />
             </Link>
 
             <div className="hero">
