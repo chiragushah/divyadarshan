@@ -5,30 +5,41 @@ interface LogoProps {
 }
 
 export default function Logo({ variant = 'horizontal', size = 'md', className = '' }: LogoProps) {
-  const heights: Record<string, number> = { sm: 32, md: 42, lg: 60 }
-  const h = heights[size] || 42
+  const heights: Record<string, number> = { sm: 28, md: 36, lg: 52 }
+  const tagSize: Record<string, string> = { sm: '6px', md: '7.5px', lg: '10px' }
+  const h = heights[size] || 36
 
-  // mark = icon only, no text
   if (variant === 'mark') {
     return (
       <div className={className} style={{ lineHeight: 0 }}>
         <img
           src="/divyadarshanam-logo.svg"
-          alt="Divya Darshanam"
+          alt="DivyaDarshanam"
           style={{ height: h, width: 'auto', display: 'block', objectFit: 'contain' }}
         />
       </div>
     )
   }
 
-  // horizontal / full = full logo with text baked in
   return (
-    <div className={`flex items-center ${className}`} style={{ lineHeight: 0, flexShrink: 0 }}>
+    <div className={`flex flex-col items-center ${className}`} style={{ flexShrink: 0, lineHeight: 1 }}>
       <img
         src="/divyadarshanam-logo.svg"
-        alt="Divya Darshanam"
+        alt="DivyaDarshanam"
         style={{ height: h, width: 'auto', display: 'block', objectFit: 'contain' }}
       />
+      <span style={{
+        fontFamily: "'Inter', sans-serif",
+        fontSize: tagSize[size],
+        fontWeight: 600,
+        color: '#C9960C',
+        letterSpacing: '0.15em',
+        textTransform: 'uppercase',
+        whiteSpace: 'nowrap',
+        marginTop: 3,
+      }}>
+        Be The Temple Explorer
+      </span>
     </div>
   )
 }
