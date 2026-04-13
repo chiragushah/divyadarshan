@@ -5,41 +5,28 @@ interface LogoProps {
 }
 
 export default function Logo({ variant = 'horizontal', size = 'md', className = '' }: LogoProps) {
-  const heights: Record<string, number> = { sm: 28, md: 36, lg: 52 }
-  const tagSize: Record<string, string> = { sm: '6px', md: '7.5px', lg: '10px' }
-  const h = heights[size] || 36
-
-  if (variant === 'mark') {
-    return (
-      <div className={className} style={{ lineHeight: 0 }}>
-        <img
-          src="/divyadarshanam-logo.svg"
-          alt="DivyaDarshanam"
-          style={{ height: h, width: 'auto', display: 'block', objectFit: 'contain' }}
-        />
-      </div>
-    )
-  }
+  const h: Record<string, number> = { sm: 36, md: 48, lg: 68 }
+  const tagS: Record<string, string> = { sm: '6.5px', md: '8px', lg: '10px' }
+  const height = h[size] || 48
 
   return (
-    <div className={`flex flex-col items-center ${className}`} style={{ flexShrink: 0, lineHeight: 1 }}>
+    <div className={className} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0, gap: 2 }}>
       <img
-        src="/divyadarshanam-logo.svg"
+        src="/dd-logo.png"
         alt="DivyaDarshanam"
-        style={{ height: h, width: 'auto', display: 'block', objectFit: 'contain' }}
+        style={{ height: height, width: 'auto', display: 'block', objectFit: 'contain' }}
       />
-      <span style={{
-        fontFamily: "'Inter', sans-serif",
-        fontSize: tagSize[size],
-        fontWeight: 600,
-        color: '#C9960C',
-        letterSpacing: '0.15em',
-        textTransform: 'uppercase',
-        whiteSpace: 'nowrap',
-        marginTop: 3,
-      }}>
-        Be The Temple Explorer
-      </span>
+      {variant !== 'mark' && (
+        <span style={{
+          fontFamily: "'Inter', sans-serif",
+          fontSize: tagS[size],
+          fontWeight: 700,
+          color: '#B8860B',
+          letterSpacing: '0.18em',
+          textTransform: 'uppercase',
+          whiteSpace: 'nowrap',
+        }}>Be A Temple Explorer</span>
+      )}
     </div>
   )
 }

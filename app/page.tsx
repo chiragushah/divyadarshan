@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Logo from '@/components/Logo'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -29,7 +30,7 @@ const TESTIMONIALS = [
 function TilakLogo() {
   return (
     <a href="/" className="nav-brand" style={{ display:'flex', alignItems:'center', textDecoration:'none' }}>
-      <img src="/divyadarshanam-logo.svg" alt="DivyaDarshanam" style={{ height:88, width:'auto', objectFit:'contain' }} />
+      <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height:88, width:'auto', objectFit:'contain' }} />
     </a>
   )
 }
@@ -91,7 +92,7 @@ export default function HomePage() {
 
       {/* Navbar */}      <nav className="pub-nav">
         <div className="pub-nav-inner">
-          <TilakLogo />
+          <Logo size="md" />
           <div className="nav-links">
             <Link href="/explore">Explore Temples</Link>
             <Link href="/plan">Plan Yatra</Link>
