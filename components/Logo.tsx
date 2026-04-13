@@ -5,20 +5,22 @@ interface LogoProps {
 }
 
 export default function Logo({ variant = 'horizontal', size = 'md', className = '' }: LogoProps) {
-  const h: Record<string, number> = { sm: 36, md: 48, lg: 68 }
-  const tagS: Record<string, string> = { sm: '6.5px', md: '8px', lg: '10px' }
-  const height = h[size] || 48
+  const h: Record<string, number> = { sm: 52, md: 68, lg: 96 }
+  const tagS: Record<string, string> = { sm: '7px', md: '9px', lg: '12px' }
+  const height = h[size] || 68
 
   return (
-    <div className={className} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0, gap: 2 }}>
+    <div className={className} style={{ display:'flex', flexDirection:'column', alignItems:'center', flexShrink:0, gap:3 }}>
       <img
         src="/dd-logo.png"
         alt="DivyaDarshanam"
-        style={{ height: height, width: 'auto', display: 'block', objectFit: 'contain' }}
+        width={height * 2}
+        height={height * 2}
+        style={{ height:height, width:'auto', display:'block', objectFit:'contain' }}
       />
       {variant !== 'mark' && (
         <span style={{
-          fontFamily: "'Inter', sans-serif",
+          fontFamily:"'Inter',sans-serif",
           fontSize: tagS[size],
           fontWeight: 700,
           color: '#B8860B',
