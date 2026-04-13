@@ -195,7 +195,7 @@ export default function SignInForm() {
               <div className="dyn-top">
                 <img src="/divyadarshanam-logo.png" alt="DivyaDarshanam" />
               </div>
-              <h2 className="form-title">{mode === 'signup' ? 'Begin your yatra' : 'Welcome back'}</h2>
+              <h2 className="form-title">{mode === 'signup' ? '<div style={{ textAlign:'center', marginBottom:20 }}><img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height:80, width:'auto', objectFit:'contain', margin:'0 auto', display:'block' }} /><span style={{ fontSize:'8px', fontWeight:700, color:'#B8860B', letterSpacing:'0.18em', textTransform:'uppercase', display:'block', marginTop:4 }}>Be A Temple Explorer</span></div>Begin your yatra' : 'Welcome back'}</h2>
               <p className="form-sub">{mode === 'signup' ? 'Free forever. No credit card. Join thousands planning smarter pilgrimages.' : 'Sign in to access your temples, plans, journal and savings goals.'}</p>
 
               <div className="tabs">

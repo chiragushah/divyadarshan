@@ -59,7 +59,7 @@ export default function SignUpPage() {
       <div style={{ width:'100%', maxWidth:440 }}>
         {/* Logo */}
         <div style={{ textAlign:'center', marginBottom:32 }}>
-          <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height:72, objectFit:'contain' }} />
+          <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height: 90, objectFit:'contain' }} />
         </div>
 
         <div style={{ background:'white', borderRadius:20, padding:32, boxShadow:'0 4px 24px rgba(0,0,0,0.07)', border:'1px solid #E8E0D4' }}>

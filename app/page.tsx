@@ -29,8 +29,9 @@ const TESTIMONIALS = [
 
 function TilakLogo() {
   return (
-    <a href="/" className="nav-brand" style={{ display:'flex', alignItems:'center', textDecoration:'none' }}>
-      <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height:88, width:'auto', objectFit:'contain' }} />
+    <a href="/" className="nav-brand" style={{ display:'flex', flexDirection:'column', alignItems:'center', textDecoration:'none', gap:4 }}>
+      <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height:72, width:'auto', objectFit:'contain' }} />
+      <span style={{ fontFamily:"'Inter',sans-serif", fontSize:'8px', fontWeight:700, color:'#B8860B', letterSpacing:'0.18em', textTransform:'uppercase', whiteSpace:'nowrap' }}>Be A Temple Explorer</span>
     </a>
   )
 }
