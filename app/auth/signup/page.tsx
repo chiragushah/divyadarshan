@@ -59,7 +59,7 @@ export default function SignUpPage() {
       <div style={{ width:'100%', maxWidth:440 }}>
         {/* Logo */}
         <div style={{ textAlign:'center', marginBottom:32 }}>
-          <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height: 180, objectFit:'contain' }} />
+          <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height: 90, objectFit:'contain' }} />
         </div>
 
         <div style={{ background:'white', borderRadius:20, padding:32, boxShadow:'0 4px 24px rgba(0,0,0,0.07)', border:'1px solid #E8E0D4' }}>
@@ -91,9 +91,9 @@ export default function SignUpPage() {
           </button>
 
           <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:20 }}>
-            <div style={{ flex:1, height: 180, background:'#E8E0D4' }} />
+            <div style={{ flex:1, height:1, background:'#E8E0D4' }} />
             <span style={{ fontSize:12, color:'#A89B8C' }}>or with email</span>
-            <div style={{ flex:1, height: 180, background:'#E8E0D4' }} />
+            <div style={{ flex:1, height:1, background:'#E8E0D4' }} />
           </div>
 
           {/* Sign Up Form */}
