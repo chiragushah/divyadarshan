@@ -30,7 +30,7 @@ const TESTIMONIALS = [
 function TilakLogo() {
   return (
     <a href="/" className="nav-brand" style={{ display:'flex', flexDirection:'column', alignItems:'center', textDecoration:'none', gap:4 }}>
-      <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height:120, width:'auto', objectFit:'contain' }} />
+      <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height: 180, width:'auto', objectFit:'contain' }} />
       <span style={{ fontFamily:"'Inter',sans-serif", fontSize:'8px', fontWeight:700, color:'#B8860B', letterSpacing:'0.18em', textTransform:'uppercase', whiteSpace:'nowrap' }}>Be A Temple Explorer</span>
     </a>
   )
@@ -43,7 +43,7 @@ export default function HomePage() {
         *{box-sizing:border-box;margin:0;padding:0}
         body{font-family:'Inter',sans-serif;background:#FDFAF6;color:#1A0A00}
         .pub-nav{background:#fff;border-bottom:1.5px solid #EDE8E0;padding:0 24px;position:sticky;top:0;z-index:50;box-shadow:0 1px 3px rgba(0,0,0,.04)}
-        .pub-nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:80px}
+        .pub-nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height: 180px}
         .nav-brand{display:flex;align-items:center;text-decoration:none;gap:10px}
         .nav-links{display:flex;gap:8px;align-items:center}
         .nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:#555;text-decoration:none;transition:all .15s}
@@ -52,11 +52,11 @@ export default function HomePage() {
         .btn-primary:hover{background:#6B1212!important}
         .hero{text-align:center;padding:80px 24px 60px;max-width:800px;margin:0 auto}
         .hero-badge{display:inline-flex;align-items:center;gap:6px;background:#FFF5F0;border:1.5px solid #FFD4B8;border-radius:100px;padding:6px 16px;font-size:12px;font-weight:600;color:#C0570A;letter-spacing:.04em;margin-bottom:28px}
-        .live-dot{width:7px;height:7px;border-radius:50%;background:#E74C3C;animation:blink 2s ease infinite}
+        .live-dot{width:7px;height: 180px;border-radius:50%;background:#E74C3C;animation:blink 2s ease infinite}
         @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-        h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:700;line-height:1.1;letter-spacing:-0.02em;color:#1A0A00;margin-bottom:20px}
+        h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:700;line-height: 180.1;letter-spacing:-0.02em;color:#1A0A00;margin-bottom:20px}
         h1 em{font-style:italic;color:#C0570A}
-        .hero-sub{font-size:1.1rem;line-height:1.75;color:#6B5B4E;max-width:560px;margin:0 auto 36px}
+        .hero-sub{font-size:1.1rem;line-height: 180.75;color:#6B5B4E;max-width:560px;margin:0 auto 36px}
         .hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
         .cta-main{background:#8B1A1A;color:white;padding:14px 28px;border-radius:100px;font-size:15px;font-weight:700;text-decoration:none;transition:all .2s}
         .cta-main:hover{background:#6B1212;transform:translateY(-1px)}
@@ -68,7 +68,7 @@ export default function HomePage() {
         .section{max-width:1100px;margin:0 auto;padding:64px 24px}
         .section-label{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#C0570A;margin-bottom:12px}
         .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:#1A0A00;margin-bottom:16px}
-        .section-sub{font-size:1rem;line-height:1.75;color:#6B5B4E;max-width:540px}
+        .section-sub{font-size:1rem;line-height: 180.75;color:#6B5B4E;max-width:540px}
         .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
         @media(max-width:768px){.features-grid{grid-template-columns:1fr 1fr}}
         @media(max-width:480px){.features-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
@@ -76,12 +76,12 @@ export default function HomePage() {
         .feat-card:hover{border-color:#C0570A;box-shadow:0 4px 20px rgba(192,87,10,.1);transform:translateY(-2px)}
         .feat-icon{font-size:28px;margin-bottom:14px}
         .feat-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#1A0A00;margin-bottom:8px}
-        .feat-desc{font-size:13px;line-height:1.7;color:#6B5B4E}
+        .feat-desc{font-size:13px;line-height: 180.7;color:#6B5B4E}
         .testimonials{background:white;border-top:1.5px solid #EDE8E0;border-bottom:1.5px solid #EDE8E0;padding:64px 24px}
         .t-grid{max-width:1000px;margin:40px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
         @media(max-width:768px){.t-grid{grid-template-columns:1fr}}
         .t-card{background:#FDFAF6;border:1.5px solid #EDE8E0;border-radius:14px;padding:24px}
-        .t-quote{font-size:14px;line-height:1.75;color:#3D2B1F;margin-bottom:16px;font-style:italic}
+        .t-quote{font-size:14px;line-height: 180.75;color:#3D2B1F;margin-bottom:16px;font-style:italic}
         .t-name{font-size:13px;font-weight:700;color:#8B1A1A}
         .t-loc{font-size:11px;color:#A89B8C;margin-top:2px}
         .cta-section{text-align:center;padding:80px 24px;max-width:600px;margin:0 auto}
@@ -198,7 +198,7 @@ export default function HomePage() {
       <footer className="footer">
         <p style={{ fontSize:12, color:'#A89B8C', marginBottom:8, letterSpacing:'.06em', textTransform:'uppercase', fontWeight:600 }}>Conceptualized and Developed by</p>
         <div className="footer-logo" style={{ marginBottom:8 }}>
-          <img src="/dynaimers-logo.jpg" alt="Dynaimers Consulting" style={{ height:40, width:'auto', objectFit:'contain' }} />
+          <img src="/dynaimers-logo.jpg" alt="Dynaimers Consulting" style={{ height: 180, width:'auto', objectFit:'contain' }} />
         </div>
         <p style={{ fontWeight:600, color:'#4A3728', marginBottom:4 }}>Dynaimers Consulting Pvt. Ltd.</p>
         <p>© 2026 DivyaDarshanam · Built with 🙏 for pilgrims across India</p>

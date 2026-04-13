@@ -84,7 +84,7 @@ function Stat({ label, value, sub, icon:Icon, color, accent }: any) {
     <div style={{ background: accent ? `${color}08` : C.surface, border:`1.5px solid ${accent ? color+'40' : C.border}`, borderRadius:12, padding:'18px 20px' }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:10 }}>
         <span style={{ fontSize:10, fontWeight:700, textTransform:'uppercase' as any, letterSpacing:'.12em', color:C.muted2 }}>{label}</span>
-        <div style={{ width:32, height:32, borderRadius:8, background:`${color}15`, display:'flex', alignItems:'center', justifyContent:'center' }}>
+        <div style={{ width:32, height: 180, borderRadius:8, background:`${color}15`, display:'flex', alignItems:'center', justifyContent:'center' }}>
           <Icon size={15} color={color} />
         </div>
       </div>
@@ -223,7 +223,7 @@ export default function AdminDashboard() {
         tr:hover td{background:${C.surface2};}
         select{background:${C.surface};border:1.5px solid ${C.border};border-radius:8px;padding:8px 12px;font-family:inherit;font-size:13px;color:${C.ink};outline:none;cursor:pointer;}
         textarea{width:100%;padding:9px 12px;background:${C.surface};border:1.5px solid ${C.border};border-radius:8px;font-family:inherit;font-size:13px;color:${C.ink};outline:none;resize:vertical;margin-bottom:10px;}
-        input[type=checkbox]{accent-color:${C.crimson};width:15px;height:15px;cursor:pointer;}
+        input[type=checkbox]{accent-color:${C.crimson};width:15px;height: 180px;cursor:pointer;}
         ::-webkit-scrollbar{width:5px;}
         ::-webkit-scrollbar-track{background:${C.surface2};}
         ::-webkit-scrollbar-thumb{background:${C.border2};border-radius:3px;}
@@ -236,7 +236,7 @@ export default function AdminDashboard() {
         <div style={S.sidebar}>
           {/* Logo */}
           <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:24, paddingBottom:20, borderBottom:`1px solid ${C.border}` }}>
-            <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height:44, width:'auto', objectFit:'contain' }} />
+            <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height: 180, width:'auto', objectFit:'contain' }} />
           </div>
           <div style={{ fontSize:10, fontWeight:700, textTransform:'uppercase', letterSpacing:'.12em', color:C.muted2, padding:'0 8px 10px' }}>Admin Portal</div>
 
@@ -295,7 +295,7 @@ export default function AdminDashboard() {
           </div>
 
           {loading && !data && tab!=='group_yatra' ? (
-            <div style={{ display:'flex', alignItems:'center', justifyContent:'center', height:300, gap:12, color:C.muted2 }}>
+            <div style={{ display:'flex', alignItems:'center', justifyContent:'center', height: 180, gap:12, color:C.muted2 }}>
               <Loader2 size={20} style={{ animation:'spin 1s linear infinite' }}/> Loading…
             </div>
           ) : (<>

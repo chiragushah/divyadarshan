@@ -57,55 +57,55 @@ export default function SignInForm() {
           --muted:#888888; --muted-light:#AAAAAA; --border:#E8E8E8; --border-s:#E8C4A0;
           --crimson:#8B1A1A; --crimson-deep:#5C0F0F;
         }
-        html, body { height:100%; background:var(--white); }
+        html, body { height: 180%; background:var(--white); }
         body { font-family:'Inter',sans-serif; color:var(--ink); }
-        .page-frame { min-height:100vh; background:var(--white); position:relative; }
+        .page-frame { min-height: 180vh; background:var(--white); position:relative; }
         .page-frame::before { content:''; position:fixed; inset:12px; border:1.5px solid var(--saffron); border-radius:4px; pointer-events:none; z-index:1000; opacity:.3; }
-        .corner { position:fixed; width:28px; height:28px; z-index:1001; pointer-events:none; }
-        .corner svg { width:100%; height:100%; }
+        .corner { position:fixed; width:28px; height: 180px; z-index:1001; pointer-events:none; }
+        .corner svg { width:100%; height: 180%; }
         .corner-tl{top:6px;left:6px;} .corner-tr{top:6px;right:6px;transform:scaleX(-1);} .corner-bl{bottom:6px;left:6px;transform:scaleY(-1);} .corner-br{bottom:6px;right:6px;transform:scale(-1,-1);}
-        .top-bar { height:3px; background:linear-gradient(to right,var(--crimson),var(--saffron),var(--crimson)); }
+        .top-bar { height: 180px; background:linear-gradient(to right,var(--crimson),var(--saffron),var(--crimson)); }
         .shell { display:grid; grid-template-columns:58% 42%; min-height:calc(100vh - 3px); }
         .left { background:var(--white); border-right:1.5px solid var(--border-s); padding:3rem 3.5rem 2rem; display:flex; flex-direction:column; position:relative; }
         .left::after { content:''; position:absolute; inset:0; background-image:radial-gradient(circle,rgba(192,87,10,.05) 1px,transparent 1px); background-size:28px 28px; pointer-events:none; z-index:0; }
         .left > * { position:relative; z-index:1; }
         .brand { display:flex; align-items:center; gap:10px; text-decoration:none; margin-bottom:3rem; }
-        .brand-name { font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:700; color:#C0570A; letter-spacing:-0.02em; line-height:1.1; }
+        .brand-name { font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:700; color:#C0570A; letter-spacing:-0.02em; line-height: 180.1; }
         .brand-sub { font-size:.58rem; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:#888888; margin-top:2px; }
         .hero { margin-bottom:2.5rem; }
         .eyebrow { display:inline-flex; align-items:center; gap:.45rem; font-size:.65rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--saffron); margin-bottom:1.1rem; }
-        .ldot { width:6px; height:6px; border-radius:50%; background:#E74C3C; animation:blink 2s ease infinite; flex-shrink:0; display:inline-block; }
+        .ldot { width:6px; height: 180px; border-radius:50%; background:#E74C3C; animation:blink 2s ease infinite; flex-shrink:0; display:inline-block; }
         @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-        h1 { font-family:'Playfair Display',serif; font-size:clamp(2.2rem,3.2vw,3.2rem); font-weight:700; line-height:1.12; color:var(--ink); margin-bottom:.9rem; letter-spacing:-0.02em; }
+        h1 { font-family:'Playfair Display',serif; font-size:clamp(2.2rem,3.2vw,3.2rem); font-weight:700; line-height: 180.12; color:var(--ink); margin-bottom:.9rem; letter-spacing:-0.02em; }
         h1 em { font-style:italic; color:var(--saffron); }
-        .hero-body { font-size:.92rem; line-height:1.75; color:var(--ink-3); max-width:480px; }
-        .divider-line { height:2px; background:var(--crimson); max-width:48px; margin:2rem 0; border-radius:2px; opacity:.25; }
+        .hero-body { font-size:.92rem; line-height: 180.75; color:var(--ink-3); max-width:480px; }
+        .divider-line { height: 180px; background:var(--crimson); max-width:48px; margin:2rem 0; border-radius:2px; opacity:.25; }
         .features { display:grid; grid-template-columns:1fr 1fr; gap:.875rem; margin-bottom:2rem; }
         .fc { border:1.5px solid var(--border); border-radius:10px; padding:1rem 1.1rem; background:var(--white); transition:all .2s; }
         .fc:hover { border-color:var(--saffron); box-shadow:0 2px 14px rgba(192,87,10,.08); }
         .fc-top { display:flex; align-items:center; gap:.6rem; margin-bottom:.45rem; }
-        .fc-ico { width:20px; height:20px; color:var(--saffron); flex-shrink:0; }
-        .fc-ico svg { width:100%; height:100%; }
+        .fc-ico { width:20px; height: 180px; color:var(--saffron); flex-shrink:0; }
+        .fc-ico svg { width:100%; height: 180%; }
         .fc-name { font-size:.83rem; font-weight:600; color:var(--ink); }
-        .fc-body { font-size:.73rem; line-height:1.6; color:var(--ink-3); }
+        .fc-body { font-size:.73rem; line-height: 180.6; color:var(--ink-3); }
         .trivia { border:1.5px solid var(--border-s); border-left:3px solid var(--saffron); border-radius:10px; padding:1rem 1.25rem; background:var(--saffron-pale); margin-bottom:2rem; }
         .trivia-hd { display:flex; align-items:center; gap:.5rem; margin-bottom:.5rem; }
-        .trivia-hd svg { width:14px; height:14px; color:var(--saffron); flex-shrink:0; }
+        .trivia-hd svg { width:14px; height: 180px; color:var(--saffron); flex-shrink:0; }
         .trivia-label { font-size:.58rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--saffron-dark); }
         .trivia-source { font-size:.6rem; color:var(--muted); margin-left:auto; }
-        .trivia-text { font-family:'Playfair Display',serif; font-size:.95rem; font-style:italic; font-weight:500; line-height:1.65; color:var(--ink-2); }
+        .trivia-text { font-family:'Playfair Display',serif; font-size:.95rem; font-style:italic; font-weight:500; line-height: 180.65; color:var(--ink-2); }
         .left-foot { margin-top:auto; padding-top:1.5rem; border-top:1.5px solid var(--border); display:flex; align-items:center; gap:1.25rem; }
-        .dyn-logo { height:48px; width:auto; object-fit:contain; flex-shrink:0; }
-        .dyn-credit { font-size:.63rem; color:var(--muted); line-height:1.5; }
+        .dyn-logo { height: 180px; width:auto; object-fit:contain; flex-shrink:0; }
+        .dyn-credit { font-size:.63rem; color:var(--muted); line-height: 180.5; }
         .dyn-credit strong { font-weight:600; color:var(--ink-3); }
         .right { background:var(--off-white); border-left:1px solid var(--border); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:2.5rem 2.5rem 4rem; position:relative; overflow-y:auto; }
         .back { position:absolute; top:1.5rem; left:1.5rem; font-size:.75rem; font-weight:500; color:var(--muted); text-decoration:none; display:flex; align-items:center; gap:.3rem; transition:color .2s; }
         .back:hover { color:var(--saffron); }
         .form-box { width:100%; max-width:370px; }
         .dyn-top { display:flex; justify-content:center; margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid var(--border); }
-        .dyn-top img { height:80px; width:auto; object-fit:contain; }
-        .form-title { font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--ink); margin-bottom:.3rem; line-height:1.15; }
-        .form-sub { font-size:.83rem; color:var(--muted); margin-bottom:1.75rem; line-height:1.6; }
+        .dyn-top img { height: 180px; width:auto; object-fit:contain; }
+        .form-title { font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--ink); margin-bottom:.3rem; line-height: 180.15; }
+        .form-sub { font-size:.83rem; color:var(--muted); margin-bottom:1.75rem; line-height: 180.6; }
         .tabs { display:flex; background:white; border:1.5px solid var(--border); border-radius:10px; padding:3px; margin-bottom:1.5rem; gap:3px; }
         .tab { flex:1; padding:.55rem; border:none; border-radius:7px; font-family:'Inter',sans-serif; font-size:.82rem; font-weight:600; cursor:pointer; transition:all .2s; background:transparent; color:var(--muted); }
         .tab.on { background:var(--crimson); color:white; box-shadow:0 2px 8px rgba(139,26,26,.25); }
@@ -114,7 +114,7 @@ export default function SignInForm() {
         .btn-g:hover { border-color:var(--saffron); box-shadow:0 2px 12px rgba(192,87,10,.12); }
         .btn-g:disabled { opacity:.6; cursor:not-allowed; }
         .or { display:flex; align-items:center; gap:.6rem; margin-bottom:1.25rem; }
-        .or-line { flex:1; height:1px; background:var(--border); }
+        .or-line { flex:1; height: 180px; background:var(--border); }
         .or-txt { font-size:.7rem; font-weight:500; color:var(--muted-light); }
         .field { margin-bottom:.9rem; }
         .field label { display:block; font-size:.7rem; font-weight:700; color:var(--ink-2); letter-spacing:.06em; text-transform:uppercase; margin-bottom:.35rem; }
@@ -126,11 +126,11 @@ export default function SignInForm() {
         .btn-sub:disabled { opacity:.65; cursor:not-allowed; }
         .trust { display:flex; align-items:center; justify-content:center; gap:1.25rem; margin-top:1.25rem; padding-top:1.25rem; border-top:1px solid var(--border); flex-wrap:wrap; }
         .trust-i { display:flex; align-items:center; gap:.35rem; font-size:.7rem; font-weight:500; color:var(--muted); }
-        .trust-i svg { width:13px; height:13px; color:var(--saffron); }
-        .terms { text-align:center; font-size:.67rem; color:var(--muted-light); margin-top:.875rem; line-height:1.6; }
+        .trust-i svg { width:13px; height: 180px; color:var(--saffron); }
+        .terms { text-align:center; font-size:.67rem; color:var(--muted-light); margin-top:.875rem; line-height: 180.6; }
         .terms a { color:var(--saffron); text-decoration:none; font-weight:500; }
         .right-foot { position:absolute; bottom:.875rem; left:0; right:0; text-align:center; font-size:.6rem; font-weight:500; color:var(--muted-light); }
-        .bottom-bar { height:3px; background:linear-gradient(to right,var(--crimson),var(--saffron),var(--crimson)); position:fixed; bottom:0; left:0; right:0; z-index:999; }
+        .bottom-bar { height: 180px; background:linear-gradient(to right,var(--crimson),var(--saffron),var(--crimson)); position:fixed; bottom:0; left:0; right:0; z-index:999; }
         @media(max-width:900px){.shell{grid-template-columns:1fr;}.left{padding:2rem;border-right:none;border-bottom:1.5px solid var(--border-s);}.right{padding:2rem 2rem 4rem;}}
         @media(max-width:600px){.features{grid-template-columns:1fr;}.left{padding:1.5rem;}.right{padding:1.5rem 1.5rem 4rem;}h1{font-size:2rem;}.page-frame::before{display:none;}.corner{display:none;}}
       `}</style>
@@ -150,7 +150,7 @@ export default function SignInForm() {
           {/* LEFT */}
           <div className="left">
             <Link href="/" style={{ display:'flex', alignItems:'center', marginBottom:'2rem', textDecoration:'none' }}>
-              <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height:120, width:'auto', objectFit:'contain' }} />
+              <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height: 180, width:'auto', objectFit:'contain' }} />
             </Link>
 
             <div className="hero">
