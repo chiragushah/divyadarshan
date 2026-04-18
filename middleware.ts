@@ -47,8 +47,6 @@ export async function middleware(request: NextRequest) {
     if (pathname === '/admin') return NextResponse.next()
     const adminToken = request.cookies.get('admin_token')?.value
     if (!adminToken) return NextResponse.redirect(new URL('/admin', request.url))
-    const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET })
-    if (!token) return NextResponse.redirect(new URL('/auth/signin', request.url))
     return NextResponse.next()
   }
 
