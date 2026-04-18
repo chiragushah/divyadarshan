@@ -5,7 +5,7 @@ interface LogoProps {
 }
 
 export default function Logo({ variant = 'horizontal', size = 'md', className = '' }: LogoProps) {
-  const h: Record<string, number> = { sm: 80, md: 110, lg: 150 }
+  const h: Record<string, number> = { sm: 100, md: 140, lg: 180 }
   const height = h[size] || 110
 
   return (
