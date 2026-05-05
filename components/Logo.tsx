@@ -5,8 +5,8 @@ interface LogoProps {
 }
 
 export default function Logo({ variant = 'horizontal', size = 'md', className = '' }: LogoProps) {
-  const h: Record<string, number> = { sm: 100, md: 140, lg: 180 }
-  const height = h[size] || 110
+  const h: Record<string, number> = { sm: 60, md: 80, lg: 120 }
+  const height = h[size] || 80
 
   return (
     <div className={className} style={{ display:'flex', flexDirection:'column', alignItems:'center', flexShrink:0 }}>

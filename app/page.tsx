@@ -30,7 +30,7 @@ const TESTIMONIALS = [
 function TilakLogo() {
   return (
     <a href="/" style={{ display:'flex', flexDirection:'column', alignItems:'center', textDecoration:'none' }}>
-      <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height:110, width:'auto', objectFit:'contain' }} />
+      <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height:90, width:'auto', objectFit:'contain' }} />
     </a>
   )
 }
@@ -42,15 +42,15 @@ export default function HomePage() {
         *{box-sizing:border-box;margin:0;padding:0}
         body{font-family:'Inter',sans-serif;background:#FFFFFF;color:#1A0A00}
         .pub-nav{background:#fff;border-bottom:1.5px solid #EDE8E0;padding:0 24px;position:sticky;top:0;z-index:50;box-shadow:0 1px 3px rgba(0,0,0,.04)}
-        .pub-nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:80px}
+        .pub-nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:100px}
         .nav-brand{display:flex;align-items:center;text-decoration:none;gap:10px}
         .nav-links{display:flex;gap:8px;align-items:center}
         .nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:#555;text-decoration:none;transition:all .15s}
-        .nav-links a:hover{background:#FFF5F5;color:#8B1A1A}
+        .nav-links a:hover{background:#FFFFFF;color:#8B1A1A}
         .btn-primary{background:#8B1A1A;color:white!important;border-radius:8px;padding:9px 20px;font-weight:600;font-size:14px}
         .btn-primary:hover{background:#6B1212!important}
         .hero{text-align:center;padding:80px 24px 60px;max-width:800px;margin:0 auto}
-        .hero-badge{display:inline-flex;align-items:center;gap:6px;background:#FFF5F0;border:1.5px solid #FFD4B8;border-radius:100px;padding:6px 16px;font-size:12px;font-weight:600;color:#C0570A;letter-spacing:.04em;margin-bottom:28px}
+        .hero-badge{display:inline-flex;align-items:center;gap:6px;background:#FFFFFF;border:1.5px solid #FFD4B8;border-radius:100px;padding:6px 16px;font-size:12px;font-weight:600;color:#C0570A;letter-spacing:.04em;margin-bottom:28px}
         .live-dot{width:7px;height:7px;border-radius:50%;background:#E74C3C;animation:blink 2s ease infinite}
         @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
         h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:700;line-height:1.1;letter-spacing:-0.02em;color:#1A0A00;margin-bottom:20px}
@@ -60,7 +60,7 @@ export default function HomePage() {
         .cta-main{background:#8B1A1A;color:white;padding:14px 28px;border-radius:100px;font-size:15px;font-weight:700;text-decoration:none;transition:all .2s}
         .cta-main:hover{background:#6B1212;transform:translateY(-1px)}
         .cta-sec{background:white;color:#8B1A1A;padding:14px 28px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;border:2px solid #8B1A1A;transition:all .2s}
-        .cta-sec:hover{background:#FFF5F5}
+        .cta-sec:hover{background:#FFFFFF}
         .stats{max-width:900px;margin:0 auto;padding:40px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1.5px solid #EDE8E0;border-bottom:1.5px solid #EDE8E0;text-align:center}
         .stat-n{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:#8B1A1A}
         .stat-l{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#A89B8C;margin-top:4px}
