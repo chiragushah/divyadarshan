@@ -40,7 +40,7 @@ export default function HomePage() {
     <>
       <style>{`
         *{box-sizing:border-box;margin:0;padding:0}
-        body{font-family:'Inter',sans-serif;background:#FDFAF6;color:#1A0A00}
+        body{font-family:'Inter',sans-serif;background:#FFFFFF;color:#1A0A00}
         .pub-nav{background:#fff;border-bottom:1.5px solid #EDE8E0;padding:0 24px;position:sticky;top:0;z-index:50;box-shadow:0 1px 3px rgba(0,0,0,.04)}
         .pub-nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:80px}
         .nav-brand{display:flex;align-items:center;text-decoration:none;gap:10px}
@@ -79,7 +79,7 @@ export default function HomePage() {
         .testimonials{background:white;border-top:1.5px solid #EDE8E0;border-bottom:1.5px solid #EDE8E0;padding:64px 24px}
         .t-grid{max-width:1000px;margin:40px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
         @media(max-width:768px){.t-grid{grid-template-columns:1fr}}
-        .t-card{background:#FDFAF6;border:1.5px solid #EDE8E0;border-radius:14px;padding:24px}
+        .t-card{background:#FFFFFF;border:1.5px solid #EDE8E0;border-radius:14px;padding:24px}
         .t-quote{font-size:14px;line-height:1.75;color:#3D2B1F;margin-bottom:16px;font-style:italic}
         .t-name{font-size:13px;font-weight:700;color:#8B1A1A}
         .t-loc{font-size:11px;color:#A89B8C;margin-top:2px}
