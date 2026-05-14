@@ -3,204 +3,290 @@ import { useEffect, useState } from 'react'
 
 interface LiveSlot {
   day: string
-  time: string   // "HH:MM" 24hr
+  time: string
   label?: string
 }
 
 interface Props {
   liveUrl?: string
   liveSchedule?: LiveSlot[]
-  timing?: string  // fallback: raw timing string e.g. "5:00 AM – 12:00 PM, 4:00 PM – 9:00 PM"
+  templeName?: string
+  deity?: string
 }
 
-// Default darshan slots used when no schedule is configured
 const DEFAULT_SLOTS: LiveSlot[] = [
-  { day: 'everyday', time: '05:00', label: 'Morning Aarti' },
-  { day: 'everyday', time: '12:00', label: 'Madhyahna Darshan' },
+  { day: 'everyday', time: '05:00', label: 'Mangala Aarti' },
+  { day: 'everyday', time: '07:00', label: 'Morning Darshan' },
+  { day: 'everyday', time: '12:00', label: 'Madhyahna Aarti' },
   { day: 'everyday', time: '19:00', label: 'Sandhya Aarti' },
+  { day: 'everyday', time: '20:30', label: 'Shayan Aarti' },
 ]
 
 const DAY_MAP: Record<number, string> = {
-  0: 'sun', 1: 'mon', 2: 'tue', 3: 'wed', 4: 'thu', 5: 'fri', 6: 'sat',
+  0:'sun',1:'mon',2:'tue',3:'wed',4:'thu',5:'fri',6:'sat'
 }
 
-function parseTime(t: string): { h: number; m: number } {
+const LIVE_WINDOW = 50 // minutes
+
+function toMin(t: string) {
   const [h, m] = t.split(':').map(Number)
-  return { h: h || 0, m: m || 0 }
+  return (h||0)*60+(m||0)
 }
 
-function minutesNow(date: Date): number {
-  return date.getHours() * 60 + date.getMinutes()
+function fmt(t: string) {
+  const [h, m] = t.split(':').map(Number)
+  const ampm = h >= 12 ? 'PM' : 'AM'
+  return `${h%12||12}:${String(m).padStart(2,'0')} ${ampm}`
 }
 
-function slotMinutes(slot: LiveSlot): number {
-  const { h, m } = parseTime(slot.time)
-  return h * 60 + m
-}
+function nowMin(d: Date) { return d.getHours()*60+d.getMinutes() }
 
-// A slot is "live" for 45 minutes from its start time
-const LIVE_WINDOW_MINUTES = 45
-
-function getStatus(slots: LiveSlot[], now: Date): {
-  isLive: boolean
-  liveLabel?: string
-  nextTime?: string
-  nextLabel?: string
-  nextDay?: string
-} {
+function getStatus(slots: LiveSlot[], now: Date) {
   const todayKey = DAY_MAP[now.getDay()]
-  const nowMin   = minutesNow(now)
+  const nm = nowMin(now)
+  const todaySlots = slots
+    .filter(s => s.day==='everyday' || s.day===todayKey)
+    .sort((a,b) => toMin(a.time)-toMin(b.time))
 
-  const todaySlots = slots.filter(s => s.day === 'everyday' || s.day === todayKey)
-    .sort((a, b) => slotMinutes(a) - slotMinutes(b))
-
-  // Check if currently live
-  for (const slot of todaySlots) {
-    const start = slotMinutes(slot)
-    if (nowMin >= start && nowMin < start + LIVE_WINDOW_MINUTES) {
-      return { isLive: true, liveLabel: slot.label }
-    }
+  for (const s of todaySlots) {
+    const start = toMin(s.time)
+    if (nm >= start && nm < start+LIVE_WINDOW) return { isLive:true, slot:s, nextSlot:null, nextDay:'' }
   }
 
-  // Find next slot today
-  const nextToday = todaySlots.find(s => slotMinutes(s) > nowMin + LIVE_WINDOW_MINUTES)
-  if (nextToday) {
-    const { h, m } = parseTime(nextToday.time)
-    const ampm = h >= 12 ? 'PM' : 'AM'
-    const h12  = h % 12 || 12
-    const mm   = String(m).padStart(2, '0')
-    return {
-      isLive: false,
-      nextTime: `${h12}:${mm} ${ampm}`,
-      nextLabel: nextToday.label,
-      nextDay: 'Today',
-    }
-  }
+  const next = todaySlots.find(s => toMin(s.time) > nm)
+  if (next) return { isLive:false, slot:null, nextSlot:next, nextDay:'Today' }
 
-  // Find next slot tomorrow
-  const tomorrowKey = DAY_MAP[(now.getDay() + 1) % 7]
-  const tomorrowSlots = slots
-    .filter(s => s.day === 'everyday' || s.day === tomorrowKey)
-    .sort((a, b) => slotMinutes(a) - slotMinutes(b))
+  const tomorrow = DAY_MAP[(now.getDay()+1)%7]
+  const tmrSlots = slots.filter(s => s.day==='everyday'||s.day===tomorrow).sort((a,b)=>toMin(a.time)-toMin(b.time))
+  if (tmrSlots.length) return { isLive:false, slot:null, nextSlot:tmrSlots[0], nextDay:'Tomorrow' }
 
-  if (tomorrowSlots.length > 0) {
-    const next = tomorrowSlots[0]
-    const { h, m } = parseTime(next.time)
-    const ampm = h >= 12 ? 'PM' : 'AM'
-    const h12  = h % 12 || 12
-    const mm   = String(m).padStart(2, '0')
-    return {
-      isLive: false,
-      nextTime: `${h12}:${mm} ${ampm}`,
-      nextLabel: next.label,
-      nextDay: 'Tomorrow',
-    }
-  }
-
-  return { isLive: false }
+  return { isLive:false, slot:null, nextSlot:DEFAULT_SLOTS[0], nextDay:'Tomorrow' }
 }
 
-export default function LiveDarshanStatus({ liveUrl, liveSchedule, timing }: Props) {
-  const [status, setStatus] = useState<ReturnType<typeof getStatus> | null>(null)
+// Countdown timer
+function useCountdown(targetMin: number|null) {
+  const [remaining, setRemaining] = useState('')
+  useEffect(() => {
+    if (targetMin===null) return
+    const tick = () => {
+      const now = new Date()
+      const nm = nowMin(now)
+      let diff = targetMin - nm
+      if (diff < 0) diff += 24*60
+      const h = Math.floor(diff/60)
+      const m = diff%60
+      setRemaining(h>0 ? `${h}h ${m}m` : `${m} min`)
+    }
+    tick()
+    const id = setInterval(tick, 30000)
+    return () => clearInterval(id)
+  }, [targetMin])
+  return remaining
+}
 
-  const slots = (liveSchedule && liveSchedule.length > 0) ? liveSchedule : DEFAULT_SLOTS
+export default function LiveDarshanStatus({ liveUrl, liveSchedule, templeName, deity }: Props) {
+  const slots = liveSchedule?.length ? liveSchedule : DEFAULT_SLOTS
+  const [status, setStatus] = useState<ReturnType<typeof getStatus>|null>(null)
+  const [showSchedule, setShowSchedule] = useState(false)
 
   useEffect(() => {
-    const update = () => setStatus(getStatus(slots, new Date()))
-    update()
-    const interval = setInterval(update, 30_000) // refresh every 30s
-    return () => clearInterval(interval)
+    const tick = () => setStatus(getStatus(slots, new Date()))
+    tick()
+    const id = setInterval(tick, 30000)
+    return () => clearInterval(id)
   }, [])
+
+  const countdown = useCountdown(status?.nextSlot ? toMin(status.nextSlot.time) : null)
 
   if (!status) return null
 
-  if (status.isLive) {
-    return (
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 12,
-        padding: '12px 16px',
-        background: 'rgba(22,163,74,.08)',
-        border: '1.5px solid rgba(22,163,74,.25)',
-        borderRadius: 12,
-        marginBottom: 16,
-      }}>
-        <span className="live-dot" style={{ width: 10, height: 10, flexShrink: 0 }} />
-        <div>
-          <div style={{ fontWeight: 700, fontSize: 13, color: '#166534' }}>
-            🔴 Live Darshan is ON right now
-          </div>
-          {status.liveLabel && (
-            <div style={{ fontSize: 11, color: '#166534', opacity: .75, marginTop: 2 }}>
-              {status.liveLabel}
-            </div>
-          )}
-        </div>
-        {liveUrl && (
-          <a href={liveUrl} target="_blank" rel="noopener"
-            style={{
-              marginLeft: 'auto',
-              padding: '5px 12px',
-              background: '#166534',
-              color: 'white',
-              borderRadius: 8,
-              fontSize: 12,
-              fontWeight: 600,
-              textDecoration: 'none',
-              flexShrink: 0,
-            }}>
-            Watch Live →
-          </a>
-        )}
-      </div>
-    )
-  }
-
   return (
-    <div style={{
-      display: 'flex',
-      alignItems: 'center',
-      gap: 12,
-      padding: '12px 16px',
-      background: 'rgba(192,87,10,.06)',
-      border: '1.5px solid rgba(192,87,10,.2)',
-      borderRadius: 12,
-      marginBottom: 16,
-    }}>
-      <span style={{ fontSize: 18, flexShrink: 0 }}>📺</span>
-      <div>
-        <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--saffron)' }}>
-          Live Darshan not available right now
+    <div style={{ marginBottom: 24 }}>
+      {status.isLive ? (
+        /* ── LIVE NOW ── */
+        <div style={{
+          background: 'linear-gradient(135deg, #0d1f0d, #1a3a1a)',
+          border: '1.5px solid rgba(34,197,94,0.4)',
+          borderRadius: 16,
+          overflow: 'hidden',
+        }}>
+          {/* Live banner */}
+          <div style={{ padding: '16px 20px', display: 'flex', alignItems: 'center', gap: 14 }}>
+            <div style={{ position: 'relative', flexShrink: 0 }}>
+              <div style={{
+                width: 48, height: 48, borderRadius: '50%',
+                background: 'rgba(34,197,94,0.15)',
+                border: '2px solid rgba(34,197,94,0.4)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: 22,
+              }}>
+                🛕
+              </div>
+              <span style={{
+                position: 'absolute', top: -2, right: -2,
+                width: 14, height: 14, borderRadius: '50%',
+                background: '#22c55e',
+                border: '2px solid #0d1f0d',
+                animation: 'pulse 2s ease infinite',
+              }} />
+            </div>
+            <div style={{ flex: 1 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 3 }}>
+                <span style={{
+                  background: '#22c55e', color: 'white',
+                  fontSize: 9, fontWeight: 800, letterSpacing: '.12em',
+                  padding: '2px 7px', borderRadius: 100, textTransform: 'uppercase',
+                }}>LIVE NOW</span>
+                <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.5)' }}>
+                  {status.slot?.label || 'Darshan in progress'}
+                </span>
+              </div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: 'white' }}>
+                🔴 Live Darshan is streaming right now
+              </div>
+              <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginTop: 2 }}>
+                Stream active for the next {LIVE_WINDOW-(nowMin(new Date())-toMin(status.slot?.time||'00:00'))} min approx.
+              </div>
+            </div>
+            {liveUrl && (
+              <a href={liveUrl} target="_blank" rel="noopener noreferrer" style={{
+                flexShrink: 0,
+                background: '#22c55e', color: 'white',
+                padding: '10px 18px', borderRadius: 10,
+                fontSize: 13, fontWeight: 700, textDecoration: 'none',
+                display: 'flex', alignItems: 'center', gap: 6,
+              }}>
+                ▶ Watch Live
+              </a>
+            )}
+          </div>
+
+          {/* Today schedule strip */}
+          <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '10px 20px', display: 'flex', gap: 8, overflowX: 'auto' }}>
+            {slots.filter(s=>s.day==='everyday').map((s,i) => {
+              const sm = toMin(s.time)
+              const nm = nowMin(new Date())
+              const isNow = nm>=sm && nm<sm+LIVE_WINDOW
+              return (
+                <div key={i} style={{
+                  flexShrink: 0,
+                  padding: '5px 12px', borderRadius: 8,
+                  background: isNow ? 'rgba(34,197,94,0.2)' : 'rgba(255,255,255,0.05)',
+                  border: `1px solid ${isNow ? 'rgba(34,197,94,0.4)' : 'rgba(255,255,255,0.08)'}`,
+                }}>
+                  <div style={{ fontSize: 10, color: isNow ? '#22c55e' : 'rgba(255,255,255,0.4)', fontWeight: 700 }}>
+                    {isNow ? '● LIVE' : fmt(s.time)}
+                  </div>
+                  <div style={{ fontSize: 11, color: isNow ? 'white' : 'rgba(255,255,255,0.6)', fontWeight: 500, marginTop: 1 }}>
+                    {s.label}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
-        {status.nextTime ? (
-          <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 2 }}>
-            Next: <strong style={{ color: 'var(--ink)' }}>{status.nextDay} at {status.nextTime}</strong>
-            {status.nextLabel && <span style={{ color: 'var(--muted2)' }}> — {status.nextLabel}</span>}
+      ) : (
+        /* ── NOT LIVE ── */
+        <div style={{
+          background: '#fff',
+          border: '1.5px solid #F0EDE8',
+          borderRadius: 16,
+          overflow: 'hidden',
+        }}>
+          {/* Header */}
+          <div style={{ padding: '16px 20px', display: 'flex', alignItems: 'center', gap: 14 }}>
+            <div style={{
+              width: 48, height: 48, borderRadius: '50%',
+              background: 'rgba(192,87,10,0.08)',
+              border: '1.5px solid rgba(192,87,10,0.2)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontSize: 22, flexShrink: 0,
+            }}>
+              📺
+            </div>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: 14, fontWeight: 700, color: '#1A0A00', marginBottom: 3 }}>
+                Live Darshan not streaming now
+              </div>
+              {status.nextSlot && (
+                <div style={{ fontSize: 13, color: '#6B5B4E' }}>
+                  Next: <strong style={{ color: '#8B1A1A' }}>
+                    {status.nextDay} {fmt(status.nextSlot.time)}
+                  </strong>
+                  <span style={{ color: '#A89B8C' }}> — {status.nextSlot.label}</span>
+                  {countdown && (
+                    <span style={{
+                      marginLeft: 8,
+                      background: '#FFF5F0', color: '#C0570A',
+                      fontSize: 11, fontWeight: 700,
+                      padding: '2px 8px', borderRadius: 100, border: '1px solid #FFD4B8',
+                    }}>
+                      in {countdown}
+                    </span>
+                  )}
+                </div>
+              )}
+            </div>
+            {liveUrl && (
+              <a href={liveUrl} target="_blank" rel="noopener noreferrer" style={{
+                flexShrink: 0,
+                background: '#8B1A1A', color: 'white',
+                padding: '8px 16px', borderRadius: 10,
+                fontSize: 12, fontWeight: 700, textDecoration: 'none',
+              }}>
+                🔔 Open Channel
+              </a>
+            )}
           </div>
-        ) : (
-          <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 2 }}>
-            Check the temple&apos;s official website for schedule
+
+          {/* Aarti schedule */}
+          <div style={{ borderTop: '1px solid #F0EDE8', background: '#FDFAF6' }}>
+            <button onClick={() => setShowSchedule(!showSchedule)}
+              style={{
+                width: '100%', padding: '10px 20px',
+                background: 'none', border: 'none', cursor: 'pointer',
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              }}>
+              <span style={{ fontSize: 12, fontWeight: 600, color: '#6B5B4E' }}>
+                🕒 Today's Darshan Schedule
+              </span>
+              <span style={{ fontSize: 12, color: '#A89B8C' }}>{showSchedule ? '▲ Hide' : '▼ View all'}</span>
+            </button>
+
+            {showSchedule && (
+              <div style={{ padding: '0 20px 16px', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px,1fr))', gap: 8 }}>
+                {slots.filter(s=>s.day==='everyday').map((s,i) => {
+                  const nm = nowMin(new Date())
+                  const sm = toMin(s.time)
+                  const isPast = nm > sm + LIVE_WINDOW
+                  const isNext = status.nextSlot?.time === s.time
+                  return (
+                    <div key={i} style={{
+                      padding: '10px 12px', borderRadius: 10,
+                      background: isNext ? '#FFF5F0' : isPast ? '#F8F8F8' : 'white',
+                      border: `1px solid ${isNext ? '#FFD4B8' : '#F0EDE8'}`,
+                    }}>
+                      <div style={{ fontSize: 13, fontWeight: 700, color: isNext ? '#C0570A' : isPast ? '#C0B4A8' : '#1A0A00' }}>
+                        {fmt(s.time)}
+                        {isNext && <span style={{ marginLeft: 6, fontSize: 9, background: '#C0570A', color: 'white', padding: '1px 6px', borderRadius: 100 }}>NEXT</span>}
+                        {isPast && <span style={{ marginLeft: 6, fontSize: 9, color: '#C0B4A8' }}>Done</span>}
+                      </div>
+                      <div style={{ fontSize: 11, color: isNext ? '#C0570A' : '#A89B8C', marginTop: 2 }}>{s.label}</div>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
           </div>
-        )}
-      </div>
-      {liveUrl && (
-        <a href={liveUrl} target="_blank" rel="noopener"
-          style={{
-            marginLeft: 'auto',
-            padding: '5px 12px',
-            background: 'transparent',
-            color: 'var(--saffron)',
-            border: '1px solid rgba(192,87,10,.3)',
-            borderRadius: 8,
-            fontSize: 12,
-            fontWeight: 600,
-            textDecoration: 'none',
-            flexShrink: 0,
-          }}>
-          Set Reminder
-        </a>
+        </div>
       )}
+
+      <style>{`
+        @keyframes pulse {
+          0%,100% { opacity:1; transform:scale(1); }
+          50% { opacity:0.5; transform:scale(1.4); }
+        }
+      `}</style>
     </div>
   )
 }
