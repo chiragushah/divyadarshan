@@ -111,6 +111,8 @@ export default function HomePage() {
         .footer-nav a{color:#A89B8C;text-decoration:none;margin:0 10px;font-size:13px}
         .footer-nav a:hover{color:#8B1A1A}
         .footer hr{border:none;border-top:1px solid #F0EDE8;margin:24px 0}
+        @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+        .live-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:blink 2s ease infinite;display:inline-block}
       `}</style>
 
       <nav className="nav">
