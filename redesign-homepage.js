@@ -1,10 +1,72 @@
-'use client'
-import Link from 'next/link'
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+const P = 'C:\\Users\\chira\\Downloads\\divyadarshan'
+
+const page = `import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "DivyaDarshanam \u2014 India's Complete Temple & Pilgrimage Companion",
+  description: 'Discover 422 sacred temples across India. AI yatra planning, Sankalp manifestation, Navagraha shanti, live darshan, community verified data.',
+}
+
+const FEATURES = [
+  {
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Kedarnath_Temple.jpg/800px-Kedarnath_Temple.jpg',
+    title: 'Char Dham Yatra',
+    desc: 'Plan your complete Char Dham pilgrimage with AI-guided itineraries, aarti timings and stay options.',
+    link: '/explore?q=char+dham',
+  },
+  {
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Tirupati_temple.jpg/800px-Tirupati_temple.jpg',
+    title: 'Tirumala Tirupati',
+    desc: 'India\'s most visited temple. Plan darshan slots, check crowd levels and watch live aarti.',
+    link: '/temple/tirumala-venkateswara-temple',
+  },
+  {
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Varanasi_at_dusk.jpg/800px-Varanasi_at_dusk.jpg',
+    title: 'Kashi Vishwanath',
+    desc: 'The eternal city of Lord Shiva. Experience live darshan from the sacred Jyotirlinga.',
+    link: '/temple/kashi-vishwanath-temple',
+  },
+  {
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Vaishno_Devi_Temple.jpg/800px-Vaishno_Devi_Temple.jpg',
+    title: 'Vaishno Devi',
+    desc: 'Plan your trek to the holy shrine of Maa Vaishno Devi with route guides and stay options.',
+    link: '/temple/vaishno-devi-shrine',
+  },
+  {
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Shirdi_Sai_Baba_Temple.jpg/800px-Shirdi_Sai_Baba_Temple.jpg',
+    title: 'Shirdi Sai Baba',
+    desc: 'Watch live darshan from Shirdi Sai Baba Samadhi Mandir and plan your pilgrimage.',
+    link: '/temple/shirdi-sai-baba-samadhi',
+  },
+  {
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Somnath_temple_Prabhas_Patan.jpg/800px-Somnath_temple_Prabhas_Patan.jpg',
+    title: 'Somnath Temple',
+    desc: 'First Jyotirlinga of Lord Shiva. Watch the famous sunset aarti live from Saurashtra.',
+    link: '/temple/somnath-temple',
+  },
+]
+
+const STATS = [
+  { n: '422', l: 'Sacred Temples' },
+  { n: '46',  l: 'Live Streams' },
+  { n: '18',  l: 'States Covered' },
+  { n: '\u20B90',  l: 'Free Forever' },
+]
+
+const TESTIMONIALS = [
+  { quote: 'The AI planner gave me a complete Char Dham itinerary in 2 minutes. It knew which temple opens first in the season.', name: 'Ramesh Kulkarni', loc: 'Pune', initial: 'R' },
+  { quote: 'The Manifest feature is unlike anything I have seen. I wrote my Sankalp for my daughter\'s marriage and kept faith. Jai Mata Di.', name: 'Sunita Joshi', loc: 'Mumbai', initial: 'S' },
+  { quote: 'Navagraha shlokas with YouTube links changed my daily morning routine. I now chant correctly with the right pronunciation.', name: 'Vikram Mehta', loc: 'Ahmedabad', initial: 'V' },
+]
 
 export default function HomePage() {
   return (
     <>
-      <style>{`
+      <style>{\`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
         *{box-sizing:border-box;margin:0;padding:0}
         html,body{background:#fff;color:#1A0A00;font-family:'Inter',sans-serif}
@@ -59,7 +121,7 @@ export default function HomePage() {
         @media(max-width:900px){.temple-grid{grid-template-columns:repeat(2,1fr)}}
         @media(max-width:560px){.temple-grid{grid-template-columns:1fr}}
         .temple-card{border-radius:16px;overflow:hidden;border:1.5px solid #F0EDE8;transition:all .2s;text-decoration:none;display:block;background:#fff}
-        .temple-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.1);border-color:rgba(192,87,10,0.2)}
+        .temple-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.1);border-color:#C0570A33}
         .temple-img{height:200px;background-size:cover;background-position:center;position:relative}
         .temple-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,transparent 60%)}
         .temple-card-body{padding:16px}
@@ -114,7 +176,7 @@ export default function HomePage() {
         .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 10px;font-size:13px}
         .footer a:hover{color:#FFD700}
         .footer-divider{border:none;border-top:1px solid rgba(255,255,255,0.08);margin:24px 0}
-      `}</style>
+      \`}</style>
 
       {/* NAVBAR */}
       <nav className="nav">
@@ -127,7 +189,7 @@ export default function HomePage() {
             <a href="/plan">Plan Yatra</a>
             <a href="/manifest">Manifest</a>
             <a href="/auth/signin">Sign In</a>
-            <a href="/auth/signup" className="nav-cta">Start Free →</a>
+            <a href="/auth/signup" className="nav-cta">Start Free \u2192</a>
           </div>
         </div>
       </nav>
@@ -142,14 +204,14 @@ export default function HomePage() {
             46 Temples Streaming Live Now
           </div>
           <h1>Every Sacred Temple.<br /><em>One Divine Companion.</em></h1>
-          <div className="hero-sub-hindi">सनातन संस्कृति, अनंत आस्था — एक यात्रा, अनेक अनुभव</div>
+          <div className="hero-sub-hindi">\u0938\u0928\u093e\u0924\u0928 \u0938\u0902\u0938\u094d\u0915\u0943\u0924\u093f, \u0905\u0928\u0902\u0924 \u0906\u0938\u094d\u0925\u093e \u2014 \u090f\u0915 \u092f\u093e\u0924\u094d\u0930\u093e, \u0905\u0928\u0947\u0915 \u0905\u0928\u0941\u092d\u0935</div>
           <p className="hero-sub">
             India has over 2 million temples. Plan your pilgrimage with AI, watch live darshan,
-            write your Sankalp and connect with a community of pilgrims — all free, forever.
+            write your Sankalp and connect with a community of pilgrims \u2014 all free, forever.
           </p>
           <div className="hero-ctas">
-            <a href="/auth/signup" className="cta-main">Begin Your Yatra — Free →</a>
-            <a href="/manifest" className="cta-gold">🙏 Write Your Sankalp</a>
+            <a href="/auth/signup" className="cta-main">Begin Your Yatra \u2014 Free \u2192</a>
+            <a href="/manifest" className="cta-gold">\uD83D\uDE4F Write Your Sankalp</a>
             <a href="/explore?tab=darshan" className="cta-white">Watch Live Darshan</a>
           </div>
         </div>
@@ -162,7 +224,7 @@ export default function HomePage() {
             {n:'422',l:'Sacred Temples'},
             {n:'46',l:'Live Streams'},
             {n:'18',l:'States Covered'},
-            {n:'₹0',l:'Free Forever'},
+            {n:'\u20B90',l:'Free Forever'},
           ].map(s => (
             <div key={s.l}>
               <div className="stat-n">{s.n}</div>
@@ -176,26 +238,28 @@ export default function HomePage() {
       <div className="divider">
         <div className="divider-label">Explore Sacred India</div>
         <h2 className="divider-title">Pilgrimage Destinations</h2>
-        <p className="divider-sub">From the Himalayas to Kanyakumari — discover India's most sacred temples</p>
+        <p className="divider-sub">From the Himalayas to Kanyakumari \u2014 discover India's most sacred temples</p>
       </div>
       <div className="temples">
         <div className="temple-grid">
           {FEATURES.map(f => (
             <a key={f.title} href={f.link} className="temple-card">
-              <div className="temple-img" style={{backgroundImage:`url('${f.img}')`}}>
+              <div className="temple-img" style={{backgroundImage:\`url('\${f.img}')\`}}>
                 <div className="temple-img-overlay" />
               </div>
               <div className="temple-card-body">
                 <div className="temple-card-title">{f.title}</div>
                 <p className="temple-card-desc">{f.desc}</p>
-                <div className="temple-card-link">Explore →</div>
+                <div className="temple-card-link">Explore \u2192</div>
               </div>
             </a>
           ))}
         </div>
         <div style={{textAlign:'center',marginTop:40}}>
-          <a href="/explore" style={{display:'inline-flex',alignItems:'center',gap:8,padding:'12px 32px',borderRadius:100,border:'2px solid #8B1A1A',color:'#8B1A1A',textDecoration:'none',fontWeight:700,fontSize:15,transition:'all .2s'}}>
-            View All 422 Temples →
+          <a href="/explore" style={{display:'inline-flex',alignItems:'center',gap:8,padding:'12px 32px',borderRadius:100,border:'2px solid #8B1A1A',color:'#8B1A1A',textDecoration:'none',fontWeight:700,fontSize:15,transition:'all .2s'}}
+            onMouseEnter={e=>(e.currentTarget as HTMLElement).style.background='#FFF5F5'}
+            onMouseLeave={e=>(e.currentTarget as HTMLElement).style.background='transparent'}>
+            View All 422 Temples \u2192
           </a>
         </div>
       </div>
@@ -211,7 +275,7 @@ export default function HomePage() {
             Thousands of pilgrims have experienced the power of Sankalp.
           </p>
           <a href="/manifest" className="sankalp-cta">
-            🙏 Write Your Sankalp Now
+            \uD83D\uDE4F Write Your Sankalp Now
           </a>
         </div>
       </div>
@@ -226,9 +290,9 @@ export default function HomePage() {
           <div className="feat-grid">
             {[
               {n:'01',title:'AI Yatra Planner',desc:'Tell our AI your destination, days and budget. Get a complete day-by-day pilgrimage itinerary with temple sequences, aarti timings and accommodation.'},
-              {n:'02',title:'Live Darshan Streams',desc:'Watch live darshan from 46+ major temples — Tirupati, Kashi Vishwanath, Kedarnath, Vaishno Devi and more, anytime from anywhere.'},
+              {n:'02',title:'Live Darshan Streams',desc:'Watch live darshan from 46+ major temples \u2014 Tirupati, Kashi Vishwanath, Kedarnath, Vaishno Devi and more, anytime from anywhere.'},
               {n:'03',title:'Navagraha Shanti Guide',desc:'Sanskrit shlokas, beej mantras and YouTube pronunciation links for all 9 planets. Know which graha to appease for health, wealth and peace.'},
-              {n:'04',title:'Pilgrimage Journal',desc:'Log every temple you visit. Build a lifetime pilgrimage passport — a permanent spiritual record of your sacred journey across India.'},
+              {n:'04',title:'Pilgrimage Journal',desc:'Log every temple you visit. Build a lifetime pilgrimage passport \u2014 a permanent spiritual record of your sacred journey across India.'},
               {n:'05',title:'Group Yatra Planner',desc:'Organise family pilgrimages with seat tracking, shared expense splitting and instant WhatsApp sharing. Open or private group yatras.'},
               {n:'06',title:'Yatra Savings Goals',desc:'Set a monthly savings target for your dream pilgrimage. Track deposits and link to FinVerse to earn interest while your sacred fund grows.'},
             ].map(f => (
@@ -250,7 +314,7 @@ export default function HomePage() {
           <div className="t-grid">
             {TESTIMONIALS.map(t => (
               <div key={t.name} className="t-card">
-                <div className="t-stars">★★★★★</div>
+                <div className="t-stars">\u2605\u2605\u2605\u2605\u2605</div>
                 <p className="t-quote">{t.quote}</p>
                 <div style={{display:'flex',alignItems:'center'}}>
                   <div className="t-avatar">{t.initial}</div>
@@ -269,9 +333,9 @@ export default function HomePage() {
       <div className="cta-final">
         <div className="divider-label">Join Thousands of Pilgrims</div>
         <h2>Begin Your Sacred Journey Today</h2>
-        <p>Free forever. No credit card. No ads. Write your Sankalp, plan your yatra, track your pilgrimage — all in one place.</p>
+        <p>Free forever. No credit card. No ads. Write your Sankalp, plan your yatra, track your pilgrimage \u2014 all in one place.</p>
         <div style={{display:'flex',gap:12,justifyContent:'center',flexWrap:'wrap'}}>
-          <a href="/auth/signup" className="cta-main" style={{borderRadius:100,padding:'15px 32px',fontSize:15,fontWeight:700,background:'#8B1A1A',color:'white',textDecoration:'none'}}>Create Free Account →</a>
+          <a href="/auth/signup" className="cta-main" style={{borderRadius:100,padding:'15px 32px',fontSize:15,fontWeight:700,background:'#8B1A1A',color:'white',textDecoration:'none'}}>Create Free Account \u2192</a>
           <a href="/explore" style={{padding:'15px 28px',borderRadius:100,border:'2px solid #8B1A1A',color:'#8B1A1A',fontSize:15,fontWeight:600,textDecoration:'none'}}>Explore Temples</a>
         </div>
       </div>
@@ -280,7 +344,7 @@ export default function HomePage() {
       <footer className="footer">
         <img src="/dd-logo.png" alt="DivyaDarshanam" />
         <p style={{fontWeight:600,color:'rgba(255,255,255,0.8)',fontSize:16,marginBottom:4}}>DivyaDarshanam</p>
-        <p style={{marginBottom:20}}>© 2026 DivyaDarshanam · Built with 🙏 for pilgrims across India</p>
+        <p style={{marginBottom:20}}>\u00A9 2026 DivyaDarshanam \u00B7 Built with \uD83D\uDE4F for pilgrims across India</p>
         <hr className="footer-divider" />
         <p style={{fontSize:12,marginBottom:10,letterSpacing:'.06em',textTransform:'uppercase',fontWeight:600}}>Conceptualized & Developed by</p>
         <div className="footer-dyna">
@@ -297,3 +361,14 @@ export default function HomePage() {
     </>
   )
 }
+`
+
+fs.writeFileSync(path.join(P, 'app/page.tsx'), page, 'utf8')
+console.log('OK: app/page.tsx redesigned')
+
+// Push
+process.chdir(P)
+execSync('git add "app/page.tsx" "public/hero-banner.png"', { stdio: 'inherit' })
+execSync('git commit -m "redesign: homepage with banner hero, real temple images, no icons"', { stdio: 'inherit' })
+execSync('git push', { stdio: 'inherit' })
+console.log('Done! Vercel deploying in ~2 mins.')
