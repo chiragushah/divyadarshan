@@ -41,17 +41,16 @@ export default function HomePage() {
         .nav-cta{background:#8B1A1A!important;color:#fff!important;border-radius:100px!important;padding:9px 22px!important;font-weight:700!important}
         .nav-cta:hover{background:#6B1212!important}
         @media(max-width:640px){.nav-links a:not(.nav-cta){display:none}.nav-logo img{height:56px}}
-        .hero{position:relative;min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-        .hero-bg{position:absolute;inset:0;background-image:url('/hero-banner.png');background-size:cover;background-position:center top}
-        .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.25) 40%,rgba(0,0,0,0.72) 100%)}
+        .hero{width:100%;line-height:0}
+        .hero img{width:100%;height:auto;display:block;max-height:92vh;object-fit:cover;object-position:center top}
         .hero-content{position:relative;z-index:2;padding:40px 24px 80px;max-width:900px;margin:0 auto}
-        .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.3);border-radius:100px;padding:7px 18px;font-size:12px;font-weight:700;color:white;letter-spacing:.08em;margin-bottom:28px;text-transform:uppercase}
-        .live-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:blink 2s ease infinite;flex-shrink:0}
+        
+        .live-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:blink 2s ease infinite;display:inline-block}
         @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-        .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,5rem);font-weight:700;line-height:1.1;color:white;margin-bottom:8px;text-shadow:0 2px 20px rgba(0,0,0,0.4)}
-        .hero h1 em{font-style:italic;color:#FFD700}
-        .hero-hindi{font-size:clamp(1rem,2.5vw,1.4rem);color:rgba(255,255,255,0.85);margin-bottom:8px}
-        .hero-sub{font-size:clamp(.9rem,1.8vw,1.1rem);line-height:1.8;color:rgba(255,255,255,0.8);max-width:640px;margin:0 auto 40px}
+        
+        
+        
+        
         .hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
         .cta-main{background:#8B1A1A;color:#fff;padding:15px 32px;border-radius:100px;font-size:15px;font-weight:700;text-decoration:none;transition:all .2s}
         .cta-main:hover{background:#6B1212;transform:translateY(-2px)}
@@ -128,18 +127,29 @@ export default function HomePage() {
       </nav>
 
       <div className="hero">
-        <div className="hero-bg" />
-        <div className="hero-overlay" />
-        <div className="hero-content">
-          <div className="hero-badge"><span className="live-dot" /> 46 Temples Streaming Live Now</div>
-          <h1>Every Sacred Temple.<br /><em>One Divine Companion.</em></h1>
-          <div className="hero-hindi">सनातन संस्कृति, अनंत आस्था — एक यात्रा, अनेक अनुभव</div>
-          <p className="hero-sub">India has over 2 million temples. Plan your pilgrimage with AI, watch live darshan, write your Sankalp — all free, forever.</p>
-          <div className="hero-ctas">
-            <a href="/auth/signup" className="cta-main">Begin Your Yatra — Free →</a>
-            <a href="/manifest" className="cta-gold">🙏 Write Your Sankalp</a>
-            <a href="/explore?tab=darshan" className="cta-white">Watch Live Darshan</a>
+        <img src="/hero-banner.png" alt="DivyaDarshanam - Your Journey from Darkness to Divine Light" />
+      </div>
+
+      {/* CTA strip below banner */}
+      <div style={{background:'#fff',borderBottom:'1px solid #F0EDE8',padding:'32px 24px',textAlign:'center'}}>
+        <div style={{marginBottom:16}}>
+          <div style={{display:'inline-flex',alignItems:'center',gap:8,background:'#FFF5F0',border:'1.5px solid #FFD4B8',borderRadius:100,padding:'7px 18px',fontSize:12,fontWeight:700,color:'#C0570A',letterSpacing:'.08em',textTransform:'uppercase',marginBottom:20}}>
+            <span style={{width:8,height:8,borderRadius:'50%',background:'#22c55e',display:'inline-block',animation:'blink 2s ease infinite'}} />
+            46 Temples Streaming Live Now
           </div>
+        </div>
+        <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(1.4rem,3vw,2rem)',fontWeight:700,color:'#1A0A00',marginBottom:8}}>
+          Begin Your Sacred Journey Today
+        </h2>
+        <p style={{fontSize:'1rem',color:'#6B5B4E',marginBottom:24,maxWidth:540,margin:'0 auto 24px'}}>
+          Plan your pilgrimage with AI, watch live darshan, write your Sankalp — all free, forever.
+        </p>
+        <div style={{display:'flex',gap:12,justifyContent:'center',flexWrap:'wrap'}}>
+          <a href="/auth/signup" className="cta-main">Begin Your Yatra — Free →</a>
+          <a href="/manifest" className="cta-gold">🙏 Write Your Sankalp</a>
+          <a href="/explore?tab=darshan" className="cta-white" style={{background:'transparent',color:'#8B1A1A',border:'2px solid #8B1A1A',padding:'15px 28px',borderRadius:100,fontSize:15,fontWeight:600,textDecoration:'none'}}>Watch Live Darshan</a>
+        </div>
+      </div>
         </div>
       </div>
 
