@@ -51,6 +51,10 @@ export async function middleware(request: NextRequest) {
   }
 
   // Always public
+  // Allow public pages
+  const PUBLIC_PAGES = ['/about', '/team', '/stories', '/contact', '/volunteer']
+  if (PUBLIC_PAGES.includes(pathname)) return NextResponse.next()
+
   const PUBLIC = ['/auth/', '/api/auth', '/api/analytics', '/api/admin', '/api/health',
     '/api/announcement', '/api/temples', '/api/nearby', '/api/image-proxy', '/api/alerts']
   if (PUBLIC.some(p => pathname.startsWith(p))) return NextResponse.next()
