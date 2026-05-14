@@ -1,4 +1,10 @@
-'use client'
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+const P = 'C:\\Users\\chira\\Downloads\\divyadarshan'
+
+// Complete clean rewrite - no regex patching
+const page = `'use client'
 import Link from 'next/link'
 
 const TEMPLE_CARDS = [
@@ -28,7 +34,7 @@ const TESTIMONIALS = [
 export default function HomePage() {
   return (
     <>
-      <style>{`
+      <style>{\`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
         *{box-sizing:border-box;margin:0;padding:0}
         html,body{background:#fff;color:#1A0A00;font-family:'Inter',sans-serif}
@@ -104,15 +110,12 @@ export default function HomePage() {
         .t-name{font-size:13px;font-weight:700;color:#8B1A1A}
         .t-loc{font-size:11px;color:#A89B8C;margin-top:2px}
         .cta-final{text-align:center;padding:80px 24px;background:linear-gradient(180deg,#fff 0%,#FFF5F0 100%)}
-        .footer{background:#fff;border-top:2px solid #C0570A;padding:48px 24px 32px;text-align:center}
-        .footer p{font-size:13px;line-height:1.8;color:#6B5B4E}
-        .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:20px 0}
-        .footer-links a{padding:8px 18px;border-radius:100px;border:1.5px solid #C0570A;color:#8B1A1A;text-decoration:none;font-size:13px;font-weight:600;transition:all .15s}
-        .footer-links a:hover{background:#C0570A;color:white}
-        .footer-nav a{color:#A89B8C;text-decoration:none;margin:0 10px;font-size:13px}
-        .footer-nav a:hover{color:#8B1A1A}
-        .footer hr{border:none;border-top:1px solid #F0EDE8;margin:24px 0}
-      `}</style>
+        .footer{background:#1A0A00;color:rgba(255,255,255,0.6);padding:48px 24px;text-align:center}
+        .footer p{font-size:13px;line-height:1.8}
+        .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 10px;font-size:13px}
+        .footer a:hover{color:#FFD700}
+        .footer hr{border:none;border-top:1px solid rgba(255,255,255,0.08);margin:24px 0}
+      \`}</style>
 
       <nav className="nav">
         <div className="nav-inner">
@@ -122,7 +125,7 @@ export default function HomePage() {
             <a href="/plan">Plan Yatra</a>
             <a href="/manifest">Manifest</a>
             <a href="/auth/signin">Sign In</a>
-            <a href="/auth/signup" className="nav-cta">Start Free →</a>
+            <a href="/auth/signup" className="nav-cta">Start Free \u2192</a>
           </div>
         </div>
       </nav>
@@ -133,11 +136,11 @@ export default function HomePage() {
         <div className="hero-content">
           <div className="hero-badge"><span className="live-dot" /> 46 Temples Streaming Live Now</div>
           <h1>Every Sacred Temple.<br /><em>One Divine Companion.</em></h1>
-          <div className="hero-hindi">सनातन संस्कृति, अनंत आस्था — एक यात्रा, अनेक अनुभव</div>
-          <p className="hero-sub">India has over 2 million temples. Plan your pilgrimage with AI, watch live darshan, write your Sankalp — all free, forever.</p>
+          <div className="hero-hindi">\u0938\u0928\u093e\u0924\u0928 \u0938\u0902\u0938\u094d\u0915\u0943\u0924\u093f, \u0905\u0928\u0902\u0924 \u0906\u0938\u094d\u0925\u093e \u2014 \u090f\u0915 \u092f\u093e\u0924\u094d\u0930\u093e, \u0905\u0928\u0947\u0915 \u0905\u0928\u0941\u092d\u0935</div>
+          <p className="hero-sub">India has over 2 million temples. Plan your pilgrimage with AI, watch live darshan, write your Sankalp \u2014 all free, forever.</p>
           <div className="hero-ctas">
-            <a href="/auth/signup" className="cta-main">Begin Your Yatra — Free →</a>
-            <a href="/manifest" className="cta-gold">🙏 Write Your Sankalp</a>
+            <a href="/auth/signup" className="cta-main">Begin Your Yatra \u2014 Free \u2192</a>
+            <a href="/manifest" className="cta-gold">\uD83D\uDE4F Write Your Sankalp</a>
             <a href="/explore?tab=darshan" className="cta-white">Watch Live Darshan</a>
           </div>
         </div>
@@ -145,7 +148,7 @@ export default function HomePage() {
 
       <div className="stats">
         <div className="stats-inner">
-          {[{n:'422',l:'Sacred Temples'},{n:'46',l:'Live Streams'},{n:'18',l:'States Covered'},{n:'₹0',l:'Free Forever'}].map(s => (
+          {[{n:'422',l:'Sacred Temples'},{n:'46',l:'Live Streams'},{n:'18',l:'States Covered'},{n:'\u20B90',l:'Free Forever'}].map(s => (
             <div key={s.l}><div className="stat-n">{s.n}</div><div className="stat-l">{s.l}</div></div>
           ))}
         </div>
@@ -154,26 +157,26 @@ export default function HomePage() {
       <div style={{textAlign:'center',padding:'64px 24px 0'}}>
         <div className="section-label">Explore Sacred India</div>
         <h2 className="section-title">Pilgrimage Destinations</h2>
-        <p style={{fontSize:'1rem',color:'#6B5B4E',maxWidth:500,margin:'0 auto'}}>From the Himalayas to Kanyakumari — discover India’s most sacred temples</p>
+        <p style={{fontSize:'1rem',color:'#6B5B4E',maxWidth:500,margin:'0 auto'}}>From the Himalayas to Kanyakumari \u2014 discover India\u2019s most sacred temples</p>
       </div>
       <div className="temples">
         <div className="temple-grid">
           {TEMPLE_CARDS.map(f => (
             <a key={f.title} href={f.link} className="temple-card">
-              <div className="temple-img" style={{backgroundImage:`url('${f.img}')`}}>
+              <div className="temple-img" style={{backgroundImage:\`url('\${f.img}')\`}}>
                 <div className="temple-img-overlay" />
               </div>
               <div className="temple-card-body">
                 <div className="temple-card-title">{f.title}</div>
                 <p className="temple-card-desc">{f.desc}</p>
-                <div className="temple-card-link">Explore →</div>
+                <div className="temple-card-link">Explore \u2192</div>
               </div>
             </a>
           ))}
         </div>
         <div style={{textAlign:'center',marginTop:40}}>
           <a href="/explore" style={{display:'inline-flex',alignItems:'center',gap:8,padding:'12px 32px',borderRadius:100,border:'2px solid #8B1A1A',color:'#8B1A1A',textDecoration:'none',fontWeight:700,fontSize:15}}>
-            View All 422 Temples →
+            View All 422 Temples \u2192
           </a>
         </div>
       </div>
@@ -183,7 +186,7 @@ export default function HomePage() {
           <div style={{fontSize:11,fontWeight:700,letterSpacing:'.18em',textTransform:'uppercase',color:'rgba(255,215,0,0.6)',marginBottom:12}}>Sacred Intention</div>
           <h2>Write Your Sankalp.<br />Trust the Divine.</h2>
           <p>In Indian tradition, a Sankalp is a sacred vow made to a deity. Write your deepest wish, dedicate it to the right god, and commit to a gratitude yatra when it manifests.</p>
-          <a href="/manifest" className="sankalp-cta">🙏 Write Your Sankalp Now</a>
+          <a href="/manifest" className="sankalp-cta">\uD83D\uDE4F Write Your Sankalp Now</a>
         </div>
       </div>
 
@@ -211,7 +214,7 @@ export default function HomePage() {
         <div className="t-grid">
           {TESTIMONIALS.map(t => (
             <div key={t.name} className="t-card">
-              <div className="t-stars">★★★★★</div>
+              <div className="t-stars">\u2605\u2605\u2605\u2605\u2605</div>
               <p className="t-quote">{t.quote}</p>
               <div style={{display:'flex',alignItems:'center'}}>
                 <div className="t-avatar">{t.i}</div>
@@ -225,17 +228,17 @@ export default function HomePage() {
       <div className="cta-final">
         <div className="section-label">Join Thousands of Pilgrims</div>
         <h2 className="section-title">Begin Your Sacred Journey Today</h2>
-        <p style={{fontSize:'1rem',color:'#6B5B4E',marginBottom:32,maxWidth:480,margin:'0 auto 32px'}}>Free forever. No credit card. No ads. Write your Sankalp, plan your yatra — all in one place.</p>
+        <p style={{fontSize:'1rem',color:'#6B5B4E',marginBottom:32,maxWidth:480,margin:'0 auto 32px'}}>Free forever. No credit card. No ads. Write your Sankalp, plan your yatra \u2014 all in one place.</p>
         <div style={{display:'flex',gap:12,justifyContent:'center',flexWrap:'wrap'}}>
-          <a href="/auth/signup" style={{background:'#8B1A1A',color:'white',padding:'15px 32px',borderRadius:100,fontSize:15,fontWeight:700,textDecoration:'none'}}>Create Free Account →</a>
+          <a href="/auth/signup" style={{background:'#8B1A1A',color:'white',padding:'15px 32px',borderRadius:100,fontSize:15,fontWeight:700,textDecoration:'none'}}>Create Free Account \u2192</a>
           <a href="/explore" style={{padding:'15px 28px',borderRadius:100,border:'2px solid #8B1A1A',color:'#8B1A1A',fontSize:15,fontWeight:600,textDecoration:'none'}}>Explore Temples</a>
         </div>
       </div>
 
       <footer className="footer">
-        <img src="/dd-logo.png" alt="DivyaDarshanam" style={{height:60,width:'auto',margin:'0 auto 16px',display:'block',filter:'none'}} />
+        <img src="/dd-logo.png" alt="DivyaDarshanam" style={{height:60,width:'auto',margin:'0 auto 16px',display:'block',filter:'brightness(0) invert(1)',opacity:0.8}} />
         <p style={{fontWeight:600,color:'rgba(255,255,255,0.8)',fontSize:16,marginBottom:4}}>DivyaDarshanam</p>
-        <p>© 2026 DivyaDarshanam · Built with 🙏 for pilgrims across India</p>
+        <p>\u00A9 2026 DivyaDarshanam \u00B7 Built with \uD83D\uDE4F for pilgrims across India</p>
         <hr />
         <p style={{fontSize:12,marginBottom:10,letterSpacing:'.06em',textTransform:'uppercase',fontWeight:600}}>Conceptualized & Developed by</p>
         <img src="/dynaimers-logo.jpg" alt="Dynaimers Consulting" style={{height:32,width:'auto',margin:'0 auto 16px',display:'block'}} />
@@ -244,3 +247,13 @@ export default function HomePage() {
     </>
   )
 }
+`
+
+fs.writeFileSync(path.join(P, 'app/page.tsx'), page, 'utf8')
+console.log('OK: page.tsx rewritten cleanly')
+
+process.chdir(P)
+execSync('git add "app/page.tsx"', { stdio: 'inherit' })
+execSync('git commit -m "fix: clean homepage rewrite - client component, no metadata export"', { stdio: 'inherit' })
+execSync('git push', { stdio: 'inherit' })
+console.log('Done! Vercel deploying in ~2 mins.')
