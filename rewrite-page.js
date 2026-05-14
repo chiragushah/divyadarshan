@@ -1,0 +1,295 @@
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+const P = 'C:\\Users\\chira\\Downloads\\divyadarshan'
+
+const content = `'use client'
+import Link from 'next/link'
+
+const TEMPLE_CARDS = [
+  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Kedarnath_Temple.jpg/800px-Kedarnath_Temple.jpg', title: 'Kedarnath Temple', desc: 'One of the holiest Shiva shrines. Plan your trek with AI-guided itineraries.', link: '/temple/kedarnath-temple' },
+  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Tirumala_temple_view.jpg/800px-Tirumala_temple_view.jpg', title: 'Tirumala Tirupati', desc: 'Most visited temple on Earth. Check live darshan slots.', link: '/temple/tirumala-venkateswara-temple' },
+  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Varanasi_at_dusk.jpg/800px-Varanasi_at_dusk.jpg', title: 'Kashi Vishwanath', desc: 'The eternal city of Lord Shiva. Watch live darshan from the Jyotirlinga.', link: '/temple/kashi-vishwanath-temple' },
+  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Vaishno_Devi_Temple.jpg/800px-Vaishno_Devi_Temple.jpg', title: 'Vaishno Devi', desc: 'Plan your trek to Maa Vaishno Devi with route guides.', link: '/temple/vaishno-devi-shrine' },
+  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Shirdi_Sai_Baba_Temple.jpg/800px-Shirdi_Sai_Baba_Temple.jpg', title: 'Shirdi Sai Baba', desc: 'Watch live darshan from Shirdi Sai Baba Samadhi Mandir.', link: '/temple/shirdi-sai-baba-samadhi' },
+  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Somnath_temple_Prabhas_Patan.jpg/800px-Somnath_temple_Prabhas_Patan.jpg', title: 'Somnath Temple', desc: 'First Jyotirlinga of Lord Shiva. Watch sunset aarti live.', link: '/temple/somnath-temple' },
+]
+
+const FEATURES = [
+  { n: '01', title: 'AI Yatra Planner', desc: 'Tell our AI your destination, days and budget. Get a complete day-by-day pilgrimage itinerary.' },
+  { n: '02', title: 'Live Darshan Streams', desc: 'Watch live darshan from 46+ major temples anytime from anywhere in the world.' },
+  { n: '03', title: 'Navagraha Shanti Guide', desc: 'Sanskrit shlokas and beej mantras for all 9 planets with YouTube pronunciation links.' },
+  { n: '04', title: 'Pilgrimage Journal', desc: 'Log every temple you visit. Build a lifetime pilgrimage passport of your sacred journey.' },
+  { n: '05', title: 'Group Yatra Planner', desc: 'Organise family pilgrimages with seat tracking and shared expense splitting.' },
+  { n: '06', title: 'Yatra Savings Goals', desc: 'Set a monthly savings target for your dream pilgrimage and track every deposit.' },
+]
+
+const TESTIMONIALS = [
+  { quote: 'The AI planner gave me a complete Char Dham itinerary in 2 minutes.', name: 'Ramesh Kulkarni', loc: 'Pune', i: 'R' },
+  { quote: 'I wrote my Sankalp for my daughter\u2019s marriage. Eight months later she found the perfect match. Jai Mata Di.', name: 'Sunita Joshi', loc: 'Mumbai', i: 'S' },
+  { quote: 'Navagraha shlokas with YouTube links changed my daily morning routine.', name: 'Vikram Mehta', loc: 'Ahmedabad', i: 'V' },
+]
+
+const CSS = [
+  "@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');",
+  "*{box-sizing:border-box;margin:0;padding:0}",
+  "html,body{background:#fff;color:#1A0A00;font-family:'Inter',sans-serif}",
+  ".nav{background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #F0EDE8;position:sticky;top:0;z-index:100;box-shadow:0 1px 16px rgba(0,0,0,0.06)}",
+  ".nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px}",
+  ".nav-logo img{height:70px;width:auto;object-fit:contain;display:block}",
+  ".nav-links{display:flex;align-items:center;gap:4px}",
+  ".nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:#555;text-decoration:none;transition:all .15s}",
+  ".nav-links a:hover{color:#8B1A1A;background:#FFF5F5}",
+  ".nav-cta{background:#8B1A1A!important;color:#fff!important;border-radius:100px!important;padding:9px 22px!important;font-weight:700!important}",
+  ".nav-cta:hover{background:#6B1212!important}",
+  "@media(max-width:640px){.nav-links a:not(.nav-cta){display:none}.nav-logo img{height:56px}}",
+  ".hero{width:100%;line-height:0}",
+  ".hero img{width:100%;height:auto;display:block;max-height:95vh;object-fit:cover;object-position:center top}",
+  ".cta-strip{background:#fff;border-bottom:1px solid #F0EDE8;padding:32px 24px;text-align:center}",
+  "@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}",
+  ".live-badge{display:inline-flex;align-items:center;gap:8px;background:#FFF5F0;border:1.5px solid #FFD4B8;border-radius:100px;padding:7px 18px;font-size:12px;font-weight:700;color:#C0570A;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px}",
+  ".ldot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:blink 2s ease infinite;display:inline-block;flex-shrink:0}",
+  ".ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}",
+  ".cta-main{background:#8B1A1A;color:#fff;padding:14px 28px;border-radius:100px;font-size:15px;font-weight:700;text-decoration:none;transition:all .2s}",
+  ".cta-main:hover{background:#6B1212;transform:translateY(-2px)}",
+  ".cta-sec{padding:14px 24px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;border:2px solid #8B1A1A;color:#8B1A1A;transition:all .2s}",
+  ".cta-sec:hover{background:#FFF5F5}",
+  ".cta-gold{padding:14px 24px;border-radius:100px;font-size:15px;font-weight:700;text-decoration:none;border:2px solid #C0570A;color:#C0570A;transition:all .2s}",
+  ".cta-gold:hover{background:#FFF5F0}",
+  ".stats{background:#8B1A1A}",
+  ".stats-inner{max-width:900px;margin:0 auto;padding:32px 24px;display:grid;grid-template-columns:repeat(4,1fr);text-align:center}",
+  ".stat-n{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:#FFD700}",
+  ".stat-l{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-top:4px}",
+  "@media(max-width:480px){.stats-inner{grid-template-columns:repeat(2,1fr);gap:20px}}",
+  ".section-label{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#C0570A;margin-bottom:12px}",
+  ".section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;color:#1A0A00;margin-bottom:14px;line-height:1.2}",
+  ".temples{max-width:1200px;margin:0 auto;padding:64px 24px}",
+  ".temple-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}",
+  "@media(max-width:900px){.temple-grid{grid-template-columns:repeat(2,1fr)}}",
+  "@media(max-width:560px){.temple-grid{grid-template-columns:1fr}}",
+  ".temple-card{border-radius:16px;overflow:hidden;border:1.5px solid #F0EDE8;transition:all .2s;text-decoration:none;display:block;background:#fff}",
+  ".temple-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.1);border-color:rgba(192,87,10,0.3)}",
+  ".temple-img{height:200px;background-size:cover;background-position:center;position:relative}",
+  ".temple-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.55) 0%,transparent 60%)}",
+  ".temple-card-body{padding:16px}",
+  ".temple-card-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#1A0A00;margin-bottom:6px}",
+  ".temple-card-desc{font-size:13px;line-height:1.6;color:#6B5B4E}",
+  ".temple-card-link{display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:12px;font-weight:700;color:#8B1A1A}",
+  ".sankalp{background:linear-gradient(135deg,#1A0A00,#3D0808,#5C1A00);padding:72px 24px;text-align:center;position:relative;overflow:hidden}",
+  ".sankalp::before{content:'';position:absolute;inset:0;background:url('/hero-banner.png') center/cover;opacity:0.08}",
+  ".sankalp-inner{position:relative;z-index:2;max-width:700px;margin:0 auto}",
+  ".sankalp h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,3rem);color:#FFD700;margin-bottom:12px;line-height:1.2}",
+  ".sankalp p{font-size:1.05rem;color:rgba(255,255,255,0.8);line-height:1.8;margin-bottom:32px}",
+  ".sankalp-cta{display:inline-flex;align-items:center;gap:8px;background:#FFD700;color:#1A0A00;padding:16px 36px;border-radius:100px;font-size:16px;font-weight:800;text-decoration:none;transition:all .2s}",
+  ".sankalp-cta:hover{background:#FFC200;transform:translateY(-2px)}",
+  ".features-strip{background:#FDFAF6;padding:64px 24px}",
+  ".feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;max-width:1100px;margin-left:auto;margin-right:auto}",
+  "@media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}}",
+  "@media(max-width:480px){.feat-grid{grid-template-columns:1fr}}",
+  ".feat-card{background:#fff;border:1.5px solid #F0EDE8;border-radius:16px;padding:28px;transition:all .2s}",
+  ".feat-card:hover{border-color:rgba(192,87,10,0.2);box-shadow:0 4px 20px rgba(192,87,10,.08);transform:translateY(-2px)}",
+  ".feat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#F0EDE8;margin-bottom:8px}",
+  ".feat-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#1A0A00;margin-bottom:8px}",
+  ".feat-desc{font-size:13px;line-height:1.75;color:#6B5B4E}",
+  ".testi{background:#fff;border-top:1px solid #F0EDE8;padding:72px 24px}",
+  ".t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;max-width:1060px;margin-left:auto;margin-right:auto;text-align:left}",
+  "@media(max-width:768px){.t-grid{grid-template-columns:1fr}}",
+  ".t-card{background:#fff;border:1.5px solid #F0EDE8;border-radius:16px;padding:28px}",
+  ".t-stars{color:#FFD700;font-size:13px;margin-bottom:12px;letter-spacing:2px}",
+  ".t-quote{font-size:14px;line-height:1.8;color:#3D2B1F;margin-bottom:18px;font-style:italic}",
+  ".t-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#8B1A1A,#C0570A);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:16px;margin-right:12px;flex-shrink:0}",
+  ".t-name{font-size:13px;font-weight:700;color:#8B1A1A}",
+  ".t-loc{font-size:11px;color:#A89B8C;margin-top:2px}",
+  ".footer{background:#fff;border-top:2px solid #C0570A;padding:48px 24px 32px;text-align:center}",
+  ".footer p{font-size:13px;line-height:1.8;color:#6B5B4E}",
+  ".footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:20px 0}",
+  ".footer-links a{padding:8px 18px;border-radius:100px;border:1.5px solid #C0570A;color:#8B1A1A;text-decoration:none;font-size:13px;font-weight:600;transition:all .15s}",
+  ".footer-links a:hover{background:#C0570A;color:white}",
+  ".footer-nav a{color:#A89B8C;text-decoration:none;margin:0 10px;font-size:13px}",
+  ".footer-nav a:hover{color:#8B1A1A}",
+  ".footer-hr{border:none;border-top:1px solid #F0EDE8;margin:24px 0}",
+].join(' ')
+
+const page = `'use client'
+import Link from 'next/link'
+
+const TEMPLE_CARDS = [
+  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Kedarnath_Temple.jpg/800px-Kedarnath_Temple.jpg', title: 'Kedarnath Temple', desc: 'One of the holiest Shiva shrines. Plan your trek with AI-guided itineraries.', link: '/temple/kedarnath-temple' },
+  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Tirumala_temple_view.jpg/800px-Tirumala_temple_view.jpg', title: 'Tirumala Tirupati', desc: 'Most visited temple on Earth. Check live darshan slots.', link: '/temple/tirumala-venkateswara-temple' },
+  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Varanasi_at_dusk.jpg/800px-Varanasi_at_dusk.jpg', title: 'Kashi Vishwanath', desc: 'The eternal city of Lord Shiva. Watch live darshan from the Jyotirlinga.', link: '/temple/kashi-vishwanath-temple' },
+  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Vaishno_Devi_Temple.jpg/800px-Vaishno_Devi_Temple.jpg', title: 'Vaishno Devi', desc: 'Plan your trek to Maa Vaishno Devi with route guides.', link: '/temple/vaishno-devi-shrine' },
+  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Shirdi_Sai_Baba_Temple.jpg/800px-Shirdi_Sai_Baba_Temple.jpg', title: 'Shirdi Sai Baba', desc: 'Watch live darshan from Shirdi Sai Baba Samadhi Mandir.', link: '/temple/shirdi-sai-baba-samadhi' },
+  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Somnath_temple_Prabhas_Patan.jpg/800px-Somnath_temple_Prabhas_Patan.jpg', title: 'Somnath Temple', desc: 'First Jyotirlinga of Lord Shiva. Watch sunset aarti live.', link: '/temple/somnath-temple' },
+]
+
+const FEATURES = [
+  { n: '01', title: 'AI Yatra Planner', desc: 'Tell our AI your destination, days and budget. Get a complete day-by-day pilgrimage itinerary.' },
+  { n: '02', title: 'Live Darshan Streams', desc: 'Watch live darshan from 46+ major temples anytime from anywhere in the world.' },
+  { n: '03', title: 'Navagraha Shanti Guide', desc: 'Sanskrit shlokas and beej mantras for all 9 planets with YouTube pronunciation links.' },
+  { n: '04', title: 'Pilgrimage Journal', desc: 'Log every temple you visit. Build a lifetime pilgrimage passport of your sacred journey.' },
+  { n: '05', title: 'Group Yatra Planner', desc: 'Organise family pilgrimages with seat tracking and shared expense splitting.' },
+  { n: '06', title: 'Yatra Savings Goals', desc: 'Set a monthly savings target for your dream pilgrimage and track every deposit.' },
+]
+
+const TESTIMONIALS = [
+  { quote: 'The AI planner gave me a complete Char Dham itinerary in 2 minutes.', name: 'Ramesh Kulkarni', loc: 'Pune', i: 'R' },
+  { quote: 'I wrote my Sankalp for my daughter\\u2019s marriage. Eight months later she found the perfect match. Jai Mata Di.', name: 'Sunita Joshi', loc: 'Mumbai', i: 'S' },
+  { quote: 'Navagraha shlokas with YouTube links changed my daily morning routine.', name: 'Vikram Mehta', loc: 'Ahmedabad', i: 'V' },
+]
+
+export default function HomePage() {
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{__html: \`${CSS}\`}} />
+
+      <nav className="nav">
+        <div className="nav-inner">
+          <a href="/" className="nav-logo"><img src="/dd-logo.png" alt="DivyaDarshanam" /></a>
+          <div className="nav-links">
+            <a href="/explore">Explore Temples</a>
+            <a href="/plan">Plan Yatra</a>
+            <a href="/manifest">Manifest</a>
+            <a href="/auth/signin">Sign In</a>
+            <a href="/auth/signup" className="nav-cta">Start Free \\u2192</a>
+          </div>
+        </div>
+      </nav>
+
+      <div className="hero">
+        <img src="/hero-banner.png" alt="DivyaDarshanam - Your Journey from Darkness to Divine Light" />
+      </div>
+
+      <div className="cta-strip">
+        <div className="live-badge"><span className="ldot" /> 46 Temples Streaming Live Now</div>
+        <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(1.4rem,3vw,2rem)',fontWeight:700,color:'#1A0A00',marginBottom:8}}>Begin Your Sacred Journey Today</h2>
+        <p style={{fontSize:'1rem',color:'#6B5B4E',marginBottom:24,maxWidth:540,margin:'0 auto 24px'}}>Plan your pilgrimage with AI, watch live darshan, write your Sankalp \\u2014 all free, forever.</p>
+        <div className="ctas">
+          <a href="/auth/signup" className="cta-main">Begin Your Yatra \\u2014 Free \\u2192</a>
+          <a href="/manifest" className="cta-gold">\\uD83D\\uDE4F Write Your Sankalp</a>
+          <a href="/explore?tab=darshan" className="cta-sec">Watch Live Darshan</a>
+        </div>
+      </div>
+
+      <div className="stats">
+        <div className="stats-inner">
+          {[{n:'422',l:'Sacred Temples'},{n:'46',l:'Live Streams'},{n:'18',l:'States Covered'},{n:'\\u20B90',l:'Free Forever'}].map(s => (
+            <div key={s.l}><div className="stat-n">{s.n}</div><div className="stat-l">{s.l}</div></div>
+          ))}
+        </div>
+      </div>
+
+      <div style={{textAlign:'center',padding:'64px 24px 0'}}>
+        <div className="section-label">Explore Sacred India</div>
+        <h2 className="section-title">Pilgrimage Destinations</h2>
+        <p style={{fontSize:'1rem',color:'#6B5B4E',maxWidth:500,margin:'0 auto'}}>From the Himalayas to Kanyakumari \\u2014 discover India\\u2019s most sacred temples</p>
+      </div>
+      <div className="temples">
+        <div className="temple-grid">
+          {TEMPLE_CARDS.map(f => (
+            <a key={f.title} href={f.link} className="temple-card">
+              <div className="temple-img" style={{backgroundImage:'url('+f.img+')'}}>
+                <div className="temple-img-overlay" />
+              </div>
+              <div className="temple-card-body">
+                <div className="temple-card-title">{f.title}</div>
+                <p className="temple-card-desc">{f.desc}</p>
+                <div className="temple-card-link">Explore \\u2192</div>
+              </div>
+            </a>
+          ))}
+        </div>
+        <div style={{textAlign:'center',marginTop:40}}>
+          <a href="/explore" style={{display:'inline-flex',alignItems:'center',gap:8,padding:'12px 32px',borderRadius:100,border:'2px solid #8B1A1A',color:'#8B1A1A',textDecoration:'none',fontWeight:700,fontSize:15}}>View All 422 Temples \\u2192</a>
+        </div>
+      </div>
+
+      <div className="sankalp">
+        <div className="sankalp-inner">
+          <div style={{fontSize:11,fontWeight:700,letterSpacing:'.18em',textTransform:'uppercase',color:'rgba(255,215,0,0.6)',marginBottom:12}}>Sacred Intention</div>
+          <h2>Write Your Sankalp.<br />Trust the Divine.</h2>
+          <p>In Indian tradition, a Sankalp is a sacred vow made to a deity. Write your deepest wish, dedicate it to the right god, and commit to a gratitude yatra when it manifests.</p>
+          <a href="/manifest" className="sankalp-cta">\\uD83D\\uDE4F Write Your Sankalp Now</a>
+        </div>
+      </div>
+
+      <div className="features-strip">
+        <div style={{textAlign:'center',marginBottom:8,maxWidth:1100,margin:'0 auto 8px'}}>
+          <div className="section-label">Everything You Need</div>
+          <h2 className="section-title">Built for Pilgrims, Not Tourists</h2>
+        </div>
+        <div className="feat-grid">
+          {FEATURES.map(f => (
+            <div key={f.n} className="feat-card">
+              <div className="feat-num">{f.n}</div>
+              <div className="feat-title">{f.title}</div>
+              <p className="feat-desc">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="testi">
+        <div style={{textAlign:'center'}}>
+          <div className="section-label">Pilgrim Stories</div>
+          <h2 className="section-title">Stories From Fellow Pilgrims</h2>
+        </div>
+        <div className="t-grid">
+          {TESTIMONIALS.map(t => (
+            <div key={t.name} className="t-card">
+              <div className="t-stars">\\u2605\\u2605\\u2605\\u2605\\u2605</div>
+              <p className="t-quote">{t.quote}</p>
+              <div style={{display:'flex',alignItems:'center'}}>
+                <div className="t-avatar">{t.i}</div>
+                <div><div className="t-name">{t.name}</div><div className="t-loc">{t.loc}</div></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={{textAlign:'center',padding:'80px 24px',background:'linear-gradient(180deg,#fff 0%,#FFF5F0 100%)'}}>
+        <div className="section-label">Join Thousands of Pilgrims</div>
+        <h2 className="section-title">Begin Your Sacred Journey Today</h2>
+        <p style={{fontSize:'1rem',color:'#6B5B4E',marginBottom:32,maxWidth:480,margin:'0 auto 32px'}}>Free forever. No credit card. No ads. Write your Sankalp, plan your yatra.</p>
+        <div className="ctas">
+          <a href="/auth/signup" className="cta-main">Create Free Account \\u2192</a>
+          <a href="/explore" className="cta-sec">Explore Temples</a>
+        </div>
+      </div>
+
+      <footer className="footer">
+        <img src="/dd-logo.png" alt="DivyaDarshanam" style={{height:64,width:'auto',margin:'0 auto 12px',display:'block'}} />
+        <p style={{fontWeight:700,color:'#8B1A1A',fontSize:16,marginBottom:4}}>DivyaDarshanam</p>
+        <p>\\u00A9 2026 DivyaDarshanam \\u00B7 Built with \\uD83D\\uDE4F for pilgrims across India</p>
+        <div className="footer-links">
+          <a href="/about">About Us</a>
+          <a href="/team">Our Team</a>
+          <a href="/stories">Pilgrim Stories</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/volunteer">Be a Volunteer</a>
+        </div>
+        <hr className="footer-hr" />
+        <p style={{fontSize:12,marginBottom:10,letterSpacing:'.06em',textTransform:'uppercase',fontWeight:600,color:'#A89B8C'}}>Conceptualized & Developed by</p>
+        <a href="https://dynaimers.com" target="_blank" rel="noopener noreferrer" style={{display:'inline-block',marginBottom:16}}>
+          <img src="/dynaimers-logo.jpg" alt="Dynaimers Consulting" style={{height:32,width:'auto',display:'block'}} />
+        </a>
+        <div className="footer-nav">
+          <a href="/explore">Explore</a>
+          <a href="/manifest">Manifest</a>
+          <a href="/plan">Plan Yatra</a>
+          <a href="/auth/signin">Sign In</a>
+        </div>
+      </footer>
+    </>
+  )
+}
+`
+
+fs.writeFileSync(path.join(P, 'app/page.tsx'), page, 'utf8')
+console.log('OK: page.tsx rewritten')
+
+process.chdir(P)
+execSync('git add "app/page.tsx"', { stdio: 'inherit' })
+execSync('git commit -m "fix: clean homepage rewrite with dangerouslySetInnerHTML for CSS"', { stdio: 'inherit' })
+execSync('git push', { stdio: 'inherit' })
+console.log('Done! Vercel deploying in ~2 mins.')
