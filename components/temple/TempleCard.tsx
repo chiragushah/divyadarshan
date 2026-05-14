@@ -148,7 +148,7 @@ export default function TempleCard({ temple, compact }: Props) {
     <Link href={`/temple/${temple.slug}`}
       className="card group overflow-hidden hover:-translate-y-1 transition-all duration-200 flex flex-col block">
       <TempleImage
-        url={temple.image_url}
+        url={temple.blob_image_url || temple.image_url}
         name={temple.name}
         deity={temple.deity}
         liveLabel={temple.has_live}
