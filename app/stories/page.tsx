@@ -4,7 +4,7 @@ export const metadata: Metadata = { title: 'Pilgrim Stories | DivyaDarshanam' }
 
 const STORIES = [
   { name: 'Ramesh Kulkarni', loc: 'Pune', title: 'My Char Dham Yatra with AI Planning', quote: 'The AI planner gave me a complete Char Dham itinerary in 2 minutes. It knew which temple opens first in the season. My family had the most organised pilgrimage we have ever done.', deity: 'Vishnu', initial: 'R' },
-  { name: 'Sunita Joshi', loc: 'Mumbai', title: 'Sankalp for My Daughter's Marriage', quote: 'I wrote my Sankalp for my daughter's marriage, dedicated it to Parvati Mata, and kept faith. Eight months later she found the perfect match. Jai Mata Di.', deity: 'Parvati', initial: 'S' },
+  { name: 'Sunita Joshi', loc: 'Mumbai', title: 'Sankalp for My Daughter’s Marriage', quote: 'I wrote my Sankalp for my daughter’s marriage, dedicated it to Parvati Mata, and kept faith. Eight months later she found the perfect match. Jai Mata Di.', deity: 'Parvati', initial: 'S' },
   { name: 'Vikram Mehta', loc: 'Ahmedabad', title: 'Navagraha Shanti Changed My Life', quote: 'The Navagraha shlokas with YouTube links changed my daily morning routine. I now chant correctly with the right pronunciation every single day.', deity: 'Navagraha', initial: 'V' },
 ]
 
