@@ -230,7 +230,7 @@ export default function HomePage() {
       </div>
 
       <footer className="footer">
-        <img src="/dd-logo.png" alt="DivyaDarshanam" style={{height:60,width:'auto',margin:'0 auto 16px',display:'block',filter:'brightness(0) invert(1)',opacity:0.8}} />
+        <img src="/dd-logo.png" alt="DivyaDarshanam" style={{height:60,width:'auto',margin:'0 auto 16px',display:'block',filter:'none'}} />
         <p style={{fontWeight:600,color:'rgba(255,255,255,0.8)',fontSize:16,marginBottom:4}}>DivyaDarshanam</p>
         <p>© 2026 DivyaDarshanam · Built with 🙏 for pilgrims across India</p>
         <hr />
