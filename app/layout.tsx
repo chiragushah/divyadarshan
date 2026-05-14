@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Outfit } from 'next/font/google'
 import { SessionProvider } from './providers'
 import { Toaster } from 'react-hot-toast'
 import './globals.css'
+import MusicPlayer from '@/components/MusicPlayer'
 import PWAInstaller from '@/components/PWAInstaller'
 
 const cormorant = Cormorant_Garamond({
@@ -71,6 +72,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             
             <div style={{ position: 'fixed', bottom: 20, right: 20, zIndex: 9999 }}>
             </div>
+              <MusicPlayer />
       </body>
     </html>
   )
