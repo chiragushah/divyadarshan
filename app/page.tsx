@@ -233,13 +233,29 @@ export default function HomePage() {
       </div>
 
       <footer className="footer">
-        <img src="/dd-logo.png" alt="DivyaDarshanam" style={{height:60,width:'auto',margin:'0 auto 16px',display:'block',filter:'none'}} />
-        <p style={{fontWeight:600,color:'rgba(255,255,255,0.8)',fontSize:16,marginBottom:4}}>DivyaDarshanam</p>
+        <img src="/dd-logo.png" alt="DivyaDarshanam" style={{height:64,width:'auto',margin:'0 auto 12px',display:'block'}} />
+        <p style={{fontWeight:700,color:'#8B1A1A',fontSize:16,marginBottom:4}}>DivyaDarshanam</p>
         <p>© 2026 DivyaDarshanam · Built with 🙏 for pilgrims across India</p>
+
+        <div className="footer-links">
+          <a href="/about">About Us</a>
+          <a href="/team">Our Team</a>
+          <a href="/stories">Pilgrim Stories</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/volunteer">Be a Volunteer</a>
+        </div>
+
         <hr />
-        <p style={{fontSize:12,marginBottom:10,letterSpacing:'.06em',textTransform:'uppercase',fontWeight:600}}>Conceptualized & Developed by</p>
-        <img src="/dynaimers-logo.jpg" alt="Dynaimers Consulting" style={{height:32,width:'auto',margin:'0 auto 16px',display:'block'}} />
-        <p><a href="/explore">Explore</a><a href="/manifest">Manifest</a><a href="/plan">Plan Yatra</a><a href="/auth/signin">Sign In</a></p>
+        <p style={{fontSize:12,marginBottom:10,letterSpacing:'.06em',textTransform:'uppercase',fontWeight:600,color:'#A89B8C'}}>Conceptualized & Developed by</p>
+        <a href="https://dynaimers.com" target="_blank" rel="noopener noreferrer" style={{display:'inline-block',marginBottom:16}}>
+          <img src="/dynaimers-logo.jpg" alt="Dynaimers Consulting" style={{height:32,width:'auto',display:'block'}} />
+        </a>
+        <div className="footer-nav">
+          <a href="/explore">Explore</a>
+          <a href="/manifest">Manifest</a>
+          <a href="/plan">Plan Yatra</a>
+          <a href="/auth/signin">Sign In</a>
+        </div>
       </footer>
     </>
   )
