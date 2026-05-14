@@ -16,7 +16,7 @@ const FEATURES = [
   {
     img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Tirupati_temple.jpg/800px-Tirupati_temple.jpg',
     title: 'Tirumala Tirupati',
-    desc: 'India's most visited temple. Plan darshan slots, check crowd levels and watch live aarti.',
+    desc: 'India\'s most visited temple. Plan darshan slots, check crowd levels and watch live aarti.',
     link: '/temple/tirumala-venkateswara-temple',
   },
   {
@@ -54,7 +54,7 @@ const STATS = [
 
 const TESTIMONIALS = [
   { quote: 'The AI planner gave me a complete Char Dham itinerary in 2 minutes. It knew which temple opens first in the season.', name: 'Ramesh Kulkarni', loc: 'Pune', initial: 'R' },
-  { quote: 'The Manifest feature is unlike anything I have seen. I wrote my Sankalp for my daughter's marriage and kept faith. Jai Mata Di.', name: 'Sunita Joshi', loc: 'Mumbai', initial: 'S' },
+  { quote: 'The Manifest feature is unlike anything I have seen. I wrote my Sankalp for my daughter\'s marriage and kept faith. Jai Mata Di.', name: 'Sunita Joshi', loc: 'Mumbai', initial: 'S' },
   { quote: 'Navagraha shlokas with YouTube links changed my daily morning routine. I now chant correctly with the right pronunciation.', name: 'Vikram Mehta', loc: 'Ahmedabad', initial: 'V' },
 ]
 
