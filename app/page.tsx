@@ -2,12 +2,12 @@
 import Link from 'next/link'
 
 const TEMPLE_CARDS = [
-  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Kedarnath_Temple.jpg/800px-Kedarnath_Temple.jpg', title: 'Kedarnath Temple', desc: 'One of the holiest Shiva shrines. Plan your trek with AI-guided itineraries.', link: '/temple/kedarnath-temple' },
-  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Tirumala_temple_view.jpg/800px-Tirumala_temple_view.jpg', title: 'Tirumala Tirupati', desc: 'Most visited temple on Earth. Check live darshan slots.', link: '/temple/tirumala-venkateswara-temple' },
-  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Varanasi_at_dusk.jpg/800px-Varanasi_at_dusk.jpg', title: 'Kashi Vishwanath', desc: 'The eternal city of Lord Shiva. Watch live darshan from the Jyotirlinga.', link: '/temple/kashi-vishwanath-temple' },
-  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Vaishno_Devi_Temple.jpg/800px-Vaishno_Devi_Temple.jpg', title: 'Vaishno Devi', desc: 'Plan your trek to Maa Vaishno Devi with route guides.', link: '/temple/vaishno-devi-shrine' },
-  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Shirdi_Sai_Baba_Temple.jpg/800px-Shirdi_Sai_Baba_Temple.jpg', title: 'Shirdi Sai Baba', desc: 'Watch live darshan from Shirdi Sai Baba Samadhi Mandir.', link: '/temple/shirdi-sai-baba-samadhi' },
-  { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Somnath_temple_Prabhas_Patan.jpg/800px-Somnath_temple_Prabhas_Patan.jpg', title: 'Somnath Temple', desc: 'First Jyotirlinga of Lord Shiva. Watch sunset aarti live.', link: '/temple/somnath-temple' },
+  { img: 'https://krsnbtjnctdzjg0j.public.blob.vercel-storage.com/temples/kedarnath-temple.jpg', title: 'Kedarnath Temple', desc: 'One of the holiest Shiva shrines. Plan your trek with AI-guided itineraries.', link: '/temple/kedarnath-temple' },
+  { img: 'https://krsnbtjnctdzjg0j.public.blob.vercel-storage.com/temples/tirumala-venkateswara-temple.jpg', title: 'Tirumala Tirupati', desc: 'Most visited temple on Earth. Check live darshan slots.', link: '/temple/tirumala-venkateswara-temple' },
+  { img: 'https://krsnbtjnctdzjg0j.public.blob.vercel-storage.com/temples/kashi-vishwanath-temple.jpg', title: 'Kashi Vishwanath', desc: 'The eternal city of Lord Shiva. Watch live darshan from the Jyotirlinga.', link: '/temple/kashi-vishwanath-temple' },
+  { img: 'https://krsnbtjnctdzjg0j.public.blob.vercel-storage.com/temples/vaishno-devi-shrine.jpg', title: 'Vaishno Devi', desc: 'Plan your trek to Maa Vaishno Devi with route guides.', link: '/temple/vaishno-devi-shrine' },
+  { img: 'https://krsnbtjnctdzjg0j.public.blob.vercel-storage.com/temples/shirdi-sai-baba-samadhi.jpg', title: 'Shirdi Sai Baba', desc: 'Watch live darshan from Shirdi Sai Baba Samadhi Mandir.', link: '/temple/shirdi-sai-baba-samadhi' },
+  { img: 'https://krsnbtjnctdzjg0j.public.blob.vercel-storage.com/temples/somnath-temple.jpg', title: 'Somnath Temple', desc: 'First Jyotirlinga of Lord Shiva. Watch sunset aarti live.', link: '/temple/somnath-temple' },
 ]
 
 const FEATURES = [
