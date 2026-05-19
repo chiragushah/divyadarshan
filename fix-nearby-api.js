@@ -1,4 +1,9 @@
-import { NextRequest, NextResponse } from 'next/server'
+const fs = require('fs'), path = require('path')
+const P = 'C:\\Users\\chira\\Downloads\\divyadarshan'
+
+// ── Fix /api/nearby/route.ts ─────────────────────────────────
+// Multiple Overpass mirrors + better Indian temple query + timeout
+const nearbyRoute = `import { NextRequest, NextResponse } from 'next/server'
 
 // Multiple Overpass endpoints — tried in order until one works
 const OVERPASS_ENDPOINTS = [
@@ -19,16 +24,16 @@ export async function GET(req: NextRequest) {
   }
 
   // Comprehensive Overpass query for Indian sacred places
-  const query = `[out:json][timeout:20];
+  const query = \`[out:json][timeout:20];
 (
-  node["amenity"="place_of_worship"](around:${radius},${lat},${lon});
-  way["amenity"="place_of_worship"](around:${radius},${lat},${lon});
-  node["historic"="temple"](around:${radius},${lat},${lon});
-  way["historic"="temple"](around:${radius},${lat},${lon});
-  node["building"="temple"](around:${radius},${lat},${lon});
-  way["building"="temple"](around:${radius},${lat},${lon});
+  node["amenity"="place_of_worship"](around:\${radius},\${lat},\${lon});
+  way["amenity"="place_of_worship"](around:\${radius},\${lat},\${lon});
+  node["historic"="temple"](around:\${radius},\${lat},\${lon});
+  way["historic"="temple"](around:\${radius},\${lat},\${lon});
+  node["building"="temple"](around:\${radius},\${lat},\${lon});
+  way["building"="temple"](around:\${radius},\${lat},\${lon});
 );
-out center 40;`
+out center 40;\`
 
   // Try each Overpass endpoint until one succeeds
   for (const endpoint of OVERPASS_ENDPOINTS) {
@@ -39,7 +44,7 @@ out center 40;`
       const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `data=${encodeURIComponent(query)}`,
+        body: \`data=\${encodeURIComponent(query)}\`,
         signal: controller.signal,
       })
       clearTimeout(timeout)
@@ -93,7 +98,7 @@ out center 40;`
             distance: dist,
             isOverpass: true,
             googleMapsUrl: clat && clon
-              ? `https://www.google.com/maps/dir/?api=1&destination=${clat},${clon}`
+              ? \`https://www.google.com/maps/dir/?api=1&destination=\${clat},\${clon}\`
               : null,
           }
         })
@@ -105,7 +110,7 @@ out center 40;`
 
     } catch (err: any) {
       // This endpoint failed — try next one
-      console.warn(`Overpass endpoint failed: ${endpoint}`, err.message)
+      console.warn(\`Overpass endpoint failed: \${endpoint}\`, err.message)
       continue
     }
   }
@@ -126,3 +131,61 @@ function haversine(lat1: number, lon1: number, lat2: number, lon2: number): numb
             Math.sin(dLon/2)**2
   return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)) * 10) / 10
 }
+`
+
+// ── Fix ExploreClient fetchNearby to handle the new response ─
+const clientPath = path.join(P, 'app/(app)/explore/ExploreClient.tsx')
+let client = fs.readFileSync(clientPath, 'utf8')
+
+// Replace the fetchNearby function
+const oldFetch = /async function fetchNearby[\s\S]*?^\s*\}/m
+const newFetch = `async function fetchNearby(lat: number, lon: number, radius: number) {
+    setLocLoading(true)
+    setLocationError('')
+    setNearbyTemples([])
+    try {
+      const res = await fetch(\`/api/nearby?lat=\${lat}&lon=\${lon}&radius=\${radius}\`)
+      const data = await res.json()
+
+      if (data.places && data.places.length > 0) {
+        setNearbyTemples(data.places)
+      } else {
+        // Overpass returned nothing — try DB fallback
+        try {
+          const fb = await fetch(\`/api/temples?nearby=1&lat=\${lat}&lon=\${lon}&radius=\${radius}\`)
+          const fd = await fb.json()
+          const dbTemples = fd.temples || fd.data || []
+          if (dbTemples.length > 0) {
+            setNearbyTemples(dbTemples)
+          } else {
+            setLocationError('No sacred places found nearby. Try a larger radius.')
+          }
+        } catch {
+          setLocationError('No sacred places found nearby. Try a larger radius.')
+        }
+      }
+    } catch (err: any) {
+      console.error('fetchNearby error:', err)
+      setLocationError('Could not fetch nearby temples. Please check your connection.')
+    } finally {
+      setLocLoading(false)
+    }
+  }`
+
+client = client.replace(oldFetch, newFetch)
+fs.writeFileSync(clientPath, client, 'utf8')
+console.log('✅ ExploreClient.tsx updated')
+
+// Write the API route
+const routeDir = path.join(P, 'app/api/nearby')
+fs.mkdirSync(routeDir, { recursive: true })
+fs.writeFileSync(path.join(routeDir, 'route.ts'), nearbyRoute, 'utf8')
+console.log('✅ app/api/nearby/route.ts written')
+
+// Commit & push
+const { execSync } = require('child_process')
+process.chdir(P)
+execSync('git add -A', { stdio: 'inherit' })
+execSync('git commit -m "fix: Nearby API - 4 Overpass mirrors + comprehensive temple query + timeout"', { stdio: 'inherit' })
+execSync('git push', { stdio: 'inherit' })
+console.log('\n✅ Deployed! Vercel building in ~2 mins.')

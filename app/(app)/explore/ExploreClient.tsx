@@ -80,33 +80,35 @@ export default function ExploreClient({ initialTemples, total, page, states, act
   async function fetchNearby(lat: number, lon: number, radius: number) {
     setLocLoading(true)
     setLocationError('')
+    setNearbyTemples([])
     try {
-      const res  = await fetch(`/api/nearby?lat=${lat}&lon=${lon}&radius=${radius}`)
+      const res = await fetch(`/api/nearby?lat=${lat}&lon=${lon}&radius=${radius}`)
       const data = await res.json()
-      const results = (data.elements || [])
-        .map((el: any) => {
-          const elLat = el.lat ?? el.center?.lat
-          const elLon = el.lon ?? el.center?.lon
-          const name  = el.tags?.name || el.tags?.['name:en'] || el.tags?.['name:hi']
-            || el.tags?.['name:mr'] || el.tags?.['name:gu'] || el.tags?.['name:ta']
-            || el.tags?.['name:te'] || el.tags?.['name:kn'] || el.tags?.['name:ml'] || ''
-          if (!name || !elLat || !elLon) return null
-          const nameLow  = name.toLowerCase()
-          const religion = (el.tags?.religion || '').toLowerCase()
-          // Only exclude clearly non-Indian religions (churches, mosques, synagogues)
-          const SKIP_RELIGIONS = ['christian', 'muslim', 'jewish', 'islam', 'bahai', 'zoroastrian']
-          if (SKIP_RELIGIONS.includes(religion)) return null
-          // Must have a name
-          if (!name) return null
-          return {
-            id: el.id, name,
-            address: [el.tags?.['addr:street'], el.tags?.['addr:city'] || el.tags?.['addr:district']].filter(Boolean).join(', '),
-            city:  el.tags?.['addr:city']  || el.tags?.['addr:district'] || '',
-            state: el.tags?.['addr:state'] || '',
-            deity: el.tags?.deity || el.tags?.['deity:name'] || '',
-            distance: getDistance(lat, lon, elLat, elLon),
-            lat: elLat, lon: elLon,
+
+      if (data.places && data.places.length > 0) {
+        setNearbyTemples(data.places)
+      } else {
+        // Overpass returned nothing — try DB fallback
+        try {
+          const fb = await fetch(`/api/temples?nearby=1&lat=${lat}&lon=${lon}&radius=${radius}`)
+          const fd = await fb.json()
+          const dbTemples = fd.temples || fd.data || []
+          if (dbTemples.length > 0) {
+            setNearbyTemples(dbTemples)
+          } else {
+            setLocationError('No sacred places found nearby. Try a larger radius.')
           }
+        } catch {
+          setLocationError('No sacred places found nearby. Try a larger radius.')
+        }
+      }
+    } catch (err: any) {
+      console.error('fetchNearby error:', err)
+      setLocationError('Could not fetch nearby temples. Please check your connection.')
+    } finally {
+      setLocLoading(false)
+    }
+  }
         })
         .filter(Boolean)
         .sort((a: any, b: any) => a.distance - b.distance)
