@@ -84,17 +84,15 @@ export default function ExploreClient({ initialTemples, total, page, states, act
     try {
       const res = await fetch(`/api/nearby?lat=${lat}&lon=${lon}&radius=${radius}`)
       const data = await res.json()
-
       if (data.places && data.places.length > 0) {
         setNearbyTemples(data.places)
       } else {
-        // Overpass returned nothing — try DB fallback
         try {
           const fb = await fetch(`/api/temples?nearby=1&lat=${lat}&lon=${lon}&radius=${radius}`)
           const fd = await fb.json()
-          const dbTemples = fd.temples || fd.data || []
-          if (dbTemples.length > 0) {
-            setNearbyTemples(dbTemples)
+          const dbT = fd.temples || fd.data || []
+          if (dbT.length > 0) {
+            setNearbyTemples(dbT)
           } else {
             setLocationError('No sacred places found nearby. Try a larger radius.')
           }
@@ -109,10 +107,6 @@ export default function ExploreClient({ initialTemples, total, page, states, act
       setLocLoading(false)
     }
   }
-        })
-        .filter(Boolean)
-        .sort((a: any, b: any) => a.distance - b.distance)
-      setNearbyTemples(results)
     } catch (err: any) {
       try {
         const fb = await fetch(`/api/temples?nearby=1&lat=${lat}&lon=${lon}&radius=${radius}`)

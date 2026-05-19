@@ -12,7 +12,7 @@ function haversine(lat1: number, lon1: number, lat2: number, lon2: number) {
   const dLat = (lat2 - lat1) * Math.PI / 180
   const dLon = (lon2 - lon1) * Math.PI / 180
   const a = Math.sin(dLat/2)**2 +
-            Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLon/2)**2
+    Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)**2
   return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)) * 10) / 10
 }
 
@@ -26,16 +26,14 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ places: [], error: 'Missing coordinates' }, { status: 400 })
   }
 
-  const query = `[out:json][timeout:20];
-(
-  node["amenity"="place_of_worship"](around:${radius},${lat},${lon});
-  way["amenity"="place_of_worship"](around:${radius},${lat},${lon});
-  node["historic"="temple"](around:${radius},${lat},${lon});
-  way["historic"="temple"](around:${radius},${lat},${lon});
-  node["building"="temple"](around:${radius},${lat},${lon});
-  way["building"="temple"](around:${radius},${lat},${lon});
-);
-out center 40;`
+  const query = '[out:json][timeout:20];(' +
+    'node["amenity"="place_of_worship"](around:' + radius + ',' + lat + ',' + lon + ');' +
+    'way["amenity"="place_of_worship"](around:' + radius + ',' + lat + ',' + lon + ');' +
+    'node["historic"="temple"](around:' + radius + ',' + lat + ',' + lon + ');' +
+    'way["historic"="temple"](around:' + radius + ',' + lat + ',' + lon + ');' +
+    'node["building"="temple"](around:' + radius + ',' + lat + ',' + lon + ');' +
+    'way["building"="temple"](around:' + radius + ',' + lat + ',' + lon + ');' +
+    ');out center 40;'
 
   for (const endpoint of ENDPOINTS) {
     try {
@@ -53,40 +51,32 @@ out center 40;`
       const json = await res.json()
       const elements: any[] = json.elements || []
 
-      const places = elements
-        .map((el: any) => {
-          const tags = el.tags || {}
-          const clat = el.type === 'way' ? el.center?.lat : el.lat
-          const clon = el.type === 'way' ? el.center?.lon : el.lon
-          if (!clat || !clon) return null
-          const name = tags.name || tags['name:en'] || tags['name:hi'] || ''
-          if (!name) return null
-          const religion = (tags.religion || '').toLowerCase()
-          let type = 'Temple'
-          if (religion === 'hindu')    type = 'Hindu Temple'
-          if (religion === 'jain')     type = 'Jain Temple'
-          if (religion === 'sikh')     type = 'Gurudwara'
-          if (religion === 'buddhist') type = 'Buddhist Temple'
-          return {
-            _id: String(el.id),
-            name,
-            type,
-            state: tags['addr:state'] || '',
-            city:  tags['addr:city']  || tags['addr:suburb'] || '',
-            lat: clat, lon: clon,
-            distance: haversine(lat, lon, clat, clon),
-            isOverpass: true,
-            googleMapsUrl: `https://www.google.com/maps/dir/?api=1&destination=${clat},${clon}`,
-          }
-        })
-        .filter(Boolean)
-        .sort((a: any, b: any) => a.distance - b.distance)
-        .slice(0, 30)
+      const places = elements.map((el: any) => {
+        const tags = el.tags || {}
+        const clat = el.type === 'way' ? el.center?.lat : el.lat
+        const clon = el.type === 'way' ? el.center?.lon : el.lon
+        if (!clat || !clon) return null
+        const name = tags.name || tags['name:en'] || tags['name:hi'] || ''
+        if (!name) return null
+        const rel = (tags.religion || '').toLowerCase()
+        let type = 'Temple'
+        if (rel === 'hindu')    type = 'Hindu Temple'
+        if (rel === 'jain')     type = 'Jain Temple'
+        if (rel === 'sikh')     type = 'Gurudwara'
+        if (rel === 'buddhist') type = 'Buddhist Temple'
+        return {
+          _id: String(el.id), name, type,
+          state: tags['addr:state'] || '',
+          city:  tags['addr:city']  || tags['addr:suburb'] || '',
+          lat: clat, lon: clon,
+          distance: haversine(lat, lon, clat, clon),
+          isOverpass: true,
+          googleMapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=' + clat + ',' + clon,
+        }
+      }).filter(Boolean).sort((a: any, b: any) => a.distance - b.distance).slice(0, 30)
 
       return NextResponse.json({ places, source: 'overpass' })
-    } catch (_) {
-      continue
-    }
+    } catch (_) { continue }
   }
 
   return NextResponse.json({ places: [], source: 'none' })
