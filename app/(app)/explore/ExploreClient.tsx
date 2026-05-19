@@ -101,24 +101,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
         }
       }
     } catch (err: any) {
-      console.error('fetchNearby error:', err)
       setLocationError('Could not fetch nearby temples. Please check your connection.')
-    } finally {
-      setLocLoading(false)
-    }
-  }
-    } catch (err: any) {
-      try {
-        const fb = await fetch(`/api/temples?nearby=1&lat=${lat}&lon=${lon}&radius=${radius}`)
-        const fd = await fb.json()
-        if (fd.temples?.length > 0) {
-          setNearbyTemples(fd.temples.map((t: any) => ({ ...t, lon: t.lon ?? t.lng })))
-        } else {
-          setLocationError('No temples found nearby. Try increasing the search radius.')
-        }
-      } catch {
-        setLocationError('Could not fetch nearby temples. Please try again.')
-      }
     } finally {
       setLocLoading(false)
     }
