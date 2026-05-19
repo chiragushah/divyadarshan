@@ -148,15 +148,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
         <div className="max-w-7xl mx-auto px-4 flex gap-0 overflow-x-auto">
           {TABS.map(tab => (
             <button key={tab.id}
-              onClick={() => {
-                if (tab.id === 'nearby') {
-                  const p = new URLSearchParams()
-                  p.set('tab', 'nearby')
-                  router.push(pathname + '?' + p.toString())
-                } else {
-                  update('tab', tab.id === 'directory' ? '' : tab.id)
-                }
-              }}
+              onClick={() => update('tab', tab.id === 'directory' ? '' : tab.id)}
               className="px-5 py-3.5 text-sm whitespace-nowrap border-b-2 transition-all"
               style={{ borderColor: activeTab===tab.id?'var(--crimson)':'transparent', color: activeTab===tab.id?'var(--crimson)':'var(--muted)', fontFamily:'var(--font-sans)', fontWeight: activeTab===tab.id?'600':'400' }}>
               {tab.label}
