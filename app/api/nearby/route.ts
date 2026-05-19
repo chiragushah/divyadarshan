@@ -1,24 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-// Multiple Overpass endpoints — tried in order until one works
-const OVERPASS_ENDPOINTS = [
+const ENDPOINTS = [
   'https://overpass-api.de/api/interpreter',
   'https://overpass.kumi.systems/api/interpreter',
   'https://overpass.openstreetmap.ru/api/interpreter',
   'https://maps.mail.ru/osm/tools/overpass/api/interpreter',
 ]
 
+function haversine(lat1: number, lon1: number, lat2: number, lon2: number) {
+  const R = 6371
+  const dLat = (lat2 - lat1) * Math.PI / 180
+  const dLon = (lon2 - lon1) * Math.PI / 180
+  const a = Math.sin(dLat/2)**2 +
+            Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLon/2)**2
+  return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)) * 10) / 10
+}
+
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url)
   const lat    = parseFloat(searchParams.get('lat')    || '0')
   const lon    = parseFloat(searchParams.get('lon')    || '0')
-  const radius = parseInt(searchParams.get('radius')   || '10') * 1000 // km → metres
+  const radius = parseInt(searchParams.get('radius')   || '10') * 1000
 
   if (!lat || !lon) {
-    return NextResponse.json({ error: 'Missing lat/lon' }, { status: 400 })
+    return NextResponse.json({ places: [], error: 'Missing coordinates' }, { status: 400 })
   }
 
-  // Comprehensive Overpass query for Indian sacred places
   const query = `[out:json][timeout:20];
 (
   node["amenity"="place_of_worship"](around:${radius},${lat},${lon});
@@ -30,99 +37,57 @@ export async function GET(req: NextRequest) {
 );
 out center 40;`
 
-  // Try each Overpass endpoint until one succeeds
-  for (const endpoint of OVERPASS_ENDPOINTS) {
+  for (const endpoint of ENDPOINTS) {
     try {
       const controller = new AbortController()
-      const timeout = setTimeout(() => controller.abort(), 18000) // 18s timeout
-
+      const tid = setTimeout(() => controller.abort(), 18000)
       const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `data=${encodeURIComponent(query)}`,
+        body: 'data=' + encodeURIComponent(query),
         signal: controller.signal,
       })
-      clearTimeout(timeout)
-
+      clearTimeout(tid)
       if (!res.ok) continue
 
-      const data = await res.json()
-      const elements: any[] = data.elements || []
+      const json = await res.json()
+      const elements: any[] = json.elements || []
 
-      // Transform Overpass results into our temple card format
       const places = elements
-        .filter((el: any) => {
-          const tags = el.tags || {}
-          // Filter to relevant sacred places
-          const religion = tags.religion || ''
-          const amenity  = tags.amenity  || ''
-          const historic = tags.historic || ''
-          const building = tags.building || ''
-          if (amenity === 'place_of_worship') return true
-          if (historic === 'temple') return true
-          if (building === 'temple') return true
-          return false
-        })
         .map((el: any) => {
           const tags = el.tags || {}
           const clat = el.type === 'way' ? el.center?.lat : el.lat
           const clon = el.type === 'way' ? el.center?.lon : el.lon
-
-          // Determine type for badge coloring
+          if (!clat || !clon) return null
+          const name = tags.name || tags['name:en'] || tags['name:hi'] || ''
+          if (!name) return null
           const religion = (tags.religion || '').toLowerCase()
           let type = 'Temple'
-          if (religion === 'hindu')  type = 'Hindu Temple'
-          if (religion === 'jain')   type = 'Jain Temple'
-          if (religion === 'sikh')   type = 'Gurudwara'
+          if (religion === 'hindu')    type = 'Hindu Temple'
+          if (religion === 'jain')     type = 'Jain Temple'
+          if (religion === 'sikh')     type = 'Gurudwara'
           if (religion === 'buddhist') type = 'Buddhist Temple'
-          if (religion === 'christian') type = 'Church'
-          if (religion === 'muslim')  type = 'Mosque'
-
-          const name = tags.name || tags['name:en'] || tags['name:hi'] || 'Sacred Place'
-          const dist = clat && clon ? haversine(lat, lon, clat, clon) : null
-
           return {
-            _id:      el.id?.toString(),
+            _id: String(el.id),
             name,
             type,
-            state:    tags['addr:state'] || tags['addr:city'] || '',
-            city:     tags['addr:city']  || tags['addr:suburb'] || '',
-            slug:     null, // Overpass results don't have slugs
-            lat:      clat,
-            lon:      clon,
-            distance: dist,
+            state: tags['addr:state'] || '',
+            city:  tags['addr:city']  || tags['addr:suburb'] || '',
+            lat: clat, lon: clon,
+            distance: haversine(lat, lon, clat, clon),
             isOverpass: true,
-            googleMapsUrl: clat && clon
-              ? `https://www.google.com/maps/dir/?api=1&destination=${clat},${clon}`
-              : null,
+            googleMapsUrl: `https://www.google.com/maps/dir/?api=1&destination=${clat},${clon}`,
           }
         })
-        .filter((p: any) => p.lat && p.lon && p.name !== 'Sacred Place')
-        .sort((a: any, b: any) => (a.distance || 999) - (b.distance || 999))
+        .filter(Boolean)
+        .sort((a: any, b: any) => a.distance - b.distance)
         .slice(0, 30)
 
-      return NextResponse.json({ places, source: 'overpass', endpoint })
-
-    } catch (err: any) {
-      // This endpoint failed — try next one
-      console.warn(`Overpass endpoint failed: ${endpoint}`, err.message)
+      return NextResponse.json({ places, source: 'overpass' })
+    } catch (_) {
       continue
     }
   }
 
-  // All endpoints failed
-  return NextResponse.json(
-    { places: [], source: 'none', error: 'All Overpass endpoints unavailable' },
-    { status: 200 } // Return 200 so client can show graceful fallback
-  )
-}
-
-function haversine(lat1: number, lon1: number, lat2: number, lon2: number): number {
-  const R = 6371
-  const dLat = (lat2 - lat1) * Math.PI / 180
-  const dLon = (lon2 - lon1) * Math.PI / 180
-  const a = Math.sin(dLat/2)**2 +
-            Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) *
-            Math.sin(dLon/2)**2
-  return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)) * 10) / 10
+  return NextResponse.json({ places: [], source: 'none' })
 }
