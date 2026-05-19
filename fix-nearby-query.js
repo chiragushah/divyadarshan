@@ -1,4 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server'
+const fs = require('fs'), path = require('path'), { execSync } = require('child_process')
+const P = 'C:\\Users\\chira\\Downloads\\divyadarshan'
+
+const routeContent = `import { NextRequest, NextResponse } from 'next/server'
 
 const ENDPOINTS = [
   'https://overpass-api.de/api/interpreter',
@@ -148,3 +151,15 @@ export async function GET(req: NextRequest) {
 
   return NextResponse.json({ places: [], source: 'none', error: 'All endpoints unavailable' })
 }
+`
+
+const routeDir = path.join(P, 'app', 'api', 'nearby')
+fs.mkdirSync(routeDir, { recursive: true })
+fs.writeFileSync(path.join(routeDir, 'route.ts'), routeContent, 'utf8')
+console.log('✅ api/nearby/route.ts updated — comprehensive query')
+
+process.chdir(P)
+execSync('git add -A', { stdio: 'inherit' })
+execSync('git commit -m "fix: nearby API - comprehensive Indian temple tags, 150 results, dedup"', { stdio: 'inherit' })
+execSync('git push', { stdio: 'inherit' })
+console.log('\n✅ Deployed! Test in ~2 mins.')
