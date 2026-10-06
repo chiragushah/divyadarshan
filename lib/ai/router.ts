@@ -16,7 +16,7 @@ export const AI_ROUTING: Record<AITask, AIProvider> = {
 }
 
 export const AI_MODELS: Record<AIProvider, string> = {
-  groq:   process.env.GROQ_MODEL   || 'llama-3.3-70b-versatile',
+  groq:   process.env.GROQ_MODEL   || 'openai/gpt-oss-120b',
   gemini: process.env.GEMINI_MODEL || 'gemini-flash-latest',
   claude: process.env.CLAUDE_MODEL || 'claude-sonnet-4-5',
 }
