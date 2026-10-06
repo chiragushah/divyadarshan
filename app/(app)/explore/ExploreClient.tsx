@@ -47,6 +47,34 @@ function getDistance(lat1: number, lon1: number, lat2: number, lon2: number): nu
   return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))
 }
 
+// Compass bearing (0-360°, 0=North) from point 1 to point 2
+function getBearing(lat1: number, lon1: number, lat2: number, lon2: number): number {
+  const toRad = (d: number) => d * Math.PI / 180
+  const φ1 = toRad(lat1), φ2 = toRad(lat2), Δλ = toRad(lon2 - lon1)
+  const y = Math.sin(Δλ) * Math.cos(φ2)
+  const x = Math.cos(φ1) * Math.sin(φ2) - Math.sin(φ1) * Math.cos(φ2) * Math.cos(Δλ)
+  return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360
+}
+
+// Direction options: label + center bearing. 'any' = no direction preference.
+const DIRECTIONS: { id: string; label: string; bearing: number | null }[] = [
+  { id: 'any', label: 'Any direction', bearing: null },
+  { id: 'N',  label: 'North ↑',      bearing: 0 },
+  { id: 'NE', label: 'North-East ↗', bearing: 45 },
+  { id: 'E',  label: 'East →',       bearing: 90 },
+  { id: 'SE', label: 'South-East ↘', bearing: 135 },
+  { id: 'S',  label: 'South ↓',      bearing: 180 },
+  { id: 'SW', label: 'South-West ↙', bearing: 225 },
+  { id: 'W',  label: 'West ←',       bearing: 270 },
+  { id: 'NW', label: 'North-West ↖', bearing: 315 },
+]
+
+// Smallest angle (0-180) between two bearings
+function angleDiff(a: number, b: number): number {
+  const d = Math.abs(a - b) % 360
+  return d > 180 ? 360 - d : d
+}
+
 interface Props {
   initialTemples: Temple[]
   total: number
@@ -68,6 +96,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
   const [retryKey,      setRetryKey]      = useState(0)
   const [nearbySort,    setNearbySort]    = useState<'distance' | 'name'>('distance')
   const [nearbyType,    setNearbyType]    = useState('')
+  const [heading,       setHeading]       = useState('any')  // direction of travel
 
   const currentMonth   = new Date().getMonth() + 1
   const monthFestivals = MONTH_FESTIVALS[currentMonth] || []
@@ -125,24 +154,49 @@ export default function ExploreClient({ initialTemples, total, page, states, act
     )
   }, [activeTab, retryKey])
 
-  // Build the list of deity/type options present in the current results
+  // Deity/type options present in the current results
   const nearbyTypes = useMemo(() => {
     const set = new Set<string>()
     nearbyTemples.forEach((t: any) => { const v = (t.deity || t.type || '').trim(); if (v) set.add(v) })
     return Array.from(set).sort()
   }, [nearbyTemples])
 
-  // Apply filter + sort to the nearby results for display
+  // Apply type filter, compute "on the way" flag, then sort for display.
   const visibleNearby = useMemo(() => {
-    let list = [...nearbyTemples]
+    const dir = DIRECTIONS.find(d => d.id === heading)
+    const centerBearing = dir?.bearing ?? null
+
+    let list = nearbyTemples.map((t: any) => {
+      let onWay = false
+      let bearingDiff = 999
+      if (centerBearing !== null && userCoords && typeof t.lat === 'number' && typeof t.lon === 'number') {
+        const b = getBearing(userCoords.lat, userCoords.lon, t.lat, t.lon)
+        bearingDiff = angleDiff(b, centerBearing)
+        onWay = bearingDiff <= 45  // within a 90° cone toward the chosen direction
+      }
+      return { ...t, _onWay: onWay, _bearingDiff: bearingDiff }
+    })
+
     if (nearbyType) list = list.filter((t: any) => (t.deity || t.type || '') === nearbyType)
-    list.sort((a: any, b: any) =>
+
+    const byChoice = (a: any, b: any) =>
       nearbySort === 'name'
         ? String(a.name).localeCompare(String(b.name))
         : (a.distance ?? 0) - (b.distance ?? 0)
-    )
+
+    if (centerBearing !== null) {
+      // On-the-way temples first (then by chosen sort); others after.
+      list.sort((a: any, b: any) => {
+        if (a._onWay !== b._onWay) return a._onWay ? -1 : 1
+        return byChoice(a, b)
+      })
+    } else {
+      list.sort(byChoice)
+    }
     return list
-  }, [nearbyTemples, nearbyType, nearbySort])
+  }, [nearbyTemples, nearbyType, nearbySort, heading, userCoords])
+
+  const onWayCount = useMemo(() => visibleNearby.filter((t: any) => t._onWay).length, [visibleNearby])
 
   const seasonalTemples = (() => {
     if (!monthFestivals.length) return initialTemples
@@ -212,14 +266,34 @@ export default function ExploreClient({ initialTemples, total, page, states, act
                   <div className="flex items-center gap-2">
                     <span style={{ fontSize: 20 }}>📍</span>
                     <div>
-                      <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>{visibleNearby.length} sacred places found</p>
+                      <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>
+                        {visibleNearby.length} sacred places found
+                        {heading !== 'any' && onWayCount > 0 && (
+                          <span style={{ color: 'var(--crimson)' }}> · {onWayCount} on your way</span>
+                        )}
+                      </p>
                       <p className="text-xs" style={{ color: 'var(--muted)' }}>Within {radiusKm}km · from DivyaDarshanam</p>
                     </div>
                   </div>
                 </div>
 
-                {/* Controls: radius slider, type filter, sort toggle */}
+                {/* Controls */}
                 <div className="card card-p mb-6 flex flex-col gap-4">
+                  {/* Direction of travel */}
+                  <div className="flex items-start gap-3 flex-wrap">
+                    <span className="text-xs font-semibold mt-1" style={{ color: 'var(--muted)', minWidth: 70 }}>Heading</span>
+                    <div className="flex items-center gap-2 flex-wrap flex-1">
+                      {DIRECTIONS.map(d => (
+                        <button key={d.id} onClick={() => setHeading(d.id)}
+                          className="px-3 py-1 rounded-full text-xs font-semibold transition-all"
+                          style={{ background: heading===d.id?'var(--crimson)':'var(--bg)', color: heading===d.id?'white':'var(--muted)', border: `1px solid ${heading===d.id?'var(--crimson)':'var(--border)'}` }}>
+                          {d.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Radius slider */}
                   <div className="flex items-center gap-3 flex-wrap">
                     <span className="text-xs font-semibold" style={{ color: 'var(--muted)', minWidth: 70 }}>Radius</span>
                     <input
@@ -233,6 +307,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
                     <span className="text-sm font-semibold" style={{ color: 'var(--crimson)', minWidth: 60, textAlign: 'right' }}>{radiusKm} km</span>
                   </div>
 
+                  {/* Type filter + sort */}
                   <div className="flex items-center gap-3 flex-wrap">
                     <span className="text-xs font-semibold" style={{ color: 'var(--muted)', minWidth: 70 }}>Deity / Type</span>
                     <select className="input w-auto" value={nearbyType} onChange={e => setNearbyType(e.target.value)}>
@@ -266,7 +341,8 @@ export default function ExploreClient({ initialTemples, total, page, states, act
                       const img = temple.blob_image_url || temple.image_url || ''
                       const href = temple.slug ? `/temple/${temple.slug}` : null
                       const Card = (
-                        <div className="card overflow-hidden h-full flex flex-col transition-all hover:shadow-md" style={{ borderColor: 'var(--border)' }}>
+                        <div className="card overflow-hidden h-full flex flex-col transition-all hover:shadow-md"
+                          style={{ borderColor: temple._onWay ? 'var(--crimson)' : 'var(--border)', borderWidth: temple._onWay ? 1.5 : 1 }}>
                           <div className="relative" style={{ aspectRatio: '16/10', background: 'var(--pastel-red)' }}>
                             {img ? (
                               // eslint-disable-next-line @next/next/no-img-element
@@ -276,8 +352,14 @@ export default function ExploreClient({ initialTemples, total, page, states, act
                             ) : (
                               <div className="w-full h-full flex items-center justify-center" style={{ fontSize: 40 }}>🛕</div>
                             )}
+                            {temple._onWay && (
+                              <span className="absolute top-2 left-2 px-2 py-0.5 rounded-full text-xs font-bold"
+                                style={{ background: 'var(--crimson)', color: 'white' }}>
+                                On your way
+                              </span>
+                            )}
                             <span className="absolute top-2 right-2 px-2 py-0.5 rounded-full text-xs font-bold"
-                              style={{ background: 'var(--crimson)', color: 'white' }}>
+                              style={{ background: 'rgba(0,0,0,0.6)', color: 'white' }}>
                               {temple.distance < 1 ? `${Math.round(temple.distance*1000)} m` : `${temple.distance.toFixed(1)} km`}
                             </span>
                           </div>
