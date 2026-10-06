@@ -28,6 +28,7 @@ export default function ChecklistPage() {
   const [loading, setLoading] = useState(false)
   const [provider, setProvider] = useState('')
   const [checked, setChecked] = useState<Record<string, boolean>>({})
+  const [error, setError] = useState('')
 
   const set = (k: string, v: any) => setForm(f => ({ ...f, [k]: v }))
 
@@ -35,6 +36,7 @@ export default function ChecklistPage() {
     e.preventDefault()
     if (!form.destination) return
     setLoading(true)
+    setError('')
     try {
       const res = await fetch('/api/ai/checklist', {
         method: 'POST',
@@ -49,12 +51,28 @@ export default function ChecklistPage() {
         }),
       })
       const data = await res.json()
-      if (data.checklist) {
-        setCategories(data.checklist.categories || [])
-        setTips(data.checklist.destination_tips || [])
+      const cats = data?.checklist?.categories || []
+      const dtips = data?.checklist?.destination_tips || []
+
+      if (res.ok && cats.length > 0) {
+        setCategories(cats)
+        setTips(dtips)
         setProvider(data.provider)
         setChecked({})
+      } else {
+        // Clear any old result and surface what actually went wrong
+        setCategories([])
+        setTips([])
+        setError(
+          data?.error
+            ? `Couldn't generate the checklist: ${data.error}`
+            : "Couldn't generate the checklist right now. Please try again in a moment."
+        )
       }
+    } catch (err: any) {
+      setCategories([])
+      setTips([])
+      setError('Network problem — please check your connection and try again.')
     } finally {
       setLoading(false)
     }
@@ -120,6 +138,14 @@ export default function ChecklistPage() {
           </button>
         </form>
       </div>
+
+      {/* Error */}
+      {error && (
+        <div className="card card-p mb-8" style={{ borderColor: '#DC2626', borderWidth: 1.5 }}>
+          <p className="text-sm font-semibold" style={{ color: '#DC2626' }}>Couldn’t generate the checklist</p>
+          <p className="text-sm mt-1" style={{ color: 'var(--muted)' }}>{error}</p>
+        </div>
+      )}
 
       {/* Results */}
       {categories.length > 0 && (
