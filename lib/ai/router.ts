@@ -95,13 +95,21 @@ export async function routeAI(
       case 'groq':   return await callGroq(systemPrompt, userMessage, maxTokens)
       case 'gemini': return await callGemini(systemPrompt, userMessage, maxTokens)
       case 'claude': return await callClaude(systemPrompt, userMessage, maxTokens)
+      default:       return await callGroq(systemPrompt, userMessage, maxTokens)
     }
   } catch (err) {
-    console.error(`AI provider ${provider} failed, falling back to groq:`, err)
-    if (provider !== 'groq') {
-      return await callGroq(systemPrompt, userMessage, maxTokens)
+    console.error(`AI provider ${provider} failed, trying Gemini fallback:`, err)
+    // Free backup: Gemini (uses your existing GEMINI_API_KEY). If Gemini also fails
+    // and Groq wasn't the provider that already failed, try Groq as a last resort.
+    try {
+      return await callGemini(systemPrompt, userMessage, maxTokens)
+    } catch (geminiErr) {
+      console.error('Gemini fallback also failed:', geminiErr)
+      if (provider !== 'groq') {
+        return await callGroq(systemPrompt, userMessage, maxTokens)
+      }
+      throw err
     }
-    throw err
   }
 }
 
