@@ -146,6 +146,7 @@ export default async function TemplePage({ params }: Props) {
               <LiveDarshanStatus
                 liveUrl={t.live_url}
                 liveSchedule={t.live_schedule}
+                templeName={t.name}
                 timing={t.timing}
               />
             )}

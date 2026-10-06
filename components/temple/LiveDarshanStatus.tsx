@@ -12,6 +12,7 @@ interface Props {
   liveSchedule?: LiveSlot[]
   templeName?: string
   deity?: string
+  timing?: any
 }
 
 const DEFAULT_SLOTS: LiveSlot[] = [
@@ -27,6 +28,24 @@ const DAY_MAP: Record<number, string> = {
 }
 
 const LIVE_WINDOW = 50 // minutes
+
+// Build a "Watch Live" link that can NEVER hit YouTube's "page isn't available" error.
+// - An official temple-website stream (not YouTube) is reliable → use it as-is.
+// - A YouTube *search* link already never 404s → keep it.
+// - Any other YouTube link (a fixed @handle, /channel/ID, or /watch?v= video) can rot
+//   the moment the handle/stream changes → replace with a live-darshan search for THIS
+//   temple, which always resolves to whatever is currently streaming.
+function safeLiveHref(liveUrl?: string, templeName?: string) {
+  const name = (templeName || '').trim()
+  const searchUrl = name
+    ? `https://www.youtube.com/results?search_query=${encodeURIComponent(name + ' live darshan')}`
+    : 'https://www.youtube.com/results?search_query=temple+live+darshan'
+  if (!liveUrl) return searchUrl
+  const u = liveUrl.toLowerCase()
+  if (!u.includes('youtube.com') && !u.includes('youtu.be')) return liveUrl // official site stream
+  if (u.includes('/results?')) return liveUrl                                // already a safe search
+  return searchUrl                                                           // rot-prone YT link → search
+}
 
 function toMin(t: string) {
   const [h, m] = t.split(':').map(Number)
@@ -89,6 +108,8 @@ export default function LiveDarshanStatus({ liveUrl, liveSchedule, templeName, d
   const [status, setStatus] = useState<ReturnType<typeof getStatus>|null>(null)
   const [showSchedule, setShowSchedule] = useState(false)
 
+  const liveHref = safeLiveHref(liveUrl, templeName)
+
   useEffect(() => {
     const tick = () => setStatus(getStatus(slots, new Date()))
     tick()
@@ -148,17 +169,15 @@ export default function LiveDarshanStatus({ liveUrl, liveSchedule, templeName, d
                 Stream active for the next {LIVE_WINDOW-(nowMin(new Date())-toMin(status.slot?.time||'00:00'))} min approx.
               </div>
             </div>
-            {liveUrl && (
-              <a href={liveUrl} target="_blank" rel="noopener noreferrer" style={{
-                flexShrink: 0,
-                background: '#22c55e', color: 'white',
-                padding: '10px 18px', borderRadius: 10,
-                fontSize: 13, fontWeight: 700, textDecoration: 'none',
-                display: 'flex', alignItems: 'center', gap: 6,
-              }}>
-                ▶ Watch Live
-              </a>
-            )}
+            <a href={liveHref} target="_blank" rel="noopener noreferrer" style={{
+              flexShrink: 0,
+              background: '#22c55e', color: 'white',
+              padding: '10px 18px', borderRadius: 10,
+              fontSize: 13, fontWeight: 700, textDecoration: 'none',
+              display: 'flex', alignItems: 'center', gap: 6,
+            }}>
+              ▶ Watch Live
+            </a>
           </div>
 
           {/* Today schedule strip */}
@@ -227,16 +246,14 @@ export default function LiveDarshanStatus({ liveUrl, liveSchedule, templeName, d
                 </div>
               )}
             </div>
-            {liveUrl && (
-              <a href={liveUrl} target="_blank" rel="noopener noreferrer" style={{
-                flexShrink: 0,
-                background: '#8B1A1A', color: 'white',
-                padding: '8px 16px', borderRadius: 10,
-                fontSize: 12, fontWeight: 700, textDecoration: 'none',
-              }}>
-                🔔 Open Channel
-              </a>
-            )}
+            <a href={liveHref} target="_blank" rel="noopener noreferrer" style={{
+              flexShrink: 0,
+              background: '#8B1A1A', color: 'white',
+              padding: '8px 16px', borderRadius: 10,
+              fontSize: 12, fontWeight: 700, textDecoration: 'none',
+            }}>
+              🔔 Find Live Darshan
+            </a>
           </div>
 
           {/* Aarti schedule */}
