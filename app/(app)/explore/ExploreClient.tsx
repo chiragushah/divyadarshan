@@ -1,7 +1,8 @@
 'use client'
 import RecommendTempleButton from '@/components/RecommendTempleButton'
 export const dynamic = 'force-dynamic'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
+import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
 import TempleCard from '@/components/temple/TempleCard'
 import type { Temple } from '@/types'
@@ -65,6 +66,8 @@ export default function ExploreClient({ initialTemples, total, page, states, act
   const [nearbyTemples, setNearbyTemples] = useState<any[]>([])
   const [radiusKm,      setRadiusKm]      = useState(100)
   const [retryKey,      setRetryKey]      = useState(0)
+  const [nearbySort,    setNearbySort]    = useState<'distance' | 'name'>('distance')
+  const [nearbyType,    setNearbyType]    = useState('')
 
   const currentMonth   = new Date().getMonth() + 1
   const monthFestivals = MONTH_FESTIVALS[currentMonth] || []
@@ -121,6 +124,25 @@ export default function ExploreClient({ initialTemples, total, page, states, act
       { timeout: 10000 }
     )
   }, [activeTab, retryKey])
+
+  // Build the list of deity/type options present in the current results
+  const nearbyTypes = useMemo(() => {
+    const set = new Set<string>()
+    nearbyTemples.forEach((t: any) => { const v = (t.deity || t.type || '').trim(); if (v) set.add(v) })
+    return Array.from(set).sort()
+  }, [nearbyTemples])
+
+  // Apply filter + sort to the nearby results for display
+  const visibleNearby = useMemo(() => {
+    let list = [...nearbyTemples]
+    if (nearbyType) list = list.filter((t: any) => (t.deity || t.type || '') === nearbyType)
+    list.sort((a: any, b: any) =>
+      nearbySort === 'name'
+        ? String(a.name).localeCompare(String(b.name))
+        : (a.distance ?? 0) - (b.distance ?? 0)
+    )
+    return list
+  }, [nearbyTemples, nearbyType, nearbySort])
 
   const seasonalTemples = (() => {
     if (!monthFestivals.length) return initialTemples
@@ -186,62 +208,108 @@ export default function ExploreClient({ initialTemples, total, page, states, act
             )}
             {!locLoading && !locationError && userCoords && (
               <>
-                <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
+                <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
                   <div className="flex items-center gap-2">
                     <span style={{ fontSize: 20 }}>📍</span>
                     <div>
-                      <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>{nearbyTemples.length} sacred places found</p>
+                      <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>{visibleNearby.length} sacred places found</p>
                       <p className="text-xs" style={{ color: 'var(--muted)' }}>Within {radiusKm}km · from DivyaDarshanam</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs" style={{ color: 'var(--muted)' }}>Radius:</span>
-                    {[50,100,200,500].map(r => (
-                      <button key={r} onClick={() => { setRadiusKm(r); if (userCoords) fetchNearby(userCoords.lat, userCoords.lon, r) }}
+                </div>
+
+                {/* Controls: radius slider, type filter, sort toggle */}
+                <div className="card card-p mb-6 flex flex-col gap-4">
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <span className="text-xs font-semibold" style={{ color: 'var(--muted)', minWidth: 70 }}>Radius</span>
+                    <input
+                      type="range" min={5} max={500} step={5} value={radiusKm}
+                      onChange={e => setRadiusKm(parseInt(e.target.value))}
+                      onMouseUp={() => { if (userCoords) fetchNearby(userCoords.lat, userCoords.lon, radiusKm) }}
+                      onTouchEnd={() => { if (userCoords) fetchNearby(userCoords.lat, userCoords.lon, radiusKm) }}
+                      className="flex-1 min-w-[160px]"
+                      style={{ accentColor: 'var(--crimson)' }}
+                    />
+                    <span className="text-sm font-semibold" style={{ color: 'var(--crimson)', minWidth: 60, textAlign: 'right' }}>{radiusKm} km</span>
+                  </div>
+
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <span className="text-xs font-semibold" style={{ color: 'var(--muted)', minWidth: 70 }}>Deity / Type</span>
+                    <select className="input w-auto" value={nearbyType} onChange={e => setNearbyType(e.target.value)}>
+                      <option value="">All types</option>
+                      {nearbyTypes.map(t => <option key={t} value={t}>{t}</option>)}
+                    </select>
+
+                    <span className="text-xs font-semibold ml-auto" style={{ color: 'var(--muted)' }}>Sort by</span>
+                    {([['distance','Distance'],['name','Name']] as const).map(([val, label]) => (
+                      <button key={val} onClick={() => setNearbySort(val)}
                         className="px-3 py-1 rounded-full text-xs font-semibold transition-all"
-                        style={{ background: radiusKm===r?'var(--crimson)':'var(--bg)', color: radiusKm===r?'white':'var(--muted)', border: `1px solid ${radiusKm===r?'var(--crimson)':'var(--border)'}` }}>
-                        {r}km
+                        style={{ background: nearbySort===val?'var(--crimson)':'var(--bg)', color: nearbySort===val?'white':'var(--muted)', border: `1px solid ${nearbySort===val?'var(--crimson)':'var(--border)'}` }}>
+                        {label}
                       </button>
                     ))}
                   </div>
                 </div>
-                {nearbyTemples.length === 0 ? (
+
+                {visibleNearby.length === 0 ? (
                   <div className="text-center py-16">
                     <div style={{ fontSize: 40, marginBottom: 12 }}>🛕</div>
-                    <p className="text-sm" style={{ color: 'var(--muted2)' }}>No sacred places found within {radiusKm}km. Try a larger radius.</p>
+                    <p className="text-sm" style={{ color: 'var(--muted2)' }}>
+                      {nearbyType
+                        ? `No ${nearbyType} temples within ${radiusKm}km. Try clearing the filter or widening the radius.`
+                        : `No sacred places found within ${radiusKm}km. Try a larger radius.`}
+                    </p>
                   </div>
                 ) : (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {nearbyTemples.map((temple: any) => (
-                      <div key={temple.id} className="card card-p flex items-start gap-4" style={{ borderColor: 'var(--border)' }}>
-                        <div className="flex-shrink-0 flex flex-col items-center justify-center rounded-xl"
-                          style={{ width:56, height:56, background:'var(--pastel-red)', border:'1.5px solid #FFCCCC' }}>
-                          <span style={{ fontSize: 20 }}>🛕</span>
-                          <span style={{ fontSize:10, fontWeight:700, color:'var(--crimson)' }}>
-                            {temple.distance < 1 ? `${Math.round(temple.distance*1000)}m` : `${temple.distance.toFixed(1)}km`}
-                          </span>
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="font-serif font-semibold text-sm leading-tight mb-1" style={{ color:'var(--ink)' }}>{temple.name}</p>
-                          {(temple.address || temple.city || temple.state) && (
-                            <p className="text-xs mb-1 line-clamp-1" style={{ color:'var(--muted)' }}>
-                              {temple.address || [temple.city, temple.state].filter(Boolean).join(', ')}
-                            </p>
-                          )}
-                          {temple.deity && (
-                            <span className="inline-block px-2 py-0.5 rounded-full text-xs mb-1"
-                              style={{ background:'rgba(192,87,10,0.08)', color:'var(--saffron)' }}>
-                              {temple.deity}
+                    {visibleNearby.map((temple: any) => {
+                      const img = temple.blob_image_url || temple.image_url || ''
+                      const href = temple.slug ? `/temple/${temple.slug}` : null
+                      const Card = (
+                        <div className="card overflow-hidden h-full flex flex-col transition-all hover:shadow-md" style={{ borderColor: 'var(--border)' }}>
+                          <div className="relative" style={{ aspectRatio: '16/10', background: 'var(--pastel-red)' }}>
+                            {img ? (
+                              // eslint-disable-next-line @next/next/no-img-element
+                              <img src={img} alt={temple.name} loading="lazy"
+                                className="w-full h-full object-cover"
+                                onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }} />
+                            ) : (
+                              <div className="w-full h-full flex items-center justify-center" style={{ fontSize: 40 }}>🛕</div>
+                            )}
+                            <span className="absolute top-2 right-2 px-2 py-0.5 rounded-full text-xs font-bold"
+                              style={{ background: 'var(--crimson)', color: 'white' }}>
+                              {temple.distance < 1 ? `${Math.round(temple.distance*1000)} m` : `${temple.distance.toFixed(1)} km`}
                             </span>
-                          )}
-                          <a href={`https://www.google.com/maps/search/?api=1&query=${temple.lat},${temple.lon}`}
-                            target="_blank" rel="noopener"
-                            className="block text-xs mt-1 underline" style={{ color:'var(--crimson)' }}>
-                            Get Directions →
-                          </a>
+                          </div>
+                          <div className="p-4 flex-1 flex flex-col">
+                            <p className="font-serif font-semibold text-sm leading-tight mb-1" style={{ color:'var(--ink)' }}>{temple.name}</p>
+                            {(temple.address || temple.city || temple.state) && (
+                              <p className="text-xs mb-2 line-clamp-1" style={{ color:'var(--muted)' }}>
+                                {temple.address || [temple.city, temple.state].filter(Boolean).join(', ')}
+                              </p>
+                            )}
+                            {(temple.deity || temple.type) && (
+                              <span className="inline-block self-start px-2 py-0.5 rounded-full text-xs mb-2"
+                                style={{ background:'rgba(192,87,10,0.08)', color:'var(--saffron)' }}>
+                                {temple.deity || temple.type}
+                              </span>
+                            )}
+                            <div className="mt-auto flex items-center gap-3 pt-1">
+                              {href && <span className="text-xs font-semibold" style={{ color:'var(--crimson)' }}>View temple →</span>}
+                              <a href={`https://www.google.com/maps/search/?api=1&query=${temple.lat},${temple.lon}`}
+                                target="_blank" rel="noopener"
+                                onClick={(e) => e.stopPropagation()}
+                                className="text-xs underline" style={{ color:'var(--muted)' }}>
+                                Directions
+                              </a>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      )
+                      return href
+                        ? <Link key={temple.id || temple._id} href={href} className="block h-full">{Card}</Link>
+                        : <div key={temple.id || temple._id} className="h-full">{Card}</div>
+                    })}
                   </div>
                 )}
               </>
