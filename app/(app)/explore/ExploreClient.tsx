@@ -63,7 +63,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
   const [locationError, setLocationError] = useState('')
   const [locLoading,    setLocLoading]    = useState(false)
   const [nearbyTemples, setNearbyTemples] = useState<any[]>([])
-  const [radiusKm,      setRadiusKm]      = useState(10)
+  const [radiusKm,      setRadiusKm]      = useState(100)
   const [retryKey,      setRetryKey]      = useState(0)
 
   const currentMonth   = new Date().getMonth() + 1
@@ -191,12 +191,12 @@ export default function ExploreClient({ initialTemples, total, page, states, act
                     <span style={{ fontSize: 20 }}>📍</span>
                     <div>
                       <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>{nearbyTemples.length} sacred places found</p>
-                      <p className="text-xs" style={{ color: 'var(--muted)' }}>Within {radiusKm}km · via OpenStreetMap</p>
+                      <p className="text-xs" style={{ color: 'var(--muted)' }}>Within {radiusKm}km · from DivyaDarshanam</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-xs" style={{ color: 'var(--muted)' }}>Radius:</span>
-                    {[10,25,50,100].map(r => (
+                    {[50,100,200,500].map(r => (
                       <button key={r} onClick={() => { setRadiusKm(r); if (userCoords) fetchNearby(userCoords.lat, userCoords.lon, r) }}
                         className="px-3 py-1 rounded-full text-xs font-semibold transition-all"
                         style={{ background: radiusKm===r?'var(--crimson)':'var(--bg)', color: radiusKm===r?'white':'var(--muted)', border: `1px solid ${radiusKm===r?'var(--crimson)':'var(--border)'}` }}>
