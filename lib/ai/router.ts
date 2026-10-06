@@ -10,8 +10,8 @@ const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 export const AI_ROUTING: Record<AITask, AIProvider> = {
   search:    'groq',
   chat:      'groq',
-  checklist: 'gemini',
-  seasonal:  'gemini',
+  checklist: 'groq',
+  seasonal:  'groq',
   planner:   'groq',
 }
 
