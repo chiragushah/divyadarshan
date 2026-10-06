@@ -16,9 +16,9 @@ export const AI_ROUTING: Record<AITask, AIProvider> = {
 }
 
 export const AI_MODELS: Record<AIProvider, string> = {
-  groq:   'llama-3.3-70b-versatile',
-  gemini: 'gemini-1.5-flash',
-  claude: 'claude-sonnet-4-5',
+  groq:   process.env.GROQ_MODEL   || 'llama-3.3-70b-versatile',
+  gemini: process.env.GEMINI_MODEL || 'gemini-flash-latest',
+  claude: process.env.CLAUDE_MODEL || 'claude-sonnet-4-5',
 }
 
 export async function callGroq(
