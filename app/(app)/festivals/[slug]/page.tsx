@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, MapPin } from 'lucide-react'
+import { ArrowLeft, MapPin, CalendarDays } from 'lucide-react'
 import { FESTIVALS, getFestival, templeHref } from '@/lib/data/festivals'
 
 interface Props { params: { slug: string } }
@@ -31,6 +31,8 @@ export default function FestivalDetailPage({ params }: Props) {
     { label: 'Celebrated in', value: f.regionText },
   ]
 
+  const hasDates = f.dates2026 || f.dates2027
+
   return (
     <div>
       {/* Hero */}
@@ -55,7 +57,7 @@ export default function FestivalDetailPage({ params }: Props) {
 
       <div className="max-w-5xl mx-auto px-6 py-8">
         {/* Quick facts */}
-        <div className="card card-p" style={{ marginTop: -36, marginBottom: 28 }}>
+        <div className="card card-p" style={{ marginTop: -36, marginBottom: 20 }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 18 }}>
             {facts.map(fact => (
               <div key={fact.label}>
@@ -71,16 +73,98 @@ export default function FestivalDetailPage({ params }: Props) {
           )}
         </div>
 
+        {/* Dates 2026 / 2027 */}
+        {hasDates && (
+          <div className="card card-p" style={{ marginBottom: 28, background: 'var(--ivory2)', borderLeft: `4px solid ${f.accent}` }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+              <CalendarDays size={18} style={{ color: f.accent }} />
+              <h2 className="font-serif" style={{ fontSize: 18, fontWeight: 600 }}>When it falls</h2>
+            </div>
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              {f.dates2026 && (
+                <div style={{ background: 'white', border: '1.5px solid var(--ivory3)', borderRadius: 12, padding: '12px 18px', minWidth: 160 }}>
+                  <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--muted2)' }}>2026</div>
+                  <div style={{ fontSize: 16, fontWeight: 700, color: f.accent, marginTop: 2 }}>{f.dates2026}</div>
+                </div>
+              )}
+              {f.dates2027 && (
+                <div style={{ background: 'white', border: '1.5px solid var(--ivory3)', borderRadius: 12, padding: '12px 18px', minWidth: 160 }}>
+                  <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--muted2)' }}>2027</div>
+                  <div style={{ fontSize: 16, fontWeight: 700, color: f.accent, marginTop: 2 }}>{f.dates2027}</div>
+                </div>
+              )}
+            </div>
+            {f.dateNote && <p style={{ fontSize: 12.5, color: 'var(--muted)', marginTop: 12, lineHeight: 1.6 }}>{f.dateNote}</p>}
+          </div>
+        )}
+
         {/* Significance */}
         <Section title="Significance — why we celebrate" accent={f.accent}>
           <p style={{ fontSize: 15.5, color: 'var(--ink2)', lineHeight: 1.8 }}>{f.significance}</p>
         </Section>
 
-        {/* How to celebrate vs how it is celebrated */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: 18, marginBottom: 28 }}>
-          <ListCard title="How it should be celebrated" subtitle="The traditional / prescribed way" items={f.howToCelebrate} accent={f.accent} icon="📜" />
-          <ListCard title="How it is celebrated" subtitle="Living customs, region by region" items={f.howCelebrated} accent={f.accent} icon="🎉" />
-        </div>
+        {/* Mythology */}
+        {f.mythology && (
+          <Section title="The legend behind it" accent={f.accent} icon="📖">
+            <p style={{ fontSize: 15, color: 'var(--ink2)', lineHeight: 1.8 }}>{f.mythology}</p>
+          </Section>
+        )}
+
+        {/* History */}
+        {f.history && (
+          <Section title="Origin & history" accent={f.accent} icon="🏛️">
+            <p style={{ fontSize: 15, color: 'var(--ink2)', lineHeight: 1.8 }}>{f.history}</p>
+          </Section>
+        )}
+
+        {/* Rituals — step-by-step when available, else fallback list */}
+        {f.ritualSteps && f.ritualSteps.length > 0 ? (
+          <Section title="How to observe it — step by step" accent={f.accent} icon="📜">
+            <ol style={{ listStyle: 'none', margin: 0, padding: 0, counterReset: 'step' }}>
+              {f.ritualSteps.map((s, i) => (
+                <li key={i} style={{ display: 'flex', gap: 14, paddingBottom: i < f.ritualSteps!.length - 1 ? 16 : 0 }}>
+                  <div style={{ flexShrink: 0, width: 28, height: 28, borderRadius: '50%', background: f.accent, color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700 }}>{i + 1}</div>
+                  <div style={{ flex: 1 }}>
+                    {s.when && (
+                      <span style={{ display: 'inline-block', fontSize: 11, fontWeight: 700, color: f.accent, background: `${f.accent}12`, border: `1px solid ${f.accent}33`, borderRadius: 100, padding: '2px 9px', marginBottom: 5 }}>{s.when}</span>
+                    )}
+                    <div style={{ fontSize: 14.5, color: 'var(--ink2)', lineHeight: 1.65 }}>{s.step}</div>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </Section>
+        ) : (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: 18, marginBottom: 28 }}>
+            <ListCard title="How it should be celebrated" subtitle="The traditional / prescribed way" items={f.howToCelebrate} accent={f.accent} icon="📜" />
+            <ListCard title="How it is celebrated" subtitle="Living customs, region by region" items={f.howCelebrated} accent={f.accent} icon="🎉" />
+          </div>
+        )}
+
+        {/* Regional variations (enriched) */}
+        {f.regional && f.regional.length > 0 && (
+          <Section title="How different regions celebrate" accent={f.accent} icon="🗺️">
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 14 }}>
+              {f.regional.map((r, i) => (
+                <div key={i} style={{ background: 'var(--ivory2)', borderRadius: 12, padding: 16, border: '1px solid var(--ivory3)' }}>
+                  <div style={{ fontSize: 14.5, fontWeight: 700, color: f.accent, marginBottom: 5 }}>{r.region}</div>
+                  <div style={{ fontSize: 13.5, color: 'var(--ink2)', lineHeight: 1.6 }}>{r.note}</div>
+                </div>
+              ))}
+            </div>
+          </Section>
+        )}
+
+        {/* Attire */}
+        {f.attire && f.attire.length > 0 && (
+          <Section title="What to wear" accent={f.accent} icon="👗">
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              {f.attire.map((a, i) => (
+                <span key={i} style={{ background: `${f.accent}12`, color: 'var(--ink2)', border: `1px solid ${f.accent}33`, padding: '8px 14px', borderRadius: 10, fontSize: 13.5, lineHeight: 1.4 }}>{a}</span>
+              ))}
+            </div>
+          </Section>
+        )}
 
         {/* Food & Prasad */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: 18, marginBottom: 28 }}>

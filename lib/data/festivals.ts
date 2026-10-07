@@ -37,12 +37,44 @@ export interface Festival {
   temples: FestivalTemple[]   // where to experience it
   greeting?: string
   tip?: string
+
+  // ── Enriched fields (added in the deep-research upgrade; optional so
+  //    festivals can be upgraded one batch at a time without breaking others) ──
+  dates2026?: string          // researched Gregorian date(s) for 2026
+  dates2027?: string          // researched Gregorian date(s) for 2027
+  dateNote?: string           // e.g. how the date is fixed / that it shifts yearly
+  mythology?: string          // the legend / scriptural story in depth
+  history?: string            // origin & historical background
+  ritualSteps?: { step: string; when?: string }[]  // step-by-step vidhi, with timing
+  regional?: { region: string; note: string }[]    // precise regional/temple variations
+  attire?: string[]           // what devotees traditionally wear
 }
 
 export const FESTIVALS: Festival[] = [
   // ───────────────────────────── DIWALI ─────────────────────────────
   {
     slug: 'diwali',
+    dates2026: '8 November 2026 (Lakshmi Puja); Dhanteras 6 Nov, Govardhan 10 Nov, Bhai Dooj 11 Nov',
+    dates2027: '28 October 2027 (Lakshmi Puja); the five days run 26–30 Oct',
+    dateNote: 'Lakshmi Puja is on the Amavasya (new moon) of Kartik, so the Gregorian date shifts each year between mid-October and mid-November. The puja is done in the Pradosh/sthir-lagna window after sunset — confirm the exact muhurat for your city.',
+    mythology: 'Several great stories converge on this one new-moon night. In the North, Diwali is the night Lord Rama, Sita and Lakshmana returned to Ayodhya after fourteen years of exile and the slaying of Ravana, and the citizens lit rows of lamps to guide and welcome them home. Across India it is the night Goddess Lakshmi, who arose from the churning of the cosmic ocean, chose Vishnu and now walks the earth entering clean, lamp-lit homes to bestow prosperity. In the South, it marks Krishna slaying the demon Narakasura at dawn (Naraka Chaturdashi), freeing 16,000 captives. For Bengal and the East it is the night of the fierce, protective Goddess Kali, and for Jains the night Lord Mahavira attained nirvana in 527 BCE.',
+    history: 'References to a lamp-lit autumn festival appear in Sanskrit texts and in the accounts of travellers such as the 11th-century scholar Al-Biruni. The five-day structure — Dhanteras, Naraka Chaturdashi, Lakshmi Puja, Govardhan/Annakut and Bhai Dooj — crystallised over centuries, weaving together harvest thanksgiving, the new financial year for trading communities, and the Rama and Lakshmi legends into one pan-Indian festival of light.',
+    ritualSteps: [
+      { when: 'Days before', step: 'Deep-clean, whitewash and declutter the home — Lakshmi is said to enter only where there is cleanliness, light and order.' },
+      { when: 'Dhanteras (2 days before)', step: 'Buy gold, silver or new utensils; worship Lakshmi, Kubera and Dhanvantari; light the Yama Deepam lamp at the doorway after dusk.' },
+      { when: 'Diwali morning', step: 'Draw a fresh rangoli and Lakshmi’s footprints at the threshold; string marigold toran; set out rows of earthen diya.' },
+      { when: 'Pradosh / evening muhurat', step: 'Perform Lakshmi–Ganesha puja with lotus, kheel-batasha, coins and a new account book (Chopda Pujan for traders); light every lamp.' },
+      { when: 'Through the night', step: 'Keep the home illuminated and the main door open, symbolically inviting the Goddess to enter and stay.' },
+      { when: 'Next day', step: 'Govardhan Puja / Annakut — offer a “mountain of food” to Krishna; two days later, Bhai Dooj honours the brother–sister bond.' },
+    ],
+    regional: [
+      { region: 'Ayodhya (UP)', note: 'Deepotsav — lakhs of diyas on the Saryu banks and a grand Ram Mandir darshan; a Guinness-record lamp display.' },
+      { region: 'Varanasi', note: 'Dev Deepawali on Kartik Purnima (15 days later) lights all 84 ghats with over a million lamps — the most breathtaking night of all.' },
+      { region: 'Bengal & Odisha', note: 'Kali Puja through the night with red hibiscus, the fierce Mother Goddess worshipped in grand pandals.' },
+      { region: 'South India', note: 'Naraka Chaturdashi at dawn with a ceremonial oil-bath before sunrise; firecrackers at first light, less lamp-lighting.' },
+      { region: 'Gujarat & Marwari', note: 'Chopda Pujan (worship of new account books) and Bestu Varas — the new financial year begins the day after Diwali.' },
+    ],
+    attire: ['New traditional clothes — the festival is a reason to wear your finest', 'Women: silk sarees, lehengas; bright reds, golds and jewel tones for Lakshmi', 'Men: kurta-pyjama, sherwani or dhoti-kurta', 'Gold jewellery, considered especially auspicious on these days'],
     name: 'Diwali',
     alsoKnown: 'Deepavali, Deepawali — the Festival of Lights',
     emoji: '🪔',
@@ -91,6 +123,25 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── HOLI ─────────────────────────────
   {
     slug: 'holi',
+    dates2026: '4 March 2026 (Rangwali Holi); Holika Dahan on the eve, 3 March',
+    dates2027: '22 March 2027 (Rangwali Holi); Holika Dahan 21 March',
+    dateNote: 'Holika Dahan falls on the full-moon (Purnima) of Phalguna and the colour-play is the next morning; the Gregorian date shifts across March each year. In Braj, festivities begin almost a week earlier.',
+    mythology: 'The eve of Holi re-enacts the story of Prahlad: the demon-king Hiranyakashipu, enraged that his son Prahlad worshipped Vishnu, ordered his sister Holika — who had a boon making her immune to fire — to sit in a blaze with the boy on her lap. But devotion prevailed: Holika burned to ash while Prahlad, protected by the Lord, was untouched. The bonfire of Holika Dahan burns the triumph of faith over tyranny. The colours of the next day flow from Krishna, who, self-conscious about his dark complexion beside the fair Radha, was told by his mother Yashoda to simply colour Radha’s face however he wished — and so all of Braj plays with colour to celebrate a divine love that dissolves every distinction of caste, age and status.',
+    history: 'Holi is among the oldest of Indian festivals, mentioned in the 4th-century poetry of Kalidasa and in earlier Puranic texts as a spring festival (Vasantotsava / Phalgunotsava). Mughal-era paintings depict emperors playing Holi, and the Braj traditions of Lathmar and Phoolon ki Holi have been documented for centuries.',
+    ritualSteps: [
+      { when: 'Eve (Purnima)', step: 'Gather for Holika Dahan — a community bonfire circumambulated with offerings of the new harvest, grain, coconut and sweets; pray for the burning away of negativity.' },
+      { when: 'Next morning', step: 'Begin after remembering Vishnu/Krishna; elders apply the first tilak of dry gulal as a blessing.' },
+      { when: 'Midday', step: 'Play freely with natural colours and water — the one day the social order is deliberately set aside; strangers and elders alike are smeared with colour.' },
+      { when: 'Afternoon', step: 'Bathe, wear clean clothes, and visit elders and friends with sweets to mend relationships and start afresh.' },
+    ],
+    regional: [
+      { region: 'Braj (Vrindavan–Mathura–Barsana)', note: 'A week of celebration: Lathmar Holi (women playfully “beat” men with sticks at Barsana), Phoolon ki Holi (flower-petal Holi at Banke Bihari) and Laddu Holi.' },
+      { region: 'North India', note: 'Streets fill with gulal, water balloons, dhol and bhang thandai; the most exuberant public play.' },
+      { region: 'Maharashtra & Gujarat', note: 'Rang Panchami and matki-phod — human pyramids break a hung pot, echoing Krishna’s butter-stealing.' },
+      { region: 'West Bengal', note: 'Dol Jatra / Basanta Utsav — a gentler festival of song and saffron, famous at Santiniketan.' },
+      { region: 'Punjab (Anandpur Sahib)', note: 'Hola Mohalla — martial-arts (Gatka) and valour displays by the Nihang Sikhs.' },
+    ],
+    attire: ['Old white or light cotton clothes — white shows the colours best and is easy to discard after', 'Clothes you don’t mind staining permanently', 'For temple visits (Braj): modest traditional wear', 'Oil your hair and skin beforehand so colour washes off more easily'],
     name: 'Holi',
     alsoKnown: 'Festival of Colours; Dhuleti / Rangwali Holi',
     emoji: '🎨',
@@ -138,6 +189,26 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── NAVARATRI / DURGA PUJA ───────────────────────
   {
     slug: 'navaratri-durga-puja',
+    dates2026: '11–20 October 2026 (Ghatasthapana 11 Oct; Durga Puja Shashthi–Dashami ~16–20 Oct; Vijayadashami 20 Oct)',
+    dates2027: '30 September – 9 October 2027 (Vijayadashami 9 Oct)',
+    dateNote: 'Sharad Navaratri runs the first nine lunar days of Ashwin, ending on Vijayadashami (the tenth). Bengal’s Durga Puja peaks over the last four days (Shashthi to Dashami). Dates shift across Sep–Oct each year.',
+    mythology: 'The great myth is the slaying of Mahishasura. The buffalo-demon had won a boon that no man or god could kill him, and he overran the heavens. The combined divine energies (shakti) of all the gods then took form as the Goddess Durga, radiant and ten-armed, each hand bearing a god’s weapon, riding a lion. For nine nights she battled the shape-shifting demon, destroying him on the tenth day — Vijayadashami, the “victory tenth.” Each of the nine nights honours one of the nine forms (Navadurga), and the days are grouped to worship Durga (power), Lakshmi (wealth) and Saraswati (wisdom) in turn. In Bengal, these same days mark Durga’s annual visit to her parental home with her children, before she returns to Shiva on Dashami.',
+    history: 'Shakti worship is ancient, but the grand autumn Durga Puja took its public, community form in Bengal in the 18th century under zamindar patronage, growing into the “barowari” (public) pujas that now define Kolkata. Mysuru’s royal Dasara dates to the Vijayanagara empire and was formalised by the Wadiyars; UNESCO inscribed Kolkata’s Durga Puja on its Intangible Cultural Heritage list in 2021.',
+    ritualSteps: [
+      { when: 'Day 1 (Pratipada)', step: 'Ghatasthapana — install a consecrated kalash and sow barley seeds; invoke the Goddess for the nine nights.' },
+      { when: 'Each day', step: 'Worship the day’s Navadurga form with her colour, flower and bhog; observe the Navratri fast (satvik food, no grain/onion/garlic).' },
+      { when: 'Days 7–8', step: 'Saraswati worship and, for many, the display of books and instruments; Bengal’s Durga Puja begins with Shashthi and Bodhon.' },
+      { when: 'Ashtami / Navami', step: 'Kanya Pujan (Kanjak) — worship nine young girls as the Goddess, wash their feet, feed them and offer gifts; Sandhi Puja in Bengal.' },
+      { when: 'Dashami', step: 'Vijayadashami — the barley shoots are offered; in Bengal, Sindoor Khela and the emotional Bisarjan (idol immersion).' },
+    ],
+    regional: [
+      { region: 'Gujarat', note: 'Nine nights of Garba and Dandiya-Raas around the sacred garbo lamp — the largest participatory folk-dance celebration on earth.' },
+      { region: 'West Bengal', note: 'Durga Puja — artistic pandals, clay idols of Durga slaying Mahishasura, dhak drums, dhunuchi naach, and Bisarjan on Dashami.' },
+      { region: 'Tamil Nadu, Karnataka, Andhra', note: 'Golu / Bommai Kolu — tiered displays of dolls and deities; women exchange visits, gifts and sundal.' },
+      { region: 'Mysuru (Karnataka)', note: 'The royal Dasara — the illuminated palace and the Jamboo Savari elephant procession of Goddess Chamundeshwari.' },
+      { region: 'North India', note: 'Ramlila theatre runs nightly through the nine days, climaxing in Dussehra.' },
+    ],
+    attire: ['Nine days, nine colours — many follow the daily colour of the Goddess (e.g. red, royal blue, yellow, green…)', 'Gujarat: chaniya choli (women) and kediyu (men) for Garba', 'Bengal: new sarees, the red-and-white for Sindoor Khela on Dashami', 'Traditional, modest wear for temple and pandal visits'],
     name: 'Navaratri & Durga Puja',
     alsoKnown: 'Sharad Navratri; Durga Puja; Golu; Dasara',
     emoji: '🌺',
@@ -187,6 +258,26 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── DUSSEHRA / VIJAYADASHAMI ───────────────────────
   {
     slug: 'dussehra-vijayadashami',
+    dates2026: '20 October 2026',
+    dates2027: '9 October 2027',
+    dateNote: 'Vijayadashami is the tenth lunar day (Dashami) of Ashwin Shukla paksha, the day after Navaratri ends. The date shifts across late September–October each year.',
+    mythology: 'Dussehra marks two victories of good over evil on the same tenth day. In the North it is the day Lord Rama killed the ten-headed demon-king Ravana of Lanka to rescue Sita — the culmination of the Ramayana — after invoking the Goddess (Durga) for strength. In the East it is the day Goddess Durga slew the buffalo-demon Mahishasura. It is also tied to the Mahabharata: on this day the Pandavas recovered their weapons from the Shami tree after their year of hiding, which is why warriors and artisans worship their tools (Ayudha Puja) and the Shami/Apta tree on Vijayadashami.',
+    history: 'The Ramlila theatrical tradition and the burning of Ravana effigies are documented from at least the medieval period across the Hindi belt. Kullu’s week-long Dussehra, where hundreds of village deities converge, received international fair status; Mysuru’s Dasara procession is a royal tradition over four centuries old.',
+    ritualSteps: [
+      { when: 'Morning', step: 'Worship Rama and/or Durga; seek the strength to overcome one’s inner “Ravana” of ego, anger and vice.' },
+      { when: 'Ayudha Puja', step: 'Clean and worship the tools, books, instruments and vehicles of one’s trade — the implements by which livelihood flows.' },
+      { when: 'Vidyarambham', step: 'An auspicious day to begin a child’s education or any new learning (Aksharabhyasam).' },
+      { when: 'Seemollanghana', step: 'Cross the village boundary and exchange Shami/Apta leaves as symbolic “gold” — a blessing for new ventures and journeys.' },
+      { when: 'Dusk', step: 'Watch the Ravana-vadh — towering effigies of Ravana, Kumbhakarna and Meghnad, packed with fireworks, set ablaze after the Ramlila.' },
+    ],
+    regional: [
+      { region: 'North India', note: 'Ten days of Ramlila climaxing in the burning of giant Ravana effigies at dusk before roaring crowds.' },
+      { region: 'Kullu (Himachal)', note: 'A week-long Dussehra that begins when others end — 300+ village deities are carried in palanquin procession to honour Raghunath ji.' },
+      { region: 'Mysuru (Karnataka)', note: 'The grand finale of Dasara — the golden howdah of Chamundeshwari on a caparisoned elephant through illuminated streets.' },
+      { region: 'Bengal & East', note: 'Durga’s immersion (Bisarjan) with Sindoor Khela, women smearing one another with vermilion in farewell.' },
+      { region: 'South India', note: 'Ayudha Puja and Vidyarambham; Saraswati worship for students and artisans.' },
+    ],
+    attire: ['Traditional festive wear — new or best clothes', 'Women: silk sarees and salwar suits in bright, auspicious colours', 'Men: kurta-pyjama or dhoti-kurta', 'Yellow and red tones are considered auspicious for the victory day'],
     name: 'Dussehra',
     alsoKnown: 'Vijayadashami; Dasara',
     emoji: '🏹',
@@ -234,6 +325,26 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── MAHA SHIVARATRI ───────────────────────
   {
     slug: 'maha-shivaratri',
+    dates2026: '15 February 2026',
+    dates2027: '5 March 2027',
+    dateNote: 'Maha Shivaratri falls on the Chaturdashi of the dark fortnight of Phalguna (Magha in some regions). The worship is a night-long vigil through four prahars; the date shifts across Feb–March each year.',
+    mythology: 'Many sacred events are tied to this night. It is held to be the night Shiva performed the Tandava — the cosmic dance of creation, preservation and dissolution — and the night of his marriage to Parvati. It is also the night Shiva manifested as the Lingodbhava, an infinite column of fire whose top and base neither Brahma nor Vishnu could find, humbling their pride. And during the churning of the ocean, when the deadly halahala poison emerged, Shiva drank it to save creation, holding it in his throat (which turned blue — Neelkantha); the night-long vigil honours his sacrifice.',
+    history: 'Maha Shivaratri is attested in the Puranas and in centuries of temple tradition across the Shaiva world. The all-night abhishekam at the twelve Jyotirlingas, the Bhasma Aarti of Ujjain, and the gathering of ascetic orders (naga sadhus, aghoris) are traditions documented over many generations.',
+    ritualSteps: [
+      { when: 'Day', step: 'Observe the fast (nirjala or fruit-only) and prepare for a night of worship rather than feasting.' },
+      { when: 'First prahar (dusk)', step: 'Bathe the Shiva-linga with water and milk; offer bilva (bael) leaves, chant “Om Namah Shivaya”.' },
+      { when: 'Through four prahars (night)', step: 'Repeat abhishekam each prahar with milk, curd, honey, ghee and sugar; offer bhang, dhatura and cold water; recite the Mahamrityunjaya mantra.' },
+      { when: 'All night', step: 'Keep the jagaran (vigil) — staying awake and inwardly alert is itself the worship; the planetary alignment is said to raise energy upward.' },
+      { when: 'Next morning', step: 'Break the fast after the final aarti with simple satvik food.' },
+    ],
+    regional: [
+      { region: 'The Jyotirlingas', note: 'Kashi Vishwanath, Somnath, Mahakaleshwar and Kedarnath see lakhs queue through the night for linga darshan and abhishek.' },
+      { region: 'Ujjain', note: 'The unique Bhasma Aarti of Mahakaleshwar — the linga anointed with sacred ash before dawn (advance permission needed).' },
+      { region: 'Himalayan & ascetic orders', note: 'Naga sadhus and aghoris gather; bhang, rudraksha and the trishul are central.' },
+      { region: 'Chidambaram (Tamil Nadu)', note: 'Shiva as Nataraja, the cosmic dancer — special abhishekams and classical dance offerings.' },
+      { region: 'Across India', note: 'Temples stay open all night; the continuous sound of bells and “Har Har Mahadev”.' },
+    ],
+    attire: ['Simple, clean traditional clothes suited to a night of worship', 'Many wear white or earthy tones; rudraksha malas and vibhuti (sacred ash)', 'Women: sarees or salwar suits in modest colours', 'Comfortable wear for the long night-vigil and temple queues'],
     name: 'Maha Shivaratri',
     alsoKnown: 'The Great Night of Shiva',
     emoji: '🔱',
@@ -282,6 +393,26 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KRISHNA JANMASHTAMI ───────────────────────
   {
     slug: 'krishna-janmashtami',
+    dates2026: '4 September 2026',
+    dates2027: '24 August 2027',
+    dateNote: 'Janmashtami is the Ashtami of the dark fortnight of Bhadrapada; the birth is marked at midnight (Nishita Kaal). Smarta and Vaishnava traditions sometimes observe it on consecutive days — confirm your tradition’s date. Dahi Handi is the following day.',
+    mythology: 'Krishna, the eighth avatar of Vishnu, was born at midnight in a Mathura prison to Devaki and Vasudeva. The tyrant-king Kamsa, Devaki’s brother, had been warned that her eighth child would kill him, and had slain her first seven. On the stormy night of Krishna’s birth, the prison guards fell asleep and the chains broke; Vasudeva carried the infant across the flooding Yamuna — the river parting and the serpent Shesha shielding them — to safety in Gokul, where Krishna grew up as the beloved butter-thief, the divine lover of Vrindavan, and later the charioteer who delivered the Bhagavad Gita at Kurukshetra.',
+    history: 'Krishna worship is ancient and pan-Indian, from the Bhagavata Purana to the bhakti movements of Chaitanya in Bengal and the Alvars in the South. The public Dahi Handi human-pyramid tradition grew in Maharashtra; the midnight celebrations of Mathura–Vrindavan and the temple traditions of Dwarka, Udupi and Guruvayur are centuries old.',
+    ritualSteps: [
+      { when: 'Day', step: 'Observe the fast (often waterless) through the day; decorate a jhanki depicting Krishna’s birth and the crossing of the Yamuna.' },
+      { when: 'Evening to midnight', step: 'Keep vigil with bhajan and kirtan; recount the birth story and sing of Krishna’s leelas.' },
+      { when: 'Midnight (Nishita Kaal)', step: 'At 12, bathe the infant-Krishna idol (abhishek) with panchamrit, place him in a decorated cradle (jhula) and rock it; perform aarti.' },
+      { when: 'After the birth', step: 'Offer makhan-mishri, panjiri and the Chhappan Bhog (56 items); break the fast with prasad.' },
+      { when: 'Next day', step: 'Dahi Handi — human pyramids (govindas) break a high-hung pot of curd, re-enacting Krishna’s butter-stealing.' },
+    ],
+    regional: [
+      { region: 'Mathura & Vrindavan', note: 'The epicentre — temple-wide midnight celebrations, jhankis and days of Raslila theatre in Krishna’s own land.' },
+      { region: 'Maharashtra', note: 'Dahi Handi the next day — towering govinda pyramids in Mumbai and Pune compete for the pot and prize.' },
+      { region: 'Dwarka & Gujarat', note: 'Grand darshan and processions at Krishna’s legendary kingdom.' },
+      { region: 'Udupi (Karnataka)', note: 'Krishna Janmashtami and Vittla Pindi, with the famous Paryaya tradition and Kanakana Kindi darshan.' },
+      { region: 'Kerala (Guruvayur) & ISKCON worldwide', note: 'Elaborate abhishek, Chhappan Bhog and all-night kirtan; children dressed as Krishna and Radha.' },
+    ],
+    attire: ['Traditional wear; yellow and peacock-blue/green honour Krishna’s colours', 'Children often dressed as baby Krishna (with peacock feather) or Radha', 'Women: silk sarees, often yellow or blue', 'Men: kurta-pyjama or dhoti-kurta'],
     name: 'Krishna Janmashtami',
     alsoKnown: 'Gokulashtami; Sri Krishna Jayanti',
     emoji: '🦚',
@@ -331,6 +462,26 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GANESH CHATURTHI ───────────────────────
   {
     slug: 'ganesh-chaturthi',
+    dates2026: '14 September 2026 (idol installation); visarjan on Anant Chaturdashi, 25 Sep',
+    dates2027: '3 September 2027 (installation); visarjan on Anant Chaturdashi, 14 Sep',
+    dateNote: 'Ganesh Chaturthi is the fourth day (Chaturthi) of the bright fortnight of Bhadrapada; the ten-day festival ends with visarjan on Anant Chaturdashi. Households keep the idol for 1½, 5, 7 or 10 days. Dates shift across Aug–Sep.',
+    mythology: 'Goddess Parvati created a boy from the turmeric-sandal paste of her body and set him to guard her door while she bathed. When Shiva returned and the boy — not knowing him — barred his way, an enraged Shiva severed his head. Seeing Parvati’s grief, Shiva vowed to restore him, fixing upon the boy the head of the first creature found facing north — an elephant. Thus Ganesha was reborn, and Shiva blessed him to be worshipped first before any other deity, as Vighnaharta, the remover of obstacles and the lord of beginnings.',
+    history: 'Though Ganesha worship is ancient, the grand public Ganeshotsav was transformed into a mass community festival by Lokmanya Bal Gangadhar Tilak in 1893 in Pune, to unite people and foster nationalism during the freedom struggle. From there the sarvajanik (public) pandal tradition spread across Maharashtra and beyond.',
+    ritualSteps: [
+      { when: 'Chaturthi', step: 'Install a clay Ganesha idol and perform Pranapratishtha — invoking the deity into the murti with Vedic chant.' },
+      { when: 'Daily', step: 'Offer 21 durva (grass) blades, red hibiscus and modak; perform the aarti “Sukhakarta Dukhaharta” morning and evening.' },
+      { when: 'Chaturthi night', step: 'Avoid looking at the moon (the Mithya-dosh legend); if seen, recite the prescribed Syamantaka mantra.' },
+      { when: 'Through the days', step: 'Host the deity as an honoured guest — bhajans, offerings and community darshan for 1½ to 10 days.' },
+      { when: 'Anant Chaturdashi', step: 'Carry the idol in a joyous procession and immerse it (visarjan) with “Ganpati Bappa Morya, pudhchya varshi lavkar ya”.' },
+    ],
+    regional: [
+      { region: 'Pune', note: 'The spiritual home of Ganeshotsav — the Dagdusheth Halwai Ganpati and the five Manache Ganpati processions.' },
+      { region: 'Mumbai', note: 'Enormous public pandals — Lalbaugcha Raja draws millions — and mass visarjan at Girgaum Chowpatty.' },
+      { region: 'Goa (Chavath)', note: 'A quieter, home-centred festival with matoli canopies of local produce and fierce idol artistry.' },
+      { region: 'Hyderabad', note: 'The towering Khairatabad Ganesh and immersion in Hussain Sagar.' },
+      { region: 'Ashtavinayak circuit (Maharashtra)', note: 'Pilgrimage to the eight self-manifested Ganesha shrines peaks in this period.' },
+    ],
+    attire: ['Traditional Maharashtrian wear is customary', 'Women: nauvari (nine-yard) or paithani sarees', 'Men: kurta with a pheta (turban) or dhoti-kurta', 'Saffron, red and gold festive tones'],
     name: 'Ganesh Chaturthi',
     alsoKnown: 'Vinayaka Chaturthi; Ganeshotsav',
     emoji: '🐘',
@@ -378,6 +529,25 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RAM NAVAMI ───────────────────────
   {
     slug: 'ram-navami',
+    dates2026: '26 March 2026',
+    dates2027: '15 April 2027',
+    dateNote: 'Ram Navami is the Navami (ninth day) of the bright fortnight of Chaitra, the final day of Chaitra Navratri; the birth is marked at midday (Madhyahna). Dates shift across March–April each year.',
+    mythology: 'Ram Navami celebrates the birth of Lord Rama, the seventh avatar of Vishnu, born at noon in Ayodhya to King Dasharatha and Queen Kausalya after the king performed a putrakameshti sacrifice. The gods had prayed to Vishnu to descend and rid the earth of the tyranny of the ten-headed demon-king Ravana, who could not be killed by gods or demons — only by a man. Rama’s life, told in Valmiki’s Ramayana and Tulsidas’s Ramcharitmanas, is the great model of dharma: the ideal son, husband, brother and king, the maryada purushottama.',
+    history: 'Rama worship runs deep through the bhakti tradition, from Valmiki and Tulsidas to the Ramanandi sampradaya. Bhadrachalam’s Sita Rama Kalyanam tradition is centuries old, and Ayodhya has become the definitive centre of Ram Navami since the consecration of the Ram Mandir.',
+    ritualSteps: [
+      { when: 'Morning', step: 'Bathe, clean the puja space, and worship Rama, Sita, Lakshmana and Hanuman; many keep a fast.' },
+      { when: 'Through the day', step: 'Read or recite the Ramayana / Ramcharitmanas and the Rama-raksha stotra; sing bhajans.' },
+      { when: 'Madhyahna (noon)', step: 'At the birth-moment, place a baby-Rama idol in a decorated cradle, perform abhishek and aarti.' },
+      { when: 'Offering', step: 'Offer panakam (jaggery-ginger drink), kosambari and the season’s first produce; distribute as prasad.' },
+      { when: 'Evening', step: 'Attend kalyanotsavam (the Rama–Sita wedding re-enactment) or a shobha yatra where held.' },
+    ],
+    regional: [
+      { region: 'Ayodhya (UP)', note: 'The grandest celebration — Saryu snan, Ram Mandir darshan and a city-wide Rath Yatra; the Surya Tilak on the deity at noon.' },
+      { region: 'Bhadrachalam (Telangana)', note: 'Sita Rama Kalyanam — the celestial wedding of Rama and Sita re-enacted with deep devotion.' },
+      { region: 'South India', note: 'Panakam, neer-mor (spiced buttermilk) and kosambari distributed; Rama-Sita kalyanotsavam performed.' },
+      { region: 'North India', note: 'Shobha yatras, bhandaras and continuous Ramcharitmanas recitation.' },
+    ],
+    attire: ['Traditional wear; yellow and saffron are favoured', 'Women: silk sarees or salwar suits', 'Men: kurta-pyjama or dhoti-kurta', 'Simple, modest clothing for temple visits and fasting'],
     name: 'Ram Navami',
     alsoKnown: 'Sri Rama Navami',
     emoji: '🏹',
