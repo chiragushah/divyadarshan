@@ -12,6 +12,8 @@ import LiveDarshanStatus from '@/components/temple/LiveDarshanStatus'
 import DeepDiveSection from '@/components/temple/DeepDiveSection'
 import BestTimeToVisit from '@/components/temple/BestTimeToVisit'
 import KnowBeforeYouGo from '@/components/temple/KnowBeforeYouGo'
+import NearbyCircuit from '@/components/temple/NearbyCircuit'
+import { buildCircuit, circuitMapsUrl } from '@/lib/nearbyCircuit'
 import { Accessibility, Backpack, Banknote, Bath, BookOpen, Bus, Candy, Car, Clock, Droplets, Flame, Flower2, Globe, HeartPulse, Hotel, Info, Landmark, Lightbulb, Map, MapPin, Navigation, ParkingSquare, Phone, Plane, ShoppingBag, Star, Ticket, TrainFront, Trees, Utensils, Wallet } from 'lucide-react'
 
 interface Props { params: { slug: string } }
@@ -69,6 +71,24 @@ export default async function TemplePage({ params }: Props) {
   const t = { ...temple, id: temple._id.toString() }
   const facilities = t.facilities || {}
   const nearby = t.nearby_places || []
+
+  // Auto Circuit — temples within 200 km, sequenced nearest-first (pure geometry).
+  let circuit = null as ReturnType<typeof buildCircuit> | null
+  let circuitMaps = ''
+  if (typeof t.lat === 'number' && typeof t.lng === 'number' && (t.lat || t.lng)) {
+    const dLat = 1.9
+    const dLng = 1.9 / Math.max(0.2, Math.cos((t.lat * Math.PI) / 180))
+    const candidates = await Temple.find({
+      _id: { $ne: temple._id },
+      lat: { $gte: t.lat - dLat, $lte: t.lat + dLat, $ne: null },
+      lng: { $gte: t.lng - dLng, $lte: t.lng + dLng, $ne: null },
+    }).select('slug name deity city state lat lng has_live image_url blob_image_url').limit(150).lean() as any[]
+    const built = buildCircuit({ name: t.name, lat: t.lat, lng: t.lng }, candidates as any, 200, 8)
+    if (built.count > 0) {
+      circuit = built
+      circuitMaps = circuitMapsUrl({ lat: t.lat, lng: t.lng }, built.stops)
+    }
+  }
 
   return (
     <>
@@ -179,6 +199,9 @@ export default async function TemplePage({ params }: Props) {
               slug: t.slug, name: t.name, deity: t.deity, type: t.type,
               state: t.state, dress_code: t.dress_code,
             }} />
+
+            {/* —— AUTO CIRCUIT (200 km) ————————————— */}
+            {circuit && <NearbyCircuit circuit={circuit} mapsUrl={circuitMaps} anchorName={t.name} />}
 
             {/* —— FACILITIES ——————————————————————— */}
             {Object.keys(facilities).length > 0 && (
