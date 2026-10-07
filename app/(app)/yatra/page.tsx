@@ -29,7 +29,7 @@ export default function YatraPage() {
 
 const YATRA_SECTIONS = [
   { icon: <BookOpen size={28} />, title: 'My Journal', desc: 'Log every temple visit with photos, feelings and star ratings. Your lifetime pilgrimage diary.', cta: 'Open journal', href: '/yatra/journal' },
-  { icon: <Wallet size={28} />, title: 'Savings Goals', desc: 'Set monthly targets for your next yatra. Track deposits and link to FinVerse for real savings.', cta: 'View goals', href: '/yatra/goals' },
+  { icon: <Wallet size={28} />, title: 'Savings Goals', desc: 'Set monthly targets for your next yatra and track your deposits towards the goal.', cta: 'View goals', href: '/yatra/goals' },
   { icon: <Users size={28} />, title: 'Group Split', desc: 'Plan group yatras fairly. Log expenses, calculate who owes what, share on WhatsApp.', cta: 'Split expenses', href: '/yatra/split' },
   { icon: <Star size={28} />, title: 'Temple Reviews', desc: 'Read and write reviews from the pilgrim community. Share what moved you.', cta: 'View reviews', href: '/yatra/reviews' },
 ]

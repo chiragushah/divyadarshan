@@ -353,10 +353,13 @@ function GoalsPageInner() {
                       + Add Savings
                     </button>
                   )}
+                  {/* FinVerse option hidden for now */}
+                  {false && (
                   <a href={finverseLink({ action: 'savings', goal_name: goal.yatra_name, amount: remaining })}
                     target="_blank" rel="noopener" className="btn btn-gold btn-sm flex items-center gap-1.5">
                     <TrendingUp size={12} /> Open in FinVerse
                   </a>
+                  )}
                   <Link href={`/plan?destination=${encodeURIComponent(goal.yatra_name)}`}
                     className="btn btn-secondary btn-sm">
                     Plan Itinerary →
@@ -372,7 +375,8 @@ function GoalsPageInner() {
         </div>
       )}
 
-      {/* FinVerse Banner */}
+      {/* FinVerse Banner — hidden for now */}
+      {false && (
       <div className="mt-8 rounded-xl p-5 flex items-center justify-between gap-4"
         style={{ background: 'var(--ivory2)', border: '1px solid var(--border)' }}>
         <div>
@@ -389,6 +393,7 @@ function GoalsPageInner() {
           Open Account →
         </a>
       </div>
+      )}
     </div>
   )
 }

@@ -441,11 +441,14 @@ export default function ProfilePage() {
                             <Link href={'/yatra/goals'} className="btn btn-secondary btn-sm">
                               Manage →
                             </Link>
+                            {/* FinVerse option hidden for now */}
+                            {false && (
                             <a href={finverseLink({ action: 'savings', goal_name: goal.yatra_name, amount: remaining })}
                               target="_blank" rel="noopener"
                               className="btn btn-gold btn-sm flex items-center gap-1">
                               <TrendingUp size={11} /> FinVerse
                             </a>
+                            )}
                           </div>
                         </div>
                       </div>

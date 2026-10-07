@@ -443,8 +443,8 @@ export default async function TemplePage({ params }: Props) {
               <h2 className="font-serif text-2xl font-medium mb-1">Plan & Book</h2>
               <p className="text-sm mb-4" style={{ color:'var(--muted2)' }}>Hotels, trains, buses — everything for your yatra</p>
 
-              {/* Darshan booking for major temples */}
-              {t.official_website && (t.slug === 'tirumala-venkateswara-temple' || t.slug === 'vaishno-devi-shrine' || t.slug === 'shirdi-sai-baba-samadhi' || t.slug === 'kedarnath-temple') && (
+              {/* Darshan booking for major temples — hidden for now (ticketing feature paused) */}
+              {false && t.official_website && (t.slug === 'tirumala-venkateswara-temple' || t.slug === 'vaishno-devi-shrine' || t.slug === 'shirdi-sai-baba-samadhi' || t.slug === 'kedarnath-temple') && (
                 <a href={
                   t.slug === 'tirumala-venkateswara-temple' ? 'https://tirupati.org/darshan' :
                   t.slug === 'vaishno-devi-shrine' ? 'https://maavaishnodevi.org/registration' :
@@ -497,7 +497,8 @@ export default async function TemplePage({ params }: Props) {
                 <span className="ml-auto">→</span>
               </Link>
 
-              {/* FinVerse Savings CTA */}
+              {/* FinVerse Savings CTA — hidden for now */}
+              {false && (
               <div className="mt-3 p-3 rounded-xl" style={{ background:'linear-gradient(135deg, var(--crimson), #4a0a0a)', color:'white' }}>
                 <div className="flex items-center justify-between">
                   <div>
@@ -511,6 +512,7 @@ export default async function TemplePage({ params }: Props) {
                   </a>
                 </div>
               </div>
+              )}
             </div>
 
             

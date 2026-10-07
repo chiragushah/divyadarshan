@@ -342,7 +342,8 @@ function PlannerForm() {
             </div>
           </div>
 
-          {/* FinVerse CTA */}
+          {/* FinVerse CTA — hidden for now */}
+          {false && (
           <div className="mt-4 rounded-xl p-4 flex items-center justify-between gap-4"
             style={{ background: 'var(--ivory2)', border: '1px solid var(--border)' }}>
             <div>
@@ -356,6 +357,7 @@ function PlannerForm() {
               Open Yatra Fund →
             </a>
           </div>
+          )}
         </div>
       )}
     </div>

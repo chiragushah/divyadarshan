@@ -363,11 +363,14 @@ export default function BudgetPage() {
                 className="btn btn-primary btn-sm flex-1 justify-center">
                 Set Savings Goal
               </Link>
+              {/* FinVerse option hidden for now */}
+              {false && (
               <a href={finverseLink({ action: 'savings', amount: total, goal_name: form.destination, utm_content: 'budget_calc' })}
                 target="_blank" rel="noopener"
                 className="btn btn-gold btn-sm flex-1 justify-center">
                 Open in FinVerse
               </a>
+              )}
             </div>
           </div>
 
