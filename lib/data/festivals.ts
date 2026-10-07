@@ -57,6 +57,13 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── DIWALI ─────────────────────────────
   {
     slug: 'diwali',
+    foodByRegion: [
+      { region: 'North India', note: 'Kaju katli, soan papdi, gujiya, besan and motichoor ladoo; boxes of dry-fruit mithai exchanged as gifts.' },
+      { region: 'South India', note: 'Adhirasam, Mysore pak, murukku and thattai; sweets after the pre-dawn oil bath.' },
+      { region: 'Maharashtra', note: 'Faral — chakli, chivda, shankarpali, karanji and besan ladoo.' },
+      { region: 'Bengal', note: 'Narkel naru (coconut balls), sandesh and nimki; khichuri bhog on Kali Puja night.' },
+      { region: 'Gujarat', note: 'Ghughra, mathiya, chorafali and sweets to open the new business year.' },
+    ],
     prasadByRegion: [
       { region: 'North India', note: 'Kheel (puffed rice) and batasha / sugar-candy, lotus and panchamrit offered to Goddess Lakshmi.' },
       { region: 'Bengal & Odisha (Kali Puja)', note: 'Red hibiscus and khichuri bhog; in the Shakta tradition some offer fish or meat to Kali.' },
@@ -140,6 +147,12 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── HOLI ─────────────────────────────
   {
     slug: 'holi',
+    foodByRegion: [
+      { region: 'North India', note: 'Gujiya, thandai (often with bhang), dahi vada and namkeen.' },
+      { region: 'Rajasthan & UP', note: 'Ghevar, malpua, mathri and kachori.' },
+      { region: 'Maharashtra', note: 'Puran poli and basundi.' },
+      { region: 'Bengal (Dol)', note: 'Malpua, payesh and sweets with the saffron celebration.' },
+    ],
     prasadByRegion: [
       { region: 'Braj (Vrindavan)', note: 'Gujiya and gulal offered to the deity first; flower petals at the Phoolon ki Holi of Banke Bihari.' },
       { region: 'North India', note: 'Thandai and gujiya offered; makhan-mishri to Krishna.' },
@@ -219,6 +232,13 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── NAVARATRI / DURGA PUJA ───────────────────────
   {
     slug: 'navaratri-durga-puja',
+    foodByRegion: [
+      { region: 'North India', note: 'Vrat (fasting) food — kuttu/singhara puri, sabudana khichdi, samak rice, aloo and fruit.' },
+      { region: 'Gujarat', note: 'Fafda-jalebi, dhokla and farsan through the Garba nights.' },
+      { region: 'South India (Golu)', note: 'Nine varieties of sundal (spiced legumes) and kosambari, one each day.' },
+      { region: 'West Bengal (Durga Puja)', note: 'Khichuri bhog, luchi-alur dom, begun bhaja and pujo-special sweets.' },
+      { region: 'Maharashtra', note: 'Sabudana vada and khichdi, upvas thalipeeth and rajgira preparations.' },
+    ],
     prasadByRegion: [
       { region: 'West Bengal', note: 'Anna/khichuri bhog with labra and payesh, cooked at the pandal and distributed to all.' },
       { region: 'South India (Golu)', note: 'Sundal — nine varieties of spiced legumes, a different one each day — offered and shared.' },
@@ -302,6 +322,12 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── DUSSEHRA / VIJAYADASHAMI ───────────────────────
   {
     slug: 'dussehra-vijayadashami',
+    foodByRegion: [
+      { region: 'Gujarat', note: 'Fafda-jalebi — the quintessential Dussehra morning treat.' },
+      { region: 'Maharashtra', note: 'Shira and sweets after the Seemollanghan and Shami-leaf exchange.' },
+      { region: 'North India', note: 'Jalebi, imarti and festive sweets after the Ravana-dahan.' },
+      { region: 'West Bengal', note: 'Sweets and sandesh shared after Sindoor Khela.' },
+    ],
     attireByRegion: [
       { region: 'North India', note: 'Festive kurta-pyjama and sarees; yellow and red tones for the Ramlila and Ravana-dahan crowds.' },
       { region: 'Mysuru & Karnataka', note: 'Mysore silk sarees and traditional Kannada wear for the royal Dasara procession.' },
@@ -449,6 +475,12 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KRISHNA JANMASHTAMI ───────────────────────
   {
     slug: 'krishna-janmashtami',
+    foodByRegion: [
+      { region: 'Braj & North India', note: 'Dhaniya panjiri, makhan-mishri, charanamrit and kheer for the midnight celebration.' },
+      { region: 'Maharashtra', note: 'Gopalkala (poha, curd, butter) and dahi for the Dahi Handi.' },
+      { region: 'Gujarat & West', note: 'Shrikhand-puri and milk sweets.' },
+      { region: 'Udupi & South India', note: 'Chakli, appam and the elaborate Chhappan Bhog.' },
+    ],
     prasadByRegion: [
       { region: 'Braj & North India', note: 'Dhaniya (coriander-seed) panjiri and makhan-mishri — the signature midnight prasad.' },
       { region: 'Udupi & South India', note: 'Chakli, appam and the elaborate Chhappan Bhog.' },
@@ -530,6 +562,12 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GANESH CHATURTHI ───────────────────────
   {
     slug: 'ganesh-chaturthi',
+    foodByRegion: [
+      { region: 'Maharashtra', note: 'Ukadiche modak (steamed) and fried modak, puran poli and karanji.' },
+      { region: 'Goa (Chavath)', note: 'Nevri and patoleo (turmeric-leaf steamed rice sweet).' },
+      { region: 'Karnataka & Tamil Nadu', note: 'Kozhukattai (modak) and chana usli/sundal.' },
+      { region: 'Telangana', note: 'Modak and laddu, with pulihora.' },
+    ],
     prasadByRegion: [
       { region: 'Maharashtra', note: 'Ukadiche modak — steamed rice-flour dumplings with coconut-jaggery — 21 offered to Ganesha, plus puran poli.' },
       { region: 'Goa (Chavath)', note: 'Nevri/karanji and modak, offered with the matoli canopy produce.' },
@@ -609,6 +647,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RAM NAVAMI ───────────────────────
   {
     slug: 'ram-navami',
+    foodByRegion: [
+      { region: 'North India', note: 'Panjiri, kheer and vrat food; some keep a fast and break it with fruit.' },
+      { region: 'South India', note: 'Panakam (jaggery-ginger drink), kosambari and neer mor (spiced buttermilk).' },
+      { region: 'Maharashtra', note: 'Sunthavda and prasad after the midday birth aarti.' },
+    ],
     attireByRegion: [
       { region: 'North India (Ayodhya)', note: 'Yellow and saffron — kurta-pyjama for men, sarees or suits for women; devotees carry flags for the Saryu snan and Rath Yatra.' },
       { region: 'South India', note: 'Women in silk sarees, men in veshti with angavastram, for the panakam seva and kalyanotsavam.' },
@@ -750,6 +793,13 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── MAKAR SANKRANTI ───────────────────────
   {
     slug: 'makar-sankranti',
+    foodByRegion: [
+      { region: 'Maharashtra', note: 'Til-gul ladoo and til-gul polis (gulachi poli), puran poli.' },
+      { region: 'Tamil Nadu (Pongal)', note: 'Sakkarai (sweet) and ven (savoury) pongal, sugarcane and vadai.' },
+      { region: 'Punjab (Lohri/Maghi)', note: 'Makki di roti with sarson da saag, til-gur, rewari and gajak.' },
+      { region: 'Gujarat (Uttarayan)', note: 'Undhiyu, chikki and jalebi enjoyed on the rooftops.' },
+      { region: 'Assam & Bengal', note: 'Pitha, til laru and doi-chira (curd with flattened rice) for Bihu / Poush Sankranti.' },
+    ],
     prasadByRegion: [
       { region: 'Maharashtra', note: 'Til-gul ladoo (sesame-jaggery) offered to the deity and exchanged with “til-gul ghya, god-god bola”.' },
       { region: 'Tamil Nadu (Pongal)', note: 'Sakkarai pongal — sweet jaggery rice cooked to overflow — offered to Surya.' },
@@ -1088,6 +1138,12 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── UGADI / GUDI PADWA ───────────────────────
   {
     slug: 'ugadi-gudi-padwa',
+    foodByRegion: [
+      { region: 'Karnataka', note: 'Obbattu/holige (sweet stuffed flatbread) and bevu-bella (neem-jaggery).' },
+      { region: 'Andhra & Telangana', note: 'Ugadi pachadi (six-taste), pulihora and bobbatlu.' },
+      { region: 'Maharashtra (Gudi Padwa)', note: 'Puran poli and shrikhand-puri.' },
+      { region: 'Goa (Konkani)', note: 'Sanna (steamed rice cakes) and patoleo.' },
+    ],
     dates2026: '19 March 2026',
     dates2027: '7 April 2027',
     dateNote: 'Both fall on Chaitra Shukla Pratipada — the first day of the Hindu lunar new year — so they share a date, shifting across March–April each year.',
@@ -1787,6 +1843,12 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BAISAKHI ───────────────────────
   {
     slug: 'baisakhi',
+    foodByRegion: [
+      { region: 'Punjab', note: 'Langar and kada prasad; makki di roti with sarson da saag, kheer and lassi.' },
+      { region: 'Kerala (Vishu)', note: 'Vishu sadya and Vishu kanji (rice porridge in coconut milk).' },
+      { region: 'Tamil Nadu (Puthandu)', note: 'Mango pachadi (the six tastes) and a festive sadya.' },
+      { region: 'Bengal & Assam', note: 'Pohela Boishakh sweets and Bihu pitha/laru.' },
+    ],
     dates2026: '14 April 2026',
     dates2027: '14 April 2027',
     dateNote: 'Baisakhi is solar — the Sun’s entry into Aries (Mesha Sankranti) — so it falls on 13 or 14 April almost every year, unlike the lunar festivals. The same solar day is the new year across several regions.',
