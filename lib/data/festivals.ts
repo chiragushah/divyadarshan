@@ -2987,6 +2987,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GOVARDHAN PUJA / ANNAKUT ───────────────────────
   {
     slug: 'govardhan-puja',
+    image: '/festivals/govardhan-puja.jpg',
     prasadByRegion: [
       { region: 'Nathdwara (Rajasthan)', note: 'The grand Annakut — hundreds of dishes offered to Shrinathji, then distributed to devotees.' },
       { region: 'Braj (Govardhan)', note: 'Grains, milk and sweets offered to Giriraj (Govardhan hill); parikrama prasad.' },
