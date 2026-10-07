@@ -647,6 +647,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RAM NAVAMI ───────────────────────
   {
     slug: 'ram-navami',
+    prasadByRegion: [
+      { region: 'North India', note: 'Panjiri and fruit offered to the infant Rama; tulsi charanamrit.' },
+      { region: 'South India', note: 'Panakam (jaggery-ginger drink) and kosambari offered and distributed.' },
+      { region: 'Telangana (Bhadrachalam)', note: 'Panakam prasadam offered at the Sita Rama Kalyanam.' },
+    ],
     foodByRegion: [
       { region: 'North India', note: 'Panjiri, kheer and vrat food; some keep a fast and break it with fruit.' },
       { region: 'South India', note: 'Panakam (jaggery-ginger drink), kosambari and neer mor (spiced buttermilk).' },
@@ -1138,6 +1143,10 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── UGADI / GUDI PADWA ───────────────────────
   {
     slug: 'ugadi-gudi-padwa',
+    prasadByRegion: [
+      { region: 'Andhra, Telangana & Karnataka', note: 'Ugadi pachadi (six-taste mix) offered to the deity first; neem flowers and jaggery.' },
+      { region: 'Maharashtra (Gudi Padwa)', note: 'Neem-jaggery and puran poli offered; the Gudi worshipped with flowers.' },
+    ],
     foodByRegion: [
       { region: 'Karnataka', note: 'Obbattu/holige (sweet stuffed flatbread) and bevu-bella (neem-jaggery).' },
       { region: 'Andhra & Telangana', note: 'Ugadi pachadi (six-taste), pulihora and bobbatlu.' },
@@ -1460,6 +1469,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RAKSHA BANDHAN ───────────────────────
   {
     slug: 'raksha-bandhan',
+    foodByRegion: [
+      { region: 'Rajasthan & North India', note: 'Ghevar — the signature Rakhi sweet — along with kaju katli and barfi.' },
+      { region: 'Maharashtra & Konkan coast', note: 'Coconut dishes and sweets (Nariyal Purnima); shrikhand.' },
+      { region: 'Across India', note: 'Home-made sweets and the brother’s favourite dishes exchanged.' },
+    ],
     attireByRegion: [
       { region: 'North & West India', note: 'Festive traditional wear — women in bright sarees or salwar suits, men in kurta-pyjama — for the tilak and rakhi ceremony.' },
       { region: 'Maharashtra & Konkan coast (Nariyal Purnima)', note: 'The Koli fishing community wears its colourful traditional dress for offering coconuts to the sea.' },
@@ -1843,6 +1857,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BAISAKHI ───────────────────────
   {
     slug: 'baisakhi',
+    prasadByRegion: [
+      { region: 'Punjab', note: 'Kada prasad (sacred wheat-ghee-sugar halwa) and langar served at the gurdwara.' },
+      { region: 'Kerala (Vishu)', note: 'Offerings to Krishna in the Vishukkani — konna flowers, rice and fruit.' },
+      { region: 'Tamil Nadu (Puthandu)', note: 'Offerings at the new-year temple visit; fruit and betel from the kanni.' },
+    ],
     foodByRegion: [
       { region: 'Punjab', note: 'Langar and kada prasad; makki di roti with sarson da saag, kheer and lassi.' },
       { region: 'Kerala (Vishu)', note: 'Vishu sadya and Vishu kanji (rice porridge in coconut milk).' },
@@ -2925,6 +2944,15 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GOVARDHAN PUJA / ANNAKUT ───────────────────────
   {
     slug: 'govardhan-puja',
+    prasadByRegion: [
+      { region: 'Nathdwara (Rajasthan)', note: 'The grand Annakut — hundreds of dishes offered to Shrinathji, then distributed to devotees.' },
+      { region: 'Braj (Govardhan)', note: 'Grains, milk and sweets offered to Giriraj (Govardhan hill); parikrama prasad.' },
+      { region: 'ISKCON & Vaishnava temples', note: 'The Annakut “mountain of food” offered to Krishna and shared.' },
+    ],
+    foodByRegion: [
+      { region: 'Braj & North India', note: 'Annakut dishes — kadhi, mixed sabzis, rice and milk sweets.' },
+      { region: 'Maharashtra & Gujarat', note: 'New-year (Bali Pratipada) sweets — puran poli, shrikhand and bandhani-day treats.' },
+    ],
     attireByRegion: [
       { region: 'Braj (Govardhan)', note: 'Traditional Vaishnava wear for the 21-km parikrama of the hill; comfortable for the long walk.' },
       { region: 'Rajasthan (Nathdwara)', note: 'Festive silk and bandhani for the spectacular Shrinathji Annakut darshan.' },
@@ -3059,6 +3087,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BHAI DOOJ ───────────────────────
   {
     slug: 'bhai-dooj',
+    foodByRegion: [
+      { region: 'Maharashtra (Bhau Beej)', note: 'Basundi, puran poli and the brother’s favourite home-cooked meal.' },
+      { region: 'Bengal (Bhai Phonta)', note: 'An elaborate feast and Bengali sweets after the tilak ritual.' },
+      { region: 'North India', note: 'Kaju katli, ladoo and the brother’s favourite dishes.' },
+    ],
     attireByRegion: [
       { region: 'North & West India', note: 'Festive traditional wear for the tilak ceremony — sarees and suits for sisters, kurta-pyjama for brothers.' },
       { region: 'Maharashtra (Bhau Beej)', note: 'Nauvari sarees and kurta for the aukshan and feast.' },
@@ -3185,6 +3218,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── TEEJ ───────────────────────
   {
     slug: 'teej',
+    foodByRegion: [
+      { region: 'Rajasthan', note: 'Ghevar — the monsoon-Teej sweet — with feni and malpua.' },
+      { region: 'UP & Bihar', note: 'Malpua, kheer and sattu-based treats after the fast.' },
+      { region: 'Nepal', note: 'A grand pre-fast meal (dar) the night before the Hartalika nirjala fast.' },
+    ],
     attireByRegion: [
       { region: 'Rajasthan', note: 'Green lehariya and bandhani ghagra-choli or sarees with heavy traditional jewellery and mehndi; the Teej Mata procession finery in Jaipur.' },
       { region: 'UP & Bihar', note: 'Green sarees and suits, green-and-red glass bangles, mehndi, and the swing (jhula) celebrations.' },
