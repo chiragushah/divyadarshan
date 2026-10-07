@@ -2797,6 +2797,23 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── DHANTERAS ───────────────────────
   {
     slug: 'dhanteras',
+    dates2026: '6 November 2026',
+    dates2027: '26 October 2027',
+    dateNote: 'Dhanteras is the Trayodashi of the dark fortnight of Kartik — the first of the five days of Diwali, two days before Lakshmi Puja. Dates shift with Diwali.',
+    mythology: 'Dhanteras marks the appearance of Lord Dhanvantari — the divine physician who rose from the churning of the ocean holding the pot of amrit, the patron deity of Ayurveda. It is also the day to welcome Lakshmi and Kubera, the treasurer of the gods, for the year ahead. A beloved legend tells of the young son of King Hima, fated to die of snakebite on the fourth day of his marriage; his clever wife kept him awake all night with stories and songs, and piled her gold ornaments and lit lamps at the door — so that when Yama came as a serpent, he was dazzled by the blaze and could not enter. The lamps (Yama Deepam) and the buying of gold trace to this tale.',
+    history: 'Observed as National Ayurveda Day in honour of Dhanvantari, Dhanteras is also one of the biggest gold- and utensil-buying days of the Indian year, opening the Diwali festival.',
+    ritualSteps: [
+      { when: 'Daytime', step: 'Buy gold, silver or new metal utensils — a symbol of incoming prosperity.' },
+      { when: 'Evening', step: 'Clean and light the home; draw Lakshmi’s footprints and rangoli at the entrance.' },
+      { when: 'Pradosh kaal', step: 'Worship Lakshmi, Kubera and Dhanvantari for wealth and health.' },
+      { when: 'After dusk', step: 'Light the Yama Deepam — a lamp for Yama — at the doorway, facing south, for protection from untimely death.' },
+    ],
+    regional: [
+      { region: 'North & West India', note: 'Markets boom with gold, silver and utensil buying; homes and shops are cleaned and lit.' },
+      { region: 'Trading communities', note: 'Businesses perform special Lakshmi–Kubera puja to open the festive financial season.' },
+      { region: 'Ayurveda practitioners', note: 'Honour Dhanvantari; the day is marked as Ayurveda Day.' },
+    ],
+    attire: ['Festive traditional wear to begin Diwali', 'Women: bright sarees or suits; Men: kurta-pyjama', 'New clothes and gold jewellery are auspicious'],
     name: 'Dhanteras',
     alsoKnown: 'Dhanatrayodashi; Dhanvantari Trayodashi; Yama Deepam',
     emoji: '🪙',
@@ -2841,6 +2858,23 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BHAI DOOJ ───────────────────────
   {
     slug: 'bhai-dooj',
+    dates2026: '11 November 2026',
+    dates2027: '30 October 2027',
+    dateNote: 'Bhai Dooj is the Dwitiya of the bright fortnight of Kartik — the fifth and final day of Diwali, two days after Lakshmi Puja. Dates shift with Diwali.',
+    mythology: 'The festival’s legend tells of Yama, the god of death, who had long neglected to visit his sister Yamuna. When at last he came to her home, she welcomed him with such love — a tilak, an aarti and a feast of his favourite foods — that the delighted Yama decreed that any brother who receives his sister’s tilak and hospitality on this day would be blessed with long life and freed from untimely death, and that on this day no one who honours the bond need fear him. Another account tells of Krishna visiting his sister Subhadra after slaying the demon Narakasura, and being honoured with a tilak.',
+    history: 'Bhai Dooj (Bhau Beej in Maharashtra, Bhai Phonta in Bengal, Yama Dwitiya elsewhere) is the warm family close to the Diwali festival, a companion to Raksha Bandhan earlier in the year.',
+    ritualSteps: [
+      { when: 'The tilak', step: 'The sister applies a tilak (with ceremonial rice, and an aukshan/aarti) on the brother’s forehead.' },
+      { when: 'The blessing', step: 'She prays for his long life and wellbeing; he offers a gift in return.' },
+      { when: 'The feast', step: 'The family shares a festive meal of the brother’s favourite foods.' },
+      { when: 'Bhai Phonta (Bengal)', step: 'A sandalwood/kajal tilak is applied with an elaborate ritual chant for the brother’s long life.' },
+    ],
+    regional: [
+      { region: 'North & West India', note: 'Brothers visit their sisters’ homes for the tilak and a special meal; sweets and gifts are exchanged.' },
+      { region: 'Bengal (Bhai Phonta)', note: 'An especially elaborate ritual with chants for the brother’s long life.' },
+      { region: 'Mathura (Vishram Ghat)', note: 'A brother and sister bathing together in the Yamuna on Bhai Dooj is an auspicious old tradition (Yama–Yamuna).' },
+    ],
+    attire: ['Festive traditional wear', 'Women: bright sarees or suits; Men: kurta-pyjama', 'A warm, family-centred festival'],
     name: 'Bhai Dooj',
     alsoKnown: 'Bhau Beej; Bhai Phonta; Yama Dwitiya; Bhatru Dwitiya',
     emoji: '🫅',
@@ -2884,6 +2918,23 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── ANANTA CHATURDASHI ───────────────────────
   {
     slug: 'ananta-chaturdashi',
+    dates2026: '25 September 2026',
+    dates2027: '14 September 2027',
+    dateNote: 'Ananta Chaturdashi is the Chaturdashi of the bright fortnight of Bhadrapada — the tenth and final day of Ganeshotsav. Dates shift across August–September.',
+    mythology: 'The day carries two observances. The Anant Vrat worships Vishnu in his infinite, eternal form as Ananta, reclining on the thousand-hooded serpent Shesha upon the cosmic ocean; devotees tie a fourteen-knotted sacred thread (the anant) for protection and prosperity. The Mahabharata tells that when the Pandavas lost everything, Krishna advised Yudhishthira to observe the Anant Vrat, by which they regained their kingdom and fortune. The same day is the climax of Ganeshotsav, when Lord Ganesha, hosted for ten days, is given a joyous farewell and immersed (visarjan).',
+    history: 'The grand Ganesh visarjan processions of Maharashtra reach their peak on Ananta Chaturdashi; the Anant Vrat is observed in Vaishnava households, and the period overlaps the Jain Das Lakshana.',
+    ritualSteps: [
+      { when: 'Anant Vrat', step: 'Worship Vishnu-Ananta and tie the fourteen-knotted anant thread (red or yellow) on the wrist.' },
+      { when: 'Offering', step: 'Offer fourteen of each item (puris, sweets, fruit) reflecting the fourteen worlds.' },
+      { when: 'Ganeshotsav finale', step: 'Perform the final aarti and carry Ganesha in procession for visarjan.' },
+      { when: 'Visarjan', step: 'Immerse the idol in water with prayers for the Lord’s swift return next year.' },
+    ],
+    regional: [
+      { region: 'Mumbai & Maharashtra', note: 'Millions join the grand Ganesh visarjan processions to the sea and lakes — the festival’s spectacular climax.' },
+      { region: 'Vaishnava households', note: 'The Anant Vrat observed with the 14-knot thread and Vishnu puja.' },
+      { region: 'Jain community', note: 'This period overlaps the Das Lakshana observances.' },
+    ],
+    attire: ['Festive traditional wear for visarjan', 'Women: nauvari/paithani or silk sarees; Men: kurta with pheta or dhoti-kurta', 'The anant thread worn on the wrist after the vrat'],
     name: 'Ananta Chaturdashi',
     alsoKnown: 'Anant Chaudas; Anant Vrat; Ganesh Visarjan day',
     emoji: '🧵',
@@ -2928,6 +2979,23 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── TEEJ ───────────────────────
   {
     slug: 'teej',
+    dates2026: 'Hariyali Teej 15 Aug 2026; Hartalika Teej ~14 Sep 2026',
+    dates2027: 'Hariyali Teej 4 Aug 2027; Hartalika Teej ~3 Sep 2027',
+    dateNote: 'Teej is a cluster: Hariyali Teej (Shravana Shukla Tritiya), Kajari Teej, and Hartalika Teej (Bhadrapada Shukla Tritiya). The strict nirjala fast is for Hartalika Teej. Dates shift across July–September.',
+    mythology: 'Teej celebrates the reunion of Goddess Parvati with Lord Shiva. Parvati, determined to win Shiva as her husband, performed penance across a hundred and eight births; in her final birth she fasted severely by a river, where (in the Hartalika story) her friends carried her away (harit = carried, aalika = friend) and hid her so her father could not marry her to Vishnu against her wish. Moved by her devotion, Shiva accepted her. Married women fast and pray for their husbands’ long life, and unmarried girls for a good husband, honouring Parvati as the model of devotion and the giver of marital bliss.',
+    history: 'Teej is a women’s monsoon festival, grandest in Rajasthan, where the Goddess (Teej Mata) is carried in royal procession, and widely observed across North India and Nepal.',
+    ritualSteps: [
+      { when: 'Preparation', step: 'Apply mehndi, wear green and the sixteen adornments (solah shringar).' },
+      { when: 'The fast', step: 'Observe the Teej fast — Hartalika Teej is a strict nirjala (waterless) fast for the husband’s long life.' },
+      { when: 'Worship', step: 'Worship a clay Parvati–Shiva (and, in Hartalika, their sand images); hear the Teej katha.' },
+      { when: 'Celebration', step: 'Swing on flower-decked jhulas and sing traditional Teej songs with other women.' },
+    ],
+    regional: [
+      { region: 'Rajasthan (Jaipur)', note: 'The royal Teej procession of Goddess Parvati (Teej Mata) through the old city is famous.' },
+      { region: 'UP, Bihar & Haryana', note: 'Women gather for swings, mehndi, song and the collective katha.' },
+      { region: 'Nepal', note: 'Teej is celebrated grandly by red-clad women, with worship at Pashupatinath.' },
+    ],
+    attire: ['Green is the colour of Teej — sarees, suits and bangles in green', 'Mehndi and full solah shringar', 'Married women often wear red-and-green; brides their wedding finery', 'Lahariya and bandhani prints in Rajasthan'],
     name: 'Teej',
     alsoKnown: 'Hariyali Teej; Hartalika Teej; Kajari Teej',
     emoji: '🌿',
@@ -2973,6 +3041,23 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VISHWAKARMA PUJA ───────────────────────
   {
     slug: 'vishwakarma-puja',
+    dates2026: '17 September 2026',
+    dates2027: '17 September 2027',
+    dateNote: 'Vishwakarma Puja is largely solar — tied to Kanya (Bhadra) Sankranti, the Sun’s entry into Virgo — so it falls on or around 17 September most years, unlike the lunar festivals.',
+    mythology: 'Lord Vishwakarma is the divine architect and master craftsman of the gods — the maker of the celestial cities and palaces, the flying vimanas and chariots, Indra’s Vajra (thunderbolt), the Sudarshana Chakra, the city of Dwarka for Krishna, Lanka for the gods before Ravana, and even the wooden forms of the Jagannath deities at Puri. Born of Brahma’s creative power, he is the patron of all who build and create — engineers, architects, smiths, weavers, mechanics and artisans — the embodiment of craftsmanship and the skill by which the material world is shaped.',
+    history: 'Vishwakarma Puja became a major workplace festival with industrialisation, especially in eastern India, where factories, workshops and artisan communities honour the deity and the tools of their trade.',
+    ritualSteps: [
+      { when: 'Morning', step: 'Clean and decorate the workplace, factory, workshop or tools.' },
+      { when: 'Worship', step: 'Install and worship Vishwakarma’s image alongside the machines and instruments of the trade.' },
+      { when: 'The offering', step: 'Offer flowers, sweets and a ritual aarti to the tools; refrain from using them during the puja.' },
+      { when: 'Celebration', step: 'Share prasad with co-workers; kite-flying marks the day in Bengal and the East.' },
+    ],
+    regional: [
+      { region: 'West Bengal, Odisha & Jharkhand', note: 'Factories, workshops, garages and offices install Vishwakarma idols and hold puja; kite-flying fills the sky.' },
+      { region: 'Industrial & artisan centres', note: 'Tools, vehicles and machinery are garlanded and worshipped; work pauses for the day.' },
+      { region: 'Across India', note: 'Craftsmen, drivers, mechanics and engineers honour their trade and livelihood.' },
+    ],
+    attire: ['A workplace festival — ordinary or light festive wear', 'Many workers wear new or clean clothes for the puja'],
     name: 'Vishwakarma Puja',
     alsoKnown: 'Vishwakarma Jayanti; Bhadra Sankranti',
     emoji: '🛠️',
@@ -3016,6 +3101,23 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── CHETI CHAND ───────────────────────
   {
     slug: 'cheti-chand',
+    dates2026: '20 March 2026 (the day after Ugadi)',
+    dates2027: '8 April 2027',
+    dateNote: 'Cheti Chand is the Dwitiya of the bright fortnight of Chaitra — the day after Ugadi/Gudi Padwa — and marks the Sindhi new year. Dates shift across March–April.',
+    mythology: 'Cheti Chand celebrates the birth of Jhulelal (also called Uderolal), the patron deity of the Sindhi community, revered as an incarnation of Varuna, the god of water. Legend tells that a tyrant named Mirkhshah threatened to force the Sindhi Hindus to convert to his faith. The community prayed for forty days (Chaliho) to the river Indus (Sindhu); Varuna answered, and was born as the child Uderolal at Nasarpur, who grew to confront the tyrant — appearing as a youth, an old man, and a mighty warrior on horseback with waters rising at his command — until Mirkhshah relented and granted the Sindhis freedom of faith.',
+    history: 'Cheti Chand is the most important festival of Sindhi identity and heritage, carrying the memory of the community’s roots by the Indus; it is celebrated by Sindhis across India and the world as their new year.',
+    ritualSteps: [
+      { when: 'Worship', step: 'Worship Jhulelal and prepare the Baharana Sahib — a thali with a lit diya (jyot), water, sweets, a coconut and crystallised sugar.' },
+      { when: 'The procession', step: 'Take out the Bahrana Sahib in a grand procession (Chetichand Mela) to a river or the sea.' },
+      { when: 'Offering to water', step: 'Float lamps and offer the Baharana to the water in Jhulelal’s honour.' },
+      { when: 'Celebration', step: 'Sing the palav (praise of Jhulelal), share Sindhi festive food, and exchange new-year greetings.' },
+    ],
+    regional: [
+      { region: 'Sindhi communities', note: 'Grand processions (Bahrana Sahib) to a river or sea with music, Chhej dance and Jhulelal bhajan.' },
+      { region: 'Temples & community halls', note: 'Special Jhulelal puja and bhajan gatherings.' },
+      { region: 'Worldwide diaspora', note: 'Celebrated wherever Sindhis live, as a festival of heritage, music and cuisine.' },
+    ],
+    attire: ['Sindhi traditional festive wear in bright colours', 'Women: colourful sarees or lehengas with Sindhi embroidery and mirror-work', 'Men: kurta-pyjama', 'New clothes for the new year'],
     name: 'Cheti Chand',
     alsoKnown: 'Jhulelal Jayanti; Sindhi New Year',
     emoji: '🌊',
@@ -3060,6 +3162,23 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PARYUSHAN ───────────────────────
   {
     slug: 'paryushan',
+    dates2026: 'Svetambar 8–15 Sep 2026 (Samvatsari 15 Sep); Digambar Das Lakshan 16–25 Sep 2026',
+    dates2027: '~late August – early September 2027 (confirm with your tradition)',
+    dateNote: 'Paryushan falls during Bhadrapada, in the monsoon Chaturmas. Svetambaras observe 8 days ending on Samvatsari; Digambaras observe 10 days (Das Lakshana). Dates shift across August–September each year.',
+    mythology: 'Paryushan is less about a single legend than about turning inward. For Svetambaras, the heart of the festival is the recitation of the Kalpa Sutra, which narrates the lives of Mahavira and the Tirthankaras and the fourteen auspicious dreams of Mahavira’s mother. For Digambaras, the ten days (Das Lakshana) each honour one of the ten supreme virtues (dharma): forgiveness, humility, straightforwardness, contentment, truth, self-restraint, austerity, renunciation, non-attachment and celibacy. The purpose is to shed accumulated karma and advance the soul toward liberation.',
+    history: 'Paryushan is the holiest festival of Jainism, observed during the monsoon retreat when ascetics stay in one place. Its culmination, Samvatsari (Kshamavani), is the day of universal forgiveness — among the most beautiful observances in any faith.',
+    ritualSteps: [
+      { when: 'Fasting', step: 'Observe fasts ranging from a single daily meal to complete multi-day fasts (upvaas, atthai); the community honours those who complete long austerities.' },
+      { when: 'Scripture', step: 'Hear the Kalpa Sutra (Svetambar) or reflect on the ten virtues each day (Das Lakshana, Digambar).' },
+      { when: 'Pratikraman', step: 'Perform pratikraman — honest repentance and review of one’s conduct.' },
+      { when: 'Samvatsari / Kshamavani', step: 'On the final day, seek and grant forgiveness from all beings with the words “Micchami Dukkadam” — letting go of every grievance.' },
+    ],
+    regional: [
+      { region: 'Gujarat & Rajasthan', note: 'Large Jain communities observe with daily discourses, fasting and collective worship.' },
+      { region: 'Maharashtra & Karnataka', note: 'Temple discourses, long fasts, and the exchange of forgiveness on Samvatsari.' },
+      { region: 'Jain tirthas', note: 'Pilgrimages and intensified practice at Palitana, Ranakpur and Shikharji.' },
+    ],
+    attire: ['Simple white clothing is traditional', 'Modest, pure attire reflecting restraint and non-attachment', 'Women: white or light sarees/suits; Men: white kurta-pyjama'],
     name: 'Paryushan Parva',
     alsoKnown: 'Paryushana; Das Lakshana (Digambara); Daslakshan Parva',
     emoji: '🤍',

@@ -95,7 +95,7 @@ export default function FestivalsClient({ festivals }: { festivals: Festival[] }
               }}>
                 <div style={{ fontSize: 34, lineHeight: 1 }}>{f.emoji}</div>
                 <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.08em', textTransform: 'uppercase', opacity: 0.9, marginTop: 10 }}>
-                  {f.season} · {f.whenText.split('(')[0].trim()}
+                  {f.dates2026 ? `2026 · ${f.dates2026.split('(')[0].split(';')[0].trim()}` : `${f.season} · ${f.whenText.split('(')[0].trim()}`}
                 </div>
                 <div className="font-serif" style={{ fontSize: 21, fontWeight: 600, marginTop: 2, color: 'white' }}>{f.name}</div>
               </div>
