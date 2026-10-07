@@ -1092,6 +1092,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── ONAM ───────────────────────
   {
     slug: 'onam',
+    image: '/festivals/onam.jpg',
     dates2026: '26 August 2026 (Thiruvonam); the 10 days run ~17–26 Aug',
     dates2027: '12 September 2027 (Thiruvonam)',
     dateNote: 'Onam follows the Malayalam solar calendar — Thiruvonam asterism in the month of Chingam — and the ten-day festival (Atham to Thiruvonam) shifts across August–September each year.',
@@ -1157,6 +1158,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── UGADI / GUDI PADWA ───────────────────────
   {
     slug: 'ugadi-gudi-padwa',
+    image: '/festivals/ugadi-gudi-padwa.jpg',
     prasadByRegion: [
       { region: 'Andhra, Telangana & Karnataka', note: 'Ugadi pachadi (six-taste mix) offered to the deity first; neem flowers and jaggery.' },
       { region: 'Maharashtra (Gudi Padwa)', note: 'Neem-jaggery and puran poli offered; the Gudi worshipped with flowers.' },
@@ -1297,6 +1299,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── CHHATH PUJA ───────────────────────
   {
     slug: 'chhath-puja',
+    image: '/festivals/chhath-puja.jpg',
     dates2026: '15 November 2026 (Sandhya Arghya); the 4 days run 13–16 Nov',
     dates2027: '3 November 2027 (Sandhya Arghya)',
     dateNote: 'Chhath is on the Shashthi of the bright fortnight of Kartik — six days after Diwali — with the evening Sandhya Arghya as the main day and the dawn Usha Arghya the next morning. Dates shift across Oct–Nov.',
@@ -1359,6 +1362,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GURU PURNIMA ───────────────────────
   {
     slug: 'guru-purnima',
+    image: '/festivals/guru-purnima.jpg',
     dates2026: '29 July 2026',
     dates2027: '18 July 2027',
     dateNote: 'Guru Purnima is the full moon (Purnima) of Ashadha. Dates shift across July each year.',
@@ -2445,6 +2449,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KARTHIGAI DEEPAM ───────────────────────
   {
     slug: 'karthigai-deepam',
+    image: '/festivals/karthigai-deepam.jpg',
     dates2026: '23 November 2026',
     dates2027: '12 December 2027 (confirm locally)',
     dateNote: 'Karthigai Deepam falls when the Krittika nakshatra prevails on the full moon of the Tamil month of Karthigai. Dates shift across November–December each year.',
