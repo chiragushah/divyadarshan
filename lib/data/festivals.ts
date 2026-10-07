@@ -3202,6 +3202,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── ANANTA CHATURDASHI ───────────────────────
   {
     slug: 'ananta-chaturdashi',
+    image: '/festivals/ananta-chaturdashi.jpg',
     dates2026: '25 September 2026',
     dates2027: '14 September 2027',
     dateNote: 'Ananta Chaturdashi is the Chaturdashi of the bright fortnight of Bhadrapada — the tenth and final day of Ganeshotsav. Dates shift across August–September.',
@@ -3263,6 +3264,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── TEEJ ───────────────────────
   {
     slug: 'teej',
+    image: '/festivals/teej.jpg',
     foodByRegion: [
       { region: 'Rajasthan', note: 'Ghevar — the monsoon-Teej sweet — with feni and malpua.' },
       { region: 'UP & Bihar', note: 'Malpua, kheer and sattu-based treats after the fast.' },
@@ -3335,6 +3337,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VISHWAKARMA PUJA ───────────────────────
   {
     slug: 'vishwakarma-puja',
+    image: '/festivals/vishwakarma-puja.jpg',
     dates2026: '17 September 2026',
     dates2027: '17 September 2027',
     dateNote: 'Vishwakarma Puja is largely solar — tied to Kanya (Bhadra) Sankranti, the Sun’s entry into Virgo — so it falls on or around 17 September most years, unlike the lunar festivals.',
@@ -3395,6 +3398,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── CHETI CHAND ───────────────────────
   {
     slug: 'cheti-chand',
+    image: '/festivals/cheti-chand.jpg',
     dates2026: '20 March 2026 (the day after Ugadi)',
     dates2027: '8 April 2027',
     dateNote: 'Cheti Chand is the Dwitiya of the bright fortnight of Chaitra — the day after Ugadi/Gudi Padwa — and marks the Sindhi new year. Dates shift across March–April.',
@@ -3456,6 +3460,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PARYUSHAN ───────────────────────
   {
     slug: 'paryushan',
+    image: '/festivals/paryushan.jpg',
     dates2026: 'Svetambar 8–15 Sep 2026 (Samvatsari 15 Sep); Digambar Das Lakshan 16–25 Sep 2026',
     dates2027: '~late August – early September 2027 (confirm with your tradition)',
     dateNote: 'Paryushan falls during Bhadrapada, in the monsoon Chaturmas. Svetambaras observe 8 days ending on Samvatsari; Digambaras observe 10 days (Das Lakshana). Dates shift across August–September each year.',
@@ -3517,6 +3522,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── JITIYA / JIVITPUTRIKA ───────────────────────
   {
     slug: 'jitiya',
+    image: '/festivals/jitiya.jpg',
     name: 'Jitiya',
     alsoKnown: 'Jivitputrika; Jiutiya; Jitiya Vrat',
     emoji: '🤱',
@@ -3567,6 +3573,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── NUAKHAI ───────────────────────
   {
     slug: 'nuakhai',
+    image: '/festivals/nuakhai.jpg',
     name: 'Nuakhai',
     alsoKnown: 'Nuakhai Juhar; Navakhai',
     emoji: '🌾',
@@ -3618,6 +3625,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── POLA ───────────────────────
   {
     slug: 'pola',
+    image: '/festivals/pola.jpg',
     name: 'Pola',
     alsoKnown: 'Bail Pola; Pithori Amavasya; Moj',
     emoji: '🐂',
@@ -3668,6 +3676,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PANA SANKRANTI ───────────────────────
   {
     slug: 'pana-sankranti',
+    image: '/festivals/pana-sankranti.jpg',
     name: 'Pana Sankranti',
     alsoKnown: 'Maha Vishuba Sankranti; Odia New Year; Vishuva Sankranti',
     emoji: '🥭',
@@ -3719,6 +3728,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── DHAMMACHAKRA PRAVARTAN DIN ───────────────────────
   {
     slug: 'dhammachakra-pravartan-din',
+    image: '/festivals/dhammachakra-pravartan-din.jpg',
     name: 'Dhammachakra Pravartan Din',
     alsoKnown: 'Ashoka Vijayadashami; Dhamma Chakra Day',
     emoji: '☸️',
@@ -3767,6 +3777,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── MAHAMASTAKABHISHEKA ───────────────────────
   {
     slug: 'mahamastakabhisheka',
+    image: '/festivals/mahamastakabhisheka.jpg',
     name: 'Mahamastakabhisheka',
     alsoKnown: 'Bahubali Mahamastakabhisheka; the Grand Anointing',
     emoji: '🗿',
@@ -3814,6 +3825,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── HOLLA MOHALLA ───────────────────────
   {
     slug: 'holla-mohalla',
+    image: '/festivals/holla-mohalla.jpg',
     name: 'Hola Mohalla',
     alsoKnown: 'Holla Mohalla; the Sikh festival of valour',
     emoji: '⚔️',
@@ -3866,6 +3878,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── LOHRI ───────────────────────
   {
     slug: 'lohri',
+    image: '/festivals/lohri.jpg',
     name: 'Lohri',
     alsoKnown: 'Lohdi; the Punjabi bonfire festival',
     emoji: '🔥',
@@ -3917,6 +3930,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VISHU ───────────────────────
   {
     slug: 'vishu',
+    image: '/festivals/vishu.jpg',
     name: 'Vishu',
     alsoKnown: 'Vishu Kani; the Kerala (Malayali) New Year',
     emoji: '🌼',
@@ -3968,6 +3982,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PUTHANDU ───────────────────────
   {
     slug: 'puthandu',
+    image: '/festivals/puthandu.jpg',
     name: 'Puthandu',
     alsoKnown: 'Tamil New Year; Varusha Pirappu; Chithirai Vishu',
     emoji: '🥭',
@@ -4019,6 +4034,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BIHU ───────────────────────
   {
     slug: 'bihu',
+    image: '/festivals/bihu.jpg',
     name: 'Bihu',
     alsoKnown: 'Bohag/Rongali Bihu; Magh/Bhogali Bihu; Kati/Kongali Bihu',
     emoji: '🪕',
@@ -4070,6 +4086,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── TULSI PUJAN DIWAS ───────────────────────
   {
     slug: 'tulsi-pujan-diwas',
+    image: '/festivals/tulsi-pujan-diwas.jpg',
     name: 'Tulsi Pujan Diwas',
     alsoKnown: 'Tulsi Pujan Day',
     emoji: '🪴',
@@ -4117,6 +4134,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PATETI (PARSI NEW YEAR) ───────────────────────
   {
     slug: 'pateti',
+    image: '/festivals/pateti.jpg',
     name: 'Pateti & Navroz',
     alsoKnown: 'Parsi New Year; Jamshedi Navroz; Nowruz',
     emoji: '🕯️',
