@@ -3,8 +3,32 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowLeft, MapPin, CalendarDays, BookOpen, Landmark, ScrollText, Map as MapIcon, Shirt, UtensilsCrossed, Flame, Music, Lightbulb, Sparkles } from 'lucide-react'
 import { FESTIVALS, getFestival, templeHref } from '@/lib/data/festivals'
+import connectDB from '@/lib/mongodb/connect'
+import { Temple } from '@/models'
+
+export const dynamic = 'force-dynamic'
 
 interface Props { params: { slug: string } }
+
+function resolveImg(url?: string): string {
+  if (!url) return ''
+  if (url.includes('wikimedia.org') || url.includes('wikipedia.org')) {
+    return `/api/image-proxy?url=${encodeURIComponent(url)}`
+  }
+  return url
+}
+
+async function leadTempleImage(f: { temples: { slug?: string }[] }): Promise<string> {
+  const slug = f.temples.find(t => t.slug)?.slug
+  if (!slug) return ''
+  try {
+    await connectDB()
+    const t: any = await Temple.findOne({ slug }).select('image_url blob_image_url').lean()
+    return t ? resolveImg(t.blob_image_url || t.image_url) : ''
+  } catch {
+    return ''
+  }
+}
 
 export function generateStaticParams() {
   return FESTIVALS.map(f => ({ slug: f.slug }))
@@ -19,9 +43,10 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function FestivalDetailPage({ params }: Props) {
+export default async function FestivalDetailPage({ params }: Props) {
   const f = getFestival(params.slug)
   if (!f) notFound()
+  const heroImage = await leadTempleImage(f)
 
   const facts: { label: string; value: string }[] = [
     { label: 'Deity worshipped', value: f.deity },
@@ -36,8 +61,14 @@ export default function FestivalDetailPage({ params }: Props) {
   return (
     <div>
       {/* Hero */}
-      <div style={{ background: `linear-gradient(135deg, ${f.accent} 0%, ${f.accent}cc 100%)`, color: 'white', padding: '28px 24px 48px' }}>
-        <div className="max-w-5xl mx-auto">
+      <div style={{ position: 'relative', overflow: 'hidden', color: 'white', background: `linear-gradient(135deg, ${f.accent} 0%, ${f.accent}cc 100%)` }}>
+        {heroImage && (
+          <>
+            <img src={heroImage} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(135deg, ${f.accent}f0 0%, ${f.accent}b0 42%, rgba(0,0,0,0.6) 100%)` }} />
+          </>
+        )}
+        <div className="max-w-5xl mx-auto" style={{ position: 'relative', padding: '28px 24px 48px' }}>
           <Link href="/festivals" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'rgba(255,255,255,0.9)', textDecoration: 'none', fontSize: 13, fontWeight: 600, marginBottom: 20 }}>
             <ArrowLeft size={15} /> All festivals
           </Link>

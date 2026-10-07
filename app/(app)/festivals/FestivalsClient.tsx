@@ -5,7 +5,9 @@ import { Search } from 'lucide-react'
 import type { Festival } from '@/lib/data/festivals'
 import { DEITY_GROUPS, SEASONS } from '@/lib/data/festivals'
 
-export default function FestivalsClient({ festivals }: { festivals: Festival[] }) {
+type FestivalWithImage = Festival & { heroImage?: string }
+
+export default function FestivalsClient({ festivals }: { festivals: FestivalWithImage[] }) {
   const [q, setQ] = useState('')
   const [deity, setDeity] = useState('')
   const [season, setSeason] = useState('')
@@ -92,13 +94,21 @@ export default function FestivalsClient({ festivals }: { festivals: Festival[] }
             <Link key={f.slug} href={`/festivals/${f.slug}`} className="card" style={{ textDecoration: 'none', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
               {/* Accent header */}
               <div style={{
+                position: 'relative', height: 150, overflow: 'hidden',
                 background: `linear-gradient(135deg, ${f.accent}, ${f.accent}cc)`,
-                padding: '22px 18px 16px', color: 'white', position: 'relative',
               }}>
-                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.08em', textTransform: 'uppercase', opacity: 0.9 }}>
-                  {f.dates2026 ? `2026 · ${f.dates2026.split('(')[0].split(';')[0].trim()}` : `${f.season} · ${f.whenText.split('(')[0].trim()}`}
+                {f.heroImage && (
+                  <img src={f.heroImage} alt="" loading="lazy"
+                    onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
+                    style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                )}
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.25) 100%)' }} />
+                <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, padding: '14px 18px', color: 'white' }}>
+                  <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.08em', textTransform: 'uppercase', opacity: 0.92 }}>
+                    {f.dates2026 ? `2026 · ${f.dates2026.split('(')[0].split(';')[0].trim()}` : `${f.season} · ${f.whenText.split('(')[0].trim()}`}
+                  </div>
+                  <div className="font-serif" style={{ fontSize: 22, fontWeight: 600, marginTop: 4, color: 'white', lineHeight: 1.15, textShadow: '0 1px 8px rgba(0,0,0,0.4)' }}>{f.name}</div>
                 </div>
-                <div className="font-serif" style={{ fontSize: 22, fontWeight: 600, marginTop: 4, color: 'white', lineHeight: 1.15 }}>{f.name}</div>
               </div>
               {/* Body */}
               <div style={{ padding: '14px 18px 18px', display: 'flex', flexDirection: 'column', flex: 1 }}>
