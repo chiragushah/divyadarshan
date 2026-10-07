@@ -47,13 +47,21 @@ export interface Festival {
   history?: string            // origin & historical background
   ritualSteps?: { step: string; when?: string }[]  // step-by-step vidhi, with timing
   regional?: { region: string; note: string }[]    // precise regional/temple variations
-  attire?: string[]           // what devotees traditionally wear
+  attire?: string[]           // what devotees traditionally wear (simple list — fallback)
+  attireByRegion?: { region: string; note: string }[]  // state/region-wise attire detail
 }
 
 export const FESTIVALS: Festival[] = [
   // ───────────────────────────── DIWALI ─────────────────────────────
   {
     slug: 'diwali',
+    attireByRegion: [
+      { region: 'North India', note: 'New silk and brocade; women in red or gold sarees, lehengas or Anarkali suits, men in kurta-pyjama, sherwani or bandhgala. Gold jewellery is especially auspicious.' },
+      { region: 'Maharashtra', note: 'Women in paithani or nauvari (nine-yard) sarees; men in kurta with a pheta (turban) or dhoti-kurta.' },
+      { region: 'South India (TN, AP, Karnataka)', note: 'After the pre-dawn oil bath, new clothes — women in Kanjeevaram/Mysore silk sarees, men in silk veshti with angavastram.' },
+      { region: 'Bengal & Odisha (Kali Puja)', note: 'Festive sarees, often red-bordered white (laalpaar) tant or garad, worn through the night of Kali worship.' },
+      { region: 'Gujarat & Rajasthan', note: 'Bandhani and brocade — women in ghagra-choli or embroidered sarees, men in bandhgala/jodhpuri, for the new financial year.' },
+    ],
     dates2026: '8 November 2026 (Lakshmi Puja); Dhanteras 6 Nov, Govardhan 10 Nov, Bhai Dooj 11 Nov',
     dates2027: '28 October 2027 (Lakshmi Puja); the five days run 26–30 Oct',
     dateNote: 'Lakshmi Puja is on the Amavasya (new moon) of Kartik, so the Gregorian date shifts each year between mid-October and mid-November. The puja is done in the Pradosh/sthir-lagna window after sunset — confirm the exact muhurat for your city.',
@@ -123,6 +131,13 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── HOLI ─────────────────────────────
   {
     slug: 'holi',
+    attireByRegion: [
+      { region: 'Braj (UP) — Vrindavan, Mathura, Barsana', note: 'Old white kurta-pyjama or dhoti that shows the gulal vividly; for temple visits (Banke Bihari), modest white cotton.' },
+      { region: 'North India (general)', note: 'Old light-coloured or white cotton clothes you can discard after; oil the skin and hair first so colour washes off.' },
+      { region: 'West Bengal (Dol / Basanta Utsav)', note: 'Yellow and basanti (saffron-yellow) sarees and kurtas — the palash-flower colour — famously at Santiniketan.' },
+      { region: 'Maharashtra & Gujarat', note: 'Old clothes for the rang and matki-phod; traditional wear for Rang Panchami.' },
+      { region: 'Punjab (Hola Mohalla)', note: 'The Nihang Sikhs wear their distinctive deep-blue bana robes and tall turbans for the Gatka and valour displays at Anandpur Sahib.' },
+    ],
     dates2026: '4 March 2026 (Rangwali Holi); Holika Dahan on the eve, 3 March',
     dates2027: '22 March 2027 (Rangwali Holi); Holika Dahan 21 March',
     dateNote: 'Holika Dahan falls on the full-moon (Purnima) of Phalguna and the colour-play is the next morning; the Gregorian date shifts across March each year. In Braj, festivities begin almost a week earlier.',
@@ -189,6 +204,13 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── NAVARATRI / DURGA PUJA ───────────────────────
   {
     slug: 'navaratri-durga-puja',
+    attireByRegion: [
+      { region: 'Gujarat', note: 'Chaniya choli for women (mirror-work, bandhani) and kediyu with kafni/dhoti for men, worn for Garba — often matching the nine daily colours of the Goddess.' },
+      { region: 'West Bengal', note: 'New sarees each day of Puja; the red-bordered white garad/tant saree is iconic, especially for Sindoor Khela on Dashami, worn with white-and-red bangles.' },
+      { region: 'Tamil Nadu & Karnataka (Golu)', note: 'Silk sarees (Kanjeevaram, Mysore silk) for the women’s Golu visits and gift exchange.' },
+      { region: 'Maharashtra', note: 'Nauvari (nine-yard) sarees and traditional jewellery.' },
+      { region: 'North India', note: 'Salwar suits, lehengas and sarees, many following the nine daily colours; simple satvik-fast attire for the Kanya Pujan.' },
+    ],
     dates2026: '11–20 October 2026 (Ghatasthapana 11 Oct; Durga Puja Shashthi–Dashami ~16–20 Oct; Vijayadashami 20 Oct)',
     dates2027: '30 September – 9 October 2027 (Vijayadashami 9 Oct)',
     dateNote: 'Sharad Navaratri runs the first nine lunar days of Ashwin, ending on Vijayadashami (the tenth). Bengal’s Durga Puja peaks over the last four days (Shashthi to Dashami). Dates shift across Sep–Oct each year.',
@@ -258,6 +280,12 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── DUSSEHRA / VIJAYADASHAMI ───────────────────────
   {
     slug: 'dussehra-vijayadashami',
+    attireByRegion: [
+      { region: 'North India', note: 'Festive kurta-pyjama and sarees; yellow and red tones for the Ramlila and Ravana-dahan crowds.' },
+      { region: 'Mysuru & Karnataka', note: 'Mysore silk sarees and traditional Kannada wear for the royal Dasara procession.' },
+      { region: 'West Bengal', note: 'Red-and-white sarees for Sindoor Khela and Bisarjan on Vijayadashami.' },
+      { region: 'Himachal (Kullu)', note: 'Traditional hill wear — Kullu shawls, pattu and the distinctive Kullu topi (cap) — for the valley’s week-long Dussehra.' },
+    ],
     dates2026: '20 October 2026',
     dates2027: '9 October 2027',
     dateNote: 'Vijayadashami is the tenth lunar day (Dashami) of Ashwin Shukla paksha, the day after Navaratri ends. The date shifts across late September–October each year.',
@@ -393,6 +421,12 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KRISHNA JANMASHTAMI ───────────────────────
   {
     slug: 'krishna-janmashtami',
+    attireByRegion: [
+      { region: 'Braj & North India', note: 'Yellow and peacock-blue/green honour Krishna; children dressed as baby Krishna (peacock feather, flute) and Radha.' },
+      { region: 'Maharashtra (Dahi Handi)', note: 'Govinda teams in shorts and jerseys with saffron bandanas for the human-pyramid pot-breaking.' },
+      { region: 'Gujarat (Dwarka)', note: 'Traditional wear — women in bandhani sarees and chaniya choli, men in kurta.' },
+      { region: 'Kerala & Karnataka (Guruvayur, Udupi)', note: 'Kasavu and silk; boys dressed as Krishna for the Shobha Yatra processions.' },
+    ],
     dates2026: '4 September 2026',
     dates2027: '24 August 2027',
     dateNote: 'Janmashtami is the Ashtami of the dark fortnight of Bhadrapada; the birth is marked at midnight (Nishita Kaal). Smarta and Vaishnava traditions sometimes observe it on consecutive days — confirm your tradition’s date. Dahi Handi is the following day.',
@@ -462,6 +496,12 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GANESH CHATURTHI ───────────────────────
   {
     slug: 'ganesh-chaturthi',
+    attireByRegion: [
+      { region: 'Maharashtra', note: 'The signature look — women in nauvari or paithani sarees, men in kurta with a saffron/red pheta (turban) or dhoti-kurta, for the dhol-tasha processions and visarjan.' },
+      { region: 'Goa (Chavath)', note: 'Traditional Konkani wear — women in kunbi/kashti sarees — for the home-centred celebration.' },
+      { region: 'Telangana & Andhra (Hyderabad)', note: 'Silk sarees (Pochampally, Gadwal) and kurta-pyjama for the Khairatabad Ganesh and immersion.' },
+      { region: 'Karnataka', note: 'Mysore silk sarees and traditional wear; often as part of the Gauri-Ganesha festival.' },
+    ],
     dates2026: '14 September 2026 (idol installation); visarjan on Anant Chaturdashi, 25 Sep',
     dates2027: '3 September 2027 (installation); visarjan on Anant Chaturdashi, 14 Sep',
     dateNote: 'Ganesh Chaturthi is the fourth day (Chaturthi) of the bright fortnight of Bhadrapada; the ten-day festival ends with visarjan on Anant Chaturdashi. Households keep the idol for 1½, 5, 7 or 10 days. Dates shift across Aug–Sep.',
@@ -659,6 +699,13 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── MAKAR SANKRANTI ───────────────────────
   {
     slug: 'makar-sankranti',
+    attireByRegion: [
+      { region: 'Maharashtra', note: 'Women traditionally wear BLACK sarees on this one day — black absorbs the winter sun’s warmth and is considered auspicious only on Sankranti — with halwa (sugar-bead) jewellery.' },
+      { region: 'Gujarat (Uttarayan)', note: 'Comfortable, bright casual wear for rooftop kite-flying all day; colourful cotton.' },
+      { region: 'Tamil Nadu (Pongal)', note: 'New Kanjeevaram silk sarees for women and veshti with angavastram for men.' },
+      { region: 'Punjab (Lohri)', note: 'Phulkari dupattas and bright salwar suits (women), kurta-pyjama with a shawl (men) around the bonfire.' },
+      { region: 'Assam (Magh Bihu) & Bengal', note: 'Assam: the cream-and-red mekhela chador and gamcha; Bengal: traditional cotton for Poush Sankranti.' },
+    ],
     dates2026: '14 January 2026',
     dates2027: '14 January 2027',
     dateNote: 'One of the few solar-fixed Hindu festivals — it marks the Sun’s entry into Capricorn (Makara), which falls on 14 January (occasionally 15) almost every year, unlike the lunar festivals that shift.',
@@ -1294,6 +1341,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RAKSHA BANDHAN ───────────────────────
   {
     slug: 'raksha-bandhan',
+    attireByRegion: [
+      { region: 'North & West India', note: 'Festive traditional wear — women in bright sarees or salwar suits, men in kurta-pyjama — for the tilak and rakhi ceremony.' },
+      { region: 'Maharashtra & Konkan coast (Nariyal Purnima)', note: 'The Koli fishing community wears its colourful traditional dress for offering coconuts to the sea.' },
+      { region: 'South India (Avani Avittam)', note: 'Brahmin men wear a dhoti (veshti) and the sacred thread for the Upakarma ceremony on the riverbank.' },
+    ],
     dates2026: '28 August 2026',
     dates2027: '16 August 2027',
     dateNote: 'Raksha Bandhan is on the full moon (Purnima) of Shravana; the rakhi is traditionally tied during an auspicious window, avoiding any Bhadra period. Dates shift across August each year.',
@@ -1355,6 +1407,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KARVA CHAUTH ───────────────────────
   {
     slug: 'karva-chauth',
+    attireByRegion: [
+      { region: 'Punjab & Haryana', note: 'Bridal red or maroon — sarees, lehengas or Punjabi suits — with full solah shringar, the chooda (bangles) and kaleere; the sargi finery chosen by the mother-in-law.' },
+      { region: 'Rajasthan', note: 'Lehariya or bandhani odhni and ghagra; a beautifully decorated karva pot and heavy traditional jewellery.' },
+      { region: 'UP & Delhi', note: 'Red or maroon sarees and suits with mehndi and sindoor; brides often wear their wedding attire in the first year.' },
+    ],
     dates2026: '29 October 2026',
     dates2027: '18 October 2027',
     dateNote: 'Karva Chauth is the Chaturthi of the dark fortnight of Kartik; the fast runs from sunrise to moonrise, so the evening moonrise time (which varies by city) decides when it breaks. Dates shift across Oct–Nov.',

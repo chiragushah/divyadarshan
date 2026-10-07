@@ -155,8 +155,19 @@ export default function FestivalDetailPage({ params }: Props) {
           </Section>
         )}
 
-        {/* Attire */}
-        {f.attire && f.attire.length > 0 && (
+        {/* Attire — state/region-wise when available, else simple tags */}
+        {f.attireByRegion && f.attireByRegion.length > 0 ? (
+          <Section title="What to wear — state by state" accent={f.accent} icon="👗">
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 14 }}>
+              {f.attireByRegion.map((a, i) => (
+                <div key={i} style={{ background: 'var(--ivory2)', borderRadius: 12, padding: 16, border: '1px solid var(--ivory3)' }}>
+                  <div style={{ fontSize: 14.5, fontWeight: 700, color: f.accent, marginBottom: 5 }}>{a.region}</div>
+                  <div style={{ fontSize: 13.5, color: 'var(--ink2)', lineHeight: 1.6 }}>{a.note}</div>
+                </div>
+              ))}
+            </div>
+          </Section>
+        ) : f.attire && f.attire.length > 0 ? (
           <Section title="What to wear" accent={f.accent} icon="👗">
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
               {f.attire.map((a, i) => (
@@ -164,7 +175,7 @@ export default function FestivalDetailPage({ params }: Props) {
               ))}
             </div>
           </Section>
-        )}
+        ) : null}
 
         {/* Food & Prasad */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: 18, marginBottom: 28 }}>
