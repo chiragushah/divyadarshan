@@ -2591,6 +2591,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PITRU PAKSHA ───────────────────────
   {
     slug: 'pitru-paksha',
+    image: '/festivals/pitru-paksha.jpg',
     dates2026: '27 September – 10 October 2026 (Sarva Pitru Amavasya / Mahalaya on 10 Oct)',
     dates2027: '~16 September – 1 October 2027 (Mahalaya ~30 Sep)',
     dateNote: 'Pitru Paksha is the dark fortnight (Krishna paksha) from Bhadrapada Purnima to Ashwin Amavasya — sixteen days ending on Mahalaya Amavasya, which flows straight into Navaratri. Dates shift across September–October.',
@@ -2655,6 +2656,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RADHA ASHTAMI ───────────────────────
   {
     slug: 'radha-ashtami',
+    image: '/festivals/radha-ashtami.jpg',
     attireByRegion: [
       { region: 'Braj (Barsana)', note: 'Pink and red honour Radha — women in lehengas or sarees, with tulsi malas; the hilltop Shriji temple at its most festive.' },
       { region: 'Vrindavan & ISKCON', note: 'Traditional Vaishnava dress with tulsi beads for the abhishek and chhappan bhog.' },
@@ -2721,6 +2723,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── TULSI VIVAHA ───────────────────────
   {
     slug: 'tulsi-vivaha',
+    image: '/festivals/tulsi-vivaha.jpg',
     dates2026: '21 November 2026',
     dates2027: '10 November 2027',
     dateNote: 'Tulsi Vivaha is performed between Prabodhini (Dev Uthani) Ekadashi and Kartik Purnima; the date shifts across late October–November each year.',
@@ -2846,6 +2849,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── SHARAD PURNIMA / KOJAGIRI ───────────────────────
   {
     slug: 'sharad-purnima',
+    image: '/festivals/sharad-purnima.jpg',
     attireByRegion: [
       { region: 'Braj (Vrindavan)', note: 'Traditional Vaishnava wear — yellow and white — for the moonlit Raas-lila.' },
       { region: 'Maharashtra', note: 'Light festive wear, often white or pastel, for the Kojagiri night and masala doodh under the moon.' },
@@ -2914,6 +2918,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VIVAHA PANCHAMI ───────────────────────
   {
     slug: 'vivaha-panchami',
+    image: '/festivals/vivaha-panchami.jpg',
     dates2026: '14 December 2026',
     dates2027: '2 December 2027',
     dateNote: 'Vivaha Panchami is the Panchami of the bright fortnight of Margashirsha. Dates shift across November–December each year.',
@@ -3121,6 +3126,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BHAI DOOJ ───────────────────────
   {
     slug: 'bhai-dooj',
+    image: '/festivals/bhai-dooj.jpg',
     foodByRegion: [
       { region: 'Maharashtra (Bhau Beej)', note: 'Basundi, puran poli and the brother’s favourite home-cooked meal.' },
       { region: 'Bengal (Bhai Phonta)', note: 'An elaborate feast and Bengali sweets after the tilak ritual.' },
