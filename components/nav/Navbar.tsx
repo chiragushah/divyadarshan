@@ -19,6 +19,7 @@ const NAV_GROUPS = [
   { label: "Explore", items: [
     { href: "/explore",       label: "Temple Directory",    desc: "Browse 400+ sacred temples" },
     { href: "/circuits",      label: "Pilgrimage Circuits", desc: "Curated yatra routes" },
+    { href: "/festivals",     label: "Festival Guide",      desc: "Significance, rituals, food & temples" },
     { href: "/plan/calendar", label: "Festival Calendar",   desc: "Upcoming festivals & events" },
   ]},
   { label: "Plan", items: [
