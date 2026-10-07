@@ -39,6 +39,7 @@ const MONTHS = [
       { name: 'Holi', temples: 'Vrindavan, Mathura, Barsana', desc: "World-famous colour festival in Braj region. Laddu Holi, Lathmar Holi." },
       { name: 'Gangaur', temples: 'Rajasthan temples (Udaipur, Jaipur)', desc: "Goddess Parvati festival. Beautiful processions." },
       { name: 'Ram Navami', temples: 'Ram Lalla Ayodhya, Chitrakoot', desc: "Lord Rama birthday. Ayodhya transforms with celebrations." },
+      { name: 'Chaitra Navratri', temples: 'Vaishno Devi, Jwalaji, Devi temples', desc: "Spring nine-nights of Durga; opens the Hindu New Year and culminates in Ram Navami." },
       { name: 'Cheti Chand', temples: 'Jhulelal / Sindhi temples', desc: "Sindhi New Year & Jhulelal Jayanti. Bahrana Sahib procession to the water." },
       { name: 'Hola Mohalla', temples: 'Anandpur Sahib', desc: "Sikh festival of valour, the day after Holi. Nihang Gatka and horsemanship." },
     ],
@@ -55,6 +56,7 @@ const MONTHS = [
       { name: 'Puthandu', temples: 'Meenakshi (Madurai), Kapaleeshwarar', desc: "Tamil New Year. Mango pachadi of six tastes; the Chithirai festival." },
       { name: 'Bihu', temples: 'Kamakhya; Assam', desc: "Assamese New Year (Bohag Bihu). Bihu dance, husori, and the gamosa." },
       { name: 'Pana Sankranti', temples: 'Jagannath Puri; Odisha', desc: "Odia New Year. Pana (sweet drink) offered; also Hanuman Jayanti in Odisha." },
+      { name: 'Shankara Jayanti', temples: 'Kaladi (Kerala), Sringeri, Kanchi', desc: "Birth of Adi Shankaracharya, reviver of Advaita; Vaishakha Shukla Panchami (Apr–May)." },
     ],
   },
   {
@@ -64,6 +66,7 @@ const MONTHS = [
     festivals: [
       { name: 'Buddha Purnima', temples: 'Bodh Gaya, Buddhist temples, Sarnath', desc: "Buddha enlightenment day. International pilgrims. Bodh Gaya glows." },
       { name: 'Narasimha Jayanti', temples: 'Ahobilam, Yadagirigutta, Simhachalam', desc: "Lord Narasimha appearance day." },
+      { name: 'Chitra Purnima', temples: 'Chitragupta temple Kanchipuram; Madurai (Chithirai)', desc: "Worship of Chitragupta, keeper of karmic records; Madurai's Chithirai festival peaks." },
     ],
   },
   {
@@ -93,6 +96,8 @@ const MONTHS = [
       { name: 'Amarnath Yatra closes', temples: 'Amarnath Cave', desc: "Last chance of the season to see the ice Shivalinga." },
       { name: 'Teej', temples: 'Parvati temples; Jaipur (Teej Mata)', desc: "Monsoon festival of Parvati. Swings, mehndi and green; women fast for their husbands." },
       { name: 'Pateti', temples: 'Udvada Atash Behram; Parsi agiaries', desc: "Parsi New Year (Navroz). Fire-temple prayers, gara sarees, dhansak." },
+      { name: 'Varalakshmi Vratam', temples: 'Ashtalakshmi Chennai, Kolhapur Mahalakshmi', desc: "Married women worship Varalakshmi on the Friday before Shravan Purnima." },
+      { name: 'Gayatri Jayanti', temples: 'Shantikunj Haridwar; Gayatri temples', desc: "Descent of the Gayatri Mantra; mass japa and havan. Also Upakarma (sacred-thread day)." },
     ],
   },
   {
@@ -130,6 +135,7 @@ const MONTHS = [
     festivals: [
       { name: 'Diwali', temples: 'Kashi Vishwanath (Dev Deepawali), Ayodhya, Tirupati', desc: "Varanasi Dev Deepawali — 1 lakh diyas on the ghats — the most magical sight in India." },
       { name: 'Sabarimala opening', temples: 'Sabarimala Ayyappa', desc: "Annual pilgrimage season begins. 41-day vrat required. Millions in black." },
+      { name: 'Skanda Sashti', temples: 'Tiruchendur, Palani, Tiruttani', desc: "Six-day Murugan vratam; Soorasamharam enacts the slaying of Surapadman at Tiruchendur." },
       { name: 'Dhanteras', temples: 'Lakshmi & Dhanvantari temples', desc: "Diwali begins. Lakshmi-Kubera worship, buying gold, and the Yama Deepam lamp." },
       { name: 'Govardhan Puja', temples: 'Nathdwara, Govardhan (Braj)', desc: "Day after Diwali. Krishna lifting Govardhan; the Annakut 'mountain of food'." },
       { name: 'Bhai Dooj', temples: 'Vishram Ghat, Mathura', desc: "Closes Diwali. Sisters tilak brothers for long life (the Yama-Yamuna legend)." },
@@ -145,6 +151,8 @@ const MONTHS = [
       { name: 'Vaikunta Ekadashi', temples: 'Tirumala Venkateswara, all Vishnu temples', desc: "Vaikunta Dwaram (heaven gate) opens. Largest annual crowd at Tirupati." },
       { name: 'Vivaha Panchami', temples: 'Janakpur, Ayodhya', desc: "The wedding of Rama & Sita. Grandest at Janakpur, Sita's birthplace." },
       { name: 'Tulsi Pujan Diwas', temples: 'Vishnu & Krishna temples', desc: "Worship of the sacred Tulsi plant (25 December)." },
+      { name: 'Gita Jayanti', temples: 'Kurukshetra (Jyotisar, Brahma Sarovar); ISKCON', desc: "The day Krishna spoke the Bhagavad Gita; Mokshada Ekadashi. Kurukshetra's Gita Mahotsav." },
+      { name: 'Dattatreya Jayanti', temples: 'Gangapur, Narsobawadi, Girnar', desc: "Birth of Lord Dattatreya (the Trimurti as one); sunset aarti on Margashirsha Purnima." },
     ],
   },
 ]
@@ -203,6 +211,14 @@ const FESTIVAL_GUIDE: Record<string, string> = {
   'Jitiya': 'jitiya',
   'Dhammachakra Pravartan Din': 'dhammachakra-pravartan-din',
   'Tulsi Pujan Diwas': 'tulsi-pujan-diwas',
+  'Chaitra Navratri': 'chaitra-navratri',
+  'Shankara Jayanti': 'shankara-jayanti',
+  'Chitra Purnima': 'chitra-purnima',
+  'Varalakshmi Vratam': 'varalakshmi-vratam',
+  'Gayatri Jayanti': 'gayatri-jayanti',
+  'Skanda Sashti': 'skanda-sashti',
+  'Gita Jayanti': 'gita-jayanti',
+  'Dattatreya Jayanti': 'dattatreya-jayanti',
 }
 
 export default function CalendarPage() {
