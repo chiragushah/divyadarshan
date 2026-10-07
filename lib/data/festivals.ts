@@ -594,6 +594,25 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── HANUMAN JAYANTI ───────────────────────
   {
     slug: 'hanuman-jayanti',
+    dates2026: '2 April 2026 (North India, Chaitra Purnima)',
+    dates2027: '20 April 2027 (North India)',
+    dateNote: 'Observed on Chaitra Purnima in most of North India. Tamil Nadu marks Hanumath Jayanti in Margazhi (Dec–Jan), and Andhra/Telangana on Vaishakha (May) at the end of a 41-day Deeksha — so the date varies widely by region.',
+    mythology: 'Hanuman was born to Anjana, an apsara, and Kesari, with the wind-god Vayu as his divine father (hence Pavanputra). As an infant he mistook the rising sun for a fruit and leapt to swallow it, and was struck down by Indra’s thunderbolt — which is why he is called Hanuman (“disfigured jaw”). Blessed with immortality and immense strength by the gods, he became the supreme devotee of Rama: he leapt across the ocean to Lanka to find Sita, burned the demon city with his flaming tail, and carried the entire Sanjivani mountain to save Lakshmana’s life. He embodies strength wholly surrendered to devotion.',
+    history: 'Hanuman’s worship surged with the Ramayana bhakti tradition and especially with Tulsidas, who composed the Hanuman Chalisa and founded the Sankat Mochan temple in Varanasi. He is worshipped on Tuesdays and Saturdays as the remover of fear and the pacifier of Saturn (Shani).',
+    ritualSteps: [
+      { when: 'Morning', step: 'Bathe and begin early; many keep a fast and read the Sundarkand or the Ramayana.' },
+      { when: 'Puja', step: 'Offer sindoor (vermilion) mixed with chameli (jasmine) oil, a betel-leaf garland, and boondi/laddoo.' },
+      { when: 'Recitation', step: 'Recite the Hanuman Chalisa (often 108 times) and the Bajrang Baan; sing of Rama, since Hanuman dwells wherever Rama’s name is sung.' },
+      { when: 'Evening', step: 'Light a diya with til or chameli oil before the deity; share prasad at the bhandara.' },
+    ],
+    regional: [
+      { region: 'North India', note: 'Dawn-to-dusk Chalisa recitation, shobha yatras and huge bhandaras at Hanuman temples.' },
+      { region: 'Varanasi (Sankat Mochan)', note: 'Founded by Tulsidas — continuous Chalisa paath and a landmark celebration.' },
+      { region: 'Maharashtra', note: 'The Hanuman birth story (Samarth Ramdas tradition) is read at sunrise, the moment of his birth.' },
+      { region: 'Andhra & Telangana', note: 'A 41-day Hanuman Deeksha culminates on Hanumath Jayanti in Vaishakha (May).' },
+      { region: 'Tamil Nadu', note: 'Observed in Margazhi (Dec–Jan) with Anjaneya abhishek with vermilion and a vada-mala (garland of vadas).' },
+    ],
+    attire: ['Red and orange — Hanuman’s colours', 'Simple, clean traditional wear for the fast and recitation', 'Many devotees wear a red tilak and carry a Chalisa'],
     name: 'Hanuman Jayanti',
     alsoKnown: 'Hanuman Janmotsav',
     emoji: '🪔',
@@ -640,6 +659,26 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── MAKAR SANKRANTI ───────────────────────
   {
     slug: 'makar-sankranti',
+    dates2026: '14 January 2026',
+    dates2027: '14 January 2027',
+    dateNote: 'One of the few solar-fixed Hindu festivals — it marks the Sun’s entry into Capricorn (Makara), which falls on 14 January (occasionally 15) almost every year, unlike the lunar festivals that shift.',
+    mythology: 'Makar Sankranti marks the Sun entering Capricorn (Makara) and beginning Uttarayan — his auspicious six-month northward journey, considered a turn from darkness toward light. In one legend, the Sun God visits his estranged son Shani (Saturn, lord of Capricorn) on this day, a story of reconciliation. In the Mahabharata, the great Bhishma, who could choose the hour of his death, waited on his bed of arrows for Uttarayan to begin before leaving his body, for those who die in this period are said to attain liberation. It is also linked to the descent of the Ganga and to Kapil Muni at Ganga Sagar.',
+    history: 'As a solar festival tied to the equinoctial reckoning, Sankranti is among the most ancient observances, celebrated across the subcontinent under many regional names as a harvest thanksgiving and a holy-bathing day.',
+    ritualSteps: [
+      { when: 'Dawn', step: 'Take a holy dip in the Ganga, Godavari or a sacred tank — hugely meritorious on this day.' },
+      { when: 'Sunrise', step: 'Offer arghya (water) to the rising Sun and worship Surya with the Gayatri.' },
+      { when: 'Daan', step: 'Give charity of sesame (til), jaggery, khichdi, blankets and winter food to the needy.' },
+      { when: 'Exchange', step: 'Share til-gul (sesame-jaggery sweets) with “til-gul ghya, god-god bola” — take this sweet and speak sweetly.' },
+      { when: 'Honour the harvest', step: 'Cook the first new rice; worship and decorate cattle in gratitude.' },
+    ],
+    regional: [
+      { region: 'Gujarat (Uttarayan)', note: 'The sky fills with kites in a mass, joyous two-day kite-flying festival with the cry of “kai po che!”' },
+      { region: 'Tamil Nadu (Pongal)', note: 'A four-day harvest festival — the sweet Pongal rice boiled to overflow, and cattle worship on Mattu Pongal.' },
+      { region: 'Punjab (Lohri, the eve)', note: 'Bonfires, sweets, and Bhangra/Gidda to welcome longer days.' },
+      { region: 'Assam (Magh Bihu)', note: 'Community feasts, Meji bonfires and traditional games.' },
+      { region: 'Prayagraj & Ganga Sagar', note: 'Lakhs take the sacred dip; Ganga Sagar Mela is among the largest gatherings in India.' },
+    ],
+    attire: ['Traditional festive wear in bright, warm colours', 'Maharashtra: women traditionally wear black sarees on this one day — black absorbs the winter sun’s warmth and is considered auspicious only now', 'Gujarat: comfortable wear for rooftop kite-flying', 'Yellow and orange tones honour the Sun'],
     name: 'Makar Sankranti',
     alsoKnown: 'Uttarayan; Pongal; Lohri; Magh Bihu; Poush Sankranti',
     emoji: '🪁',
@@ -687,6 +726,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PONGAL ───────────────────────
   {
     slug: 'pongal',
+    dates2026: '14–17 January 2026 (Bhogi 14, Thai/Surya Pongal 15, Mattu 16, Kaanum 17)',
+    dates2027: '14–17 January 2027',
+    dateNote: 'Pongal begins on the first day of the Tamil month of Thai and is solar-fixed, so it falls on roughly the same mid-January dates each year, overlapping Makar Sankranti. (Surya Pongal, the main day, is 15 January in some reckonings and 14 in others.)',
+    mythology: 'Pongal is a harvest thanksgiving to the Sun, the rains and the earth. The third day, Mattu Pongal, carries a Shiva legend: Shiva sent his bull Nandi to tell humans to bathe daily and eat once a month, but Nandi mistakenly announced the reverse — to eat daily and bathe monthly. As penance for the extra food humans would now need, Shiva sent Nandi to earth to help till the fields, which is why cattle are honoured on this day. The name comes from the ritual of boiling the first rice until it ceremonially “pongals” — overflows — a sign of abundance, to cries of “Pongalo Pongal!”',
+    history: 'Pongal is referenced in Sangam-era Tamil literature (over two millennia old) and is the most important festival of the Tamil calendar — a celebration of the agrarian year, the land and the sun that sustains it.',
+    ritualSteps: [
+      { when: 'Bhogi (day 1)', step: 'Discard the old — clean the home and light a bonfire of unwanted things; draw a fresh kolam.' },
+      { when: 'Surya Pongal (day 2)', step: 'Cook sweet Pongal in a new clay pot outdoors facing the sun, let it boil over, and offer it to Surya with sugarcane and turmeric.' },
+      { when: 'Mattu Pongal (day 3)', step: 'Bathe, paint and garland the cattle; worship them in thanks; Jallikattu (bull-taming) is held in parts of Tamil Nadu.' },
+      { when: 'Kaanum Pongal (day 4)', step: 'Families gather, visit relatives and go on outings to close the festival.' },
+    ],
+    regional: [
+      { region: 'Tamil Nadu (statewide)', note: 'Homes and temples draw elaborate kolam; the new Pongal rice is cooked communally with sugarcane everywhere.' },
+      { region: 'Madurai region', note: 'The famous Alanganallur Jallikattu (bull-taming) around Mattu Pongal.' },
+      { region: 'Temple towns', note: 'Deities are offered the first Pongal; grand chariot and folk celebrations follow.' },
+      { region: 'Tamil diaspora', note: 'Celebrated with kolam, sadya and cultural programmes worldwide.' },
+    ],
+    attire: ['New traditional Tamil wear', 'Women: silk sarees (Kanjeevaram for the main day)', 'Men: veshti (dhoti) with angavastram', 'Bright, festive colours; children in new clothes'],
     name: 'Pongal',
     alsoKnown: 'Thai Pongal — the Tamil harvest festival',
     emoji: '🌾',
@@ -733,6 +790,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VASANT PANCHAMI ───────────────────────
   {
     slug: 'vasant-panchami',
+    dates2026: '23 January 2026',
+    dates2027: '11 February 2027',
+    dateNote: 'Vasant Panchami is the fifth day (Panchami) of the bright fortnight of Magha; it is an abujh (always-auspicious) muhurat needing no further calculation. Dates shift across late January–February.',
+    mythology: 'When Brahma created the universe, he found it silent and lifeless. From his mouth he brought forth Saraswati — the goddess of knowledge, speech, music and the arts — and at the touch of her veena, sound, melody and meaning filled creation. Vasant Panchami honours her appearance and the awakening of wisdom. Falling at the cusp of spring (Vasant), the day is draped in yellow — the colour of ripening mustard fields and the returning sun — and it is the most auspicious day of the year to begin learning, music, writing or any art.',
+    history: 'Saraswati worship on this day is an ancient tradition, especially strong in eastern India, among students and in the arts. The day is historically linked in Punjab with the Basant kite festival.',
+    ritualSteps: [
+      { when: 'Morning', step: 'Dress in yellow; set up a clay idol or image of Saraswati with yellow flowers.' },
+      { when: 'Worship', step: 'Place books, pens, and instruments at the Goddess’s feet and worship them; refrain from using them until the puja is done.' },
+      { when: 'Vidyarambham', step: 'Perform Akshar-abhyasam — a child’s first writing of letters, guided by an elder into the alphabet.' },
+      { when: 'Offering', step: 'Offer yellow sweets, saffron rice and the season’s first blossoms; students seek the Goddess’s blessing before exams.' },
+    ],
+    regional: [
+      { region: 'West Bengal & Bihar', note: 'Saraswati Puja in homes, schools and colleges with clay idols, alpana and pushpanjali offered by students.' },
+      { region: 'North India', note: 'Yellow attire, yellow sweets and kite-flying; mustard-flower motifs everywhere.' },
+      { region: 'Punjab', note: 'Historically the Basant kite festival, especially around Amritsar and Lahore.' },
+      { region: 'Nationwide (students)', note: 'The classic day to start a child’s education, learn an instrument, or begin writing.' },
+    ],
+    attire: ['Yellow is the colour of the day — sarees, suits, kurtas and dupattas in yellow and saffron', 'Women: yellow or basanti sarees', 'Men: yellow or cream kurta', 'Children in yellow for Vidyarambham'],
     name: 'Vasant Panchami',
     alsoKnown: 'Saraswati Puja; Basant Panchami; Sri Panchami',
     emoji: '📖',
@@ -779,6 +854,25 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RATH YATRA ───────────────────────
   {
     slug: 'rath-yatra',
+    dates2026: '16 July 2026 (outward journey); Bahuda (return) ~24 July',
+    dates2027: '5 July 2027',
+    dateNote: 'Rath Yatra is on the Dwitiya (second day) of the bright fortnight of Ashadha; the return journey (Bahuda Yatra) is eight days later. Dates shift across June–July each year.',
+    mythology: 'The Rath Yatra is the annual journey in which Lord Jagannath, his brother Balabhadra and sister Subhadra leave the sanctum of the Jagannath Temple and travel on three colossal chariots to the Gundicha Temple — the home of their aunt (Mausi Maa) and, by tradition, Jagannath’s birthplace — where they stay a week before returning. One account holds that Subhadra wished to see the city, and the siblings rode out together to grant her wish. It is one of the very few occasions the deities step out of the sanctum, so that every person — including those who may never enter the temple — can receive darshan. Pulling the chariot ropes is believed to be deeply liberating.',
+    history: 'The Rath Yatra of Puri is one of the oldest continuously-held chariot festivals in the world, documented for over 800 years and witnessed by medieval travellers. The English word “juggernaut” derives from the unstoppable rolling of Jagannath’s massive rath.',
+    ritualSteps: [
+      { when: 'Weeks before', step: 'Hereditary craftsmen build the three chariots anew each year from specified sacred wood (daru).' },
+      { when: 'Yatra morning', step: 'The deities are brought out in the pahandi procession and installed on their chariots amid conch and cymbal.' },
+      { when: 'Chhera Pahara', step: 'The Gajapati King sweeps the chariot platforms with a golden broom — a ritual of utter humility before the Lord.' },
+      { when: 'The pull', step: 'The whole community pulls the raths by rope along the Bada Danda (Grand Road) to the Gundicha Temple.' },
+      { when: 'Return (Bahuda)', step: 'After a week, the deities return; on the way the Suna Besha (golden attire) darshan is offered.' },
+    ],
+    regional: [
+      { region: 'Puri (Odisha)', note: 'The original and greatest — millions throng the Bada Danda to pull the three towering raths amid a roar of “Jai Jagannath”.' },
+      { region: 'Ahmedabad', note: 'India’s second-largest Rath Yatra, a centuries-old tradition through the old city.' },
+      { region: 'Kolkata (Mahesh) & Serampore', note: 'The historic Mahesh Rath Yatra, among the oldest in the country.' },
+      { region: 'Worldwide (ISKCON)', note: 'Rath Yatras are held in cities across the globe by ISKCON and Odia communities.' },
+    ],
+    attire: ['Traditional wear; many wear white or saffron', 'Women: cotton or silk sarees suited to the monsoon heat and crowds', 'Men: dhoti-kurta or simple kurta', 'Light, comfortable clothing for the long procession'],
     name: 'Jagannath Rath Yatra',
     alsoKnown: 'Ratha Jatra; the Chariot Festival of Puri',
     emoji: '🛕',
@@ -824,6 +918,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── ONAM ───────────────────────
   {
     slug: 'onam',
+    dates2026: '26 August 2026 (Thiruvonam); the 10 days run ~17–26 Aug',
+    dates2027: '12 September 2027 (Thiruvonam)',
+    dateNote: 'Onam follows the Malayalam solar calendar — Thiruvonam asterism in the month of Chingam — and the ten-day festival (Atham to Thiruvonam) shifts across August–September each year.',
+    mythology: 'Onam celebrates the homecoming of King Mahabali, a just and generous asura ruler under whom, legend says, Kerala knew a golden age where all were equal and none went hungry. Alarmed by his growing power and popularity, the gods sent Vishnu as the dwarf Vamana, who begged Mahabali for as much land as he could cover in three steps. When the king agreed, Vamana grew to cosmic size and covered the earth and sky in two strides; for the third, the humble Mahabali offered his own head, and was pushed to the netherworld. Moved by his devotion, Vishnu granted him one boon: to return and visit his beloved people once every year. Onam is that annual homecoming.',
+    history: 'Onam is Kerala’s most important festival, crossing all communities and faiths. The Vallam Kali snake-boat races and the Thrikkakara Vamana temple traditions are centuries old; Onam is the official state festival of Kerala.',
+    ritualSteps: [
+      { when: 'Atham (day 1)', step: 'Begin the pookalam — a flower carpet that grows larger and more intricate each of the ten days to welcome Mahabali.' },
+      { when: 'Through the days', step: 'Set out the Onathappan (clay pyramids representing Vamana/Mahabali) and worship them; buy new clothes (Onakkodi).' },
+      { when: 'Thiruvonam (day 10)', step: 'Serve the Onasadya — a grand vegetarian feast of 20–30+ dishes on a banana leaf — at midday.' },
+      { when: 'Celebration', step: 'Vallam Kali boat races, Pulikali tiger-dance, Thiruvathira and temple festivities fill the day.' },
+    ],
+    regional: [
+      { region: 'Thrikkakara (Kochi)', note: 'The Vamana temple — the ritual home of Onam, with the grandest ten-day festival.' },
+      { region: 'Aranmula & Alappuzha', note: 'The spectacular snake-boat races (Aranmula Uthrattathi and the Nehru Trophy), crews of 100+ rowers.' },
+      { region: 'Thrissur', note: 'Pulikali — painted “tiger” dancers parade through the streets.' },
+      { region: 'Across Kerala', note: 'Homes compete in pookalam and prepare the Onasadya; a festival of equality and shared abundance.' },
+    ],
+    attire: ['Kerala’s traditional kasavu — cream cotton with a gold border', 'Women: kasavu saree or set-mundu (mundum neriyathum), often with jasmine in the hair', 'Men: kasavu mundu with a shirt or angavastram', 'The cream-and-gold look is the signature of Onam'],
     name: 'Onam',
     alsoKnown: 'Thiruvonam — Kerala’s harvest festival',
     emoji: '🌼',
@@ -871,6 +983,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── UGADI / GUDI PADWA ───────────────────────
   {
     slug: 'ugadi-gudi-padwa',
+    dates2026: '19 March 2026',
+    dates2027: '7 April 2027',
+    dateNote: 'Both fall on Chaitra Shukla Pratipada — the first day of the Hindu lunar new year — so they share a date, shifting across March–April each year.',
+    mythology: 'Tradition holds that Lord Brahma created the universe on this day and set time itself in motion, making it the start of a new age (yuga-adi → Ugadi). In Maharashtra, Gudi Padwa also recalls the day Lord Rama returned to Ayodhya and was crowned after defeating Ravana — the raised Gudi flag is a banner of that victory and of triumph in general. It is also linked to the start of Shalivahana’s reign and the Shalivahana Shaka calendar.',
+    history: 'The Shalivahana Shaka era, used across the Deccan, begins from this day. The raising of the Gudi and the reading of the new year’s Panchanga (almanac) are long-standing Deccan and Maharashtrian traditions.',
+    ritualSteps: [
+      { when: 'Morning', step: 'Clean and decorate the home; draw rangoli and hang mango-leaf toran at the door.' },
+      { when: 'Gudi (Maharashtra)', step: 'Raise the Gudi at the doorway — a bright cloth, neem and mango leaves, flowers and an inverted silver/copper pot on a bamboo — for victory and prosperity.' },
+      { when: 'Ugadi Pachadi', step: 'Eat the ritual six-taste mix (neem, jaggery, raw mango, tamarind, chilli, salt) — a reminder that the year ahead holds all of life’s flavours.' },
+      { when: 'Panchanga Sravanam', step: 'Hear the new year’s almanac read aloud — forecasts for the coming year — at home or temple.' },
+      { when: 'New beginnings', step: 'Begin new ventures, purchases and accounts on this auspicious day.' },
+    ],
+    regional: [
+      { region: 'Andhra, Telangana, Karnataka (Ugadi)', note: 'Ugadi Pachadi, new clothes, temple visits and literary gatherings (Kavi Sammelanam).' },
+      { region: 'Maharashtra & Goa (Gudi Padwa)', note: 'Gudis rise over doorways; grand shobha yatras in Mumbai (Girgaon) and Pune in bright traditional attire.' },
+      { region: 'Deccan-wide', note: 'Families begin new accounts, ventures and gold purchases on this new-year day.' },
+    ],
+    attire: ['New traditional wear for the new year', 'Maharashtra: women in nauvari/paithani sarees, men in kurta with a saffron pheta', 'Andhra/Karnataka: silk sarees and kurta-pyjama', 'Saffron and bright festive colours'],
     name: 'Ugadi & Gudi Padwa',
     alsoKnown: 'Yugadi; Gudi Padwa; Chaitra Shukla Pratipada; Deccan New Year',
     emoji: '🌱',
@@ -916,6 +1046,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VAIKUNTHA EKADASHI ───────────────────────
   {
     slug: 'vaikuntha-ekadashi',
+    dates2026: '20 December 2026',
+    dates2027: '9 December 2027 (confirm locally)',
+    dateNote: 'Vaikuntha Ekadashi falls on the Shukla Ekadashi of the Dhanur month (Margashirsha), typically mid-December to mid-January. In the North the same day is Mokshada Ekadashi (Gita Jayanti). Dates shift yearly — confirm for your temple.',
+    mythology: 'On this Ekadashi, the gates of Vaikuntha — the celestial abode of Lord Vishnu — are believed to open. In one Puranic account, Vishnu created a goddess named Ekadashi from his being to slay the demon Muran, who had terrorised the gods; pleased, Vishnu granted that whoever observes the Ekadashi fast with devotion is freed of sin. Passing through the “Vaikuntha Dwaram” (the gate of heaven) in the temple on this day is believed to grant moksha. In the North, the same day is Mokshada Ekadashi, on which the Bhagavad Gita was revealed to Arjuna (Gita Jayanti).',
+    history: 'The grand opening of the Paramapada Vasal (gate of heaven) at Srirangam and the Vaikuntha Dwaram at Tirumala are temple traditions observed over many centuries, drawing some of the largest annual crowds in South India.',
+    ritualSteps: [
+      { when: 'Dashami (eve)', step: 'Begin preparations; take a light satvik meal and resolve the vrat.' },
+      { when: 'Ekadashi (all day)', step: 'Observe a strict fast (often nirjala — no grains or rice), and keep a night-long vigil of Vishnu-bhajan.' },
+      { when: 'Pre-dawn / dawn', step: 'Pass through the Vaikuntha Dwaram / Paramapada Vasal in the temple — the “gate of heaven”.' },
+      { when: 'Worship', step: 'Recite the Vishnu Sahasranama and the Bhagavad Gita; take darshan of the utsava deity in procession.' },
+      { when: 'Dwadashi (next day)', step: 'Break the fast at the prescribed Parana time with simple satvik food.' },
+    ],
+    regional: [
+      { region: 'Tirumala', note: 'The Vaikuntha Dwaram around the sanctum is opened; immense queues of devotees pass through for liberation.' },
+      { region: 'Srirangam (Tamil Nadu)', note: 'The ten-day Vaikunta Ekadashi festival and the grand opening of the Paramapada Vasal — among the South’s greatest events.' },
+      { region: 'All Vishnu temples', note: 'Special darshan, abhishek and processions of the utsava deity; Divya Prabandham recitation.' },
+    ],
+    attire: ['Traditional, modest wear for the long temple vigil and queues', 'Women: silk or cotton sarees', 'Men: dhoti (veshti) with angavastram, as many South Indian temples require', 'Simple clothing suited to fasting'],
     name: 'Vaikuntha Ekadashi',
     alsoKnown: 'Mukkoti Ekadashi; Mokshada Ekadashi',
     emoji: '🚪',
@@ -960,6 +1108,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── CHHATH PUJA ───────────────────────
   {
     slug: 'chhath-puja',
+    dates2026: '15 November 2026 (Sandhya Arghya); the 4 days run 13–16 Nov',
+    dates2027: '3 November 2027 (Sandhya Arghya)',
+    dateNote: 'Chhath is on the Shashthi of the bright fortnight of Kartik — six days after Diwali — with the evening Sandhya Arghya as the main day and the dawn Usha Arghya the next morning. Dates shift across Oct–Nov.',
+    mythology: 'Chhath worships Surya, the Sun — the visible source of all life — and Chhathi Maiya (identified with Usha, the dawn, and as a form of the divine feminine), who blesses households with children, health and wellbeing. In the Mahabharata, Karna — the son of Surya — is said to have worshipped the sun standing in water, a practice Chhath continues; Draupadi and the Pandavas are also said to have observed it to regain their kingdom. It is one of the only festivals that worships both the setting and the rising sun, honouring decline and renewal alike.',
+    history: 'Chhath is an ancient Vedic-rooted sun-worship tradition of the Mithila and Magadha regions (Bihar, eastern UP, Jharkhand and the Nepal Terai), famed for its extraordinary austerity and purity, performed largely by women vratins without priests.',
+    ritualSteps: [
+      { when: 'Nahay Khay (day 1)', step: 'Bathe in a river and eat a single, pure satvik meal; the home is ritually cleaned.' },
+      { when: 'Kharna (day 2)', step: 'Fast all day, then break it at night with kheer and roti — after which the 36-hour nirjala (waterless) fast begins.' },
+      { when: 'Sandhya Arghya (day 3)', step: 'Stand in the river at sunset and offer arghya to the setting sun with a bamboo soop of fruits and thekua.' },
+      { when: 'Usha Arghya (day 4)', step: 'Return before dawn, stand in the water and offer arghya to the rising sun; then break the fast (paran).' },
+    ],
+    regional: [
+      { region: 'Bihar', note: 'The heartland — the Ganga ghats at Patna fill with hundreds of thousands of vratins at dawn and dusk.' },
+      { region: 'Eastern UP & Jharkhand', note: 'River banks and ponds everywhere host the arghya; folk Chhath songs fill the air.' },
+      { region: 'Delhi, Mumbai & diaspora', note: 'Migrant communities recreate the festival at any available water body, with great devotion.' },
+      { region: 'Nepal Terai', note: 'Observed with the same rigour across the Mithila region of Nepal.' },
+    ],
+    attire: ['Vratins wear new, traditional clothes — often unstitched for purity', 'Women: cotton sarees, frequently yellow or red, worn without stitched blouses by some observers', 'Men: dhoti (unstitched) for the rituals', 'Clean, simple clothing reflecting the festival’s emphasis on purity'],
     name: 'Chhath Puja',
     alsoKnown: 'Chhathi Maiya Puja; Surya Shashthi; Dala Chhath',
     emoji: '🌅',
