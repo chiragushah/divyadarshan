@@ -40,7 +40,8 @@ export default async function FestivalsPage() {
 
   const festivals = FESTIVALS.map(f => {
     const s = f.temples.find(t => t.slug)?.slug
-    return { ...f, heroImage: (s && imgBySlug[s]) || '' }
+    // Prefer a real festival image when we have one; else fall back to the lead temple's photo.
+    return { ...f, heroImage: f.image || (s && imgBySlug[s]) || '' }
   })
 
   return <FestivalsClient festivals={festivals} />

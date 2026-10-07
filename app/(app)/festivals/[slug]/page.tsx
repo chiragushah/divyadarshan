@@ -46,7 +46,8 @@ export function generateMetadata({ params }: Props): Metadata {
 export default async function FestivalDetailPage({ params }: Props) {
   const f = getFestival(params.slug)
   if (!f) notFound()
-  const heroImage = await leadTempleImage(f)
+  // Prefer a real festival image when we have one; else fall back to the lead temple's photo.
+  const heroImage = f.image || await leadTempleImage(f)
 
   const facts: { label: string; value: string }[] = [
     { label: 'Deity worshipped', value: f.deity },

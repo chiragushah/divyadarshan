@@ -18,6 +18,7 @@ export interface Festival {
   name: string
   alsoKnown?: string          // regional / alternate names
   emoji: string
+  image?: string              // real festival hero image (served from /public/festivals)
   accent: string              // card accent colour
   deity: string               // primary god/goddess worshipped
   deityGroup: string          // for filtering: Shiva | Vishnu & Avatars | Devi / Shakti | Ganesha | Surya | Murugan | Hanuman | Multi-faith | Sikh | Jain | Buddhist
@@ -57,6 +58,7 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── DIWALI ─────────────────────────────
   {
     slug: 'diwali',
+    image: '/festivals/diwali.jpg',
     foodByRegion: [
       { region: 'North India', note: 'Kaju katli, soan papdi, gujiya, besan and motichoor ladoo; boxes of dry-fruit mithai exchanged as gifts.' },
       { region: 'South India', note: 'Adhirasam, Mysore pak, murukku and thattai; sweets after the pre-dawn oil bath.' },
@@ -147,6 +149,7 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── HOLI ─────────────────────────────
   {
     slug: 'holi',
+    image: '/festivals/holi.jpg',
     foodByRegion: [
       { region: 'North India', note: 'Gujiya, thandai (often with bhang), dahi vada and namkeen.' },
       { region: 'Rajasthan & UP', note: 'Ghevar, malpua, mathri and kachori.' },
@@ -232,6 +235,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── NAVARATRI / DURGA PUJA ───────────────────────
   {
     slug: 'navaratri-durga-puja',
+    image: '/festivals/navaratri-durga-puja.jpg',
     foodByRegion: [
       { region: 'North India', note: 'Vrat (fasting) food — kuttu/singhara puri, sabudana khichdi, samak rice, aloo and fruit.' },
       { region: 'Gujarat', note: 'Fafda-jalebi, dhokla and farsan through the Garba nights.' },
@@ -322,6 +326,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── DUSSEHRA / VIJAYADASHAMI ───────────────────────
   {
     slug: 'dussehra-vijayadashami',
+    image: '/festivals/dussehra-vijayadashami.jpg',
     foodByRegion: [
       { region: 'Gujarat', note: 'Fafda-jalebi — the quintessential Dussehra morning treat.' },
       { region: 'Maharashtra', note: 'Shira and sweets after the Seemollanghan and Shami-leaf exchange.' },
@@ -401,6 +406,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── MAHA SHIVARATRI ───────────────────────
   {
     slug: 'maha-shivaratri',
+    image: '/festivals/maha-shivaratri.jpg',
     attireByRegion: [
       { region: 'Varanasi & North India', note: 'Simple white or earthy clothing for the all-night vigil; rudraksha malas and vibhuti (sacred ash) on the forehead.' },
       { region: 'Ujjain (Bhasma Aarti)', note: 'Traditional dress for the pre-dawn aarti; men often in dhoti, draped with a shawl against the February cold.' },
@@ -475,6 +481,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KRISHNA JANMASHTAMI ───────────────────────
   {
     slug: 'krishna-janmashtami',
+    image: '/festivals/krishna-janmashtami.jpg',
     foodByRegion: [
       { region: 'Braj & North India', note: 'Dhaniya panjiri, makhan-mishri, charanamrit and kheer for the midnight celebration.' },
       { region: 'Maharashtra', note: 'Gopalkala (poha, curd, butter) and dahi for the Dahi Handi.' },
