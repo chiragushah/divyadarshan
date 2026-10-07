@@ -1214,6 +1214,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── NAG PANCHAMI ───────────────────────
   {
     slug: 'nag-panchami',
+    dates2026: '17 August 2026',
+    dates2027: '6 August 2027',
+    dateNote: 'Nag Panchami is the Panchami (fifth day) of the bright fortnight of Shravana, the holy monsoon month of Shiva. Dates shift across July–August each year.',
+    mythology: 'Nag Panchami worships the Nagas, the divine serpents of Hindu cosmology: Shesha, the thousand-hooded serpent on whom Vishnu reclines; Vasuki, who coils around Shiva’s neck and served as the churning-rope of the ocean; and Takshaka and others who guard the earth’s treasures and waters. A beloved story is Krishna subduing the venomous serpent Kaliya in the Yamuna, dancing on its hoods until it submitted and left the river in peace. The monsoon brings snakes closer to homes, so the festival is both reverence and a prayer for protection from snakebite, and for progeny and the removal of Kal Sarpa Dosha.',
+    history: 'Serpent worship is among the oldest strands of Indian religion, predating and woven into Vedic tradition. Shrines to Naga stones, anthills and serpent deities are found across the subcontinent.',
+    ritualSteps: [
+      { when: 'Morning', step: 'Worship an image, idol or anthill of the Naga; draw serpent figures at the doorway with turmeric or sandal.' },
+      { when: 'Offering', step: 'Offer milk, turmeric, flowers, rice and vermilion to the serpent deity.' },
+      { when: 'Observances', step: 'Avoid digging the earth, ploughing or cutting (to not harm serpents); many keep a fast.' },
+      { when: 'For dosha', step: 'Those with Kal Sarpa Dosha perform special Naga puja (Sarpa Samskara) at serpent kshetras.' },
+    ],
+    regional: [
+      { region: 'Maharashtra (Battis Shirala)', note: 'Historically famous for its Nag Panchami observances and serpent processions.' },
+      { region: 'Karnataka (Kukke Subramanya)', note: 'The great serpent kshetra — Sarpa Samskara and Nagaradhane rituals.' },
+      { region: 'Ujjain (Nagchandreshwar)', note: 'The shrine atop Mahakaleshwar opens for darshan only on Nag Panchami — once a year.' },
+      { region: 'Bengal', note: 'Worship of Manasa, the serpent goddess, during the monsoon.' },
+    ],
+    attire: ['Simple traditional wear for the puja', 'Clean, modest clothing', 'No special dress code beyond festive traditional attire'],
     name: 'Nag Panchami',
     alsoKnown: 'Naga Panchami; serpent worship',
     emoji: '🐍',
@@ -1258,6 +1276,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RAKSHA BANDHAN ───────────────────────
   {
     slug: 'raksha-bandhan',
+    dates2026: '28 August 2026',
+    dates2027: '16 August 2027',
+    dateNote: 'Raksha Bandhan is on the full moon (Purnima) of Shravana; the rakhi is traditionally tied during an auspicious window, avoiding any Bhadra period. Dates shift across August each year.',
+    mythology: 'Several stories carry the “thread of protection.” When Krishna cut his finger at the Mahabharata war, Draupadi tore a strip from her saree and bound his wound; touched, Krishna vowed to protect her — a debt he repaid during her disrobing. In another, Indra’s wife Sachi (Indrani) tied a sacred thread on his wrist before battle with the demons, and he triumphed. And Yama blessed his sister Yamuna that any brother honoured by his sister would gain long life. The rakhi is a bond of mutual care that has widened over time to any relationship of protection.',
+    history: 'On the same Shravana Purnima, Brahmins ritually renew their sacred thread (Upakarma / Avani Avittam) on riverbanks, and coastal communities offer coconuts to the now-calming sea (Nariyal Purnima) before resuming fishing — making it a layered, multi-tradition full-moon day.',
+    ritualSteps: [
+      { when: 'Morning', step: 'Prepare the puja thali — rakhi, roli (tilak), rice, a diya and sweets.' },
+      { when: 'The tying', step: 'The sister performs aarti, applies tilak, and ties the rakhi on the brother’s right wrist, praying for his wellbeing.' },
+      { when: 'The vow', step: 'The brother offers a gift and the vow of protection; sweets are shared.' },
+      { when: 'Also today', step: 'Brahmins perform the Upakarma (sacred-thread change); coastal communities offer coconuts to the sea.' },
+    ],
+    regional: [
+      { region: 'North & West India', note: 'The classic rakhi festival; rakhis are tied and sent across cities and countries to absent brothers.' },
+      { region: 'Maharashtra & Konkan coast', note: 'Nariyal Purnima — fishermen offer coconuts to the sea before the fishing season reopens.' },
+      { region: 'South India', note: 'Avani Avittam — the mass sacred-thread-changing ceremony on riverbanks.' },
+      { region: 'Braj', note: 'Jhulan (swing) celebrations of Radha-Krishna coincide with this full-moon season.' },
+    ],
+    attire: ['Festive traditional wear', 'Women: bright sarees or salwar suits', 'Men: kurta-pyjama', 'A warm family festival — dressy but comfortable'],
     name: 'Raksha Bandhan',
     alsoKnown: 'Rakhi; Rakhi Purnima; Nariyal Purnima; Avani Avittam',
     emoji: '🧵',
@@ -1301,6 +1337,23 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KARVA CHAUTH ───────────────────────
   {
     slug: 'karva-chauth',
+    dates2026: '29 October 2026',
+    dates2027: '18 October 2027',
+    dateNote: 'Karva Chauth is the Chaturthi of the dark fortnight of Kartik; the fast runs from sunrise to moonrise, so the evening moonrise time (which varies by city) decides when it breaks. Dates shift across Oct–Nov.',
+    mythology: 'The vrat is tied to several tales of a wife’s devotion saving her husband. Queen Veervati, tricked by her brothers into breaking her fast early (they showed a false “moon”), lost her husband — and only by resuming the fast with full devotion did she win his life back. The stories of Savitri, who followed Yama to reclaim Satyavan’s life, and of Parvati’s penance for Shiva, are also invoked. The festival celebrates marital love, fidelity and the power of the sankalpa (vow).',
+    history: 'Karva Chauth is a North Indian tradition — strongest in Punjab, Haryana, Rajasthan, UP and Delhi — historically also marking the time husbands departed with armies, when wives prayed for their safe return. Popular culture has made it one of the most visible festivals of the region.',
+    ritualSteps: [
+      { when: 'Pre-dawn', step: 'Eat the sargi — a meal traditionally sent by the mother-in-law — with fenia, fruit and dry fruits, before sunrise.' },
+      { when: 'Day', step: 'Keep the nirjala fast (no food or water); dress in bridal finery with mehndi and the sixteen adornments (solah shringar).' },
+      { when: 'Afternoon', step: 'Gather with other women for the collective Karva Chauth katha, passing the karva (pot) in a circle with the thali ceremony.' },
+      { when: 'Moonrise', step: 'View the moon through a sieve, then look at the husband’s face; he gives the first sip of water and a morsel to break the fast.' },
+    ],
+    regional: [
+      { region: 'Punjab & Haryana', note: 'The heartland — the sargi, the collective katha and the thali-rotation (“phera”) ceremony are central.' },
+      { region: 'Rajasthan', note: 'Elaborate solah shringar and mehndi; the karva pot is beautifully decorated.' },
+      { region: 'UP & Delhi', note: 'Widely observed; increasingly both partners fast for each other.' },
+    ],
+    attire: ['Bridal red or maroon is traditional — sarees, lehengas or salwar suits', 'Full solah shringar: bangles, bindi, sindoor, nose-ring, mehndi', 'Brides often wear their wedding attire in the first year', 'Gold and red the dominant colours'],
     name: 'Karva Chauth',
     alsoKnown: 'Karak Chaturthi',
     emoji: '🌙',
@@ -1344,6 +1397,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── AKSHAYA TRITIYA ───────────────────────
   {
     slug: 'akshaya-tritiya',
+    dates2026: '19 April 2026',
+    dates2027: '8 May 2027',
+    dateNote: 'Akshaya Tritiya is the Tritiya of the bright fortnight of Vaishakha; the entire day is auspicious (no muhurat needed). Dates shift across April–May each year.',
+    mythology: '“Akshaya” means that which never diminishes. Many sacred beginnings fall on this day: it is the birthday of Parashurama (Vishnu’s sixth avatar); the day the Ganga descended to earth; the day Vyasa began dictating the Mahabharata to Ganesha; and the day Krishna gave his poor friend Sudama endless wealth. In the forest, Krishna gave the exiled Pandavas the Akshaya Patra — a vessel of inexhaustible food. Whatever is begun, invested, given in charity or worshipped today is believed to grow and never decay.',
+    history: 'Akshaya Tritiya has long been the most auspicious day for weddings, new ventures and buying gold. It coincides with key temple events: the reopening of Badrinath and Kedarnath, the start of Rath Yatra chariot construction at Puri, and the once-a-year full darshan at Simhachalam.',
+    ritualSteps: [
+      { when: 'Morning', step: 'Worship Vishnu and Lakshmi; bathe and offer prayers for ever-growing prosperity.' },
+      { when: 'Daan (charity)', step: 'Give food, water, fans, umbrellas and summer essentials to the needy — charity today is said to be inexhaustible in merit.' },
+      { when: 'New beginnings', step: 'Begin new ventures, investments or learning; buy gold or start savings as a symbol of growth.' },
+      { when: 'Offering', step: 'Offer the season’s cooling foods — sattu, barley, aam panna and panakam.' },
+    ],
+    regional: [
+      { region: 'Uttarakhand', note: 'Badrinath and Kedarnath reopen around this time — the Himalayan Char Dham yatra season begins.' },
+      { region: 'Puri (Odisha)', note: 'Construction of the Rath Yatra chariots begins; the Chandan Yatra of the deities starts.' },
+      { region: 'Simhachalam (Andhra)', note: 'Chandanotsava — the deity’s sandal-paste covering is removed, revealing the true form for this one day a year.' },
+      { region: 'Nationwide', note: 'Jewellers see their biggest day of the year; families begin new accounts and buy gold.' },
+    ],
+    attire: ['Festive traditional wear', 'Many wear new clothes to begin the auspicious day', 'Yellow and gold tones for prosperity', 'Modest traditional attire for temple visits'],
     name: 'Akshaya Tritiya',
     alsoKnown: 'Akha Teej; Akti',
     emoji: '✨',
@@ -1389,6 +1460,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KARTIK PURNIMA / DEV DEEPAWALI ───────────────────────
   {
     slug: 'kartik-purnima-dev-deepawali',
+    dates2026: '24 November 2026 (Dev Deepawali observed on the eve, 23 Nov)',
+    dates2027: '13 November 2027',
+    dateNote: 'Kartik Purnima is the full moon of Kartik, fifteen days after Diwali. Varanasi’s Dev Deepawali is observed on the Purnima evening (sometimes the eve). Dates shift across Nov each year.',
+    mythology: 'Kartik Purnima celebrates Lord Shiva as Tripurari — the destroyer of Tripurasura, the demon who ruled three flying, invincible cities, which Shiva burned with a single arrow at this moment. It is also linked to Vishnu’s first avatar, Matsya (the fish), and to the birth of Kartikeya. In Varanasi it becomes Dev Deepawali — the “Diwali of the gods” — when the devas are believed to descend to bathe in the Ganga, and the city’s 84 ghats blaze with over a million lamps in their honour.',
+    history: 'A holy dip on Kartik Purnima is of immense merit across Hindu tradition. The same full moon is Guru Nanak’s birth anniversary for Sikhs, and the Pushkar Camel Fair in Rajasthan peaks on this day.',
+    ritualSteps: [
+      { when: 'Dawn', step: 'Take a holy dip (Kartik snan) in the Ganga or a sacred river.' },
+      { when: 'Day', step: 'Worship Shiva and Vishnu; perform charity and complete the month-long Kartik vrat.' },
+      { when: 'Evening (deep-daan)', step: 'Light rows of lamps on riverbanks and float diya on the water.' },
+      { when: 'Dev Deepawali (Varanasi)', step: 'Witness the mass lamp-lighting of all 84 ghats and the grand multi-priest Ganga Aarti at dusk.' },
+    ],
+    regional: [
+      { region: 'Varanasi', note: 'Dev Deepawali — over a million lamps on all 84 ghats and the grand Ganga aarti; arguably the most beautiful night in India.' },
+      { region: 'Pushkar (Rajasthan)', note: 'The famous Pushkar Camel Fair and the holy dip in Pushkar Lake peak on Kartik Purnima.' },
+      { region: 'Across North India', note: 'Ganga ghats glow with floating lamps; melas at river confluences.' },
+      { region: 'Sikh community', note: 'Guru Nanak Jayanti is celebrated with nagar kirtan and langar on the same day.' },
+    ],
+    attire: ['Traditional wear for the holy dip and ghat aartis', 'Women: sarees in festive colours', 'Men: kurta-pyjama or dhoti', 'Warm layers for the November riverside evenings'],
     name: 'Kartik Purnima & Dev Deepawali',
     alsoKnown: 'Tripurari Purnima; Dev Diwali; Guru Nanak Gurpurab (same day)',
     emoji: '🕯️',
@@ -1434,6 +1523,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── THAIPUSAM ───────────────────────
   {
     slug: 'thaipusam',
+    dates2026: '1 February 2026',
+    dates2027: '21 February 2027 (confirm locally)',
+    dateNote: 'Thaipusam falls when the Pusam (Pushya) nakshatra prevails on the full moon of the Tamil month of Thai. Dates shift across Jan–Feb each year.',
+    mythology: 'Thaipusam honours Lord Murugan (Kartikeya), the warrior son of Shiva and Parvati. When the demon Soorapadman and his forces terrorised the devas, Parvati gave Murugan the vel — a divine spear — with which he destroyed the demon on this day, splitting him into a peacock (which became his mount) and a rooster (his banner). It is above all a festival of penance and thanksgiving: devotees who have had prayers answered fulfil their vows through acts of devotion and endurance, carrying the kavadi — a burden borne for the Lord.',
+    history: 'Thaipusam is central to the six Padai Veedu (the six war-camp abodes of Murugan in Tamil Nadu) and has become a defining festival of the Tamil diaspora — the Batu Caves procession in Malaysia and the Singapore kavadi walk are among the largest in the world.',
+    ritualSteps: [
+      { when: 'Weeks before', step: 'Undertake a vow — often 48 days of fasting, celibacy, satvik living and wearing saffron or yellow.' },
+      { when: 'Preparation', step: 'Shave the head; prepare the kavadi (a decorated arched burden) and the paal kudam (milk-pots) for abhishekam.' },
+      { when: 'The walk', step: 'Carry the kavadi barefoot to the hill shrine, often to drumming and trance; some pierce the skin, cheeks or tongue with vel-skewers as acts of penance.' },
+      { when: 'At the shrine', step: 'Climb to the sannidhanam and offer the milk (neyyabhishekam/paal abhishekam) and the vel at Murugan’s feet, fulfilling the vow.' },
+    ],
+    regional: [
+      { region: 'Palani (Tamil Nadu)', note: 'Hundreds of thousands climb the hill with kavadis and milk-pots; the Panchamirtham prasad is legendary.' },
+      { region: 'Tiruchendur & the Padai Veedu', note: 'The six abodes of Murugan hold grand Thaipusam festivities.' },
+      { region: 'Malaysia (Batu Caves)', note: 'One of the largest Thaipusam processions on earth — kavadi-bearers climb the 272 steps.' },
+      { region: 'Singapore', note: 'A famous 4 km kavadi procession through the city.' },
+    ],
+    attire: ['Devotees wear saffron, yellow or orange during the vow period', 'Vibhuti (sacred ash) and rudraksha; many go bare-chested (men) for the kavadi', 'Women: yellow or orange sarees', 'Simple, pure clothing reflecting the penance'],
     name: 'Thaipusam',
     alsoKnown: 'Thai Poosam',
     emoji: '🦚',
@@ -1480,6 +1587,23 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── THRISSUR POORAM ───────────────────────
   {
     slug: 'thrissur-pooram',
+    dates2026: '26 April 2026',
+    dates2027: 'May 2027 (Pooram asterism in Medam — confirm locally)',
+    dateNote: 'Thrissur Pooram falls on the Pooram nakshatra in the Malayalam month of Medam (April–May), when the moon rises with the Pooram star. Dates shift across April–May each year.',
+    mythology: 'Unlike penance festivals, Thrissur Pooram is a civic and devotional spectacle. Its presiding deity is Lord Shiva as Vadakkunnathan, but the festival centres on two Bhagavathy (Goddess) temples — Paramekkavu and Thiruvambady — whose deities are brought in grand procession to pay homage to Shiva, each fielding a magnificent line of caparisoned elephants and percussion. It is a celebration of art, rhythm, colour and the friendly rivalry of the two temple groups.',
+    history: 'Thrissur Pooram was founded around 1798 by Sakthan Thampuran, the Maharaja of Cochin, after the local temples were excluded from the older Aarattupuzha Pooram; he invited them to Thrissur and organised them into the two competing groups, creating what is now Kerala’s grandest temple festival.',
+    ritualSteps: [
+      { when: 'Ezhunnallippu', step: 'Each temple brings its deity in procession atop richly caparisoned elephants, with ornamental parasols and fans.' },
+      { when: 'Ilanjithara Melam', step: 'A massive two-hour percussion ensemble of hundreds of drummers and horn-players before the Vadakkunnathan temple.' },
+      { when: 'Kudamattam', step: 'The rhythmic, competitive exchange of brilliantly coloured ceremonial parasols atop the elephants — the crowd roars at each flourish.' },
+      { when: 'Vedikettu (pre-dawn)', step: 'Two competing firework displays light the night sky to close the festival.' },
+    ],
+    regional: [
+      { region: 'Thrissur (Kerala)', note: 'The one and only Thrissur Pooram — 30+ caparisoned elephants before the Vadakkunnathan temple, lakhs of spectators.' },
+      { region: 'Paramekkavu & Thiruvambady', note: 'The two rival temple groups whose processions and Kudamattam define the Pooram.' },
+      { region: 'Across central Kerala', note: 'The Pooram season brings many related temple festivals, but Thrissur is the grandest.' },
+    ],
+    attire: ['Kerala traditional wear in the summer heat', 'Women: cotton kasavu or settu-mundu', 'Men: mundu with a light shirt', 'Light, breathable clothing and a cap/umbrella for the sun and crowds'],
     name: 'Thrissur Pooram',
     alsoKnown: 'The Pooram of PADAI Thrissur — the festival of festivals',
     emoji: '🐘',
@@ -1525,6 +1649,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BAISAKHI ───────────────────────
   {
     slug: 'baisakhi',
+    dates2026: '14 April 2026',
+    dates2027: '14 April 2027',
+    dateNote: 'Baisakhi is solar — the Sun’s entry into Aries (Mesha Sankranti) — so it falls on 13 or 14 April almost every year, unlike the lunar festivals. The same solar day is the new year across several regions.',
+    mythology: 'Baisakhi is the spring harvest festival of Punjab, but its deepest meaning is Sikh: on Baisakhi in 1699, at Anandpur Sahib, Guru Gobind Singh founded the Khalsa. He asked who would give their head for their faith; five stepped forward (the Panj Pyare), were baptised with amrit, and became the first of the Khalsa, given the five articles of faith and a shared identity. The same solar turning point marks the new year as Vishu in Kerala, Puthandu in Tamil Nadu, Pohela Boishakh in Bengal and Bohag Bihu in Assam.',
+    history: 'The founding of the Khalsa in 1699 transformed Baisakhi into one of the most sacred days in the Sikh calendar. It is also historically associated with the 1919 Jallianwala Bagh gathering in Amritsar.',
+    ritualSteps: [
+      { when: 'Morning', step: 'Visit the gurdwara for special prayers, kirtan and the reading of the Guru Granth Sahib.' },
+      { when: 'Langar', step: 'Share in langar — the free community meal that embodies equality and seva.' },
+      { when: 'Nagar Kirtan', step: 'Join the procession led by the Panj Pyare and the Palki, with Gatka (martial-arts) displays.' },
+      { when: 'Harvest & new year', step: 'Thank the earth for the harvest; in new-year regions, perform the customary first-sight rituals (Vishukkani in Kerala).' },
+    ],
+    regional: [
+      { region: 'Punjab', note: 'Exuberant Bhangra and Gidda in the fields, fairs, and grand gurdwara celebrations — especially at Anandpur Sahib and the Golden Temple.' },
+      { region: 'Kerala (Vishu)', note: 'The Vishukkani (auspicious first sight) arranged the night before, and Vishu kaineettam (gifts).' },
+      { region: 'Tamil Nadu (Puthandu)', note: 'The Tamil new year with the kanni viewing and a new-year feast.' },
+      { region: 'Bengal & Assam', note: 'Pohela Boishakh and Bohag Bihu — new clothes, feasts and folk dance.' },
+    ],
+    attire: ['Punjabi traditional wear', 'Women: salwar-kameez with phulkari dupatta, in bright colours', 'Men: kurta-pyjama with a turban', 'Head covering required in the gurdwara'],
     name: 'Baisakhi',
     alsoKnown: 'Vaisakhi; Mesha Sankranti; Vishu/Puthandu/Bihu (regional new years)',
     emoji: '🌾',
@@ -1570,6 +1712,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GURU NANAK JAYANTI ───────────────────────
   {
     slug: 'guru-nanak-jayanti',
+    dates2026: '24 November 2026',
+    dates2027: '14 November 2027 (confirm locally)',
+    dateNote: 'Gurpurab is celebrated on Kartik Purnima (the full moon of Kartik). The Gregorian date shifts across November each year.',
+    mythology: 'Guru Nanak Dev Ji, born in 1469 at Rai Bhoi di Talvandi (now Nankana Sahib, Pakistan), is the founder of Sikhism and the first of the ten Gurus. From a young age he taught the oneness of God (Ik Onkar), the equality of all people regardless of caste, creed or gender, honest living (kirat karni), remembrance of God (naam japna) and selfless sharing (vand chakna). After a divine experience at the river Bein, he declared “there is no Hindu, no Muslim” — only humanity before one God — and travelled across Asia on four great journeys (udasis) spreading his message through hymns.',
+    history: 'Guru Nanak laid the foundations of the Sikh faith, the institution of langar (the community kitchen open to all), and the sangat (congregation). Gurpurab is the most important festival of the Sikh calendar, observed wherever Sikhs live.',
+    ritualSteps: [
+      { when: 'Two days before', step: 'The Akhand Path begins — a continuous 48-hour reading of the entire Guru Granth Sahib, concluding on the Gurpurab.' },
+      { when: 'Day before', step: 'The Nagar Kirtan procession, led by the Panj Pyare and the Palki of the Guru Granth Sahib, winds through the streets.' },
+      { when: 'Amrit Vela (pre-dawn)', step: 'Rise early for Asa di Var kirtan and prayers.' },
+      { when: 'Through the day', step: 'Attend katha and kirtan; serve and share in langar — the heart of Nanak’s message of equality.' },
+    ],
+    regional: [
+      { region: 'Amritsar (Golden Temple)', note: 'The most radiant celebration — lit with lamps and fireworks, with continuous kirtan, reflected in the sarovar.' },
+      { region: 'Nankana Sahib (Pakistan)', note: 'Guru Nanak’s birthplace draws pilgrims across the border.' },
+      { region: 'Patna Sahib & Delhi', note: 'Grand nagar kirtans and langars at the historic gurdwaras.' },
+      { region: 'Worldwide', note: 'Gurdwaras everywhere hold Akhand Path, nagar kirtan and langar.' },
+    ],
+    attire: ['Modest traditional wear; the head must be covered in the gurdwara', 'Women: salwar-kameez with a dupatta over the head', 'Men: kurta-pyjama with a turban or head covering', 'Many wear orange/saffron or white'],
     name: 'Guru Nanak Jayanti',
     alsoKnown: 'Gurpurab; Guru Nanak Gurpurab; Prakash Utsav',
     emoji: '☬',
