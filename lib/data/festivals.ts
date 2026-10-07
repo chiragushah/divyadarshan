@@ -353,6 +353,12 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── MAHA SHIVARATRI ───────────────────────
   {
     slug: 'maha-shivaratri',
+    attireByRegion: [
+      { region: 'Varanasi & North India', note: 'Simple white or earthy clothing for the all-night vigil; rudraksha malas and vibhuti (sacred ash) on the forehead.' },
+      { region: 'Ujjain (Bhasma Aarti)', note: 'Traditional dress for the pre-dawn aarti; men often in dhoti, draped with a shawl against the February cold.' },
+      { region: 'Himalayan & ascetic orders', note: 'Naga sadhus and aghoris in ash and minimal cloth; lay devotees in saffron.' },
+      { region: 'South India (Chidambaram)', note: 'Women in silk sarees, men in veshti with angavastram, for the Nataraja abhishekams and dance offerings.' },
+    ],
     dates2026: '15 February 2026',
     dates2027: '5 March 2027',
     dateNote: 'Maha Shivaratri falls on the Chaturdashi of the dark fortnight of Phalguna (Magha in some regions). The worship is a night-long vigil through four prahars; the date shifts across Feb–March each year.',
@@ -569,6 +575,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RAM NAVAMI ───────────────────────
   {
     slug: 'ram-navami',
+    attireByRegion: [
+      { region: 'North India (Ayodhya)', note: 'Yellow and saffron — kurta-pyjama for men, sarees or suits for women; devotees carry flags for the Saryu snan and Rath Yatra.' },
+      { region: 'South India', note: 'Women in silk sarees, men in veshti with angavastram, for the panakam seva and kalyanotsavam.' },
+      { region: 'Telangana (Bhadrachalam)', note: 'Wedding-style festive wear for the Sita Rama Kalyanam — silk sarees and traditional men’s dress.' },
+    ],
     dates2026: '26 March 2026',
     dates2027: '15 April 2027',
     dateNote: 'Ram Navami is the Navami (ninth day) of the bright fortnight of Chaitra, the final day of Chaitra Navratri; the birth is marked at midday (Madhyahna). Dates shift across March–April each year.',
@@ -634,6 +645,12 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── HANUMAN JAYANTI ───────────────────────
   {
     slug: 'hanuman-jayanti',
+    attireByRegion: [
+      { region: 'North India', note: 'Red and orange — kurta with a red tilak; devotees carry the Hanuman Chalisa for the day-long recitation.' },
+      { region: 'Maharashtra', note: 'Traditional wear for the sunrise birth-story reading (Samarth Ramdas tradition).' },
+      { region: 'Andhra & Telangana', note: 'Devotees on the 41-day Hanuman Deeksha wear saffron/orange with a mala; vibhuti and vermilion tilak.' },
+      { region: 'Tamil Nadu', note: 'Traditional dress for the Anjaneya abhishek with vermilion and the vada-mala offering.' },
+    ],
     dates2026: '2 April 2026 (North India, Chaitra Purnima)',
     dates2027: '20 April 2027 (North India)',
     dateNote: 'Observed on Chaitra Purnima in most of North India. Tamil Nadu marks Hanumath Jayanti in Margazhi (Dec–Jan), and Andhra/Telangana on Vaishakha (May) at the end of a 41-day Deeksha — so the date varies widely by region.',
@@ -1093,6 +1110,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VAIKUNTHA EKADASHI ───────────────────────
   {
     slug: 'vaikuntha-ekadashi',
+    attireByRegion: [
+      { region: 'Tirumala (Andhra)', note: 'Strict temple dress code — men in dhoti/pancha with upper cloth, women in saree or salwar-kameez with dupatta; traditional only.' },
+      { region: 'Srirangam (Tamil Nadu)', note: 'Men in veshti (dhoti), often bare-chested with angavastram for the sanctum; women in silk sarees for the Paramapada Vasal darshan.' },
+      { region: 'Kerala (Padmanabhaswamy)', note: 'Men must wear a mundu (no shirt) and women a saree/set-mundu, per the temple’s dress code.' },
+    ],
     dates2026: '20 December 2026',
     dates2027: '9 December 2027 (confirm locally)',
     dateNote: 'Vaikuntha Ekadashi falls on the Shukla Ekadashi of the Dhanur month (Margashirsha), typically mid-December to mid-January. In the North the same day is Mokshada Ekadashi (Gita Jayanti). Dates shift yearly — confirm for your temple.',
@@ -2478,6 +2500,10 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RADHA ASHTAMI ───────────────────────
   {
     slug: 'radha-ashtami',
+    attireByRegion: [
+      { region: 'Braj (Barsana)', note: 'Pink and red honour Radha — women in lehengas or sarees, with tulsi malas; the hilltop Shriji temple at its most festive.' },
+      { region: 'Vrindavan & ISKCON', note: 'Traditional Vaishnava dress with tulsi beads for the abhishek and chhappan bhog.' },
+    ],
     dates2026: '19 September 2026',
     dates2027: '7 September 2027',
     dateNote: 'Radha Ashtami is the Ashtami of the bright fortnight of Bhadrapada — fifteen days after Krishna Janmashtami. Dates shift across August–September.',
@@ -2665,6 +2691,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── SHARAD PURNIMA / KOJAGIRI ───────────────────────
   {
     slug: 'sharad-purnima',
+    attireByRegion: [
+      { region: 'Braj (Vrindavan)', note: 'Traditional Vaishnava wear — yellow and white — for the moonlit Raas-lila.' },
+      { region: 'Maharashtra', note: 'Light festive wear, often white or pastel, for the Kojagiri night and masala doodh under the moon.' },
+      { region: 'Bengal & Odisha', note: 'Sarees — the red-bordered white among them — for Kojagori Lakshmi Puja.' },
+    ],
     dates2026: '25 October 2026',
     dates2027: '14 October 2027',
     dateNote: 'Sharad Purnima is the full moon of Ashwin — the brightest, most “nectar-filled” moon of the year. Dates shift across September–October.',
@@ -2791,6 +2822,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GOVARDHAN PUJA / ANNAKUT ───────────────────────
   {
     slug: 'govardhan-puja',
+    attireByRegion: [
+      { region: 'Braj (Govardhan)', note: 'Traditional Vaishnava wear for the 21-km parikrama of the hill; comfortable for the long walk.' },
+      { region: 'Rajasthan (Nathdwara)', note: 'Festive silk and bandhani for the spectacular Shrinathji Annakut darshan.' },
+      { region: 'Maharashtra & Gujarat', note: 'New-year (Bali Pratipada) festive wear — paithani/nauvari and bandhani.' },
+    ],
     dates2026: '10 November 2026 (day after Diwali)',
     dates2027: '29 October 2027',
     dateNote: 'Govardhan Puja / Annakut is the Pratipada of the bright fortnight of Kartik — the day after Diwali. In Maharashtra and Gujarat it coincides with Bali Pratipada and the new year. Dates shift with Diwali.',
@@ -2854,6 +2890,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── DHANTERAS ───────────────────────
   {
     slug: 'dhanteras',
+    attireByRegion: [
+      { region: 'North India', note: 'Festive new clothes to begin Diwali — sarees and suits for women, kurta-pyjama for men; gold bought and worn.' },
+      { region: 'Gujarat & Rajasthan', note: 'Bandhani and brocade; traders dress well for the Lakshmi-Kubera and Chopda (ledger) worship.' },
+      { region: 'Maharashtra', note: 'Traditional wear — nauvari sarees and kurta — for the evening Lakshmi puja and Yama Deepam.' },
+    ],
     dates2026: '6 November 2026',
     dates2027: '26 October 2027',
     dateNote: 'Dhanteras is the Trayodashi of the dark fortnight of Kartik — the first of the five days of Diwali, two days before Lakshmi Puja. Dates shift with Diwali.',
@@ -2915,6 +2956,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BHAI DOOJ ───────────────────────
   {
     slug: 'bhai-dooj',
+    attireByRegion: [
+      { region: 'North & West India', note: 'Festive traditional wear for the tilak ceremony — sarees and suits for sisters, kurta-pyjama for brothers.' },
+      { region: 'Maharashtra (Bhau Beej)', note: 'Nauvari sarees and kurta for the aukshan and feast.' },
+      { region: 'Bengal (Bhai Phonta)', note: 'New sarees for the elaborate kajal/sandal tilak ritual.' },
+    ],
     dates2026: '11 November 2026',
     dates2027: '30 October 2027',
     dateNote: 'Bhai Dooj is the Dwitiya of the bright fortnight of Kartik — the fifth and final day of Diwali, two days after Lakshmi Puja. Dates shift with Diwali.',
@@ -3036,6 +3082,11 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── TEEJ ───────────────────────
   {
     slug: 'teej',
+    attireByRegion: [
+      { region: 'Rajasthan', note: 'Green lehariya and bandhani ghagra-choli or sarees with heavy traditional jewellery and mehndi; the Teej Mata procession finery in Jaipur.' },
+      { region: 'UP & Bihar', note: 'Green sarees and suits, green-and-red glass bangles, mehndi, and the swing (jhula) celebrations.' },
+      { region: 'Nepal & border regions', note: 'Women wear red (wedding-red) sarees for Teej, gathering at Pashupatinath.' },
+    ],
     dates2026: 'Hariyali Teej 15 Aug 2026; Hartalika Teej ~14 Sep 2026',
     dates2027: 'Hariyali Teej 4 Aug 2027; Hartalika Teej ~3 Sep 2027',
     dateNote: 'Teej is a cluster: Hariyali Teej (Shravana Shukla Tritiya), Kajari Teej, and Hartalika Teej (Bhadrapada Shukla Tritiya). The strict nirjala fast is for Hartalika Teej. Dates shift across July–September.',
