@@ -569,6 +569,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GANESH CHATURTHI ───────────────────────
   {
     slug: 'ganesh-chaturthi',
+    image: '/festivals/ganesh-chaturthi.jpg',
     foodByRegion: [
       { region: 'Maharashtra', note: 'Ukadiche modak (steamed) and fried modak, puran poli and karanji.' },
       { region: 'Goa (Chavath)', note: 'Nevri and patoleo (turmeric-leaf steamed rice sweet).' },
@@ -654,6 +655,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RAM NAVAMI ───────────────────────
   {
     slug: 'ram-navami',
+    image: '/festivals/ram-navami.jpg',
     prasadByRegion: [
       { region: 'North India', note: 'Panjiri and fruit offered to the infant Rama; tulsi charanamrit.' },
       { region: 'South India', note: 'Panakam (jaggery-ginger drink) and kosambari offered and distributed.' },
@@ -734,6 +736,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── HANUMAN JAYANTI ───────────────────────
   {
     slug: 'hanuman-jayanti',
+    image: '/festivals/hanuman-jayanti.jpg',
     attireByRegion: [
       { region: 'North India', note: 'Red and orange — kurta with a red tilak; devotees carry the Hanuman Chalisa for the day-long recitation.' },
       { region: 'Maharashtra', note: 'Traditional wear for the sunrise birth-story reading (Samarth Ramdas tradition).' },
@@ -805,6 +808,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── MAKAR SANKRANTI ───────────────────────
   {
     slug: 'makar-sankranti',
+    image: '/festivals/makar-sankranti.jpg',
     foodByRegion: [
       { region: 'Maharashtra', note: 'Til-gul ladoo and til-gul polis (gulachi poli), puran poli.' },
       { region: 'Tamil Nadu (Pongal)', note: 'Sakkarai (sweet) and ven (savoury) pongal, sugarcane and vadai.' },
@@ -893,6 +897,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PONGAL ───────────────────────
   {
     slug: 'pongal',
+    image: '/festivals/pongal.jpg',
     dates2026: '14–17 January 2026 (Bhogi 14, Thai/Surya Pongal 15, Mattu 16, Kaanum 17)',
     dates2027: '14–17 January 2027',
     dateNote: 'Pongal begins on the first day of the Tamil month of Thai and is solar-fixed, so it falls on roughly the same mid-January dates each year, overlapping Makar Sankranti. (Surya Pongal, the main day, is 15 January in some reckonings and 14 in others.)',
@@ -957,6 +962,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VASANT PANCHAMI ───────────────────────
   {
     slug: 'vasant-panchami',
+    image: '/festivals/vasant-panchami.jpg',
     dates2026: '23 January 2026',
     dates2027: '11 February 2027',
     dateNote: 'Vasant Panchami is the fifth day (Panchami) of the bright fortnight of Magha; it is an abujh (always-auspicious) muhurat needing no further calculation. Dates shift across late January–February.',
@@ -1021,6 +1027,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RATH YATRA ───────────────────────
   {
     slug: 'rath-yatra',
+    image: '/festivals/rath-yatra.jpg',
     dates2026: '16 July 2026 (outward journey); Bahuda (return) ~24 July',
     dates2027: '5 July 2027',
     dateNote: 'Rath Yatra is on the Dwitiya (second day) of the bright fortnight of Ashadha; the return journey (Bahuda Yatra) is eight days later. Dates shift across June–July each year.',
