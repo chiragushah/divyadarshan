@@ -1425,6 +1425,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── NAG PANCHAMI ───────────────────────
   {
     slug: 'nag-panchami',
+    image: '/festivals/nag-panchami.jpg',
     dates2026: '17 August 2026',
     dates2027: '6 August 2027',
     dateNote: 'Nag Panchami is the Panchami (fifth day) of the bright fortnight of Shravana, the holy monsoon month of Shiva. Dates shift across July–August each year.',
@@ -1558,6 +1559,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KARVA CHAUTH ───────────────────────
   {
     slug: 'karva-chauth',
+    image: '/festivals/karva-chauth.jpg',
     attireByRegion: [
       { region: 'Punjab & Haryana', note: 'Bridal red or maroon — sarees, lehengas or Punjabi suits — with full solah shringar, the chooda (bangles) and kaleere; the sargi finery chosen by the mother-in-law.' },
       { region: 'Rajasthan', note: 'Lehariya or bandhani odhni and ghagra; a beautifully decorated karva pot and heavy traditional jewellery.' },
@@ -1686,6 +1688,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KARTIK PURNIMA / DEV DEEPAWALI ───────────────────────
   {
     slug: 'kartik-purnima-dev-deepawali',
+    image: '/festivals/kartik-purnima-dev-deepawali.jpg',
     dates2026: '24 November 2026 (Dev Deepawali observed on the eve, 23 Nov)',
     dates2027: '13 November 2027',
     dateNote: 'Kartik Purnima is the full moon of Kartik, fifteen days after Diwali. Varanasi’s Dev Deepawali is observed on the Purnima evening (sometimes the eve). Dates shift across Nov each year.',
@@ -1749,6 +1752,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── THAIPUSAM ───────────────────────
   {
     slug: 'thaipusam',
+    image: '/festivals/thaipusam.jpg',
     dates2026: '1 February 2026',
     dates2027: '21 February 2027 (confirm locally)',
     dateNote: 'Thaipusam falls when the Pusam (Pushya) nakshatra prevails on the full moon of the Tamil month of Thai. Dates shift across Jan–Feb each year.',
@@ -1813,6 +1817,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── THRISSUR POORAM ───────────────────────
   {
     slug: 'thrissur-pooram',
+    image: '/festivals/thrissur-pooram.jpg',
     dates2026: '26 April 2026',
     dates2027: 'May 2027 (Pooram asterism in Medam — confirm locally)',
     dateNote: 'Thrissur Pooram falls on the Pooram nakshatra in the Malayalam month of Medam (April–May), when the moon rises with the Pooram star. Dates shift across April–May each year.',
@@ -1875,6 +1880,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BAISAKHI ───────────────────────
   {
     slug: 'baisakhi',
+    image: '/festivals/baisakhi.jpg',
     prasadByRegion: [
       { region: 'Punjab', note: 'Kada prasad (sacred wheat-ghee-sugar halwa) and langar served at the gurdwara.' },
       { region: 'Kerala (Vishu)', note: 'Offerings to Krishna in the Vishukkani — konna flowers, rice and fruit.' },
@@ -1949,6 +1955,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GURU NANAK JAYANTI ───────────────────────
   {
     slug: 'guru-nanak-jayanti',
+    image: '/festivals/guru-nanak-jayanti.jpg',
     dates2026: '24 November 2026',
     dates2027: '14 November 2027 (confirm locally)',
     dateNote: 'Gurpurab is celebrated on Kartik Purnima (the full moon of Kartik). The Gregorian date shifts across November each year.',
@@ -3040,6 +3047,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── DHANTERAS ───────────────────────
   {
     slug: 'dhanteras',
+    image: '/festivals/dhanteras.jpg',
     attireByRegion: [
       { region: 'North India', note: 'Festive new clothes to begin Diwali — sarees and suits for women, kurta-pyjama for men; gold bought and worn.' },
       { region: 'Gujarat & Rajasthan', note: 'Bandhani and brocade; traders dress well for the Lakshmi-Kubera and Chopda (ledger) worship.' },
