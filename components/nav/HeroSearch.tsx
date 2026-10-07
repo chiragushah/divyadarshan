@@ -85,7 +85,7 @@ export default function HeroSearch() {
               style={{ borderColor: 'var(--border)' }}>
               <div className="w-9 h-9 rounded-lg flex items-center justify-center text-sm font-serif font-bold flex-shrink-0"
                 style={{ background: 'var(--ivory2)', color: 'var(--crimson)' }}>
-                {(r.name || r.deity || '🛕').charAt(0)}
+                {(r.name || r.deity || 'T').charAt(0)}
               </div>
               <div className="min-w-0">
                 <div className="text-sm font-medium truncate" style={{ color: 'var(--ink)' }}>{r.name}</div>

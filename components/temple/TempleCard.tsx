@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useState } from 'react'
+import { Landmark, Star } from 'lucide-react'
 import type { Temple } from '@/types'
 
 interface Props {
@@ -22,22 +23,6 @@ function getBg(deity?: string): string {
   if (d.includes('jain') || d.includes('multiple')) return 'linear-gradient(135deg,#2a5a3a,#1a3a2a)'
   return 'linear-gradient(135deg,#6B1010,#3D0808)'
 }
-
-// Deity emoji for fallback card
-function getEmoji(deity?: string): string {
-  const d = (deity || '').toLowerCase()
-  if (d.includes('shiva') || d.includes('shankar')) return '🕉️'
-  if (d.includes('vishnu') || d.includes('venkat') || d.includes('balaji')) return '🪷'
-  if (d.includes('krishna') || d.includes('jagannath')) return '🦚'
-  if (d.includes('durga') || d.includes('kali') || d.includes('shakti') || d.includes('devi')) return '🪬'
-  if (d.includes('ganesha') || d.includes('ganesh') || d.includes('vinayak')) return '🐘'
-  if (d.includes('rama') || d.includes('hanuman')) return '🙏'
-  if (d.includes('murugan') || d.includes('subramanya')) return '🌟'
-  if (d.includes('lakshmi')) return '🪔'
-  if (d.includes('jain')) return '☸️'
-  return '🛕'
-}
-
 
 // Proxy Wikimedia images to avoid hotlinking blocks
 function proxyUrl(url?: string): string | undefined {
@@ -82,7 +67,7 @@ function TempleImage({
       {showFallback && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2"
           style={{ background: getBg(deity) }}>
-          <span style={{ fontSize: '2.8rem', lineHeight: 1 }}>{getEmoji(deity)}</span>
+          <Landmark size={44} strokeWidth={1.3} style={{ color: 'rgba(255,255,255,0.55)' }} />
           <span style={{
             color: 'rgba(255,255,255,0.75)',
             fontSize: '11px',
@@ -111,9 +96,9 @@ function TempleImage({
 
       {/* Rating */}
       {ratingLabel && ratingLabel > 0 ? (
-        <span className="absolute bottom-2 right-3 text-xs font-semibold"
+        <span className="absolute bottom-2 right-3 text-xs font-semibold inline-flex items-center gap-1"
           style={{ color: '#EDD9A3', zIndex: 2 }}>
-          ★ {ratingLabel}
+          <Star size={12} fill="#EDD9A3" color="#EDD9A3" /> {ratingLabel}
         </span>
       ) : null}
     </div>

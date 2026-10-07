@@ -23,7 +23,7 @@ export default function Footer() {
             </p>
             {/* Tagline */}
             <p style={{ marginTop: 12, fontSize: 12, color: '#C0570A', fontFamily: "'Inter', sans-serif", letterSpacing: '0.05em' }}>
-              🙏 Jai Shree Ram
+              Jai Shree Ram
             </p>
           </div>
 
@@ -83,7 +83,7 @@ export default function Footer() {
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <Logo variant="mark" size="sm" />
             <p style={{ fontSize: 13, color: '#AAAAAA', fontFamily: "'Inter', sans-serif" }}>
-              © {new Date().getFullYear()} DivyaDarshanam. Built with 🙏 by Dynaimers Consulting.
+              © {new Date().getFullYear()} DivyaDarshanam. Crafted with devotion by Dynaimers Consulting.
             </p>
           </div>
           <div style={{ display: 'flex', gap: 20 }}>

@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, Sparkles, Heart, Globe } from "lucide-react";
 import Logo from "@/components/Logo";
 import GoogleTranslate from "@/components/translate/GoogleTranslate";
 
@@ -58,7 +58,7 @@ export default function Navbar() {
 
           <div className="hidden md:flex" style={{ alignItems:"center", gap:2, flex:1 }}>
             <Link href="/manifest" style={{ display:"flex", alignItems:"center", gap:6, padding:"7px 12px", borderRadius:9, background:"linear-gradient(135deg,rgba(139,26,26,0.08),rgba(192,87,10,0.08))", border:"1px solid rgba(139,26,26,0.15)", color:"var(--crimson)", fontWeight:700, fontSize:13, textDecoration:"none", whiteSpace:"nowrap" }}>
-              🙏 Manifest
+              <Sparkles size={15} /> Manifest
             </Link>
             {NAV_GROUPS.map((group) => (
               <div key={group.label} style={{ position:"relative" }}
@@ -118,7 +118,7 @@ export default function Navbar() {
           </div>
           <Link href="/manifest" onClick={() => setMobileOpen(false)}
             style={{ display:"flex", alignItems:"center", gap:10, padding:"12px 16px", borderRadius:12, background:"linear-gradient(135deg,rgba(139,26,26,0.08),rgba(192,87,10,0.08))", border:"1.5px solid rgba(139,26,26,0.2)", textDecoration:"none", marginBottom:16 }}>
-            <span style={{ fontSize:22 }}>🙏</span>
+            <Sparkles size={20} style={{ color:"var(--crimson)" }} />
             <div>
               <div style={{ fontWeight:700, fontSize:14, color:"var(--crimson)" }}>Manifest — Sankalp</div>
               <div style={{ fontSize:11, color:"#A89B8C" }}>Sacred intentions with deity guidance</div>
@@ -140,10 +140,10 @@ export default function Navbar() {
           ))}
           <button onClick={() => { setMobileOpen(false); (document.querySelector("[data-contribution-btn]") as HTMLElement)?.click() }}
             style={{ width:"100%", padding:"12px 0", borderRadius:12, border:"none", background:"linear-gradient(135deg,#8B1A1A,#C0570A)", color:"white", fontWeight:700, fontSize:14, cursor:"pointer", marginBottom:12, display:"flex", alignItems:"center", justifyContent:"center", gap:8 }}>
-            💛 Contribute to DivyaDarshanam
+            <Heart size={16} /> Contribute to DivyaDarshanam
           </button>
           <div style={{ marginBottom:16, padding:"12px 16px", borderRadius:10, border:"1px solid #F0F0F0", background:"#FAFAFA" }}>
-            <div style={{ fontSize:11, fontWeight:700, textTransform:"uppercase", letterSpacing:".08em", color:"#AAAAAA", marginBottom:8 }}>🌐 Select Language</div>
+            <div style={{ fontSize:11, fontWeight:700, textTransform:"uppercase", letterSpacing:".08em", color:"#AAAAAA", marginBottom:8, display:"flex", alignItems:"center", gap:5 }}><Globe size={12} /> Select Language</div>
             <GoogleTranslate />
           </div>
           <div id="mobile-pwa-install" style={{ marginBottom:12 }} />

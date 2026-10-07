@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
+import { Radio, Tv, Bell, Clock } from 'lucide-react'
 
 interface LiveSlot {
   day: string
@@ -139,9 +140,8 @@ export default function LiveDarshanStatus({ liveUrl, liveSchedule, templeName, d
                 background: 'rgba(34,197,94,0.15)',
                 border: '2px solid rgba(34,197,94,0.4)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 22,
               }}>
-                🛕
+                <Radio size={22} style={{ color: '#22c55e' }} />
               </div>
               <span style={{
                 position: 'absolute', top: -2, right: -2,
@@ -163,7 +163,7 @@ export default function LiveDarshanStatus({ liveUrl, liveSchedule, templeName, d
                 </span>
               </div>
               <div style={{ fontSize: 15, fontWeight: 700, color: 'white' }}>
-                🔴 Live Darshan is streaming right now
+                Live Darshan is streaming right now
               </div>
               <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginTop: 2 }}>
                 Stream active for the next {LIVE_WINDOW-(nowMin(new Date())-toMin(status.slot?.time||'00:00'))} min approx.
@@ -219,9 +219,9 @@ export default function LiveDarshanStatus({ liveUrl, liveSchedule, templeName, d
               background: 'rgba(192,87,10,0.08)',
               border: '1.5px solid rgba(192,87,10,0.2)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 22, flexShrink: 0,
+              flexShrink: 0,
             }}>
-              📺
+              <Tv size={22} style={{ color: '#C0570A' }} />
             </div>
             <div style={{ flex: 1 }}>
               <div style={{ fontSize: 14, fontWeight: 700, color: '#1A0A00', marginBottom: 3 }}>
@@ -251,8 +251,9 @@ export default function LiveDarshanStatus({ liveUrl, liveSchedule, templeName, d
               background: '#8B1A1A', color: 'white',
               padding: '8px 16px', borderRadius: 10,
               fontSize: 12, fontWeight: 700, textDecoration: 'none',
+              display: 'inline-flex', alignItems: 'center', gap: 6,
             }}>
-              🔔 Find Live Darshan
+              <Bell size={13} /> Find Live Darshan
             </a>
           </div>
 
@@ -264,8 +265,8 @@ export default function LiveDarshanStatus({ liveUrl, liveSchedule, templeName, d
                 background: 'none', border: 'none', cursor: 'pointer',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               }}>
-              <span style={{ fontSize: 12, fontWeight: 600, color: '#6B5B4E' }}>
-                🕒 Today's Darshan Schedule
+              <span style={{ fontSize: 12, fontWeight: 600, color: '#6B5B4E', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                <Clock size={13} /> Today's Darshan Schedule
               </span>
               <span style={{ fontSize: 12, color: '#A89B8C' }}>{showSchedule ? '▲ Hide' : '▼ View all'}</span>
             </button>
