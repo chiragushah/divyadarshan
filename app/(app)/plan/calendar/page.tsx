@@ -141,6 +141,11 @@ const FESTIVAL_GUIDE: Record<string, string> = {
   'Dussehra / Vijayadashami': 'dussehra-vijayadashami',
   'Diwali': 'diwali',
   'Sabarimala opening': 'sabarimala-makaravilakku',
+  'Gangaur': 'gangaur',
+  'Narasimha Jayanti': 'narasimha-jayanti',
+  'Ashadhi Ekadashi (Wari)': 'ashadhi-ekadashi-pandharpur-wari',
+  'Kanwar Yatra': 'kanwar-yatra',
+  'Karthigai Deepam': 'karthigai-deepam',
 }
 
 export default function CalendarPage() {
