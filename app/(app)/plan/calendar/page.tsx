@@ -17,6 +17,7 @@ const MONTHS = [
       { name: 'Vaikunta Ekadashi', temples: 'Tirumala, Srirangam, all Vishnu temples', desc: "Most auspicious Ekadashi — gates of Vaikuntha open." },
       { name: 'Pongal', temples: 'All Tamil Nadu temples', desc: "4-day harvest festival. Grand temple chariot processions." },
       { name: 'Kumbh Mela', temples: 'Prayagraj, Haridwar, Ujjain, Nashik', desc: "World's largest gathering — holy dip at the river confluence. Dates are astrological; check the host city & year." },
+      { name: 'Lohri', temples: 'Gurdwaras; Punjab', desc: "Punjabi bonfire harvest festival (eve of Sankranti). Til-gur, Bhangra and Gidda." },
     ],
   },
   {
@@ -38,6 +39,7 @@ const MONTHS = [
       { name: 'Gangaur', temples: 'Rajasthan temples (Udaipur, Jaipur)', desc: "Goddess Parvati festival. Beautiful processions." },
       { name: 'Ram Navami', temples: 'Ram Lalla Ayodhya, Chitrakoot', desc: "Lord Rama birthday. Ayodhya transforms with celebrations." },
       { name: 'Cheti Chand', temples: 'Jhulelal / Sindhi temples', desc: "Sindhi New Year & Jhulelal Jayanti. Bahrana Sahib procession to the water." },
+      { name: 'Hola Mohalla', temples: 'Anandpur Sahib', desc: "Sikh festival of valour, the day after Holi. Nihang Gatka and horsemanship." },
     ],
   },
   {
@@ -47,6 +49,11 @@ const MONTHS = [
     festivals: [
       { name: 'Char Dham Opening', temples: 'Kedarnath, Badrinath, Gangotri, Yamunotri', desc: "Himalayan shrines reopen after winter. Massive pilgrim crowds." },
       { name: 'Akshaya Tritiya', temples: 'Puri Jagannath, Badrinath, Simhachalam', desc: "Highly auspicious. Chandalana Utsava at Simhachalam — deity revealed." },
+      { name: 'Baisakhi', temples: 'Golden Temple, Anandpur Sahib', desc: "Harvest festival & the founding of the Khalsa (1699). The solar new year across regions." },
+      { name: 'Vishu', temples: 'Guruvayur, Sabarimala, Padmanabhaswamy', desc: "Kerala New Year. The Vishukkani — the auspicious first sight at dawn." },
+      { name: 'Puthandu', temples: 'Meenakshi (Madurai), Kapaleeshwarar', desc: "Tamil New Year. Mango pachadi of six tastes; the Chithirai festival." },
+      { name: 'Bihu', temples: 'Kamakhya; Assam', desc: "Assamese New Year (Bohag Bihu). Bihu dance, husori, and the gamosa." },
+      { name: 'Pana Sankranti', temples: 'Jagannath Puri; Odisha', desc: "Odia New Year. Pana (sweet drink) offered; also Hanuman Jayanti in Odisha." },
     ],
   },
   {
@@ -84,6 +91,7 @@ const MONTHS = [
       { name: 'Janmashtami', temples: 'Mathura Krishna Janmabhoomi, Vrindavan, Dwarka, Udupi', desc: "Krishna birthday. Midnight celebrations, dahi-handi. Vrindavan is the epicentre." },
       { name: 'Amarnath Yatra closes', temples: 'Amarnath Cave', desc: "Last chance of the season to see the ice Shivalinga." },
       { name: 'Teej', temples: 'Parvati temples; Jaipur (Teej Mata)', desc: "Monsoon festival of Parvati. Swings, mehndi and green; women fast for their husbands." },
+      { name: 'Pateti', temples: 'Udvada Atash Behram; Parsi agiaries', desc: "Parsi New Year (Navroz). Fire-temple prayers, gara sarees, dhansak." },
     ],
   },
   {
@@ -98,6 +106,8 @@ const MONTHS = [
       { name: 'Pitru Paksha', temples: 'Gaya (Vishnupad), Trimbakeshwar', desc: "16-day fortnight of ancestral rites (shraddha). Gaya is supreme for pind daan." },
       { name: 'Paryushan', temples: 'Jain temples — Palitana, Ranakpur', desc: "Jainism's holiest festival. Fasting & scripture; ends with Samvatsari (day of forgiveness)." },
       { name: 'Vishwakarma Puja', temples: 'Workplaces; Bengal, Odisha, Jharkhand', desc: "Worship of the divine architect. Tools & machines are honoured (~Sep 17)." },
+      { name: 'Nuakhai', temples: 'Samaleswari, Sambalpur', desc: "Western Odisha's harvest festival. The new rice offered to Goddess Samaleswari." },
+      { name: 'Pola', temples: 'Shiva/Nandi temples; rural Maharashtra', desc: "Bullocks rested, bathed and worshipped in thanks for their labour." },
     ],
   },
   {
@@ -108,6 +118,8 @@ const MONTHS = [
       { name: 'Navratri', temples: 'All Shakti Peethas, Gujarat Garba venues, Mysore Chamundeshwari', desc: "9 nights of the Goddess. Garba in Gujarat, Golu in Tamil Nadu, Durga Puja in Bengal." },
       { name: 'Dussehra / Vijayadashami', temples: 'Kullu Raghunath Temple, Mysore, Kota', desc: "Kullu Dussehra — 360+ deities attend. Mysore Dasara — royal elephant procession." },
       { name: 'Sharad Purnima', temples: 'Vrindavan (Raas); Lakshmi temples', desc: "Brightest full moon. Krishna's Maha Raas; Kojagiri Lakshmi vigil; moonlit kheer." },
+      { name: 'Jitiya', temples: 'River ghats; Bihar, Jharkhand', desc: "Mothers' three-day nirjala fast for the long life of their children." },
+      { name: 'Dhammachakra Pravartan Din', temples: 'Deekshabhoomi, Nagpur', desc: "Marks Dr Ambedkar's embrace of Buddhism in 1956. A huge gathering at Nagpur." },
     ],
   },
   {
@@ -131,6 +143,7 @@ const MONTHS = [
       { name: 'Karthigai Deepam', temples: 'Arunachaleswarar Tiruvannamalai, Brihadeeswarar Thanjavur', desc: "Massive fire beacon lit on Arunachala hill — visible for 30km. Millions circumambulate." },
       { name: 'Vaikunta Ekadashi', temples: 'Tirumala Venkateswara, all Vishnu temples', desc: "Vaikunta Dwaram (heaven gate) opens. Largest annual crowd at Tirupati." },
       { name: 'Vivaha Panchami', temples: 'Janakpur, Ayodhya', desc: "The wedding of Rama & Sita. Grandest at Janakpur, Sita's birthplace." },
+      { name: 'Tulsi Pujan Diwas', temples: 'Vishnu & Krishna temples', desc: "Worship of the sacred Tulsi plant (25 December)." },
     ],
   },
 ]
@@ -176,6 +189,19 @@ const FESTIVAL_GUIDE: Record<string, string> = {
   'Dhanteras': 'dhanteras',
   'Bhai Dooj': 'bhai-dooj',
   'Vivaha Panchami': 'vivaha-panchami',
+  'Lohri': 'lohri',
+  'Hola Mohalla': 'holla-mohalla',
+  'Baisakhi': 'baisakhi',
+  'Vishu': 'vishu',
+  'Puthandu': 'puthandu',
+  'Bihu': 'bihu',
+  'Pana Sankranti': 'pana-sankranti',
+  'Pateti': 'pateti',
+  'Nuakhai': 'nuakhai',
+  'Pola': 'pola',
+  'Jitiya': 'jitiya',
+  'Dhammachakra Pravartan Din': 'dhammachakra-pravartan-din',
+  'Tulsi Pujan Diwas': 'tulsi-pujan-diwas',
 }
 
 export default function CalendarPage() {
