@@ -10,6 +10,7 @@ import ReportButton from '@/components/temple/ReportButton'
 import MarkVisited from '@/components/temple/MarkVisited'
 import LiveDarshanStatus from '@/components/temple/LiveDarshanStatus'
 import DeepDiveSection from '@/components/temple/DeepDiveSection'
+import { Accessibility, Backpack, Banknote, Bath, BookOpen, Bus, Candy, Car, Clock, Droplets, Flame, Flower2, Globe, HeartPulse, Hotel, Info, Landmark, Lightbulb, Map, MapPin, Navigation, ParkingSquare, Phone, Plane, ShoppingBag, Star, Ticket, TrainFront, Trees, Utensils, Wallet } from 'lucide-react'
 
 interface Props { params: { slug: string } }
 
@@ -30,15 +31,27 @@ export async function generateStaticParams() {
   return temples.map((t: any) => ({ slug: t.slug }))
 }
 
-const FACILITY_ICONS: Record<string, string> = {
-  toilets: '🚻', parking: '🅿️', drinking_water: '🚰', prasad: '🍬',
-  cloak_room: '🎒', accommodation: '🏨', wheelchair: '♿', atm: '🏧',
-  medical: '🏥', free_meals: '🍱',
-}
 const FACILITY_LABELS: Record<string, string> = {
   toilets: 'Toilets', parking: 'Parking', drinking_water: 'Drinking Water', prasad: 'Prasad',
   cloak_room: 'Cloak Room', accommodation: 'Stay', wheelchair: 'Wheelchair', atm: 'ATM',
   medical: 'Medical', free_meals: 'Free Meals',
+}
+
+function facIcon(key: string) {
+  const m: Record<string, JSX.Element> = {
+    toilets: <Bath size={16} />, parking: <ParkingSquare size={16} />, drinking_water: <Droplets size={16} />,
+    prasad: <Candy size={16} />, cloak_room: <Backpack size={16} />, accommodation: <Hotel size={16} />,
+    wheelchair: <Accessibility size={16} />, atm: <Banknote size={16} />, medical: <HeartPulse size={16} />,
+    free_meals: <Utensils size={16} />,
+  }
+  return m[key] || <MapPin size={16} />
+}
+function typeIcon(type: string) {
+  const m: Record<string, JSX.Element> = {
+    temple: <Landmark size={16} />, heritage: <Landmark size={16} />, nature: <Trees size={16} />,
+    food: <Utensils size={16} />, market: <ShoppingBag size={16} />, ashram: <Flower2 size={16} />,
+  }
+  return m[type] || <MapPin size={16} />
 }
 
 export default async function TemplePage({ params }: Props) {
@@ -162,14 +175,14 @@ export default async function TemplePage({ params }: Props) {
                       target="_blank" rel="noopener noreferrer"
                       style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#fff', border:'1.5px solid var(--border)', borderRadius:10, padding:'10px 18px', textDecoration:'none', fontSize:13, fontWeight:600, color:'var(--ink)' }}
                     >
-                      📍 View on Google Maps
+                      <MapPin size={14} style={{verticalAlign:'-2px',marginRight:4}} />View on Google Maps
                     </a>
                     <a
                       href={`https://www.google.com/maps/dir/?api=1&destination=${t.lat},${t.lng}`}
                       target="_blank" rel="noopener noreferrer"
                       style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#fff', border:'1.5px solid var(--border)', borderRadius:10, padding:'10px 18px', textDecoration:'none', fontSize:13, fontWeight:600, color:'var(--ink)' }}
                     >
-                      🧭 Get Directions
+                      <Navigation size={14} style={{verticalAlign:'-2px',marginRight:4}} />Get Directions
                     </a>
                   </div>
                 )}
@@ -182,7 +195,7 @@ export default async function TemplePage({ params }: Props) {
                 {facilities.toilets && (
                   <div className="toilet-banner">
                     <div className="flex items-start gap-3">
-                      <span style={{ fontSize:24 }}>🚻</span>
+                      <Bath size={24} style={{ verticalAlign:'middle' }} />
                       <div>
                         <div style={{ fontWeight:700, fontSize:13, marginBottom:4, color:'#166534' }}>Toilet Facilities</div>
                         <div style={{ fontSize:13, color:'var(--muted)', lineHeight:1.6 }}>{facilities.toilets}</div>
@@ -200,10 +213,10 @@ export default async function TemplePage({ params }: Props) {
                       return (
                         <div key={key} className={`fac-item ${isYes?'yes':isNo?'no':'partial'}`}>
                           <div className="fac-header">
-                            <span className="fac-icon">{FACILITY_ICONS[key] || '📎'}</span>
+                            <span className="fac-icon">{facIcon(key)}</span>
                             <span className="fac-label">{FACILITY_LABELS[key] || key}</span>
                           </div>
-                          <div className="fac-value">{String(val)}</div>
+                          <div className="fac-value">{String(val).replace(/^[\u2705\u274C\u26A0\uFE0F\u2796\u2795]\s*/u,'')}</div>
                         </div>
                       )
                     })}
@@ -232,9 +245,6 @@ export default async function TemplePage({ params }: Props) {
                 `}</style>
 
                 {(() => {
-                  const TYPE_ICONS: Record<string,string> = {
-                    temple:'🛕', heritage:'🏛️', nature:'🌿', food:'🍽️', market:'🛍️', ashram:'🧘', default:'📍'
-                  }
                   const TYPE_LABELS: Record<string,string> = {
                     temple:'Temple', heritage:'Heritage', nature:'Nature', food:'Food & Stay', market:'Market', ashram:'Ashram', default:'Nearby'
                   }
@@ -271,7 +281,7 @@ export default async function TemplePage({ params }: Props) {
                         <div style={{ padding:'12px 16px', borderBottom:'1px solid var(--border)', display:'flex', flexWrap:'wrap', gap:6 }}>
                           {Object.keys(grouped).map(type => (
                             <span key={type} className={`nearby-type-badge nearby-type-${type}`}>
-                              {TYPE_ICONS[type] || '📍'} {TYPE_LABELS[type] || type} ({grouped[type].length})
+                              {typeIcon(type)} {TYPE_LABELS[type] || type} ({grouped[type].length})
                             </span>
                           ))}
                         </div>
@@ -283,14 +293,14 @@ export default async function TemplePage({ params }: Props) {
                                 alignItems:'center', justifyContent:'center', fontSize:18, flexShrink:0,
                                 background:'var(--ivory2)',
                               }}>
-                                {TYPE_ICONS[place.type] || '📍'}
+                                {typeIcon(place.type)}
                               </div>
                               <div>
                                 <div style={{ display:'flex', alignItems:'center', gap:8, flexWrap:'wrap', marginBottom:2 }}>
                                   <span style={{ fontWeight:700, fontSize:13, color:'var(--ink)' }}>{place.name}</span>
                                   {place.distance && (
                                     <span style={{ fontSize:11, color:'var(--muted2)', background:'var(--ivory2)', padding:'1px 7px', borderRadius:4 }}>
-                                      📍 {place.distance}
+                                      <MapPin size={14} style={{verticalAlign:'-2px',marginRight:4}} />{place.distance}
                                     </span>
                                   )}
                                 </div>
@@ -331,11 +341,11 @@ export default async function TemplePage({ params }: Props) {
                 </p>
                 <div className="card card-p" style={{ padding:0, overflow:'hidden' }}>
                   {[
-                    { key:'by_air',     label:'By Air',         icon:'✈️' },
-                    { key:'by_train',   label:'By Train',       icon:'🚅' },
-                    { key:'by_bus',     label:'By Bus',         icon:'🚌' },
-                    { key:'by_taxi',    label:'By Taxi / Auto', icon:'🚕' },
-                    { key:'local_tips', label:'Local Tips',     icon:'💡' },
+                    { key:'by_air',     label:'By Air',         icon:<Plane size={20} /> },
+                    { key:'by_train',   label:'By Train',       icon:<TrainFront size={20} /> },
+                    { key:'by_bus',     label:'By Bus',         icon:<Bus size={20} /> },
+                    { key:'by_taxi',    label:'By Taxi / Auto', icon:<Car size={20} /> },
+                    { key:'local_tips', label:'Local Tips',     icon:<Lightbulb size={20} /> },
                   ].filter(item => t.how_to_reach[item.key]).map((item, idx, arr) => (
                     <div key={item.key} style={{
                       padding:'14px 18px',
@@ -345,7 +355,7 @@ export default async function TemplePage({ params }: Props) {
                       gap:12,
                       alignItems:'flex-start',
                     }}>
-                      <span style={{ fontSize:20, marginTop:1 }}>{item.icon}</span>
+                      <span style={{ marginTop:1, color:'var(--saffron)', display:'flex' }}>{item.icon}</span>
                       <div>
                         <div style={{ fontWeight:700, fontSize:12, textTransform:'uppercase', letterSpacing:'.06em', color:'var(--muted2)', marginBottom:4 }}>
                           {item.label}
@@ -383,7 +393,7 @@ export default async function TemplePage({ params }: Props) {
                         <div className="flex-1">
                           <div>
                             <span className={`pooja-badge ${pooja.is_famous ? 'famous' : 'regular'}`}>
-                              {pooja.is_famous ? '⭐ Most Famous' : '🪔 Recommended'}
+                              {pooja.is_famous ? (<span style={{display:'inline-flex',alignItems:'center',gap:4}}><Star size={12}/> Most Famous</span>) : (<span style={{display:'inline-flex',alignItems:'center',gap:4}}><Flame size={12}/> Recommended</span>)}
                             </span>
                           </div>
                           <div style={{ fontWeight:700, fontSize:15, color:'var(--ink)', marginBottom:4 }}>
@@ -394,18 +404,18 @@ export default async function TemplePage({ params }: Props) {
                           </div>
                           {pooja.best_for && (
                             <div style={{ fontSize:11, marginTop:6, color:'var(--muted2)' }}>
-                              🙏 Best for: <strong style={{ color:'var(--ink)' }}>{pooja.best_for}</strong>
+                              <Info size={14} style={{verticalAlign:'-2px',marginRight:4}} />Best for: <strong style={{ color:'var(--ink)' }}>{pooja.best_for}</strong>
                             </div>
                           )}
                           <div className="pooja-meta">
                             {pooja.price && (
                               <span className="pooja-meta-item">
-                                💰 <strong style={{ color:'var(--ink)' }}>{pooja.price}</strong>
+                                <Wallet size={14} style={{verticalAlign:'-2px',marginRight:4}} /><strong style={{ color:'var(--ink)' }}>{pooja.price}</strong>
                               </span>
                             )}
                             {pooja.duration && (
                               <span className="pooja-meta-item">
-                                ⏱️ {pooja.duration}
+                                <Clock size={14} style={{verticalAlign:'-2px',marginRight:4}} />{pooja.duration}
                               </span>
                             )}
                           </div>
@@ -443,7 +453,7 @@ export default async function TemplePage({ params }: Props) {
                 } target="_blank" rel="noopener"
                   className="flex items-center gap-3 p-3 rounded-xl mb-3 text-sm font-medium"
                   style={{ background:'rgba(192,87,10,.08)', border:'1.5px solid rgba(192,87,10,.2)', color:'var(--saffron)', textDecoration:'none' }}>
-                  <span style={{ fontSize:18 }}>🎟️</span>
+                  <Ticket size={18} style={{ verticalAlign:'middle' }} />
                   <div>
                     <div style={{ fontWeight:700 }}>Book Official Darshan Slot</div>
                     <div style={{ fontSize:11, opacity:.7 }}>Skip the queue — book online in advance</div>
@@ -456,7 +466,7 @@ export default async function TemplePage({ params }: Props) {
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginBottom:12 }}>
                 {t.booking_links?.hotels && (
                   <a href={t.booking_links.hotels} target="_blank" rel="noopener" className="book-btn">
-                    <span style={{ fontSize:20 }}>🏨</span>
+                    <Hotel size={20} style={{ verticalAlign:'middle' }} />
                     <div>
                       <div style={{ fontSize:12, fontWeight:700, color:'var(--ink)' }}>Hotels Nearby</div>
                       <div style={{ fontSize:10, color:'var(--muted2)' }}>via MakeMyTrip</div>
@@ -465,7 +475,7 @@ export default async function TemplePage({ params }: Props) {
                 )}
                 {t.booking_links?.trains && (
                   <a href={t.booking_links.trains} target="_blank" rel="noopener" className="book-btn">
-                    <span style={{ fontSize:20 }}>🚅</span>
+                    <TrainFront size={20} style={{ verticalAlign:'middle' }} />
                     <div>
                       <div style={{ fontSize:12, fontWeight:700, color:'var(--ink)' }}>Train Tickets</div>
                       <div style={{ fontSize:10, color:'var(--muted2)' }}>via IRCTC</div>
@@ -479,7 +489,7 @@ export default async function TemplePage({ params }: Props) {
                 href={`/plan?destination=${encodeURIComponent(t.name)}&city=${encodeURIComponent(t.city||'')}&state=${encodeURIComponent(t.state||'')}&deity=${encodeURIComponent(t.deity||'')}`}
                 className="flex items-center gap-3 p-3 rounded-xl mb-3 text-sm font-medium"
                 style={{ background:'rgba(192,87,10,.08)', border:'1.5px solid rgba(192,87,10,.2)', color:'var(--saffron)', textDecoration:'none' }}>
-                <span style={{ fontSize:18 }}>🗺️</span>
+                <Map size={18} style={{ verticalAlign:'middle' }} />
                 <div>
                   <div style={{ fontWeight:700 }}>Plan your full journey</div>
                   <div style={{ fontSize:11, opacity:.7 }}>Get trains, buses & flights based on your starting city</div>
@@ -491,7 +501,7 @@ export default async function TemplePage({ params }: Props) {
               <div className="mt-3 p-3 rounded-xl" style={{ background:'linear-gradient(135deg, var(--crimson), #4a0a0a)', color:'white' }}>
                 <div className="flex items-center justify-between">
                   <div>
-                    <div style={{ fontWeight:700, fontSize:13 }}>💰 Save for this Yatra</div>
+                    <div style={{ fontWeight:700, fontSize:13, display:'flex', alignItems:'center', gap:6 }}><Wallet size={15} /> Save for this Yatra</div>
                     <div style={{ fontSize:11, opacity:.75, marginTop:2 }}>Open a dedicated yatra savings fund on FinVerse. Earn interest while you save.</div>
                   </div>
                   <a href={`https://finverse.app?utm_source=divyadarshanam&utm_temple=${t.slug}`}
@@ -542,7 +552,7 @@ export default async function TemplePage({ params }: Props) {
                     const isNo = String(val).startsWith('❌')
                     return (
                       <div key={key} style={{ display:'flex', alignItems:'center', gap:6, fontSize:11 }}>
-                        <span style={{ fontSize:14 }}>{FACILITY_ICONS[key] || '📎'}</span>
+                        <span style={{ fontSize:14 }}>{facIcon(key)}</span>
                         <span style={{ color: isYes ? '#166534' : isNo ? '#991B1B' : '#92400E', fontWeight:500 }}>
                           {FACILITY_LABELS[key] || key}
                         </span>
@@ -570,7 +580,7 @@ export default async function TemplePage({ params }: Props) {
                     <a href={t.website || t.official_website} target="_blank" rel="noopener"
                       className="flex items-center gap-3 p-2.5 rounded-xl"
                       style={{ background:'rgba(192,87,10,0.06)', border:'1px solid rgba(192,87,10,0.15)', textDecoration:'none' }}>
-                      <span style={{ fontSize:18 }}>🌐</span>
+                      <Globe size={18} style={{ verticalAlign:'middle' }} />
                       <div className="flex-1 min-w-0">
                         <div style={{ fontWeight:600, fontSize:12, color:'var(--ink)' }}>Official Website</div>
                         <div style={{ fontSize:10, color:'var(--muted2)', overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap' }}>
@@ -584,7 +594,7 @@ export default async function TemplePage({ params }: Props) {
                     <a href={`tel:${t.phone.replace(/[^0-9+]/g,'')}`}
                       className="flex items-center gap-3 p-2.5 rounded-xl"
                       style={{ background:'rgba(22,163,74,0.06)', border:'1px solid rgba(22,163,74,0.15)', textDecoration:'none' }}>
-                      <span style={{ fontSize:18 }}>📞</span>
+                      <Phone size={18} style={{ verticalAlign:'middle' }} />
                       <div>
                         <div style={{ fontWeight:600, fontSize:12, color:'var(--ink)' }}>Phone</div>
                         <div style={{ fontSize:11, color:'var(--muted2)' }}>{t.phone}</div>
@@ -595,7 +605,7 @@ export default async function TemplePage({ params }: Props) {
                     <a href={t.wikipedia_url} target="_blank" rel="noopener"
                       className="flex items-center gap-3 p-2.5 rounded-xl"
                       style={{ background:'rgba(59,130,246,0.06)', border:'1px solid rgba(59,130,246,0.15)', textDecoration:'none' }}>
-                      <span style={{ fontSize:18 }}>📖</span>
+                      <BookOpen size={18} style={{ verticalAlign:'middle' }} />
                       <div className="flex-1">
                         <div style={{ fontWeight:600, fontSize:12, color:'var(--ink)' }}>Wikipedia</div>
                         <div style={{ fontSize:10, color:'var(--muted2)' }}>Full history & details</div>
@@ -617,7 +627,7 @@ export default async function TemplePage({ params }: Props) {
                   target="_blank" rel="noopener"
                   className="flex items-center gap-3 p-2.5 rounded-xl transition-colors hover:opacity-90"
                   style={{ background:'#4285F4', textDecoration:'none' }}>
-                  <span style={{ fontSize:18 }}>⭐</span>
+                  <Star size={18} style={{ verticalAlign:'middle' }} />
                   <div className="flex-1">
                     <div style={{ fontWeight:700, fontSize:12, color:'white' }}>Google Reviews</div>
                     <div style={{ fontSize:10, color:'rgba(255,255,255,0.8)' }}>Read traveller reviews & tips</div>
@@ -630,7 +640,7 @@ export default async function TemplePage({ params }: Props) {
                   target="_blank" rel="noopener"
                   className="flex items-center gap-3 p-2.5 rounded-xl transition-colors"
                   style={{ background:'rgba(66,133,244,0.08)', border:'1px solid rgba(66,133,244,0.2)', textDecoration:'none' }}>
-                  <span style={{ fontSize:18 }}>🗺️</span>
+                  <Map size={18} style={{ verticalAlign:'middle' }} />
                   <div className="flex-1">
                     <div style={{ fontWeight:600, fontSize:12, color:'var(--ink)' }}>Google Maps</div>
                     <div style={{ fontSize:10, color:'var(--muted2)' }}>Directions & street view</div>
@@ -646,7 +656,7 @@ export default async function TemplePage({ params }: Props) {
                   target="_blank" rel="noopener"
                   className="flex items-center gap-3 p-2.5 rounded-xl transition-colors"
                   style={{ background:'rgba(52,168,83,0.06)', border:'1px solid rgba(52,168,83,0.15)', textDecoration:'none' }}>
-                  <span style={{ fontSize:18 }}>🏩</span>
+                  <Hotel size={18} style={{ verticalAlign:'middle' }} />
                   <div className="flex-1">
                     <div style={{ fontWeight:600, fontSize:12, color:'var(--ink)' }}>Google Hotels</div>
                     <div style={{ fontSize:10, color:'var(--muted2)' }}>Compare prices near {t.city}</div>
@@ -659,7 +669,7 @@ export default async function TemplePage({ params }: Props) {
                   target="_blank" rel="noopener"
                   className="flex items-center gap-3 p-2.5 rounded-xl transition-colors"
                   style={{ background:'rgba(0,100,0,0.06)', border:'1px solid rgba(0,100,0,0.15)', textDecoration:'none' }}>
-                  <span style={{ fontSize:18 }}>🚂</span>
+                  <TrainFront size={18} style={{ verticalAlign:'middle' }} />
                   <div className="flex-1">
                     <div style={{ fontWeight:600, fontSize:12, color:'var(--ink)' }}>Trains to {t.city}</div>
                     <div style={{ fontSize:10, color:'var(--muted2)' }}>via IRCTC</div>
@@ -672,7 +682,7 @@ export default async function TemplePage({ params }: Props) {
                   target="_blank" rel="noopener"
                   className="flex items-center gap-3 p-2.5 rounded-xl transition-colors"
                   style={{ background:'rgba(210,43,43,0.06)', border:'1px solid rgba(210,43,43,0.15)', textDecoration:'none' }}>
-                  <span style={{ fontSize:18 }}>🚌</span>
+                  <Bus size={18} style={{ verticalAlign:'middle' }} />
                   <div className="flex-1">
                     <div style={{ fontWeight:600, fontSize:12, color:'var(--ink)' }}>Bus to {t.city}</div>
                     <div style={{ fontSize:10, color:'var(--muted2)' }}>via RedBus</div>
@@ -685,7 +695,7 @@ export default async function TemplePage({ params }: Props) {
                   target="_blank" rel="noopener"
                   className="flex items-center gap-3 p-2.5 rounded-xl transition-colors"
                   style={{ background:'rgba(251,188,4,0.08)', border:'1px solid rgba(251,188,4,0.25)', textDecoration:'none' }}>
-                  <span style={{ fontSize:18 }}>✈️</span>
+                  <Plane size={18} style={{ verticalAlign:'middle' }} />
                   <div className="flex-1">
                     <div style={{ fontWeight:600, fontSize:12, color:'var(--ink)' }}>Flights to {t.state}</div>
                     <div style={{ fontSize:10, color:'var(--muted2)' }}>via Google Flights</div>
@@ -698,7 +708,7 @@ export default async function TemplePage({ params }: Props) {
                   target="_blank" rel="noopener"
                   className="flex items-center gap-3 p-2.5 rounded-xl transition-colors"
                   style={{ background:'rgba(0,0,0,0.04)', border:'1px solid rgba(0,0,0,0.1)', textDecoration:'none' }}>
-                  <span style={{ fontSize:18 }}>🚖</span>
+                  <Car size={18} style={{ verticalAlign:'middle' }} />
                   <div className="flex-1">
                     <div style={{ fontWeight:600, fontSize:12, color:'var(--ink)' }}>Book a Cab</div>
                     <div style={{ fontSize:10, color:'var(--muted2)' }}>via Ola</div>
@@ -738,7 +748,7 @@ export default async function TemplePage({ params }: Props) {
               <a href={t.official_website} target="_blank" rel="noopener"
                 className="card card-p flex items-center gap-3 hover:border-saffron transition-colors"
                 style={{ textDecoration:'none' }}>
-                <span style={{ fontSize:22 }}>🌐</span>
+                <Globe size={22} style={{ verticalAlign:'middle' }} />
                 <div>
                   <div style={{ fontWeight:600, fontSize:13, color:'var(--ink)' }}>Official Website</div>
                   <div style={{ fontSize:11, color:'var(--muted2)', wordBreak:'break-all' }}>{t.official_website.replace('https://','')}</div>
@@ -751,7 +761,7 @@ export default async function TemplePage({ params }: Props) {
                 target="_blank" rel="noopener"
                 className="card card-p flex items-center gap-3 hover:border-saffron transition-colors"
                 style={{ textDecoration:'none' }}>
-                <span style={{ fontSize:24 }}>📍</span>
+                <MapPin size={24} style={{ verticalAlign:'middle' }} />
                 <div>
                   <div style={{ fontWeight:600, fontSize:13, color:'var(--ink)' }}>Get Directions</div>
                   <div style={{ fontSize:11, color:'var(--muted2)' }}>{t.city}, {t.state}</div>
