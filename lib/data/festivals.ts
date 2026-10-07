@@ -4186,6 +4186,7 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── SKANDA SASHTI ─────────────────────────────
   {
     slug: 'skanda-sashti',
+    image: '/festivals/skanda-sashti.jpg',
     name: 'Skanda Sashti',
     alsoKnown: 'Kanda Sashti, Soorasamharam, Kandha Shashti',
     emoji: '🔱',
@@ -4236,6 +4237,7 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── VARALAKSHMI VRATAM ─────────────────────────────
   {
     slug: 'varalakshmi-vratam',
+    image: '/festivals/varalakshmi-vratam.jpg',
     name: 'Varalakshmi Vratam',
     alsoKnown: 'Vara Lakshmi Vrata, Varamahalakshmi',
     emoji: '🪷',
@@ -4282,6 +4284,7 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── SATYANARAYAN VRATA ─────────────────────────────
   {
     slug: 'satyanarayan-vrata',
+    image: '/festivals/satyanarayan-vrata.jpg',
     name: 'Satyanarayan Vrata',
     alsoKnown: 'Satyanarayan Puja, Satyanarayana Swamy Vratam',
     emoji: '📿',
@@ -4326,6 +4329,7 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── GITA JAYANTI ─────────────────────────────
   {
     slug: 'gita-jayanti',
+    image: '/festivals/gita-jayanti.jpg',
     name: 'Gita Jayanti',
     alsoKnown: 'Bhagavad Gita Jayanti, Mokshada Ekadashi',
     emoji: '📖',
@@ -4371,6 +4375,7 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── DATTATREYA JAYANTI ─────────────────────────────
   {
     slug: 'dattatreya-jayanti',
+    image: '/festivals/dattatreya-jayanti.jpg',
     name: 'Dattatreya Jayanti',
     alsoKnown: 'Datta Jayanti',
     emoji: '🪔',
@@ -4418,6 +4423,7 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── CHITRA PURNIMA ─────────────────────────────
   {
     slug: 'chitra-purnima',
+    image: '/festivals/chitra-purnima.jpg',
     name: 'Chitra Purnima',
     alsoKnown: 'Chitra Pournami, Chithirai Pournami',
     emoji: '📜',
@@ -4463,6 +4469,7 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── ADI SHANKARA JAYANTI ─────────────────────────────
   {
     slug: 'shankara-jayanti',
+    image: '/festivals/shankara-jayanti.jpg',
     name: 'Adi Shankara Jayanti',
     alsoKnown: 'Shankaracharya Jayanti, Shankara Jayanthi',
     emoji: '🕉️',
@@ -4509,6 +4516,7 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── CHAITRA NAVRATRI ─────────────────────────────
   {
     slug: 'chaitra-navratri',
+    image: '/festivals/chaitra-navratri.jpg',
     name: 'Chaitra Navaratri',
     alsoKnown: 'Vasanta Navaratri, Vasant Navratri, Ram Navratri',
     emoji: '🌺',
@@ -4556,6 +4564,7 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── PRADOSHA VRATA ─────────────────────────────
   {
     slug: 'pradosh-vrat',
+    image: '/festivals/pradosh-vrat.jpg',
     name: 'Pradosha Vrata',
     alsoKnown: 'Pradosham, Pradosh',
     emoji: '🔱',
@@ -4598,6 +4607,7 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── GAYATRI JAYANTI ─────────────────────────────
   {
     slug: 'gayatri-jayanti',
+    image: '/festivals/gayatri-jayanti.jpg',
     name: 'Gayatri Jayanti',
     alsoKnown: 'Gayatri Japa Day',
     emoji: '📿',
@@ -4643,6 +4653,7 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── SRI APPAYYA DIKSHITAR JAYANTI ─────────────────────────────
   {
     slug: 'appayya-jayanti',
+    image: '/festivals/appayya-jayanti.jpg',
     name: 'Sri Appayya Dikshitar Jayanti',
     alsoKnown: 'Appayya Jayanti, Appayya Dikshitendra Jayanti',
     emoji: '🕉️',
