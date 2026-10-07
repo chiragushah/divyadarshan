@@ -32,7 +32,7 @@ export default function FestivalsClient({ festivals }: { festivals: Festival[] }
       }}>
         <div className="max-w-6xl mx-auto">
           <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', opacity: 0.85, marginBottom: 10 }}>
-            🪔 Festivals of India
+            Festivals of India
           </div>
           <h1 className="font-serif" style={{ fontSize: 'clamp(30px, 5vw, 46px)', fontWeight: 600, lineHeight: 1.1, marginBottom: 14, color: 'white' }}>
             The living festivals of Bharat
@@ -42,9 +42,11 @@ export default function FestivalsClient({ festivals }: { festivals: Festival[] }
             across regions, the food and prasad, the dances, the deity worshipped, and exactly which temples to visit.
           </p>
           <div style={{ marginTop: 18, display: 'flex', gap: 18, flexWrap: 'wrap', fontSize: 14, color: 'rgba(255,255,255,0.85)' }}>
-            <span>📿 {festivals.length} major festivals</span>
-            <span>🛕 Linked to temples you can visit</span>
-            <span>🍲 Food, prasad & dance for each</span>
+            <span>{festivals.length} major festivals</span>
+            <span>·</span>
+            <span>Linked to temples you can visit</span>
+            <span>·</span>
+            <span>Food, prasad &amp; dance for each</span>
           </div>
         </div>
       </div>
@@ -91,13 +93,12 @@ export default function FestivalsClient({ festivals }: { festivals: Festival[] }
               {/* Accent header */}
               <div style={{
                 background: `linear-gradient(135deg, ${f.accent}, ${f.accent}cc)`,
-                padding: '18px 18px 14px', color: 'white', position: 'relative',
+                padding: '22px 18px 16px', color: 'white', position: 'relative',
               }}>
-                <div style={{ fontSize: 34, lineHeight: 1 }}>{f.emoji}</div>
-                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.08em', textTransform: 'uppercase', opacity: 0.9, marginTop: 10 }}>
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.08em', textTransform: 'uppercase', opacity: 0.9 }}>
                   {f.dates2026 ? `2026 · ${f.dates2026.split('(')[0].split(';')[0].trim()}` : `${f.season} · ${f.whenText.split('(')[0].trim()}`}
                 </div>
-                <div className="font-serif" style={{ fontSize: 21, fontWeight: 600, marginTop: 2, color: 'white' }}>{f.name}</div>
+                <div className="font-serif" style={{ fontSize: 22, fontWeight: 600, marginTop: 4, color: 'white', lineHeight: 1.15 }}>{f.name}</div>
               </div>
               {/* Body */}
               <div style={{ padding: '14px 18px 18px', display: 'flex', flexDirection: 'column', flex: 1 }}>
