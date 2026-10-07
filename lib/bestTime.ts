@@ -17,7 +17,7 @@ export interface BestTimeInput {
   type?: string
   timing?: string
   best_time?: string
-  festivals?: string[]
+  festivals?: string[] | string   // the Temple model stores this as a comma-separated string
   open_months?: number[]
   closed_months?: number[]
   seasonal_note?: string
@@ -148,7 +148,13 @@ function festivalPeaksFor(input: BestTimeInput): FestivalPeak[] {
     peaks.push({ name, when })
   }
   const slug = input.slug
-  const tnames = (input.festivals || []).map(f => f.toLowerCase().trim())
+  // `festivals` may arrive as a string[] or a single comma/semicolon-separated
+  // string (how the Temple model stores it) — normalise to lowercase tokens.
+  const rawFest = input.festivals
+  const festList: string[] = Array.isArray(rawFest)
+    ? rawFest
+    : (typeof rawFest === 'string' ? rawFest.split(/[,;|]/) : [])
+  const tnames = festList.map(f => String(f).toLowerCase().trim()).filter(Boolean)
 
   for (const f of FESTIVALS) {
     const linkedBySlug = slug ? f.temples?.some(t => t.slug === slug) : false
