@@ -120,6 +120,29 @@ const MONTHS = [
   },
 ]
 
+// Maps a calendar festival name to its detailed Festival Guide page (/festivals/<slug>).
+// Only names present here become clickable links; others render as plain text.
+const FESTIVAL_GUIDE: Record<string, string> = {
+  'Makar Sankranti': 'makar-sankranti',
+  'Vaikunta Ekadashi': 'vaikuntha-ekadashi',
+  'Pongal': 'pongal',
+  'Mahashivratri': 'maha-shivaratri',
+  'Vasant Panchami': 'vasant-panchami',
+  'Holi': 'holi',
+  'Ram Navami': 'ram-navami',
+  'Akshaya Tritiya': 'akshaya-tritiya',
+  'Buddha Purnima': 'buddha-purnima',
+  'Rath Yatra': 'rath-yatra',
+  'Guru Purnima': 'guru-purnima',
+  'Janmashtami': 'krishna-janmashtami',
+  'Ganesh Chaturthi': 'ganesh-chaturthi',
+  'Onam': 'onam',
+  'Navratri': 'navaratri-durga-puja',
+  'Dussehra / Vijayadashami': 'dussehra-vijayadashami',
+  'Diwali': 'diwali',
+  'Sabarimala opening': 'sabarimala-makaravilakku',
+}
+
 export default function CalendarPage() {
   const currentMonth = new Date().getMonth()
 
@@ -156,16 +179,28 @@ export default function CalendarPage() {
 
             <div className="p-5">
               <div className="space-y-3 mb-4">
-                {m.festivals.map(f => (
+                {m.festivals.map(f => {
+                  const guideSlug = FESTIVAL_GUIDE[f.name]
+                  return (
                   <div key={f.name} className="flex gap-3">
                     <div className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ background: 'var(--crimson)' }} />
                     <div>
-                      <span className="font-medium text-sm" style={{ color: 'var(--ink)' }}>{f.name}</span>
+                      {guideSlug ? (
+                        <Link href={`/festivals/${guideSlug}`} className="font-medium text-sm inline-flex items-center gap-1"
+                          style={{ color: 'var(--crimson)', textDecoration: 'none' }}>
+                          <span style={{ borderBottom: '1px dotted var(--crimson)' }}>{f.name}</span>
+                          <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full"
+                            style={{ background: 'rgba(139,26,26,0.08)', color: 'var(--crimson)' }}>Guide →</span>
+                        </Link>
+                      ) : (
+                        <span className="font-medium text-sm" style={{ color: 'var(--ink)' }}>{f.name}</span>
+                      )}
                       <span className="text-xs ml-2" style={{ color: 'var(--crimson)' }}>{f.temples}</span>
                       <p className="text-xs mt-0.5" style={{ color: 'var(--muted)' }}>{f.desc}</p>
                     </div>
                   </div>
-                ))}
+                  )
+                })}
               </div>
 
               <div className="flex items-start gap-2 px-3 py-2.5 rounded-lg text-xs"
