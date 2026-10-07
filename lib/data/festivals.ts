@@ -1775,6 +1775,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── MAHAVIR JAYANTI ───────────────────────
   {
     slug: 'mahavir-jayanti',
+    dates2026: '31 March 2026',
+    dates2027: '18 April 2027',
+    dateNote: 'Mahavir Jayanti (Mahavir Janma Kalyanak) is the Trayodashi of the bright fortnight of Chaitra. Dates shift across March–April each year.',
+    mythology: 'Mahavir Jayanti celebrates the birth of Lord Mahavira around 599 BCE at Kundagrama near Vaishali, as Prince Vardhamana, son of King Siddhartha and Queen Trishala — who, tradition says, saw fourteen (or sixteen) auspicious dreams before his birth. At thirty he renounced the world, and after twelve and a half years of severe penance attained kevala jnana (omniscience). As the 24th and last Tirthankara, he crystallised the Jain path: ahimsa (non-violence to all life), satya (truth), asteya (non-stealing), brahmacharya (chastity) and aparigraha (non-attachment), showing the way to liberation of the soul.',
+    history: 'Mahavira was a contemporary of the Buddha and reorganised the ancient Jain sangha (founded by the 23rd Tirthankara Parshvanatha) into a fourfold community. Mahavir Jayanti is the most important festival for Jains worldwide.',
+    ritualSteps: [
+      { when: 'Morning', step: 'Perform the ceremonial abhishek (anointing) of the Tirthankara idol — the Janma Kalyanak ritual.' },
+      { when: 'Procession', step: 'Carry the idol in a rath yatra through the community with devotion and song.' },
+      { when: 'Reflection', step: 'Engage in prayer, meditation, scripture study and discourses on Mahavira’s teachings.' },
+      { when: 'Observance', step: 'Practise charity, strict vegetarianism and non-violence; many observe fasts.' },
+    ],
+    regional: [
+      { region: 'Gujarat (Palitana)', note: 'Pilgrimage to Shatrunjaya — the hill of a thousand Jain temples — peaks around this time.' },
+      { region: 'Rajasthan (Ranakpur, Nakoda)', note: 'Grand abhishek and processions at the great marble temples.' },
+      { region: 'Karnataka (Shravanabelagola)', note: 'Worship at the colossal Gomateshwara (Bahubali) statue.' },
+      { region: 'Jharkhand (Sammed Shikharji)', note: 'The supreme Jain tirtha where twenty Tirthankaras attained moksha.' },
+    ],
+    attire: ['Simple white clothing is traditional for Jains', 'Modest, pure attire reflecting non-attachment', 'Women: white or light sarees/suits', 'Men: white kurta-pyjama'],
     name: 'Mahavir Jayanti',
     alsoKnown: 'Mahavir Janma Kalyanak',
     emoji: '🕉️',
@@ -1820,6 +1838,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BUDDHA PURNIMA ───────────────────────
   {
     slug: 'buddha-purnima',
+    dates2026: '1 May 2026',
+    dates2027: '20 May 2027 (confirm locally)',
+    dateNote: 'Buddha Purnima (Vesak) is the full moon of Vaishakha. Dates shift across April–May each year; some countries observe Vesak on a slightly different full moon.',
+    mythology: 'Buddha Purnima — Vesak — commemorates three central events of the Buddha’s life said to have occurred on the same Vaishakha full moon: his birth as Prince Siddhartha at Lumbini; his enlightenment under the Bodhi tree at Bodh Gaya, where after years of austerity he accepted a bowl of kheer from the village girl Sujata, meditated through the night and awoke as the Buddha; and his parinirvana (final passing) at Kushinagar. It celebrates the path of compassion, mindfulness and the Middle Way to liberation from suffering.',
+    history: 'Vesak is the most sacred day in Buddhism, recognised by the United Nations. It is observed across the Theravada and Mahayana worlds — from the Himalayas to East and Southeast Asia — each with its own customs.',
+    ritualSteps: [
+      { when: 'Dawn', step: 'Visit the vihara/temple; offer flowers, incense and lamps before the image of the Buddha.' },
+      { when: 'Practice', step: 'Meditate, listen to Dhamma teachings and recite the sutras; observe the precepts.' },
+      { when: 'Dana (giving)', step: 'Perform acts of compassion — feed the needy, free captive animals, give to monks.' },
+      { when: 'Bathing the Buddha', step: 'In many traditions, gently pour water over a Buddha image, symbolising purification of the mind.' },
+    ],
+    regional: [
+      { region: 'Bodh Gaya (Bihar)', note: 'Pilgrims circumambulate the Mahabodhi Temple and the Bodhi tree with chanting and lamps.' },
+      { region: 'Sarnath & Kushinagar (UP)', note: 'Special observances at the sites of the first sermon and the parinirvana.' },
+      { region: 'Himalayas (Ladakh, Sikkim, Dharamshala)', note: 'Monasteries hold processions and the sacred Cham (masked) dance.' },
+      { region: 'East & Southeast Asia', note: 'Lantern festivals, bathing-the-Buddha rituals and candlelit processions.' },
+    ],
+    attire: ['White is traditionally worn by devotees on Vesak', 'Simple, modest clothing for the vihara', 'Monks in their robes lead the observances'],
     name: 'Buddha Purnima',
     alsoKnown: 'Vesak; Buddha Jayanti',
     emoji: '☸️',
@@ -1865,6 +1901,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── SABARIMALA MAKARAVILAKKU ───────────────────────
   {
     slug: 'sabarimala-makaravilakku',
+    dates2026: '14 January 2026 (Makaravilakku); season ~mid-Nov 2025 to mid-Jan 2026',
+    dates2027: '15 January 2027 (Makaravilakku)',
+    dateNote: 'Makaravilakku falls on Makara Sankranti (~14–15 January), the climax of the Mandala-Makaravilakku pilgrimage season that opens in mid-November. The temple also opens for monthly (Malayalam-month) poojas.',
+    mythology: 'Lord Ayyappa (Dharma Sastha) was born of Shiva and Vishnu (in his enchanting Mohini form) — Hariharaputra, “son of Hari and Hara.” Raised as a prince of Pandalam, he vanquished the demoness Mahishi and, his earthly task done, merged into the deity at Sabarimala, instructing that pilgrims reach him only after a rigorous vow. On Makaravilakku, the sacred ornaments (Thiruvabharanam) are brought to adorn the deity, and devotees witness the Makara Jyothi — a celestial light on the distant horizon. The celibate, forest-dwelling Ayyappa is the presiding deity.',
+    history: 'Sabarimala is among the largest annual pilgrimages on earth, famed for the equality of its pilgrims — all addressed as “Ayyappa” regardless of caste or status — and for the demanding 41-day vratham that precedes the climb.',
+    ritualSteps: [
+      { when: '41-day vratham', step: 'Observe celibacy, satvik food, no footwear, and wear the black/blue mundu with a tulsi or rudraksha mala.' },
+      { when: 'Irumudi', step: 'Prepare and carry the irumudi kettu (the sacred two-pouch bundle, with ghee for abhishekam) on the head — only those who kept the vratham may.' },
+      { when: 'The trek', step: 'Walk the forest path to the sannidhanam chanting “Swamiye Saranam Ayyappa”; at Erumeli, perform the Petta Thullal dance.' },
+      { when: 'The 18 steps', step: 'Climb the Pathinettam Padi (18 holy steps) to the shrine; offer the neyyabhishekam (ghee) from the irumudi.' },
+      { when: 'Makaravilakku', step: 'On Makara Sankranti, the Thiruvabharanam ornaments adorn the deity and the Makara Jyothi is sighted.' },
+    ],
+    regional: [
+      { region: 'Sabarimala (Kerala)', note: 'The forest paths fill day and night with black-clad devotees; the barefoot climb is arduous and the Makaravilakku crowd immense.' },
+      { region: 'Erumeli', note: 'The traditional trek start, where pilgrims perform the ecstatic Petta Thullal.' },
+      { region: 'Tamil Nadu & Andhra', note: 'Huge numbers of Ayyappa devotees undertake the vratham and travel for the season.' },
+    ],
+    attire: ['Black or dark-blue mundu/dhoti throughout the 41-day vratham', 'A tulsi or rudraksha mala worn from the start of the vow', 'Barefoot for the pilgrimage', 'Simple, austere clothing reflecting renunciation'],
     name: 'Makaravilakku (Sabarimala)',
     alsoKnown: 'Makara Jyothi; the Sabarimala Ayyappa pilgrimage season',
     emoji: '🪔',
@@ -1909,6 +1963,23 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GANGAUR ───────────────────────
   {
     slug: 'gangaur',
+    dates2026: '21 March 2026 (Gauri Tritiya); the 18 days begin the day after Holi',
+    dates2027: '9 April 2027',
+    dateNote: 'Gangaur climaxes on Chaitra Shukla Tritiya, the eighteenth day after Holi. Dates shift across March–April each year.',
+    mythology: 'Gangaur honours Gauri — Parvati in her form as the ideal, devoted wife — and her union with Shiva (“Gan” for Shiva, “Gaur” for Gauri). The legend recalls Gauri visiting her parental home after her marriage, and being given an affectionate send-off back to Shiva with blessings of marital bliss — which is why married women worship her for their husbands’ long life, and unmarried girls for a good husband. Isar (Shiva) and Gauri are worshipped as the divine couple.',
+    history: 'Gangaur is Rajasthan’s signature festival, with royal processions that date to the era of the Rajput courts; the Jaipur and Udaipur (Mewar) Gangaur celebrations are centuries old.',
+    ritualSteps: [
+      { when: 'From the day after Holi', step: 'Make and worship clay idols of Gauri and Isar daily through the eighteen days.' },
+      { when: 'Daily', step: 'Women collect fresh green grass, apply mehndi, and sing traditional Gangaur songs; offer water, sindoor and sweets.' },
+      { when: 'Gauri Tritiya (final day)', step: 'Carry the decorated idols in grand procession through the streets.' },
+      { when: 'Immersion', step: 'Immerse the idols in a tank, lake or well, bidding Gauri farewell.' },
+    ],
+    regional: [
+      { region: 'Jaipur', note: 'The royal Gangaur procession from the City Palace — palanquins, caparisoned elephants, camels and folk troupes — is world-famous.' },
+      { region: 'Udaipur (Mewar)', note: 'The Mewar Gangaur boat procession on Lake Pichola (Gangaur Ghat) is spectacular.' },
+      { region: 'Jodhpur, Bikaner & rural Rajasthan', note: 'Fairs, folk performances and women singing and dancing with the idols.' },
+    ],
+    attire: ['Rajasthani festive finery', 'Women: ghagra-choli with odhni, heavy traditional jewellery, mehndi', 'Men: bandhgala/angrakha with a colourful safa (turban)', 'Bright reds, pinks, yellows and greens'],
     name: 'Gangaur',
     alsoKnown: 'Gauri Tritiya; the festival of Gauri',
     emoji: '👰',
@@ -1954,6 +2025,23 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── NARASIMHA JAYANTI ───────────────────────
   {
     slug: 'narasimha-jayanti',
+    dates2026: '30 April 2026',
+    dates2027: '19 May 2027 (confirm locally)',
+    dateNote: 'Narasimha Jayanti is the Chaturdashi of the bright fortnight of Vaishakha; worship is at dusk (sandhya), the hour of the Lord’s appearance. Dates shift across April–May.',
+    mythology: 'The demon-king Hiranyakashipu won a boon that he could not be killed by man or beast, indoors or outdoors, by day or night, on earth or in sky, by any weapon. Made invincible, he demanded to be worshipped as god — but his own son Prahlad remained devoted to Vishnu. When the enraged father challenged whether Vishnu was in a pillar, Lord Narasimha — half-man, half-lion — burst from it at dusk (neither day nor night), on the threshold (neither in nor out), placed the demon on his lap (neither earth nor sky) and tore him apart with his claws (no weapon) — honouring the boon to the letter while destroying evil and saving his devotee.',
+    history: 'Narasimha is one of the most widely worshipped avatars in the South, with the nine-form Nava Narasimha kshetra at Ahobilam as its principal centre, and great temples at Simhachalam and Yadadri.',
+    ritualSteps: [
+      { when: 'Day', step: 'Observe a fast and prepare for the dusk worship.' },
+      { when: 'Dusk (sandhya)', step: 'Worship Narasimha at the hour of his appearance; perform abhishekam with cooling substances — sandal paste, panakam, buttermilk — to soothe his fierce heat.' },
+      { when: 'Recitation', step: 'Recite the Narasimha stotras, the Prahlad story and the Narasimha Kavacham.' },
+      { when: 'After sunset', step: 'Break the fast with cooling panakam and kosambari.' },
+    ],
+    regional: [
+      { region: 'Ahobilam (Andhra)', note: 'The Nava Narasimha kshetra — nine shrines across forested hills; the primary Narasimha pilgrimage.' },
+      { region: 'Simhachalam (Visakhapatnam)', note: 'Abhishek and special darshan of the sandal-covered deity.' },
+      { region: 'Yadadri / Yadagirigutta (Telangana)', note: 'Grand festivities at the renowned Lakshmi Narasimha temple.' },
+    ],
+    attire: ['Traditional wear for the evening temple worship', 'Women: silk or cotton sarees', 'Men: dhoti with angavastram (as many temples require)', 'Cooling light fabrics for the summer dusk'],
     name: 'Narasimha Jayanti',
     alsoKnown: 'Narasimha Chaturdashi; Nrisimha Jayanti',
     emoji: '🦁',
@@ -1998,6 +2086,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── ASHADHI EKADASHI / PANDHARPUR WARI ───────────────────────
   {
     slug: 'ashadhi-ekadashi-pandharpur-wari',
+    dates2026: '25 July 2026 (Ashadhi/Devshayani Ekadashi); the Wari walk fills the 3 weeks before',
+    dates2027: '13 July 2027',
+    dateNote: 'Ashadhi Ekadashi is the Shukla Ekadashi of Ashadha; it also begins Chaturmas (Vishnu’s four-month cosmic sleep). The Wari pilgrimage culminates on this day. Dates shift across June–July.',
+    mythology: 'The deity is Vitthal (Vithoba) of Pandharpur, a form of Krishna/Vishnu who stands on a brick with hands on his hips. The story tells of Pundalik, a devotee so absorbed in serving his aged parents that when Vitthal arrived, he tossed a brick for the Lord to wait upon — and the Lord, delighted by such devotion to one’s parents, has stood on that brick ever since. Ashadhi Ekadashi is also Devshayani Ekadashi, the day Vishnu lies down to sleep for the four monsoon months (Chaturmas).',
+    history: 'The Warkari movement, shaped by saint-poets like Dnyaneshwar, Namdev, Tukaram and Eknath over 800 years, is one of India’s great devotional traditions. The Wari — the foot-pilgrimage carrying the saints’ paduka (sandals) in palkhis to Pandharpur — is among the oldest continuous pilgrimages in the world.',
+    ritualSteps: [
+      { when: 'Three weeks before', step: 'Join or receive the palkhis — the Dnyaneshwar palkhi from Alandi and the Tukaram palkhi from Dehu — and walk the Wari singing abhangas.' },
+      { when: 'On the walk', step: 'Take part in the ringan (horses running through circles of warkaris) and dindi processions; villages host and feed the pilgrims.' },
+      { when: 'Ekadashi', step: 'Observe the Ekadashi fast (no grains); take a holy dip in the Chandrabhaga river at Pandharpur.' },
+      { when: 'Darshan', step: 'Take darshan of Vitthal and Rukmini; begin Chaturmas vows of austerity and study.' },
+    ],
+    regional: [
+      { region: 'Pandharpur (Maharashtra)', note: 'The destination — the town overflows on Ekadashi; the Chandrabhaga banks fill with warkaris.' },
+      { region: 'Alandi', note: 'Start of the Dnyaneshwar Maharaj palkhi — the saint’s samadhi town.' },
+      { region: 'Dehu', note: 'Start of the Sant Tukaram palkhi.' },
+      { region: 'Along the route', note: 'A centuries-old culture of seva — entire villages feed and shelter the lakhs of walking warkaris.' },
+    ],
+    attire: ['Warkari white — men in white dhoti-kurta and the white Gandhi topi', 'A tulsi-bead mala worn around the neck', 'Women: nauvari (nine-yard) sarees', 'Saffron Bhagwa flags carried throughout'],
     name: 'Ashadhi Ekadashi & the Pandharpur Wari',
     alsoKnown: 'Devshayani Ekadashi; Shayani Ekadashi; the Warkari Wari',
     emoji: '🚩',
@@ -2043,6 +2149,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KANWAR YATRA ───────────────────────
   {
     slug: 'kanwar-yatra',
+    dates2026: 'Through Shravan — ~10 July to 9 August 2026 (peaks on Shravan Shivaratri, ~11 Aug)',
+    dates2027: 'Through Shravan — late July to late August 2027',
+    dateNote: 'The Kanwar Yatra runs through the lunar month of Shravan; it peaks on the Mondays of Shravan and on Shravan Shivaratri (the Chaturdashi), when the Ganga water is poured on the linga. Dates shift across July–August.',
+    mythology: 'The yatra recalls the churning of the ocean (Samudra Manthan): when the deadly halahala poison emerged and threatened all creation, Lord Shiva drank it, and the gods poured Ganga water over him to cool its burning. Tradition also credits Ravana, and later Parashurama, as among the first kanwariyas who carried Ganga water to bathe the Shiva-linga. The cooling Ganga water offered to the linga in Shravan is an act of gratitude for that sacrifice.',
+    history: 'Once a smaller observance, the Kanwar Yatra has grown into one of the largest annual foot-pilgrimages on earth, with tens of millions of saffron-clad kanwariyas walking the routes of North India each Shravan.',
+    ritualSteps: [
+      { when: 'Collect', step: 'Gather holy Ganga water in the kanwar pots from a sacred source — Haridwar, Gaumukh or Sultanganj.' },
+      { when: 'The walk', step: 'Walk barefoot, keeping the kanwar off the ground at all times; maintain celibacy, purity and satvik food.' },
+      { when: 'Chant', step: 'Move to the cry of “Bol Bam” and “Har Har Mahadev”; rest at the roadside shivirs (camps) that feed and shelter the pilgrims.' },
+      { when: 'Jalabhishek', step: 'Pour the carried Ganga water over the Shiva-linga — ideally on a Shravan Monday or Shravan Shivaratri.' },
+    ],
+    regional: [
+      { region: 'Sultanganj → Deoghar', note: 'The famed ~100 km Dak Bam barefoot route to Baidyanath Dham, one of the Jyotirlingas.' },
+      { region: 'Haridwar & Gaumukh', note: 'Major Ganga water-collection points; highways turn saffron with walking kanwariyas.' },
+      { region: 'Kashi Vishwanath (Varanasi)', note: 'Huge Shravan crowds for jalabhishek at the Jyotirlinga.' },
+      { region: 'Neelkanth Mahadev (Uttarakhand)', note: 'A major Shravan destination near Rishikesh.' },
+    ],
+    attire: ['Saffron (kesariya) clothing is the mark of the kanwariya', 'Barefoot throughout the walk', 'Simple, pure Shravan attire', 'A rudraksha mala and tilak of vibhuti'],
     name: 'Kanwar Yatra',
     alsoKnown: 'Kanvar Yatra; Bol Bam; the Shravan pilgrimage',
     emoji: '🧡',
@@ -2088,6 +2212,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KARTHIGAI DEEPAM ───────────────────────
   {
     slug: 'karthigai-deepam',
+    dates2026: '23 November 2026',
+    dates2027: '12 December 2027 (confirm locally)',
+    dateNote: 'Karthigai Deepam falls when the Krittika nakshatra prevails on the full moon of the Tamil month of Karthigai. Dates shift across November–December each year.',
+    mythology: 'Karthigai Deepam celebrates Lord Shiva manifesting as the Lingodbhava — an infinite column of fire whose top and base neither Brahma nor Vishnu could find, humbling their rivalry over who was supreme. At Tiruvannamalai, this is re-enacted when a colossal beacon, the Maha Deepam, is lit in a giant cauldron atop the sacred Arunachala hill — a flame understood as Shiva himself as a pillar of light, visible for miles. The day is also sacred to Murugan, who was born from Shiva’s six sparks nurtured by the six Krittika stars.',
+    history: 'Karthigai Deepam is one of the oldest festivals of the Tamil land, referenced in Sangam-era literature — a festival of light in the region older even than Diwali. Tiruvannamalai is its supreme centre.',
+    ritualSteps: [
+      { when: 'Evening', step: 'Light rows of agal vilakku (clay lamps) at home and temple on the Krittika evening.' },
+      { when: 'Maha Deepam (dusk)', step: 'At Tiruvannamalai, witness the lighting of the great beacon atop Arunachala hill.' },
+      { when: 'Girivalam', step: 'Perform the barefoot circumambulation of the 14 km Arunachala hill — devotion in motion.' },
+      { when: 'Offering', step: 'Offer pori (puffed rice), appam and nei appam; worship Shiva and Murugan.' },
+    ],
+    regional: [
+      { region: 'Tiruvannamalai', note: 'Millions gather for the Maha Deepam atop Arunachala and the Girivalam around it — one of South India’s greatest spiritual events.' },
+      { region: 'Across Tamil Nadu', note: 'Homes and temples glow with rows of oil lamps; kolam at every threshold.' },
+      { region: 'Thanjavur & Shiva temples', note: 'Brihadeeswarar and Shiva temples statewide hold special deepa-aradhana.' },
+      { region: 'Murugan temples', note: 'Celebrate the day honouring Murugan’s birth from the Krittika stars.' },
+    ],
+    attire: ['Traditional Tamil wear', 'Women: silk or cotton sarees', 'Men: veshti (dhoti) with angavastram', 'Comfortable footwear-free clothing for the long Girivalam walk'],
     name: 'Karthigai Deepam',
     alsoKnown: 'Thirukarthigai; Karthika Deepam; the Festival of Lights of the South',
     emoji: '🔥',
