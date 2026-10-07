@@ -177,11 +177,34 @@ export default function FestivalDetailPage({ params }: Props) {
           </Section>
         ) : null}
 
-        {/* Food & Prasad */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: 18, marginBottom: 28 }}>
-          <TagCard title="Festive food" subtitle="What is cooked & eaten" items={f.food} accent={f.accent} icon="🍲" />
-          <TagCard title="Prasad & offerings" subtitle="What is offered to the deity" items={f.prasad} accent={f.accent} icon="🪔" />
-        </div>
+        {/* Food & Prasad — state-wise when available, else the two-up tag cards */}
+        {(f.foodByRegion && f.foodByRegion.length > 0) || (f.prasadByRegion && f.prasadByRegion.length > 0) ? (
+          <>
+            {f.foodByRegion && f.foodByRegion.length > 0 ? (
+              <Section title="Festive food — state by state" accent={f.accent} icon="🍲">
+                <RegionGrid items={f.foodByRegion} accent={f.accent} />
+              </Section>
+            ) : (
+              <Section title="Festive food" accent={f.accent} icon="🍲">
+                <TagRow items={f.food} accent={f.accent} />
+              </Section>
+            )}
+            {f.prasadByRegion && f.prasadByRegion.length > 0 ? (
+              <Section title="Prasad & offerings — state by state" accent={f.accent} icon="🪔">
+                <RegionGrid items={f.prasadByRegion} accent={f.accent} />
+              </Section>
+            ) : (
+              <Section title="Prasad & offerings" accent={f.accent} icon="🪔">
+                <TagRow items={f.prasad} accent={f.accent} />
+              </Section>
+            )}
+          </>
+        ) : (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: 18, marginBottom: 28 }}>
+            <TagCard title="Festive food" subtitle="What is cooked & eaten" items={f.food} accent={f.accent} icon="🍲" />
+            <TagCard title="Prasad & offerings" subtitle="What is offered to the deity" items={f.prasad} accent={f.accent} icon="🪔" />
+          </div>
+        )}
 
         {/* Dance */}
         <Section title="Dance & performing arts" accent={f.accent} icon="💃">
@@ -240,6 +263,29 @@ function Section({ title, children, accent, icon }: { title: string; children: R
         <span style={{ borderBottom: `3px solid ${accent}`, paddingBottom: 2 }}>{title}</span>
       </h2>
       {children}
+    </div>
+  )
+}
+
+function RegionGrid({ items, accent }: { items: { region: string; note: string }[]; accent: string }) {
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 14 }}>
+      {items.map((r, i) => (
+        <div key={i} style={{ background: 'var(--ivory2)', borderRadius: 12, padding: 16, border: '1px solid var(--ivory3)' }}>
+          <div style={{ fontSize: 14.5, fontWeight: 700, color: accent, marginBottom: 5 }}>{r.region}</div>
+          <div style={{ fontSize: 13.5, color: 'var(--ink2)', lineHeight: 1.6 }}>{r.note}</div>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function TagRow({ items, accent }: { items: string[]; accent: string }) {
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+      {items.map((it, i) => (
+        <span key={i} style={{ background: `${accent}12`, color: 'var(--ink2)', border: `1px solid ${accent}33`, padding: '7px 12px', borderRadius: 10, fontSize: 13, lineHeight: 1.4 }}>{it}</span>
+      ))}
     </div>
   )
 }

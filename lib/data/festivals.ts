@@ -49,12 +49,21 @@ export interface Festival {
   regional?: { region: string; note: string }[]    // precise regional/temple variations
   attire?: string[]           // what devotees traditionally wear (simple list — fallback)
   attireByRegion?: { region: string; note: string }[]  // state/region-wise attire detail
+  prasadByRegion?: { region: string; note: string }[]  // state/region-wise prasad & offerings
+  foodByRegion?: { region: string; note: string }[]    // state/region-wise festive food
 }
 
 export const FESTIVALS: Festival[] = [
   // ───────────────────────────── DIWALI ─────────────────────────────
   {
     slug: 'diwali',
+    prasadByRegion: [
+      { region: 'North India', note: 'Kheel (puffed rice) and batasha / sugar-candy, lotus and panchamrit offered to Goddess Lakshmi.' },
+      { region: 'Bengal & Odisha (Kali Puja)', note: 'Red hibiscus and khichuri bhog; in the Shakta tradition some offer fish or meat to Kali.' },
+      { region: 'South India', note: 'Panchamrit and sweets offered after the pre-dawn oil-bath worship (Naraka Chaturdashi).' },
+      { region: 'Gujarat & Marwari', note: 'Shrifal (coconut), sheera and sweets offered with the Chopda (new ledger) puja.' },
+      { region: 'Maharashtra', note: 'Faral — chakli, chivda, ladoo and karanji — offered to the deity.' },
+    ],
     attireByRegion: [
       { region: 'North India', note: 'New silk and brocade; women in red or gold sarees, lehengas or Anarkali suits, men in kurta-pyjama, sherwani or bandhgala. Gold jewellery is especially auspicious.' },
       { region: 'Maharashtra', note: 'Women in paithani or nauvari (nine-yard) sarees; men in kurta with a pheta (turban) or dhoti-kurta.' },
@@ -131,6 +140,12 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── HOLI ─────────────────────────────
   {
     slug: 'holi',
+    prasadByRegion: [
+      { region: 'Braj (Vrindavan)', note: 'Gujiya and gulal offered to the deity first; flower petals at the Phoolon ki Holi of Banke Bihari.' },
+      { region: 'North India', note: 'Thandai and gujiya offered; makhan-mishri to Krishna.' },
+      { region: 'Maharashtra', note: 'Puran poli offered as naivedya at Holika Dahan.' },
+      { region: 'Bengal (Dol)', note: 'Sweets and abir (coloured powder) offered to Radha-Krishna.' },
+    ],
     attireByRegion: [
       { region: 'Braj (UP) — Vrindavan, Mathura, Barsana', note: 'Old white kurta-pyjama or dhoti that shows the gulal vividly; for temple visits (Banke Bihari), modest white cotton.' },
       { region: 'North India (general)', note: 'Old light-coloured or white cotton clothes you can discard after; oil the skin and hair first so colour washes off.' },
@@ -204,6 +219,13 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── NAVARATRI / DURGA PUJA ───────────────────────
   {
     slug: 'navaratri-durga-puja',
+    prasadByRegion: [
+      { region: 'West Bengal', note: 'Anna/khichuri bhog with labra and payesh, cooked at the pandal and distributed to all.' },
+      { region: 'South India (Golu)', note: 'Sundal — nine varieties of spiced legumes, a different one each day — offered and shared.' },
+      { region: 'North India', note: 'The day’s bhog per the Navadurga form; halwa-puri-chana for the nine girls at Kanya Pujan.' },
+      { region: 'Gujarat', note: 'Prasad of the garbo and the day’s offering, shared after Garba.' },
+      { region: 'Maharashtra', note: 'Naivedya of the day — coconut and the Goddess’s favourite sweets.' },
+    ],
     attireByRegion: [
       { region: 'Gujarat', note: 'Chaniya choli for women (mirror-work, bandhani) and kediyu with kafni/dhoti for men, worn for Garba — often matching the nine daily colours of the Goddess.' },
       { region: 'West Bengal', note: 'New sarees each day of Puja; the red-bordered white garad/tant saree is iconic, especially for Sindoor Khela on Dashami, worn with white-and-red bangles.' },
@@ -427,6 +449,12 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KRISHNA JANMASHTAMI ───────────────────────
   {
     slug: 'krishna-janmashtami',
+    prasadByRegion: [
+      { region: 'Braj & North India', note: 'Dhaniya (coriander-seed) panjiri and makhan-mishri — the signature midnight prasad.' },
+      { region: 'Udupi & South India', note: 'Chakli, appam and the elaborate Chhappan Bhog.' },
+      { region: 'Maharashtra', note: 'Gopalkala — a mix of poha, curd and butter — shared after Dahi Handi.' },
+      { region: 'ISKCON & Vaishnava temples', note: 'Chhappan Bhog (56 items) and tulsi-laden charanamrit.' },
+    ],
     attireByRegion: [
       { region: 'Braj & North India', note: 'Yellow and peacock-blue/green honour Krishna; children dressed as baby Krishna (peacock feather, flute) and Radha.' },
       { region: 'Maharashtra (Dahi Handi)', note: 'Govinda teams in shorts and jerseys with saffron bandanas for the human-pyramid pot-breaking.' },
@@ -502,6 +530,12 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GANESH CHATURTHI ───────────────────────
   {
     slug: 'ganesh-chaturthi',
+    prasadByRegion: [
+      { region: 'Maharashtra', note: 'Ukadiche modak — steamed rice-flour dumplings with coconut-jaggery — 21 offered to Ganesha, plus puran poli.' },
+      { region: 'Goa (Chavath)', note: 'Nevri/karanji and modak, offered with the matoli canopy produce.' },
+      { region: 'Karnataka & Tamil Nadu', note: 'Kozhukattai (modak) and chana sundal.' },
+      { region: 'Telangana (Hyderabad)', note: 'Modak and the famous Khairatabad laddu.' },
+    ],
     attireByRegion: [
       { region: 'Maharashtra', note: 'The signature look — women in nauvari or paithani sarees, men in kurta with a saffron/red pheta (turban) or dhoti-kurta, for the dhol-tasha processions and visarjan.' },
       { region: 'Goa (Chavath)', note: 'Traditional Konkani wear — women in kunbi/kashti sarees — for the home-centred celebration.' },
@@ -716,6 +750,13 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── MAKAR SANKRANTI ───────────────────────
   {
     slug: 'makar-sankranti',
+    prasadByRegion: [
+      { region: 'Maharashtra', note: 'Til-gul ladoo (sesame-jaggery) offered to the deity and exchanged with “til-gul ghya, god-god bola”.' },
+      { region: 'Tamil Nadu (Pongal)', note: 'Sakkarai pongal — sweet jaggery rice cooked to overflow — offered to Surya.' },
+      { region: 'North India', note: 'Til-laddu and khichdi offered; sesame sweets given in charity.' },
+      { region: 'Gujarat', note: 'Chikki and til offered; undhiyu shared during Uttarayan.' },
+      { region: 'Bengal & Assam', note: 'Pithe / pitha (rice cakes with jaggery and coconut) and til-based sweets.' },
+    ],
     attireByRegion: [
       { region: 'Maharashtra', note: 'Women traditionally wear BLACK sarees on this one day — black absorbs the winter sun’s warmth and is considered auspicious only on Sankranti — with halwa (sugar-bead) jewellery.' },
       { region: 'Gujarat (Uttarayan)', note: 'Comfortable, bright casual wear for rooftop kite-flying all day; colourful cotton.' },
