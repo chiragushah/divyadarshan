@@ -2,6 +2,7 @@
 export const dynamic = 'force-dynamic'
 import { useState, useRef } from 'react'
 import Link from 'next/link'
+import { Bus, Car, Check, Flame, Flower2, HandHeart, Hotel, Lightbulb, Package, Plane, Ticket, TrainFront, UtensilsCrossed, Zap } from 'lucide-react'
 import { formatINR, finverseLink } from '@/lib/utils'
 
 // ── Base fallback costs (used before AI fetch) ────────────────────────────
@@ -73,10 +74,10 @@ export default function BudgetPage() {
       setCosts(data.costs)
       setIsLive(data.success)
       setFetchMsg(data.success
-        ? `✅ Live prices updated for ${form.destination}`
-        : `⚠️ ${data.error}`)
+        ? `Live prices updated for ${form.destination}`
+        : data.error)
     } catch {
-      setFetchMsg('⚠️ Could not fetch live prices. Using base estimates.')
+      setFetchMsg('Could not fetch live prices. Using base estimates.')
     } finally {
       setFetching(false)
     }
@@ -98,21 +99,21 @@ export default function BudgetPage() {
   const perPerson    = Math.round(total / form.pilgrims)
 
   const BREAKDOWN = [
-    { label: `Transport (${form.returnJourney ? 'return' : 'one-way'})`, amount: transport,  icon: '🚅' },
-    { label: `Stay (${form.days} nights)`,                                amount: stay,       icon: '🏨' },
-    { label: `Meals (${form.days} days)`,                                 amount: meals,      icon: '🍱' },
-    { label: 'Guide / Pandit fees',         amount: guide,    icon: '🙏', skip: !form.includeGuide     },
-    { label: 'Temple donations',            amount: donations,icon: '🪔', skip: !form.includeDonations },
-    { label: 'Pooja samagri & flowers',     amount: pooja,    icon: '🌸', skip: !form.includePooja     },
-    { label: 'VIP / Special darshan',       amount: special,  icon: '🎟️', skip: !form.includeSpecial  },
-    { label: 'Local travel + misc (12%)',   amount: misc,     icon: '📦' },
+    { label: `Transport (${form.returnJourney ? 'return' : 'one-way'})`, amount: transport,  icon: <TrainFront size={16} /> },
+    { label: `Stay (${form.days} nights)`,                                amount: stay,       icon: <Hotel size={16} /> },
+    { label: `Meals (${form.days} days)`,                                 amount: meals,      icon: <UtensilsCrossed size={16} /> },
+    { label: 'Guide / Pandit fees',         amount: guide,    icon: <HandHeart size={16} />, skip: !form.includeGuide     },
+    { label: 'Temple donations',            amount: donations,icon: <Flame size={16} />, skip: !form.includeDonations },
+    { label: 'Pooja samagri & flowers',     amount: pooja,    icon: <Flower2 size={16} />, skip: !form.includePooja     },
+    { label: 'VIP / Special darshan',       amount: special,  icon: <Ticket size={16} />, skip: !form.includeSpecial  },
+    { label: 'Local travel + misc (12%)',   amount: misc,     icon: <Package size={16} /> },
   ].filter(i => !i.skip && i.amount > 0)
 
   const monthsAt5k  = Math.ceil(total / 5000)
   const monthsAt10k = Math.ceil(total / 10000)
 
   const TRANSPORT_LABELS = { train: 'Train', flight: 'Flight', bus: 'Bus', car: 'Car' }
-  const TRANSPORT_ICONS  = { train: '🚅', flight: '✈️', bus: '🚌', car: '🚕' }
+  const TRANSPORT_ICONS: Record<string, React.ReactNode> = { train: <TrainFront size={15} />, flight: <Plane size={15} />, bus: <Bus size={15} />, car: <Car size={15} /> }
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-10">
@@ -125,7 +126,7 @@ export default function BudgetPage() {
       {/* Live price engine banner */}
       <div className="flex items-center gap-3 px-4 py-3 rounded-xl mb-8"
         style={{ background: isLive ? 'rgba(22,163,74,.08)' : 'rgba(192,87,10,.07)', border: `1.5px solid ${isLive ? 'rgba(22,163,74,.25)' : 'rgba(192,87,10,.2)'}` }}>
-        <span style={{ fontSize: 20 }}>{isLive ? '✅' : '⚡'}</span>
+        <span style={{ display: 'inline-flex', alignItems: 'center' }}>{isLive ? <Check size={20} color="#166534" /> : <Zap size={20} style={{ color: 'var(--saffron)' }} />}</span>
         <div className="flex-1">
           <div className="text-xs font-semibold" style={{ color: isLive ? '#166534' : 'var(--saffron)' }}>
             {isLive ? 'Live prices active' : 'Dynamic Cost Engine'}
@@ -146,7 +147,7 @@ export default function BudgetPage() {
           style={{ opacity: fetching ? .7 : 1 }}>
           {fetching
             ? <><span className="inline-block animate-spin">⟳</span> Fetching…</>
-            : '⚡ Get Live Prices'}
+            : <><Zap size={14} /> Get Live Prices</>}
         </button>
       </div>
 
@@ -154,7 +155,7 @@ export default function BudgetPage() {
       {costs.season && costs.notes && isLive && (
         <div className="px-4 py-3 rounded-xl mb-6 text-sm"
           style={{ background: 'rgba(234,179,8,.07)', border: '1px solid rgba(234,179,8,.2)', color: '#92400E' }}>
-          💡 <strong>Destination tip:</strong> {costs.notes}
+          <Lightbulb size={15} style={{ display: 'inline', verticalAlign: '-2px' }} /> <strong>Destination tip:</strong> {costs.notes}
         </div>
       )}
 
@@ -221,7 +222,7 @@ export default function BudgetPage() {
                       color:       form.transport === mode ? 'var(--crimson)' : 'var(--ink)',
                       fontWeight:  form.transport === mode ? '600' : '400',
                     }}>
-                    {TRANSPORT_ICONS[mode]} {TRANSPORT_LABELS[mode]}
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>{TRANSPORT_ICONS[mode]} {TRANSPORT_LABELS[mode]}</span>
                     <span className="block text-xs opacity-60">≈{formatINR(adj)}/person</span>
                   </button>
                 )
@@ -303,7 +304,7 @@ export default function BudgetPage() {
             style={{ background: 'linear-gradient(135deg, var(--crim-dk), var(--crimson))' }}>
             <div className="text-xs font-semibold tracking-widest uppercase mb-1"
               style={{ color: 'rgba(237,224,196,.5)' }}>
-              {isLive ? '⚡ Live Estimated Total' : 'Estimated Total'}
+              {isLive ? <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}><Zap size={12} /> Live Estimated Total</span> : 'Estimated Total'}
             </div>
             <div className="font-serif text-5xl font-medium" style={{ color: 'var(--gold-lt)' }}>
               {formatINR(total)}
@@ -323,7 +324,7 @@ export default function BudgetPage() {
               {BREAKDOWN.map(item => (
                 <div key={item.label} className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5 text-sm">
-                    <span className="text-base">{item.icon}</span>
+                    <span className="inline-flex items-center" style={{ color: 'var(--saffron)' }}>{item.icon}</span>
                     <span style={{ color: 'var(--muted)' }}>{item.label}</span>
                   </div>
                   <span className="font-medium text-sm" style={{ color: 'var(--ink)' }}>

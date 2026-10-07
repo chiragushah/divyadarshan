@@ -5,13 +5,14 @@ import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
 import TempleCard from '@/components/temple/TempleCard'
+import { CalendarDays, Flame, Landmark, Map, MapPin, Radio } from 'lucide-react'
 import type { Temple } from '@/types'
 
-const TABS = [
+const TABS: { id: string; icon?: React.ReactNode; label: string }[] = [
   { id: 'directory', label: 'All Temples' },
-  { id: 'darshan',   label: '🔴 Live Darshan' },
-  { id: 'nearby',    label: '📍 Nearby' },
-  { id: 'seasonal',  label: '📅 This Month' },
+  { id: 'darshan',   icon: <Radio size={15} />,       label: 'Live Darshan' },
+  { id: 'nearby',    icon: <MapPin size={15} />,      label: 'Nearby' },
+  { id: 'seasonal',  icon: <CalendarDays size={15} />, label: 'This Month' },
 ]
 
 const MONTH_FESTIVALS: Record<number, { festival: string; deities: string[]; states: string[]; desc: string }[]> = {
@@ -235,7 +236,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
               }}
               className="px-5 py-3.5 text-sm whitespace-nowrap border-b-2 transition-all"
               style={{ borderColor: activeTab===tab.id?'var(--crimson)':'transparent', color: activeTab===tab.id?'var(--crimson)':'var(--muted)', fontFamily:'var(--font-sans)', fontWeight: activeTab===tab.id?'600':'400' }}>
-              {tab.label}
+              <span style={{ display:'inline-flex', alignItems:'center', gap:6 }}>{tab.icon}{tab.label}</span>
             </button>
           ))}
         </div>
@@ -247,14 +248,14 @@ export default function ExploreClient({ initialTemples, total, page, states, act
           <div>
             {locLoading && (
               <div className="flex flex-col items-center justify-center py-20 gap-4">
-                <div style={{ fontSize: 40 }}>📍</div>
+                <MapPin size={40} style={{ color: 'var(--crimson)' }} />
                 <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>Finding sacred places near you…</p>
                 <p className="text-xs" style={{ color: 'var(--muted)' }}>Hindu temples · Jain temples · Gurudwaras · Buddhist sites</p>
               </div>
             )}
             {locationError && (
               <div className="card card-p text-center py-12">
-                <div style={{ fontSize: 40, marginBottom: 12 }}>🗺️</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 12 }}><Map size={40} style={{ color: 'var(--crimson)' }} /></div>
                 <p className="font-serif text-xl font-medium mb-2">Location access needed</p>
                 <p className="text-sm mb-4" style={{ color: 'var(--muted)' }}>{locationError}</p>
                 <button className="btn btn-primary" onClick={() => { setUserCoords(null); setNearbyTemples([]); setLocationError(''); setRetryKey(k => k+1) }}>Try Again</button>
@@ -264,7 +265,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
               <>
                 <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
                   <div className="flex items-center gap-2">
-                    <span style={{ fontSize: 20 }}>📍</span>
+                    <MapPin size={20} style={{ color: 'var(--crimson)' }} />
                     <div>
                       <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>
                         {visibleNearby.length} sacred places found
@@ -328,7 +329,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
 
                 {visibleNearby.length === 0 ? (
                   <div className="text-center py-16">
-                    <div style={{ fontSize: 40, marginBottom: 12 }}>🛕</div>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 12 }}><Landmark size={40} style={{ color: 'var(--muted2)' }} /></div>
                     <p className="text-sm" style={{ color: 'var(--muted2)' }}>
                       {nearbyType
                         ? `No ${nearbyType} temples within ${radiusKm}km. Try clearing the filter or widening the radius.`
@@ -350,7 +351,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
                                 className="w-full h-full object-cover"
                                 onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }} />
                             ) : (
-                              <div className="w-full h-full flex items-center justify-center" style={{ fontSize: 40 }}>🛕</div>
+                              <div className="w-full h-full flex items-center justify-center"><Landmark size={40} style={{ color: 'var(--saffron)' }} /></div>
                             )}
                             {temple._onWay && (
                               <span className="absolute top-2 left-2 px-2 py-0.5 rounded-full text-xs font-bold"
@@ -404,7 +405,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
             {monthFestivals.map((f, i) => (
               <div key={i} className="rounded-2xl p-5 mb-6 flex gap-4 items-start"
                 style={{ background:'linear-gradient(135deg,#FFF5F0,#FFF8F0)', border:'1.5px solid #FFD9B3' }}>
-                <div style={{ fontSize:36, flexShrink:0 }}>🪔</div>
+                <div style={{ flexShrink:0, display:'flex' }}><Flame size={32} style={{ color:'var(--saffron)' }} /></div>
                 <div>
                   <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color:'var(--saffron)' }}>
                     {new Date().toLocaleString('default',{month:'long'})} · Auspicious Occasion
@@ -460,7 +461,7 @@ export default function ExploreClient({ initialTemples, total, page, states, act
               <p className="text-sm" style={{ color:'var(--muted)' }}>
                 {activeFilters.category && <><strong style={{ color:'var(--crimson)' }}>{activeFilters.category}</strong> · </>}
                 {total.toLocaleString()} temples
-                {activeTab==='darshan' && <span className="ml-2" style={{ color:'var(--live)' }}>🔴 Live only</span>}
+                {activeTab==='darshan' && <span className="ml-2" style={{ color:'var(--live)', display:'inline-flex', alignItems:'center', gap:4 }}><Radio size={13} /> Live only</span>}
               </p>
               {activeFilters.category && (
                 <button onClick={()=>update('category','')} className="text-xs" style={{ color:'var(--crimson)' }}>Clear filter x</button>

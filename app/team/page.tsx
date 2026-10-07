@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { MapPin } from 'lucide-react'
 export const metadata: Metadata = { title: 'Our Team | DivyaDarshanam' }
 
 const TEAM = [
@@ -44,7 +45,7 @@ export default function TeamPage() {
                 <h3 style={{fontFamily:"'Playfair Display',serif",fontSize:'1.2rem',fontWeight:700,color:'#1A0A00',marginBottom:4}}>{t.name}</h3>
                 <p style={{fontSize:12,fontWeight:700,color:'#C0570A',marginBottom:8,textTransform:'uppercase',letterSpacing:'.08em'}}>{t.role}</p>
                 <p style={{fontSize:14,color:'#6B5B4E',lineHeight:1.7,marginBottom:6}}>{t.desc}</p>
-                <p style={{fontSize:12,color:'#A89B8C'}}>📍 {t.loc}</p>
+                <p style={{fontSize:12,color:'#A89B8C',display:'flex',alignItems:'center',gap:5}}><MapPin size={13}/> {t.loc}</p>
               </div>
             </div>
           ))}

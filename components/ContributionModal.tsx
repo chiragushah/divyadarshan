@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useSession } from 'next-auth/react'
-import { X, Heart, Users, MapPin, Phone, ChevronRight } from 'lucide-react'
+import { BarChart3, Bell, ChevronRight, HandHeart, Heart, Landmark, Laptop, Map, MapPin, Medal, Phone, Trophy, Users, X } from 'lucide-react'
 
 const AMOUNTS = [5000, 10000, 25000, 50000, 100000]
 const INTERESTS = [
@@ -15,12 +15,12 @@ const INTERESTS = [
 ]
 
 const BENEFITS = [
-  { icon: '🏆', title: 'Temple Explorer Partner', desc: 'Credited on our contributors page permanently' },
-  { icon: '🔔', title: 'Early Access', desc: 'First access to all new features before public launch' },
-  { icon: '🎖️', title: 'Partner Badge', desc: 'Special Partner badge on your DivyaDarshanam profile' },
-  { icon: '📞', title: 'Priority Support', desc: 'Direct access to our team for any help you need' },
-  { icon: '📊', title: 'Impact Reports', desc: 'Quarterly reports on how your contribution is being used' },
-  { icon: '🛕', title: 'Special Programs', desc: 'Exclusive partner-only yatra programs and experiences' },
+  { icon: <Trophy size={22}/>, title: 'Temple Explorer Partner', desc: 'Credited on our contributors page permanently' },
+  { icon: <Bell size={22}/>, title: 'Early Access', desc: 'First access to all new features before public launch' },
+  { icon: <Medal size={22}/>, title: 'Partner Badge', desc: 'Special Partner badge on your DivyaDarshanam profile' },
+  { icon: <Phone size={22}/>, title: 'Priority Support', desc: 'Direct access to our team for any help you need' },
+  { icon: <BarChart3 size={22}/>, title: 'Impact Reports', desc: 'Quarterly reports on how your contribution is being used' },
+  { icon: <Landmark size={22}/>, title: 'Special Programs', desc: 'Exclusive partner-only yatra programs and experiences' },
 ]
 
 export default function ContributionModal({ onClose }: { onClose: () => void }) {
@@ -74,8 +74,8 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
   if (step === 'success') return (
     <div style={overlay} onClick={onClose}>
       <div style={{ background:'white', borderRadius:20, padding:40, maxWidth:480, width:'100%', textAlign:'center' }} onClick={e => e.stopPropagation()}>
-        <div style={{ fontSize:64, marginBottom:16 }}>🙏</div>
-        <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:26, color:'#8B1A1A', marginBottom:12 }}>Thank You for Donating Wisely! 🙏</h2>
+        <div style={{ marginBottom:16, display:'flex', justifyContent:'center', color:'#8B1A1A' }}><HandHeart size={56}/></div>
+        <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:26, color:'#8B1A1A', marginBottom:12, display:'inline-flex', alignItems:'center', gap:8 }}>Thank You for Donating Wisely! <HandHeart size={24}/></h2>
         <p style={{ color:'#6B5B4E', lineHeight:1.7, marginBottom:8 }}>
           We've received your interest in contributing <strong style={{ color:'#8B1A1A' }}>{fmtINR(finalAmount)}</strong> to DivyaDarshanam's mission.
         </p>
@@ -126,13 +126,13 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
                 <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:16, color:'#8B1A1A', marginBottom:12 }}>Where Every Rupee Goes</h3>
                 <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
                   {[
-                    { icon:'🛕', title:'Temple Volunteers', desc:'Hire people to verify, enrich and add new temple data across India' },
-                    { icon:'👴', title:'Old Age Home Collaboration', desc:'Partner with seniors to provide warm, knowledgeable pilgrim support' },
-                    { icon:'🗺️', title:'More Temples', desc:'Expand our database from 370 to 5,000+ temples across every state' },
-                    { icon:'💻', title:'Better Technology', desc:'Faster AI, better images, mobile app and offline access for pilgrims' },
+                    { icon:<Landmark size={24}/>, title:'Temple Volunteers', desc:'Hire people to verify, enrich and add new temple data across India' },
+                    { icon:<Users size={24}/>, title:'Old Age Home Collaboration', desc:'Partner with seniors to provide warm, knowledgeable pilgrim support' },
+                    { icon:<Map size={24}/>, title:'More Temples', desc:'Expand our database from 370 to 5,000+ temples across every state' },
+                    { icon:<Laptop size={24}/>, title:'Better Technology', desc:'Faster AI, better images, mobile app and offline access for pilgrims' },
                   ].map(item => (
                     <div key={item.title} style={{ display:'flex', gap:10, alignItems:'flex-start' }}>
-                      <span style={{ fontSize:24, flexShrink:0 }}>{item.icon}</span>
+                      <span style={{ flexShrink:0, display:'inline-flex', color:'#C0570A' }}>{item.icon}</span>
                       <div>
                         <div style={{ fontSize:13, fontWeight:600, color:'#1A0A00', marginBottom:2 }}>{item.title}</div>
                         <div style={{ fontSize:12, color:'#6B5B4E', lineHeight:1.5 }}>{item.desc}</div>
@@ -147,7 +147,7 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:10, marginBottom:24 }}>
                 {BENEFITS.map(b => (
                   <div key={b.title} style={{ background:'#F8F4EE', borderRadius:10, padding:14, border:'1px solid #E8E0D4' }}>
-                    <div style={{ fontSize:22, marginBottom:6 }}>{b.icon}</div>
+                    <div style={{ marginBottom:6, display:'flex', color:'#8B1A1A' }}>{b.icon}</div>
                     <div style={{ fontSize:12, fontWeight:600, color:'#1A0A00', marginBottom:3 }}>{b.title}</div>
                     <div style={{ fontSize:11, color:'#6B5B4E', lineHeight:1.5 }}>{b.desc}</div>
                   </div>
@@ -160,7 +160,7 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
               </div>
 
               <button onClick={() => setStep('form')} style={{ width:'100%', background:'#8B1A1A', color:'white', border:'none', borderRadius:12, padding:'15px 0', fontWeight:700, fontSize:16, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', gap:8 }}>
-                💛 Yes, I Want to Contribute →
+                <Heart size={16}/> Yes, I Want to Contribute →
               </button>
             </div>
           )}
@@ -240,7 +240,7 @@ export default function ContributionModal({ onClose }: { onClose: () => void }) 
                   borderRadius:10, padding:'14px 0', fontWeight:700, fontSize:15, cursor: loading ? 'not-allowed' : 'pointer',
                   display:'flex', alignItems:'center', justifyContent:'center', gap:8
                 }}>
-                  💛
+                  <Heart size={16}/>
                   {loading ? 'Submitting…' : `Contribute ${fmtINR(finalAmount)}`}
                 </button>
               </div>

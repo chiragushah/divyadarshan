@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { Eye, Flag, HandHeart, Heart, Landmark } from 'lucide-react'
 export const metadata: Metadata = { title: 'About Us | DivyaDarshanam' }
 
 export default function AboutPage() {
@@ -30,27 +31,27 @@ export default function AboutPage() {
 
         <div className="grid">
           <div className="card">
-            <h3>🏛️ Our Mission</h3>
+            <h3 style={{display:'flex',alignItems:'center',gap:8}}><Landmark size={20} color="#C0570A"/> Our Mission</h3>
             <p>To make every sacred temple in India accessible, discoverable and plannable for every pilgrim — regardless of language, age or tech ability.</p>
           </div>
           <div className="card">
-            <h3>👁️ Our Vision</h3>
+            <h3 style={{display:'flex',alignItems:'center',gap:8}}><Eye size={20} color="#C0570A"/> Our Vision</h3>
             <p>A world where every Indian can plan, experience and share their spiritual journey with ease — digitally connected to their roots.</p>
           </div>
           <div className="card">
-            <h3>🙏 Our Values</h3>
+            <h3 style={{display:'flex',alignItems:'center',gap:8}}><HandHeart size={20} color="#C0570A"/> Our Values</h3>
             <p>Authentic, accurate, free forever. We serve pilgrims — not advertisers. Every feature is built around what a real pilgrim needs.</p>
           </div>
           <div className="card">
-            <h3>🛕 What We Built</h3>
+            <h3 style={{display:'flex',alignItems:'center',gap:8}}><Landmark size={20} color="#C0570A"/> What We Built</h3>
             <p>422+ verified temples, AI yatra planner, live darshan streams, Navagraha shanti guide, pilgrimage journal, group yatra tools and savings goals.</p>
           </div>
           <div className="card">
-            <h3>🇳🇳 Made in India</h3>
+            <h3 style={{display:'flex',alignItems:'center',gap:8}}><Flag size={20} color="#C0570A"/> Made in India</h3>
             <p>Conceived, designed and built in Pune by Dynaimers Consulting — a team passionate about Indian culture, technology and spirituality.</p>
           </div>
           <div className="card">
-            <h3>♥️ Free Forever</h3>
+            <h3 style={{display:'flex',alignItems:'center',gap:8}}><Heart size={20} color="#C0570A"/> Free Forever</h3>
             <p>DivyaDarshanam will always be free for pilgrims. We believe access to sacred knowledge is a right, not a privilege.</p>
           </div>
         </div>

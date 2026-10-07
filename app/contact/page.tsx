@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import { Check, Mail, MapPin } from 'lucide-react'
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
@@ -49,7 +50,7 @@ export default function ContactPage() {
 
         {status === 'sent' ? (
           <div style={{background:'#F0FDF4',border:'1.5px solid rgba(34,197,94,0.3)',borderRadius:16,padding:32,textAlign:'center'}}>
-            <div style={{fontSize:40,marginBottom:12}}>✅</div>
+            <div style={{marginBottom:12}}><Check size={36} color="#16a34a"/></div>
             <h3 style={{fontFamily:"'Playfair Display',serif",fontSize:'1.4rem',color:'#166534',marginBottom:8}}>Message Sent!</h3>
             <p style={{color:'#166534'}}>Thank you for reaching out. We will get back to you within 24 hours.</p>
           </div>
@@ -84,11 +85,11 @@ export default function ContactPage() {
 
         <div style={{marginTop:48,display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}}>
           <div style={{background:'#FFF5F0',border:'1.5px solid #FFD4B8',borderRadius:12,padding:20}}>
-            <p style={{fontWeight:700,color:'#8B1A1A',marginBottom:4}}>📧 Email</p>
+            <p style={{fontWeight:700,color:'#8B1A1A',marginBottom:4,display:'flex',alignItems:'center',gap:6}}><Mail size={16}/> Email</p>
             <p style={{fontSize:14,color:'#6B5B4E'}}>chirag@dynaimers.com</p>
           </div>
           <div style={{background:'#FFF5F0',border:'1.5px solid #FFD4B8',borderRadius:12,padding:20}}>
-            <p style={{fontWeight:700,color:'#8B1A1A',marginBottom:4}}>📍 Location</p>
+            <p style={{fontWeight:700,color:'#8B1A1A',marginBottom:4,display:'flex',alignItems:'center',gap:6}}><MapPin size={16}/> Location</p>
             <p style={{fontSize:14,color:'#6B5B4E'}}>Pune, Maharashtra, India</p>
           </div>
         </div>

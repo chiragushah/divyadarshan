@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { Check, FileText, HandHeart, Landmark, Pencil, Phone, Plane, Smartphone, User, X } from 'lucide-react'
 import { downloadPlanAsPDF, downloadPlanAsWord } from '@/lib/export/planExport'
 
 interface PlanActionBarProps {
@@ -69,9 +70,9 @@ function WAModal({ itinerary, form, onClose }: { itinerary: string; form: PlanAc
         {/* Preview */}
         <div style={{ background: '#f0fdf4', border: '1.5px solid #86efac', borderRadius: 12, padding: 14, marginBottom: 20, fontSize: 13, lineHeight: 1.7 }}>
           <div style={{ fontSize: 10, fontWeight: 700, color: '#166534', marginBottom: 6, letterSpacing: '0.08em' }}>PREVIEW</div>
-          🛕 <strong>My Yatra Plan — {form.to}</strong><br />
-          ✈️ {form.from} → {form.to} | {form.days}d | {form.pilgrims} pilgrim{form.pilgrims > 1 ? 's' : ''}<br />
-          📱 divyadarshan-psi.vercel.app 🙏
+          <Landmark size={14} style={{ verticalAlign: '-2px' }}/> <strong>My Yatra Plan — {form.to}</strong><br />
+          <Plane size={14} style={{ verticalAlign: '-2px' }}/> {form.from} → {form.to} | {form.days}d | {form.pilgrims} pilgrim{form.pilgrims > 1 ? 's' : ''}<br />
+          <Smartphone size={14} style={{ verticalAlign: '-2px' }}/> divyadarshan-psi.vercel.app <HandHeart size={14} style={{ verticalAlign: '-2px' }}/>
         </div>
 
         {/* Tabs */}
@@ -84,7 +85,9 @@ function WAModal({ itinerary, form, onClose }: { itinerary: string; form: PlanAc
               fontWeight: tab === t ? 600 : 500, fontSize: 13,
               boxShadow: tab === t ? '0 1px 4px rgba(0,0,0,0.1)' : 'none',
             }}>
-              {t === 'open' ? '📲 Open WhatsApp' : '📞 Send to Number'}
+              {t === 'open'
+                ? <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, justifyContent: 'center' }}><Smartphone size={14}/> Open WhatsApp</span>
+                : <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, justifyContent: 'center' }}><Phone size={14}/> Send to Number</span>}
             </button>
           ))}
         </div>
@@ -185,11 +188,11 @@ export default function PlanActionBar({ itinerary, form }: PlanActionBarProps) {
         <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--muted2)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Export & Share:</span>
 
         <button onClick={handlePDF} disabled={loadingPDF} style={btn('var(--crimson)', 'white', loadingPDF)}>
-          📄 {loadingPDF ? 'Generating…' : 'Download PDF'}
+          <FileText size={15}/> {loadingPDF ? 'Generating…' : 'Download PDF'}
         </button>
 
         <button onClick={handleWord} disabled={loadingWord} style={btn('#1B5E20', 'white', loadingWord)}>
-          📝 {loadingWord ? 'Generating…' : 'Download Word'}
+          <Pencil size={15}/> {loadingWord ? 'Generating…' : 'Download Word'}
         </button>
 
         <button onClick={() => setShowWA(true)} style={btn('#25D366')}>
@@ -198,7 +201,7 @@ export default function PlanActionBar({ itinerary, form }: PlanActionBarProps) {
         </button>
 
         <button onClick={() => setShowShare(!showShare)} style={btn('var(--ivory2)', 'var(--ink)')}>
-          👤 Share with Pilgrim
+          <User size={15}/> Share with Pilgrim
         </button>
       </div>
 
@@ -212,8 +215,8 @@ export default function PlanActionBar({ itinerary, form }: PlanActionBarProps) {
           <button onClick={handleShare} disabled={shareStatus === 'loading' || !shareEmail} style={btn('var(--crimson)', 'white', shareStatus === 'loading' || !shareEmail)}>
             {shareStatus === 'loading' ? 'Sharing…' : 'Send Plan'}
           </button>
-          {shareStatus === 'success' && <p style={{ color: 'green', fontSize: 13, marginTop: 8 }}>✅ {shareResult}</p>}
-          {shareStatus === 'error' && <p style={{ color: 'red', fontSize: 13, marginTop: 8 }}>❌ {shareResult}</p>}
+          {shareStatus === 'success' && <p style={{ color: 'green', fontSize: 13, marginTop: 8, display: 'flex', alignItems: 'center', gap: 6 }}><Check size={14}/> {shareResult}</p>}
+          {shareStatus === 'error' && <p style={{ color: 'red', fontSize: 13, marginTop: 8, display: 'flex', alignItems: 'center', gap: 6 }}><X size={14}/> {shareResult}</p>}
         </div>
       )}
 

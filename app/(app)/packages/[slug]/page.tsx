@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
-import { Loader2, MapPin, Clock, Users, ChevronRight, Check, X, Phone, Mail } from 'lucide-react'
+import { Check, ChevronRight, Clock, HandHeart, Landmark, Loader2, Mail, MapPin, Phone, Star, Users, X } from 'lucide-react'
 
 export default function PackageDetailPage() {
   const { slug } = useParams()
@@ -51,7 +51,7 @@ export default function PackageDetailPage() {
             {pkg.image_url && <img src={pkg.image_url} alt={pkg.title} className="w-full h-full object-cover" />}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
-              {pkg.is_featured && <span className="text-xs font-bold px-2 py-0.5 rounded mb-2 inline-block" style={{ background: 'var(--gold-lt)', color: 'var(--crimson)' }}>⭐ Featured Package</span>}
+              {pkg.is_featured && <span className="text-xs font-bold px-2 py-0.5 rounded mb-2 inline-flex items-center gap-1" style={{ background: 'var(--gold-lt)', color: 'var(--crimson)' }}><Star size={12} /> Featured Package</span>}
               <h1 className="font-serif text-3xl font-medium text-white">{pkg.title}</h1>
               <p className="text-sm mt-1" style={{ color: 'rgba(237,224,196,.8)' }}>{pkg.subtitle}</p>
             </div>
@@ -80,7 +80,7 @@ export default function PackageDetailPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {pkg.highlights.map((h: string, i: number) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="text-lg mt-0.5">🛕</span>
+                    <Landmark size={18} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--saffron)' }} />
                     <span className="text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>{h}</span>
                   </div>
                 ))}
@@ -110,7 +110,7 @@ export default function PackageDetailPage() {
                 {pkg.itinerary[activeDay]?.temples?.length > 0 && (
                   <div className="flex flex-wrap gap-2 mt-3">
                     {pkg.itinerary[activeDay].temples.map((t: string) => (
-                      <span key={t} className="text-xs px-2 py-1 rounded" style={{ background: 'var(--saffron-pale)', color: 'var(--saffron)' }}>🛕 {t}</span>
+                      <span key={t} className="text-xs px-2 py-1 rounded inline-flex items-center gap-1" style={{ background: 'var(--saffron-pale)', color: 'var(--saffron)' }}><Landmark size={12} /> {t}</span>
                     ))}
                   </div>
                 )}
@@ -122,7 +122,7 @@ export default function PackageDetailPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {pkg.inclusions?.length > 0 && (
               <div>
-                <h3 className="font-serif text-lg font-medium mb-3">✅ Inclusions</h3>
+                <h3 className="font-serif text-lg font-medium mb-3 flex items-center gap-1.5"><Check size={18} style={{ color: '#16a34a' }} /> Inclusions</h3>
                 <ul className="space-y-2">
                   {pkg.inclusions.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-2 text-sm" style={{ color: 'var(--muted)' }}>
@@ -134,7 +134,7 @@ export default function PackageDetailPage() {
             )}
             {pkg.exclusions?.length > 0 && (
               <div>
-                <h3 className="font-serif text-lg font-medium mb-3">❌ Exclusions</h3>
+                <h3 className="font-serif text-lg font-medium mb-3 flex items-center gap-1.5"><X size={18} style={{ color: '#dc2626' }} /> Exclusions</h3>
                 <ul className="space-y-2">
                   {pkg.exclusions.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-2 text-sm" style={{ color: 'var(--muted)' }}>
@@ -155,11 +155,11 @@ export default function PackageDetailPage() {
 
             {submitted ? (
               <div className="text-center py-6">
-                <div className="text-4xl mb-3">🙏</div>
+                <div className="mb-3"><HandHeart size={32} style={{ display: 'inline-block', color: 'var(--crimson)' }} /></div>
                 <h3 className="font-serif text-xl font-medium mb-2">Enquiry Received!</h3>
                 <p className="text-sm" style={{ color: 'var(--muted)' }}>We will call you within 24 hours. Check your email for confirmation.</p>
-                <div className="mt-4 p-3 rounded-lg text-sm" style={{ background: 'var(--sandstone)', color: 'var(--muted)' }}>
-                  📞 For urgent queries: <strong>+91 98765 43210</strong>
+                <div className="mt-4 p-3 rounded-lg text-sm flex items-center justify-center gap-1.5" style={{ background: 'var(--sandstone)', color: 'var(--muted)' }}>
+                  <Phone size={14} /> For urgent queries: <strong>+91 98765 43210</strong>
                 </div>
               </div>
             ) : (
@@ -202,7 +202,7 @@ export default function PackageDetailPage() {
                 </div>
                 <button type="submit" disabled={submitting}
                   className="btn btn-primary w-full justify-center">
-                  {submitting ? <><Loader2 size={14} className="animate-spin" /> Sending...</> : '🙏 Send Enquiry'}
+                  {submitting ? <><Loader2 size={14} className="animate-spin" /> Sending...</> : <><HandHeart size={14} /> Send Enquiry</>}
                 </button>
                 <p className="text-center text-xs" style={{ color: 'var(--muted2)' }}>
                   We respond within 24 hours via WhatsApp & Email

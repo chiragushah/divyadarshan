@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Loader2 } from 'lucide-react'
+import { HandHeart, Loader2 } from 'lucide-react'
 import Link from 'next/link'
 
 export default function CustomPackagePage() {
@@ -22,7 +22,7 @@ export default function CustomPackagePage() {
 
   if (submitted) return (
     <div className="max-w-lg mx-auto px-6 py-20 text-center">
-      <div className="text-5xl mb-4">🙏</div>
+      <div className="mb-4"><HandHeart size={40} style={{ display: 'inline-block', color: 'var(--crimson)' }} /></div>
       <h2 className="font-serif text-3xl font-medium mb-3">Request Received!</h2>
       <p className="mb-6" style={{ color:'var(--muted)' }}>Our yatra expert will call you within 24 hours on your WhatsApp number.</p>
       <Link href="/packages" className="btn btn-primary">View All Packages</Link>
@@ -82,7 +82,7 @@ export default function CustomPackagePage() {
             className="input w-full resize-none" />
         </div>
         <button type="submit" disabled={submitting} className="btn btn-primary w-full justify-center">
-          {submitting ? <><Loader2 size={14} className="animate-spin" /> Sending...</> : '🙏 Request Custom Yatra'}
+          {submitting ? <><Loader2 size={14} className="animate-spin" /> Sending...</> : <><HandHeart size={14} /> Request Custom Yatra</>}
         </button>
         <p className="text-center text-xs" style={{ color:'var(--muted2)' }}>We respond within 24 hours via WhatsApp & Email</p>
       </form>

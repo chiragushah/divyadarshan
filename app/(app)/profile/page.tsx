@@ -4,7 +4,7 @@ export const dynamic = 'force-dynamic'
 import { useState, useEffect } from 'react'
 import { useSession, signOut } from 'next-auth/react'
 import Link from 'next/link'
-import { Loader2, MapPin, Star, BookOpen, Target, LogOut, Camera, TrendingUp } from 'lucide-react'
+import { Loader2, MapPin, Star, BookOpen, Target, LogOut, Camera, TrendingUp, Bot, CalendarDays, Flame, HandHeart, Landmark, Map, Medal, PartyPopper, Sparkles, Wallet } from 'lucide-react'
 import { finverseLink } from '@/lib/utils'
 
 interface VisitedTemple {
@@ -99,7 +99,7 @@ export default function ProfilePage() {
   if (status === 'unauthenticated') {
     return (
       <div className="max-w-lg mx-auto px-6 py-20 text-center">
-        <div className="text-5xl mb-4">🙏</div>
+        <div className="flex justify-center mb-4"><HandHeart size={48} style={{ color: 'var(--crimson)' }} /></div>
         <h1 className="font-serif text-3xl font-medium mb-3">Your Yatra Profile</h1>
         <p className="text-sm mb-6" style={{ color: 'var(--muted)' }}>
           Sign in to track your temple visits, save goals and get personalised recommendations.
@@ -120,9 +120,9 @@ export default function ProfilePage() {
   const initials = user?.name?.split(' ').map(n => n[0]).join('').slice(0,2).toUpperCase() || 'YA'
 
   const TABS = [
-    { id: 'visited',         label: '🛕 Temples Visited', count: visits.length },
-    { id: 'recommendations', label: '✨ For You',          count: recommendations.length },
-    { id: 'goals',           label: '💰 Savings Goals',   count: goals.length },
+    { id: 'visited',         icon: <Landmark size={16} />, label: 'Temples Visited', count: visits.length },
+    { id: 'recommendations', icon: <Sparkles size={16} />, label: 'For You',          count: recommendations.length },
+    { id: 'goals',           icon: <Wallet size={16} />,   label: 'Savings Goals',   count: goals.length },
   ] as const
 
   return (
@@ -170,8 +170,8 @@ export default function ProfilePage() {
               <p style={{ fontSize: 13, color: 'rgba(237,224,196,.5)' }}>{user?.email}</p>
               {visits.length > 0 && (
                 <div className="mt-2 flex items-center gap-1.5">
-                  <span style={{ fontSize: 12, color: 'var(--gold-lt)', fontWeight: 600 }}>
-                    🏅 {visits.length >= 50 ? 'Yatra Master' : visits.length >= 20 ? 'Seasoned Pilgrim' : visits.length >= 10 ? 'Devoted Pilgrim' : visits.length >= 5 ? 'Temple Seeker' : 'Yatra Beginner'}
+                  <span style={{ fontSize: 12, color: 'var(--gold-lt)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: 5 }}>
+                    <Medal size={13} /> {visits.length >= 50 ? 'Yatra Master' : visits.length >= 20 ? 'Seasoned Pilgrim' : visits.length >= 10 ? 'Devoted Pilgrim' : visits.length >= 5 ? 'Temple Seeker' : 'Yatra Beginner'}
                   </span>
                 </div>
               )}
@@ -186,14 +186,14 @@ export default function ProfilePage() {
           {/* Stats row */}
           <div className="grid grid-cols-4 gap-3 mt-5">
             {[
-              { label: 'Temples', value: visits.length, icon: '🛕' },
-              { label: 'States',  value: statesVisited.length,  icon: '🗺️' },
-              { label: 'Deities', value: deitiesVisited.length, icon: '🪔' },
-              { label: 'Goals',   value: goals.length,          icon: '💰' },
+              { label: 'Temples', value: visits.length, icon: <Landmark size={20} /> },
+              { label: 'States',  value: statesVisited.length,  icon: <Map size={20} /> },
+              { label: 'Deities', value: deitiesVisited.length, icon: <Flame size={20} /> },
+              { label: 'Goals',   value: goals.length,          icon: <Wallet size={20} /> },
             ].map(stat => (
               <div key={stat.label} className="text-center rounded-2xl p-3"
                 style={{ background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.08)' }}>
-                <div style={{ fontSize: 20, marginBottom: 2 }}>{stat.icon}</div>
+                <div style={{ marginBottom: 2, color: 'var(--gold-lt)', display: 'flex', justifyContent: 'center' }}>{stat.icon}</div>
                 <div className="font-serif text-2xl font-medium" style={{ color: 'var(--gold-lt)' }}>
                   {stat.value}
                 </div>
@@ -208,7 +208,7 @@ export default function ProfilePage() {
           {totalTarget > 0 && (
             <div className="mt-4 p-3 rounded-xl" style={{ background: 'rgba(255,255,255,.05)', border: '1px solid rgba(255,255,255,.08)' }}>
               <div className="flex justify-between text-xs mb-2" style={{ color: 'rgba(237,224,196,.6)' }}>
-                <span>💰 Total Yatra Savings</span>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><Wallet size={13} /> Total Yatra Savings</span>
                 <span>{savingsPct}% of ₹{totalTarget.toLocaleString('en-IN')}</span>
               </div>
               <div className="h-1.5 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,.1)' }}>
@@ -249,7 +249,7 @@ export default function ProfilePage() {
               color: activeTab === tab.id ? 'var(--crimson)' : 'var(--muted)',
               fontWeight: activeTab === tab.id ? '600' : '400',
             }}>
-            {tab.label}
+            {tab.icon}{tab.label}
             {tab.count > 0 && (
               <span className="text-xs px-1.5 py-0.5 rounded-full"
                 style={{ background: activeTab === tab.id ? 'rgba(192,87,10,.1)' : 'var(--ivory2)', color: activeTab === tab.id ? 'var(--crimson)' : 'var(--muted2)' }}>
@@ -271,7 +271,7 @@ export default function ProfilePage() {
             <div>
               {visits.length === 0 ? (
                 <div className="text-center py-16">
-                  <div className="text-5xl mb-4">🛕</div>
+                  <div className="flex justify-center mb-4"><Landmark size={48} style={{ color: 'var(--crimson)' }} /></div>
                   <h3 className="font-serif text-2xl font-medium mb-2">No temples visited yet</h3>
                   <p className="text-sm mb-6" style={{ color: 'var(--muted)' }}>
                     Mark temples as visited from their detail pages to track your yatra journey.
@@ -291,7 +291,7 @@ export default function ProfilePage() {
                             <img src={temple.image_url} alt={temple.name}
                               style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} />
                           ) : (
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', fontSize: 28 }}>🛕</div>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}><Landmark size={28} color="rgba(255,255,255,0.85)" /></div>
                           )}
                           <div style={{ position: 'absolute', top: 6, left: 6, background: 'rgba(22,163,74,.9)', borderRadius: 20, padding: '2px 6px', fontSize: 9, fontWeight: 700, color: 'white' }}>
                             ✓ Visited
@@ -306,8 +306,8 @@ export default function ProfilePage() {
                             {temple.deity} · {temple.city}, {temple.state}
                           </p>
                           {visit?.visited_at && (
-                            <p className="text-xs" style={{ color: 'var(--muted2)' }}>
-                              📅 {new Date(visit.visited_at).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' })}
+                            <p className="text-xs" style={{ color: 'var(--muted2)', display: 'inline-flex', alignItems: 'center', gap: 5 }}>
+                              <CalendarDays size={11} /> {new Date(visit.visited_at).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' })}
                             </p>
                           )}
                           {temple.rating_avg && temple.rating_avg > 0 ? (
@@ -351,7 +351,7 @@ export default function ProfilePage() {
                         <img src={temple.image_url} alt={temple.name}
                           style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} />
                       ) : (
-                        <span style={{ fontSize: 32, opacity: .3 }}>🛕</span>
+                        <Landmark size={30} color="#fff" style={{ opacity: .3 }} />
                       )}
                       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,.5), transparent)' }} />
                       {temple.rating_avg && temple.rating_avg > 0 ? (
@@ -377,7 +377,7 @@ export default function ProfilePage() {
 
               <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="card card-p" style={{ background: 'linear-gradient(135deg, var(--crimson), #4a0a0a)', color: 'white' }}>
-                  <div style={{ fontSize: 24, marginBottom: 8 }}>🤖</div>
+                  <div style={{ marginBottom: 8 }}><Bot size={24} color="#fff" /></div>
                   <h3 className="font-serif text-lg font-medium mb-1">Plan a New Yatra</h3>
                   <p style={{ fontSize: 12, opacity: .7, marginBottom: 12 }}>
                     Get a personalised AI itinerary for your next pilgrimage
@@ -388,7 +388,7 @@ export default function ProfilePage() {
                   </Link>
                 </div>
                 <div className="card card-p">
-                  <div style={{ fontSize: 24, marginBottom: 8 }}>💰</div>
+                  <div style={{ marginBottom: 8 }}><Wallet size={24} style={{ color: 'var(--crimson)' }} /></div>
                   <h3 className="font-serif text-lg font-medium mb-1">Start Saving</h3>
                   <p className="text-sm mb-3" style={{ color: 'var(--muted)' }}>
                     Set a savings goal for your next yatra and track monthly progress
@@ -406,7 +406,7 @@ export default function ProfilePage() {
             <div>
               {goals.length === 0 ? (
                 <div className="text-center py-16">
-                  <div className="text-5xl mb-4">💰</div>
+                  <div className="flex justify-center mb-4"><Wallet size={48} style={{ color: 'var(--crimson)' }} /></div>
                   <h3 className="font-serif text-2xl font-medium mb-2">No savings goals yet</h3>
                   <p className="text-sm mb-6" style={{ color: 'var(--muted)' }}>
                     Set a monthly savings goal for your next pilgrimage.
@@ -427,7 +427,7 @@ export default function ProfilePage() {
                               ₹{goal.current_amount.toLocaleString('en-IN')} saved of ₹{goal.target_amount.toLocaleString('en-IN')}
                             </p>
                           </div>
-                          {pct >= 100 && <span className="badge-gold text-[10px]">🎉 Ready!</span>}
+                          {pct >= 100 && <span className="badge-gold text-[10px]" style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}><PartyPopper size={11} /> Ready!</span>}
                         </div>
                         <div className="h-2 rounded-full overflow-hidden mb-2" style={{ background: 'var(--ivory3)' }}>
                           <div className="h-full rounded-full transition-all duration-700"

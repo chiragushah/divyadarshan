@@ -3,7 +3,7 @@ export const dynamic = 'force-dynamic'
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { Plus, Trash2, Share2, Users } from 'lucide-react'
+import { PartyPopper, Plus, Share2, Trash2, Users } from 'lucide-react'
 import { formatINR, calculateSettlements } from '@/lib/utils'
 import type { GroupSplit, Expense } from '@/types'
 
@@ -99,7 +99,7 @@ export default function SplitPage() {
   if (status === 'unauthenticated') {
     return (
       <div className="max-w-lg mx-auto px-6 py-20 text-center">
-        <div className="text-5xl mb-4">👥</div>
+        <div className="mb-4"><Users size={40} style={{ display: 'inline-block', color: 'var(--crimson)' }} /></div>
         <h1 className="font-serif text-3xl font-medium mb-3">Group Yatra Split</h1>
         <p className="text-sm mb-6" style={{ color: 'var(--muted)' }}>Sign in to track group expenses and split costs fairly.</p>
         <Link href="/auth/signin" className="btn btn-primary">Sign in</Link>
@@ -258,8 +258,8 @@ export default function SplitPage() {
                 </div>
 
                 {settlements.length === 0 ? (
-                  <div className="text-center py-4 text-sm" style={{ color: 'var(--muted2)' }}>
-                    🎉 All even — no settlements needed!
+                  <div className="text-center py-4 text-sm flex items-center justify-center gap-1.5" style={{ color: 'var(--muted2)' }}>
+                    <PartyPopper size={15} /> All even — no settlements needed!
                   </div>
                 ) : (
                   <div className="space-y-2">

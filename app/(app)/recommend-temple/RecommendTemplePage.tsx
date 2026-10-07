@@ -3,6 +3,7 @@ import { useState } from 'react'
 import RecommendTempleModal from '@/components/RecommendTempleModal'
 import RecommendTempleButton from '@/components/RecommendTempleButton'
 import Link from 'next/link'
+import { Landmark, Pencil, Search } from 'lucide-react'
 
 export default function RecommendTemplePage() {
   const [open, setOpen] = useState(false)
@@ -21,13 +22,13 @@ export default function RecommendTemplePage() {
       {/* How it works */}
       <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:16, marginBottom:40 }}>
         {[
-          { step:'1', icon:'📝', title:'Fill the Form', desc:'Share temple name, location, deity and any details you know' },
-          { step:'2', icon:'🔍', title:'We Verify', desc:'Our team of volunteers confirms the details on ground' },
-          { step:'3', icon:'🛕', title:'Temple Added', desc:'The temple goes live on DivyaDarshanam for all pilgrims' },
+          { step:'1', icon:<Pencil size={28} color="#8B1A1A"/>, title:'Fill the Form', desc:'Share temple name, location, deity and any details you know' },
+          { step:'2', icon:<Search size={28} color="#8B1A1A"/>, title:'We Verify', desc:'Our team of volunteers confirms the details on ground' },
+          { step:'3', icon:<Landmark size={28} color="#8B1A1A"/>, title:'Temple Added', desc:'The temple goes live on DivyaDarshanam for all pilgrims' },
         ].map(item => (
           <div key={item.step} style={{ background:'white', border:'1.5px solid #E8E0D4', borderRadius:14, padding:20, textAlign:'center' }}>
             <div style={{ width:32, height:32, background:'#8B1A1A', color:'white', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:700, fontSize:14, margin:'0 auto 12px' }}>{item.step}</div>
-            <div style={{ fontSize:28, marginBottom:8 }}>{item.icon}</div>
+            <div style={{ marginBottom:8, display:'flex', justifyContent:'center' }}>{item.icon}</div>
             <div style={{ fontWeight:700, fontSize:14, color:'#1A0A00', marginBottom:4 }}>{item.title}</div>
             <div style={{ fontSize:12, color:'#6B5B4E', lineHeight:1.6 }}>{item.desc}</div>
           </div>
@@ -36,7 +37,7 @@ export default function RecommendTemplePage() {
 
       {/* CTA */}
       <div style={{ background:'linear-gradient(135deg,#FFF8F0,#FFE8D0)', border:'1.5px solid #C0570A', borderRadius:16, padding:32, textAlign:'center', marginBottom:32 }}>
-        <div style={{ fontSize:48, marginBottom:16 }}>🛕</div>
+        <div style={{ marginBottom:16 }}><Landmark size={44} color="#8B1A1A"/></div>
         <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:24, color:'#8B1A1A', marginBottom:8 }}>Ready to recommend?</h2>
         <p style={{ color:'#6B5B4E', marginBottom:20, lineHeight:1.6 }}>
           Even basic details like temple name and city are enough to get started.

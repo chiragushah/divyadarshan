@@ -3,7 +3,7 @@ export const dynamic = 'force-dynamic'
 import { useState, useEffect, Suspense } from 'react'
 import { useSession } from 'next-auth/react'
 import { useSearchParams } from 'next/navigation'
-import { Loader2 } from 'lucide-react'
+import { Bus, Hotel, Landmark, Loader2, Plane, TrainFront } from 'lucide-react'
 import Link from 'next/link'
 import { finverseLink } from '@/lib/utils'
 import ItineraryRenderer from '@/components/ItineraryRenderer'
@@ -142,7 +142,7 @@ function PlannerForm() {
       {prefilledFrom && (
         <div className="flex items-center gap-3 px-4 py-3 rounded-xl mb-5 text-sm"
           style={{ background: 'rgba(192,87,10,.08)', border: '1.5px solid rgba(192,87,10,.2)', color: 'var(--saffron)' }}>
-          <span style={{ fontSize: 18 }}>🛕</span>
+          <Landmark size={18} style={{ color: 'var(--saffron)', flexShrink: 0 }} />
           <div>
             <span className="font-semibold">Pre-filled from temple: </span>
             <span>{destination}</span>
@@ -174,8 +174,8 @@ function PlannerForm() {
                   {form.is_international && <span style={{ color:'white', fontSize:13, fontWeight:700 }}>✓</span>}
                 </div>
                 <div>
-                  <div style={{ fontWeight:600, fontSize:14, color: form.is_international ? '#1E40AF' : 'var(--ink)' }}>
-                    ✈️ I am travelling from outside India
+                  <div style={{ fontWeight:600, fontSize:14, color: form.is_international ? '#1E40AF' : 'var(--ink)', display:'flex', alignItems:'center', gap:6 }}>
+                    <Plane size={15} /> I am travelling from outside India
                   </div>
                   <div style={{ fontSize:12, color:'var(--muted2)', marginTop:2 }}>
                     AI will include international flights, forex, visa tips and NRI-friendly hotels
@@ -266,7 +266,7 @@ function PlannerForm() {
                     Our travel experts handle hotels, darshan slots, trains and local guides — end to end.
                   </p>
                 </div>
-                <span style={{ fontSize: 36, flexShrink: 0 }}>🛕</span>
+                <Landmark size={32} color="white" style={{ flexShrink: 0 }} />
               </div>
               <div className="flex flex-wrap gap-2 mt-3">
                 {['✓ Personalised itinerary', '✓ Hotel & train bookings', '✓ VIP darshan slots', '✓ Local guide coordination'].map(f => (
@@ -297,17 +297,17 @@ function PlannerForm() {
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
               {[
-                { icon: '🏨', label: 'Hotels in ' + form.to, sub: 'Google Hotels',
+                { icon: <Hotel size={20} />, label: 'Hotels in ' + form.to, sub: 'Google Hotels',
                   url: 'https://www.google.com/travel/hotels/' + encodeURIComponent(form.to + ', India') },
-                { icon: '🚂', label: 'Trains from ' + form.from, sub: 'IRCTC',
+                { icon: <TrainFront size={20} />, label: 'Trains from ' + form.from, sub: 'IRCTC',
                   url: 'https://www.irctc.co.in/nget/train-search' },
-                { icon: '🚌', label: 'Buses to ' + form.to, sub: 'RedBus',
+                { icon: <Bus size={20} />, label: 'Buses to ' + form.to, sub: 'RedBus',
                   url: 'https://www.google.com/search?q=redbus+' + form.from.replace(/ /g,'+') + '+to+' + form.to.replace(/ /g,'+') },
-                { icon: '✈️', label: 'Flights to ' + form.to, sub: 'Google Flights',
+                { icon: <Plane size={20} />, label: 'Flights to ' + form.to, sub: 'Google Flights',
                   url: 'https://www.google.com/search?q=flights+from+' + form.from.replace(/ /g,'+') + '+to+' + form.to.replace(/ /g,'+') },
               ].map(b => (
                 <a key={b.label} href={b.url} target="_blank" rel="noopener" className="book-btn">
-                  <span style={{ fontSize: 20 }}>{b.icon}</span>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', color: 'var(--saffron)' }}>{b.icon}</span>
                   <div>
                     <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink)' }}>{b.label}</div>
                     <div style={{ fontSize: 10, color: 'var(--muted2)' }}>via {b.sub}</div>

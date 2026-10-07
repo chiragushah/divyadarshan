@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import { Globe, HandHeart, Lock, Users } from 'lucide-react'
 
 const CATEGORIES = ['Health & Healing','Marriage & Relationships','Career & Business','Children & Family','Education & Exams','Home & Property','Financial Freedom','Peace & Wellbeing','Spiritual Growth','Gratitude — Already Fulfilled','Other']
 const DEITIES_LIST = ['Ganesha','Lakshmi','Durga','Shiva','Krishna','Saraswati','Hanuman','Parvati','Kali','Surya','Navagraha Shanti','Other']
@@ -44,7 +45,7 @@ export default function WriteSankalpPage() {
 
   if (success) return (
     <div style={{ maxWidth:500, margin:'80px auto', padding:24, textAlign:'center', fontFamily:"'Inter',sans-serif" }}>
-      <div style={{ fontSize:72, marginBottom:20 }}>🙏</div>
+      <div style={{ marginBottom:20, display:'flex', justifyContent:'center' }}><HandHeart size={64} color="#8B1A1A" /></div>
       <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:30, color:'#8B1A1A', marginBottom:12 }}>Sankalp Accepted</h1>
       <p style={{ color:'#6B5B4E', lineHeight:1.8, marginBottom:8 }}>Your sacred intention has been written. Keep faith, keep acting, keep believing.</p>
       <p style={{ color:'#6B5B4E', lineHeight:1.8, marginBottom:24, fontStyle:'italic' }}>"The universe conspires to help one who has made a sincere Sankalp with pure heart."</p>
@@ -129,16 +130,16 @@ export default function WriteSankalpPage() {
           <label style={lbl}>Privacy</label>
           <div style={{ display:'flex', gap:10 }}>
             {[
-              { v:'private', label:'🔒 Private', desc:'Only you can see this' },
-              { v:'anonymous', label:'👥 Anonymous', desc:'Shown without your name' },
-              { v:'public', label:'🌍 Public', desc:'Shown with your name' },
+              { v:'private', label:'Private', icon:<Lock size={14} />, desc:'Only you can see this' },
+              { v:'anonymous', label:'Anonymous', icon:<Users size={14} />, desc:'Shown without your name' },
+              { v:'public', label:'Public', icon:<Globe size={14} />, desc:'Shown with your name' },
             ].map(p => (
               <button key={p.v} type="button" onClick={() => set('privacy', p.v)} style={{
                 flex:1, padding:'10px 8px', borderRadius:10, cursor:'pointer', border:'1.5px solid', textAlign:'center',
                 borderColor: form.privacy === p.v ? '#8B1A1A' : '#E8E0D4',
                 background: form.privacy === p.v ? '#FFF0F0' : 'white',
               }}>
-                <div style={{ fontWeight:700, fontSize:13, color: form.privacy === p.v ? '#8B1A1A' : '#1A0A00' }}>{p.label}</div>
+                <div style={{ fontWeight:700, fontSize:13, color: form.privacy === p.v ? '#8B1A1A' : '#1A0A00', display:'flex', alignItems:'center', justifyContent:'center', gap:5 }}>{p.icon}{p.label}</div>
                 <div style={{ fontSize:11, color:'#A89B8C', marginTop:2 }}>{p.desc}</div>
               </button>
             ))}
@@ -150,7 +151,7 @@ export default function WriteSankalpPage() {
           background: !form.intention || !form.deity ? '#ccc' : 'linear-gradient(135deg,#8B1A1A,#C0570A)',
           color:'white', fontWeight:700, fontSize:16, cursor: !form.intention || !form.deity ? 'not-allowed' : 'pointer', fontFamily:'inherit',
         }}>
-          {loading ? 'Submitting...' : '🙏 Submit My Sankalp'}
+          {loading ? 'Submitting...' : <span style={{ display:'inline-flex', alignItems:'center', justifyContent:'center', gap:8 }}><HandHeart size={18} /> Submit My Sankalp</span>}
         </button>
         <p style={{ textAlign:'center', fontSize:11, color:'#A89B8C', marginTop:10 }}>
           By submitting you acknowledge our <Link href="/manifest?tab=disclaimer" style={{ color:'#C0570A' }}>disclaimer</Link>. Your intention is private by default.

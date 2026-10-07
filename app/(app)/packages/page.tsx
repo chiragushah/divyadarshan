@@ -70,9 +70,9 @@ export default function PackagesPage() {
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 {pkg.is_featured && (
-                  <span className="absolute top-3 left-3 text-xs font-bold px-2 py-1 rounded"
+                  <span className="absolute top-3 left-3 text-xs font-bold px-2 py-1 rounded inline-flex items-center gap-1"
                     style={{ background: 'var(--gold-lt)', color: 'var(--crimson)' }}>
-                    ⭐ Featured
+                    <Star size={12} /> Featured
                   </span>
                 )}
                 <div className="absolute bottom-3 left-3 right-3">

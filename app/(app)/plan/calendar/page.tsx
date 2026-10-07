@@ -1,6 +1,7 @@
 export const dynamic = 'force-dynamic'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { CloudRain, Flame, Flower2, Leaf, Lightbulb, Snowflake, Sparkles, Sun } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Festival Calendar — DivyaDarshanam',
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 const MONTHS = [
   {
-    month: 'January', season: 'Winter', icon: '🌨️',
+    month: 'January', season: 'Winter', icon: <CloudRain size={26} />,
     best_for: ['Tamil Nadu', 'Andhra Pradesh', 'Rajasthan'],
     tip: "Peak pilgrim season. Book trains and accommodation 3 months ahead.",
     festivals: [
@@ -21,7 +22,7 @@ const MONTHS = [
     ],
   },
   {
-    month: 'February', season: 'Late Winter', icon: '❄️',
+    month: 'February', season: 'Late Winter', icon: <Snowflake size={26} />,
     best_for: ['Ujjain', 'Varanasi', 'All Jyotirlinga'],
     tip: "Mahashivratri is among the biggest pilgrimages in India. Ujjain gets 1 crore+ pilgrims.",
     festivals: [
@@ -31,7 +32,7 @@ const MONTHS = [
     ],
   },
   {
-    month: 'March', season: 'Spring', icon: '🌸',
+    month: 'March', season: 'Spring', icon: <Flower2 size={26} />,
     best_for: ['Vrindavan', 'Mathura', 'Ayodhya'],
     tip: "Vrindavan Holi (Phulera Dooj through Rang Panchami) is bucket-list material.",
     festivals: [
@@ -43,7 +44,7 @@ const MONTHS = [
     ],
   },
   {
-    month: 'April', season: 'Early Summer', icon: '☀️',
+    month: 'April', season: 'Early Summer', icon: <Sun size={26} />,
     best_for: ['Uttarakhand Char Dham', 'Odisha'],
     tip: "Book Kedarnath helicopter or porter well in advance. Gets fully booked 2 months ahead.",
     festivals: [
@@ -57,7 +58,7 @@ const MONTHS = [
     ],
   },
   {
-    month: 'May', season: 'Summer', icon: '🌞',
+    month: 'May', season: 'Summer', icon: <Sun size={26} />,
     best_for: ['Uttarakhand', 'Bihar (Bodh Gaya)'],
     tip: "Best weather window for Char Dham before monsoon arrives in June.",
     festivals: [
@@ -66,7 +67,7 @@ const MONTHS = [
     ],
   },
   {
-    month: 'June', season: 'Pre-Monsoon', icon: '🌧️',
+    month: 'June', season: 'Pre-Monsoon', icon: <CloudRain size={26} />,
     best_for: ['Puri', 'Pandharpur'],
     tip: "Rath Yatra in Puri: stay nearby and arrive by 5AM for front-row position.",
     festivals: [
@@ -75,7 +76,7 @@ const MONTHS = [
     ],
   },
   {
-    month: 'July', season: 'Monsoon', icon: '⛈️',
+    month: 'July', season: 'Monsoon', icon: <CloudRain size={26} />,
     best_for: ['Jharkhand', 'Varanasi', 'Haridwar'],
     tip: "Shravan month is sacred for Shiva. Every Monday sees massive crowds at all Jyotirlingas.",
     festivals: [
@@ -84,7 +85,7 @@ const MONTHS = [
     ],
   },
   {
-    month: 'August', season: 'Monsoon', icon: '🌧️',
+    month: 'August', season: 'Monsoon', icon: <CloudRain size={26} />,
     best_for: ['Mathura', 'Vrindavan', 'Dwarka'],
     tip: "Janmashtami at Vrindavan: temples stay open through midnight, streets become rivers of devotion.",
     festivals: [
@@ -95,7 +96,7 @@ const MONTHS = [
     ],
   },
   {
-    month: 'September', season: 'Late Monsoon', icon: '🌦️',
+    month: 'September', season: 'Late Monsoon', icon: <CloudRain size={26} />,
     best_for: ['Maharashtra', 'Kerala'],
     tip: "Lalbaugcha Raja in Mumbai draws 1.5 million people for visarjan. Go early morning.",
     festivals: [
@@ -111,7 +112,7 @@ const MONTHS = [
     ],
   },
   {
-    month: 'October', season: 'Post-Monsoon', icon: '🍂',
+    month: 'October', season: 'Post-Monsoon', icon: <Leaf size={26} />,
     best_for: ['Gujarat (Garba)', 'Mysore', 'Himachal Pradesh', 'West Bengal'],
     tip: "October is arguably the best month for temple pilgrimages — perfect weather + major festivals.",
     festivals: [
@@ -123,7 +124,7 @@ const MONTHS = [
     ],
   },
   {
-    month: 'November', season: 'Early Winter', icon: '🪔',
+    month: 'November', season: 'Early Winter', icon: <Flame size={26} />,
     best_for: ['Varanasi', 'Ayodhya', 'Kerala'],
     tip: "Dev Deepawali in Varanasi falls on Kartik Purnima — 5 days after Diwali. Do not miss it.",
     festivals: [
@@ -136,7 +137,7 @@ const MONTHS = [
     ],
   },
   {
-    month: 'December', season: 'Winter', icon: '🌟',
+    month: 'December', season: 'Winter', icon: <Sparkles size={26} />,
     best_for: ['Tamil Nadu', 'Andhra Pradesh', 'Kerala'],
     tip: "South India temple circuit ideal in December — excellent weather, major festivals, no crowds vs October.",
     festivals: [
@@ -235,7 +236,7 @@ export default function CalendarPage() {
                   {m.season} · Best for: {m.best_for.join(', ')}
                 </p>
               </div>
-              <span className="text-2xl">{m.icon}</span>
+              <span className="inline-flex items-center" style={{ color: i === currentMonth ? '#FAF7F2' : 'var(--saffron)' }}>{m.icon}</span>
             </div>
 
             <div className="p-5">
@@ -266,7 +267,7 @@ export default function CalendarPage() {
 
               <div className="flex items-start gap-2 px-3 py-2.5 rounded-lg text-xs"
                 style={{ background: 'var(--ivory2)', color: 'var(--muted)' }}>
-                <span>💡</span> {m.tip}
+                <Lightbulb size={15} style={{ flexShrink: 0, marginTop: 1 }} /> {m.tip}
               </div>
 
               <div className="mt-3">

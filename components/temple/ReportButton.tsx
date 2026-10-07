@@ -1,15 +1,15 @@
 'use client'
 import { useState } from 'react'
-import { AlertTriangle, X, Check, Loader2 } from 'lucide-react'
+import { AlertTriangle, Bath, Check, Clock, Globe, HandHeart, Image, Loader2, Map, MessageCircle, Pencil, X } from 'lucide-react'
 
 const FIELDS = [
-  { value: 'timing',      label: '⏰ Opening hours are wrong' },
-  { value: 'facilities',  label: '🚻 Facilities info outdated' },
-  { value: 'image',       label: '🖼️ Image does not match this temple' },
-  { value: 'directions',  label: '🗺️ How to reach info is wrong' },
-  { value: 'description', label: '📝 Description has errors' },
-  { value: 'website',     label: '🌐 Website / phone is wrong' },
-  { value: 'other',       label: '💬 Something else' },
+  { value: 'timing',      icon: <Clock size={14} />,          label: 'Opening hours are wrong' },
+  { value: 'facilities',  icon: <Bath size={14} />,           label: 'Facilities info outdated' },
+  { value: 'image',       icon: <Image size={14} />,          label: 'Image does not match this temple' },
+  { value: 'directions',  icon: <Map size={14} />,            label: 'How to reach info is wrong' },
+  { value: 'description', icon: <Pencil size={14} />,         label: 'Description has errors' },
+  { value: 'website',     icon: <Globe size={14} />,          label: 'Website / phone is wrong' },
+  { value: 'other',       icon: <MessageCircle size={14} />,  label: 'Something else' },
 ]
 
 export default function ReportButton({ templeSlug, templeName }: { templeSlug: string; templeName: string }) {
@@ -49,7 +49,7 @@ export default function ReportButton({ templeSlug, templeName }: { templeSlug: s
 
             {done ? (
               <div style={{ textAlign:'center', padding:'20px 0' }}>
-                <div style={{ fontSize:40, marginBottom:12 }}>🙏</div>
+                <div style={{ display:'flex', justifyContent:'center', marginBottom:12 }}><HandHeart size={36} color="var(--crimson)" /></div>
                 <h3 style={{ fontFamily:'serif', fontSize:20, marginBottom:8 }}>Thank You!</h3>
                 <p style={{ color:'var(--muted)', fontSize:13 }}>Your report helps keep DivyaDarshanam accurate for all pilgrims. We will review and update within 48 hours.</p>
                 <button onClick={() => setOpen(false)} style={{ marginTop:16, padding:'8px 20px', background:'var(--crimson)', color:'white', border:'none', borderRadius:8, cursor:'pointer', fontSize:13 }}>
@@ -66,8 +66,8 @@ export default function ReportButton({ templeSlug, templeName }: { templeSlug: s
                   <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:6 }}>
                     {FIELDS.map(f => (
                       <button key={f.value} onClick={() => setField(f.value)}
-                        style={{ padding:'8px 10px', borderRadius:8, border:`1.5px solid ${field===f.value ? 'var(--crimson)' : 'var(--border)'}`, background: field===f.value ? 'rgba(107,16,16,.06)' : 'white', fontSize:11, textAlign:'left', cursor:'pointer', color: field===f.value ? 'var(--crimson)' : 'var(--ink)', fontWeight: field===f.value ? 600 : 400 }}>
-                        {f.label}
+                        style={{ padding:'8px 10px', borderRadius:8, border:`1.5px solid ${field===f.value ? 'var(--crimson)' : 'var(--border)'}`, background: field===f.value ? 'rgba(107,16,16,.06)' : 'white', fontSize:11, textAlign:'left', cursor:'pointer', color: field===f.value ? 'var(--crimson)' : 'var(--ink)', fontWeight: field===f.value ? 600 : 400, display:'inline-flex', alignItems:'center', gap:6 }}>
+                        <span style={{ flexShrink:0, display:'inline-flex' }}>{f.icon}</span> {f.label}
                       </button>
                     ))}
                   </div>

@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { Loader2 } from 'lucide-react'
+import { Loader2, Lock, Shield } from 'lucide-react'
 
 export default function AdminLogin() {
   const router = useRouter()
@@ -51,7 +51,7 @@ export default function AdminLogin() {
       `}</style>
       <div className="card">
         <div className="logo">
-          <div className="logo-icon">🛡️</div>
+          <div className="logo-icon"><Shield size={20} color="#fff"/></div>
           <span className="logo-title">DivyaDarshanam</span>
         </div>
         <span className="badge">Admin Portal · Restricted Access</span>
@@ -73,7 +73,7 @@ export default function AdminLogin() {
             {loading ? <><Loader2 size={15} className="animate-spin" /> Verifying…</> : 'Access Admin Dashboard →'}
           </button>
         </form>
-        <p className="warn">🔒 This portal is monitored. Unauthorised access attempts are logged.</p>
+        <p className="warn"><Lock size={11} style={{verticalAlign:'-1px'}}/> This portal is monitored. Unauthorised access attempts are logged.</p>
       </div>
     </>
   )

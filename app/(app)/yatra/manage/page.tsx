@@ -3,7 +3,7 @@ export const dynamic = 'force-dynamic'
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { Loader2, Plus, Trash2, Zap, Send, ChevronDown, ChevronUp, MapPin, Calendar, Users, Star } from 'lucide-react'
+import { Calendar, Check, ChevronDown, ChevronUp, Clock, Landmark, Loader2, Lock, LockOpen, Map, MapPin, Pencil, Plus, Save, Send, Star, Ticket, Trash2, Users, Zap } from 'lucide-react'
 
 interface Destination {
   temple_name: string
@@ -210,7 +210,7 @@ export default function YatraManagePage() {
             <div className="flex justify-center py-16"><Loader2 size={24} className="animate-spin" style={{ color: 'var(--crimson)' }} /></div>
           ) : plans.length === 0 ? (
             <div className="text-center py-20">
-              <div style={{ fontSize: 56, marginBottom: 16 }}>🛕</div>
+              <div style={{ marginBottom: 16 }}><Landmark size={48} style={{ color: 'var(--crimson)', display: 'inline-block' }} /></div>
               <h2 className="font-serif text-2xl font-medium mb-3">No group yatras yet</h2>
               <p className="text-sm mb-6" style={{ color: 'var(--muted)' }}>
                 Create your first group yatra plan — assign members or open it to all pilgrims.
@@ -233,11 +233,15 @@ export default function YatraManagePage() {
                             <h3 className="font-serif text-xl font-medium">{plan.title}</h3>
                             <span className="text-xs px-2.5 py-1 rounded-full font-semibold"
                               style={{ background: plan.status === 'published' ? 'var(--pastel-green)' : 'var(--pastel-amber)', color: plan.status === 'published' ? '#166534' : '#92400E', border: plan.status === 'published' ? '1px solid #BBF7D0' : '1px solid #FDE68A' }}>
-                              {plan.status === 'published' ? '✅ Published' : '📝 Draft'}
+                              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                                {plan.status === 'published' ? <><Check size={12} /> Published</> : <><Pencil size={12} /> Draft</>}
+                              </span>
                             </span>
                             <span className="text-xs px-2.5 py-1 rounded-full font-semibold"
                               style={{ background: plan.mode === 'open' ? 'var(--pastel-blue)' : 'var(--pastel-red)', color: plan.mode === 'open' ? '#1D4ED8' : 'var(--crimson)', border: plan.mode === 'open' ? '1px solid #BFDBFE' : '1px solid #FFCCCC' }}>
-                              {plan.mode === 'open' ? '🔓 Open to Join' : '🔒 Assigned'}
+                              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                                {plan.mode === 'open' ? <><LockOpen size={12} /> Open to Join</> : <><Lock size={12} /> Assigned</>}
+                              </span>
                             </span>
                           </div>
 
@@ -246,7 +250,7 @@ export default function YatraManagePage() {
                             {(plan.destinations || []).map((d: any, i: number) => (
                               <span key={i} className="flex items-center gap-1 text-xs px-2 py-1 rounded-lg"
                                 style={{ background: 'var(--pastel-amber)', border: '1px solid #FDE68A', color: '#92400E' }}>
-                                <span>{i === 0 ? '🛕' : '→'}</span>
+                                <span style={{ display: 'inline-flex', alignItems: 'center' }}>{i === 0 ? <Landmark size={12} /> : '→'}</span>
                                 {d.temple_name}
                               </span>
                             ))}
@@ -345,8 +349,8 @@ export default function YatraManagePage() {
                       <label className="label">Mode *</label>
                       <div className="grid grid-cols-2 gap-3">
                         {[
-                          { val: 'open', icon: '🔓', title: 'Open Yatra', desc: 'Any registered user can browse and join available seats' },
-                          { val: 'assigned', icon: '🔒', title: 'Assigned Yatra', desc: 'You assign specific members — plan goes directly to their profile' },
+                          { val: 'open', icon: <LockOpen size={24} />, title: 'Open Yatra', desc: 'Any registered user can browse and join available seats' },
+                          { val: 'assigned', icon: <Lock size={24} />, title: 'Assigned Yatra', desc: 'You assign specific members — plan goes directly to their profile' },
                         ].map(opt => (
                           <button key={opt.val} onClick={() => setForm(f => ({ ...f, mode: opt.val as any }))}
                             className="text-left p-4 rounded-xl border-2 transition-all"
@@ -354,7 +358,7 @@ export default function YatraManagePage() {
                               borderColor: form.mode === opt.val ? 'var(--crimson)' : 'var(--border)',
                               background: form.mode === opt.val ? 'var(--pastel-red)' : 'var(--white)',
                             }}>
-                            <div className="text-2xl mb-2">{opt.icon}</div>
+                            <div className="mb-2" style={{ color: form.mode === opt.val ? 'var(--crimson)' : 'var(--ink)' }}>{opt.icon}</div>
                             <div className="font-semibold text-sm mb-1" style={{ color: form.mode === opt.val ? 'var(--crimson)' : 'var(--ink)' }}>{opt.title}</div>
                             <div className="text-xs" style={{ color: 'var(--muted)' }}>{opt.desc}</div>
                           </button>
@@ -400,11 +404,11 @@ export default function YatraManagePage() {
                   <h3 className="font-serif text-lg font-medium mb-3">Mode Guide</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-xl" style={{ background: 'var(--pastel-blue)', border: '1px solid #BFDBFE' }}>
-                      <div className="text-xs font-bold mb-1" style={{ color: '#1D4ED8' }}>🔓 Open Yatra</div>
+                      <div className="text-xs font-bold mb-1" style={{ color: '#1D4ED8', display: 'flex', alignItems: 'center', gap: 4 }}><LockOpen size={13} /> Open Yatra</div>
                       <div className="text-xs" style={{ color: '#1E40AF' }}>Published publicly. Any pilgrim can see it and join a group from their city. You set available seats per group.</div>
                     </div>
                     <div className="p-3 rounded-xl" style={{ background: 'var(--pastel-red)', border: '1px solid #FFCCCC' }}>
-                      <div className="text-xs font-bold mb-1" style={{ color: 'var(--crimson)' }}>🔒 Assigned Yatra</div>
+                      <div className="text-xs font-bold mb-1" style={{ color: 'var(--crimson)', display: 'flex', alignItems: 'center', gap: 4 }}><Lock size={13} /> Assigned Yatra</div>
                       <div className="text-xs" style={{ color: 'var(--crimson)' }}>Private. You assign specific people by name. Plan appears directly in their profile. No public listing.</div>
                     </div>
                   </div>
@@ -642,15 +646,17 @@ export default function YatraManagePage() {
                   <div className="flex items-center gap-2 mb-3 flex-wrap">
                     <span className="text-xs px-2 py-1 rounded-full font-semibold"
                       style={{ background: form.mode === 'open' ? 'rgba(96,165,250,.2)' : 'rgba(252,165,165,.2)', color: form.mode === 'open' ? '#93C5FD' : '#FCA5A5', border: form.mode === 'open' ? '1px solid rgba(96,165,250,.3)' : '1px solid rgba(252,165,165,.3)' }}>
-                      {form.mode === 'open' ? '🔓 Open Yatra' : '🔒 Assigned Yatra'}
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                        {form.mode === 'open' ? <><LockOpen size={12} /> Open Yatra</> : <><Lock size={12} /> Assigned Yatra</>}
+                      </span>
                     </span>
                   </div>
                   <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.75rem', fontWeight: 700, marginBottom: 8 }}>{form.title || 'Your Yatra Title'}</h2>
                   <div className="flex flex-wrap gap-4 text-sm" style={{ color: 'rgba(237,224,196,.6)' }}>
-                    <span>📅 {form.travel_dates}</span>
-                    <span>⏱ {form.duration_days} days</span>
-                    <span>👥 {totalPersons} pilgrims</span>
-                    {form.mode === 'open' && <span>🎫 {totalSeats} seats</span>}
+                    <span className="flex items-center gap-1.5"><Calendar size={13} /> {form.travel_dates}</span>
+                    <span className="flex items-center gap-1.5"><Clock size={13} /> {form.duration_days} days</span>
+                    <span className="flex items-center gap-1.5"><Users size={13} /> {totalPersons} pilgrims</span>
+                    {form.mode === 'open' && <span className="flex items-center gap-1.5"><Ticket size={13} /> {totalSeats} seats</span>}
                   </div>
                 </div>
 
@@ -662,9 +668,9 @@ export default function YatraManagePage() {
                       {destinations.filter(d => d.temple_name).map((d, i) => (
                         <div key={i} className="flex items-center gap-2">
                           {i > 0 && <span style={{ color: 'var(--muted2)' }}>→</span>}
-                          <span className="text-sm px-3 py-1.5 rounded-lg font-medium"
+                          <span className="text-sm px-3 py-1.5 rounded-lg font-medium flex items-center gap-1.5"
                             style={{ background: 'var(--pastel-amber)', border: '1px solid #FDE68A', color: '#92400E' }}>
-                            🛕 {d.temple_name}
+                            <Landmark size={14} /> {d.temple_name}
                           </span>
                         </div>
                       ))}
@@ -680,7 +686,7 @@ export default function YatraManagePage() {
                           style={{ background: 'var(--bg)', border: '1.5px solid var(--border)' }}>
                           <div>
                             <div className="text-sm font-medium">{g.name || g.city + ' Group'}</div>
-                            <div className="text-xs" style={{ color: 'var(--muted)' }}>📍 {g.city} · {g.persons} persons</div>
+                            <div className="text-xs flex items-center gap-1" style={{ color: 'var(--muted)' }}><MapPin size={12} /> {g.city} · {g.persons} persons</div>
                           </div>
                           {g.estimated_cost && (
                             <div className="text-sm font-semibold" style={{ color: 'var(--crimson)' }}>
@@ -711,7 +717,7 @@ export default function YatraManagePage() {
               <div className="flex gap-3">
                 <button onClick={() => setStep(2)} className="btn btn-ghost">← Back</button>
                 <button onClick={savePlan} disabled={saving} className="btn btn-secondary flex items-center gap-2">
-                  {saving ? <><Loader2 size={14} className="animate-spin" /> Saving…</> : '💾 Save as Draft'}
+                  {saving ? <><Loader2 size={14} className="animate-spin" /> Saving…</> : <><Save size={14} /> Save as Draft</>}
                 </button>
                 <button onClick={async () => { await savePlan() }} disabled={saving}
                   className="btn btn-primary flex items-center gap-2 flex-1 justify-center"
@@ -734,19 +740,23 @@ export default function YatraManagePage() {
                   <div className="flex items-center gap-2 mb-3 flex-wrap">
                     <span className="text-xs px-2 py-1 rounded-full font-semibold"
                       style={{ background: selectedPlan.mode === 'open' ? 'rgba(96,165,250,.2)' : 'rgba(252,165,165,.2)', color: selectedPlan.mode === 'open' ? '#93C5FD' : '#FCA5A5' }}>
-                      {selectedPlan.mode === 'open' ? '🔓 Open Yatra' : '🔒 Assigned Yatra'}
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                        {selectedPlan.mode === 'open' ? <><LockOpen size={12} /> Open Yatra</> : <><Lock size={12} /> Assigned Yatra</>}
+                      </span>
                     </span>
                     <span className="text-xs px-2 py-1 rounded-full font-semibold"
                       style={{ background: (selectedPlan as any).status === 'published' ? 'rgba(74,222,128,.15)' : 'rgba(252,211,77,.15)', color: (selectedPlan as any).status === 'published' ? '#86EFAC' : '#FDE68A' }}>
-                      {(selectedPlan as any).status === 'published' ? '✅ Published' : '📝 Draft'}
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                        {(selectedPlan as any).status === 'published' ? <><Check size={12} /> Published</> : <><Pencil size={12} /> Draft</>}
+                      </span>
                     </span>
                   </div>
                   <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.75rem', fontWeight: 700, color: 'white', marginBottom: 8 }}>{selectedPlan.title}</h2>
                   <div className="flex flex-wrap gap-4 text-sm" style={{ color: 'rgba(237,224,196,.6)' }}>
-                    <span>📅 {selectedPlan.travel_dates}</span>
-                    <span>⏱ {selectedPlan.duration_days} days</span>
-                    <span>👥 {selectedPlan.total_persons} pilgrims</span>
-                    {selectedPlan.mode === 'open' && selectedPlan.total_seats && <span>🎫 {selectedPlan.total_seats} seats</span>}
+                    <span className="flex items-center gap-1.5"><Calendar size={13} /> {selectedPlan.travel_dates}</span>
+                    <span className="flex items-center gap-1.5"><Clock size={13} /> {selectedPlan.duration_days} days</span>
+                    <span className="flex items-center gap-1.5"><Users size={13} /> {selectedPlan.total_persons} pilgrims</span>
+                    {selectedPlan.mode === 'open' && selectedPlan.total_seats && <span className="flex items-center gap-1.5"><Ticket size={13} /> {selectedPlan.total_seats} seats</span>}
                   </div>
                 </div>
                 <div className="flex gap-2 flex-shrink-0">
@@ -775,9 +785,9 @@ export default function YatraManagePage() {
                   <div key={i} className="flex items-center gap-3">
                     {i > 0 && <div style={{ width: 24, height: 1.5, background: 'var(--border)' }} />}
                     <div className="text-center">
-                      <div className="text-sm font-semibold px-3 py-2 rounded-xl"
+                      <div className="text-sm font-semibold px-3 py-2 rounded-xl flex items-center gap-1.5"
                         style={{ background: 'var(--pastel-amber)', border: '1px solid #FDE68A', color: '#92400E' }}>
-                        🛕 {d.temple_name}
+                        <Landmark size={14} /> {d.temple_name}
                       </div>
                       <div className="text-xs mt-1" style={{ color: 'var(--muted)' }}>{d.city} · {d.nights}n</div>
                     </div>
@@ -796,9 +806,9 @@ export default function YatraManagePage() {
                   <div className="flex items-start justify-between mb-3">
                     <div>
                       <h4 className="font-serif text-lg font-medium">{group.name || group.city + ' Group'}</h4>
-                      <p className="text-xs" style={{ color: 'var(--muted)' }}>
-                        📍 From {group.city} · 👥 {group.persons} persons
-                        {selectedPlan.mode === 'open' && group.seats && ` · 🎫 ${group.seats} seats`}
+                      <p className="text-xs flex items-center gap-1 flex-wrap" style={{ color: 'var(--muted)' }}>
+                        <MapPin size={12} /> From {group.city} · <Users size={12} /> {group.persons} persons
+                        {selectedPlan.mode === 'open' && group.seats && <> · <Ticket size={12} /> {group.seats} seats</>}
                       </p>
                     </div>
                     {group.estimated_cost && (
@@ -855,7 +865,7 @@ export default function YatraManagePage() {
               </div>
             ) : (
               <div className="text-center py-10" style={{ color: 'var(--muted2)' }}>
-                <div className="text-4xl mb-3">🗺️</div>
+                <div className="mb-3"><Map size={32} style={{ display: 'inline-block' }} /></div>
                 <p className="text-sm">Click Generate to create a complete day-by-day itinerary covering all your destinations</p>
               </div>
             )}

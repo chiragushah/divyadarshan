@@ -23,7 +23,7 @@ export default function ContributionBanner() {
           transition: 'all 0.2s', fontFamily: 'inherit',
           animation: 'pulse-btn 3s ease-in-out infinite',
         }}>
-        💛
+        <Heart size={16} />
         Contribute to DivyaDarshanam
       </button>
       <style>{`

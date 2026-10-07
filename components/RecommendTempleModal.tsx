@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useSession } from 'next-auth/react'
-import { X, Plus } from 'lucide-react'
+import { Landmark, X, Plus } from 'lucide-react'
 
 const STATES = ['Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chhattisgarh','Goa','Gujarat','Haryana','Himachal Pradesh','Jharkhand','Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland','Odisha','Punjab','Rajasthan','Sikkim','Tamil Nadu','Telangana','Tripura','Uttar Pradesh','Uttarakhand','West Bengal','Delhi','Jammu & Kashmir','Ladakh','Puducherry','Chandigarh']
 const TEMPLE_TYPES = ['Shaivite','Vaishnavite','Shakta','Smarta','Jain','Buddhist','Folk / Local Deity','Heritage / Archaeological','Other']
@@ -53,7 +53,7 @@ export default function RecommendTempleModal({ onClose }: { onClose: () => void 
   if (step === 'success') return (
     <div style={{ position:'fixed', inset:0, background:'rgba(0,0,0,0.6)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:9999, padding:16 }} onClick={onClose}>
       <div style={{ background:'white', borderRadius:20, padding:40, maxWidth:440, width:'100%', textAlign:'center' }} onClick={e => e.stopPropagation()}>
-        <div style={{ fontSize:60, marginBottom:16 }}>🛕</div>
+        <div style={{ marginBottom:16, display:'flex', justifyContent:'center', color:'#8B1A1A' }}><Landmark size={52}/></div>
         <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:24, color:'#8B1A1A', marginBottom:12 }}>Thank You!</h2>
         <p style={{ color:'#6B5B4E', lineHeight:1.7, marginBottom:20 }}>
           We have received your recommendation for <strong style={{ color:'#8B1A1A' }}>{form.name}</strong> in {form.city}, {form.state}.
@@ -73,7 +73,7 @@ export default function RecommendTempleModal({ onClose }: { onClose: () => void 
         <div style={{ background:'linear-gradient(135deg,#8B1A1A,#C0570A)', padding:'22px 28px', flexShrink:0, position:'relative' }}>
           <button onClick={onClose} style={{ position:'absolute', top:14, right:14, background:'rgba(255,255,255,0.2)', border:'none', color:'white', width:30, height:30, borderRadius:'50%', cursor:'pointer', fontSize:18, display:'flex', alignItems:'center', justifyContent:'center' }}>×</button>
           <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-            <span style={{ fontSize:32 }}>🛕</span>
+            <span style={{ display:'inline-flex', color:'white' }}><Landmark size={30}/></span>
             <div>
               <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:20, color:'white', margin:0 }}>Recommend a Temple</h2>
               <p style={{ color:'rgba(237,224,196,0.8)', fontSize:12, margin:'4px 0 0' }}>Help pilgrims discover temples not yet in our directory</p>
@@ -179,7 +179,7 @@ export default function RecommendTempleModal({ onClose }: { onClose: () => void 
           {step === 'contact' && (
             <>
               <div style={{ background:'#FFF0F0', border:'1.5px solid #8B1A1A', borderRadius:12, padding:16, marginBottom:24, display:'flex', gap:12, alignItems:'center' }}>
-                <span style={{ fontSize:28 }}>🛕</span>
+                <span style={{ display:'inline-flex', color:'#8B1A1A' }}><Landmark size={26}/></span>
                 <div>
                   <div style={{ fontWeight:700, fontSize:15, color:'#8B1A1A' }}>{form.name}</div>
                   <div style={{ fontSize:13, color:'#6B5B4E' }}>{form.deity} · {form.city}, {form.state}</div>
@@ -213,7 +213,7 @@ export default function RecommendTempleModal({ onClose }: { onClose: () => void 
               <div style={{ display:'flex', gap:12, marginTop:20 }}>
                 <button onClick={() => setStep('temple')} style={{ padding:'12px 20px', borderRadius:10, border:'1.5px solid #E8E0D4', background:'white', color:'#6B5B4E', fontWeight:600, fontSize:14, cursor:'pointer' }}>← Back</button>
                 <button onClick={submit} disabled={loading} style={{ flex:1, background:loading?'#ccc':'#8B1A1A', color:'white', border:'none', borderRadius:12, padding:'14px 0', fontWeight:700, fontSize:15, cursor:loading?'not-allowed':'pointer' }}>
-                  {loading ? 'Submitting…' : 'Submit Recommendation 🛕'}
+                  {loading ? 'Submitting…' : <span style={{ display:'inline-flex', alignItems:'center', gap:6, justifyContent:'center' }}>Submit Recommendation <Landmark size={16}/></span>}
                 </button>
               </div>
               <p style={{ textAlign:'center', fontSize:11, color:'#A89B8C', marginTop:12 }}>Our team will verify and add the temple if validated. You will be credited.</p>

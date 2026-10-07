@@ -4,7 +4,7 @@ import { useState, useEffect, Suspense } from 'react'
 import { useSession } from 'next-auth/react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { Loader2, Plus, Trash2, TrendingUp } from 'lucide-react'
+import { Landmark, Loader2, PartyPopper, Plus, Trash2, TrendingUp, Wallet } from 'lucide-react'
 import { formatINR, finverseLink } from '@/lib/utils'
 import type { SavingsGoal } from '@/types'
 
@@ -112,7 +112,7 @@ function GoalsPageInner() {
   if (status === 'unauthenticated') {
     return (
       <div className="max-w-lg mx-auto px-6 py-20 text-center">
-        <div className="text-5xl mb-4">💰</div>
+        <div className="mb-4"><Wallet size={40} style={{ display: 'inline-block', color: 'var(--crimson)' }} /></div>
         <h1 className="font-serif text-3xl font-medium mb-3">Yatra Savings Goals</h1>
         <p className="text-sm mb-6" style={{ color: 'var(--muted)' }}>
           Sign in to set savings goals for your pilgrimages and track monthly progress.
@@ -178,7 +178,7 @@ function GoalsPageInner() {
           {prefillYatra && (
             <div className="flex items-center gap-3 px-4 py-3 rounded-xl mb-5 text-sm"
               style={{ background: 'rgba(192,87,10,.08)', border: '1.5px solid rgba(192,87,10,.2)', color: 'var(--saffron)' }}>
-              <span style={{ fontSize: 18 }}>🛕</span>
+              <Landmark size={18} style={{ flexShrink: 0 }} />
               <div>
                 <span className="font-semibold">Pre-filled from: </span>
                 <span>{prefillYatra}</span>
@@ -285,7 +285,7 @@ function GoalsPageInner() {
         <div className="space-y-4">{[1, 2].map(i => <div key={i} className="skeleton h-40 rounded-xl" />)}</div>
       ) : goals.length === 0 && !showForm ? (
         <div className="text-center py-16">
-          <div className="text-5xl mb-4">🏦</div>
+          <div className="mb-4"><Landmark size={40} style={{ display: 'inline-block', color: 'var(--crimson)' }} /></div>
           <h3 className="font-serif text-2xl font-medium mb-2">Start your first Yatra Fund</h3>
           <p className="text-sm mb-6" style={{ color: 'var(--muted)' }}>
             Set a monthly savings goal for your next pilgrimage and track your progress.
@@ -312,7 +312,7 @@ function GoalsPageInner() {
                     )}
                   </div>
                   <div className="flex items-center gap-2">
-                    {pct >= 100 && <span className="badge-gold text-[10px]">🎉 Ready!</span>}
+                    {pct >= 100 && <span className="badge-gold text-[10px]" style={{ display: 'inline-flex', alignItems: 'center', gap: 3 }}><PartyPopper size={11} /> Ready!</span>}
                     <button onClick={() => deleteGoal(goal.id)}
                       className="text-stone-400 hover:text-red-500 transition-colors">
                       <Trash2 size={14} />

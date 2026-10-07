@@ -3,7 +3,7 @@ export const dynamic = 'force-dynamic'
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { Loader2, MapPin, Calendar, Users, ChevronDown, ChevronUp } from 'lucide-react'
+import { Calendar, Check, ChevronDown, ChevronUp, Clock, Flame, Landmark, Loader2, Lock, LockOpen, MapPin, User, Users } from 'lucide-react'
 
 interface TravelGroup {
   name: string
@@ -108,8 +108,8 @@ export default function GroupYatraPage() {
         <div className="flex justify-center gap-2 mt-6">
           {[
             { val: 'all', label: 'All Yatras' },
-            { val: 'open', label: '🔓 Open to Join' },
-            { val: 'assigned', label: '🔒 Organised' },
+            { val: 'open', label: <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}><LockOpen size={14} /> Open to Join</span> },
+            { val: 'assigned', label: <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}><Lock size={14} /> Organised</span> },
           ].map(f => (
             <button key={f.val} onClick={() => setFilter(f.val as any)}
               className="px-4 py-2 rounded-full text-sm font-medium transition-all"
@@ -130,7 +130,7 @@ export default function GroupYatraPage() {
         </div>
       ) : filtered.length === 0 ? (
         <div className="text-center py-16">
-          <div className="text-5xl mb-4">🛕</div>
+          <div className="mb-4"><Landmark size={40} style={{ display: 'inline-block', color: 'var(--crimson)' }} /></div>
           <h3 className="font-serif text-2xl font-medium mb-2">No group yatras yet</h3>
           <p className="text-sm mb-6" style={{ color: 'var(--muted)' }}>
             Want to organise a group yatra? Request organiser access.
@@ -160,12 +160,14 @@ export default function GroupYatraPage() {
                             color: plan.mode === 'open' ? '#1D4ED8' : 'var(--crimson)',
                             border: plan.mode === 'open' ? '1px solid #BFDBFE' : '1px solid #FFCCCC',
                           }}>
-                          {plan.mode === 'open' ? '🔓 Open to Join' : '🔒 Organised Group'}
+                          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                            {plan.mode === 'open' ? <><LockOpen size={12} /> Open to Join</> : <><Lock size={12} /> Organised Group</>}
+                          </span>
                         </span>
                         {plan.mode === 'open' && totalAvail > 0 && (
                           <span className="text-xs px-2.5 py-1 rounded-full font-semibold"
                             style={{ background: pct >= 80 ? '#FEF2F2' : 'var(--pastel-green)', color: pct >= 80 ? '#DC2626' : '#166534', border: pct >= 80 ? '1px solid #FECACA' : '1px solid #BBF7D0' }}>
-                            {pct >= 80 ? '🔥 Almost full' : `${totalAvail - totalFilled} seats left`}
+                            {pct >= 80 ? <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}><Flame size={12} /> Almost full</span> : `${totalAvail - totalFilled} seats left`}
                           </span>
                         )}
                       </div>
@@ -177,7 +179,7 @@ export default function GroupYatraPage() {
                         {(plan.destinations || []).map((d, i) => (
                           <span key={i} className="flex items-center gap-1 text-xs px-2 py-1 rounded-lg font-medium"
                             style={{ background: 'var(--pastel-amber)', border: '1px solid #FDE68A', color: '#92400E' }}>
-                            {i === 0 ? '🛕' : '→'} {d.temple_name}
+                            {i === 0 ? <Landmark size={12} /> : '→'} {d.temple_name}
                           </span>
                         ))}
                       </div>
@@ -185,8 +187,8 @@ export default function GroupYatraPage() {
                       <div className="flex flex-wrap gap-4 text-sm" style={{ color: 'var(--muted)' }}>
                         <span className="flex items-center gap-1"><Calendar size={13} />{plan.travel_dates}</span>
                         <span className="flex items-center gap-1"><Users size={13} />{plan.total_persons} pilgrims</span>
-                        <span>⏱ {plan.duration_days} days</span>
-                        {plan.organiser_name && <span>👤 {plan.organiser_name}</span>}
+                        <span className="flex items-center gap-1"><Clock size={13} />{plan.duration_days} days</span>
+                        {plan.organiser_name && <span className="flex items-center gap-1"><User size={13} />{plan.organiser_name}</span>}
                       </div>
 
                       {/* Seat fill bar for open yatras */}
@@ -256,8 +258,8 @@ export default function GroupYatraPage() {
                                   <div className="font-semibold text-sm" style={{ color: 'var(--ink)' }}>
                                     {group.name || group.city + ' Group'}
                                   </div>
-                                  <div className="text-xs mt-0.5" style={{ color: 'var(--muted)' }}>
-                                    📍 From {group.city} · 👥 {group.persons} persons
+                                  <div className="text-xs mt-0.5 flex items-center gap-1" style={{ color: 'var(--muted)' }}>
+                                    <MapPin size={12} /> From {group.city} · <Users size={12} /> {group.persons} persons
                                   </div>
                                 </div>
                                 {group.estimated_cost && (
@@ -293,7 +295,7 @@ export default function GroupYatraPage() {
 
                                   {joined ? (
                                     <div className="flex items-center justify-between">
-                                      <span className="text-xs font-semibold" style={{ color: '#166534' }}>✅ You've joined this group</span>
+                                      <span className="text-xs font-semibold flex items-center gap-1" style={{ color: '#166534' }}><Check size={12} /> You've joined this group</span>
                                       <button onClick={() => leaveGroup(plan._id, i)}
                                         disabled={joining === plan._id + '-' + i}
                                         className="text-xs text-red-500 hover:text-red-700 font-medium">
@@ -313,9 +315,9 @@ export default function GroupYatraPage() {
                               )}
 
                               {group.is_assigned && (
-                                <div className="text-xs px-2 py-1 rounded text-center"
+                                <div className="text-xs px-2 py-1 rounded text-center flex items-center justify-center gap-1"
                                   style={{ background: 'var(--pastel-red)', color: 'var(--crimson)', border: '1px solid #FFCCCC' }}>
-                                  🔒 Assigned group — contact organiser to join
+                                  <Lock size={12} /> Assigned group — contact organiser to join
                                 </div>
                               )}
                             </div>
@@ -339,7 +341,7 @@ export default function GroupYatraPage() {
                     {plan.what_included && (
                       <div className="px-6 pb-6">
                         <div className="p-4 rounded-xl" style={{ background: 'var(--pastel-green)', border: '1.5px solid #BBF7D0' }}>
-                          <div className="text-xs font-bold mb-1" style={{ color: '#166534' }}>✅ What's Included</div>
+                          <div className="text-xs font-bold mb-1 flex items-center gap-1" style={{ color: '#166534' }}><Check size={12} /> What's Included</div>
                           <p className="text-sm" style={{ color: '#166534' }}>{plan.what_included}</p>
                         </div>
                       </div>
@@ -355,7 +357,7 @@ export default function GroupYatraPage() {
       {/* CTA for organisers */}
       <div className="mt-12 card card-p text-center"
         style={{ background: 'linear-gradient(135deg, var(--crim-dk), #2d0a0a)', border: 'none' }}>
-        <div style={{ fontSize: 32, marginBottom: 12 }}>🛕</div>
+        <div style={{ marginBottom: 12 }}><Landmark size={28} style={{ display: 'inline-block', color: 'var(--gold-lt)' }} /></div>
         <h3 className="font-serif text-2xl font-medium mb-2 text-white">Want to organise a group yatra?</h3>
         <p className="text-sm mb-6" style={{ color: 'rgba(237,224,196,.6)' }}>
           Create multi-destination pilgrimages, assign members or open them to all pilgrims.

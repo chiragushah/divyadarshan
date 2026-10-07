@@ -4,7 +4,7 @@
 export interface Badge {
   id:       string
   name:     string
-  emoji:    string
+  icon:     string
   color:    string
   bg:       string
   border:   string
@@ -17,7 +17,7 @@ export const BADGES: Badge[] = [
   {
     id:        'bronze',
     name:      'Bronze Partner',
-    emoji:     '🥉',
+    icon:      'medal',
     color:     '#92400E',
     bg:        '#FEF3C7',
     border:    '#D97706',
@@ -32,7 +32,7 @@ export const BADGES: Badge[] = [
   {
     id:        'silver',
     name:      'Silver Partner',
-    emoji:     '🥈',
+    icon:      'medal',
     color:     '#374151',
     bg:        '#F3F4F6',
     border:    '#6B7280',
@@ -48,7 +48,7 @@ export const BADGES: Badge[] = [
   {
     id:        'gold',
     name:      'Gold Partner',
-    emoji:     '🥇',
+    icon:      'medal',
     color:     '#92400E',
     bg:        '#FFFBEB',
     border:    '#F59E0B',
@@ -65,7 +65,7 @@ export const BADGES: Badge[] = [
   {
     id:        'platinum',
     name:      'Platinum Partner',
-    emoji:     '💎',
+    icon:      'gem',
     color:     '#1E3A5F',
     bg:        '#EFF6FF',
     border:    '#3B82F6',

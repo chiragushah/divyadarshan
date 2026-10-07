@@ -1,6 +1,7 @@
 export const dynamic = 'force-dynamic'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { BookOpen, Star, Users, Wallet } from 'lucide-react'
 
 export const metadata: Metadata = { title: 'My Yatra — DivyaDarshanam' }
 
@@ -15,7 +16,7 @@ export default function YatraPage() {
         {YATRA_SECTIONS.map(s => (
           <Link key={s.href} href={s.href}
             className="card card-p group hover:-translate-y-1 transition-all duration-200 flex flex-col block">
-            <div className="text-3xl mb-3">{s.icon}</div>
+            <div className="mb-3" style={{ color: 'var(--crimson)' }}>{s.icon}</div>
             <h2 className="font-serif text-xl font-medium mb-1.5">{s.title}</h2>
             <p className="text-sm leading-relaxed flex-1" style={{ color: 'var(--muted)' }}>{s.desc}</p>
             <div className="mt-4 text-xs font-semibold" style={{ color: 'var(--crimson)' }}>{s.cta} →</div>
@@ -27,8 +28,8 @@ export default function YatraPage() {
 }
 
 const YATRA_SECTIONS = [
-  { icon: '📖', title: 'My Journal', desc: 'Log every temple visit with photos, feelings and star ratings. Your lifetime pilgrimage diary.', cta: 'Open journal', href: '/yatra/journal' },
-  { icon: '💰', title: 'Savings Goals', desc: 'Set monthly targets for your next yatra. Track deposits and link to FinVerse for real savings.', cta: 'View goals', href: '/yatra/goals' },
-  { icon: '👥', title: 'Group Split', desc: 'Plan group yatras fairly. Log expenses, calculate who owes what, share on WhatsApp.', cta: 'Split expenses', href: '/yatra/split' },
-  { icon: '⭐', title: 'Temple Reviews', desc: 'Read and write reviews from the pilgrim community. Share what moved you.', cta: 'View reviews', href: '/yatra/reviews' },
+  { icon: <BookOpen size={28} />, title: 'My Journal', desc: 'Log every temple visit with photos, feelings and star ratings. Your lifetime pilgrimage diary.', cta: 'Open journal', href: '/yatra/journal' },
+  { icon: <Wallet size={28} />, title: 'Savings Goals', desc: 'Set monthly targets for your next yatra. Track deposits and link to FinVerse for real savings.', cta: 'View goals', href: '/yatra/goals' },
+  { icon: <Users size={28} />, title: 'Group Split', desc: 'Plan group yatras fairly. Log expenses, calculate who owes what, share on WhatsApp.', cta: 'Split expenses', href: '/yatra/split' },
+  { icon: <Star size={28} />, title: 'Temple Reviews', desc: 'Read and write reviews from the pilgrim community. Share what moved you.', cta: 'View reviews', href: '/yatra/reviews' },
 ]

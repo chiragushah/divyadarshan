@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
+import { Lightbulb } from 'lucide-react'
 import { relativeTime } from '@/lib/utils'
 import type { Review } from '@/types'
 
@@ -139,7 +140,7 @@ export default function ReviewsSection({ templeId, templeName }: { templeId: num
               <p className="text-sm leading-relaxed mb-2" style={{ color: 'var(--muted)' }}>{review.body}</p>
               {review.pilgrim_tips && (
                 <div className="mt-2 px-3 py-2 rounded-lg text-xs" style={{ background: 'var(--ivory2)', color: 'var(--muted)' }}>
-                  💡 <strong>Tip:</strong> {review.pilgrim_tips}
+                  <Lightbulb size={14} style={{ display: 'inline', verticalAlign: '-2px' }} /> <strong>Tip:</strong> {review.pilgrim_tips}
                 </div>
               )}
             </div>

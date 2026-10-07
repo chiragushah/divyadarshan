@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import RecommendTempleModal from './RecommendTempleModal'
-import { Plus } from 'lucide-react'
+import { Plus, Landmark } from 'lucide-react'
 
 export default function RecommendTempleButton({ variant = 'button' }: { variant?: 'button' | 'banner' }) {
   const [open, setOpen] = useState(false)
@@ -11,7 +11,7 @@ export default function RecommendTempleButton({ variant = 'button' }: { variant?
       {variant === 'banner' ? (
         <div style={{ background:'linear-gradient(135deg,#FFF8F0,#FFE8D0)', border:'1.5px solid #C0570A', borderRadius:14, padding:'16px 20px', display:'flex', alignItems:'center', justifyContent:'space-between', gap:16, marginBottom:20 }}>
           <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-            <span style={{ fontSize:28 }}>🛕</span>
+            <Landmark size={26} style={{ color:'#8B1A1A', flexShrink:0 }} />
             <div>
               <div style={{ fontWeight:700, fontSize:14, color:'#8B1A1A' }}>Know a temple we are missing?</div>
               <div style={{ fontSize:12, color:'#6B5B4E', marginTop:2 }}>Help pilgrims discover it — recommend it to our team</div>

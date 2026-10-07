@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions)
   const body = await req.json()
 
-  // ✅ Fixed: match exact field names sent by the planner form
+  // Fixed: match exact field names sent by the planner form
   const { from, to, mode, days, pilgrims, deity, notes } = body
 
   const userMessage = `Plan a ${days || 3}-day pilgrimage to ${to} for ${pilgrims || 2} pilgrim(s).

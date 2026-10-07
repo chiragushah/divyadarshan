@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Loader2, X, CheckCircle, Phone, Mail, User, MapPin, IndianRupee, FileText } from 'lucide-react'
+import { CalendarDays, CheckCircle, FileText, HandHeart, Hotel, IndianRupee, Landmark, Loader2, Mail, Map, MapPin, Phone, User, Users, Wallet, X } from 'lucide-react'
 
 interface Props {
   form: {
@@ -97,10 +97,10 @@ export default function PlanMyTripModal({ form, itinerary, user, onClose }: Prop
           {/* Trip summary chips */}
           <div className="flex flex-wrap gap-2 mt-4">
             {[
-              { icon: '📍', label: `${data.from} → ${data.to}` },
-              { icon: '📅', label: `${data.days} Days` },
-              { icon: '👥', label: `${data.pilgrims} Pilgrims` },
-              data.deity && { icon: '🛕', label: data.deity },
+              { icon: <MapPin size={12}/>, label: `${data.from} → ${data.to}` },
+              { icon: <CalendarDays size={12}/>, label: `${data.days} Days` },
+              { icon: <Users size={12}/>, label: `${data.pilgrims} Pilgrims` },
+              data.deity && { icon: <Landmark size={12}/>, label: data.deity },
             ].filter(Boolean).map((chip: any, i) => (
               <span key={i} style={{
                 background: 'rgba(255,255,255,0.15)',
@@ -110,6 +110,7 @@ export default function PlanMyTripModal({ form, itinerary, user, onClose }: Prop
                 padding: '3px 10px',
                 borderRadius: 20,
                 border: '1px solid rgba(255,255,255,0.2)',
+                display: 'inline-flex', alignItems: 'center', gap: 4,
               }}>
                 {chip.icon} {chip.label}
               </span>
@@ -120,8 +121,8 @@ export default function PlanMyTripModal({ form, itinerary, user, onClose }: Prop
         {success ? (
           <div className="flex flex-col items-center py-12 px-6 text-center gap-4">
             <CheckCircle size={48} style={{ color: '#16A34A' }} />
-            <h3 className="font-serif text-2xl font-semibold" style={{ color: 'var(--ink)' }}>
-              Request Received! 🙏
+            <h3 className="font-serif text-2xl font-semibold" style={{ color: 'var(--ink)', display:'inline-flex', alignItems:'center', gap:8 }}>
+              Request Received! <HandHeart size={22}/>
             </h3>
             <p className="text-sm" style={{ color: 'var(--muted)', maxWidth: 360 }}>
               Our travel experts will review your pilgrimage request and get back to you within
@@ -131,13 +132,13 @@ export default function PlanMyTripModal({ form, itinerary, user, onClose }: Prop
               style={{ background: 'var(--ivory2)', border: '1.5px solid var(--border)' }}>
               <p className="text-xs font-semibold mb-2" style={{ color: 'var(--muted2)' }}>WHAT HAPPENS NEXT</p>
               {[
-                '📞 Our expert calls you within 24 hours',
-                '🗺️ We create a personalised day-by-day itinerary',
-                '🏨 We handle hotel, train & darshan bookings',
-                '💰 You pay only after approving the plan',
+                { icon: <Phone size={14}/>, text: 'Our expert calls you within 24 hours' },
+                { icon: <Map size={14}/>, text: 'We create a personalised day-by-day itinerary' },
+                { icon: <Hotel size={14}/>, text: 'We handle hotel, train & darshan bookings' },
+                { icon: <Wallet size={14}/>, text: 'You pay only after approving the plan' },
               ].map((s, i) => (
                 <p key={i} className="text-sm py-1.5 border-b last:border-0"
-                  style={{ color: 'var(--ink)', borderColor: 'var(--border)' }}>{s}</p>
+                  style={{ color: 'var(--ink)', borderColor: 'var(--border)', display:'flex', alignItems:'center', gap:8 }}>{s.icon} {s.text}</p>
               ))}
             </div>
             <button onClick={onClose} className="btn btn-primary mt-2">Done</button>
@@ -148,7 +149,7 @@ export default function PlanMyTripModal({ form, itinerary, user, onClose }: Prop
             {/* Value proposition */}
             <div className="rounded-xl p-4 flex gap-3"
               style={{ background: 'linear-gradient(135deg, #FFF5F0, #FFF8F0)', border: '1.5px solid #FFD9B3' }}>
-              <span style={{ fontSize: 28, flexShrink: 0 }}>🛕</span>
+              <span style={{ flexShrink: 0, display:'inline-flex', color:'var(--crimson)' }}><Landmark size={26}/></span>
               <div>
                 <p className="text-sm font-semibold" style={{ color: 'var(--ink)' }}>
                   Expert-planned pilgrimage — end to end
@@ -252,7 +253,7 @@ export default function PlanMyTripModal({ form, itinerary, user, onClose }: Prop
               className="btn btn-primary w-full justify-center text-base py-3">
               {loading
                 ? <><Loader2 size={16} className="animate-spin" /> Submitting…</>
-                : '🛕 Send My Trip Request →'}
+                : <span style={{ display:'inline-flex', alignItems:'center', gap:6 }}><Landmark size={16}/> Send My Trip Request →</span>}
             </button>
 
             <p className="text-xs text-center" style={{ color: 'var(--muted2)' }}>

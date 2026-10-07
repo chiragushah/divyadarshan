@@ -1,4 +1,5 @@
 'use client'
+import { Footprints, Hotel, Landmark, Lightbulb, MapPin, Moon, Sun, Sunrise, Sunset, TrainFront, UtensilsCrossed, Wallet } from 'lucide-react'
 
 interface Props { text: string }
 
@@ -68,19 +69,19 @@ function renderLine(line: string) {
   )
 }
 
-function getTimeEmoji(item: string) {
+function getTimeIcon(item: string) {
   const l = item.toLowerCase()
-  if (l.includes('morning') || l.includes('am') || l.includes('dawn') || l.includes('sunrise')) return '🌅'
-  if (l.includes('afternoon') || l.includes('noon') || l.includes('lunch')) return '☀️'
-  if (l.includes('evening') || l.includes('sunset') || l.includes('aarti')) return '🌆'
-  if (l.includes('night') || l.includes('dinner') || l.includes('pm')) return '🌙'
-  if (l.includes('temple') || l.includes('darshan') || l.includes('puja')) return '🛕'
-  if (l.includes('hotel') || l.includes('stay') || l.includes('check')) return '🏨'
-  if (l.includes('train') || l.includes('flight') || l.includes('bus') || l.includes('travel')) return '🚂'
-  if (l.includes('food') || l.includes('eat') || l.includes('prasad') || l.includes('breakfast')) return '🍽️'
-  if (l.includes('trek') || l.includes('walk') || l.includes('hike')) return '🥾'
-  if (l.includes('₹') || l.includes('cost') || l.includes('budget')) return '💰'
-  return '📍'
+  if (l.includes('morning') || l.includes('am') || l.includes('dawn') || l.includes('sunrise')) return <Sunrise size={16}/>
+  if (l.includes('afternoon') || l.includes('noon') || l.includes('lunch')) return <Sun size={16}/>
+  if (l.includes('evening') || l.includes('sunset') || l.includes('aarti')) return <Sunset size={16}/>
+  if (l.includes('night') || l.includes('dinner') || l.includes('pm')) return <Moon size={16}/>
+  if (l.includes('temple') || l.includes('darshan') || l.includes('puja')) return <Landmark size={16}/>
+  if (l.includes('hotel') || l.includes('stay') || l.includes('check')) return <Hotel size={16}/>
+  if (l.includes('train') || l.includes('flight') || l.includes('bus') || l.includes('travel')) return <TrainFront size={16}/>
+  if (l.includes('food') || l.includes('eat') || l.includes('prasad') || l.includes('breakfast')) return <UtensilsCrossed size={16}/>
+  if (l.includes('trek') || l.includes('walk') || l.includes('hike')) return <Footprints size={16}/>
+  if (l.includes('₹') || l.includes('cost') || l.includes('budget')) return <Wallet size={16}/>
+  return <MapPin size={16}/>
 }
 
 const DAY_COLORS = [
@@ -156,10 +157,10 @@ export default function ItineraryRenderer({ text }: Props) {
                 <div style={{ padding: '14px 20px', display: 'flex', flexDirection: 'column', gap: 10 }}>
                   {day.items.map((item, j) => {
                     const clean = item.replace(/^[-•*✓→▸◆\d+\.\s]+/, '').trim()
-                    const emoji = getTimeEmoji(clean)
+                    const icon = getTimeIcon(clean)
                     return (
                       <div key={j} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
-                        <span style={{ fontSize: 15, flexShrink: 0, marginTop: 1 }}>{emoji}</span>
+                        <span style={{ flexShrink: 0, marginTop: 2, display: 'inline-flex', color: col.accent }}>{icon}</span>
                         <span style={{ fontSize: 14, color: '#333', lineHeight: 1.65 }}>
                           {renderLine(clean)}
                         </span>
@@ -183,8 +184,8 @@ export default function ItineraryRenderer({ text }: Props) {
           padding: '14px 18px',
           marginBottom: 16,
         }}>
-          <div style={{ fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#92400E', marginBottom: 10 }}>
-            💡 Tips & Notes
+          <div style={{ fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#92400E', marginBottom: 10, display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+            <Lightbulb size={14}/> Tips & Notes
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {block.items.map((item, j) => {
@@ -210,8 +211,8 @@ export default function ItineraryRenderer({ text }: Props) {
           padding: '14px 18px',
           marginBottom: 16,
         }}>
-          <div style={{ fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#166534', marginBottom: 10 }}>
-            💰 Budget Estimate
+          <div style={{ fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#166534', marginBottom: 10, display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+            <Wallet size={14}/> Budget Estimate
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {block.items.map((item, j) => {

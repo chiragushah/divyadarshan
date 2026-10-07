@@ -3,7 +3,7 @@ export const dynamic = 'force-dynamic'
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { Loader2, CheckCircle, Clock, XCircle, Shield } from 'lucide-react'
+import { Loader2, CheckCircle, Clock, XCircle, Shield, LockOpen, PartyPopper } from 'lucide-react'
 
 export default function AdminRequestPage() {
   const { data: session, status } = useSession()
@@ -41,7 +41,7 @@ export default function AdminRequestPage() {
 
   if (status === 'unauthenticated') return (
     <div className="max-w-lg mx-auto px-6 py-20 text-center">
-      <div className="text-5xl mb-4">🔐</div>
+      <div className="mb-4"><LockOpen size={44} style={{ color: 'var(--crimson)' }} /></div>
       <h1 className="font-serif text-3xl font-medium mb-3">Sign in required</h1>
       <Link href="/auth/signin" className="btn btn-primary">Sign In</Link>
     </div>
@@ -87,7 +87,7 @@ export default function AdminRequestPage() {
           {existing.status === 'approved' && (
             <>
               <CheckCircle size={40} style={{ color: '#16A34A', margin: '0 auto 12px' }} />
-              <h2 className="font-serif text-2xl font-medium mb-2">Access Approved! 🎉</h2>
+              <h2 className="font-serif text-2xl font-medium mb-2" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>Access Approved! <PartyPopper size={22} /></h2>
               <p className="text-sm mb-4" style={{ color: 'var(--muted)' }}>
                 You now have admin access to DivyaDarshanam.
               </p>

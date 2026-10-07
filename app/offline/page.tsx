@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { Bot, HandHeart, Landmark, MapPin, Wallet } from 'lucide-react'
 
 export default function OfflinePage() {
   const [cachedPages, setCachedPages] = useState<string[]>([])
@@ -23,17 +24,17 @@ export default function OfflinePage() {
     }
   }, [])
 
-  const PAGE_LABELS: Record<string, string> = {
-    '/explore':      '🛕 Temple Directory',
-    '/plan':         '�UDDE0 AI Yatra Planner',
-    '/manifest':     '🙏 Manifest',
-    '/yatra/goals':  '💰 Savings Goals',
+  const PAGE_LABELS: Record<string, { icon: JSX.Element; label: string }> = {
+    '/explore':      { icon: <Landmark size={18}/>,  label: 'Temple Directory' },
+    '/plan':         { icon: <Bot size={18}/>,       label: 'AI Yatra Planner' },
+    '/manifest':     { icon: <HandHeart size={18}/>, label: 'Manifest' },
+    '/yatra/goals':  { icon: <Wallet size={18}/>,    label: 'Savings Goals' },
   }
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 20, background: '#FDFAF6', padding: 24, textAlign: 'center' }}>
       
-      <div style={{ fontSize: 72 }}>🛕</div>
+      <Landmark size={64} color="#8B1A1A" />
       
       <div>
         <h1 style={{ fontSize: 28, color: '#8B1A1A', fontFamily: "'Cormorant Garamond', serif", marginBottom: 8 }}>
@@ -54,8 +55,8 @@ export default function OfflinePage() {
             {cachedPages.map(p => (
               <Link key={p} href={p}
                 style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '12px 16px', borderRadius: 10, background: 'white', border: '1.5px solid #E8E0D4', textDecoration: 'none', color: '#1A1A1A', fontSize: 14, fontWeight: 500 }}>
-                <span style={{ fontSize: 18 }}>{PAGE_LABELS[p]?.split(' ')[0] || '📍'}</span>
-                {PAGE_LABELS[p]?.slice(2) || p}
+                <span style={{ display: 'inline-flex', alignItems: 'center' }}>{PAGE_LABELS[p]?.icon || <MapPin size={18}/>}</span>
+                {PAGE_LABELS[p]?.label || p}
               </Link>
             ))}
           </div>

@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
+import { Bot, HandHeart, Landmark, Tv } from 'lucide-react'
 
 export default function SplashScreen() {
   const audioRef = useRef<HTMLAudioElement>(null)
@@ -105,7 +106,7 @@ export default function SplashScreen() {
           {/* Divider */}
           <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:32,width:'100%',maxWidth:400}}>
             <div style={{flex:1,height:1,background:'linear-gradient(to right,transparent,#FFD4B8)'}} />
-            <span style={{color:'#C0570A',fontSize:18}}>🛕</span>
+            <span style={{color:'#C0570A',display:'inline-flex'}}><Landmark size={18}/></span>
             <div style={{flex:1,height:1,background:'linear-gradient(to left,transparent,#FFD4B8)'}} />
           </div>
 
@@ -128,13 +129,13 @@ export default function SplashScreen() {
           {/* 4 pillars */}
           <div style={{display:'flex',gap:24,marginBottom:40,flexWrap:'wrap',justifyContent:'center'}}>
             {[
-              {icon:'🛕',label:'422 Temples'},
-              {icon:'📺',label:'Live Darshan'},
-              {icon:'🤖',label:'AI Planner'},
-              {icon:'🙏',label:'Sankalp'},
+              {icon:<Landmark size={24}/>,label:'422 Temples'},
+              {icon:<Tv size={24}/>,label:'Live Darshan'},
+              {icon:<Bot size={24}/>,label:'AI Planner'},
+              {icon:<HandHeart size={24}/>,label:'Sankalp'},
             ].map(p => (
               <div key={p.label} style={{textAlign:'center'}}>
-                <div style={{fontSize:24,marginBottom:4}}>{p.icon}</div>
+                <div style={{marginBottom:4,display:'flex',justifyContent:'center',color:'#C0570A'}}>{p.icon}</div>
                 <div style={{fontSize:11,fontWeight:700,color:'#8B1A1A',letterSpacing:'.08em',textTransform:'uppercase'}}>{p.label}</div>
               </div>
             ))}
@@ -150,7 +151,7 @@ export default function SplashScreen() {
             animation:'pulse 2s ease-in-out infinite',
             display:'flex',alignItems:'center',gap:10,marginBottom:16,
           }}>
-            🙏 Begin My Sacred Journey
+            <HandHeart size={18}/> Begin My Sacred Journey
           </div>
 
           <p style={{fontSize:13,color:'#A89B8C',display:'flex',alignItems:'center',gap:6}}>

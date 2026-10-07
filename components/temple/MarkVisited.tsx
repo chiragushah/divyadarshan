@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { CheckCircle, Loader2, Star } from 'lucide-react'
+import { CheckCircle, HandHeart, Landmark, Loader2, Star } from 'lucide-react'
 import { useSession } from 'next-auth/react'
 
 const VERIFY_QUESTIONS = [
@@ -66,14 +66,14 @@ export default function MarkVisited({ templeSlug, templeName }: { templeSlug: st
           <div style={{ background:'white', borderRadius:20, padding:28, maxWidth:440, width:'100%', boxShadow:'0 24px 80px rgba(0,0,0,0.2)' }}>
             {verifyDone ? (
               <div style={{ textAlign:'center', padding:'20px 0' }}>
-                <div style={{ fontSize:48, marginBottom:12 }}>🙏</div>
+                <div style={{ display:'flex', justifyContent:'center', marginBottom:12 }}><HandHeart size={40} color="#8B1A1A" /></div>
                 <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:20, color:'#8B1A1A', marginBottom:8 }}>Thank You!</h3>
                 <p style={{ color:'#6B5B4E', fontSize:13 }}>Your verification helps all pilgrims get accurate information. You earned 5 karma points!</p>
               </div>
             ) : (
               <>
                 <div style={{ textAlign:'center', marginBottom:20 }}>
-                  <div style={{ fontSize:36, marginBottom:8 }}>🛕</div>
+                  <div style={{ display:'flex', justifyContent:'center', marginBottom:8 }}><Landmark size={32} color="#8B1A1A" /></div>
                   <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:18, color:'#8B1A1A', marginBottom:4 }}>You visited {templeName}!</h3>
                   <p style={{ color:'#6B5B4E', fontSize:13 }}>Help other pilgrims — were the details accurate? Takes 30 seconds.</p>
                 </div>
@@ -104,7 +104,7 @@ export default function MarkVisited({ templeSlug, templeName }: { templeSlug: st
 
                 <div style={{ display:'flex', gap:10 }}>
                   <button onClick={() => setShowVerify(false)} style={{ flex:1, padding:'10px 0', borderRadius:10, border:'1.5px solid #E8E0D4', background:'white', color:'#6B5B4E', fontWeight:600, fontSize:13, cursor:'pointer' }}>Skip</button>
-                  <button onClick={submitVerification} style={{ flex:2, padding:'10px 0', borderRadius:10, border:'none', background:'#8B1A1A', color:'white', fontWeight:700, fontSize:13, cursor:'pointer' }}>Submit Verification 🙏</button>
+                  <button onClick={submitVerification} style={{ flex:2, padding:'10px 0', borderRadius:10, border:'none', background:'#8B1A1A', color:'white', fontWeight:700, fontSize:13, cursor:'pointer', display:'inline-flex', alignItems:'center', justifyContent:'center', gap:6 }}>Submit Verification <HandHeart size={14} /></button>
                 </div>
               </>
             )}

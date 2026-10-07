@@ -1,6 +1,7 @@
 export const dynamic = 'force-dynamic'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Castle, Flame, Globe, HandHeart, Landmark, Mountain, Music, Swords, Waves, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Pilgrimage Circuits — DivyaDarshanam',
@@ -9,84 +10,84 @@ export const metadata: Metadata = {
 
 const CIRCUITS = [
   {
-    id: 'chardham', name: 'Char Dham Yatra', region: 'Uttarakhand', icon: '⛰️',
+    id: 'chardham', name: 'Char Dham Yatra', region: 'Uttarakhand', icon: <Mountain size={28} />,
     temples: 4, days: '10–14', budget: '₹25,000–60,000',
     tags: ['Himalayan', 'Bucket List', 'Shiva + Vishnu'],
     desc: 'The four holiest dhams — Badrinath, Kedarnath, Gangotri, Yamunotri. Open May to November only.',
     stops: ['Haridwar', 'Yamunotri', 'Gangotri', 'Kedarnath', 'Badrinath', 'Rishikesh'],
   },
   {
-    id: 'ashtavinayak', name: 'Ashtavinayak Circuit', region: 'Maharashtra', icon: '🐘',
+    id: 'ashtavinayak', name: 'Ashtavinayak Circuit', region: 'Maharashtra', icon: <Landmark size={28} />,
     temples: 8, days: '2–3', budget: '₹4,000–8,000',
     tags: ['Weekend', 'Ganesha', 'Road Trip'],
     desc: 'Eight self-manifested Ganesha temples in a circle around Pune. Best done by car.',
     stops: ['Morgaon', 'Siddhatek', 'Pali', 'Mahad', 'Theur', 'Lenyadri', 'Ozar', 'Ranjangaon'],
   },
   {
-    id: 'jyotirlinga', name: '12 Jyotirlingas', region: 'All India', icon: '🕉️',
+    id: 'jyotirlinga', name: '12 Jyotirlingas', region: 'All India', icon: <Flame size={28} />,
     temples: 12, days: '15–21', budget: '₹60,000–1,50,000',
     tags: ['Lifetime', 'Shiva', 'All India'],
     desc: 'The 12 self-manifested Shiva shrines from Somnath to Kedarnath. The ultimate Shaiva pilgrimage.',
     stops: ['Somnath', 'Mallikarjuna', 'Mahakaleshwar', 'Omkareshwar', 'Kedarnath', 'Bhimashankar', 'Kashi Vishwanath', 'Trimbakeshwar', 'Vaidyanath', 'Nageshwar', 'Ramanathaswamy', 'Grishneshwar'],
   },
   {
-    id: 'shakti-peetha', name: 'Shakti Peetha Circuit', region: 'All India', icon: '⚡',
+    id: 'shakti-peetha', name: 'Shakti Peetha Circuit', region: 'All India', icon: <Zap size={28} />,
     temples: 51, days: '21–30', budget: '₹1,00,000+',
     tags: ['Lifetime', 'Shakti', 'All India'],
     desc: "51 sites where Sati's body parts fell. From Kamakhya in Assam to Kanyakumari in the south.",
     stops: ['Kamakhya', 'Kalighat', 'Vaishno Devi', 'Jwala Ji', 'Chamundeshwari', 'Kanchi Kamakshi', 'Kanyakumari', 'Kolhapur Mahalaxmi'],
   },
   {
-    id: 'divya-desam', name: '108 Divya Desams', region: 'South India + Nepal', icon: '🙏',
+    id: 'divya-desam', name: '108 Divya Desams', region: 'South India + Nepal', icon: <HandHeart size={28} />,
     temples: 108, days: '21–45', budget: '₹80,000–2,00,000',
     tags: ['Lifetime', 'Vishnu', 'South India'],
     desc: '108 Vishnu temples glorified by the Alvar saints. 105 in India, 1 in Nepal, 2 ethereal.',
     stops: ['Tirumala', 'Srirangam', 'Badrinath', 'Guruvayur', 'Padmanabhaswamy'],
   },
   {
-    id: 'pancha-bhuta', name: 'Pancha Bhuta Stalas', region: 'Tamil Nadu + AP', icon: '🌊',
+    id: 'pancha-bhuta', name: 'Pancha Bhuta Stalas', region: 'Tamil Nadu + AP', icon: <Waves size={28} />,
     temples: 5, days: '5–7', budget: '₹12,000–25,000',
     tags: ['5 Elements', 'Shiva', 'Tamil Nadu'],
     desc: 'Five Shiva temples representing the five elements — earth, water, fire, air, sky.',
     stops: ['Ekambareswarar (Earth)', 'Jambukeswarar (Water)', 'Arunachaleswarar (Fire)', 'Srikalahasti (Air)', 'Chidambaram (Sky)'],
   },
   {
-    id: 'panch-kedar', name: 'Panch Kedar', region: 'Uttarakhand', icon: '🏔️',
+    id: 'panch-kedar', name: 'Panch Kedar', region: 'Uttarakhand', icon: <Mountain size={28} />,
     temples: 5, days: '10–14', budget: '₹30,000–60,000',
     tags: ['Trekking', 'Shiva', 'Himalayan'],
     desc: 'Five Shiva shrines in Garhwal Himalayas where different body parts of the bull (Shiva) were found.',
     stops: ['Kedarnath', 'Tungnath', 'Rudranath', 'Madhyamaheshwar', 'Kalpeshwar'],
   },
   {
-    id: 'murugan-arupadai', name: 'Aarupadai Veedu', region: 'Tamil Nadu', icon: '🗡️',
+    id: 'murugan-arupadai', name: 'Aarupadai Veedu', region: 'Tamil Nadu', icon: <Swords size={28} />,
     temples: 6, days: '5–7', budget: '₹10,000–20,000',
     tags: ['Murugan', 'Tamil Nadu', 'Circuit'],
     desc: 'Six sacred abodes of Lord Murugan/Kartikeya. Each with a distinct legend and character.',
     stops: ['Palani', 'Tiruchendur', 'Swamimalai', 'Tirupparankundram', 'Pazhamudircholai', 'Tiruttani'],
   },
   {
-    id: 'navagraha', name: 'Navagraha Circuit', region: 'Tamil Nadu', icon: '🪐',
+    id: 'navagraha', name: 'Navagraha Circuit', region: 'Tamil Nadu', icon: <Globe size={28} />,
     temples: 9, days: '2–3', budget: '₹6,000–12,000',
     tags: ['Planets', 'Tamil Nadu', 'Astrology'],
     desc: 'Nine temples near Kumbakonam each dedicated to one of the nine planetary deities (Navagrahas).',
     stops: ['Suryanar Kovil', 'Thingalur', 'Vaitheeswaran Koil', 'Thirunallar', 'Alangudi', 'Keezhperumpallam', 'Thiruvenkadu', 'Kanjanur', 'Keezhaiyur'],
   },
   {
-    id: 'kashi-panchkoshi', name: 'Kashi Panchakoshi Yatra', region: 'Uttar Pradesh', icon: '🏛️',
+    id: 'kashi-panchkoshi', name: 'Kashi Panchakoshi Yatra', region: 'Uttar Pradesh', icon: <Landmark size={28} />,
     temples: 108, days: '5', budget: '₹5,000–15,000',
     tags: ['Varanasi', 'Shiva', 'On foot'],
     desc: 'Sacred circumambulation of Kashi (Varanasi) — 88km on foot, visiting 108 shrines over 5 days.',
     stops: ['Kashi Vishwanath', 'Manikarnika Ghat', 'Sankat Mochan', 'Durga Kund', 'Bharat Mata Mandir'],
   },
   {
-    id: 'vrindavan-sapta-devalayas', name: 'Vrindavan Sapta Devalayas', region: 'Uttar Pradesh', icon: '🪈',
+    id: 'vrindavan-sapta-devalayas', name: 'Vrindavan Sapta Devalayas', region: 'Uttar Pradesh', icon: <Music size={28} />,
     temples: 7, days: '2–3', budget: '₹4,000–8,000',
     tags: ['Krishna', 'Braj', 'Vaishnava'],
     desc: 'Seven principal temples of Vrindavan established by the six Goswamis of Chaitanya Mahaprabhu.',
     stops: ['Govindaji', 'Gopinath', 'Madan Mohan', 'Radha Raman', 'Radha Damodar', 'Jugal Kishore', 'Radha Shyamsundar'],
   },
   {
-    id: 'south-india-grand', name: 'South India Grand Circuit', region: 'Tamil Nadu + Kerala + Karnataka', icon: '🏰',
+    id: 'south-india-grand', name: 'South India Grand Circuit', region: 'Tamil Nadu + Kerala + Karnataka', icon: <Castle size={28} />,
     temples: 20, days: '14–21', budget: '₹40,000–90,000',
     tags: ['Dravidian', 'UNESCO', 'All deities'],
     desc: "The grand tour of South India's temple heritage — Chola temples, Kerala shrines, Karnataka wonders.",
@@ -109,7 +110,7 @@ export default function CircuitsPage() {
             {/* Header */}
             <div className="px-5 py-4" style={{ background: 'linear-gradient(135deg, var(--crim-dk), var(--crimson))' }}>
               <div className="flex items-center gap-3">
-                <span className="text-3xl">{c.icon}</span>
+                <span style={{ color: '#FAF7F2', display: 'inline-flex' }}>{c.icon}</span>
                 <div>
                   <h2 className="font-serif text-lg font-medium leading-tight" style={{ color: '#FAF7F2' }}>{c.name}</h2>
                   <p className="text-xs" style={{ color: 'rgba(237,224,196,.6)' }}>{c.region}</p>

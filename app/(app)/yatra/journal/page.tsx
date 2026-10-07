@@ -3,7 +3,7 @@ export const dynamic = 'force-dynamic'
 import { useState, useEffect, useRef } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { Loader2, Plus, Trash2, Camera } from 'lucide-react'
+import { BookOpen, Camera, Landmark, Loader2, Plus, Trash2 } from 'lucide-react'
 import { relativeTime, formatINR } from '@/lib/utils'
 import type { JournalEntry } from '@/types'
 
@@ -77,7 +77,7 @@ export default function JournalPage() {
   if (status === 'unauthenticated') {
     return (
       <div className="max-w-lg mx-auto px-6 py-20 text-center">
-        <div className="text-5xl mb-4">📖</div>
+        <div className="mb-4"><BookOpen size={40} style={{ display: 'inline-block', color: 'var(--crimson)' }} /></div>
         <h1 className="font-serif text-3xl font-medium mb-3">My Journal</h1>
         <p className="text-sm mb-6" style={{ color: 'var(--muted)' }}>Sign in to start your pilgrimage diary. Log visits, attach photos, and build your lifetime yatra passport.</p>
         <Link href="/auth/signin" className="btn btn-primary">Sign in to start</Link>
@@ -190,7 +190,7 @@ export default function JournalPage() {
         <div className="space-y-4">{[1,2,3].map(i => <div key={i} className="skeleton h-32 rounded-xl" />)}</div>
       ) : entries.length === 0 ? (
         <div className="text-center py-16">
-          <div className="text-5xl mb-4">🛕</div>
+          <div className="mb-4"><Landmark size={40} style={{ display: 'inline-block', color: 'var(--crimson)' }} /></div>
           <h3 className="font-serif text-2xl font-medium mb-2">Your journey begins here</h3>
           <p className="text-sm mb-6" style={{ color: 'var(--muted)' }}>Log your first temple visit and start building your pilgrimage passport.</p>
           <button onClick={() => setShowForm(true)} className="btn btn-primary">Log First Visit</button>

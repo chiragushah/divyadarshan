@@ -1,7 +1,7 @@
 'use client'
 export const dynamic = 'force-dynamic'
 import { useState } from 'react'
-import { Loader2, CheckSquare, Square } from 'lucide-react'
+import { CheckSquare, Lightbulb, Loader2, PartyPopper, Square } from 'lucide-react'
 
 interface ChecklistItem {
   name: string
@@ -166,14 +166,14 @@ export default function ChecklistPage() {
                 style={{ width: `${progress}%`, background: progress === 100 ? '#2E7D32' : 'var(--crimson)' }} />
             </div>
             {progress === 100 && (
-              <p className="text-sm mt-2 font-medium" style={{ color: '#2E7D32' }}>🎉 You're all packed! Have a blessed yatra.</p>
+              <p className="text-sm mt-2 font-medium" style={{ color: '#2E7D32' }}><PartyPopper size={15} style={{ display: 'inline', verticalAlign: '-2px' }} /> You're all packed! Have a blessed yatra.</p>
             )}
           </div>
 
           {/* Destination tips */}
           {tips.length > 0 && (
             <div className="card card-p mb-6" style={{ background: 'var(--ivory2)' }}>
-              <div className="section-title mb-2">💡 Destination Tips</div>
+              <div className="section-title mb-2" style={{ display: 'flex', alignItems: 'center', gap: 6 }}><Lightbulb size={14} /> Destination Tips</div>
               <ul className="space-y-1.5">
                 {tips.map((tip, i) => (
                   <li key={i} className="text-sm flex items-start gap-2" style={{ color: 'var(--muted)' }}>

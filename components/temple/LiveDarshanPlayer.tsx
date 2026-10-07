@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import { HandHeart, Landmark, Radio, Tv } from 'lucide-react'
 
 interface Props {
   channelId?: string | null
@@ -41,13 +42,13 @@ export default function LiveDarshanPlayer({
             style={{ flex: 1, padding: '10px', fontSize: 13, fontWeight: 600, cursor: 'pointer', border: 'none',
               background: activeTab === 'direct' ? '#8B1A1A' : 'transparent',
               color: activeTab === 'direct' ? 'white' : '#888' }}>
-            🔴 Official Stream
+            <span style={{ display:'inline-flex', alignItems:'center', justifyContent:'center', gap:6 }}><Radio size={14} /> Official Stream</span>
           </button>
           <button onClick={() => setActiveTab('youtube')}
             style={{ flex: 1, padding: '10px', fontSize: 13, fontWeight: 600, cursor: 'pointer', border: 'none',
               background: activeTab === 'youtube' ? '#8B1A1A' : 'transparent',
               color: activeTab === 'youtube' ? 'white' : '#888' }}>
-            📺 YouTube Live
+            <span style={{ display:'inline-flex', alignItems:'center', justifyContent:'center', gap:6 }}><Tv size={14} /> YouTube Live</span>
           </button>
         </div>
       )}
@@ -56,7 +57,7 @@ export default function LiveDarshanPlayer({
       <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
         {loading && (
           <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#0a0a0a', gap: 12 }}>
-            <div style={{ fontSize: 40 }}>🛕</div>
+            <Landmark size={36} color="#C0570A" />
             <p style={{ color: '#888', fontSize: 13 }}>Connecting to live stream...</p>
           </div>
         )}
@@ -83,7 +84,7 @@ export default function LiveDarshanPlayer({
               />
             ) : (
               <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#0a0a0a', gap: 16, padding: 24 }}>
-                <div style={{ fontSize: 48 }}>🙏</div>
+                <HandHeart size={40} color="#C0570A" />
                 <p style={{ color: '#ccc', fontSize: 15, fontWeight: 600, textAlign: 'center' }}>{templeName}</p>
                 <p style={{ color: '#888', fontSize: 13, textAlign: 'center' }}>Live stream may not be active right now</p>
                 {ytChannel && (

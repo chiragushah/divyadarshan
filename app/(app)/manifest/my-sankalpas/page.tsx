@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
+import { HandHeart, Landmark } from 'lucide-react'
 
 const STATUS_COLORS: Record<string,string> = { active:'#166534', fulfilled:'#1E40AF', released:'#6B5B4E' }
 const STATUS_BG: Record<string,string> = { active:'#DCFCE7', fulfilled:'#DBEAFE', released:'#F8F4EE' }
@@ -27,7 +28,7 @@ export default function MySankalpasPage() {
 
   if (!session) return (
     <div style={{ maxWidth:500, margin:'80px auto', textAlign:'center', padding:24 }}>
-      <div style={{ fontSize:48, marginBottom:16 }}>🙏</div>
+      <div style={{ marginBottom:16, display:'flex', justifyContent:'center' }}><HandHeart size={44} color="#8B1A1A" /></div>
       <h2 style={{ fontFamily:"'Playfair Display',serif", color:'#8B1A1A', marginBottom:12 }}>Sign in to view your Sankalpas</h2>
       <Link href="/auth/signin" style={{ background:'#8B1A1A', color:'white', borderRadius:12, padding:'12px 28px', textDecoration:'none', fontWeight:700 }}>Sign In</Link>
     </div>
@@ -47,7 +48,7 @@ export default function MySankalpasPage() {
       {loading ? <div style={{ textAlign:'center', padding:48, color:'#A89B8C' }}>Loading your sankalpas...</div> :
        sankalpas.length === 0 ? (
         <div style={{ textAlign:'center', padding:48 }}>
-          <div style={{ fontSize:48, marginBottom:16 }}>🛕</div>
+          <div style={{ marginBottom:16, display:'flex', justifyContent:'center' }}><Landmark size={44} color="#8B1A1A" /></div>
           <p style={{ color:'#6B5B4E', marginBottom:20 }}>No sankalpas yet. Write your first sacred intention.</p>
           <Link href="/manifest/write" style={{ background:'#8B1A1A', color:'white', borderRadius:12, padding:'12px 28px', textDecoration:'none', fontWeight:700 }}>Write My Sankalp</Link>
         </div>
@@ -64,7 +65,7 @@ export default function MySankalpasPage() {
                   </div>
                   <p style={{ fontSize:15, color:'#1A0A00', lineHeight:1.7, margin:'0 0 8px' }}>{s.intention}</p>
                   {s.timeline && <div style={{ fontSize:12, color:'#A89B8C' }}>Timeline: {s.timeline}</div>}
-                  {s.gratitude_yatra && <div style={{ fontSize:12, color:'#C0570A', marginTop:4 }}>🛕 Gratitude Yatra pledged</div>}
+                  {s.gratitude_yatra && <div style={{ fontSize:12, color:'#C0570A', marginTop:4, display:'flex', alignItems:'center', gap:5 }}><Landmark size={13} /> Gratitude Yatra pledged</div>}
                   {s.fulfilled_note && <div style={{ fontSize:13, color:'#1E40AF', marginTop:8, fontStyle:'italic' }}>"{s.fulfilled_note}"</div>}
                 </div>
                 <div style={{ fontSize:11, color:'#A89B8C', flexShrink:0, textAlign:'right' }}>
@@ -92,7 +93,7 @@ export default function MySankalpasPage() {
 
               {s.status === 'fulfilled' && s.gratitude_yatra && (
                 <Link href={'/plan?destination=' + (s.temple_name || s.deity)} style={{ display:'inline-flex', alignItems:'center', gap:6, marginTop:12, background:'#8B1A1A', color:'white', border:'none', borderRadius:8, padding:'10px 18px', fontSize:13, fontWeight:700, textDecoration:'none' }}>
-                  🛕 Plan Your Gratitude Yatra Now
+                  <Landmark size={15} /> Plan Your Gratitude Yatra Now
                 </Link>
               )}
             </div>

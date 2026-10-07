@@ -1,13 +1,14 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import { AlertTriangle, BookOpen, CalendarDays, Circle, Dumbbell, Flame, Flower2, Gem, Globe, HandHeart, Landmark, Moon, Music, Sparkles, Sun, Swords } from 'lucide-react'
 
 const YT_BASE = 'https://www.youtube.com/results?search_query='
 
 const DEITIES = [
   {
     name: 'Ganesha',
-    emoji: '🐘',
+    icon: <Sparkles size={28} color="#E65100" />,
     domain: 'New Beginnings · Removing Obstacles · Business',
     color: '#E65100',
     bg: '#FFF3E0',
@@ -23,7 +24,7 @@ const DEITIES = [
   },
   {
     name: 'Lakshmi',
-    emoji: '🌸',
+    icon: <Flower2 size={28} color="#6A1B9A" />,
     domain: 'Wealth · Abundance · Prosperity · Business',
     color: '#6A1B9A',
     bg: '#F3E5F5',
@@ -39,7 +40,7 @@ const DEITIES = [
   },
   {
     name: 'Durga',
-    emoji: '⚔️',
+    icon: <Swords size={28} color="#B71C1C" />,
     domain: 'Strength · Protection · Courage · Adversity',
     color: '#B71C1C',
     bg: '#FFEBEE',
@@ -55,7 +56,7 @@ const DEITIES = [
   },
   {
     name: 'Shiva',
-    emoji: '🔱',
+    icon: <Flame size={28} color="#1565C0" />,
     domain: 'Healing · Peace · Spiritual Growth · Liberation',
     color: '#1565C0',
     bg: '#E3F2FD',
@@ -71,7 +72,7 @@ const DEITIES = [
   },
   {
     name: 'Krishna',
-    emoji: '🪈',
+    icon: <Music size={28} color="#0277BD" />,
     domain: 'Love · Relationships · Joy · Devotion',
     color: '#0277BD',
     bg: '#E1F5FE',
@@ -87,7 +88,7 @@ const DEITIES = [
   },
   {
     name: 'Saraswati',
-    emoji: '📚',
+    icon: <BookOpen size={28} color="#00695C" />,
     domain: 'Knowledge · Exams · Wisdom · Speech · Arts',
     color: '#00695C',
     bg: '#E0F2F1',
@@ -103,7 +104,7 @@ const DEITIES = [
   },
   {
     name: 'Hanuman',
-    emoji: '💪',
+    icon: <Dumbbell size={28} color="#E65100" />,
     domain: 'Courage · Health · Devotion · Protection · Success',
     color: '#E65100',
     bg: '#FBE9E7',
@@ -119,7 +120,7 @@ const DEITIES = [
   },
   {
     name: 'Parvati',
-    emoji: '🌙',
+    icon: <Moon size={28} color="#AD1457" />,
     domain: 'Marriage · Family · Children · Relationships',
     color: '#AD1457',
     bg: '#FCE4EC',
@@ -135,7 +136,7 @@ const DEITIES = [
   },
   {
     name: 'Kali',
-    emoji: '🌺',
+    icon: <Flower2 size={28} color="#4A148C" />,
     domain: 'Transformation · Breaking Negative Cycles · Fear Removal',
     color: '#4A148C',
     bg: '#EDE7F6',
@@ -153,7 +154,7 @@ const DEITIES = [
 
 const NAVAGRAHA = [
   {
-    name: 'Surya', planet: 'Sun ☀️', number: 1,
+    name: 'Surya', planet: 'Sun', number: 1, icon: <Sun size={28} color="#E65100" />,
     domain: 'Career · Authority · Government · Father · Eye Health',
     color: '#E65100', bg: '#FFF3E0', border: '#FFB74D',
     shloka_hi: 'जपाकुसुम संकाशं काश्यपेयं महाद्युतिम्।\nतमोऽरिं सर्वपापघ्नं प्रणतोऽस्मि दिवाकरम्॥',
@@ -166,7 +167,7 @@ const NAVAGRAHA = [
     gemstone: 'Ruby', color_gem: 'Red', metal: 'Gold',
   },
   {
-    name: 'Chandra', planet: 'Moon 🌙', number: 2,
+    name: 'Chandra', planet: 'Moon', number: 2, icon: <Moon size={28} color="#0277BD" />,
     domain: 'Mind · Mother · Emotions · Fertility · Peace',
     color: '#0277BD', bg: '#E1F5FE', border: '#81D4FA',
     shloka_hi: 'दधिशंखतुषाराभं क्षीरोदार्णव संभवम्।\nनमामि शशिनं सोमं शम्भोर्मुकुट भूषणम्॥',
@@ -179,7 +180,7 @@ const NAVAGRAHA = [
     gemstone: 'Pearl', color_gem: 'White', metal: 'Silver',
   },
   {
-    name: 'Mangal', planet: 'Mars 🔴', number: 3,
+    name: 'Mangal', planet: 'Mars', number: 3, icon: <Circle size={22} fill="#B71C1C" color="#B71C1C" />,
     domain: 'Energy · Property · Siblings · Courage · Surgery',
     color: '#B71C1C', bg: '#FFEBEE', border: '#EF9A9A',
     shloka_hi: 'धरणीगर्भसंभूतं विद्युत्कान्तिसमप्रभम्।\nकुमारं शक्तिहस्तं च मंगलं प्रणमाम्यहम्॥',
@@ -192,7 +193,7 @@ const NAVAGRAHA = [
     gemstone: 'Red Coral', color_gem: 'Red', metal: 'Copper',
   },
   {
-    name: 'Budha', planet: 'Mercury 🟢', number: 4,
+    name: 'Budha', planet: 'Mercury', number: 4, icon: <Circle size={22} fill="#2E7D32" color="#2E7D32" />,
     domain: 'Intelligence · Business · Speech · Education · Skin',
     color: '#2E7D32', bg: '#E8F5E9', border: '#A5D6A7',
     shloka_hi: 'प्रियंगुकलिकाश्यामं रूपेणाप्रतिमं बुधम्।\nसौम्यं सौम्यगुणोपेतं तं बुधं प्रणमाम्यहम्॥',
@@ -205,7 +206,7 @@ const NAVAGRAHA = [
     gemstone: 'Emerald', color_gem: 'Green', metal: 'Bronze',
   },
   {
-    name: 'Brihaspati', planet: 'Jupiter 🟡', number: 5,
+    name: 'Brihaspati', planet: 'Jupiter', number: 5, icon: <Circle size={22} fill="#F57F17" color="#F57F17" />,
     domain: 'Wisdom · Wealth · Marriage · Children · Guru · Legal',
     color: '#F57F17', bg: '#FFFDE7', border: '#FFF176',
     shloka_hi: 'देवानां च ऋषीणां च गुरुं काञ्चनसन्निभम्।\nबुद्धिभूतं त्रिलोकेशं तं नमामि बृहस्पतिम्॥',
@@ -218,7 +219,7 @@ const NAVAGRAHA = [
     gemstone: 'Yellow Sapphire', color_gem: 'Yellow', metal: 'Gold',
   },
   {
-    name: 'Shukra', planet: 'Venus ⚪', number: 6,
+    name: 'Shukra', planet: 'Venus', number: 6, icon: <Circle size={22} fill="#880E4F" color="#880E4F" />,
     domain: 'Love · Marriage · Beauty · Luxury · Creativity · Vehicles',
     color: '#880E4F', bg: '#FCE4EC', border: '#F48FB1',
     shloka_hi: 'हिमकुन्दमृणालाभं दैत्यानां परमं गुरुम्।\nसर्वशास्त्रप्रवक्तारं भार्गवं प्रणमाम्यहम्॥',
@@ -231,7 +232,7 @@ const NAVAGRAHA = [
     gemstone: 'Diamond', color_gem: 'White/Clear', metal: 'Silver',
   },
   {
-    name: 'Shani', planet: 'Saturn 🟤', number: 7,
+    name: 'Shani', planet: 'Saturn', number: 7, icon: <Circle size={22} fill="#37474F" color="#37474F" />,
     domain: 'Karma · Justice · Discipline · Delays · Longevity · Sade Sati',
     color: '#37474F', bg: '#ECEFF1', border: '#B0BEC5',
     shloka_hi: 'नीलांजनसमाभासं रविपुत्रं यमाग्रजम्।\nछायामार्तण्डसंभूतं तं नमामि शनैश्चरम्॥',
@@ -244,7 +245,7 @@ const NAVAGRAHA = [
     gemstone: 'Blue Sapphire', color_gem: 'Dark Blue', metal: 'Iron',
   },
   {
-    name: 'Rahu', planet: 'Rahu 🔵', number: 8,
+    name: 'Rahu', planet: 'Rahu', number: 8, icon: <Circle size={22} fill="#1A237E" color="#1A237E" />,
     domain: 'Foreign Lands · Technology · Sudden Events · Unconventional',
     color: '#1A237E', bg: '#E8EAF6', border: '#9FA8DA',
     shloka_hi: 'अर्धकायं महावीर्यं चन्द्रादित्यविमर्दनम्।\nसिंहिकागर्भसंभूतं तं राहुं प्रणमाम्यहम्॥',
@@ -257,7 +258,7 @@ const NAVAGRAHA = [
     gemstone: 'Hessonite (Gomed)', color_gem: 'Honey/Brown', metal: 'Lead',
   },
   {
-    name: 'Ketu', planet: 'Ketu ⚫', number: 9,
+    name: 'Ketu', planet: 'Ketu', number: 9, icon: <Circle size={22} fill="#4E342E" color="#4E342E" />,
     domain: 'Spirituality · Liberation · Past Life Karma · Moksha',
     color: '#4E342E', bg: '#EFEBE9', border: '#BCAAA4',
     shloka_hi: 'पलाशपुष्पसंकाशं तारकाग्रहमस्तकम्।\nरौद्रं रौद्रात्मकं घोरं तं केतुं प्रणमाम्यहम्॥',
@@ -285,7 +286,7 @@ function ShlokaCard({ item, type }: { item: any, type: 'deity' | 'graha' }) {
   return (
     <div style={{ background: item.bg, border: '1.5px solid ' + item.border, borderRadius: 16, padding: 20, transition: 'all 0.2s' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
-        <span style={{ fontSize: 32 }}>{item.emoji || item.planet?.split(' ')[1]}</span>
+        <span style={{ display: 'inline-flex', alignItems: 'center' }}>{item.icon}</span>
         <div style={{ flex: 1 }}>
           <div style={{ fontWeight: 700, fontSize: 17, color: item.color, fontFamily: "'Playfair Display',serif" }}>{item.name}</div>
           <div style={{ fontSize: 11, color: '#6B5B4E', marginTop: 2 }}>{item.domain}</div>
@@ -297,16 +298,16 @@ function ShlokaCard({ item, type }: { item: any, type: 'deity' | 'graha' }) {
 
       {type === 'graha' && (
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
-          <span style={{ fontSize: 11, padding: '3px 8px', borderRadius: 100, background: 'white', color: item.color, fontWeight: 600, border: '1px solid ' + item.border }}>💎 {item.gemstone}</span>
-          <span style={{ fontSize: 11, padding: '3px 8px', borderRadius: 100, background: 'white', color: item.color, fontWeight: 600, border: '1px solid ' + item.border }}>📅 {item.chant_day}</span>
-          <span style={{ fontSize: 11, padding: '3px 8px', borderRadius: 100, background: 'white', color: item.color, fontWeight: 600, border: '1px solid ' + item.border }}>🕉️ {item.chant_count}</span>
+          <span style={{ fontSize: 11, padding: '3px 8px', borderRadius: 100, background: 'white', color: item.color, fontWeight: 600, border: '1px solid ' + item.border, display: 'inline-flex', alignItems: 'center', gap: 4 }}><Gem size={12} /> {item.gemstone}</span>
+          <span style={{ fontSize: 11, padding: '3px 8px', borderRadius: 100, background: 'white', color: item.color, fontWeight: 600, border: '1px solid ' + item.border, display: 'inline-flex', alignItems: 'center', gap: 4 }}><CalendarDays size={12} /> {item.chant_day}</span>
+          <span style={{ fontSize: 11, padding: '3px 8px', borderRadius: 100, background: 'white', color: item.color, fontWeight: 600, border: '1px solid ' + item.border, display: 'inline-flex', alignItems: 'center', gap: 4 }}><Flame size={12} /> {item.chant_count}</span>
         </div>
       )}
 
       {type === 'deity' && (
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
-          <span style={{ fontSize: 11, padding: '3px 8px', borderRadius: 100, background: 'white', color: item.color, fontWeight: 600, border: '1px solid ' + item.border }}>📅 {item.chant_day}</span>
-          <span style={{ fontSize: 11, padding: '3px 8px', borderRadius: 100, background: 'white', color: item.color, fontWeight: 600, border: '1px solid ' + item.border }}>🛕 {item.temple}</span>
+          <span style={{ fontSize: 11, padding: '3px 8px', borderRadius: 100, background: 'white', color: item.color, fontWeight: 600, border: '1px solid ' + item.border, display: 'inline-flex', alignItems: 'center', gap: 4 }}><CalendarDays size={12} /> {item.chant_day}</span>
+          <span style={{ fontSize: 11, padding: '3px 8px', borderRadius: 100, background: 'white', color: item.color, fontWeight: 600, border: '1px solid ' + item.border, display: 'inline-flex', alignItems: 'center', gap: 4 }}><Landmark size={12} /> {item.temple}</span>
         </div>
       )}
 
@@ -354,17 +355,17 @@ export default function ManifestLanding() {
           Sankalp — The Ancient Indian Art of Sacred Intention
         </p>
         <p style={{ fontSize: 14, color: '#A89B8C', fontStyle: 'italic' }}>
-          "Aham sankalpam karomi" — I make this intention 🙏
+          "Aham sankalpam karomi" — I make this intention <HandHeart size={15} style={{ display: 'inline', verticalAlign: '-2px' }} />
         </p>
       </div>
 
       {/* Tabs */}
       <div style={{ display: 'flex', background: '#F8F4EE', borderRadius: 14, padding: 4, marginBottom: 32, gap: 2 }}>
         {[
-          { id: 'intro', label: '📖 What is Sankalp' },
-          { id: 'deities', label: '🛕 Deity Guidance' },
-          { id: 'navagraha', label: '🪐 Navagraha Shanti' },
-          { id: 'disclaimer', label: '⚠️ Important Notice' },
+          { id: 'intro', label: 'What is Sankalp', icon: <BookOpen size={14} /> },
+          { id: 'deities', label: 'Deity Guidance', icon: <Landmark size={14} /> },
+          { id: 'navagraha', label: 'Navagraha Shanti', icon: <Globe size={14} /> },
+          { id: 'disclaimer', label: 'Important Notice', icon: <AlertTriangle size={14} /> },
         ].map(t => (
           <button key={t.id} onClick={() => setTab(t.id as any)} style={{
             flex: 1, padding: '10px 8px', borderRadius: 10, border: 'none', cursor: 'pointer',
@@ -372,7 +373,7 @@ export default function ManifestLanding() {
             color: tab === t.id ? '#8B1A1A' : '#A89B8C',
             fontWeight: tab === t.id ? 700 : 500, fontSize: 13, fontFamily: 'inherit',
             boxShadow: tab === t.id ? '0 1px 4px rgba(0,0,0,0.08)' : 'none',
-          }}>{t.label}</button>
+          }}><span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, justifyContent: 'center' }}>{t.icon}{t.label}</span></button>
         ))}
       </div>
 
@@ -412,7 +413,7 @@ export default function ManifestLanding() {
 
           <div style={{ textAlign: 'center' }}>
             <Link href="/manifest/write" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'linear-gradient(135deg,#8B1A1A,#C0570A)', color: 'white', borderRadius: 14, padding: '16px 36px', fontWeight: 700, fontSize: 16, textDecoration: 'none' }}>
-              🙏 Write Your Sankalp
+              <HandHeart size={18} /> Write Your Sankalp
             </Link>
             <p style={{ fontSize: 12, color: '#A89B8C', marginTop: 10 }}>Private by default · Your intentions are sacred</p>
           </div>
@@ -458,7 +459,7 @@ export default function ManifestLanding() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 16 }}>
-            {NAVAGRAHA.map(g => <ShlokaCard key={g.name} item={{ ...g, emoji: g.planet.split(' ')[1] }} type="graha" />)}
+            {NAVAGRAHA.map(g => <ShlokaCard key={g.name} item={g} type="graha" />)}
           </div>
         </div>
       )}
@@ -468,7 +469,7 @@ export default function ManifestLanding() {
         <div>
           <div style={{ background: '#FFF8F0', border: '2px solid #C0570A', borderRadius: 16, padding: 32, marginBottom: 24 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
-              <span style={{ fontSize: 32 }}>⚠️</span>
+              <AlertTriangle size={28} color="#C0570A" />
               <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 24, color: '#8B1A1A', margin: 0 }}>Important Disclaimer</h2>
             </div>
 
@@ -511,7 +512,7 @@ export default function ManifestLanding() {
             <div style={{ background: '#8B1A1A', borderRadius: 12, padding: 20, marginTop: 8 }}>
               <p style={{ fontSize: 14, color: 'white', lineHeight: 1.8, margin: 0, fontStyle: 'italic', textAlign: 'center' }}>
                 "Write with faith. Act with effort. Trust the journey.<br />
-                DivyaDarshanam is simply a sacred digital space for your intentions — nothing more, nothing less. 🙏"
+                DivyaDarshanam is simply a sacred digital space for your intentions — nothing more, nothing less. <HandHeart size={15} style={{ display: 'inline', verticalAlign: '-2px' }} />"
               </p>
             </div>
           </div>
@@ -519,7 +520,7 @@ export default function ManifestLanding() {
           <div style={{ textAlign: 'center' }}>
             <p style={{ fontSize: 13, color: '#A89B8C', marginBottom: 16 }}>By writing a Sankalp you acknowledge that you have read and understood this disclaimer.</p>
             <Link href="/manifest/write" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: '#8B1A1A', color: 'white', borderRadius: 14, padding: '14px 32px', fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
-              🙏 I Understand — Write My Sankalp
+              <HandHeart size={18} /> I Understand — Write My Sankalp
             </Link>
           </div>
         </div>
