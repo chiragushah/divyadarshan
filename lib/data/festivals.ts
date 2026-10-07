@@ -1232,6 +1232,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VAIKUNTHA EKADASHI ───────────────────────
   {
     slug: 'vaikuntha-ekadashi',
+    image: '/festivals/vaikuntha-ekadashi.jpg',
     attireByRegion: [
       { region: 'Tirumala (Andhra)', note: 'Strict temple dress code — men in dhoti/pancha with upper cloth, women in saree or salwar-kameez with dupatta; traditional only.' },
       { region: 'Srirangam (Tamil Nadu)', note: 'Men in veshti (dhoti), often bare-chested with angavastram for the sanctum; women in silk sarees for the Paramapada Vasal darshan.' },
@@ -1488,6 +1489,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RAKSHA BANDHAN ───────────────────────
   {
     slug: 'raksha-bandhan',
+    image: '/festivals/raksha-bandhan.jpg',
     foodByRegion: [
       { region: 'Rajasthan & North India', note: 'Ghevar — the signature Rakhi sweet — along with kaju katli and barfi.' },
       { region: 'Maharashtra & Konkan coast', note: 'Coconut dishes and sweets (Nariyal Purnima); shrikhand.' },
@@ -1625,6 +1627,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── AKSHAYA TRITIYA ───────────────────────
   {
     slug: 'akshaya-tritiya',
+    image: '/festivals/akshaya-tritiya.jpg',
     dates2026: '19 April 2026',
     dates2027: '8 May 2027',
     dateNote: 'Akshaya Tritiya is the Tritiya of the bright fortnight of Vaishakha; the entire day is auspicious (no muhurat needed). Dates shift across April–May each year.',
@@ -2335,6 +2338,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── ASHADHI EKADASHI / PANDHARPUR WARI ───────────────────────
   {
     slug: 'ashadhi-ekadashi-pandharpur-wari',
+    image: '/festivals/ashadhi-ekadashi-pandharpur-wari.jpg',
     dates2026: '25 July 2026 (Ashadhi/Devshayani Ekadashi); the Wari walk fills the 3 weeks before',
     dates2027: '13 July 2027',
     dateNote: 'Ashadhi Ekadashi is the Shukla Ekadashi of Ashadha; it also begins Chaturmas (Vishnu’s four-month cosmic sleep). The Wari pilgrimage culminates on this day. Dates shift across June–July.',
@@ -2786,6 +2790,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RATHA SAPTAMI ───────────────────────
   {
     slug: 'ratha-saptami',
+    image: '/festivals/ratha-saptami.jpg',
     dates2026: '25 January 2026',
     dates2027: '13 February 2027',
     dateNote: 'Ratha Saptami is the Saptami of the bright fortnight of Magha. Dates shift across January–February each year.',
