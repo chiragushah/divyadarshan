@@ -5,13 +5,25 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { Loader2 } from 'lucide-react'
 
+// Full feature list shown on the login page so users know everything they get before signing in.
 const FEATURES = [
-  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6h6M9 12h6m-6 6h3M3 9a9 9 0 1018 0 9 9 0 00-18 0z"/></svg>`, label: 'AI Yatra Planner', desc: 'Tell Claude AI your destination, days, and budget. Get a complete day-by-day pilgrimage itinerary with temple sequences, auspicious timings, stay options, and local tips.' },
-  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`, label: 'Live Darshan Streams', desc: 'Watch live darshan from 56+ major temples — Tirupati, Kashi Vishwanath, Kedarnath, Meenakshi and more. Watch morning aarti from anywhere in the world, any time.' },
-  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`, label: 'Pilgrimage Journal', desc: 'Log every temple you visit with photos, notes, and star ratings. Build your lifetime pilgrimage passport.' },
-  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>`, label: 'Yatra Savings Goals', desc: 'Set a monthly savings target for your dream yatra. Track every deposit and link to FinVerse to earn interest.' },
-  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/></svg>`, label: 'Group Expense Split', desc: 'Plan family pilgrimages without financial confusion. Log all shared costs and share settlements on WhatsApp.' },
-  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>`, label: 'Smart Packing Checklist', desc: 'Gemini AI generates destination-specific packing lists. Kedarnath needs altitude layers. Tirupati needs dhoti.' },
+  { emoji: '🛕', label: 'Temple Directory', desc: 'Browse 400+ sacred temples. Filter by deity, state, type and live darshan.' },
+  { emoji: '📍', label: 'Nearby Temples', desc: 'Find temples around you — with a direction-of-travel filter for temples on your route.' },
+  { emoji: '🔴', label: 'Live Darshan', desc: 'Watch live aarti & darshan from 56+ major temples — anytime, anywhere.' },
+  { emoji: '🪔', label: 'Festival Guide', desc: '51 festivals in depth — significance, rituals, food, prasad, dance, deity & temples to visit.' },
+  { emoji: '🗓️', label: 'Festival Calendar', desc: 'Month-wise guide to festivals, pilgrim seasons and auspicious dates.' },
+  { emoji: '🧭', label: 'Pilgrimage Circuits', desc: 'Curated multi-temple yatra routes — Char Dham, Jyotirlingas and more.' },
+  { emoji: '🤖', label: 'AI Yatra Planner', desc: 'Tell us your destination, days & budget — get a full day-by-day itinerary.' },
+  { emoji: '🎒', label: 'Smart Packing Checklist', desc: 'AI builds a destination-specific packing list for your yatra.' },
+  { emoji: '💰', label: 'Budget Calculator', desc: 'Estimate your pilgrimage costs before you travel.' },
+  { emoji: '📦', label: 'Travel Packages', desc: 'Browse curated pilgrimage packages for popular destinations.' },
+  { emoji: '📔', label: 'Pilgrimage Journal', desc: 'Log every temple with photos, notes & ratings — your lifetime pilgrimage passport.' },
+  { emoji: '🏦', label: 'Yatra Savings Goals', desc: 'Set a monthly target and track your savings for your dream yatra.' },
+  { emoji: '👨‍👩‍👧', label: 'Group Yatras', desc: 'Plan and travel together — join or organise group pilgrimages from any city.' },
+  { emoji: '🧾', label: 'Group Expense Split', desc: 'Log shared costs and settle up easily — share on WhatsApp.' },
+  { emoji: '🙏', label: 'Sankalpa (Manifest)', desc: 'Set your spiritual intention and track your sacred goals.' },
+  { emoji: '⭐', label: 'Recommend a Temple', desc: 'Suggest temples you love to help grow the directory.' },
+  { emoji: '🏅', label: 'Profile & Pilgrim Badges', desc: 'Track your visits, earn pilgrim badges and manage your plans.' },
 ]
 
 export default function SignInForm() {
@@ -80,11 +92,14 @@ export default function SignInForm() {
         h1 em { font-style:italic; color:var(--saffron); }
         .hero-body { font-size:.92rem; line-height:1.75; color:var(--ink-3); max-width:480px; }
         .divider-line { height:2px; background:var(--crimson); max-width:48px; margin:2rem 0; border-radius:2px; opacity:.25; }
-        .features { display:grid; grid-template-columns:1fr 1fr; gap:.875rem; margin-bottom:2rem; }
+        .feat-head { margin-bottom:1.1rem; }
+        .feat-head-title { font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:700; color:var(--ink); letter-spacing:-0.01em; }
+        .feat-head-note { display:inline-flex; align-items:center; gap:.4rem; margin-top:.55rem; font-size:.74rem; font-weight:600; color:var(--saffron-dark); background:var(--saffron-pale); border:1.5px solid var(--border-s); border-radius:100px; padding:.4rem .85rem; }
+        .features { display:grid; grid-template-columns:1fr 1fr; gap:.75rem; margin-bottom:2rem; }
         .fc { border:1.5px solid var(--border); border-radius:10px; padding:1rem 1.1rem; background:var(--white); transition:all .2s; }
         .fc:hover { border-color:var(--saffron); box-shadow:0 2px 14px rgba(192,87,10,.08); }
         .fc-top { display:flex; align-items:center; gap:.6rem; margin-bottom:.45rem; }
-        .fc-ico { width:20px; height:20px; color:var(--saffron); flex-shrink:0; }
+        .fc-ico { font-size:18px; line-height:1; flex-shrink:0; }
         .fc-ico svg { width:100%; height:100%; }
         .fc-name { font-size:.83rem; font-weight:600; color:var(--ink); }
         .fc-body { font-size:.73rem; line-height:1.6; color:var(--ink-3); }
@@ -161,11 +176,16 @@ export default function SignInForm() {
 
             <div className="divider-line" />
 
+            <div className="feat-head">
+              <div className="feat-head-title">Everything inside DivyaDarshanam</div>
+              <div className="feat-head-note">📖 Please take a moment to read what you get — before you sign in.</div>
+            </div>
+
             <div className="features">
               {FEATURES.map(f => (
                 <div key={f.label} className="fc">
                   <div className="fc-top">
-                    <span className="fc-ico" dangerouslySetInnerHTML={{ __html: f.icon }} />
+                    <span className="fc-ico" aria-hidden="true">{f.emoji}</span>
                     <span className="fc-name">{f.label}</span>
                   </div>
                   <p className="fc-body">{f.desc}</p>
@@ -196,7 +216,7 @@ export default function SignInForm() {
                 <img src="/dd-logo.png" alt="DivyaDarshanam" />
               </div>
               <h2 className="form-title">{mode === 'signup' ? 'Begin your yatra' : 'Welcome back'}</h2>
-              <p className="form-sub">{mode === 'signup' ? 'Free forever. No credit card. Join thousands planning smarter pilgrimages.' : 'Sign in to access your temples, plans, journal and savings goals.'}</p>
+              <p className="form-sub">{mode === 'signup' ? 'Free forever. No credit card. Do read everything you get — listed on the left — before you begin.' : 'Sign in to access your temples, plans, journal and savings goals.'}</p>
 
               <div className="tabs">
                 <button className={`tab ${mode === 'signup' ? 'on' : ''}`} onClick={() => { setMode('signup'); setError('') }}>Create Account</button>
