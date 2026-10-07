@@ -10,6 +10,7 @@ import ReportButton from '@/components/temple/ReportButton'
 import MarkVisited from '@/components/temple/MarkVisited'
 import LiveDarshanStatus from '@/components/temple/LiveDarshanStatus'
 import DeepDiveSection from '@/components/temple/DeepDiveSection'
+import BestTimeToVisit from '@/components/temple/BestTimeToVisit'
 import { Accessibility, Backpack, Banknote, Bath, BookOpen, Bus, Candy, Car, Clock, Droplets, Flame, Flower2, Globe, HeartPulse, Hotel, Info, Landmark, Lightbulb, Map, MapPin, Navigation, ParkingSquare, Phone, Plane, ShoppingBag, Star, Ticket, TrainFront, Trees, Utensils, Wallet } from 'lucide-react'
 
 interface Props { params: { slug: string } }
@@ -163,6 +164,14 @@ export default async function TemplePage({ params }: Props) {
                 timing={t.timing}
               />
             )}
+
+            {/* —— BEST TIME TO VISIT ——————————————— */}
+            <BestTimeToVisit temple={{
+              slug: t.slug, name: t.name, deity: t.deity, type: t.type,
+              timing: t.timing, best_time: t.best_time, festivals: t.festivals,
+              open_months: t.open_months, closed_months: t.closed_months,
+              seasonal_note: t.seasonal_note, is_seasonal: t.is_seasonal,
+            }} />
 
             {/* —— FACILITIES ——————————————————————— */}
             {Object.keys(facilities).length > 0 && (
