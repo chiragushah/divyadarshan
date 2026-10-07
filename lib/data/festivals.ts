@@ -1170,6 +1170,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GURU PURNIMA ───────────────────────
   {
     slug: 'guru-purnima',
+    dates2026: '29 July 2026',
+    dates2027: '18 July 2027',
+    dateNote: 'Guru Purnima is the full moon (Purnima) of Ashadha. Dates shift across July each year.',
+    mythology: 'Guru Purnima is also Vyasa Purnima — the birthday of Sage Veda Vyasa, who compiled the four Vedas, authored the Mahabharata and the eighteen Puranas, and is revered as the adi-guru, the first teacher. The word guru means one who removes the darkness (“gu”) of ignorance and reveals the light (“ru”) of knowledge. For Buddhists, this full moon is the day the Buddha gave his first sermon at Sarnath, setting the Wheel of Dharma in motion; it is significant in Jain tradition too.',
+    history: 'The day of honouring one’s teacher is ancient and cross-traditional. Ashrams, maths and guru-lineages across India observe it as their most important gathering of the year.',
+    ritualSteps: [
+      { when: 'Morning', step: 'Offer worship and gratitude (guru-dakshina) to one’s spiritual guru and teachers; perform Vyasa Puja.' },
+      { when: 'Study', step: 'Read or hear the scriptures; renew spiritual practice — mantra, meditation and study — under the guru’s guidance.' },
+      { when: 'Padapuja', step: 'In many lineages, perform padapuja (worship of the guru’s feet) and receive blessings.' },
+      { when: 'Observance', step: 'Keep the day with satsang, fasting or charity.' },
+    ],
+    regional: [
+      { region: 'Ashrams & maths', note: 'Vyasa Puja, padapuja of the guru, and discourses; disciples travel to their lineage seat.' },
+      { region: 'Sarnath (Varanasi)', note: 'Buddhists mark the Buddha’s first sermon.' },
+      { region: 'Classical arts', note: 'Music and dance students specially venerate their gurus and begin new compositions.' },
+      { region: 'Shirdi & saint shrines', note: 'Large gatherings at the seats of revered gurus and saints.' },
+    ],
+    attire: ['Simple, clean traditional wear; many wear white', 'Modest clothing for satsang and temple/ashram visits'],
     name: 'Guru Purnima',
     alsoKnown: 'Vyasa Purnima; Ashadhi Purnima',
     emoji: '🙏',
@@ -2275,6 +2293,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KUMBH MELA ───────────────────────
   {
     slug: 'kumbh-mela',
+    dates2026: 'No Kumbh in 2026; the next is the Nashik–Trimbakeshwar Simhastha Kumbh in 2027',
+    dates2027: 'Nashik–Trimbakeshwar Simhastha Kumbh (2027); exact Shahi Snan dates set by planetary alignment',
+    dateNote: 'The Kumbh is not annual — it rotates among four sites roughly every three years, timed by the positions of Jupiter, the Sun and the Moon. Prayagraj’s Maha Kumbh (held 2025) recurs every 12 years. Always check the host site and the Shahi Snan dates for the year.',
+    mythology: 'The Kumbh arises from the Samudra Manthan — the churning of the cosmic ocean by the gods and demons for the amrit, the nectar of immortality. When the pot (kumbh) of nectar emerged, a scramble broke out, and during the twelve divine days of struggle (equal to twelve human years) drops of amrit fell at four earthly places — Prayagraj, Haridwar, Ujjain and Nashik. Each hosts the Kumbh in turn when the planets return to the sacred alignment that marked that spilling; a holy dip then is believed to carry the nectar’s liberating power.',
+    history: 'The gathering of ascetic orders (akharas) is traditionally credited to Adi Shankara, who is said to have organised them to protect and spread dharma. The Kumbh is the largest peaceful gathering of humans on earth — Prayagraj’s 2025 Maha Kumbh drew crowds in the hundreds of millions — and is inscribed on UNESCO’s Intangible Cultural Heritage list.',
+    ritualSteps: [
+      { when: 'Shahi Snan', step: 'Take the royal bath on the principal astrologically-fixed days at the river confluence, after the akharas process to the water.' },
+      { when: 'Darshan', step: 'Receive the darshan and blessings of the akharas, naga sadhus and sant tradition gathered there.' },
+      { when: 'Kalpvas', step: 'Many undertake kalpvas — a month-long austere stay on the riverbank with a single daily meal, scripture and prayer.' },
+      { when: 'Daan & aarti', step: 'Perform charity, attend discourses, and float lamps on the sacred river at dawn and dusk.' },
+    ],
+    regional: [
+      { region: 'Prayagraj (Sangam)', note: 'The grandest — the Maha Kumbh at the Triveni Sangam (Ganga–Yamuna–Saraswati), every 12 years.' },
+      { region: 'Haridwar', note: 'Kumbh on the Ganga at Har Ki Pauri.' },
+      { region: 'Ujjain (Simhastha)', note: 'Kumbh on the Shipra, centred on Mahakaleshwar.' },
+      { region: 'Nashik (Simhastha)', note: 'Kumbh on the Godavari at Trimbakeshwar — the next Kumbh, in 2027.' },
+    ],
+    attire: ['Simple, modest clothing for the holy dip and the tent-city', 'Warm layers for a winter Kumbh (Prayagraj/Haridwar)', 'Kalpvasis wear plain, often white, austere clothing'],
     name: 'Kumbh Mela',
     alsoKnown: 'Maha Kumbh; Ardh Kumbh; Simhastha (Ujjain/Nashik)',
     emoji: '🏞️',
@@ -2321,6 +2357,25 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PITRU PAKSHA ───────────────────────
   {
     slug: 'pitru-paksha',
+    dates2026: '27 September – 10 October 2026 (Sarva Pitru Amavasya / Mahalaya on 10 Oct)',
+    dates2027: '~16 September – 1 October 2027 (Mahalaya ~30 Sep)',
+    dateNote: 'Pitru Paksha is the dark fortnight (Krishna paksha) from Bhadrapada Purnima to Ashwin Amavasya — sixteen days ending on Mahalaya Amavasya, which flows straight into Navaratri. Dates shift across September–October.',
+    mythology: 'A famous story explains the fortnight: the warrior Karna, on dying, was offered gold and jewels in the afterlife but no food — because in life he had given gold in charity but never offered food and water to his ancestors (not knowing his true lineage). Allowed to return to earth for sixteen days, he offered shraddha and tarpan to his forebears; those days became Pitru Paksha. Through this fortnight the ancestors (pitrs) are believed to descend closer to the living, and offering them food and water repays the debt owed to one’s forebears.',
+    history: 'Shraddha rites are prescribed in the Dharmashastras and the Garuda Purana. Gaya in Bihar has been the supreme tirtha for pind daan for millennia, drawing pilgrims from across India and the world during this fortnight.',
+    ritualSteps: [
+      { when: 'On the ancestor’s tithi', step: 'Perform shraddha for each departed elder on the lunar day of their passing, offering pinda (rice balls) and tarpan (water with sesame).' },
+      { when: 'The offering', step: 'Feed Brahmins, the needy, and especially cows, crows and dogs — the ancestors are believed to partake through them.' },
+      { when: 'Restraint', step: 'Avoid new purchases, auspicious beginnings and celebrations through the fortnight; keep a simple life.' },
+      { when: 'At a tirtha', step: 'Perform pind daan at Gaya, Haridwar, Prayagraj, Nashik (Trimbakeshwar) or Rameswaram for the liberation of ancestors.' },
+      { when: 'Mahalaya (final day)', step: 'Offer shraddha to all ancestors on Sarva Pitru Amavasya; in Bengal, Mahalaya dawn ushers in Durga Puja.' },
+    ],
+    regional: [
+      { region: 'Gaya (Bihar)', note: 'The Pitru Paksha Mela — the supreme place for pind daan at the Vishnupad Temple and the Falgu river.' },
+      { region: 'Riverbank tirthas', note: 'Haridwar, Varanasi, Prayagraj, Nashik and Rameswaram are major shraddha centres.' },
+      { region: 'Across India', note: 'Families perform shraddha at home or on riverbanks, led by a priest.' },
+      { region: 'Bengal', note: 'Mahalaya is deeply significant as the dawn of Durga Puja, with the Mahishasuramardini recital at daybreak.' },
+    ],
+    attire: ['Simple, clean clothing — often white — for the rites', 'Men performing shraddha traditionally wear a dhoti and the sacred thread', 'Modest, unostentatious attire befitting a period of remembrance'],
     name: 'Pitru Paksha',
     alsoKnown: 'Shraddha Paksha; Mahalaya Paksha; Kanagat; Pitru Pokkho',
     emoji: '🪔',
@@ -2366,6 +2421,23 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RADHA ASHTAMI ───────────────────────
   {
     slug: 'radha-ashtami',
+    dates2026: '19 September 2026',
+    dates2027: '7 September 2027',
+    dateNote: 'Radha Ashtami is the Ashtami of the bright fortnight of Bhadrapada — fifteen days after Krishna Janmashtami. Dates shift across August–September.',
+    mythology: 'Radha Rani, the eternal consort of Krishna and the embodiment of pure devotion, is said to have appeared not from a womb but on a golden lotus in a lake at Barsana, found by King Vrishabhanu and his wife Kirti. Tradition holds that the infant Radha kept her eyes closed from birth and opened them for the first time only when she beheld the baby Krishna — her gaze reserved for the Lord alone. In the Vaishnava traditions, Radha is held even dearer than Krishna, for she is the perfect soul surrendered in love; to please Krishna, one first seeks Radha’s grace.',
+    history: 'Radha Ashtami is central to the Nimbarka, Gaudiya, Pushtimarg and Radhavallabha traditions. Barsana, Radha’s birthplace, is its ritual heart, with the hilltop Shriji (Radha Rani) temple as the focus.',
+    ritualSteps: [
+      { when: 'Morning', step: 'Fast until noon (Radha’s birth-moment); bathe and adorn the deity with special shringar.' },
+      { when: 'Midday', step: 'Perform the abhishek and offer bhog at the birth hour; sing Radha-bhajans and recite the Radha stotras.' },
+      { when: 'Darshan', step: 'On this one day, some temples reveal Radha Rani’s feet (charan) for darshan.' },
+      { when: 'Offering', step: 'Offer panjiri, makhan-mishri and chhappan bhog; distribute as prasad.' },
+    ],
+    regional: [
+      { region: 'Barsana', note: 'The grandest celebration at the Radha Rani (Shriji) temple — Radha’s birthplace comes alive with abhishek, song and flowers.' },
+      { region: 'Vrindavan & Mathura', note: 'Special darshan and jhulan; Radha-Krishna temples hold kirtan and bhog.' },
+      { region: 'Gaudiya & ISKCON temples', note: 'Elaborate abhishek and chhappan bhog in Radha’s honour worldwide.' },
+    ],
+    attire: ['Festive traditional wear; pink and red honour Radha', 'Women: pink, red or floral sarees', 'Men: kurta-pyjama', 'Devotees often wear tulsi malas'],
     name: 'Radha Ashtami',
     alsoKnown: 'Radha Jayanti; Radhashtami',
     emoji: '🌸',
@@ -2411,6 +2483,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── TULSI VIVAHA ───────────────────────
   {
     slug: 'tulsi-vivaha',
+    dates2026: '21 November 2026',
+    dates2027: '10 November 2027',
+    dateNote: 'Tulsi Vivaha is performed between Prabodhini (Dev Uthani) Ekadashi and Kartik Purnima; the date shifts across late October–November each year.',
+    mythology: 'The holy basil, Tulsi, was once Vrinda, the utterly chaste wife of the demon Jalandhar, whose virtue made her husband invincible in battle. To let the gods defeat him, Vishnu took Jalandhar’s form and deceived Vrinda, breaking her chastity. When she realised it, she cursed Vishnu to become a black stone (the Shaligram), but in reverence for her purity, Vishnu blessed her to become the sacred Tulsi plant, dearer to him than any flower, and to be eternally wed to him. Tulsi Vivaha celebrates that marriage, performed on the day Vishnu awakens from his four-month cosmic sleep (Chaturmas).',
+    history: 'Tulsi is worshipped in almost every Hindu courtyard as a living goddess who purifies and protects. Her symbolic marriage to Vishnu formally opens the Hindu wedding season and is an act of great merit, especially for those without a daughter to give in kanyadaan.',
+    ritualSteps: [
+      { when: 'Preparation', step: 'Clean and decorate the Tulsi vrindavan (the plant’s pedestal) with rangoli, sugarcane and marigold.' },
+      { when: 'The mandap', step: 'Build a small wedding mandap around the plant; place the Shaligram (or a Krishna idol) as the groom.' },
+      { when: 'The vivah', step: 'Conduct the full wedding ritual with the recitation of the mangalashtaka; tie the auspicious thread between Tulsi and Shaligram.' },
+      { when: 'Offering', step: 'Offer the plant a sari, bangles and vermilion; distribute wedding-style prasad and sweets.' },
+    ],
+    regional: [
+      { region: 'Maharashtra', note: 'Celebrated with special warmth — homes conduct a joyous mock-wedding of the Tulsi at dusk.' },
+      { region: 'Pandharpur & Vitthal temples', note: 'Grand temple Tulsi Vivaha ceremonies.' },
+      { region: 'North & West India', note: 'Household Tulsi Vivaha marks the start of the wedding season.' },
+      { region: 'ISKCON & Vaishnava temples', note: 'The ceremony performed with kirtan and feasting.' },
+    ],
+    attire: ['Festive wedding-style traditional wear', 'Women: silk sarees, as if attending a wedding', 'Men: kurta or dhoti-kurta', 'The Tulsi plant itself is dressed as a bride'],
     name: 'Tulsi Vivaha',
     alsoKnown: 'Tulsi Vivah; the marriage of Tulsi and Shaligram',
     emoji: '🪴',
@@ -2455,6 +2545,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RATHA SAPTAMI ───────────────────────
   {
     slug: 'ratha-saptami',
+    dates2026: '25 January 2026',
+    dates2027: '13 February 2027',
+    dateNote: 'Ratha Saptami is the Saptami of the bright fortnight of Magha. Dates shift across January–February each year.',
+    mythology: 'Ratha Saptami marks Surya, the Sun God, turning his chariot — drawn by seven horses (the seven colours of light) and driven by Aruna — toward the northern hemisphere, heralding the spiritual onset of spring. It is observed as Surya Jayanti, the Sun God’s birthday (born to the sage Kashyapa and Aditi). As the Sun governs health and vitality in tradition, the day is a prayer for wellbeing and for the energy of the returning warmth.',
+    history: 'Surya worship is among the oldest Vedic traditions. Ratha Saptami is a major festival at the great Sun and Vishnu temples, and especially grand at Tirumala, where the deity is paraded on seven different vahanas in a single day.',
+    ritualSteps: [
+      { when: 'Dawn', step: 'Bathe at sunrise, placing arka (ekka) leaves on the head and shoulders, and offer arghya to the rising Sun.' },
+      { when: 'Worship', step: 'Draw a chariot rangoli and worship Surya with red flowers, jaggery and the Aditya Hridayam / Gayatri.' },
+      { when: 'Offering', step: 'Cook chakkara pongal (jaggery rice) in the sun’s first light and offer it to Surya.' },
+      { when: 'Practice', step: 'Perform charity and Surya Namaskar (sun-salutations).' },
+    ],
+    regional: [
+      { region: 'Tirumala', note: 'One of the most important festival days — the deity is taken in procession on seven vahanas through the day (Surya Prabha and others).' },
+      { region: 'Konark (Odisha)', note: 'Grand special worship at the great Sun temple.' },
+      { region: 'Arasavalli & Srikakulam (Andhra)', note: 'Sunrise abhishekam at the famous Surya temples.' },
+      { region: 'South Indian homes', note: 'Chakkara pongal cooked and offered to the morning sun; women draw chariot kolams.' },
+    ],
+    attire: ['Traditional wear in warm tones — red, orange, yellow for the Sun', 'Women: silk or cotton sarees', 'Men: dhoti with angavastram for temple worship'],
     name: 'Ratha Saptami',
     alsoKnown: 'Magha Saptami; Surya Jayanti; Rathasapthami',
     emoji: '🌞',
@@ -2500,6 +2608,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── SHARAD PURNIMA / KOJAGIRI ───────────────────────
   {
     slug: 'sharad-purnima',
+    dates2026: '25 October 2026',
+    dates2027: '14 October 2027',
+    dateNote: 'Sharad Purnima is the full moon of Ashwin — the brightest, most “nectar-filled” moon of the year. Dates shift across September–October.',
+    mythology: 'This is Raas Purnima — the night Lord Krishna, playing his flute in the forests of Vrindavan, performed the Maha Raas, the circular dance of divine love with the gopis. Krishna multiplied himself so that each gopi felt him dancing with her alone, and the night is said to have lasted as long as an age of Brahma. It is also Kojagiri: Goddess Lakshmi roams the night asking “Ko jagarti?” — “Who is awake?” — and blesses those who keep vigil in her worship. The moon of this night is believed to shower healing amrit, its rays carrying all sixteen kalas (phases of perfection).',
+    history: 'The full moon’s association with the Raas-lila and with Lakshmi’s vigil is ancient. In Bengal and Odisha, Kojagori Lakshmi Puja on this night is one of the most important Lakshmi worships of the year.',
+    ritualSteps: [
+      { when: 'Evening', step: 'Place kheer (rice pudding) in the open moonlight to soak up the moon’s nectar overnight.' },
+      { when: 'Night vigil', step: 'Keep a jagaran in worship of Lakshmi — “Kojagiri” — staying awake under the full moon.' },
+      { when: 'Krishna worship', step: 'Sing of the Maha Raas; in Vrindavan, witness the Raas-lila under the moon.' },
+      { when: 'Midnight', step: 'Eat the moonlit kheer as prasad — tradition says the moonlight has turned it to amrit.' },
+    ],
+    regional: [
+      { region: 'Vrindavan & Braj', note: 'Grand Raas-lila and Krishna celebration under the full moon.' },
+      { region: 'Maharashtra', note: 'Kojagiri — masala doodh (saffron milk) savoured in the moonlight through a night of festivity.' },
+      { region: 'Bengal & Odisha', note: 'Kojagori Lakshmi Puja — a major worship of the Goddess of fortune.' },
+      { region: 'Across India', note: 'Families gather on terraces to enjoy moonlit kheer and song.' },
+    ],
+    attire: ['Light festive wear to enjoy the moonlit night', 'White and pastel shades suit the moon theme', 'Women: sarees or suits; Men: kurta'],
     name: 'Sharad Purnima',
     alsoKnown: 'Kojagiri Purnima; Kojagara; Raas Purnima; Kaumudi Purnima',
     emoji: '🌕',
@@ -2545,6 +2671,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VIVAHA PANCHAMI ───────────────────────
   {
     slug: 'vivaha-panchami',
+    dates2026: '14 December 2026',
+    dates2027: '2 December 2027',
+    dateNote: 'Vivaha Panchami is the Panchami of the bright fortnight of Margashirsha. Dates shift across November–December each year.',
+    mythology: 'Vivaha Panchami celebrates the wedding of Lord Rama and Goddess Sita — the union at the heart of the Ramayana. At King Janaka’s court in Mithila, a swayamvara was held for Sita: whoever could lift and string the mighty Pinaka, the bow of Shiva, would win her hand. Mighty kings failed even to move it, but Rama lifted it with ease and, stringing it, broke it in two — and so won Sita, the earth-born daughter of Janaka. The day honours this divine, dharmic marriage.',
+    history: 'Janakpur (in present-day Nepal), revered as Sita’s birthplace, is the grand centre of the festival, with the magnificent Janaki Mandir. Ayodhya, Rama’s city, and Sitamarhi in Bihar also celebrate the Ram Vivah with great devotion.',
+    ritualSteps: [
+      { when: 'Recitation', step: 'Read the Bala Kanda of the Ramayana / Ramcharitmanas describing the bow-breaking and the wedding.' },
+      { when: 'Worship', step: 'Worship Rama and Sita together; offer them the bride-and-groom shringar and bhog.' },
+      { when: 'The vivah', step: 'Re-enact the Sita–Rama Vivaha with a full wedding ceremony (barat, mandap, mangalashtaka).' },
+      { when: 'Celebration', step: 'Sing vivah geet (wedding songs) and distribute prasad.' },
+    ],
+    regional: [
+      { region: 'Janakpur (Nepal)', note: 'An enormous week-long celebration at the Janaki Mandir — processions, the mock-wedding and lakhs of pilgrims.' },
+      { region: 'Ayodhya', note: 'Grand Ram Vivah with the city re-enacting the marriage festivities; Kanak Bhawan is especially beautiful.' },
+      { region: 'Sitamarhi (Bihar)', note: 'Sita’s legendary birthplace holds special kalyanotsavam.' },
+      { region: 'Ram temples nationwide', note: 'Ram-Sita vivah performed with devotion and feasting.' },
+    ],
+    attire: ['Festive wedding-style traditional wear', 'Women: silk sarees in bridal reds and golds', 'Men: kurta or dhoti-kurta', 'Mithila folk motifs in the Janakpur region'],
     name: 'Vivaha Panchami',
     alsoKnown: 'Vivah Panchami; Sita Rama Vivaha',
     emoji: '💐',
@@ -2590,6 +2734,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GOVARDHAN PUJA / ANNAKUT ───────────────────────
   {
     slug: 'govardhan-puja',
+    dates2026: '10 November 2026 (day after Diwali)',
+    dates2027: '29 October 2027',
+    dateNote: 'Govardhan Puja / Annakut is the Pratipada of the bright fortnight of Kartik — the day after Diwali. In Maharashtra and Gujarat it coincides with Bali Pratipada and the new year. Dates shift with Diwali.',
+    mythology: 'The people of Braj used to worship Indra, the rain-god, with an elaborate annual offering. The young Krishna argued that they should instead honour Govardhan hill and the cows and forests that truly sustained them — and persuaded them to redirect the offering. Furious at being ignored, Indra unleashed a seven-day deluge to drown Braj. Krishna lifted the entire Govardhan hill on the little finger of his left hand, holding it aloft like an umbrella for seven days and nights until Indra, humbled, relented. In gratitude, devotees build a hill of food — the Annakut, “mountain of food” — and offer it to Krishna.',
+    history: 'The Annakut tradition is especially grand in the Pushtimarg (Vallabha) sampradaya and at Nathdwara; the Govardhan parikrama in Braj is one of the most beloved pilgrimages of the Vaishnava year.',
+    ritualSteps: [
+      { when: 'Morning', step: 'Build a small Govardhan hill from cow-dung or food and worship it alongside Krishna.' },
+      { when: 'Annakut', step: 'Prepare a grand array of dishes — dozens to hundreds — and offer the “mountain of food” to the Lord.' },
+      { when: 'Parikrama', step: 'Perform parikrama (circumambulation) of Govardhan hill or its symbol.' },
+      { when: 'Honour cattle', step: 'Decorate and worship cows and cattle in gratitude.' },
+    ],
+    regional: [
+      { region: 'Govardhan (Braj)', note: 'Lakhs perform the 21-km Govardhan parikrama around the sacred hill.' },
+      { region: 'Nathdwara (Rajasthan)', note: 'The Shrinathji Annakut — the most famous food-offering display in India, hundreds of dishes before the deity.' },
+      { region: 'Vrindavan & Vaishnava temples', note: 'Spectacular Annakut displays and kirtan.' },
+      { region: 'Maharashtra & Gujarat', note: 'Bali Pratipada and the new year; cows worshipped and Govardhan made from cow-dung.' },
+    ],
+    attire: ['Festive traditional wear (continuing from Diwali)', 'Women: silk sarees; Men: kurta-pyjama or dhoti-kurta', 'Bright, celebratory colours'],
     name: 'Govardhan Puja & Annakut',
     alsoKnown: 'Annakut; Padwa; Bali Pratipada',
     emoji: '⛰️',
