@@ -1,7 +1,7 @@
 export const dynamic = 'force-dynamic'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Castle, Flame, Globe, HandHeart, Landmark, Mountain, Music, Swords, Waves, Zap } from 'lucide-react'
+import { Castle, Flame, Globe, HandHeart, Landmark, Mountain, Music, Route, Swords, Waves, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Pilgrimage Circuits — DivyaDarshanam',
@@ -100,9 +100,24 @@ export default function CircuitsPage() {
     <div className="max-w-6xl mx-auto px-6 py-10">
       <div className="section-title">Curated Pilgrimage Routes</div>
       <h1 className="font-serif text-4xl font-medium mb-2">Pilgrimage Circuits</h1>
-      <p className="text-sm mb-10" style={{ color: 'var(--muted)' }}>
+      <p className="text-sm mb-6" style={{ color: 'var(--muted)' }}>
         12 carefully curated pilgrimage routes across India — from weekend Ashtavinayak to lifetime Jyotirlinga journeys.
       </p>
+
+      {/* Auto Circuit Builder CTA */}
+      <Link href="/circuits/builder" className="card" style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '18px 20px', marginBottom: 28, textDecoration: 'none', background: 'linear-gradient(135deg, rgba(139,26,26,0.06), rgba(192,87,10,0.06))', border: '1.5px solid rgba(192,87,10,0.25)', flexWrap: 'wrap' }}>
+        <Route size={28} style={{ color: 'var(--saffron)', flexShrink: 0 }} />
+        <div style={{ flex: 1, minWidth: 200 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ fontWeight: 700, fontSize: 16, color: 'var(--ink)' }}>Build your own circuit</span>
+            <span style={{ fontSize: 10, fontWeight: 800, letterSpacing: '.08em', textTransform: 'uppercase', padding: '3px 8px', borderRadius: 100, background: 'var(--crimson)', color: 'white' }}>New</span>
+          </div>
+          <div style={{ fontSize: 13, color: 'var(--muted)', marginTop: 3 }}>
+            Enter any city or use your location — get a temple circuit within 100–300 km, sequenced and mapped. From anywhere, not just the famous routes.
+          </div>
+        </div>
+        <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--crimson)', whiteSpace: 'nowrap' }}>Try it →</span>
+      </Link>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {CIRCUITS.map(c => (

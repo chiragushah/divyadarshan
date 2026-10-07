@@ -2,15 +2,15 @@ import Link from 'next/link'
 import { Route, MapPin, Navigation, CalendarDays, Radio } from 'lucide-react'
 import type { Circuit } from '@/lib/nearbyCircuit'
 
-export default function NearbyCircuit({ circuit, mapsUrl, anchorName }:
-  { circuit: Circuit; mapsUrl: string; anchorName: string }) {
+export default function NearbyCircuit({ circuit, mapsUrl, anchorName, title = 'Build a Circuit from Here', showBadge = true }:
+  { circuit: Circuit; mapsUrl: string; anchorName: string; title?: string; showBadge?: boolean }) {
   if (!circuit.count) return null
 
   return (
     <div className="mb-8">
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 2 }}>
-        <h2 className="font-serif text-2xl font-medium" style={{ margin: 0 }}>Build a Circuit from Here</h2>
-        <span style={{ fontSize: 10, fontWeight: 800, letterSpacing: '.08em', textTransform: 'uppercase', padding: '3px 8px', borderRadius: 100, background: 'var(--crimson)', color: 'white' }}>New</span>
+        <h2 className="font-serif text-2xl font-medium" style={{ margin: 0 }}>{title}</h2>
+        {showBadge && <span style={{ fontSize: 10, fontWeight: 800, letterSpacing: '.08em', textTransform: 'uppercase', padding: '3px 8px', borderRadius: 100, background: 'var(--crimson)', color: 'white' }}>New</span>}
       </div>
       <p className="text-sm mb-4" style={{ color: 'var(--muted2)' }}>
         {circuit.count} temple{circuit.count > 1 ? 's' : ''} you can cover within {circuit.radiusKm} km of {anchorName}, in a sensible order
