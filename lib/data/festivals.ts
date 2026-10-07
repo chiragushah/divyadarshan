@@ -2019,6 +2019,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── MAHAVIR JAYANTI ───────────────────────
   {
     slug: 'mahavir-jayanti',
+    image: '/festivals/mahavir-jayanti.jpg',
     dates2026: '31 March 2026',
     dates2027: '18 April 2027',
     dateNote: 'Mahavir Jayanti (Mahavir Janma Kalyanak) is the Trayodashi of the bright fortnight of Chaitra. Dates shift across March–April each year.',
@@ -2082,6 +2083,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BUDDHA PURNIMA ───────────────────────
   {
     slug: 'buddha-purnima',
+    image: '/festivals/buddha-purnima.jpg',
     dates2026: '1 May 2026',
     dates2027: '20 May 2027 (confirm locally)',
     dateNote: 'Buddha Purnima (Vesak) is the full moon of Vaishakha. Dates shift across April–May each year; some countries observe Vesak on a slightly different full moon.',
@@ -2145,6 +2147,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── SABARIMALA MAKARAVILAKKU ───────────────────────
   {
     slug: 'sabarimala-makaravilakku',
+    image: '/festivals/sabarimala-makaravilakku.jpg',
     dates2026: '14 January 2026 (Makaravilakku); season ~mid-Nov 2025 to mid-Jan 2026',
     dates2027: '15 January 2027 (Makaravilakku)',
     dateNote: 'Makaravilakku falls on Makara Sankranti (~14–15 January), the climax of the Mandala-Makaravilakku pilgrimage season that opens in mid-November. The temple also opens for monthly (Malayalam-month) poojas.',
@@ -2207,6 +2210,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GANGAUR ───────────────────────
   {
     slug: 'gangaur',
+    image: '/festivals/gangaur.jpg',
     dates2026: '21 March 2026 (Gauri Tritiya); the 18 days begin the day after Holi',
     dates2027: '9 April 2027',
     dateNote: 'Gangaur climaxes on Chaitra Shukla Tritiya, the eighteenth day after Holi. Dates shift across March–April each year.',
@@ -2269,6 +2273,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── NARASIMHA JAYANTI ───────────────────────
   {
     slug: 'narasimha-jayanti',
+    image: '/festivals/narasimha-jayanti.jpg',
     dates2026: '30 April 2026',
     dates2027: '19 May 2027 (confirm locally)',
     dateNote: 'Narasimha Jayanti is the Chaturdashi of the bright fortnight of Vaishakha; worship is at dusk (sandhya), the hour of the Lord’s appearance. Dates shift across April–May.',
@@ -2393,6 +2398,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KANWAR YATRA ───────────────────────
   {
     slug: 'kanwar-yatra',
+    image: '/festivals/kanwar-yatra.jpg',
     dates2026: 'Through Shravan — ~10 July to 9 August 2026 (peaks on Shravan Shivaratri, ~11 Aug)',
     dates2027: 'Through Shravan — late July to late August 2027',
     dateNote: 'The Kanwar Yatra runs through the lunar month of Shravan; it peaks on the Mondays of Shravan and on Shravan Shivaratri (the Chaturdashi), when the Ganga water is poured on the linga. Dates shift across July–August.',
@@ -2520,6 +2526,7 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KUMBH MELA ───────────────────────
   {
     slug: 'kumbh-mela',
+    image: '/festivals/kumbh-mela.jpg',
     dates2026: 'No Kumbh in 2026; the next is the Nashik–Trimbakeshwar Simhastha Kumbh in 2027',
     dates2027: 'Nashik–Trimbakeshwar Simhastha Kumbh (2027); exact Shahi Snan dates set by planetary alignment',
     dateNote: 'The Kumbh is not annual — it rotates among four sites roughly every three years, timed by the positions of Jupiter, the Sun and the Moon. Prayagraj’s Maha Kumbh (held 2025) recurs every 12 years. Always check the host site and the Shahi Snan dates for the year.',
