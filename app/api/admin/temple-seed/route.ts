@@ -367,6 +367,18 @@ function normName(s: string): string {
 
 const COARSE_CITY = new Set(['', 'india', 'maharashtra', 'n/a', 'none', '-'])
 
+// ── Targeted one-off fix-ups (far-out caves beyond the 40 km auto-fix, and the
+// one record missing a description). Applied only with &apply=1&token=. ───────
+const FIXUPS: { match: RegExp; set: Record<string, any>; label: string }[] = [
+  { match: /^shirwal caves$/i, set: { city: 'Shirwal', state: 'Maharashtra' }, label: 'Shirwal Caves → city set to Shirwal' },
+  { match: /^karla caves$/i, set: { city: 'Lonavala', state: 'Maharashtra' }, label: 'Karla Caves → city set to Lonavala' },
+  {
+    match: /bhimashankar ganesh/i,
+    set: { description: 'A Ganesha shrine in the Bhimashankar region of the Sahyadri hills, close to the famous Bhimashankar Jyotirlinga. Pilgrims visiting the Jyotirlinga complex also stop at this Ganesh temple, set amid the forested Western Ghats of the Bhimashankar Wildlife Sanctuary.' },
+    label: 'Bhimashankar Ganesh Temple → add description',
+  },
+]
+
 export async function GET(req: NextRequest) {
   const url = new URL(req.url)
   const apply = url.searchParams.get('apply') === '1'
@@ -433,8 +445,19 @@ export async function GET(req: NextRequest) {
       })
     }
 
+    // 4) TARGETED FIX-UPS -----------------------------------------------------
+    section('4. Targeted fix-ups (city labels + missing description)')
+    const fixMatches: { slug: string; name: string; set: Record<string, any>; label: string }[] = []
+    for (const fx of FIXUPS) {
+      for (const t of all) {
+        if (fx.match.test(t.name || '')) fixMatches.push({ slug: t.slug, name: t.name, set: fx.set, label: fx.label })
+      }
+    }
+    if (!fixMatches.length) line('<span class="ok">Nothing to fix — targets not found (may already be corrected).</span>')
+    for (const f of fixMatches) line(`<span class="fix">FIX</span> ${esc(f.label)} <span class="sub">(${esc(f.slug)})</span>`)
+
     // ── APPLY ────────────────────────────────────────────────────────────────
-    let applied = { inserted: 0, citiesFixed: 0, deleted: 0 }
+    let applied = { inserted: 0, citiesFixed: 0, deleted: 0, fixed: 0 }
     if (apply) {
       if (!authed) {
         section('APPLY BLOCKED')
@@ -460,8 +483,13 @@ export async function GET(req: NextRequest) {
             applied.deleted++
           }
         }
+        // targeted fix-ups
+        for (const f of fixMatches) {
+          await Temple.updateOne({ slug: f.slug }, { $set: f.set })
+          applied.fixed++
+        }
         section('APPLIED')
-        line(`<span class="ok">Inserted ${applied.inserted} temples · fixed ${applied.citiesFixed} city labels · removed ${applied.deleted} duplicates.</span>`)
+        line(`<span class="ok">Inserted ${applied.inserted} temples · fixed ${applied.citiesFixed} city labels · applied ${applied.fixed} fix-ups · removed ${applied.deleted} duplicates.</span>`)
         if (!doDedupe && toDelete.length) line(`<span class="sub">Duplicates were reported but NOT removed. Re-run with &dedupe=1 to remove them.</span>`)
       }
     }
