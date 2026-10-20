@@ -81,10 +81,11 @@ interface Props {
   total: number
   page: number
   states: string[]
+  cities: string[]
   activeFilters: Record<string, string | undefined>
 }
 
-export default function ExploreClient({ initialTemples, total, page, states, activeFilters }: Props) {
+export default function ExploreClient({ initialTemples, total, page, states, cities, activeFilters }: Props) {
   const router   = useRouter()
   const pathname = usePathname()
   const activeTab = activeFilters.tab || 'directory'
@@ -106,6 +107,16 @@ export default function ExploreClient({ initialTemples, total, page, states, act
     const p = new URLSearchParams()
     Object.entries(activeFilters).forEach(([k, v]) => { if (v) p.set(k, v) })
     if (value) p.set(key, value); else p.delete(key)
+    p.delete('page')
+    router.push(`${pathname}?${p.toString()}`)
+  }
+
+  // Changing the state resets the city (cities are scoped to the chosen state).
+  const updateState = (value: string) => {
+    const p = new URLSearchParams()
+    Object.entries(activeFilters).forEach(([k, v]) => { if (v) p.set(k, v) })
+    if (value) p.set('state', value); else p.delete('state')
+    p.delete('city')
     p.delete('page')
     router.push(`${pathname}?${p.toString()}`)
   }
@@ -443,9 +454,13 @@ export default function ExploreClient({ initialTemples, total, page, states, act
               <input type="text" placeholder="Search temples, cities, deities..."
                 defaultValue={activeFilters.q||''} className="input flex-1 min-w-[200px] max-w-sm"
                 onChange={e => { clearTimeout((window as any)._st); (window as any)._st = setTimeout(()=>update('q',e.target.value),400) }} />
-              <select className="input w-auto" value={activeFilters.state||''} onChange={e=>update('state',e.target.value)}>
+              <select className="input w-auto" value={activeFilters.state||''} onChange={e=>updateState(e.target.value)}>
                 <option value="">All States</option>
                 {states.map(s => <option key={s} value={s}>{s}</option>)}
+              </select>
+              <select className="input w-auto" value={activeFilters.city||''} onChange={e=>update('city',e.target.value)}>
+                <option value="">{activeFilters.state ? 'All Cities' : 'All Cities (any state)'}</option>
+                {cities.map(c => <option key={c} value={c}>{c}</option>)}
               </select>
               <select className="input w-auto" value={activeFilters.deity||''} onChange={e=>update('deity',e.target.value)}>
                 <option value="">All Deities</option>

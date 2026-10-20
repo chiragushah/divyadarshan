@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 interface Props {
-  searchParams: { q?: string; state?: string; deity?: string; category?: string; live?: string; page?: string; tab?: string; religion?: string }
+  searchParams: { q?: string; state?: string; city?: string; deity?: string; category?: string; live?: string; page?: string; tab?: string; religion?: string }
 }
 
 export default async function ExplorePage({ searchParams }: Props) {
@@ -29,6 +29,7 @@ export default async function ExplorePage({ searchParams }: Props) {
     { type:  { $regex: searchParams.q, $options: 'i' } },
   ]
   if (searchParams.state)    filter.state      = searchParams.state
+  if (searchParams.city)     filter.city       = searchParams.city
   if (searchParams.deity)    filter.deity      = { $regex: searchParams.deity, $options: 'i' }
   if (searchParams.category) filter.categories = searchParams.category
   if (searchParams.live === 'true') filter.has_live = true
@@ -63,6 +64,11 @@ export default async function ExplorePage({ searchParams }: Props) {
   ])
 
   const allStates = await Temple.distinct('state')
+  // Cities for the City dropdown — scoped to the selected state when one is chosen.
+  const cityQuery = searchParams.state ? { state: searchParams.state } : {}
+  const allCities = (await Temple.distinct('city', cityQuery) as string[])
+    .filter(Boolean)
+    .sort((a, b) => a.localeCompare(b))
   const data = temples.map((t: any) => ({ ...t, id: t._id.toString() }))
 
   return (
@@ -71,6 +77,7 @@ export default async function ExplorePage({ searchParams }: Props) {
       total={total}
       page={page}
       states={allStates.sort()}
+      cities={allCities}
       activeFilters={searchParams}
     />
   )
