@@ -154,12 +154,35 @@ function festivalPeaksFor(input: BestTimeInput): FestivalPeak[] {
   const festList: string[] = Array.isArray(rawFest)
     ? rawFest
     : (typeof rawFest === 'string' ? rawFest.split(/[,;|]/) : [])
-  const tnames = festList.map(f => String(f).toLowerCase().trim()).filter(Boolean)
+  // Normalise to space-separated word tokens so matching is whole-word, not raw
+  // substring. (Substring matching wrongly linked "Bhadarvi Poonam" → "Onam",
+  // because "po-onam" contains "onam".)
+  // Canonicalise common spelling variants so correct matches still land
+  // (temple data says "Navratri", festival is titled "Navaratri", etc.).
+  const SYN: [RegExp, string][] = [
+    [/\bnavaratri\b/g, 'navratri'], [/\bnavarathri\b/g, 'navratri'],
+    [/\bshivaratri\b/g, 'shivratri'], [/\bsivaratri\b/g, 'shivratri'],
+    [/\bdeepavali\b/g, 'diwali'], [/\bdeepawali\b/g, 'diwali'], [/\bdipavali\b/g, 'diwali'],
+    [/\bpoornima\b/g, 'purnima'], [/\bpournima\b/g, 'purnima'],
+  ]
+  const norm = (s: string) => {
+    let x = String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim()
+    for (const [re, to] of SYN) x = x.replace(re, to)
+    return x
+  }
+  // true only if `needle` (≥4 chars) appears as a whole word/phrase inside `hay`
+  const wordHit = (hay: string, needle: string) => needle.length >= 4 && (` ${hay} `).includes(` ${needle} `)
+  const tnames = festList.map(f => norm(f)).filter(n => n.length >= 3)
 
   for (const f of FESTIVALS) {
-    const linkedBySlug = slug ? f.temples?.some(t => t.slug === slug) : false
-    const linkedByName = tnames.some(n =>
-      n && (f.name.toLowerCase().includes(n) || n.includes(f.name.toLowerCase())))
+    const linkedBySlug = slug ? !!f.temples?.some(t => t.slug === slug) : false
+    const fName = norm(f.name)
+    const fSq = fName.replace(/ /g, '')
+    const linkedByName = tnames.some(n => {
+      const nSq = n.replace(/ /g, '')
+      // exact (space-insensitive) match, or one is a whole-word phrase of the other
+      return n === fName || (fSq.length >= 4 && nSq === fSq) || wordHit(fName, n) || wordHit(n, fName)
+    })
     if (!linkedBySlug && !linkedByName) continue
     const raw = f.dates2026 || f.whenText || ''
     // Take the first clause and drop any trailing parenthetical so dates read cleanly.
