@@ -48,8 +48,13 @@ async function resolveWiki(title: string): Promise<string | null> {
     clearTimeout(timer)
     if (!res.ok) return null
     const json: any = await res.json()
-    const src: string | undefined = json?.thumbnail?.source || json?.originalimage?.source
-    return src ? src.replace(/\/\d+px-/, '/800px-') : null
+    let src: string | undefined = json?.thumbnail?.source || json?.originalimage?.source
+    if (!src) return null
+    // Normalise to the canonical, query-free upload.wikimedia.org form that the
+    // rest of the site (and the image-proxy) use — the API sometimes returns a
+    // thumb.wikimedia.org host with ?utm tracking params.
+    src = src.split('?')[0].replace('://thumb.wikimedia.org/', '://upload.wikimedia.org/')
+    return src.replace(/\/\d+px-/, '/800px-')
   } catch { return null }
 }
 
