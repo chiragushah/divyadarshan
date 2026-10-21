@@ -350,7 +350,9 @@ export default function ExploreClient({ initialTemples, total, page, states, cit
                 ) : (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {visibleNearby.map((temple: any) => {
-                      const img = temple.blob_image_url || temple.image_url || ''
+                      const rawImg = temple.blob_image_url || temple.image_url || ''
+                      const img = (rawImg.includes('wikimedia') || rawImg.includes('wikipedia'))
+                        ? `/api/image-proxy?url=${encodeURIComponent(rawImg)}` : rawImg
                       const href = temple.slug ? `/temple/${temple.slug}` : null
                       const Card = (
                         <div className="card overflow-hidden h-full flex flex-col transition-all hover:shadow-md"

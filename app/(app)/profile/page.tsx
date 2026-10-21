@@ -288,7 +288,7 @@ export default function ProfilePage() {
                         {/* Image */}
                         <div style={{ width: 90, flexShrink: 0, background: 'linear-gradient(135deg, var(--crimson), var(--crim-lt))', position: 'relative' }}>
                           {temple.image_url ? (
-                            <img src={temple.image_url} alt={temple.name}
+                            <img src={(temple.image_url.includes('wikimedia') || temple.image_url.includes('wikipedia')) ? `/api/image-proxy?url=${encodeURIComponent(temple.image_url)}` : temple.image_url} alt={temple.name}
                               style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} />
                           ) : (
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}><Landmark size={28} color="rgba(255,255,255,0.85)" /></div>
@@ -348,7 +348,7 @@ export default function ProfilePage() {
                     <div className="h-28 relative flex items-center justify-center"
                       style={{ background: 'linear-gradient(135deg, var(--crimson), var(--crim-lt))' }}>
                       {temple.image_url ? (
-                        <img src={temple.image_url} alt={temple.name}
+                        <img src={(temple.image_url.includes('wikimedia') || temple.image_url.includes('wikipedia')) ? `/api/image-proxy?url=${encodeURIComponent(temple.image_url)}` : temple.image_url} alt={temple.name}
                           style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} />
                       ) : (
                         <Landmark size={30} color="#fff" style={{ opacity: .3 }} />

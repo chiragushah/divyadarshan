@@ -823,7 +823,7 @@ export default async function TemplePage({ params }: Props) {
                   <div className="h-28 flex items-center justify-center text-3xl font-serif font-bold relative"
                     style={{ background:'linear-gradient(135deg, var(--crimson), var(--crim-lt))' }}>
                     {r.image_url
-                      ? <img src={r.image_url} alt={r.name} className="w-full h-full object-cover absolute inset-0" />
+                      ? <img src={(r.image_url.includes('wikimedia') || r.image_url.includes('wikipedia')) ? `/api/image-proxy?url=${encodeURIComponent(r.image_url)}` : r.image_url} alt="" className="w-full h-full object-cover absolute inset-0" />
                       : <span style={{ color:'rgba(255,255,255,.2)' }}>{r.name.charAt(0)}</span>}
                     {r.has_live && (
                       <span className="absolute top-1.5 left-1.5 badge-live text-[9px]">
