@@ -36,6 +36,13 @@ const CHANGES: Record<string, string> = {
   'https://www.bankebihari.org': '',
   'https://www.gorakhnathmandirtrust.org': '',
   'https://www.mathura.nic.in': '',
+  // Second pass: replacements that themselves proved unreachable/unsafe.
+  // Kamakhya subdomain does not resolve (ENOTFOUND); Mahakaleshwar site has a
+  // broken SSL chain. No dependable official site for either → clear. (Amarnath
+  // jksasb.nic.in is kept: it is the genuine official site and only times out
+  // from datacenters, working fine for real visitors.)
+  'https://kamakhya.assam.gov.in': '',
+  'https://shrimahakaleshwar.com': '',
 }
 
 function esc(s: any): string {
