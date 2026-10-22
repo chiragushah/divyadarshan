@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, ChefHat } from 'lucide-react'
-import { PRASAD_RECIPES, recipeHref } from '@/lib/data/prasad'
+import { ArrowLeft } from 'lucide-react'
+import { PRASAD_RECIPES } from '@/lib/data/prasad'
 import type { RecipeCategory } from '@/lib/data/prasad/types'
+import { dietFor } from '@/lib/data/prasad/diet'
+import RecipeIndexClient from '@/components/prasad/RecipeIndexClient'
+import BasketLink from '@/components/prasad/BasketLink'
 
 export const metadata: Metadata = {
   title: 'Prasad Recipes — State-wise & Tradition-wise | DivyaDarshanam',
@@ -21,7 +24,7 @@ const ORDER: RecipeCategory[] = [
 
 export default function PrasadIndexPage() {
   const total = PRASAD_RECIPES.reduce((a, r) => a + r.variants.length, 0)
-  const groups = ORDER.map(cat => ({ cat, items: PRASAD_RECIPES.filter(r => r.category === cat) })).filter(g => g.items.length)
+  const dishes = PRASAD_RECIPES.map(r => ({ id: r.id, name: r.name, summary: r.summary, category: r.category as string, variants: r.variants.map(v => ({ id: v.id, region: v.region, tags: dietFor(r.id, v.id) })) }))
 
   return (
     <div>
@@ -41,35 +44,12 @@ export default function PrasadIndexPage() {
           <div style={{ marginTop: 16, fontSize: 14, color: 'rgba(255,255,255,0.85)' }}>
             {PRASAD_RECIPES.length} prasad &nbsp;·&nbsp; {total} regional versions
           </div>
+          <div style={{ marginTop: 16 }}><BasketLink light /></div>
         </div>
       </div>
 
       <div className="max-w-6xl mx-auto px-6 py-8">
-        {groups.map(g => (
-          <section key={g.cat} style={{ marginBottom: 36 }}>
-            <h2 className="font-serif" style={{ fontSize: 24, fontWeight: 600, marginBottom: 16 }}>
-              <span style={{ borderBottom: '3px solid var(--crimson)', paddingBottom: 2 }}>{g.cat}</span>
-            </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(290px, 1fr))', gap: 16 }}>
-              {g.items.map(r => (
-                <Link key={r.id} href={recipeHref(r.id)} className="card" style={{ textDecoration: 'none', padding: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <ChefHat size={16} style={{ color: 'var(--crimson)', flexShrink: 0 }} />
-                    <span className="font-serif" style={{ fontSize: 19, fontWeight: 600, color: 'var(--ink)' }}>{r.name}</span>
-                  </div>
-                  <p style={{ fontSize: 13.5, color: 'var(--muted)', lineHeight: 1.55, margin: 0 }}>{r.summary}</p>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 4 }}>
-                    {r.variants.map(v => (
-                      <span key={v.id} style={{ fontSize: 11.5, fontWeight: 600, color: 'var(--crimson)', background: '#8B1A1A12', border: '1px solid #8B1A1A33', borderRadius: 100, padding: '2px 9px' }}>
-                        {v.region.split(' (')[0]}
-                      </span>
-                    ))}
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
-        ))}
+        <RecipeIndexClient dishes={dishes} order={ORDER as string[]} />
       </div>
     </div>
   )

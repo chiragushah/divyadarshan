@@ -119,3 +119,30 @@ export function buildICS(opts: { title: string; date: Date; description?: string
   ].filter(Boolean)
   return lines.join('\r\n')
 }
+
+// ── Multi-event .ics (used for prasad shopping reminders) ──────────────────
+export interface ICSEvent { title: string; date: Date; description?: string; url?: string; alarmAt9am?: boolean }
+
+export function buildMultiICS(events: ICSEvent[]): string {
+  const stamp = new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z'
+  const esc = (t: string) => (t || '').replace(/\\/g, '\\\\').replace(/;/g, '\;').replace(/,/g, '\\,').replace(/\n/g, '\\n')
+  const lines: string[] = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//DivyaDarshanam//Prasad Plan//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH']
+  events.forEach((e, i) => {
+    const start = fmtICSDate(e.date)
+    const end = fmtICSDate(new Date(e.date.getTime() + 86400000))
+    lines.push(
+      'BEGIN:VEVENT',
+      `UID:${start}-${i}-${e.title.replace(/[^a-z0-9]/gi, '').toLowerCase().slice(0, 30)}@divyadarshanam`,
+      `DTSTAMP:${stamp}`,
+      `DTSTART;VALUE=DATE:${start}`,
+      `DTEND;VALUE=DATE:${end}`,
+      `SUMMARY:${esc(e.title)}`,
+    )
+    if (e.description) lines.push(`DESCRIPTION:${esc(e.description + (e.url ? '\n' + e.url : ''))}`)
+    if (e.url) lines.push(`URL:${e.url}`)
+    if (e.alarmAt9am) lines.push('BEGIN:VALARM', 'TRIGGER;RELATED=START:PT9H', 'ACTION:DISPLAY', `DESCRIPTION:${esc(e.title)}`, 'END:VALARM')
+    lines.push('END:VEVENT')
+  })
+  lines.push('END:VCALENDAR')
+  return lines.join('\r\n')
+}

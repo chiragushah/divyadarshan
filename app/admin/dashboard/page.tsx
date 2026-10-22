@@ -274,6 +274,7 @@ export default function AdminDashboard() {
               <p style={{ fontSize:12, color:C.muted2, marginTop:2 }}>{new Date().toLocaleDateString('en-IN', { weekday:'long', day:'numeric', month:'long', year:'numeric' })}</p>
             </div>
             <div style={{ display:'flex', alignItems:'center', gap:10 }}>
+              <a href="/admin/family-versions" style={{ fontSize:13, fontWeight:700, color:C.ink, textDecoration:'none', border:'1px solid #ddd', borderRadius:100, padding:'6px 14px', background:'white' }}>Family recipe versions</a>
               {tab!=='group_yatra' && tab!=='announcement' && (
                 <select value={days} onChange={e => setDays(Number(e.target.value))}>
                   <option value={7}>Last 7 days</option>

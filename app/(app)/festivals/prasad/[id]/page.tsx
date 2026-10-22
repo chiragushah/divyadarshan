@@ -4,6 +4,13 @@ import { notFound } from 'next/navigation'
 import { ArrowLeft, ChefHat, Clock, Users, Flame, Lightbulb, MapPin, Scale, BookOpen, Wrench, ListChecks, AlertTriangle, Shuffle, Archive, UtensilsCrossed, Eye } from 'lucide-react'
 import { FESTIVALS, getFestival } from '@/lib/data/festivals'
 import { PRASAD_RECIPES, getRecipe, getVariant, festivalsFor, recipeHref } from '@/lib/data/prasad'
+import { dietFor, DIET_LABEL } from '@/lib/data/prasad/diet'
+import { shlokasFor } from '@/lib/data/prasad/shlokas'
+import { baseServings } from '@/lib/prasad/scale'
+import RecipeKit from '@/components/prasad/RecipeKit'
+import BasketLink from '@/components/prasad/BasketLink'
+import ShlokaCard from '@/components/prasad/ShlokaCard'
+import FamilyVersions from '@/components/prasad/FamilyVersions'
 
 interface Props {
   params: { id: string }
@@ -40,6 +47,11 @@ export default function PrasadRecipePage({ params, searchParams }: Props) {
   const seen = new Set<string>()
   const festivalRows = offeredAt.filter(x => (seen.has(x.f.slug) ? false : (seen.add(x.f.slug), true)))
 
+  const groups = offeredAt.map(x => x.f.deityGroup)
+  const shlokas = shlokasFor(groups, fromFestival?.deityGroup)
+  const tags = dietFor(recipe.id, variant.id)
+  const steps = variant.method.map(st => (typeof st === 'string' ? { title: '', text: st } : st))
+
   const backHref = fromFestival ? `/festivals/${fromFestival.slug}` : '/festivals/prasad'
   const backLabel = fromFestival ? fromFestival.name : 'All prasad recipes'
 
@@ -59,6 +71,7 @@ export default function PrasadRecipePage({ params, searchParams }: Props) {
           </h1>
           {recipe.alsoCalled && <p style={{ fontSize: 15, opacity: 0.9, marginTop: 6, fontStyle: 'italic' }}>{recipe.alsoCalled}</p>}
           <p style={{ fontSize: 16, maxWidth: 700, lineHeight: 1.7, marginTop: 14, color: 'rgba(255,255,255,0.94)' }}>{recipe.summary}</p>
+          <div style={{ marginTop: 16 }}><BasketLink light /></div>
         </div>
       </div>
 
@@ -110,6 +123,13 @@ export default function PrasadRecipePage({ params, searchParams }: Props) {
             </span>
             <span style={{ fontSize: 12.5, color: 'var(--muted)' }}>{variant.culture}</span>
           </div>
+          {tags.length > 0 && (
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 8 }}>
+              {tags.map(t => (
+                <span key={t} style={{ fontSize: 11.5, fontWeight: 700, color: '#166534', background: '#16653412', border: '1px solid #16653433', borderRadius: 100, padding: '2px 9px' }}>{DIET_LABEL[t]}</span>
+              ))}
+            </div>
+          )}
           <h2 className="font-serif" style={{ fontSize: 'clamp(24px, 4vw, 30px)', fontWeight: 600, marginBottom: 10 }}>{variant.title}</h2>
           <p style={{ fontSize: 15.5, color: 'var(--ink2)', lineHeight: 1.8, marginBottom: 20 }}>{variant.intro}</p>
 
@@ -139,17 +159,20 @@ export default function PrasadRecipePage({ params, searchParams }: Props) {
             </div>
           )}
 
-          <h3 className="font-serif" style={{ fontSize: 20, fontWeight: 600, marginBottom: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
-            <Scale size={18} style={{ color: accent }} /> Ingredients
-          </h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 16, marginBottom: 26 }}>
-            {variant.ingredients.map((g, gi) => (
-              <div key={gi} style={{ background: 'var(--ivory2)', border: '1px solid var(--ivory3)', borderRadius: 12, padding: 16 }}>
-                {g.group && <div style={{ fontSize: 13.5, fontWeight: 700, color: accent, marginBottom: 8 }}>{g.group}</div>}
-                <NoteList items={g.items} accent={accent} dense />
-              </div>
-            ))}
-          </div>
+          <RecipeKit
+            dish={recipe.id}
+            variantId={variant.id}
+            title={`${recipe.name} · ${variant.region.split(' (')[0]}`}
+            region={variant.region}
+            accent={accent}
+            serves={variant.serves}
+            baseServes={baseServings(variant.serves)}
+            ingredients={variant.ingredients}
+            mise={variant.mise || []}
+            steps={steps}
+            offering={variant.offering}
+            ritual={variant.ritual || []}
+          />
 
           {variant.mise && variant.mise.length > 0 && (
             <div style={{ marginBottom: 28 }}>
@@ -202,6 +225,8 @@ export default function PrasadRecipePage({ params, searchParams }: Props) {
               </ol>
             )}
           </div>
+
+          {shlokas && <ShlokaCard set={shlokas} accent={accent} deityLabel={fromFestival ? fromFestival.deity.split(/[;(]/)[0].trim() : undefined} />}
 
           {(variant.serving || variant.storage) && (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 14, marginBottom: 24 }}>
@@ -277,6 +302,7 @@ export default function PrasadRecipePage({ params, searchParams }: Props) {
               </div>
             </div>
           )}
+          <FamilyVersions dish={recipe.id} variantId={variant.id} variantTitle={variant.title} accent={accent} />
         </article>
 
         {/* Compare */}

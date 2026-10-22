@@ -56,7 +56,7 @@ export async function middleware(request: NextRequest) {
   if (PUBLIC_PAGES.includes(pathname)) return NextResponse.next()
 
   const PUBLIC = ['/auth/', '/api/auth', '/api/analytics', '/api/admin', '/api/health',
-    '/api/announcement', '/api/temples', '/api/nearby', '/api/image-proxy', '/api/alerts']
+    '/api/announcement', '/api/temples', '/api/nearby', '/api/image-proxy', '/api/alerts', '/api/cron']
   if (PUBLIC.some(p => pathname.startsWith(p))) return NextResponse.next()
 
   // Get session token

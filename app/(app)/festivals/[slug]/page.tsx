@@ -4,6 +4,13 @@ import { notFound } from 'next/navigation'
 import { ArrowLeft, MapPin, CalendarDays, BookOpen, Landmark, ScrollText, Map as MapIcon, Shirt, UtensilsCrossed, Flame, Music, Lightbulb, Sparkles, ChefHat, Clock } from 'lucide-react'
 import { FESTIVALS, getFestival, templeHref } from '@/lib/data/festivals'
 import { getRecipe, getVariant, entriesForFestival, recipeHref } from '@/lib/data/prasad'
+import { nextOccurrence } from '@/lib/festivalDates'
+import { baseServings } from '@/lib/prasad/scale'
+import { isoOf } from '@/lib/prasad/festivalOptions'
+import { dietFor, DIET_LABEL } from '@/lib/data/prasad/diet'
+import PrepPlan from '@/components/prasad/PrepPlan'
+import ReminderBox from '@/components/prasad/ReminderBox'
+import BasketLink from '@/components/prasad/BasketLink'
 import connectDB from '@/lib/mongodb/connect'
 import { Temple } from '@/models'
 
@@ -68,6 +75,15 @@ export default async function FestivalDetailPage({ params }: Props) {
     if (!r) return []
     const v = getVariant(r, e.variant)
     return [{ r, v, note: e.note }]
+  })
+  const occ = nextOccurrence(f)
+  const festOpt = occ ? [{ slug: f.slug, name: f.name, iso: isoOf(occ.date), display: occ.display, approx: occ.approx }] : [{ slug: f.slug, name: f.name, iso: '', display: f.whenText.split('(')[0].trim(), approx: true }]
+  const seenKeys = new Set<string>()
+  const reminderItems = recipeCards.flatMap(({ r, v }) => {
+    const key = `${r.id}/${v.id}`
+    if (seenKeys.has(key)) return []
+    seenKeys.add(key)
+    return [{ key, dish: r.id, variant: v.id, title: `${r.name} (${v.region.split(' (')[0]})`, region: v.region, baseServes: baseServings(v.serves), servings: baseServings(v.serves), lines: v.ingredients.flatMap(g => g.items.map(i => i.split(' — ')[0])) }]
   })
   const offeringNotes = (prasadPlan?.entries || []).flatMap(e => (e.kind === 'offering' ? [e] : []))
 
@@ -273,6 +289,11 @@ export default async function FestivalDetailPage({ params }: Props) {
                       <Clock size={13} /> {v.prep}{v.cook !== 'None' ? ` + ${v.cook}` : ''}
                       {r.variants.length > 1 && <span> · {r.variants.length} regional versions</span>}
                     </span>
+                    {dietFor(r.id, v.id).length > 0 && (
+                      <span style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginTop: 2 }}>
+                        {dietFor(r.id, v.id).map(t => <span key={t} style={{ fontSize: 10.5, fontWeight: 700, color: '#166534', background: '#16653412', border: '1px solid #16653433', borderRadius: 100, padding: '1px 7px' }}>{DIET_LABEL[t]}</span>)}
+                      </span>
+                    )}
                     <span style={{ fontSize: 12.5, color: 'var(--crimson)', fontWeight: 600, marginTop: 2 }}>Full recipe →</span>
                   </Link>
                 ))}
@@ -291,10 +312,28 @@ export default async function FestivalDetailPage({ params }: Props) {
                 </div>
               </div>
             )}
-            <div style={{ marginTop: 18 }}>
+            <div style={{ marginTop: 18, display: 'flex', gap: 16, alignItems: 'center', flexWrap: 'wrap' }}>
               <Link href="/festivals/prasad" style={{ fontSize: 13.5, fontWeight: 600, color: 'var(--crimson)', textDecoration: 'none' }}>Browse the whole prasad recipe book →</Link>
+              <BasketLink />
             </div>
           </Section>
+        )}
+
+        {/* Prep calendar + reminders */}
+        {recipeCards.length > 0 && (
+          <>
+            <PrepPlan
+              festivalName={f.name}
+              slug={f.slug}
+              accent={f.accent}
+              entries={recipeCards.map(({ r, v }) => ({ dish: r.id, variant: v.id }))}
+              date={occ ? occ.date : null}
+              approx={occ ? occ.approx : true}
+            />
+            <div style={{ marginBottom: 32 }}>
+              <ReminderBox festivals={festOpt} items={reminderItems} fixedSlug={f.slug} selectable accent={f.accent} />
+            </div>
+          </>
         )}
 
         {/* Dance */}
