@@ -84,9 +84,15 @@ const recipe: PrasadRecipe = {
         },
         {
           title: 'Finish with coconut',
-          text: 'Turn off the heat. Stir in the grated coconut and the lemon juice (if using). Toss once and cover for 2 minutes before serving.',
+          text: 'Turn off the heat. Stir in the grated coconut and the lemon juice (if using). Toss once and cover for 2 minutes before serving, so the coconut warms through without cooking.',
           why: 'Coconut added off the heat keeps its fresh sweetness and its white colour. Cooked coconut turns greasy and loses fragrance.',
           cue: 'White coconut shreds are visible among the chickpeas, and the sundal smells sweet and savoury.',
+        },
+        {
+          title: 'Rest and portion for offering',
+          text: 'Let the sundal rest, covered, for 5 minutes so the flavours settle. Set aside the first portion in a clean bowl or banana leaf cup for the deity before serving anyone, and spoon the rest into leaf cups for guests. Serve warm.',
+          why: 'Resting lets the coconut and tempering mingle with the chickpeas. Setting aside the offering first keeps to the rule that the deity is served before the household.',
+          cue: 'The sundal is warm, not steaming hot, and the cups can be filled without the coconut falling out.',
         },
       ],
       offering:
@@ -192,13 +198,13 @@ const recipe: PrasadRecipe = {
         },
         {
           title: 'Drain thoroughly',
-          text: 'Drain the cooked gram in a colander and let it stand for a few minutes. Keep the cooking liquid for rasam or dal if you wish.',
+          text: 'Drain the cooked gram in a colander and let it stand for 5 minutes so the steam escapes and the surface dries. Keep the cooking liquid for rasam or dal if you wish, as it carries a lot of flavour.',
           why: 'Guggillu is a dry preparation. Excess water turns the tempering into a watery mess and makes the coconut soggy.',
           cue: 'The grains look matte and no water drips from the colander.',
         },
         {
           title: 'Pop the mustard and cumin',
-          text: 'Heat the oil or ghee in a kadai over medium heat. Add the mustard seeds, and when they pop, add the cumin and let it sizzle for 10 seconds.',
+          text: 'Heat the oil or ghee in a wide kadai over medium heat until it shimmers. Add the mustard seeds, and when they have popped fully, add the cumin and let it sizzle for about 10 seconds until fragrant and a shade darker.',
           why: 'Mustard and cumin each need hot fat to release their oils, and mustard must pop before the rest goes in.',
           cue: 'The mustard crackles and goes grey, and the cumin darkens slightly and smells toasted.',
         },
@@ -210,15 +216,21 @@ const recipe: PrasadRecipe = {
         },
         {
           title: 'Toss in the gram',
-          text: 'Add the drained Bengal gram and toss gently on medium heat for 3–4 minutes so that the tempering coats every grain and the surface moisture dries. Taste and adjust the salt.',
+          text: 'Add the drained Bengal gram and toss gently on medium heat for 3–4 minutes so that the tempering coats every grain and the surface moisture dries. Fold rather than stir, and taste and adjust the salt.',
           why: 'A brief toss on the heat carries the flavour into the pulses. Vigorous stirring breaks the gram, so fold rather than stir.',
           cue: 'The gram is hot, glossy and speckled with ginger and curry leaf.',
         },
         {
           title: 'Finish with coconut and lemon',
-          text: 'Switch off the heat. Add the coconut and the lemon juice, toss once, cover for 2 minutes and serve warm.',
+          text: 'Switch off the heat. Add the coconut and the lemon juice, toss once gently so the shreds spread evenly through the gram, cover for 2 minutes so the coconut warms through without cooking, and taste for salt before serving.',
           why: 'Coconut and lemon added off the heat keep their freshness; lemon cooked in the pan turns bitter and dulls the colour.',
           cue: 'White coconut shreds are visible, and a bright lemon fragrance rises over the spices.',
+        },
+        {
+          title: 'Rest and portion for offering',
+          text: 'Let the guggillu rest, covered, for 5 minutes so the flavours settle. Set aside the first portion in a clean bowl or on a banana leaf for the deity, then spoon the rest into leaf cups for children and neighbours. Serve warm.',
+          why: 'Resting lets the ginger, chilli and coconut mingle with the gram. Offering first keeps to the custom that the deity is served before the household.',
+          cue: 'The guggillu is warm rather than steaming, and holds together in a spoon without the coconut falling away.',
         },
       ],
       offering:
