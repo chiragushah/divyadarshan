@@ -233,7 +233,7 @@ const recipe: PrasadRecipe = {
         },
         {
           title: 'Cool and break apart',
-          text: 'Leave the chikki undisturbed for 15–20 minutes until completely cool and hard. Then break it along the scored lines. Store immediately in an airtight container.',
+          text: 'Leave the chikki undisturbed for 15–20 minutes until completely cool and hard. Then break it along the scored lines. Store the pieces immediately in a dry, airtight container so that the crisp snap is not lost to humidity.',
           why: 'Chikki absorbs moisture from the air quickly. Cooling it fully and sealing it keeps the crisp snap.',
           cue: 'The pieces separate with a clean snap, and a piece broken in half shows a glassy, evenly packed interior.',
         },
@@ -361,7 +361,7 @@ const recipe: PrasadRecipe = {
         },
         {
           title: 'Cool everything completely',
-          text: 'Spread the sesame, peanuts, fried gram and coconut on a large plate and leave for 15–20 minutes, stirring once or twice, until they are completely cold to the touch.',
+          text: 'Spread the sesame, peanuts, fried gram and coconut on a large plate and leave for 15–20 minutes, stirring once or twice, until they are completely cold to the touch and no warmth remains in a handful pressed in your palm.',
           why: 'Warm ingredients will soften the jaggery cubes and make the mix sticky. Cold ingredients keep the mix dry and loose for days.',
           cue: 'All the ingredients feel cool and dry on your palm, and no heat is felt when you hold a handful.',
         },

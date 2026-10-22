@@ -254,7 +254,7 @@ const recipe: PrasadRecipe = {
         {
           title: 'Chill thoroughly',
           text:
-            'Pour the thandai into a jug, cover, and refrigerate for at least three hours until very cold. Stir well before serving to bring up any settled nut solids.',
+            'Pour the thandai into a jug, cover, and refrigerate for at least three hours until very cold. Stir well before serving to bring up any settled nut solids, and taste once more for sweetness.',
           why: 'The drink tastes best very cold, and chilling blends the flavours so that no single spice dominates.',
           cue: 'The jug is cold to touch, and the drink pours slowly like thin cream.',
         },

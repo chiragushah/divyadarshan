@@ -111,7 +111,7 @@ const recipe: PrasadRecipe = {
         },
         {
           title: 'Set and rest',
-          text: 'Leave the laddus uncovered on the plate for 1–2 hours, until set and dry on the surface. Do not stack. Then store in an airtight box, or offer fresh.',
+          text: 'Leave the laddus uncovered on the plate for 1–2 hours, until set and dry on the surface. Do not stack. Then store in an airtight box, or offer them fresh to the deity and the family without delay.',
           why: 'Setting lets the syrup finish its work, giving a firm exterior and a soft interior. Packing too early causes them to stick together.',
           cue: 'The surface feels dry, not sticky, and the laddu keeps its shape when gently pressed.',
         },
@@ -276,7 +276,7 @@ const recipe: PrasadRecipe = {
         },
         {
           title: 'Cool and set',
-          text: 'Leave the laddus uncovered on a plate for 2–3 hours until completely set. Then store in an airtight container. The flavour is best after a day.',
+          text: 'Leave the laddus uncovered on a plate for 2–3 hours until completely set. Then store in an airtight container. The flavour is best after a day, when the ghee has spread evenly through the laddu.',
           why: 'Setting lets the syrup harden into a binder, and the ghee distributes through the laddu.',
           cue: 'The surface is dry and satiny, and the laddu keeps its shape when pressed gently.',
         },
