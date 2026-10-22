@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import connectDB from '@/lib/mongodb/connect'
 import { Temple } from '@/models'
+import { PRASAD_RECIPES } from '@/lib/data/prasad'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = process.env.NEXT_PUBLIC_APP_URL || 'https://divyadarshanam.in'
@@ -25,5 +26,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/plan/calendar`,     lastModified: new Date(), changeFrequency: 'weekly',  priority: 0.7 },
   ]
 
-  return [...staticPages, ...templeUrls]
+  const recipeUrls: MetadataRoute.Sitemap = [
+    { url: `${base}/festivals/prasad`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    ...PRASAD_RECIPES.map(r => ({
+      url: `${base}/festivals/prasad/${r.id}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    })),
+  ]
+
+  return [...staticPages, ...templeUrls, ...recipeUrls]
 }

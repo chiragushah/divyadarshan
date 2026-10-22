@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, MapPin, CalendarDays, BookOpen, Landmark, ScrollText, Map as MapIcon, Shirt, UtensilsCrossed, Flame, Music, Lightbulb, Sparkles } from 'lucide-react'
+import { ArrowLeft, MapPin, CalendarDays, BookOpen, Landmark, ScrollText, Map as MapIcon, Shirt, UtensilsCrossed, Flame, Music, Lightbulb, Sparkles, ChefHat, Clock } from 'lucide-react'
 import { FESTIVALS, getFestival, templeHref } from '@/lib/data/festivals'
+import { getRecipe, getVariant, entriesForFestival, recipeHref } from '@/lib/data/prasad'
 import connectDB from '@/lib/mongodb/connect'
 import { Temple } from '@/models'
 
@@ -58,6 +59,17 @@ export default async function FestivalDetailPage({ params }: Props) {
   ]
 
   const hasDates = f.dates2026 || f.dates2027
+
+  // Prasad recipes for this festival (cooked prasad -> full recipe page; the rest -> short offering notes)
+  const prasadPlan = entriesForFestival(f.slug)
+  const recipeCards = (prasadPlan?.entries || []).flatMap(e => {
+    if (e.kind !== 'recipe') return []
+    const r = getRecipe(e.dish)
+    if (!r) return []
+    const v = getVariant(r, e.variant)
+    return [{ r, v, note: e.note }]
+  })
+  const offeringNotes = (prasadPlan?.entries || []).flatMap(e => (e.kind === 'offering' ? [e] : []))
 
   return (
     <div>
@@ -235,6 +247,54 @@ export default async function FestivalDetailPage({ params }: Props) {
             <TagCard title="Festive food" subtitle="What is cooked & eaten" items={f.food} accent={f.accent} icon={<UtensilsCrossed size={20} />} />
             <TagCard title="Prasad & offerings" subtitle="What is offered to the deity" items={f.prasad} accent={f.accent} icon={<Flame size={20} />} />
           </div>
+        )}
+
+        {/* Prasad recipes — detailed, state / culture-wise */}
+        {prasadPlan && (recipeCards.length > 0 || offeringNotes.length > 0) && (
+          <Section title="Prasad recipes — cook it as it is offered" accent={f.accent} icon={<ChefHat size={20} />}>
+            <p style={{ fontSize: 14.5, color: 'var(--ink2)', lineHeight: 1.7, margin: '0 0 16px' }}>
+              {prasadPlan.intro || 'The same prasad is cooked differently in every state and community. Each recipe below opens a full page with ingredients, method and how it is offered — with the other regional versions one tap away.'}
+            </p>
+            {recipeCards.length > 0 && (
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))', gap: 14, marginBottom: offeringNotes.length ? 22 : 0 }}>
+                {recipeCards.map(({ r, v, note }, i) => (
+                  <Link
+                    key={`${r.id}-${v.id}-${i}`}
+                    href={recipeHref(r.id, v.id, f.slug)}
+                    className="card"
+                    style={{ textDecoration: 'none', padding: 16, display: 'flex', flexDirection: 'column', gap: 6, borderTop: `3px solid ${f.accent}` }}
+                  >
+                    <span style={{ alignSelf: 'flex-start', fontSize: 11.5, fontWeight: 700, color: f.accent, background: `${f.accent}12`, border: `1px solid ${f.accent}33`, borderRadius: 100, padding: '2px 10px' }}>
+                      {v.region}
+                    </span>
+                    <span className="font-serif" style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', lineHeight: 1.25 }}>{v.title}</span>
+                    {note && <span style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.5 }}>{note}</span>}
+                    <span style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12.5, color: 'var(--muted)', marginTop: 2 }}>
+                      <Clock size={13} /> {v.prep}{v.cook !== 'None' ? ` + ${v.cook}` : ''}
+                      {r.variants.length > 1 && <span> · {r.variants.length} regional versions</span>}
+                    </span>
+                    <span style={{ fontSize: 12.5, color: 'var(--crimson)', fontWeight: 600, marginTop: 2 }}>Full recipe →</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+            {offeringNotes.length > 0 && (
+              <div>
+                <div className="section-title" style={{ marginBottom: 10 }}>Offerings that need no cooking</div>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))', gap: 12 }}>
+                  {offeringNotes.map((o, i) => (
+                    <div key={i} style={{ background: 'var(--ivory2)', border: '1px solid var(--ivory3)', borderRadius: 12, padding: 14 }}>
+                      <div style={{ fontSize: 14, fontWeight: 700, color: f.accent, marginBottom: 4 }}>{o.title}</div>
+                      <div style={{ fontSize: 13.5, color: 'var(--ink2)', lineHeight: 1.6 }}>{o.note}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            <div style={{ marginTop: 18 }}>
+              <Link href="/festivals/prasad" style={{ fontSize: 13.5, fontWeight: 600, color: 'var(--crimson)', textDecoration: 'none' }}>Browse the whole prasad recipe book →</Link>
+            </div>
+          </Section>
         )}
 
         {/* Dance */}

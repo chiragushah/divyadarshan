@@ -50,6 +50,9 @@ export default function FestivalsClient({ festivals }: { festivals: FestivalWith
             <span>·</span>
             <span>Food, prasad &amp; dance for each</span>
           </div>
+          <Link href="/festivals/prasad" style={{ display: 'inline-block', marginTop: 18, padding: '9px 18px', borderRadius: 100, background: 'rgba(255,255,255,0.18)', border: '1px solid rgba(255,255,255,0.35)', color: 'white', textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>
+            Prasad recipe book — state by state
+          </Link>
         </div>
       </div>
 
