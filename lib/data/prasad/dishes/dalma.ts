@@ -80,7 +80,7 @@ const recipe: PrasadRecipe = {
         },
         {
           title: 'Add the brinjal',
-          text: 'Add the brinjal cubes and simmer for 5–6 minutes more until they are soft and translucent but not collapsing. Stir gently to avoid breaking up the vegetables.',
+          text: 'Add the brinjal cubes to the pot and simmer on medium-low heat for 5–6 minutes more, until they are soft and translucent but not collapsing. Stir very gently, only once or twice, to avoid breaking up the vegetables that are already tender.',
           why: 'Brinjal cooks fastest of all and turns to pulp if cooked longer, so it goes in last to retain a soft but identifiable shape.',
           cue: 'The brinjal looks silky and slightly translucent and gives under the back of a spoon.',
         },
@@ -92,7 +92,7 @@ const recipe: PrasadRecipe = {
         },
         {
           title: 'Season with sugar and coconut',
-          text: 'Stir in the sugar (or jaggery) and the grated coconut. Taste, and adjust the salt. Simmer for 2 minutes so that the coconut softens and releases its sweetness.',
+          text: 'Stir in the sugar (or a small piece of jaggery) and the grated coconut. Taste carefully, and adjust the salt as needed. Simmer on low heat for 2 minutes so that the coconut softens and releases its sweetness into the dal.',
           why: 'A little sweetness is typical of Odia food and softens the earthiness of the dal. The coconut adds richness and a mild fragrance that ghee alone cannot provide.',
           cue: 'The dalma tastes mildly sweet and balanced, with no raw coconut smell.',
         },

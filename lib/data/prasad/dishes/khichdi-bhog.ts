@@ -222,7 +222,7 @@ const recipe: PrasadRecipe = {
         },
         {
           title: 'Finish with ghee',
-          text: 'Stir in the remaining tablespoon of ghee, folding it through gently. Serve hot, with an extra spoon of ghee on top.',
+          text: 'Stir in the remaining tablespoon of ghee, folding it through gently so that it melts into the khechudi without breaking the soft grains. Taste once more for salt, and serve at once while piping hot, with an extra spoon of ghee on top of each portion.',
           why: 'Raw ghee added at the end keeps its sweet fragrance and gives the khechudi a rich, glossy finish.',
           cue: 'A glossy sheen on the surface and a buttery aroma rising from the pot.',
         },
