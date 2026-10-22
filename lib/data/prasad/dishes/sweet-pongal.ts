@@ -248,7 +248,7 @@ const recipe: PrasadRecipe = {
         {
           title: 'Fold in the fried nuts',
           text:
-            'Add the ghee-fried cashews, raisins and coconut together with all of their ghee, and fold in gently so that the nuts stay whole. Then switch off the heat.',
+            'Add the ghee-fried cashews, raisins and coconut together with all of their ghee, and fold in gently so that the nuts stay whole. Then switch off the heat and cover the pot for a few minutes so the flavours settle.',
           why: 'Folding gently preserves the crunch and keeps the nuts distributed through the pongali instead of sinking.',
           cue: 'Golden cashews and plump raisins appear in every spoonful.',
         },
@@ -386,7 +386,7 @@ const recipe: PrasadRecipe = {
         {
           title: 'Fold in the nuts and coconut',
           text:
-            'Add the fried cashews, raisins and coconut slivers together with all of their ghee, and fold gently so that they stay whole. Then switch off the heat.',
+            'Add the fried cashews, raisins and coconut slivers together with all of their ghee, and fold gently so that they stay whole. Then switch off the heat and cover the pot for a few minutes so the flavours settle.',
           why: 'Adding the garnish last keeps the nuts crunchy and the coconut toasted.',
           cue: 'Golden nuts and coconut slivers are visible in every spoonful.',
         },
