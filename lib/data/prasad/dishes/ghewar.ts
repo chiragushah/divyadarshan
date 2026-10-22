@@ -116,7 +116,7 @@ const recipe: PrasadRecipe = {
         },
         {
           title: 'Top with malai',
-          text: 'Let the ghewar cool for 5 minutes. Spread 2 tablespoons of cooled rabri over the top, and scatter pistachios, almonds and silver leaf. Serve the same day.',
+          text: 'Let the syrup-dipped ghewar cool on the rack for 5 minutes so it is no longer warm. Spread 2 tablespoons of cooled, thick rabri evenly over the top, and scatter the chopped pistachios and almonds over it. Press a small piece of silver leaf on the centre if you wish, and serve the same day.',
           why: 'Cooling stops the rabri from melting; the cream tops the ghewar with richness against the crisp base.',
           cue: 'The rabri sits on top as a thick layer and the base remains crisp underneath.',
         },
