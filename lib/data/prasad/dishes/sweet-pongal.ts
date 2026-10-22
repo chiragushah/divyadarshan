@@ -13,7 +13,7 @@ const recipe: PrasadRecipe = {
     {
       id: 'tamil-sakkarai',
       region: 'Tamil Nadu',
-      culture: 'Tamil households — Thai Pongal, temple naivedyam',
+      culture: 'Tamil households — Thai Pongal, temple prasadam',
       title: 'Sakkarai Pongal',
       intro:
         'Soft rice and roasted moong dal cooked in milk and water, sweetened with strained jaggery and finished with ghee-fried cashews, raisins and cardamom. Cooked outdoors in a new clay pot on Thai Pongal.',
@@ -158,14 +158,14 @@ const recipe: PrasadRecipe = {
         'Add the jaggery only after the rice is fully soft.',
         'Be generous with ghee; sakkarai pongal is meant to be rich.',
       ],
-      differs: 'Milk-cooked, jaggery-dark, soft and spoonable; cashews, raisins, cardamom; camphor in temples.',
+      differs: 'Milk-and-water cooked; loose and glossy; cashews, coconut and camphor.',
     },
 
     // ───────────────────────────── ANDHRA ─────────────────────────────
     {
       id: 'andhra-chakkera',
       region: 'Andhra Pradesh & Telangana',
-      culture: 'Telugu households — Sankranti, temple prasadam',
+      culture: 'Telugu households — Ratha Saptami, Sankranti',
       title: 'Chakkera Pongali',
       intro:
         'The Telugu sweet pongal is richer in ghee and nuts than the Tamil version, often made with a little more dal, and is a staple of Sankranti and of temple prasadam, especially for large gatherings.',
@@ -248,7 +248,7 @@ const recipe: PrasadRecipe = {
         {
           title: 'Fold in the fried nuts',
           text:
-            'Add the ghee-fried cashews, raisins and coconut with all their ghee and fold in gently so the nuts stay whole. Switch off the heat.',
+            'Add the ghee-fried cashews, raisins and coconut together with all of their ghee, and fold in gently so that the nuts stay whole. Then switch off the heat.',
           why: 'Folding gently preserves the crunch and keeps the nuts distributed through the pongali instead of sinking.',
           cue: 'Golden cashews and plump raisins appear in every spoonful.',
         },
@@ -303,14 +303,14 @@ const recipe: PrasadRecipe = {
         'Add ghee gradually so it blends rather than splits.',
         'Jaggery scorches fast, so keep the heat low once it is added.',
       ],
-      differs: 'Richer in ghee, dal and nuts; pressure-cooked and thicker.',
+      differs: 'Milk-based, firmer, nutmeg.',
     },
 
     // ───────────────────────────── KARNATAKA ─────────────────────────────
     {
       id: 'karnataka-sihi',
       region: 'Karnataka',
-      culture: 'Kannadiga households — Makara Sankranti, temple naivedya',
+      culture: 'Kannada households — Sankranti, Gowri–Ganesha',
       title: 'Sihi Pongal',
       intro:
         'Karnataka’s sweet pongal, sihi pongal (“sweet pongal” in Kannada), is lighter, a little drier and more delicately perfumed than its neighbours, and is served on Sankranti alongside the savoury khara pongal.',
@@ -365,7 +365,7 @@ const recipe: PrasadRecipe = {
         {
           title: 'Mash lightly',
           text:
-            'Uncover and mash the mixture 6–8 times with the back of the ladle. The pongal should be soft with some whole grains left, not smooth.',
+            'Uncover and mash the mixture 6–8 times with the back of the ladle. The pongal should stay soft with some whole grains left in it, never fully smooth, so that it holds its shape later on the plate.',
           why: 'A little mashing releases starch so the pongal holds its shape on the plate. Too much makes it pasty.',
           cue: 'The mixture holds together but still shows distinct soft grains.',
         },
@@ -386,7 +386,7 @@ const recipe: PrasadRecipe = {
         {
           title: 'Fold in the nuts and coconut',
           text:
-            'Add the fried cashews, raisins and coconut slivers with their ghee, and fold gently so they stay whole. Switch off the heat.',
+            'Add the fried cashews, raisins and coconut slivers together with all of their ghee, and fold gently so that they stay whole. Then switch off the heat.',
           why: 'Adding the garnish last keeps the nuts crunchy and the coconut toasted.',
           cue: 'Golden nuts and coconut slivers are visible in every spoonful.',
         },
@@ -448,7 +448,7 @@ const recipe: PrasadRecipe = {
         'Serve sihi and khara pongal together; the contrast is part of the dish.',
         'Use camphor in a tiny pinch only, and only edible grade.',
       ],
-      differs: 'Lighter, drier, mostly water-cooked; served beside khara pongal.',
+      differs: 'Water-cooked, coconut-flavoured.',
     },
   ],
 }

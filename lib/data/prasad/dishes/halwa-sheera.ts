@@ -13,7 +13,7 @@ const recipe: PrasadRecipe = {
     {
       id: 'sikh-kada-prasad',
       region: 'Punjab & Sikh gurdwaras everywhere',
-      culture: 'Sikh sangat — every gurdwara, every Gurpurab',
+      culture: 'Sikh tradition — Baisakhi, Guru Nanak Jayanti, Hola Mohalla',
       title: 'Kada (Karah) Prasad',
       intro:
         'Whole-wheat flour, desi ghee and sugar in exactly equal parts by weight, roasted until deep golden and bound with hot sugar water. It is offered at the Guru Granth Sahib and handed to every person present.',
@@ -140,14 +140,14 @@ const recipe: PrasadRecipe = {
         'Keep the face turned away when the syrup goes in, because the spluttering can burn.',
         'Patience at the roasting stage decides the flavour; the colour should be like toasted wheat, not dark.',
       ],
-      differs: 'Strict 1:1:1 atta:ghee:sugar by weight; no flavourings; sanctified by ardas.',
+      differs: 'Atta-ghee-sugar 1:1:1, plain — no spices or fruit.',
     },
 
     // ───────────────────────────── MAHARASHTRA / GUJARAT SHEERA ─────────────────────────────
     {
       id: 'maharashtra-gujarat-sheera',
       region: 'Maharashtra & Gujarat',
-      culture: 'Marathi & Gujarati households — Satyanarayan puja, Ganesh Chaturthi, housewarming',
+      culture: 'Marathi and Gujarati households — Satyanarayan puja',
       title: 'Satyanarayan Sheera (sava-measure prasad)',
       intro:
         'Fine semolina roasted in ghee and cooked in milk and water with sugar, flavoured with cardamom and banana, in the sava (one-and-a-quarter) measure for the Satyanarayan puja.',
@@ -285,14 +285,14 @@ const recipe: PrasadRecipe = {
         'Hot liquid, slow pour, constant stirring: these three prevent every common problem.',
         'Never put tulsi into the pan; add it only as the offering leaf.',
       ],
-      differs: 'Sooji roasted in ghee, milk and water, banana, in 1¼ measure.',
+      differs: 'Semolina with banana; milk and water; tulsi on top.',
     },
 
     // ───────────────────────────── ANDHRA ANNAVARAM ─────────────────────────────
     {
       id: 'andhra-annavaram',
       region: 'Andhra Pradesh (Annavaram-style)',
-      culture: 'Telugu households — Satyanarayana Swamy vratam, Annavaram temple',
+      culture: 'Telugu Vaishnava — Satyanarayana Swamy vratam',
       title: 'Godhuma Rava Prasadam',
       intro:
         'Broken-wheat (godhuma rava) prasadam cooked in ghee and jaggery or sugar syrup with cardamom, in the style offered to Annavaram Sri Veera Venkata Satyanarayana Swamy.',
@@ -429,7 +429,7 @@ const recipe: PrasadRecipe = {
         'Cook the wheat fully before the sweetener goes in; sugar stops softening.',
         'Be generous with ghee; it defines the temple style.',
       ],
-      differs: 'Broken wheat, longer cooking; ghee-rich; leaf-wrapped at Annavaram.',
+      differs: 'Broken wheat and jaggery; dense and dark; leaf-served.',
     },
   ],
 }
