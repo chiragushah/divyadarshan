@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, ChefHat, Clock, Users, Flame, Lightbulb, MapPin, Scale } from 'lucide-react'
+import { ArrowLeft, ChefHat, Clock, Users, Flame, Lightbulb, MapPin, Scale, BookOpen, Wrench, ListChecks, AlertTriangle, Shuffle, Archive, UtensilsCrossed, Eye } from 'lucide-react'
 import { FESTIVALS, getFestival } from '@/lib/data/festivals'
 import { PRASAD_RECIPES, getRecipe, getVariant, festivalsFor, recipeHref } from '@/lib/data/prasad'
 
@@ -113,49 +113,137 @@ export default function PrasadRecipePage({ params, searchParams }: Props) {
           <h2 className="font-serif" style={{ fontSize: 'clamp(24px, 4vw, 30px)', fontWeight: 600, marginBottom: 10 }}>{variant.title}</h2>
           <p style={{ fontSize: 15.5, color: 'var(--ink2)', lineHeight: 1.8, marginBottom: 20 }}>{variant.intro}</p>
 
+          {variant.story && (
+            <div style={{ marginBottom: 24 }}>
+              <h3 className="font-serif" style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, display: 'flex', alignItems: 'center', gap: 8 }}>
+                <BookOpen size={18} style={{ color: accent }} /> About this version
+              </h3>
+              {variant.story.split('\n\n').map((para, i) => (
+                <p key={i} style={{ fontSize: 15, color: 'var(--ink2)', lineHeight: 1.8, margin: '0 0 12px' }}>{para}</p>
+              ))}
+            </div>
+          )}
+
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 12, marginBottom: 26 }}>
             <Meta icon={<Users size={16} />} label="Serves" value={variant.serves} accent={accent} />
             <Meta icon={<Clock size={16} />} label="Prep" value={variant.prep} accent={accent} />
             <Meta icon={<ChefHat size={16} />} label="Cook" value={variant.cook} accent={accent} />
           </div>
 
+          {variant.equipment && variant.equipment.length > 0 && (
+            <div style={{ marginBottom: 26 }}>
+              <h3 className="font-serif" style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, display: 'flex', alignItems: 'center', gap: 8 }}>
+                <Wrench size={18} style={{ color: accent }} /> Equipment
+              </h3>
+              <NoteList items={variant.equipment} accent={accent} />
+            </div>
+          )}
+
           <h3 className="font-serif" style={{ fontSize: 20, fontWeight: 600, marginBottom: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
             <Scale size={18} style={{ color: accent }} /> Ingredients
           </h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16, marginBottom: 28 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 16, marginBottom: 26 }}>
             {variant.ingredients.map((g, gi) => (
               <div key={gi} style={{ background: 'var(--ivory2)', border: '1px solid var(--ivory3)', borderRadius: 12, padding: 16 }}>
                 {g.group && <div style={{ fontSize: 13.5, fontWeight: 700, color: accent, marginBottom: 8 }}>{g.group}</div>}
-                <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 7 }}>
-                  {g.items.map((it, i) => (
-                    <li key={i} style={{ display: 'flex', gap: 9, fontSize: 14, color: 'var(--ink2)', lineHeight: 1.55 }}>
-                      <span aria-hidden style={{ width: 5, height: 5, borderRadius: '50%', background: accent, flexShrink: 0, marginTop: 8 }} />
-                      <span>{it}</span>
-                    </li>
-                  ))}
-                </ul>
+                <NoteList items={g.items} accent={accent} dense />
               </div>
             ))}
           </div>
+
+          {variant.mise && variant.mise.length > 0 && (
+            <div style={{ marginBottom: 28 }}>
+              <h3 className="font-serif" style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, display: 'flex', alignItems: 'center', gap: 8 }}>
+                <ListChecks size={18} style={{ color: accent }} /> Before you start
+              </h3>
+              <NoteList items={variant.mise} accent={accent} />
+            </div>
+          )}
 
           <h3 className="font-serif" style={{ fontSize: 20, fontWeight: 600, marginBottom: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
             <ChefHat size={18} style={{ color: accent }} /> Method
           </h3>
           <ol style={{ listStyle: 'none', margin: '0 0 28px', padding: 0 }}>
-            {variant.method.map((s, i) => (
-              <li key={i} style={{ display: 'flex', gap: 14, paddingBottom: i < variant.method.length - 1 ? 14 : 0 }}>
-                <div style={{ flexShrink: 0, width: 28, height: 28, borderRadius: '50%', background: accent, color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700 }}>{i + 1}</div>
-                <div style={{ flex: 1, fontSize: 14.5, color: 'var(--ink2)', lineHeight: 1.7, paddingTop: 3 }}>{s}</div>
-              </li>
-            ))}
+            {variant.method.map((st, i) => {
+              const d = typeof st === 'string' ? { title: '', text: st, why: undefined, cue: undefined } : st
+              return (
+                <li key={i} style={{ display: 'flex', gap: 14, paddingBottom: i < variant.method.length - 1 ? 20 : 0 }}>
+                  <div style={{ flexShrink: 0, width: 30, height: 30, borderRadius: '50%', background: accent, color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700 }}>{i + 1}</div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    {d.title && <div style={{ fontSize: 15.5, fontWeight: 700, color: 'var(--ink)', marginBottom: 4, paddingTop: 3 }}>{d.title}</div>}
+                    <div style={{ fontSize: 14.5, color: 'var(--ink2)', lineHeight: 1.75, paddingTop: d.title ? 0 : 3 }}>{d.text}</div>
+                    {d.why && (
+                      <div style={{ fontSize: 13.5, color: 'var(--muted)', lineHeight: 1.65, marginTop: 8 }}>
+                        <strong style={{ color: 'var(--ink2)' }}>Why: </strong>{d.why}
+                      </div>
+                    )}
+                    {d.cue && (
+                      <div style={{ display: 'flex', gap: 8, alignItems: 'flex-start', fontSize: 13.5, color: 'var(--ink2)', lineHeight: 1.6, marginTop: 8, background: `${accent}0d`, borderRadius: 8, padding: '8px 12px' }}>
+                        <Eye size={15} style={{ color: accent, flexShrink: 0, marginTop: 2 }} />
+                        <span><strong>You’ll know it’s right when: </strong>{d.cue}</span>
+                      </div>
+                    )}
+                  </div>
+                </li>
+              )
+            })}
           </ol>
 
           <div style={{ background: `${accent}0d`, borderLeft: `4px solid ${accent}`, borderRadius: 10, padding: '14px 18px', marginBottom: 22 }}>
             <div className="section-title" style={{ marginBottom: 5, display: 'flex', alignItems: 'center', gap: 6 }}>
               <Flame size={14} style={{ color: accent }} /> How it is offered
             </div>
-            <p style={{ fontSize: 14.5, color: 'var(--ink2)', lineHeight: 1.7, margin: 0 }}>{variant.offering}</p>
+            <p style={{ fontSize: 14.5, color: 'var(--ink2)', lineHeight: 1.75, margin: 0 }}>{variant.offering}</p>
+            {variant.ritual && variant.ritual.length > 0 && (
+              <ol style={{ margin: '12px 0 0', paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 7 }}>
+                {variant.ritual.map((r, i) => (
+                  <li key={i} style={{ fontSize: 14, color: 'var(--ink2)', lineHeight: 1.7 }}>{r}</li>
+                ))}
+              </ol>
+            )}
           </div>
+
+          {(variant.serving || variant.storage) && (
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 14, marginBottom: 24 }}>
+              {variant.serving && (
+                <div style={{ background: 'var(--ivory2)', border: '1px solid var(--ivory3)', borderRadius: 12, padding: 16 }}>
+                  <div className="section-title" style={{ marginBottom: 6, display: 'flex', alignItems: 'center', gap: 6 }}><UtensilsCrossed size={14} style={{ color: accent }} /> Serving</div>
+                  <p style={{ fontSize: 14, color: 'var(--ink2)', lineHeight: 1.7, margin: 0 }}>{variant.serving}</p>
+                </div>
+              )}
+              {variant.storage && (
+                <div style={{ background: 'var(--ivory2)', border: '1px solid var(--ivory3)', borderRadius: 12, padding: 16 }}>
+                  <div className="section-title" style={{ marginBottom: 6, display: 'flex', alignItems: 'center', gap: 6 }}><Archive size={14} style={{ color: accent }} /> Storage</div>
+                  <p style={{ fontSize: 14, color: 'var(--ink2)', lineHeight: 1.7, margin: 0 }}>{variant.storage}</p>
+                </div>
+              )}
+            </div>
+          )}
+
+          {variant.troubleshooting && variant.troubleshooting.length > 0 && (
+            <div style={{ marginBottom: 24 }}>
+              <h3 className="font-serif" style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, display: 'flex', alignItems: 'center', gap: 8 }}>
+                <AlertTriangle size={18} style={{ color: accent }} /> If something goes wrong
+              </h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {variant.troubleshooting.map((t, i) => (
+                  <div key={i} style={{ border: '1px solid var(--ivory3)', borderRadius: 10, padding: '11px 14px' }}>
+                    <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink)', marginBottom: 3 }}>{t.problem}</div>
+                    <div style={{ fontSize: 13.5, color: 'var(--ink2)', lineHeight: 1.65 }}>{t.fix}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {variant.variations && variant.variations.length > 0 && (
+            <div style={{ marginBottom: 24 }}>
+              <h3 className="font-serif" style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, display: 'flex', alignItems: 'center', gap: 8 }}>
+                <Shuffle size={18} style={{ color: accent }} /> Variations &amp; substitutions
+              </h3>
+              <NoteList items={variant.variations} accent={accent} />
+            </div>
+          )}
 
           {variant.tips.length > 0 && (
             <div>
@@ -256,6 +344,27 @@ export default function PrasadRecipePage({ params, searchParams }: Props) {
         </div>
       </div>
     </div>
+  )
+}
+
+function NoteList({ items, accent, dense }: { items: string[]; accent: string; dense?: boolean }) {
+  return (
+    <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: dense ? 9 : 8 }}>
+      {items.map((it, i) => {
+        const k = it.indexOf(' — ')
+        const main = k > -1 ? it.slice(0, k) : it
+        const note = k > -1 ? it.slice(k + 3) : ''
+        return (
+          <li key={i} style={{ display: 'flex', gap: 9, fontSize: 14, color: 'var(--ink2)', lineHeight: 1.6 }}>
+            <span aria-hidden style={{ width: 5, height: 5, borderRadius: '50%', background: accent, flexShrink: 0, marginTop: 9 }} />
+            <span>
+              <span style={{ color: 'var(--ink)' }}>{main}</span>
+              {note && <span style={{ display: 'block', fontSize: 13, color: 'var(--muted)', lineHeight: 1.55, marginTop: 1 }}>{note}</span>}
+            </span>
+          </li>
+        )
+      })}
+    </ul>
   )
 }
 
