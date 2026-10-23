@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { honestLive } from '@/lib/liveStatus'
 import { getToken } from 'next-auth/jwt'
 import { routeAI, SYSTEM_PROMPTS } from '@/lib/ai/router'
 import connectDB from '@/lib/mongodb/connect'
@@ -23,7 +24,7 @@ export async function POST(req: NextRequest) {
         { deity: { $regex: query, $options: 'i' } },
         { type:  { $regex: query, $options: 'i' } },
       ]
-    }).limit(8).select('name city state deity type slug has_live').lean()
+    }).limit(8).select('name city state deity type slug has_live live_status').lean()
 
     const duration_ms = Date.now() - start
 
@@ -34,7 +35,7 @@ export async function POST(req: NextRequest) {
     ])
 
     if (temples.length > 0) {
-      return NextResponse.json({ results: temples, provider: 'mongodb' })
+      return NextResponse.json({ results: (temples as any[]).map(honestLive), provider: 'mongodb' })
     }
 
     // If no DB results, use Groq AI

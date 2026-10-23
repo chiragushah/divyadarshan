@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { honestLive } from '@/lib/liveStatus'
 import connectDB from '@/lib/mongodb/connect'
 import { Temple } from '@/models'
 
@@ -31,10 +32,11 @@ export async function GET(req: NextRequest) {
       lat: { $exists: true, $ne: 0 },
       lng: { $exists: true, $ne: 0 },
     })
-      .select('name slug city state deity type image_url blob_image_url lat lng has_live rating_avg categories')
+      .select('name slug city state deity type image_url blob_image_url lat lng has_live live_status rating_avg categories')
       .lean()
 
     const places = (allTemples as any[])
+      .map(honestLive)
       .map((t: any) => {
         const distance = haversine(lat, lon, t.lat, t.lng)
         return {

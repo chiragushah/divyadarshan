@@ -1,4 +1,5 @@
 export const dynamic = 'force-dynamic'
+import { honestLive } from '@/lib/liveStatus'
 import type { Metadata } from 'next'
 import connectDB from '@/lib/mongodb/connect'
 import { Temple } from '@/models'
@@ -32,9 +33,9 @@ export default async function ExplorePage({ searchParams }: Props) {
   if (searchParams.city)     filter.city       = searchParams.city
   if (searchParams.deity)    filter.deity      = { $regex: searchParams.deity, $options: 'i' }
   if (searchParams.category) filter.categories = searchParams.category
-  if (searchParams.live === 'true') filter.has_live = true
+  if (searchParams.live === 'true') filter.live_status = { $in: ['official', 'channel'] }
   // ← FIX: Live Darshan tab also filters by has_live
-  if (searchParams.tab === 'darshan') filter.has_live = true
+  if (searchParams.tab === 'darshan') filter.live_status = { $in: ['official', 'channel'] }
   // Religion filter
   if (searchParams.religion) {
     const r = searchParams.religion
@@ -69,7 +70,7 @@ export default async function ExplorePage({ searchParams }: Props) {
   const allCities = (await Temple.distinct('city', cityQuery) as string[])
     .filter(Boolean)
     .sort((a, b) => a.localeCompare(b))
-  const data = temples.map((t: any) => ({ ...t, id: t._id.toString() }))
+  const data = temples.map((t: any) => ({ ...honestLive(t), id: t._id.toString() }))
 
   return (
     <ExploreClient

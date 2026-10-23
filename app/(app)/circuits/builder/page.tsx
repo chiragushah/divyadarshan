@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { honestLive } from '@/lib/liveStatus'
 import Link from 'next/link'
 import { ArrowLeft, Route, Sparkles } from 'lucide-react'
 import connectDB from '@/lib/mongodb/connect'
@@ -31,8 +32,8 @@ export default async function CircuitBuilderPage({ searchParams }:
     const candidates = await Temple.find({
       lat: { $gte: lat - dLat, $lte: lat + dLat, $ne: null },
       lng: { $gte: lng - dLng, $lte: lng + dLng, $ne: null },
-    }).select('slug name deity city state lat lng has_live image_url blob_image_url').limit(200).lean() as any[]
-    const built = buildCircuit({ name: place || 'your location', lat, lng }, candidates as any, radius, 10)
+    }).select('slug name deity city state lat lng has_live live_status image_url blob_image_url').limit(200).lean() as any[]
+    const built = buildCircuit({ name: place || 'your location', lat, lng }, candidates.map(honestLive) as any, radius, 10)
     if (built.count > 0) { circuit = built; mapsUrl = circuitMapsUrl({ lat, lng }, built.stops) }
   }
 

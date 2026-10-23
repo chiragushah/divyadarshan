@@ -36,6 +36,9 @@ export interface ITemple extends Document {
   categories: string[]
   has_live: boolean
   live_url?: string
+  live_status?: 'official' | 'channel' | 'unverified' | 'none'   // verified by us? (missing = unverified if has_live)
+  live_verified_at?: Date
+  live_note?: string
   live_schedule?: ILiveSlot[]
   poojas?: IPooja[]              // ← Recommended poojas at this temple
   lat?: number
@@ -88,6 +91,9 @@ const TempleSchema = new Schema<ITemple>(
     categories:           { type: [String], default: [], index: true },
     has_live:             { type: Boolean, default: false, index: true },
     live_url:             { type: String },
+    live_status:          { type: String, enum: ['official', 'channel', 'unverified', 'none'], index: true },
+    live_verified_at:     { type: Date },
+    live_note:            { type: String },
     live_schedule:        { type: [LiveSlotSchema], default: [] },
     poojas:               { type: [PoojaSchema], default: [] },  // ← Recommended poojas
     lat:                  { type: Number },

@@ -8,7 +8,8 @@ import TempleStatusBadge from '@/components/temple/TempleStatusBadge'
 import DataConfidenceBadge from '@/components/temple/DataConfidenceBadge'
 import ReportButton from '@/components/temple/ReportButton'
 import MarkVisited from '@/components/temple/MarkVisited'
-import LiveDarshanStatus from '@/components/temple/LiveDarshanStatus'
+import LiveDarshanSection from '@/components/temple/LiveDarshanSection'
+import { liveTier, honestLive } from '@/lib/liveStatus'
 import DeepDiveSection from '@/components/temple/DeepDiveSection'
 import BestTimeToVisit from '@/components/temple/BestTimeToVisit'
 import KnowBeforeYouGo from '@/components/temple/KnowBeforeYouGo'
@@ -83,8 +84,8 @@ export default async function TemplePage({ params }: Props) {
       _id: { $ne: temple._id },
       lat: { $gte: t.lat - dLat, $lte: t.lat + dLat, $ne: null },
       lng: { $gte: t.lng - dLng, $lte: t.lng + dLng, $ne: null },
-    }).select('slug name deity city state lat lng has_live image_url blob_image_url').limit(150).lean() as any[]
-    const built = buildCircuit({ name: t.name, lat: t.lat, lng: t.lng }, candidates as any, 200, 8)
+    }).select('slug name deity city state lat lng has_live live_status image_url blob_image_url').limit(150).lean() as any[]
+    const built = buildCircuit({ name: t.name, lat: t.lat, lng: t.lng }, candidates.map(honestLive) as any, 200, 8)
     if (built.count > 0) {
       circuit = built
       circuitMaps = circuitMapsUrl({ lat: t.lat, lng: t.lng }, built.stops)
@@ -131,7 +132,7 @@ export default async function TemplePage({ params }: Props) {
               {t.image_url
                 ? <img src={t.image_url.includes('wikimedia') ? `/api/image-proxy?url=${encodeURIComponent(t.image_url)}` : t.image_url} alt={t.name} className="w-full h-full object-cover" />
                 : <span className="text-8xl font-serif font-bold" style={{ color:'rgba(255,255,255,.15)' }}>{t.name.charAt(0)}</span>}
-              {t.has_live && (
+              {liveTier(t) === 'verified' && (
                 <div className="absolute top-4 left-4">
                   <span className="badge-live px-3 py-1.5 text-xs font-semibold rounded-lg">
                     <span className="live-dot" /> Live Darshan Available
@@ -178,14 +179,19 @@ export default async function TemplePage({ params }: Props) {
               </span>
             </div>
 
-            {t.has_live && (
-              <LiveDarshanStatus
-                liveUrl={t.live_url}
-                liveSchedule={t.live_schedule}
-                templeName={t.name}
-                timing={t.timing}
-              />
-            )}
+            <LiveDarshanSection
+              tier={liveTier(t)}
+              status={t.live_status || (t.has_live ? 'unverified' : 'none')}
+              slug={t.slug}
+              templeName={t.name}
+              liveUrl={t.live_url}
+              liveSchedule={t.live_schedule}
+              timing={t.timing}
+              website={t.official_website}
+              bookingUrl={(t.poojas || []).find((p: any) => p.booking_url)?.booking_url}
+              verifiedAt={t.live_verified_at ? new Date(t.live_verified_at).toISOString() : null}
+              note={t.live_note}
+            />
 
             {/* —— BEST TIME TO VISIT ——————————————— */}
             <BestTimeToVisit temple={{

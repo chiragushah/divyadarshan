@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { honestLive } from '@/lib/liveStatus'
 import connectDB from '@/lib/mongodb/connect'
 import { Temple } from '@/models'
 import { rateLimit, sanitizeQuery, getIP, rateLimitResponse } from '@/lib/security'
@@ -21,7 +22,7 @@ export async function GET(req: NextRequest) {
 
     if (lat && lon) {
       const allTemples = await Temple.find({ lat: { $exists: true, $ne: 0 }, lng: { $exists: true, $ne: 0 } })
-        .select('name slug city state deity type image_url lat lng has_live rating_avg categories')
+        .select('name slug city state deity type image_url lat lng has_live live_status rating_avg categories')
         .lean()
 
       const haversine = (lat1: number, lon1: number, lat2: number, lon2: number) => {
@@ -33,7 +34,7 @@ export async function GET(req: NextRequest) {
       }
 
       const results = (allTemples as any[])
-        .map(t => ({ ...t, distance: haversine(lat, lon, t.lat, t.lng) }))
+        .map(t => ({ ...honestLive(t), distance: haversine(lat, lon, t.lat, t.lng) }))
         .filter(t => t.distance <= radius)
         .sort((a, b) => a.distance - b.distance)
         .slice(0, 30)
@@ -66,7 +67,7 @@ export async function GET(req: NextRequest) {
     if (state)    filter.state      = state
     if (deity)    filter.deity      = { $regex: deity, $options: 'i' }
     if (category) filter.categories = category
-    if (live === 'true') filter.has_live = true
+    if (live === 'true') filter.live_status = { $in: ['official', 'channel'] }
     if (exclude)  filter.slug = { $nin: exclude.split(',') }
   }
 
@@ -96,7 +97,7 @@ export async function GET(req: NextRequest) {
   }
   const sortObj: Record<string, any> = sort === 'rating' ? { rating_avg: -1 } : { name: 1 }
   const [temples, total] = await Promise.all([
-    Temple.find(filter).sort(sortObj).skip((page-1)*limit).limit(limit).lean(),
+    Temple.find(filter).sort(sortObj).skip((page-1)*limit).limit(limit).lean().then((r: any[]) => r.map(honestLive)),
     Temple.countDocuments(filter),
   ])
 
