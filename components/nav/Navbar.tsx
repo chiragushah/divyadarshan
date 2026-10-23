@@ -6,6 +6,7 @@ import { useSession, signOut } from "next-auth/react";
 import { ChevronDown, Menu, X, Sparkles, Heart, Globe, PartyPopper, ChefHat } from "lucide-react";
 import Logo from "@/components/Logo";
 import GoogleTranslate from "@/components/translate/GoogleTranslate";
+import GaneshaStrip from "@/components/nav/GaneshaStrip";
 
 const PAGE_GROUP: Record<string, string> = {
   "/explore": "Explore", "/temple": "Explore", "/circuits": "Explore", "/calendar": "Explore",
@@ -49,6 +50,8 @@ export default function Navbar() {
     Object.entries(PAGE_GROUP).find(([key]) => pathname.startsWith(key))?.[1] ?? null;
 
   return (
+    <>
+    <GaneshaStrip />
     <nav style={{ background:"#FFFFFF", borderBottom:"1.5px solid #E8E8E8", position:"sticky", top:0, zIndex:50, boxShadow:"0 1px 3px rgba(0,0,0,.04)" }}>
       <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 24px" }}>
         <div style={{ display:"flex", alignItems:"center", height:88, gap:8 }}>
@@ -187,5 +190,6 @@ export default function Navbar() {
         </div>
       )}
     </nav>
+    </>
   );
 }

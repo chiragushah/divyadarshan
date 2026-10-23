@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Outfit } from 'next/font/google'
+import { Cormorant_Garamond, Outfit, Noto_Serif_Devanagari } from 'next/font/google'
 import { SessionProvider } from './providers'
 import { Toaster } from 'react-hot-toast'
 import './globals.css'
@@ -18,6 +18,13 @@ const outfit = Outfit({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
   variable: '--font-sans',
+  display: 'swap',
+})
+
+const deva = Noto_Serif_Devanagari({
+  subsets: ['devanagari'],
+  weight: ['600'],
+  variable: '--font-deva',
   display: 'swap',
 })
 
@@ -53,7 +60,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${outfit.variable} ${deva.variable}`}>
       <body className="bg-ivory-100 text-gray-900 antialiased">
         <SessionProvider>
           {children}
