@@ -1,7 +1,7 @@
 'use client'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
-import { ChefHat, Check, Minus, Plus, Scale, ShoppingBasket, Timer, X, Eye, Sun, ChevronLeft, ChevronRight, AlertTriangle } from 'lucide-react'
+import { ChefHat, Check, Minus, Plus, Scale, ShoppingBasket, Timer, X, Eye, Sun, ChevronLeft, ChevronRight, AlertTriangle, MessageCircle, Printer, Link2 } from 'lucide-react'
 import type { IngredientGroup } from '@/lib/data/prasad/types'
 import { scaleLine, SERVING_PRESETS } from '@/lib/prasad/scale'
 import { loadBasket, upsertBasket, removeFromBasket } from '@/lib/prasad/basket'
@@ -93,6 +93,14 @@ export default function RecipeKit(p: Props) {
     upsertBasket({ key, dish: p.dish, variant: p.variantId, title: p.title, region: p.region, baseServes: p.baseServes, servings, lines: flatLines.map(l => l.split(' — ')[0]) })
     setInPlan(true)
   }
+  const pageUrl = () => `${typeof window !== 'undefined' ? window.location.origin : 'https://divyadarshanam.org'}/festivals/prasad/${p.dish}?v=${p.variantId}`
+  const waText = () => {
+    const lines = p.ingredients.flatMap(g => g.items.map(i => '• ' + scaleLine(i, factor).split(' — ')[0]))
+    return `*${p.title}* — ${p.region}\nQuantities for ${servings}\n\n${lines.join('\n')}\n\nFull recipe with every step explained:\n${pageUrl()}`
+  }
+  const [copied, setCopied] = useState(false)
+  const copyLink = async () => { try { await navigator.clipboard.writeText(pageUrl()); setCopied(true); setTimeout(() => setCopied(false), 2000) } catch { /* ignore */ } }
+
   // keep a saved plan entry in step with the servings control
   useEffect(() => {
     if (!inPlan) return
@@ -139,6 +147,11 @@ export default function RecipeKit(p: Props) {
             {inPlan ? <><Check size={16} /> In your puja plan — remove</> : <><ShoppingBasket size={16} /> Add to “Plan my puja”</>}
           </button>
           {inPlan && <Link href="/festivals/prasad/plan" className="btn btn-secondary">View shopping list</Link>}
+        </div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 10 }}>
+          <a href={`https://wa.me/?text=${encodeURIComponent(waText())}`} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: 7 }}><MessageCircle size={16} /> Share on WhatsApp</a>
+          <Link href={`/festivals/prasad/${p.dish}/card?v=${p.variantId}&s=${servings}`} className="btn btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: 7 }}><Printer size={16} /> Printable card</Link>
+          <button onClick={copyLink} className="btn btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: 7 }}>{copied ? <><Check size={16} /> Link copied</> : <><Link2 size={16} /> Copy link</>}</button>
         </div>
       </div>
 

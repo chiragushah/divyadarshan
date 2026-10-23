@@ -54,6 +54,8 @@ export async function middleware(request: NextRequest) {
   // Allow public pages
   const PUBLIC_PAGES = ['/about', '/team', '/stories', '/contact', '/volunteer']
   if (PUBLIC_PAGES.includes(pathname)) return NextResponse.next()
+  // Prasad recipes are public so a shared WhatsApp link opens without sign-in
+  if (pathname === '/festivals/prasad' || pathname.startsWith('/festivals/prasad/')) return NextResponse.next()
 
   const PUBLIC = ['/auth/', '/api/auth', '/api/analytics', '/api/admin', '/api/health',
     '/api/announcement', '/api/temples', '/api/nearby', '/api/image-proxy', '/api/alerts', '/api/cron']

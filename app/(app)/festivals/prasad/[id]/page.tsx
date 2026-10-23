@@ -21,14 +21,14 @@ export function generateStaticParams() {
   return PRASAD_RECIPES.map(r => ({ id: r.id }))
 }
 
-export function generateMetadata({ params }: Props): Metadata {
+export function generateMetadata({ params, searchParams }: Props): Metadata {
   const r = getRecipe(params.id)
   if (!r) return { title: 'Prasad recipe — DivyaDarshanam' }
-  const regions = r.variants.map(v => v.region).slice(0, 3).join(', ')
-  return {
-    title: `${r.name} recipe — made differently by state and tradition | DivyaDarshanam`,
-    description: `${r.summary} Full recipes for ${regions}${r.variants.length > 3 ? ' and more' : ''}.`,
-  }
+  const v = getVariant(r, searchParams.v)
+  const regions = r.variants.map(x => x.region).slice(0, 3).join(', ')
+  const title = searchParams.v ? `${v.title} (${v.region}) — prasad recipe | DivyaDarshanam` : `${r.name} recipe — made differently by state and tradition | DivyaDarshanam`
+  const description = searchParams.v ? `${v.intro.slice(0, 190)}` : `${r.summary} Full recipes for ${regions}${r.variants.length > 3 ? ' and more' : ''}.`
+  return { title, description, openGraph: { title, description, type: 'article', siteName: 'DivyaDarshanam' } }
 }
 
 export default function PrasadRecipePage({ params, searchParams }: Props) {
