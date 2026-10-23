@@ -13,6 +13,7 @@ import DeepDiveSection from '@/components/temple/DeepDiveSection'
 import BestTimeToVisit from '@/components/temple/BestTimeToVisit'
 import KnowBeforeYouGo from '@/components/temple/KnowBeforeYouGo'
 import NearbyCircuit from '@/components/temple/NearbyCircuit'
+import TemplePrasad from '@/components/prasad/TemplePrasad'
 import { buildCircuit, circuitMapsUrl } from '@/lib/nearbyCircuit'
 import { Accessibility, Backpack, Banknote, Bath, BookOpen, Bus, Candy, Car, Clock, Droplets, Flame, Flower2, Globe, HeartPulse, Hotel, Info, Landmark, Lightbulb, Map, MapPin, Navigation, ParkingSquare, Phone, Plane, ShoppingBag, Star, Ticket, TrainFront, Trees, Utensils, Wallet } from 'lucide-react'
 
@@ -202,6 +203,8 @@ export default async function TemplePage({ params }: Props) {
 
             {/* —— AUTO CIRCUIT (200 km) ————————————— */}
             {circuit && <NearbyCircuit circuit={circuit} mapsUrl={circuitMaps} anchorName={t.name} />}
+
+            <TemplePrasad slug={t.slug} templeName={t.name} state={t.state} />
 
             {/* —— FACILITIES ——————————————————————— */}
             {Object.keys(facilities).length > 0 && (

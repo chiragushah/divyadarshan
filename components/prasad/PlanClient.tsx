@@ -6,6 +6,7 @@ import { loadBasket, saveBasket, removeFromBasket } from '@/lib/prasad/basket'
 import { buildShoppingList, shoppingText, type BasketItem } from '@/lib/prasad/merge'
 import { SERVING_PRESETS } from '@/lib/prasad/scale'
 import ReminderBox, { type FestOpt } from './ReminderBox'
+import { STORES, HAS_AFFILIATE, searchTerm, buyable } from '@/lib/prasad/shop'
 
 const CHK = 'dd_shop_checked_v1'
 
@@ -84,6 +85,9 @@ export default function PlanClient({ festivals }: { festivals: FestOpt[] }) {
         <p style={{ fontSize: 12.5, color: 'var(--muted)', lineHeight: 1.6, margin: '0 0 16px' }}>
           Same ingredients from different recipes are added together when the units match. If an item shows twice (for example “ghee” and “cow ghee”), add them yourself. Quantities are a starting point — check each recipe before you shop.
         </p>
+        <p className="no-print" style={{ fontSize: 12.5, color: 'var(--muted)', lineHeight: 1.6, margin: '-8px 0 16px' }}>
+          Under each item are search links to online grocers. We have no tie-up with any of them yet; prices and availability are theirs.{HAS_AFFILIATE ? ' Some links are affiliate links — we may earn a small commission at no cost to you.' : ''}
+        </p>
         {cats.map(c => (
           <div key={c} style={{ marginBottom: 18 }}>
             <div className="section-title" style={{ marginBottom: 6 }}>{c}</div>
@@ -95,6 +99,14 @@ export default function PlanClient({ festivals }: { festivals: FestOpt[] }) {
                   <span style={{ flex: 1, fontSize: 14.5, textDecoration: checked[id] ? 'line-through' : 'none' }}>
                     <strong style={{ textTransform: 'capitalize' }}>{l.name}</strong>{l.qty && <span style={{ color: 'var(--crimson)', fontWeight: 700 }}> — {l.qty}</span>}
                     {l.from.length > 0 && <span style={{ display: 'block', fontSize: 12, color: 'var(--muted)' }}>for {l.from.join(', ')}</span>}
+                    {buyable(l.name) && (
+                      <span className="no-print" style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 5 }}>
+                        {STORES.map(st => (
+                          <a key={st.id} href={st.href(searchTerm(l.name))} target="_blank" rel="noopener noreferrer sponsored" onClick={e => e.stopPropagation()}
+                            style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--crimson)', border: '1px solid #8B1A1A33', background: '#8B1A1A0d', borderRadius: 100, padding: '2px 9px', textDecoration: 'none' }}>{st.name}</a>
+                        ))}
+                      </span>
+                    )}
                   </span>
                 </label>
               )
