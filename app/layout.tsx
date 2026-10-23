@@ -5,6 +5,7 @@ import { Toaster } from 'react-hot-toast'
 import './globals.css'
 import SplashScreen from '@/components/SplashScreen'
 import PWAInstaller from '@/components/PWAInstaller'
+import DynaimersCredit from '@/components/DynaimersCredit'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-ivory-100 text-gray-900 antialiased">
         <SessionProvider>
           {children}
+          <DynaimersCredit />
           <Toaster
             position="top-center"
             toastOptions={{
