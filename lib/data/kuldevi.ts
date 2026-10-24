@@ -61,13 +61,13 @@ export const KULDEVI: KuldeviEntry[] = [
     place: 'Maudi',
     district: 'Not yet confirmed',
     state: 'Gujarat',
-    communities: ['Khadayata (Daudan)'],
+    communities: ['Khadayata (Gaudan)'],
     summary:
-      'Gunmai Devi is the kuldevi of a Khadayata (Daudan) family, whose seat is at Maudi in Gujarat. We could not find any published source for this temple, so this page holds only what the family told us. It is the first entry of the Kuldevi directory, which depends on families sharing what they know.',
+      'Gunmai Devi is the kuldevi of a Khadayata (Gaudan) family, whose seat is at Maudi in Gujarat. We could not find any published source for this temple, so this page holds only what the family told us. It is the first entry of the Kuldevi directory, which depends on families sharing what they know.',
     facts: [
       { label: 'Deity', value: 'Gunmai Devi (spelling as given by the family).' },
       { label: 'Place', value: 'Maudi, Gujarat. Taluka and district are yet to be confirmed.' },
-      { label: 'Community', value: 'Khadayata, Daudan (as given by the family).' },
+      { label: 'Community', value: 'Khadayata, Gaudan (as given by the family).' },
       { label: 'Link to Kotyark Dham', value: 'The Khadayata community’s common kuldaivat is at Kotyark Dham, Umreth. Whether Gunmai Devi is one of the 19 kuldevis there has not been confirmed.' },
     ],
     sources: [{ title: 'Shared by a Khadayata family — not yet independently verified' }],
