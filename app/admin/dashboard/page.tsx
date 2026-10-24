@@ -277,6 +277,7 @@ export default function AdminDashboard() {
               <a href="/admin/live-darshan" style={{ fontSize:13, fontWeight:700, color:C.ink, textDecoration:'none', border:'1px solid #ddd', borderRadius:100, padding:'6px 14px', background:'white' }}>Live darshan board</a>
               <a href="/admin/family-versions" style={{ fontSize:13, fontWeight:700, color:C.ink, textDecoration:'none', border:'1px solid #ddd', borderRadius:100, padding:'6px 14px', background:'white' }}>Family recipe versions</a>
               <a href="/admin/kuldevi" style={{ fontSize:13, fontWeight:700, color:C.ink, textDecoration:'none', border:'1px solid #ddd', borderRadius:100, padding:'6px 14px', background:'white' }}>Kuldevi submissions</a>
+              <a href="/admin/kuldevi-verified" style={{ fontSize:13, fontWeight:700, color:C.ink, textDecoration:'none', border:'1px solid #ddd', borderRadius:100, padding:'6px 14px', background:'white' }}>Verified kuldevi links</a>
               {tab!=='group_yatra' && tab!=='announcement' && (
                 <select value={days} onChange={e => setDays(Number(e.target.value))}>
                   <option value={7}>Last 7 days</option>

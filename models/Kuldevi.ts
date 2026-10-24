@@ -31,3 +31,41 @@ const KuldeviSubmissionSchema = new Schema(
   { timestamps: true }
 )
 export const KuldeviSubmission: Model<any> = models.KuldeviSubmission || model('KuldeviSubmission', KuldeviSubmissionSchema)
+
+// A VERIFIED link: community + gotra/surname → deity. Created only by an admin, and only with evidence.
+const KuldeviLinkSchema = new Schema(
+  {
+    community:       { type: String, required: true, index: true },
+    gotra:           { type: String, default: '' },
+    surnames:        { type: String, default: '' },          // comma-separated
+    deity_name:      { type: String, required: true },
+    kuldevi_slug:    { type: String, default: '' },          // curated page, if one exists
+    state:           { type: String, default: '' },
+    evidence_type:   { type: String, enum: ['temple-trust', 'community-body', 'published-text', 'named-elder'], required: true },
+    evidence_source: { type: String, required: true },       // who/what: trust name, book title, elder's name and role
+    evidence_note:   { type: String, required: true },       // what exactly was confirmed, and how
+    verified_on:     { type: Date, required: true },
+    verified_by:     { type: String, default: '' },
+    status:          { type: String, enum: ['active', 'withdrawn'], default: 'active', index: true },
+    withdraw_reason: { type: String, default: '' },
+  },
+  { timestamps: true }
+)
+export const KuldeviLink: Model<any> = models.KuldeviLink || model('KuldeviLink', KuldeviLinkSchema)
+
+// "This looks wrong" reports from visitors
+const KuldeviFlagSchema = new Schema(
+  {
+    user_email: { type: String, required: true, lowercase: true },
+    target:     { type: String, enum: ['verified', 'reported', 'page'], default: 'reported' },
+    ref:        { type: String, default: '' },
+    deity_name: { type: String, required: true },
+    community:  { type: String, default: '' },
+    gotra:      { type: String, default: '' },
+    reason:     { type: String, required: true },
+    status:     { type: String, enum: ['open', 'resolved'], default: 'open', index: true },
+    admin_note: { type: String, default: '' },
+  },
+  { timestamps: true }
+)
+export const KuldeviFlag: Model<any> = models.KuldeviFlag || model('KuldeviFlag', KuldeviFlagSchema)

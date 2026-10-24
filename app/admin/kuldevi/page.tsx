@@ -52,7 +52,7 @@ export default function KuldeviAdmin() {
     <div style={{ padding: 24, maxWidth: 1300, margin: '0 auto' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12, marginBottom: 6 }}>
         <h1 className="font-serif" style={{ fontSize: 28, fontWeight: 600 }}>Kuldevi submissions — moderation board</h1>
-        <Link href="/admin/dashboard" className="btn btn-secondary">Back to dashboard</Link>
+        <span style={{ display: "flex", gap: 8 }}><Link href="/admin/kuldevi-verified" className="btn btn-secondary">Verified links</Link><Link href="/admin/dashboard" className="btn btn-secondary">Back to dashboard</Link></span>
       </div>
       <p style={{ color: 'var(--muted)', fontSize: 14, marginBottom: 14 }}>Drag a card between columns, or use the buttons. Only the Approved column is visible to visitors. Check for: contact details, links, offensive or caste-ranking language, and claims stated as fact that the family is unsure about. Approved entries are shown as “family-shared, unverified”.</p>
       <input value={q} onChange={e => setQ(e.target.value)} placeholder="Search by deity, village or community" className="input" style={{ maxWidth: 360, marginBottom: 16 }} />

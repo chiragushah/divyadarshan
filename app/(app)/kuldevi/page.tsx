@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { KULDEVI } from '@/lib/data/kuldevi'
+import KuldeviFinder from '@/components/kuldevi/KuldeviFinder'
 import KuldeviIndexClient from '@/components/kuldevi/KuldeviIndexClient'
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function KuldeviPage() {
         </div>
       </div>
       <div className="max-w-6xl mx-auto" style={{ padding: '26px 24px 60px' }}>
+        <KuldeviFinder communities={Array.from(new Set(KULDEVI.flatMap(k => k.communities.map(c => c.split(' (')[0]))))} />
         <KuldeviIndexClient curated={KULDEVI} />
       </div>
     </div>
