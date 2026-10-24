@@ -28,7 +28,7 @@ export default function GaneshaStrip() {
       <span
         lang="sa"
         style={{
-          fontFamily: "var(--font-deva), 'Noto Serif Devanagari', 'Tiro Devanagari Hindi', serif",
+          fontFamily: "'Noto Serif Devanagari', 'Tiro Devanagari Hindi', serif",
           fontWeight: 600, fontSize: 19, lineHeight: 1.5, letterSpacing: '.04em', whiteSpace: 'nowrap',
           background: 'linear-gradient(180deg, #FFF1C9 0%, #F4D58D 45%, #E0A93B 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent', WebkitTextFillColor: 'transparent',
           textShadow: '0 0 12px rgba(244,213,141,0.25)',
