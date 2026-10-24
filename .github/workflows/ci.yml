@@ -33,7 +33,9 @@ jobs:
         run: npm run lint
 
       - name: Build
-        run: npm run build
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee build.log || { echo "::error title=Build failed::$(grep -v '^$' build.log | tail -n 25 | tr '\n' '|' | cut -c1-3000)"; exit 1; }
         env:
           # Dummy values so build doesn't fail without real secrets
           MONGODB_URI: mongodb://localhost:27017/test
