@@ -135,7 +135,7 @@ export default function KuldeviSubmitForm() {
 
       <Section n={3} title="Your community" hint="This is not saved on your account. It is only shown beside this temple so that other families of the same tradition can find it.">
         {field('community', { ph: 'e.g. Khadayata' })}
-        {field('subgroup', { ph: 'e.g. Daudan, or the gotra', help: 'Optional. As your family names it.' })}
+        {field('subgroup', { ph: 'e.g. Gaudan, or the gotra', help: 'Optional. As your family names it.' })}
         {field('surnames', { ph: 'e.g. Shah, Mehta', help: 'Optional. Surnames in the family that worship here.' })}
         {field('main_seat', { ph: 'e.g. Kotyark Dham, Umreth', help: 'Optional. A larger common temple your community is linked to.' })}
       </Section>
