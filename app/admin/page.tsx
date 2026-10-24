@@ -12,15 +12,20 @@ export default function AdminLogin() {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true); setError('')
-    const res = await fetch('/api/admin/auth', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
-    })
-    if (res.ok) {
-      router.push('/admin/dashboard')
+    let res: Response | null = null
+    try {
+      res = await fetch('/api/admin/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: form.email.trim(), password: form.password }),
+      })
+    } catch { res = null }
+    if (res && res.ok) {
+      window.location.href = '/admin/dashboard'
     } else {
-      setError('Invalid credentials. Access denied.')
+      setError(!res ? 'Network problem — check your connection and try again.'
+        : res.status === 401 ? 'Invalid credentials. Access denied.'
+        : `Server problem (${res.status}) — credentials may be fine; please retry in a minute.`)
       setLoading(false)
     }
   }
