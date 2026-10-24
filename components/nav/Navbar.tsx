@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";
-import { ChevronDown, Menu, X, Sparkles, Heart, Globe, PartyPopper, ChefHat } from "lucide-react";
+import { ChevronDown, Menu, X, Sparkles, Heart, Globe, PartyPopper, ChefHat, Landmark } from "lucide-react";
 import Logo from "@/components/Logo";
 import GoogleTranslate from "@/components/translate/GoogleTranslate";
 import GaneshaStrip from "@/components/nav/GaneshaStrip";
@@ -67,6 +67,7 @@ export default function Navbar() {
             {[
               { href: "/festivals", label: "Festivals", Icon: PartyPopper, on: pathname.startsWith("/festivals") && !pathname.startsWith("/festivals/prasad") },
               { href: "/festivals/prasad", label: "Prasad Recipes", Icon: ChefHat, on: pathname.startsWith("/festivals/prasad") },
+              { href: "/kuldevi", label: "Kuldevi", Icon: Landmark, on: pathname.startsWith("/kuldevi") },
             ].map(({ href, label, Icon, on }) => (
               <Link key={href} href={href} style={{ display:"flex", alignItems:"center", gap:6, padding:"7px 12px", borderRadius:9, background:on?"#8B1A1A":"#FFF5F5", border:"1px solid rgba(139,26,26,0.25)", color:on?"#FFFFFF":"#8B1A1A", fontWeight:700, fontSize:13, textDecoration:"none", whiteSpace:"nowrap" }}>
                 <Icon size={15} /> {label}
@@ -139,6 +140,7 @@ export default function Navbar() {
           <div style={{ display:"flex", gap:10, marginBottom:16 }}>
             <Link href="/festivals" onClick={() => setMobileOpen(false)} style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center", gap:8, padding:"12px 8px", borderRadius:12, background:"#FFF5F5", border:"1.5px solid rgba(139,26,26,0.25)", color:"#8B1A1A", fontWeight:700, fontSize:14, textDecoration:"none" }}><PartyPopper size={18} /> Festivals</Link>
             <Link href="/festivals/prasad" onClick={() => setMobileOpen(false)} style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center", gap:8, padding:"12px 8px", borderRadius:12, background:"#FFF5F5", border:"1.5px solid rgba(139,26,26,0.25)", color:"#8B1A1A", fontWeight:700, fontSize:14, textDecoration:"none" }}><ChefHat size={18} /> Prasad Recipes</Link>
+            <Link href="/kuldevi" onClick={() => setMobileOpen(false)} style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center", gap:8, padding:"12px 8px", borderRadius:12, background:"#FFF5F5", border:"1.5px solid rgba(139,26,26,0.25)", color:"#8B1A1A", fontWeight:700, fontSize:14, textDecoration:"none" }}><Landmark size={18} /> Kuldevi</Link>
           </div>
           {NAV_GROUPS.map((group) => (
             <div key={group.label} style={{ marginBottom:16 }}>
