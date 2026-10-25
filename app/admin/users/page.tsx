@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 
-interface Row { id: string; name: string; email: string; phone: string; provider: string; createdAt: string; active: boolean; verified: boolean; flags: string[]; level: 'junk' | 'suspicious' | 'clean' }
+interface Row { unverified?: boolean; id: string; name: string; email: string; phone: string; provider: string; createdAt: string; active: boolean; verified: boolean; flags: string[]; level: 'junk' | 'suspicious' | 'clean' }
 const validDate = (v: any) => { const d = v ? new Date(v) : null; return d && !isNaN(+d) ? d : null }
 const COL = { junk: '#b91c1c', suspicious: '#C0570A', clean: '#15803d' }
 const LABEL = { junk: 'Likely junk', suspicious: 'Suspicious', clean: 'Looks fine' }
@@ -38,6 +38,10 @@ export default function UsersAudit() {
   const maxN = Math.max(1, ...days.map(d => d.n))
 
   const toggle = (id: string) => setSel(s => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n })
+  const confirmEmail = async (id: string) => {
+    const r = await fetch('/api/admin/users', { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, action: 'verify' }) })
+    if (r.ok) { setMsg('Email marked as confirmed.'); load() } else setErr('Could not confirm that account.')
+  }
   const selectAllJunk = () => setSel(new Set(shown.filter(deletable).map(r => r.id)))
   const del = async () => {
     setBusy(true); setMsg(''); setErr('')
@@ -112,7 +116,7 @@ export default function UsersAudit() {
                 <td style={{ padding: '8px 10px', wordBreak: 'break-all' }}>{r.email}</td>
                 <td style={{ padding: '8px 10px' }}>{r.phone || '—'}</td>
                 <td style={{ padding: '8px 10px', whiteSpace: 'nowrap' }}>{validDate(r.createdAt)?.toLocaleDateString('en-IN') || '—'}</td>
-                <td style={{ padding: '8px 10px', color: 'var(--muted)' }}>{r.flags.join(' · ') || '—'}{r.active ? ' · has activity' : ''}</td>
+                <td style={{ padding: '8px 10px', color: 'var(--muted)' }}>{r.flags.join(' · ') || '—'}{r.active ? ' · has activity' : ''}{r.unverified && <button onClick={() => confirmEmail(r.id)} style={{ marginLeft: 8, fontSize: 11.5, fontWeight: 700, padding: '2px 9px', borderRadius: 100, border: '1.5px solid #15803d', color: '#15803d', background: 'white', cursor: 'pointer' }}>Confirm email</button>}</td>
               </tr>
             ))}
             {!loading && shown.length === 0 && <tr><td colSpan={7} style={{ padding: 20, color: 'var(--muted)' }}>Nothing here.</td></tr>}

@@ -4,6 +4,7 @@ import { signIn } from 'next-auth/react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Loader2 } from 'lucide-react'
+import VerifyNotice from '@/components/auth/VerifyNotice'
 
 export default function SignUpPage() {
   const router = useRouter()
@@ -12,6 +13,7 @@ export default function SignUpPage() {
   const [loading, setLoading] = useState(false)
   const [gLoading, setGLoading] = useState(false)
   const [error, setError] = useState('')
+  const [pending, setPending] = useState<{ email: string; wait: number } | null>(null)
   const [honey, setHoney] = useState('')
   const [t0, setT0] = useState(0)
   useEffect(() => { setT0(Date.now()) }, [])
@@ -32,10 +34,8 @@ export default function SignUpPage() {
       })
       const data = await res.json()
       if (!res.ok) { setError(data.error || 'Registration failed'); setLoading(false); return }
-      // Auto sign in
-      const result = await signIn('credentials', { email:form.email, password:form.password, redirect:false })
-      if (result?.ok) { router.push('/explore') }
-      else { setSuccess('Account created! Please sign in.'); setTab('signin') }
+      // The account stays inactive until the email link is confirmed.
+      setPending({ email: data.email || form.email.trim().toLowerCase(), wait: data.wait || 60 })
     } catch { setError('Something went wrong. Please try again.') }
     setLoading(false)
   }
@@ -45,6 +45,7 @@ export default function SignUpPage() {
     setLoading(true); setError('')
     const result = await signIn('credentials', { email:form.email, password:form.password, redirect:false })
     if (result?.ok) { router.push('/explore') }
+    else if (result?.error?.includes('EMAIL_NOT_VERIFIED')) { setPending({ email: form.email.trim().toLowerCase(), wait: 0 }) }
     else { setError('Invalid email or password') }
     setLoading(false)
   }
@@ -66,6 +67,7 @@ export default function SignUpPage() {
         </div>
 
         <div style={{ background:'white', borderRadius:20, padding:32, boxShadow:'0 4px 24px rgba(0,0,0,0.07)', border:'1px solid #E8E0D4' }}>
+          {pending ? <VerifyNotice email={pending.email} initialWait={pending.wait} onBack={() => { setPending(null); setTab('signup') }} /> : (<>
 
           {/* Tabs */}
           <div style={{ display:'flex', background:'#F8F4EE', borderRadius:12, padding:4, marginBottom:24 }}>
@@ -137,6 +139,7 @@ export default function SignUpPage() {
               </p>
             </form>
           )}
+          </>)}
         </div>
 
         <p style={{ textAlign:'center', fontSize:12, color:'#A89B8C', marginTop:20 }}>

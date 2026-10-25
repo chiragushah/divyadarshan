@@ -13,11 +13,11 @@ async function isAdmin(req: NextRequest) {
 }
 
 type Level = 'junk' | 'suspicious' | 'clean'
-interface Row { id: string; name: string; email: string; phone: string; provider: string; createdAt: string; active: boolean; verified: boolean; flags: string[]; level: Level }
+interface Row { unverified: boolean; id: string; name: string; email: string; phone: string; provider: string; createdAt: string; active: boolean; verified: boolean; flags: string[]; level: Level }
 
 // Re-computed on the server for every call, so a delete can never rely on what the browser claims.
 async function audit(): Promise<Row[]> {
-  const users: any[] = await (User as any).find({}).sort({ createdAt: -1 }).limit(5000).select('name email phone provider createdAt temples_visited yatra_count email_verified').lean()
+  const users: any[] = await (User as any).find({}).sort({ createdAt: -1 }).limit(5000).select('name email phone provider createdAt temples_visited yatra_count email_verified verification_required').lean()
   const domains = Array.from(new Set(users.map(u => domainOf(String(u.email))).filter(d => d && !isBigProvider('x@' + d)))).slice(0, 400)
   const mx = new Map<string, boolean>()
   for (let i = 0; i < domains.length; i += 25) await Promise.all(domains.slice(i, i + 25).map(async d => { mx.set(d, await hasMailServer(d)) }))
@@ -32,10 +32,13 @@ async function audit(): Promise<Row[]> {
     if (looksRandomName(String(u.name || ''))) flags.push('Gibberish name')
     if (u.provider !== 'google' && !/^\d{10}$/.test(phone)) flags.push('No valid mobile number')
     if (!u.name || String(u.name).trim().length < 2 || /^[^a-zA-Z]+$/.test(String(u.name))) flags.push('Odd name')
+    const unverified = !!u.verification_required && !u.email_verified
+    const staleUnverified = unverified && Date.now() - +new Date(u.createdAt || 0) > 7 * 864e5
+    if (unverified) flags.push(staleUnverified ? 'Email never confirmed (over 7 days)' : 'Email not confirmed yet')
     const hard = flags.includes('Disposable mailbox') || flags.includes('Domain cannot receive mail')
     const gib = flags.includes('Gibberish name'), dots = flags.includes('Gmail dot trick (many dots)')
-    const level: Level = hard || dots || (gib && (flags.includes('Random-looking address') || flags.includes('No valid mobile number'))) || (flags.includes('Random-looking address') && flags.includes('No valid mobile number')) ? 'junk' : flags.length ? 'suspicious' : 'clean'
-    return { id: String(u._id), name: u.name || '', email, phone: u.phone || '', provider: u.provider || '', createdAt: u.createdAt, active: (u.temples_visited || 0) > 0 || (u.yatra_count || 0) > 0, verified: !!u.email_verified, flags, level }
+    const level: Level = hard || staleUnverified || dots || (gib && (flags.includes('Random-looking address') || flags.includes('No valid mobile number'))) || (flags.includes('Random-looking address') && flags.includes('No valid mobile number')) ? 'junk' : flags.length ? 'suspicious' : 'clean'
+    return { unverified, id: String(u._id), name: u.name || '', email, phone: u.phone || '', provider: u.provider || '', createdAt: u.createdAt, active: (u.temples_visited || 0) > 0 || (u.yatra_count || 0) > 0, verified: !!u.email_verified, flags, level }
   })
 }
 
@@ -48,6 +51,15 @@ export async function GET(req: NextRequest) {
     return new NextResponse(csv, { headers: { 'Content-Type': 'text/csv; charset=utf-8', 'Content-Disposition': 'attachment; filename="users-audit.csv"' } })
   }
   return NextResponse.json({ rows })
+}
+
+// Manually confirm an account's email (for support cases where the email never arrived).
+export async function PATCH(req: NextRequest) {
+  if (!(await isAdmin(req))) return NextResponse.json({ error: 'Unauthorised' }, { status: 401 })
+  const b = await req.json().catch(() => ({}))
+  if (!b.id || b.action !== 'verify') return NextResponse.json({ error: 'Bad request' }, { status: 400 })
+  const r = await (User as any).updateOne({ _id: String(b.id) }, { $set: { email_verified: new Date(), verification_required: false } })
+  return NextResponse.json({ ok: !!r.matchedCount })
 }
 
 // Delete selected accounts — only ones the server itself rates "junk" AND that have no activity.

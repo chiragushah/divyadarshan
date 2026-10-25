@@ -4,6 +4,7 @@ export interface IUser extends Document {
   name?: string
   email: string
   email_verified?: Date
+  verification_required?: boolean
   image?: string
   password?: string         // Hashed — only for email/password accounts
   provider: string          // 'google' | 'credentials'
@@ -19,6 +20,7 @@ const UserSchema = new Schema<IUser>(
   name:            { type: String },
     email:           { type: String, required: true, unique: true, lowercase: true },
     email_verified:  { type: Date },
+    verification_required: { type: Boolean, default: false },   // true for sign-ups made after email confirmation was introduced
     image:           { type: String },
     password:        { type: String },   // bcrypt hash — never store plain text
     provider:        { type: String, default: 'credentials' },

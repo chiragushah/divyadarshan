@@ -36,6 +36,8 @@ export const authOptions: NextAuthOptions = {
           if (!user || !user.password) throw new Error('Invalid email or password')
           const valid = await bcrypt.compare(credentials.password, user.password)
           if (!valid) throw new Error('Invalid email or password')
+          // Only the real owner (correct password) is told the account is waiting for confirmation.
+          if ((user as any).verification_required && !(user as any).email_verified) throw new Error('EMAIL_NOT_VERIFIED')
           return { id: user._id.toString(), email: user.email, name: user.name, image: user.image }
         }
       },

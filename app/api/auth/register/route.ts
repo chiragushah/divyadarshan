@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import connectDB from '@/lib/mongodb/connect'
 import { User } from '@/models'
 import bcrypt from 'bcryptjs'
+import { issueVerification } from '@/lib/emailVerification'
 import { isDisposable, hasMailServer, domainOf, looksRandom, looksRandomName, dotTrick, gmailVariantRegex } from '@/lib/emailQuality'
 import { rateLimit, sanitizeText, isValidEmail, isValidPassword, getIP, rateLimitResponse } from '@/lib/security'
 
@@ -48,15 +49,29 @@ export async function POST(req: NextRequest) {
 
     await connectDB()
     const variant = gmailVariantRegex(email)
-    const existing = await User.findOne(variant ? { email: variant } : { email }).select('_id').lean()
+    const existing: any = await User.findOne(variant ? { email: variant } : { email }).select('_id email name verification_required email_verified').lean()
+    const origin = req.nextUrl.origin
     if (existing) {
+      // Someone who signed up but never confirmed: just send the link again (never reveals anything extra).
+      if (existing.verification_required && !existing.email_verified) {
+        const again = await issueVerification(existing.email, existing.name || name, origin)
+        if (again.status === 'cooldown') return NextResponse.json({ success: true, verify: true, email: existing.email, wait: again.wait })
+        if (again.status === 'limit') return NextResponse.json({ error: 'Too many confirmation emails today. Please try again tomorrow.' }, { status: 429 })
+        if (again.status === 'mail-failed') return NextResponse.json({ error: 'We could not send the confirmation email. Please try again in a few minutes.' }, { status: 503 })
+        return NextResponse.json({ success: true, verify: true, email: existing.email })
+      }
       await new Promise(r => setTimeout(r, 500))
       return NextResponse.json({ error: 'An account with this email already exists' }, { status: 400 })
     }
 
     const hashed = await bcrypt.hash(password, 12)
-    await User.create({ name, email, phone, password: hashed, provider: 'email' })
-    return NextResponse.json({ success: true })
+    const user = await User.create({ name, email, phone, password: hashed, provider: 'email', verification_required: true })
+    const sent = await issueVerification(email, name, origin)
+    if (sent.status !== 'sent') {
+      await User.deleteOne({ _id: user._id })       // never leave an account nobody can activate
+      return NextResponse.json({ error: 'We could not send the confirmation email. Please check the address and try again in a few minutes.' }, { status: 503 })
+    }
+    return NextResponse.json({ success: true, verify: true, email })
   } catch (err) {
     console.error('Register error:', err)
     return NextResponse.json({ error: 'Registration failed. Please try again.' }, { status: 500 })

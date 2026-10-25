@@ -1,5 +1,6 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import VerifyNotice from '@/components/auth/VerifyNotice'
 import { signIn } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
@@ -35,6 +36,11 @@ export default function SignInForm() {
   const [loading, setLoading] = useState(false)
   const [googleLoading, setGoogleLoading] = useState(false)
   const [error, setError] = useState('')
+  const [pending, setPending] = useState<{ email: string; wait: number } | null>(null)
+  const [honey, setHoney] = useState('')
+  const [t0, setT0] = useState(0)
+  const [confirmed, setConfirmed] = useState(false)
+  useEffect(() => { setT0(Date.now()); if (searchParams.get('verified')) { setMode('signin'); setConfirmed(true) } }, []) // eslint-disable-line
 
   const handleGoogle = async () => {
     setGoogleLoading(true)
@@ -45,12 +51,21 @@ export default function SignInForm() {
     e.preventDefault()
     if (!form.email || !form.password) return
     setLoading(true); setError('')
-    const res = await signIn('credentials', {
-      email: form.email, password: form.password,
-      name: form.name, mode, redirect: false,
-    })
+    if (mode === 'signup') {
+      if (form.name.trim().length < 2) { setError('Please enter your full name.'); setLoading(false); return }
+      try {
+        const r = await fetch('/api/auth/register', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: form.name, email: form.email, password: form.password, website: honey, ts: t0 }) })
+        const d = await r.json().catch(() => ({}))
+        if (!r.ok) setError(d.error || 'Could not create your account. Please try again.')
+        else setPending({ email: d.email || form.email.trim().toLowerCase(), wait: d.wait || 60 })
+      } catch { setError('Network problem. Please try again.') }
+      setLoading(false)
+      return
+    }
+    const res = await signIn('credentials', { email: form.email, password: form.password, mode: 'signin', redirect: false })
     if (res?.error) {
-      setError(mode === 'signin' ? 'Invalid email or password.' : 'Could not create account. Email may already be in use.')
+      if (res.error.includes('EMAIL_NOT_VERIFIED')) setPending({ email: form.email.trim().toLowerCase(), wait: 0 })
+      else setError('Invalid email or password.')
       setLoading(false)
     } else {
       router.push(callbackUrl)
@@ -215,7 +230,9 @@ export default function SignInForm() {
               <div className="dyn-top">
                 <img src="/dd-logo.png" alt="DivyaDarshanam" />
               </div>
+              {pending ? <VerifyNotice email={pending.email} initialWait={pending.wait} onBack={() => { setPending(null); setMode('signup') }} /> : (<>
               <h2 className="form-title">{mode === 'signup' ? 'Begin your yatra' : 'Welcome back'}</h2>
+              {confirmed && <div style={{ background: '#F0FDF4', border: '1px solid #86EFAC', color: '#166534', fontSize: 13, fontWeight: 600, padding: '10px 12px', borderRadius: 10, marginBottom: 12 }}>Email confirmed — please sign in.</div>}
               <p className="form-sub">{mode === 'signup' ? 'Free forever. No credit card. Do read everything you get — listed on the left — before you begin.' : 'Sign in to access your temples, plans, journal and savings goals.'}</p>
 
               <div className="tabs">
@@ -239,6 +256,7 @@ export default function SignInForm() {
               <div className="or"><div className="or-line" /><span className="or-txt">or sign in with email</span><div className="or-line" /></div>
 
               <form onSubmit={handleEmail}>
+                <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" value={honey} onChange={e => setHoney(e.target.value)} style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }} />
                 {mode === 'signup' && (
                   <div className="field"><label>Full Name</label><input placeholder="e.g. Ramesh Sharma" value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} /></div>
                 )}
@@ -256,6 +274,7 @@ export default function SignInForm() {
               </div>
 
               <p className="terms">By continuing you agree to our <Link href="/terms">Terms</Link> &amp; <Link href="/privacy">Privacy Policy</Link></p>
+              </>)}
             </div>
             <div className="right-foot">Conceptualized &amp; Designed by Dynaimers Consulting Private Limited</div>
           </div>
