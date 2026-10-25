@@ -54,6 +54,15 @@ export async function GET(req: NextRequest) {
 export async function DELETE(req: NextRequest) {
   if (!(await isAdmin(req))) return NextResponse.json({ error: 'Unauthorised' }, { status: 401 })
   const b = await req.json().catch(() => ({}))
+  // One account, chosen by the admin by hand: allowed for any account with no activity.
+  if (b.single) {
+    if (b.confirm !== 'DELETE') return NextResponse.json({ error: 'Confirmation missing.' }, { status: 400 })
+    const u: any = await (User as any).findById(String(b.single)).select('temples_visited yatra_count').lean().catch(() => null)
+    if (!u) return NextResponse.json({ error: 'Account not found.' }, { status: 404 })
+    if ((u.temples_visited || 0) > 0 || (u.yatra_count || 0) > 0) return NextResponse.json({ error: 'This account has yatras or temple visits and cannot be deleted here.' }, { status: 409 })
+    const r = await (User as any).deleteOne({ _id: String(b.single) })
+    return NextResponse.json({ deleted: r.deletedCount || 0 })
+  }
   const ids: string[] = Array.isArray(b.ids) ? b.ids.map(String).slice(0, 500) : []
   if (!ids.length || b.confirm !== 'DELETE') return NextResponse.json({ error: 'Select accounts and type DELETE to confirm.' }, { status: 400 })
   const rows = await audit()

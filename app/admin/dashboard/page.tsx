@@ -116,6 +116,26 @@ export default function AdminDashboard() {
   const [tab, setTab]       = useState('overview')
   const [days, setDays]     = useState(30)
   const [data, setData]     = useState<any>(null)
+  const [junkMap, setJunkMap] = useState<Record<string, { level: string; flags: string[]; active: boolean; id: string }>>({})
+  const [userMsg, setUserMsg] = useState('')
+  useEffect(() => {
+    if (tab !== 'users') return
+    fetch('/api/admin/users').then(r => r.ok ? r.json() : null).then(d => {
+      if (!d) return
+      const m: Record<string, any> = {}
+      for (const r of d.rows) m[String(r.email).toLowerCase()] = { level: r.level, flags: r.flags, active: r.active, id: r.id }
+      setJunkMap(m)
+    }).catch(() => {})
+  }, [tab, data?.users?.length])
+  async function deleteUserRow(u: any) {
+    const info = junkMap[String(u.email).toLowerCase()]
+    if (info?.active) { setUserMsg(`${u.email} has activity (yatras or temple visits) and cannot be deleted here.`); return }
+    if (!confirm(`Permanently delete this account?\n\n${u.name || '(no name)'}\n${u.email}\n\nThis cannot be undone.`)) return
+    const r = await fetch('/api/admin/users', { method: 'DELETE', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ single: String(u._id), confirm: 'DELETE' }) })
+    const d = await r.json().catch(() => ({}))
+    if (r.ok && d.deleted) { setUserMsg(`Deleted ${u.email}.`); setData((p: any) => p ? { ...p, users: p.users.filter((x: any) => String(x._id) !== String(u._id)) } : p) }
+    else setUserMsg(d.error || 'Could not delete.')
+  }
   const [loading, setLoading] = useState(true)
   const [modal, setModal]   = useState<string|null>(null)
   const [selected, setSelected] = useState<any>(null)
@@ -343,8 +363,12 @@ export default function AdminDashboard() {
             <div style={S.section}>
               <div style={S.secHead}>
                 <span style={{ fontWeight:700, fontSize:14 }}>All Users ({data?.users?.length||0})</span>
-                <a href="/api/admin/export" style={{ ...S.btn(C.crimson), textDecoration:'none' }}><Download size={13}/> Export CSV</a>
+                <span style={{ display:'flex', gap:8 }}>
+                  <a href="/admin/users" style={{ ...S.btn(C.surface2, C.muted), textDecoration:'none' }}>Junk check &amp; bulk clean-up</a>
+                  <a href="/api/admin/export" style={{ ...S.btn(C.crimson), textDecoration:'none' }}><Download size={13}/> Export CSV</a>
+                </span>
               </div>
+              {userMsg && <div style={{ padding:'8px 16px', fontSize:13, fontWeight:600, color: userMsg.startsWith('Deleted') ? '#15803d' : C.red }}>{userMsg}</div>}
               {data?.users?.length ? (
                 <table><thead><tr>
                   <th style={S.th}>#</th><th style={S.th}>Name</th><th style={S.th}>Email</th><th style={S.th}>Method</th><th style={S.th}>Registered</th><th style={S.th}></th>
@@ -352,11 +376,14 @@ export default function AdminDashboard() {
                   {data.users.map((u:any,i:number) => (
                     <tr key={u._id}>
                       <td style={{ ...S.td, color:C.muted2 }}>{i+1}</td>
-                      <td style={{ ...S.td, fontWeight:600 }}>{u.name||'—'}</td>
+                      <td style={{ ...S.td, fontWeight:600 }}>{u.name||'—'}{junkMap[String(u.email).toLowerCase()]?.level === 'junk' && <span title={junkMap[String(u.email).toLowerCase()].flags.join(' · ')} style={{ marginLeft:8, fontSize:11, fontWeight:700, color:'#b91c1c', background:'#FEE2E2', borderRadius:100, padding:'2px 8px' }}>Likely junk</span>}{junkMap[String(u.email).toLowerCase()]?.level === 'suspicious' && <span title={junkMap[String(u.email).toLowerCase()].flags.join(' · ')} style={{ marginLeft:8, fontSize:11, fontWeight:700, color:'#C0570A', background:'#FFEDD5', borderRadius:100, padding:'2px 8px' }}>Suspicious</span>}</td>
                       <td style={{ ...S.td, color:C.muted }}>{u.email}</td>
                       <td style={S.td}><span style={S.badge(C.blue, C.blueBg)}>{u.provider||'email'}</span></td>
                       <td style={{ ...S.td, color:C.muted2 }}>{dateStr(u.createdAt)}</td>
-                      <td style={S.td}><button onClick={() => openUserDetail(u.email)} style={{ ...S.btn(C.surface2, C.muted), fontSize:12, padding:'5px 12px' }}>View</button></td>
+                      <td style={{ ...S.td, whiteSpace:'nowrap' }}>
+                        <button onClick={() => openUserDetail(u.email)} style={{ ...S.btn(C.surface2, C.muted), fontSize:12, padding:'5px 12px' }}>View</button>
+                        <button onClick={() => deleteUserRow(u)} title="Delete this account" style={{ marginLeft:6, background:'none', border:'1px solid #FCA5A5', color:C.red, borderRadius:8, cursor:'pointer', padding:'5px 9px', verticalAlign:'middle' }}><Trash2 size={14}/></button>
+                      </td>
                     </tr>
                   ))}
                 </tbody></table>
