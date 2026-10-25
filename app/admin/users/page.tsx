@@ -3,6 +3,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 
 interface Row { id: string; name: string; email: string; phone: string; provider: string; createdAt: string; active: boolean; verified: boolean; flags: string[]; level: 'junk' | 'suspicious' | 'clean' }
+const validDate = (v: any) => { const d = v ? new Date(v) : null; return d && !isNaN(+d) ? d : null }
 const COL = { junk: '#b91c1c', suspicious: '#C0570A', clean: '#15803d' }
 const LABEL = { junk: 'Likely junk', suspicious: 'Suspicious', clean: 'Looks fine' }
 
@@ -31,7 +32,7 @@ export default function UsersAudit() {
   const days = useMemo(() => {
     const out: { d: string; n: number; junk: number }[] = []
     for (let i = 13; i >= 0; i--) { const dt = new Date(Date.now() - i * 864e5); out.push({ d: dt.toISOString().slice(5, 10), n: 0, junk: 0 }) }
-    rows.forEach(r => { const k = new Date(r.createdAt).toISOString().slice(5, 10); const o = out.find(x => x.d === k); if (o) { o.n++; if (r.level === 'junk') o.junk++ } })
+    rows.forEach(r => { const dt = validDate(r.createdAt); if (!dt) return; const k = dt.toISOString().slice(5, 10); const o = out.find(x => x.d === k); if (o) { o.n++; if (r.level === 'junk') o.junk++ } })
     return out
   }, [rows])
   const maxN = Math.max(1, ...days.map(d => d.n))
@@ -110,7 +111,7 @@ export default function UsersAudit() {
                 <td style={{ padding: '8px 10px' }}>{r.name || '—'}</td>
                 <td style={{ padding: '8px 10px', wordBreak: 'break-all' }}>{r.email}</td>
                 <td style={{ padding: '8px 10px' }}>{r.phone || '—'}</td>
-                <td style={{ padding: '8px 10px', whiteSpace: 'nowrap' }}>{new Date(r.createdAt).toLocaleDateString('en-IN')}</td>
+                <td style={{ padding: '8px 10px', whiteSpace: 'nowrap' }}>{validDate(r.createdAt)?.toLocaleDateString('en-IN') || '—'}</td>
                 <td style={{ padding: '8px 10px', color: 'var(--muted)' }}>{r.flags.join(' · ') || '—'}{r.active ? ' · has activity' : ''}</td>
               </tr>
             ))}
