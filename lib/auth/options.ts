@@ -29,16 +29,8 @@ export const authOptions: NextAuthOptions = {
         await connectDB()
 
         if (credentials.mode === 'signup') {
-          const existing = await User.findOne({ email: credentials.email.toLowerCase() })
-          if (existing) throw new Error('Email already registered')
-          const hashed = await bcrypt.hash(credentials.password, 12)
-          const user = await User.create({
-            email: credentials.email.toLowerCase(),
-            name: credentials.name || credentials.email.split('@')[0],
-            password: hashed,
-            provider: 'credentials',
-          })
-          return { id: user._id.toString(), email: user.email, name: user.name, image: null }
+          // Sign-up only happens through /api/auth/register (validated + rate-limited). Never create accounts here.
+          throw new Error('Please use the sign-up page to create an account')
         } else {
           const user = await User.findOne({ email: credentials.email.toLowerCase() })
           if (!user || !user.password) throw new Error('Invalid email or password')

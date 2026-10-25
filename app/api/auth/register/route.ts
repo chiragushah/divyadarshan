@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import connectDB from '@/lib/mongodb/connect'
 import { User } from '@/models'
 import bcrypt from 'bcryptjs'
+import { isDisposable, hasMailServer, domainOf, looksRandom } from '@/lib/emailQuality'
 import { rateLimit, sanitizeText, isValidEmail, isValidPassword, getIP, rateLimitResponse } from '@/lib/security'
 
 export const dynamic = 'force-dynamic'
@@ -27,12 +28,18 @@ export async function POST(req: NextRequest) {
     const phone    = sanitizeText(body.phone || '', 20)
     const password = body.password || ''
 
+    // Bots fill hidden fields and submit instantly. Pretend success so they learn nothing.
+    if (body.website || (typeof body.ts === 'number' && Date.now() - body.ts < 2500)) return NextResponse.json({ success: true })
+
     if (!name || !email || !password) {
       return NextResponse.json({ error: 'Name, email and password are required' }, { status: 400 })
     }
     if (!isValidEmail(email)) {
       return NextResponse.json({ error: 'Invalid email address' }, { status: 400 })
     }
+    if (isDisposable(email)) return NextResponse.json({ error: 'Please use a permanent email address — temporary mailboxes are not accepted.' }, { status: 400 })
+    if (looksRandom(email) && !/^\d{10}$/.test(phone.replace(/\s|\+91/g, ''))) return NextResponse.json({ error: 'Please use your real email address and a valid mobile number.' }, { status: 400 })
+    if (!(await hasMailServer(domainOf(email)))) return NextResponse.json({ error: 'That email domain cannot receive mail. Please check the spelling.' }, { status: 400 })
     const pwCheck = isValidPassword(password)
     if (!pwCheck.valid) {
       return NextResponse.json({ error: pwCheck.reason }, { status: 400 })

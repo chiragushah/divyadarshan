@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { signIn } from 'next-auth/react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -12,6 +12,9 @@ export default function SignUpPage() {
   const [loading, setLoading] = useState(false)
   const [gLoading, setGLoading] = useState(false)
   const [error, setError] = useState('')
+  const [honey, setHoney] = useState('')
+  const [t0, setT0] = useState(0)
+  useEffect(() => { setT0(Date.now()) }, [])
   const [success, setSuccess] = useState('')
   const set = (k:string,v:string) => setForm(f=>({...f,[k]:v}))
 
@@ -25,7 +28,7 @@ export default function SignUpPage() {
     try {
       const res = await fetch('/api/auth/register', {
         method:'POST', headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ name:form.name, email:form.email, phone:form.phone, password:form.password }),
+        body: JSON.stringify({ name:form.name, email:form.email, phone:form.phone, password:form.password, website:honey, ts:t0 }),
       })
       const data = await res.json()
       if (!res.ok) { setError(data.error || 'Registration failed'); setLoading(false); return }
@@ -99,6 +102,7 @@ export default function SignUpPage() {
           {/* Sign Up Form */}
           {tab === 'signup' && (
             <form onSubmit={handleSignUp}>
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" value={honey} onChange={e => setHoney(e.target.value)} style={{ position:'absolute', left:'-9999px', width:1, height:1, opacity:0 }} />
               <label style={lbl}>Full Name *</label>
               <input style={inp} placeholder="Your full name" value={form.name} onChange={e => set('name',e.target.value)} required />
               <label style={lbl}>Email Address *</label>
