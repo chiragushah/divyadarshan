@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import connectDB from '@/lib/mongodb/connect'
 import { User } from '@/models'
 import bcrypt from 'bcryptjs'
-import { isDisposable, hasMailServer, domainOf, looksRandom } from '@/lib/emailQuality'
+import { isDisposable, hasMailServer, domainOf, looksRandom, looksRandomName, dotTrick, gmailVariantRegex } from '@/lib/emailQuality'
 import { rateLimit, sanitizeText, isValidEmail, isValidPassword, getIP, rateLimitResponse } from '@/lib/security'
 
 export const dynamic = 'force-dynamic'
@@ -37,6 +37,7 @@ export async function POST(req: NextRequest) {
     if (!isValidEmail(email)) {
       return NextResponse.json({ error: 'Invalid email address' }, { status: 400 })
     }
+    if (dotTrick(email) || looksRandomName(name)) return NextResponse.json({ error: 'Please use your usual email address and your real name.' }, { status: 400 })
     if (isDisposable(email)) return NextResponse.json({ error: 'Please use a permanent email address — temporary mailboxes are not accepted.' }, { status: 400 })
     if (looksRandom(email) && !/^\d{10}$/.test(phone.replace(/\s|\+91/g, ''))) return NextResponse.json({ error: 'Please use your real email address and a valid mobile number.' }, { status: 400 })
     if (!(await hasMailServer(domainOf(email)))) return NextResponse.json({ error: 'That email domain cannot receive mail. Please check the spelling.' }, { status: 400 })
@@ -46,7 +47,8 @@ export async function POST(req: NextRequest) {
     }
 
     await connectDB()
-    const existing = await User.findOne({ email }).select('_id').lean()
+    const variant = gmailVariantRegex(email)
+    const existing = await User.findOne(variant ? { email: variant } : { email }).select('_id').lean()
     if (existing) {
       await new Promise(r => setTimeout(r, 500))
       return NextResponse.json({ error: 'An account with this email already exists' }, { status: 400 })

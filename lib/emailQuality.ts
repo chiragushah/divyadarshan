@@ -52,3 +52,40 @@ export async function hasMailServer(domain: string): Promise<boolean> {
   cache.set(d, { ok, at: Date.now() })
   return ok
 }
+
+const GMAILS = new Set(['gmail.com', 'googlemail.com'])
+const rawLocal = (email: string) => (email.split('@')[0] || '').toLowerCase()
+
+/** Gmail ignores dots, so "a.b.c.d.e@gmail.com" is one mailbox written many ways. Bots use this to mass-produce "different" accounts. */
+export function dotTrick(email: string): boolean {
+  if (!GMAILS.has(domainOf(email))) return false
+  const l = rawLocal(email), dots = (l.match(/\./g) || []).length
+  return dots >= 4 || (dots >= 3 && /\d/.test(l))
+}
+
+/** A pattern matching every dotted variant (and +tag) of the same Gmail address, for duplicate checks. */
+export function gmailVariantRegex(email: string): RegExp | null {
+  const d = domainOf(email)
+  if (!GMAILS.has(d)) return null
+  const base = rawLocal(email).split('+')[0].replace(/\./g, '')
+  if (!base) return null
+  const body = base.split('').map(c => c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('\\.?')
+  return new RegExp('^' + body + '(\\+[^@]*)?@(gmail|googlemail)\\.com$', 'i')
+}
+
+/** Does a person's name look keyboard-mashed? ("Gpjdcxf Nxpocczhb", "QBTxrNBAovZZDRHNzF") A hint, never proof. */
+export function looksRandomName(name: string): boolean {
+  const tokens = String(name || '').trim().split(/\s+/).filter(Boolean)
+  if (!tokens.length) return false
+  return tokens.some(t => {
+    const w = t.replace(/[^A-Za-z]/g, '')
+    if (w.length < 4) return false
+    const inner = w.slice(1)
+    if (/[A-Z]/.test(inner) && inner !== inner.toUpperCase() && (inner.match(/[A-Z]/g) || []).length >= 3) return true   // aBcDeF-style capitals
+    const vowels = (w.match(/[aeiouAEIOU]/g) || []).length
+    if (vowels === 0) return true
+    if (/[^aeiouAEIOU]{5,}/.test(w)) return true
+    if (w.length >= 6 && vowels / w.length < 0.18) return true
+    return false
+  })
+}

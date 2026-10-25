@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import connectDB from '@/lib/mongodb/connect'
 import { AdminSession, User } from '@/models'
-import { isDisposable, looksRandom, hasMailServer, domainOf, isBigProvider } from '@/lib/emailQuality'
+import { isDisposable, looksRandom, looksRandomName, dotTrick, hasMailServer, domainOf, isBigProvider } from '@/lib/emailQuality'
 
 export const dynamic = 'force-dynamic'
 
@@ -27,11 +27,14 @@ async function audit(): Promise<Row[]> {
     const flags: string[] = []
     if (isDisposable(email)) flags.push('Disposable mailbox')
     if (mx.get(domainOf(email)) === false) flags.push('Domain cannot receive mail')
+    if (dotTrick(email)) flags.push('Gmail dot trick (many dots)')
     if (looksRandom(email)) flags.push('Random-looking address')
+    if (looksRandomName(String(u.name || ''))) flags.push('Gibberish name')
     if (u.provider !== 'google' && !/^\d{10}$/.test(phone)) flags.push('No valid mobile number')
     if (!u.name || String(u.name).trim().length < 2 || /^[^a-zA-Z]+$/.test(String(u.name))) flags.push('Odd name')
     const hard = flags.includes('Disposable mailbox') || flags.includes('Domain cannot receive mail')
-    const level: Level = hard || (flags.includes('Random-looking address') && flags.includes('No valid mobile number')) ? 'junk' : flags.length ? 'suspicious' : 'clean'
+    const gib = flags.includes('Gibberish name'), dots = flags.includes('Gmail dot trick (many dots)')
+    const level: Level = hard || dots || (gib && (flags.includes('Random-looking address') || flags.includes('No valid mobile number'))) || (flags.includes('Random-looking address') && flags.includes('No valid mobile number')) ? 'junk' : flags.length ? 'suspicious' : 'clean'
     return { id: String(u._id), name: u.name || '', email, phone: u.phone || '', provider: u.provider || '', createdAt: u.createdAt, active: (u.temples_visited || 0) > 0 || (u.yatra_count || 0) > 0, verified: !!u.email_verified, flags, level }
   })
 }
