@@ -48,6 +48,21 @@ export interface ITemple extends Document {
   closed_months?: number[]     // e.g. [11,12,1,2,3,4] = Nov-Apr closed
   seasonal_note?: string       // e.g. "Opens on Akshaya Tritiya, closes on Bhai Dooj"
   is_seasonal?: boolean
+  // Open-data import (basic listings)
+  is_basic?: boolean            // true = sparse record from open data; details not yet verified
+  data_source?: string          // e.g. "Wikidata"
+  source_url?: string
+  licence?: string
+  import_batch?: string
+  wikidata_id?: string
+  wikipedia_url?: string
+  district?: string
+  native_name?: string
+  name_hindi?: string
+  deity_source?: string         // "Wikidata" | "Inferred from name" | "Curated"
+  name_source?: string
+  heritage_status?: string
+  part_of?: string
   rating_avg: number
   rating_count: number
   createdAt: Date
@@ -99,6 +114,20 @@ const TempleSchema = new Schema<ITemple>(
     lat:                  { type: Number },
     lng:                  { type: Number },
     image_url:            { type: String },
+    is_basic:             { type: Boolean, index: true },
+    data_source:          { type: String },
+    source_url:           { type: String },
+    licence:              { type: String },
+    import_batch:         { type: String, index: true },
+    wikidata_id:          { type: String, index: true, sparse: true },
+    wikipedia_url:        { type: String },
+    district:             { type: String },
+    native_name:          { type: String },
+    name_hindi:           { type: String },
+    deity_source:         { type: String },
+    name_source:          { type: String },
+    heritage_status:      { type: String },
+    part_of:              { type: String },
     rating_avg:           { type: Number, default: 0 },
     rating_count:         { type: Number, default: 0 },
   },

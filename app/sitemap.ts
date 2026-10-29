@@ -7,7 +7,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = process.env.NEXT_PUBLIC_APP_URL || 'https://divyadarshanam.in'
 
   await connectDB()
-  const temples = await Temple.find().select('slug updatedAt').lean() as any
+  const temples = await Temple.find({ is_basic: { $ne: true } }).select('slug updatedAt').lean() as any
 
   const templeUrls: MetadataRoute.Sitemap = temples.map((t: any) => ({
     url: `${base}/temple/${t.slug}`,

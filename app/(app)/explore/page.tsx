@@ -60,7 +60,7 @@ export default async function ExplorePage({ searchParams }: Props) {
   }
 
   const [temples, total] = await Promise.all([
-    Temple.find(filter).sort({ name: 1 }).skip(skip).limit(limit).lean() as any,
+    Temple.find(filter).sort({ is_basic: 1, name: 1 }).skip(skip).limit(limit).lean() as any,
     Temple.countDocuments(filter),
   ])
 

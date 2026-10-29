@@ -387,7 +387,13 @@ export default function ExploreClient({ initialTemples, total, page, states, cit
                             {(temple.deity || temple.type) && (
                               <span className="inline-block self-start px-2 py-0.5 rounded-full text-xs mb-2"
                                 style={{ background:'rgba(192,87,10,0.08)', color:'var(--saffron)' }}>
-                                {temple.deity || temple.type}
+                                {temple.is_basic && temple.deity === 'To be confirmed' ? temple.type : (temple.deity || temple.type)}
+                              </span>
+                            )}
+                            {temple.is_basic && (
+                              <span className="inline-block self-start px-2 py-0.5 rounded-full text-xs mb-2"
+                                style={{ background:'#FFF8E7', color:'#6B5200', border:'1px solid #F0DDA8' }}>
+                                Basic listing
                               </span>
                             )}
                             <div className="mt-auto flex items-center gap-3 pt-1">

@@ -22,8 +22,13 @@ interface Props { params: { slug: string } }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   await connectDB()
-  const temple = await Temple.findOne({ slug: params.slug }).select('name state city deity description').lean() as any
+  const temple = await Temple.findOne({ slug: params.slug }).select('name state city deity description is_basic').lean() as any
   if (!temple) return { title: 'Temple Not Found' }
+  if (temple.is_basic) return {
+    title: `${temple.name} — ${temple.city}, ${temple.state} | DivyaDarshanam`,
+    description: temple.description?.slice(0, 160),
+    robots: { index: false, follow: true },   // thin listing: keep out of search results until it is enriched
+  }
   return {
     title: `${temple.name} — ${temple.city}, ${temple.state} | DivyaDarshanam`,
     description: `${temple.name} in ${temple.city}, ${temple.state}. Dedicated to ${temple.deity}. ${temple.description?.slice(0, 140)}...`,
@@ -161,8 +166,24 @@ export default async function TemplePage({ params }: Props) {
                 />
               </div>
             )}
+            {t.is_basic && (
+              <div role="note" className="mb-4 rounded-xl p-4" style={{ background:'#FFF8E7', border:'1px solid #F0DDA8', color:'#6B5200', fontSize:13, lineHeight:1.6 }}>
+                <strong>Basic listing.</strong> This entry comes from open data
+                {t.data_source ? ` (${t.data_source}, ${t.licence || 'open licence'})` : ''}. We have not yet verified its timings, rituals, facilities or travel details,
+                so please check with the temple before you travel.
+                {t.deity_source === 'Inferred from name' && ' The deity shown is inferred from the temple\u2019s name.'}
+                {t.native_name || t.name_hindi ? <div style={{ marginTop:4 }}>Local name: {[t.native_name, t.name_hindi].filter(Boolean).join(' · ')}</div> : null}
+                {t.wikipedia_url || t.source_url ? (
+                  <div style={{ marginTop:4 }}>
+                    Source:{' '}
+                    {t.source_url && <a href={t.source_url} target="_blank" rel="noopener noreferrer" style={{ textDecoration:'underline' }}>Wikidata</a>}
+                    {t.wikipedia_url && <> · <a href={t.wikipedia_url} target="_blank" rel="noopener noreferrer" style={{ textDecoration:'underline' }}>Wikipedia</a></>}
+                  </div>
+                ) : null}
+              </div>
+            )}
             <div className="flex items-center justify-between mb-4">
-              <p className="text-sm" style={{ color:'var(--muted2)' }}>{t.deity} · {t.type} · {t.city}, {t.state}</p>
+              <p className="text-sm" style={{ color:'var(--muted2)' }}>{t.is_basic && t.deity === 'To be confirmed' ? 'Deity to be confirmed' : t.deity} · {t.type} · {t.city}, {t.state}</p>
               <MarkVisited templeSlug={t.slug} templeName={t.name} />
               <DataConfidenceBadge />
             </div>
