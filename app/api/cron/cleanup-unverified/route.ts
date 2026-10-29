@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import connectDB from '@/lib/mongodb/connect'
 import { User } from '@/models'
 import { EmailVerification } from '@/models/EmailVerification'
-import { autoImportOnce } from '@/lib/runOpenImport'
 
 export const dynamic = 'force-dynamic'
 
@@ -16,8 +15,5 @@ export async function GET(req: NextRequest) {
   const emails = stale.map(u => u.email)
   const del = emails.length ? await (User as any).deleteMany({ email: { $in: emails } }) : { deletedCount: 0 }
   if (emails.length) await EmailVerification.deleteMany({ email: { $in: emails } })
-  // One-time: add the open-data temples (Maharashtra, Gujarat, Rajasthan). Does nothing after the first successful run.
-  let imported: any = null
-  try { imported = await autoImportOnce() } catch (e: any) { imported = { error: String(e?.message || e).slice(0, 200) } }
-  return NextResponse.json({ removed: del.deletedCount || 0, imported })
+  return NextResponse.json({ removed: del.deletedCount || 0 })
 }
