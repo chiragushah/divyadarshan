@@ -32,6 +32,8 @@ export async function POST(req: NextRequest) {
   if (!(await admin(req))) return NextResponse.json({ error: 'Unauthorised' }, { status: 401 })
   const b = await req.json().catch(() => ({}))
   if (b.confirm !== 'IMPORT') return NextResponse.json({ error: 'Type IMPORT to confirm.' }, { status: 400 })
+  // Paused: temples are being added in reviewed batches with full information, not all at once.
+  if (process.env.ALLOW_BULK_TEMPLE_IMPORT !== 'yes') return NextResponse.json({ error: 'Bulk import is paused. Temples are being added in reviewed batches with full information.' }, { status: 409 })
   const states: string[] = Array.isArray(b.states) && b.states.length ? b.states.map(String) : []
   await markAutoImportDone()   // the overnight automatic import must never run after a manual one
   const { batch, inserted, attempted, failed } = await runOpenImport(states)
