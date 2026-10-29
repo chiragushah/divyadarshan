@@ -40,6 +40,9 @@ export default function TempleImportAdmin() {
   const [errs, setErrs] = useState<Record<string, string>>({})
   const [busy, setBusy] = useState(false)
   const [result, setResult] = useState('')
+  const [enr, setEnr] = useState<{ basic: number; remaining: number; withImage: number; withText: number } | null>(null)
+  const [enrBusy, setEnrBusy] = useState(false)
+  const [enrMsg, setEnrMsg] = useState('')
 
   const load = useCallback(async () => {
     setErr('')
@@ -47,7 +50,21 @@ export default function TempleImportAdmin() {
     if (!r.ok) { setErr(r.status === 401 ? 'Your admin session has expired. Sign in again from /admin.' : 'Could not load the preview.'); return }
     setData(await r.json())
   }, [])
-  useEffect(() => { load() }, [load])
+  const loadEnr = useCallback(async () => { const r = await fetch('/api/admin/temple-import/enrich'); if (r.ok) setEnr(await r.json()) }, [])
+  useEffect(() => { load(); loadEnr() }, [load, loadEnr])
+  const enrich = async () => {
+    setEnrBusy(true); setEnrMsg('')
+    let ok = 0, partial = 0, none = 0
+    for (let i = 0; i < 40; i++) {
+      const r = await fetch('/api/admin/temple-import/enrich', { method: 'POST' })
+      if (!r.ok) { setEnrMsg(r.status === 401 ? 'Your admin session has expired. Sign in again.' : 'Stopped: the server returned an error. You can press the button again to continue.'); break }
+      const d = await r.json(); ok += d.ok; partial += d.partial; none += d.none
+      if (d.stalled) { setEnrMsg('Wikipedia could not be reached just now. Nothing was lost; press the button again in a few minutes.'); break }
+      setEnrMsg(`Working… ${ok} complete, ${partial} partial, ${none} with nothing found. ${d.remaining} left.`)
+      if (!d.remaining) { setEnrMsg(`Finished: ${ok} complete, ${partial} partial, ${none} with nothing found on Wikipedia or Wikimedia.`); break }
+    }
+    setEnrBusy(false); loadEnr()
+  }
 
   const fresh = useMemo(() => (data?.plan.fresh || []).filter(r => (slice === 'All' || r.state === slice) && (!deityF || (r.deity || 'Not recorded') === deityF) && (!q || r.name.toLowerCase().includes(q.toLowerCase()) || (r.district || '').toLowerCase().includes(q.toLowerCase()))), [data, slice, deityF, q])
   const base = useMemo(() => (data?.plan.fresh || []).filter(r => slice === 'All' || r.state === slice), [data, slice])
@@ -70,7 +87,7 @@ export default function TempleImportAdmin() {
     setBusy(true)
     const r = await fetch('/api/admin/temple-import', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ confirm: 'IMPORT', states: scope.length === STATES.length ? [] : scope }) })
     const d = await r.json().catch(() => ({}))
-    if (r.ok) { setResult(`Done. ${d.inserted} of ${d.attempted} temples added${d.failed?.length ? ` (${d.failed.length} could not be added)` : ''}. Batch: ${d.batch}`); setAck(false); setWord(''); load() }
+    if (r.ok) { setResult(`Done. ${d.inserted} of ${d.attempted} temples added${d.failed?.length ? ` (${d.failed.length} could not be added)` : ''}. Batch: ${d.batch}`); setAck(false); setWord(''); load(); loadEnr() }
     else setResult(d.error || 'The import failed. Nothing was changed.')
     setBusy(false)
   }
@@ -197,6 +214,21 @@ export default function TempleImportAdmin() {
             <button type="submit" disabled={busy} style={{ background: SAF, color: '#fff', border: 0, borderRadius: 10, padding: '10px 22px', fontWeight: 700, fontSize: 14, cursor: busy ? 'wait' : 'pointer', opacity: busy ? 0.6 : 1 }}>{busy ? 'Adding temples…' : 'Add temples'}</button>
             {result && <div role="status" style={{ marginTop: 12, fontSize: 13, fontWeight: 600 }}>{result}</div>}
           </form>
+
+          <div style={{ ...card, marginBottom: 16 }}>
+            <h3 style={{ margin: '0 0 6px', fontSize: 15 }}>Step 2 · Add descriptions and photos</h3>
+            <p style={{ fontSize: 13, color: '#6b5a48', margin: '0 0 10px' }}>
+              For imported temples, this fetches the Wikipedia summary and a freely licensed Wikimedia Commons photo, and shows a credit with the licence on the page.
+              Temples with no article or photo are left as they are. Visitors opening a basic listing also trigger this automatically, one temple at a time.
+              <strong> Timings and poojas are not available from these sources</strong>; they need an official source or a local contributor.
+            </p>
+            {enr && <div style={{ display: 'flex', gap: 18, flexWrap: 'wrap', fontSize: 13, marginBottom: 10 }}>
+              <span>Imported basic listings: <strong>{enr.basic}</strong></span><span>With description: <strong>{enr.withText}</strong></span>
+              <span>With photo: <strong>{enr.withImage}</strong></span><span>Still to process: <strong>{enr.remaining}</strong></span></div>}
+            <button onClick={enrich} disabled={enrBusy || (enr?.remaining ?? 0) === 0} style={{ background: SAF, color: '#fff', border: 0, borderRadius: 10, padding: '9px 20px', fontWeight: 700, fontSize: 14, cursor: enrBusy ? 'wait' : 'pointer', opacity: enrBusy || (enr?.remaining ?? 0) === 0 ? 0.5 : 1 }}>
+              {enrBusy ? 'Fetching…' : (enr?.remaining ?? 0) === 0 ? 'Nothing left to process' : 'Fetch descriptions and photos'}</button>
+            {enrMsg && <div role="status" style={{ marginTop: 10, fontSize: 13, fontWeight: 600 }}>{enrMsg}</div>}
+          </div>
 
           <div style={card}>
             <h3 style={{ margin: '0 0 8px', fontSize: 14 }}>Import history</h3>

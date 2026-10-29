@@ -63,6 +63,12 @@ export interface ITemple extends Document {
   name_source?: string
   heritage_status?: string
   part_of?: string
+  description_source?: string
+  description_source_url?: string
+  image_credit?: string
+  image_credit_url?: string
+  enriched_at?: Date
+  enrich_status?: string
   rating_avg: number
   rating_count: number
   createdAt: Date
@@ -128,6 +134,12 @@ const TempleSchema = new Schema<ITemple>(
     name_source:          { type: String },
     heritage_status:      { type: String },
     part_of:              { type: String },
+    description_source:   { type: String },
+    description_source_url: { type: String },
+    image_credit:         { type: String },
+    image_credit_url:     { type: String },
+    enriched_at:          { type: Date },
+    enrich_status:        { type: String },
     rating_avg:           { type: Number, default: 0 },
     rating_count:         { type: Number, default: 0 },
   },

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { enrichTemple } from '@/lib/enrichTemple'
 import connectDB from '@/lib/mongodb/connect'
 import { Temple } from '@/models'
 import ReviewsSection from '@/components/temple/ReviewsSection'
@@ -67,7 +68,14 @@ function typeIcon(type: string) {
 
 export default async function TemplePage({ params }: Props) {
   await connectDB()
-  const temple = await Temple.findOne({ slug: params.slug }).lean() as any
+  let temple = await Temple.findOne({ slug: params.slug }).lean() as any
+  if (temple?.is_basic && !temple.enriched_at) {
+    // First visit to a basic listing: pull the Wikipedia text and a credited photo once, then keep them.
+    try {
+      const patch = await Promise.race([enrichTemple(temple), new Promise<null>(r => setTimeout(() => r(null), 6000))])
+      if (patch && patch.enrich_status !== 'retry') { await Temple.updateOne({ _id: temple._id, enriched_at: { $exists: false } }, { $set: patch }); temple = { ...temple, ...patch } }
+    } catch {}
+  }
   if (!temple) notFound()
 
   const related = await Temple.find({
@@ -137,6 +145,12 @@ export default async function TemplePage({ params }: Props) {
               {t.image_url
                 ? <img src={t.image_url.includes('wikimedia') ? `/api/image-proxy?url=${encodeURIComponent(t.image_url)}` : t.image_url} alt={t.name} className="w-full h-full object-cover" />
                 : <span className="text-8xl font-serif font-bold" style={{ color:'rgba(255,255,255,.15)' }}>{t.name.charAt(0)}</span>}
+              {t.image_credit && t.image_url && (
+                <a href={t.image_credit_url} target="_blank" rel="noopener noreferrer" className="absolute bottom-2 right-2"
+                  style={{ fontSize:10, color:'#fff', background:'rgba(0,0,0,.55)', padding:'2px 8px', borderRadius:6, maxWidth:'80%', textDecoration:'none' }}>
+                  {t.image_credit}
+                </a>
+              )}
               {liveTier(t) === 'verified' && (
                 <div className="absolute top-4 left-4">
                   <span className="badge-live px-3 py-1.5 text-xs font-semibold rounded-lg">
@@ -171,6 +185,7 @@ export default async function TemplePage({ params }: Props) {
                 <strong>Basic listing.</strong> This entry comes from open data
                 {t.data_source ? ` (${t.data_source}, ${t.licence || 'open licence'})` : ''}. We have not yet verified its timings, rituals, facilities or travel details,
                 so please check with the temple before you travel.
+                {t.description_source && <> The description below is from <a href={t.description_source_url} target="_blank" rel="noopener noreferrer" style={{ textDecoration:'underline' }}>{t.description_source}</a>.</>}
                 {t.deity_source === 'Inferred from name' && ' The deity shown is inferred from the temple\u2019s name.'}
                 {t.native_name || t.name_hindi ? <div style={{ marginTop:4 }}>Local name: {[t.native_name, t.name_hindi].filter(Boolean).join(' · ')}</div> : null}
                 {t.wikipedia_url || t.source_url ? (
