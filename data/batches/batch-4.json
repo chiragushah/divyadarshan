@@ -1,0 +1,250 @@
+[
+  {
+    "slug": "mahur-renuka-devi-temple",
+    "official_website": null,
+    "description": "Mahur, among the Sahyadri hills of Nanded district and also called Mahurgad, is the seat of Goddess Renuka, mother of Parashurama in Hindu tradition. The temple is counted among the Shakta pithas of Maharashtra, and tradition holds that it marks the spot where her head fell; the shrine is described as housing a self-manifested image of which only the head is visible. According to the Nanded district website, a Yadava king of Devgiri built it roughly 800 to 900 years ago. The town is also revered as the birthplace of Dattatreya, with a shrine on Datta Shikhar, the highest of its three hills. Pilgrims climb stone steps to the hilltop shrines, and a large fair is held each year at Dasara.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://nanded.gov.in/?p=25146",
+        "what_it_supports": "Nanded district (government) page: Goddess Renuka; Shaktipith of Maharashtra; hilltop setting; built by a Yadava king of Devgiri roughly 800-900 years ago; annual Dasara fair. No timings or trust named."
+      },
+      {
+        "url": "https://maharashtratourism.gov.in/?p=8276",
+        "what_it_supports": "Maharashtra Tourism: Sahyadri hills setting; town also called Mahurgad; pilgrimage site and Shakta Peetha."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mahur,_Maharashtra",
+        "what_it_supports": "Wikipedia (general history only): Dattatreya birthplace tradition; Datta Shikhar highest of three mountains; legend of Renuka's head falling there; Vijayadashami fair."
+      },
+      {
+        "url": "https://www.outlooktraveller.com/amp/story/explore-maharashtra/mahurgad-maharashtras-sacred-hill-town-of-shakti-datta-and-living-heritage",
+        "what_it_supports": "Outlook Traveller (magazine): swayambhu idol with only head visible; built by Yadavas of Devagiri; climb of stone steps to hilltop shrines."
+      }
+    ],
+    "notes": "No official trust website could be confirmed. Wikipedia (Mahur, Maharashtra) lists http://shrirenukamatamandir.org/ as the temple's external link (Wayback-archived 1 Oct 2016); the fetch tool refused it (URL_NOT_ON_ALLOWLIST), so it is UNVERIFIED and was not used; reviewer may check manually. No official timings found: nanded.gov.in and maharashtratourism.gov.in give none; only aggregator sources (yatradham etc.) have any, not used. Conflicts: Outlook Traveller says temple built 13th century, nanded.gov.in says 800-900 years ago (both consistent with Yadava era, kept to the district page's wording); distance to Nanded airport given as ~100 km (district page) vs ~130 km (Outlook), so no distances included. Which hill the Renuka temple stands on was not stated clearly in fetched sources, so omitted. Wikipedia and Outlook say the head-fell/Shakta pitha belief; the Shakta pitha count (51 / 3.5 in Maharashtra) varies by tradition, so omitted. Reported by media (not fetched, only seen in search result titles): a Rs 51-crore skywalk plan at Mahur; unverified, not used. Recent closures/entry rules not checked at an official source. | EDITED BY REVIEW: Not checked (site blocked here): http://shrirenukamatamandir.org/ listed on Wikipedia."
+  },
+  {
+    "slug": "girijatmaj-ashtavinayak",
+    "official_website": null,
+    "description": "Lenyadri, about 5 km north of Junnar in Pune district, is home to the Girijatmaj shrine, one of the eight Ashtavinayak Ganesha temples of Maharashtra. Ganesha is worshipped here as Girijatmaj, the son of Girija (Parvati), in the form of a naturally formed stone figure covered in sindoor. The shrine occupies Cave 7, originally a Buddhist monastic hall, within a group of about thirty rock-cut Buddhist caves dated to roughly the 1st to 3rd centuries AD. According to tradition, Parvati performed twelve years of austerity here and Ganesha was born on Ganesh Chaturthi. Devotees climb several hundred stone steps to reach the cave, and the caves are protected by the Archaeological Survey of India.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Lenyadri",
+        "what_it_supports": "Wikipedia: location ~4.8 km north of Junnar; ~30 caves, 1st-3rd century AD; Cave 7 converted to Ganesha shrine; svayambhu sindoor-covered image; 283 steps; legend of Parvati's twelve-year penance and Ganesh Chaturthi birth; ASI control."
+      },
+      {
+        "url": "https://maharashtratourism.gov.in/?p=8295",
+        "what_it_supports": "Maharashtra Tourism: Lenyadri/Girijatmaj listed under Ashtavinayak, set within ancient Buddhist rock-cut caves."
+      },
+      {
+        "url": "https://www.outlooktraveller.com/amp/story/explore-maharashtra/lenyadri-in-maharashtra-where-history-myth-and-spirituality-meet",
+        "what_it_supports": "Outlook Traveller (magazine): Girijatmaj meaning son of Girija; Cave 7 originally a vihara; rock-carved self-existent form with sindoor; steps; Ganesh Chaturthi birth legend."
+      }
+    ],
+    "notes": "No official trust website found. ashtavinayak.in / ashtavinayak.net / ashtavinayakyatra.in are devotee/information sites that name no trust (ashtavinayak.in about page confirmed it names none); not official, not used. Wikipedia's external links list only an archived ASI page (2009) and ashtavinayak.net; no temple-trust site. heritagetemples.org is run by a heritage-documentation project (tattvamag.org contact), not the temple, and lists 'open 6 a.m. to 6 p.m.' with Panchamrit Puja; that is NOT official, so timings_official is null. maharashtratourism.gov.in gives no timings. Conflict: number of steps is 283 (Wikipedia) vs 307 (Outlook Traveller), so the description says 'several hundred'. Wikipedia says the site is ASI-controlled; the temple is also described as served by priests, but no trust/management body was identified in fetched sources (reviewer may want to identify the managing trust). Outlook says palanquin (doli) service is available; unverified at an official source, omitted. Pune-district tehsil/administrative changes not checked."
+  },
+  {
+    "slug": "dehu-sant-tukaram-temple",
+    "official_website": null,
+    "description": "Dehu, on the Indrayani river in Pune district, is the home village of Sant Tukaram (1608-1650), the Marathi Warkari poet-saint remembered for abhang verses addressed to Vitthal. According to Wikipedia, his son Narayanbaba built the original temple on the riverbank in 1723. The complex includes the Shila Mandir, a stone shrine with a statue of the saint, linked to the rock on which, according to tradition, he sat for thirteen days when his abhangs were challenged; the Prime Minister inaugurated it in June 2022. The nearby Gatha Mandir has about 4,000 of his abhangs carved on its walls, and the Tukaram Palkhi procession to Pandharpur sets out from Dehu in the month of Ashadh, making it a major Warkari pilgrimage place.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Dehu",
+        "what_it_supports": "Wikipedia (as summarised by fetch tool): Tukaram's home; temple on Indrayani bank built by son Narayanbaba in 1723; Gatha Mandir with ~4,000 abhangs; Palkhi to Pandharpur starts from Dehu in Ashadh; swayambhu Vitthal-Rakhumai idols."
+      },
+      {
+        "url": "https://www.pmindia.gov.in/?p=12293701",
+        "what_it_supports": "Prime Minister's Office: Shila Mandir (Jagadguru Shrisant Tukaram Maharaj Temple) inaugurated 14 June 2022; stone shrine with a statue of the saint."
+      },
+      {
+        "url": "https://pmindia.gov.in/?p=12292411",
+        "what_it_supports": "Prime Minister's Office: inauguration date; shila where Tukaram performed penance for 13 days."
+      }
+    ],
+    "notes": "No official sansthan website could be confirmed; searches (English and Marathi) returned none. Wikipedia's Dehu page does not list an official website; it cites gathamandir.com (Gatha Mandir 'About Saint Tukaram' page) as a reference but does not label it official. The fetch tool refused https://www.gathamandir.com (URL_NOT_ON_ALLOWLIST), so it is UNVERIFIED and not used; reviewer may check manually whether it is the trust's site. No official timings found (trawell/holidify type pages are aggregators, not used). Conflicts and caveats: iasbaba article contains an incorrect claim that Chaitanya Mahaprabhu was Tukaram's master, not used. The 1723 construction date and Narayanbaba attribution come from Wikipedia only (single source); the fetch summary of the PMO page says the shrine has '36 peaks', not used. 'Sri Kshetra' and the main Vitthal temple (swayambhu idols) are mentioned on Wikipedia, but description keeps to the Tukaram temple complex. Dehu is in Haveli/Maval area boundary; taluka placement not verified, so only 'Pune district' stated. Dailypioneer (2022, seen in search only, not fetched) mentioned sanctum access restrictions around the PM visit; not relevant now. | EDITED BY REVIEW: Not checked (site blocked here): gathamandir.com cited by Wikipedia."
+  },
+  {
+    "slug": "kailasha-temple-ellora",
+    "official_website": null,
+    "description": "Kailasa Temple, excavated as Cave 16 at Ellora, is a Shiva temple cut out of a basalt hillside in Maharashtra and named after Mount Kailash, the god's legendary Himalayan home. According to Britannica and the Archaeological Survey of India, work began under the Rashtrakuta king Krishna I in the 8th century. Unlike most caves, it was carved downward from the top of the rock, leaving a freestanding temple with a gateway, a Nandi shrine, a main sanctum rising about 23 metres, four subsidiary shrines and cloisters around a courtyard. Plinth panels show elephants, lions and scenes from the Ramayana and Mahabharata. It is part of the UNESCO-listed Ellora Caves. It is a protected monument.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://asiaurangabadcircle.com/monuments/ellora/elloraCaves.php",
+        "what_it_supports": "ASI Aurangabad Circle page: Rashtrakuta, Krishna I (c. 756-775 CE), top-down carving, Nandi shrine/gateway/cloisters, ~23 m main shrine with four subsidiary shrines, plinth elephants/lions and Ramayana/Mahabharata scenes. Does not state timings or worship status."
+      },
+      {
+        "url": "https://www.britannica.com/EBchecked/topic/185156/Ellora-Caves",
+        "what_it_supports": "Dedicated to Shiva, named for Mount Kailas; 8th century, begun under Krishna I; excavated downward from basaltic slope; UNESCO World Heritage 1983."
+      },
+      {
+        "url": "https://mtdc.co/en/explore-maharashtra/heritage-destinations/ellora-caves",
+        "what_it_supports": "Maharashtra tourism (MTDC): Cave 16 dedicated to Shiva; Ellora hours and closure day (conflicts, see notes)."
+      }
+    ],
+    "notes": "official_website null: Kailasa is an ASI-protected monument with no temple trust site found. TIMINGS left null because two official sources conflict on the closure day: MTDC (mtdc.co) shows 9:00 AM-5:00 PM, closed Tuesdays; ASI 'Must See' page (asimustsee.nic.in/ellora-caves.php) shows 9 A.M.-5 P.M., closed Mondays. A 2021 Lokmat Times news item said Ellora closed Tuesdays and Ajanta Mondays (news, pandemic-era hours, not official). Hours agree (9-5) but closure day must be verified on the ASI Aurangabad Circle site or on site before publishing. WORSHIP: no ASI page I fetched states the worship status; the only support is the June 2024 Free Press Journal news report, which attributes the ban to 'the archaeological department' without naming ASI. Reviewer should confirm with ASI before stating this firmly. Dates: Britannica says Krishna I c. 756-773; ASI says c. 756-775 (description avoids exact years). Fetch tool refused (not on allowlist) en.wikipedia.org Kailasa page, whc.unesco.org/en/list/243 and asi.nic.in/pages/WorldHeritageEllora; no Wikipedia-listed official website could be checked. ASI Aurangabad Circle site asiaurangabadcircle.com/about-us.php had no timings. | EDITED BY REVIEW: Removed the news-report claim that rituals are prohibited (only source was a news item; confirm with ASI)."
+  },
+  {
+    "slug": "elephanta-caves",
+    "official_website": null,
+    "description": "The Elephanta Caves are a group of seven rock-cut cave excavations on Elephanta Island, also called Gharapuri, in Mumbai harbour. They are a UNESCO World Heritage Site protected by the Archaeological Survey of India. Cave 1, the largest, is devoted to Shiva. Its entrance is dominated by a sculpture about 7 metres high, Sadashiva, showing three aspects of the god, and panels include Ardhanarishvara, Nataraja, Gangadhara and Shiva and Parvati playing chausar. Cave 1 measures 39 metres from front to back and its plan resembles Dumar Lena at Ellora. The ASI dates the caves to roughly the 6th-7th centuries CE, while UNESCO gives the mid-5th to 6th centuries. The island is named after a colossal elephant statue now kept in Jijamata Garden, Mumbai.",
+    "timings_official": "9:00 AM to 5:00 PM, closed on Mondays (as shown on the ASI Elephanta Caves page, asi.nic.in; page carries no date).",
+    "sources": [
+      {
+        "url": "https://asi.nic.in/pages/WorldHeritageElephantaCaves",
+        "what_it_supports": "ASI page: seven caves, c. 6th-7th c. CE, Cave 1 sculptures and plan, elephant statue now at Jijamata Garden, location, timings 9-5 and closed Mondays."
+      },
+      {
+        "url": "https://asimustsee.nic.in/elephanta-caves.php",
+        "what_it_supports": "ASI 'Must See' page: Gharapuri/Elephanta Island, 7 m Sadashiva with three aspects of Shiva, Cave 1 39 m long, mid-5th to 6th c. AD, plan resembles Dumar Lena; no timings or ferry."
+      },
+      {
+        "url": "https://whc.unesco.org/en/list/244",
+        "what_it_supports": "UNESCO: Elephanta Caves on Elephanta Island (Gharapuri), mid-5th to 6th c. AD, Cave 1 39 m, Sadashiva 7 m, criteria (i) and (iii). Inscription year not stated on fetched text."
+      }
+    ],
+    "notes": "official_website null: no trust/committee site; ASI and UNESCO pages are not temple websites. elephanta.co.in is NOT official (operator unnamed, no affiliation stated, ads); it was fetched only to check, not listed as a source. FERRY: no official source was found or fetched stating ferry points, schedule or fares, so none are included. The ASI page does not mention ferries. (elephanta.co.in claims first boat 9 am from Gateway of India, closed Mondays; unverified, not used.) CLOSURE DAY Monday and 9-5 hours come from the ASI page; reviewer should confirm current hours, since the ASI page is undated. DATE CONFLICT: ASI says c. 6th-7th c. CE, UNESCO says mid-5th to 6th c. AD; description gives both. ASI notes island is administratively in Uran taluka, Raigad district, not Mumbai city. Description says 'in Mumbai harbour' per the brief; ASI says ~11 km NE of Apollo Bandar, Mumbai. Cave 1 'devoted to Shiva' is inferred from the lingam shrine and Shiva sculptural programme described by ASI/UNESCO. Fetch tool refused (not on allowlist) the en.wikipedia.org Elephanta Caves page; no Wikipedia-listed official site checked. WORSHIP: no source fetched states whether worship occurs, so the description does not say."
+  },
+  {
+    "slug": "rukmini-devi-temple-dwarka",
+    "official_website": null,
+    "description": "Rukmini Devi Temple in Dwarka, Gujarat, is dedicated to Rukmini, the chief consort of Krishna, who is regarded as an incarnation of Lakshmi. Incredible India places it about 2 km from the Dwarkadhish Temple. Tradition holds that the shrine goes back to the 5th century BC, but Gujarat Tourism says the present temple dates from the 12th century and may have been rebuilt, while Wikipedia says the present structure is believed to be 19th century. The shikhara is in Nagara style, with carved gods and goddesses on the walls and panels of human figures and elephants at the base. According to legend, the sage Durvasa cursed Rukmini to live apart from Krishna after she drank water before offering him any, which explains the separate temples.",
+    "timings_official": "7:30 AM to 8:00 PM (as shown on the Gujarat Tourism page and on the Incredible India page; neither is dated).",
+    "sources": [
+      {
+        "url": "https://www.incredibleindia.gov.in/en/gujarat/dwarka/rukmini-devi-temple",
+        "what_it_supports": "Dedicated to Rukmini (incarnation of Lakshmi); ~2 km from Dwarkadhish Temple; believed 5th c. BC; Nagara shikhara, carvings, base panels of humans and elephants; Durvasa legend; water-donation custom; timings 7:30 AM-8:00 PM."
+      },
+      {
+        "url": "https://gujarattourism.com/saurashtra/devbhoomi-dwarka/rukmini-temple.html",
+        "what_it_supports": "Gujarat Tourism: temple in Devbhoomi Dwarka district; present temple said to date from 12th c., possibly rebuilt; Durvasa legend; visiting hours 7:30 am-8:00 pm."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Rukmini_Devi_Temple",
+        "what_it_supports": "Dedicated to Rukmini, Krishna's chief queen; Nagara style; present structure believed 19th c.; Skanda Purana version of curse legend."
+      }
+    ],
+    "notes": "official_website null: no temple trust or devasthan site found; the Dwarkadhish temple is run by a separate trust and no Rukmini-specific official site was confirmed. yatradham, trawell, bharattemples etc. are aggregators and excluded. Wikipedia lists no official website. DATE CONFLICT: Incredible India and Wikipedia say tradition of 5th c. BC; Gujarat Tourism says present temple 12th c. (and its metadata says '12th century, about 2500 years ago', internally inconsistent); Wikipedia says present structure believed 19th c. Description attributes each. LOCATION CONFLICT: Incredible India says 'in the heart of ancient Dwarka' and ~2 km from Dwarkadhish; Gujarat Tourism says outskirts; Wikipedia says ~2 km from Dwarka town. Description uses only the ~2 km from Dwarkadhish figure, attributed. LEGEND VARIANTS: the Durvasa story differs between sources (Gujarat Tourism: chariot, Ganges from Krishna's toe; Wikipedia: Skanda Purana, 12 years of meditation); description keeps the common element only. Incredible India also says the couple married at Madhavpur Ghed, a claim not used. Timings are the same on both official tourism pages but undated; temple-run darshan/closing breaks were not verifiable, so confirm locally."
+  },
+  {
+    "slug": "girnar-amba-mata-temple",
+    "official_website": null,
+    "description": "The Amba Mata temple stands on the first peak of Girnar, the hill above Junagadh that carries both Hindu and Jain shrines. Gujarat Tourism says newly married couples come here to pray for a happy marriage. Wikipedia's Girnar article identifies the shrine as the Ambika temple, dedicated to Ambika, a Jain yakshini who attends the 22nd Tirthankara, Neminatha, and dates the present building to about the 15th century. According to that article, an inscription of 1192 CE records a pilgrimage by the minister Vastupala, and a 1468 CE eulogy credits the merchant Samal Sah with renovating it. A ropeway, inaugurated in October 2020, rises to the temple; the full walking route to the summit is about 10,000 stone steps.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://gujarattourism.com/saurashtra/junagadh/girnar-hill.html",
+        "what_it_supports": "Girnar has Jain and Hindu temples; Amba Mata temple is on the first peak; newlyweds pray for happy marriage; about 10,000 steps to summit; visiting hours dawn to dusk."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Girnar",
+        "what_it_supports": "Section on Ambika/Ambaji temple: Jain yakshini Ambika attendant of Neminatha; present temple c. 15th century; 1192 CE Vastupala inscription; 1468 CE Samal Sah renovation; ropeway 2,320 m, inaugurated 24 Oct 2020, operated by Usha Breco. General history only."
+      }
+    ],
+    "notes": "No official temple-trust website found; none listed on Wikipedia. NAMING CONFLICT: Wikipedia calls this the Ambika (Ambaji) temple with Jain-linked history (Burgess held Jains built it and Hindus later occupied it); Gujarat Tourism calls it Amba Mata and describes it within a Hindu/Jain hill. Description therefore states the Jain/Ambika account attributed to Wikipedia and does not assert Hindu Shakti Peeth or Durga claims, which I could not verify in an authoritative source (a heritage blog says Amba is a form of Durga; not listed as a source). Step count to the Amba Mata temple specifically is NOT verified (10,000 is to the summit only). Ropeway current operating status, fares and timings NOT verified (only the 2020 inauguration, from Wikipedia; Gujarat Tourism links udankhatola.com, the operator, which I did not fetch). Individual temples reportedly close about 11 am to 3 pm per Gujarat Tourism, which says this about many temples on Girnar generally, not specifically Amba Mata. Wikipedia page 'Ambika_Temple,_Girnar' could not be fetched (not on tool allowlist); facts come from the Girnar article. Reviewer: confirm who manages the temple and current ropeway status before publishing."
+  },
+  {
+    "slug": "hutheesing-jain-temple-ahmedabad",
+    "official_website": null,
+    "description": "The Hutheesing Jain Temple, also called Hathisingh Derasar, is a white marble Shvetambara Jain temple outside Delhi Darwaza in Shahibaug, Ahmedabad. Its main sanctuary is dedicated to Dharmanatha, the 15th Tirthankara. It opened in 1848. Hathisinh Kesarisinh, an Ahmedabad businessman, began it partly to give work to artisans in a famine; he died during construction and his wife, Harkunvar, completed it. Premchand Salat is named as the master craftsman. A pillared cloister around the courtyard holds 52 subsidiary shrines with marble images, and a Manastambha tower with a Mahavira statue stands in front. The temple retains its original rainwater harvesting system and is the largest of Ahmedabad's Jain temples.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://heritage.ahmedabadcity.gov.in/details/63/heritage_site/en",
+        "what_it_supports": "Ahmedabad municipal heritage page: Shvetambara temple, 1848, famine and artisans, Hathisinh Kesarisinh died and wife Harkunvar completed it, Premchand Salat, 52 subsidiary shrines, Manastambha, rainwater harvesting, largest Jain temple in Ahmedabad, Dharmanatha sanctum, address, hours 05:30-19:00 (not official temple hours)."
+      },
+      {
+        "url": "https://ahmedabad.nic.in/gallery/hathee-singh-temple",
+        "what_it_supports": "District page: white marble, built 1848 by Sheth Hutheesing, dedicated to Dharmanatha, 15th tirthankara, Sonpura and Salat artisans."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Hutheesing_Jain_Temple",
+        "what_it_supports": "General history: Shvetambara, dedicated to Dharmanatha, 1848, Hutheesing family, location outside Delhi Darwaza, 52 shrines, Manastambha."
+      }
+    ],
+    "notes": "No official temple/trust website found. Wikipedia lists none; Anandji Kalyanji Pedhi was not confirmed as manager. Wikipedia says a Hutheesing family trust manages the temple; the AMC page only mentions 'the office of the temple trust'. timings_official is null because the only timings found (05:30 to 19:00, AMC heritage page, undated, written during Covid-19 so possibly outdated) are from a municipal page, not the temple. Contact on that page: +91-79-22180774 (unverified by temple). Minor conflicts: Wikipedia says cost about Rs 10 lakh (one headline Rs 12 lakh); AMC page describes Manastambha as a later addition, six-storey, while Wikipedia gives 78 ft and ties it to Mahavira's 2500th anniversary (1970s); description keeps to 'Manastambha tower'. AMC page says the museum was closed due to Covid at time of writing; museum fee not included. Reviewer: confirm current hours and photography/dress rules with temple office."
+  },
+  {
+    "slug": "kesariyaji-temple",
+    "official_website": null,
+    "description": "Kesariyaji, also called Rishabhdev or Kesariyanath, is a temple at Rishabhdeo (Dhulev) in Udaipur district. Its black stone image of Rishabhanatha, the first Jain Tirthankara, is about 3.5 feet tall and seated in padmasana. The name Kesariya comes from the large quantity of saffron offered to the deity. Jains of both Shvetambara and Digambara traditions visit, and local Bhil and Meena communities also revere the image, with Bhils calling it Kalaji or Kalababa. According to tradition, a Bhil man named Dhula found the idol. The complex has 52 shrines,. Wikipedia says the origins are unclear, with belief in an 8th-century date.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Rishabhdeo",
+        "what_it_supports": "Deity, black stone idol 3.5 ft, saffron name, unclear origins and 8th-century belief, Bhil/Meena devotion (Kalababa), 52 spires/shrines, c.1,100 pillars, court rulings and 2007 management dispute."
+      },
+      {
+        "url": "https://www.incredibleindia.gov.in/en/rajasthan/udaipur/rishabhdeo-temple",
+        "what_it_supports": "Government tourism page: also called Dhulev, Kesariya Ji Tirth; Digambara and Svetambara pilgrimage; saffron name; 52 Jinalayas; Bhil reverence as Kalaji Bavaji; Dhula Bhil legend of idol found under a mound; summer and winter timings."
+      }
+    ],
+    "notes": "official_website null: rishabhdeo.org carries the line that the temple is 'managed and controlled by Devasthan Department, Rajasthan-Government' and a daily programme, but I could not confirm the site itself is run by the Devasthan Department or temple trust (no operator name, footer, copyright or registration visible; not stated as official; not found linked from a government page). Reviewer should check it manually (possible official candidate: https://rishabhdeo.org). The Wikipedia Rishabhdeo article lists no official site. timings_official null for same reason. Unconfirmed timings for reference only: rishabhdeo.org daily programme starts temple open 6:45 AM, aarti 9:35 AM, aangi shringar 5:00 PM, aarti 6:10 PM, kapoor aarti 8:05 PM; Incredible India (government tourism) lists Summer 5:45 AM to 6:30 PM and Winter 6:30 AM to 8:30 PM. These two sources CONFLICT (also the 6:10 PM aarti and 8 PM mangal fall outside the 6:30 PM summer hours). Other conflicts: Incredible India says about 1,200 years old; Wikipedia says origins unclear. Deity height 3.5 ft (Wikipedia, Incredible India) vs about 105 cm (rishabhdeo.org), consistent. Bhil name given as Kalababa (Wikipedia) and Kalaji Bavaji (Incredible India). Sensitive: ownership and management of the temple was disputed between Jain and tribal groups; the Supreme Court in Jan 2007 ordered a committee under the Rajasthan Public Trust Act and protests turned violent in 2007 (per Wikipedia). Management statement in description relies on rishabhdeo.org text, not independently confirmed; consider deleting it if reviewer cannot verify. Wikipedia fetch was a summary; brahmin priests and Vishnu-avatar belief (Incredible India) omitted from the description. | EDITED BY REVIEW: Not checked: rishabhdeo.org, possibly the temple site; confirm operator before using as official website."
+  },
+  {
+    "slug": "galtaji-monkey-temple",
+    "official_website": null,
+    "description": "Galtaji, also called Galwar Bagh and widely nicknamed the Monkey Temple, is a Hindu pilgrimage complex in a narrow cleft of the Aravalli hills about 10 km east of Jaipur. It is linked with the sage Galav, who by tradition performed penance here and was rewarded with abundant water. A spring feeds a chain of sacred kunds (tanks) where pilgrims bathe, and the Galta Kund is regarded as the holiest. The pink sandstone buildings, with domed pavilions, carved pillars and painted walls, resemble a haveli more than an ordinary temple. The complex includes a Ramgopalji shrine to Vishnu and a hilltop Sun temple, and it has long been a centre for Ramanandi Vaishnava ascetics. Large crowds bathe at Makar Sankranti, and rhesus macaques live throughout the site.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://ecoheritage.cpreec.org/galtaji/",
+        "what_it_supports": "Galav penance legend, kunds and Galta Kund, pink sandstone/haveli-like design, domed pavilions, painted walls, Ramgopalji (Vishnu) shrine, Sun temple, Ramanandi Vaishnava ascetics, Makar Sankranti bathing, monkeys. Published by CPREEC Eco Heritage site (government-supported centre); not the temple's own site."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Galtaji",
+        "what_it_supports": "Location about 10 km east of Jaipur in Aravalli hills, name Galwar Bagh, Ramanandi Peeth, Sun Temple on hilltop, macaques, Makar Sankranti. General history only."
+      },
+      {
+        "url": "https://www.incredibleindia.gov.in/en/rajasthan/jaipur/galtaji-temple",
+        "what_it_supports": "Government (Ministry of Tourism) page: Monkey Temple name, Saint Galav legend, kunds, Gaumukh, Makar Sankranti. States 5:00 AM to 9:00 PM (not official temple timings)."
+      }
+    ],
+    "notes": "No official temple/trust website found. Wikipedia infobox lists none. CPREEC page cites galta.org as a source; fetch of galta.org was refused by the tool (not on allowlist), so its status is unverified and it is not treated as official. Galtaji is not in the Rajasthan Devasthan Jaipur temple list page fetched. Timings: only a government tourism page (Incredible India) gives 5:00 AM to 9:00 PM; no official timings, so timings_official is null. Source conflict: Wikipedia says Krishnadas Payahari arrived in the early 15th century, CPREEC says the Ramanandi retreat dates from the early 16th century; the description therefore gives no date. Incredible India says a courtier of Sawai Jai Singh II, Diwan Rao Kriparam, commissioned it; Wikipedia credits him only with the Sun Temple; omitted from description. CPREEC says the temples are largely abandoned and only partly restored; Incredible India page is vague on main deity. Reviewer should check current visiting rules and whether any entry fee/timing applies locally; none verified. | EDITED BY REVIEW: Not checked (site blocked here): galta.org listed on Wikipedia."
+  },
+  {
+    "slug": "shila-devi-temple-amber",
+    "official_website": null,
+    "description": "Shila Devi is a form of the goddess Durga, worshipped in a Shakta temple at Amer Fort near Jaipur and counted among the region's prominent Shakti shrines. The image is carved from stone, which gives the deity her name. According to tradition, Maharaja Man Singh I was blessed by the goddess in a dream and brought a stone slab from eastern Bengal; the image took its present form after being cleaned at Amer. Sources disagree on the founding date, giving 1580 and 1604. The Devasthan Department describes carved pillars and panels, a sanctum with four verandahs, and regular recitation of the Durga Saptashati. Special worship is held during Navaratri in Ashwin and Chaitra, when the temple draws large numbers of devotees.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://devasthan.rajasthan.gov.in/images/Jaipur/ShilaDeviji.htm",
+        "what_it_supports": "Government (Devasthan Department) temple profile: Shakta tradition, stone idol and name, Man Singh I legend, eastern Bengal, 1580 CE date, carved pillars, sanctum/four verandahs, Durga Saptashati recitation, Navaratri worship, timings 6.00 am to 12.00 pm and 4.00 pm to 8.00 pm."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Shila_Devi",
+        "what_it_supports": "Durga as Shila Devi, prominent Shakti shrine, Man Singh I, 1604 CE date, location inside Amer Fort, Chaitra/Gupt/Ashwin Navratri."
+      },
+      {
+        "url": "https://devasthan.rajasthan.gov.in/Jaipur.asp",
+        "what_it_supports": "Devasthan Department list of Jaipur temples includes Shila Devi Ji - Amer Fort."
+      }
+    ],
+    "notes": "No official temple/trust website found; null. Wikipedia lists none. The Devasthan Department (Government of Rajasthan) profile is a government page, not a temple-run official site, so timings_official is null. That page gives, undated: Morning 6.00 am to 12.00 pm, evening 4.00 pm to 8.00 pm. JaipurMagazine.com (private, not used as a source) gives a similar pattern (6 am, 4 to 8 pm, closed noon to 4) but its metadata says last modified 2017. Founding date conflict: Devasthan says 1580 CE (construction ten years), Wikipedia says 1604 CE; the Devasthan page also says the idol came from eastern Bengal and Wikipedia says Jessore (now Bangladesh). Wikipedia notes past animal sacrifices have stopped (not used). Access is through Amer Fort, so fort entry timings/rules apply; not verified from an official source. A search result suggested the temple may open only during Navratri, which is contradicted by the Devasthan timings and was not verified; reviewer should confirm with Amber Development authority or Devasthan Department. Incredible India Amer Fort page fetch was refused by the tool."
+  },
+  {
+    "slug": "jeen-mata-temple",
+    "official_website": null,
+    "description": "Jeen Mata is a form of Shakti worshipped in a hill temple in the Aravalli range, in Sikar district. The Devasthan Department describes the image as Mahishasura Mardini Durga with eight arms and gives the construction date as unknown, citing a stone inscription as evidence of age. Local belief links the site to a woman named Jeen who practised austerity here and to the Pandavas' exile; a popular tradition, noted on Wikipedia, places the temple in the eighth century. The sanctum is marble with silver shutters, and a 24-pillared hall and tall shikhar follow Pratihara and Chauhan styles. A Bhramari Devi shrine stands behind. Devotees visit on the bright eighth of each month, bring infants for a first hair-cutting rite, and gather in large numbers at Chaitra and Ashwin Navaratri.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://devasthan.rajasthan.gov.in/images/Sikar/jeenmataji.htm",
+        "what_it_supports": "Government (Devasthan Department) profile: Mahishasura Mardini form, eight arms, unknown construction date, inscription, Jeen legend, Pandavas, 24 pillars, shikhar, marble sanctum with silver shutters, Bramari Devi temple, monthly ashtami visits, hair-cutting rite, Navaratra and fairs."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Jeenmata",
+        "what_it_supports": "Jeen Mata as Shakti form, Sikar district location, tradition of 8th-century origin (traditional belief, not established fact), Harsh Bhairav shrine on peak, Navratri visits."
+      },
+      {
+        "url": "https://www.theweek.in/wire-updates/national/2025/04/11/des79-rj-temple-reopen.html",
+        "what_it_supports": "Temple is managed by a temple trust (notes only; April 2025 brief closure)."
+      }
+    ],
+    "notes": "No official trust website found; null. Wikipedia lists none and no search result identified a trust-run site. Timings: the Devasthan Department (government, not temple-run) page shows a table with '4.00 am' and '10.00 pm' that it does not label as open/close, and aarti at 4.00 am, 8.00 am and a third time cut off; too ambiguous to publish, so timings_official is null. Recent event: PTI report (The Week, 11 Apr 2025) says the trust closed the temple on 11 April 2025 after an alleged assault on priests during the Navratri fair and reopened hours later after talks with the administration. Wikipedia-only claims left out as unverified by a second source: Aurangzeb and bees legend, oil pledge, gates never close, 'over a thousand years old'. Devasthan page gives no town; Wikipedia places the village in Sikar district (about 29 km south of Sikar, 108 km northwest of Jaipur); the 'Raiwasa' link from Devasthan's Sikar list (raiwasadham.htm) was not fetched. Wikipedia names Harsh Bhairav temple at peak; Devasthan does not. The en.wikipedia.org/wiki/Jeen_Mata URL was refused by the tool; /wiki/Jeenmata worked. Reviewer should double-check the monthly ashtami visit and current timings with the trust."
+  }
+]
