@@ -1,4 +1,5 @@
 import b1 from './batch-1.json'
+import b2 from './batch-2.json'
 
 export interface BatchItem {
   slug: string
@@ -13,4 +14,5 @@ export interface Batch { id: string; title: string; items: BatchItem[] }
 // Add each approved batch here. Nothing is applied automatically; an admin applies a batch from /admin/temple-batches.
 export const BATCHES: Batch[] = [
   { id: 'batch-1', title: 'Batch 1: Maharashtra, Gujarat, Rajasthan (well-known temples)', items: b1 as unknown as BatchItem[] },
+  { id: 'batch-2', title: 'Batch 2: Ashtavinayak, Jejuri, Akkalkot, Alandi, Shani Shingnapur and more', items: b2 as unknown as BatchItem[] },
 ]

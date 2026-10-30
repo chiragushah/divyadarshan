@@ -1,0 +1,250 @@
+[
+ {
+  "slug": "shani-shingnapur-temple",
+  "official_website": null,
+  "description": "Shani Shingnapur is a village in Newasa taluka of Ahilyanagar (formerly Ahmednagar) district, built around a shrine to Shani, the deity associated with the planet Saturn. The object of worship is a tall, self-emerged black stone that stands on an open platform with no roof, since the deity is said to prefer the open sky. According to local oral tradition, shepherds found the stone and Shani later appeared in a dream asking for regular worship. The village is also known for houses and shops with door frames but no doors or locks, a custom residents attribute to the deity's protection. The temple is managed by Shri Shanaishwar Devasthan, reconstituted under a 2018 Maharashtra Act.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Shani_Shingnapur",
+    "what_it_supports": "Location (Nevasa taluka, Ahmednagar/Ahilya Nagar district); Shani as deity; swayambhu black stone on open-air platform; oral-tradition legend of shepherds and dream; no doors/locks custom as local belief; trust. Wikipedia, general reference only."
+   },
+   {
+    "url": "https://www.casemine.com/act/in/5ed4fb2c894ef23297d8c2e8",
+    "what_it_supports": "Shree Shanaishwar Devasthan Trust (Shingnapur) Act, 2018 (Maharashtra Act LVIII of 2018) re-constituting the registered trust Shree Shanaishwar Devasthan; temple in Shingnapur, Taluka Newasa, District Ahmednagar. Hosted on CaseMine, a third-party legal site."
+   }
+  ],
+  "notes": "Edited by review: removed the \"holy days\" line (only a listing site). Confirm whether the district is officially Ahilyanagar now. No official website confirmed. | Research notes: No official website could be confirmed. Searches (English and Marathi) returned only aggregators, blogs and the statute; I did not find a site I could verify as run by Shri Shanaishwar Devasthan, and guessed domains were blocked by the fetch allowlist (not fetched, no workaround tried). Wikipedia cites an archived shanidev.com page, which is a reference, not a confirmed official site. timings_official is null: the only timings seen (open 24 hours; aarti 5:30, 9:30, 12:30, 20:30 per templesinindiainfo.com) are from a third-party site and were not verified; gokshetra/yatradham-type blogs appeared in search but were not fetched. Wikipedia and the Act spell the place Newasa/Nevasa and Shingnapur/Shinganapur. District officially renamed Ahilyanagar (Ahmednagar) - Wikipedia still lists it as Ahmednagar (Ahilya Nagar); confirm current official usage. Wikipedia mentions door-less houses and notes theft reports in 2010 and 2011, so present the no-locks custom as local belief. 2016 Bombay High Court ruling and the temple opening the inner sanctum to women on 8 April 2016 (Wikipedia) and the 2018 Act (government takeover of management, preamble cites complaints about irregular management and law-and-order concerns about the Chauthara) are well documented but omitted from the description as sensitive/not essential. Recent ETV Bharat item (branded oil only) surfaced in search but was not fetched."
+ },
+ {
+  "slug": "saptashringi-temple",
+  "official_website": null,
+  "description": "Saptashrungi Devi Temple lies near Vani and Nanduri in Kalwan taluka of Nashik district, roughly 60 km from Nashik city, on a hill of the Sahyadri range encircled by seven peaks. The goddess, worshipped as a form of Durga, is a figure about eight feet tall with eighteen arms, each holding a different weapon, carved in relief from the natural rock face. The shrine is traditionally counted as an ardha (half) Shakti Peetha, one of the 'three and a half' in Maharashtra. Pilgrims reach it by a stairway of about 510 steps, reportedly built in 1710, or by a funicular that opened in 2018. The major fairs fall during Chaitra and the Ashwin Navaratri period.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Saptashrungi",
+    "what_it_supports": "Location, goddess as Durga/Mahalakshmi form, 18-armed ~8 ft image, 'half' Shakta pitha among three and a half in Maharashtra, about 510 steps reportedly built 1710, funicular opened July 2018, festivals. Notes the trust's site as saptashrungi.org. General reference only."
+   },
+   {
+    "url": "https://nashik.gov.in/?p=23690",
+    "what_it_supports": "Nashik district page: ~60 km from Nashik, Kalwan tahsil, seven peaks, ~8 ft image carved in relief with eighteen hands each holding a weapon, Ardha Shaktipeeth, Chaitra and Ashwin Navratri fairs."
+   },
+   {
+    "url": "https://ffo.gov.in/locations/locationInformation/444",
+    "what_it_supports": "Government film-facilitation page: self-manifested on rock face among seven peaks; one of 51 Shakti Peeths per mythology (right arm of Sati); Chaitrotsav. Conflicts with 'half pitha' framing - see notes; not relied on for the description's pitha claim."
+   }
+  ],
+  "notes": "Wikipedia names saptashrungi.org as the trust site but it could not be fetched, so it is not added. Please open it and tell me if it is the trust official site. | Research notes: Official website not confirmed. The English Wikipedia article lists saptashrungi.org as the Shree Saptashrung Niwasini Devi Trust's site (trust formed 1975), but my fetch of saptashrungi.org (and a guessed saptashrungi.com) was blocked by the tool's URL allowlist, so I could not verify it and have put null; reviewer should open saptashrungi.org directly and, if it carries the trust name and registration, use it and read timings from it. timings_official null for the same reason; third-party timing pages (yatradham, trawell, news items about 24-hour darshan in Navaratri and midnight closing in Diwali) appeared in search but were not fetched and festival-time rules change yearly. Conflict: Wikipedia and Nashik district page call it an ardha (half) Shakti Peetha; ffo.gov.in and Wikipedia say the temple's own site calls it a full pitha / one of 51. Description uses the half-pitha view and tradition language. Elevation: nashik.gov.in gives 4,659 ft, Wikipedia gives ~4,500 ft average peak height; omitted. Wikipedia says steps built by Umabai Dabhade in 1710 ('reportedly'); step count ~510 is Wikipedia only. Wikipedia reports sanctum conservation finished 2022 and idol reinstalled 8 Sept 2022; not included, verify before adding. Nashik district page says nearest airport Ozar; distances not used in description beyond ~60 km (two sources agree)."
+ },
+ {
+  "slug": "jejuri-khandoba-temple",
+  "official_website": null,
+  "description": "Jejuri, in Purandar taluka of Pune district about 50 km from the city, is the principal centre of worship of Khandoba, also known as Malhari Martand and regarded as a form of Shiva. He is the family deity of many Maharashtrian communities. The temple crowns a hill and is laid out like a small fort, with a walled courtyard and an approach stairway lined with stone lamp pillars. During festivals devotees throw turmeric over the steps and surroundings, which gives the place its nickname Sonyachi Jejuri, or Golden Jejuri. One bell in the temple is described as a trophy from the Maratha victory over the Portuguese at Vasai, attributed to Chimaji Appa. Management lies with the Shree Martand Dev Sansthan trust.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Khandoba_Temple,_Jejuri",
+    "what_it_supports": "Location (Purandar taluka, ~50 km from Pune), Khandoba/Malhari Martand as Shiva form and kuladevata, hill fort-like structure, steps with deepmala lamp pillars, turmeric offerings, Vasai church bell gift by Chimaji Appa, governing body Shree Martand Dev Sansthan Temple Trust. General reference only."
+   },
+   {
+    "url": "https://www.utsav.gov.in/view-darshan/jejuri-temple-1",
+    "what_it_supports": "Government (Ministry of Culture) page: Khandoba as family deity of many Maharashtrian families; fort-like design with walled courtyard; Bhandara turmeric showering; Sonyachi Jejuri celebration."
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/maharashtra/pune/khandobachi-jejuri",
+    "what_it_supports": "Government tourism page: kuldevta, steps lined with stone lamp holders, Chimaji Appa's 1739 victory at Vasai and one church bell remaining at the temple, Somavati Amavasya turmeric, Sonyachi Jejuri nickname."
+   },
+   {
+    "url": "https://maharashtratourism.gov.in/temple/jejuri/",
+    "what_it_supports": "Maharashtra tourism page: Khandoba, incarnation of Shiva, ~50 km from Pune. Very short; no timings or official site."
+   }
+  ],
+  "notes": "Official website not found. Searches returned Wikipedia, government tourism pages and many gokshetra/yatradham-style aggregators; none verified as run by Shree Martand Dev Sansthan, and Wikipedia's article links none. timings_official null: no official or government source gave timings (utsav.gov.in and incredibleindia list none or 'NA'). Conflicts: step count is about 200 in Wikipedia vs 350 in Incredible India; hill height 798 m / 718 m in Wikipedia vs 758 m in utsav.gov.in; Wikipedia's builder attribution (Ahilyabai Holkar, '17th century') is internally inconsistent, so construction history and date were omitted; Wikipedia says worship began 12th-13th century (unsourced there; omitted); Wikipedia's 'Hemadpanthi' style claim is uncited and omitted. Bell date: Wikipedia has both 1737 (battle) and 1739; Incredible India says 1739; description avoids a date. Incredible India says 38 bells distributed to 34 temples. Stairway lamp pillars supported by Wikipedia (~350 deepmala) and Incredible India ('malas'). The temple is described by utsav.gov.in as entered through the northern gate; not included. Wikipedia states 'state-protected site'; unverified, omitted. Festival details (Somavati Amavasya, Bhandara, Champashashti) are in sources but dates and visitor numbers were not included."
+ },
+ {
+  "slug": "akkalkot-swami-samarth-temple",
+  "official_website": null,
+  "description": "Akkalkot, in Solapur district, is the main centre of devotion to Swami Samarth, a nineteenth-century saint whom followers regard as an incarnation of Dattatreya. According to Wikipedia, he came to the town in 1856, stayed about twenty-two years and took samadhi in 1878. He lived in the house of his disciple Cholappa, where the Samadhi Math stands. The Vatavruksh Mandir complex is built around the banyan tree under which he is said to have sat and taught; a tradition holds that he described himself as born of a banyan. A Solapur police tourism page notes a sabha mandap, accommodation and free meals served twice daily, and says his death anniversary is observed on Chaitra Shuddha Trayodashi.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Swami_Samarth",
+    "what_it_supports": "Arrival in Akkalkot 1856, about 22 years' stay, samadhi 30 April 1878 (Chaitra Shuddha Trayodashi, Shaka 1800), Dattatreya tradition, stay at Cholappa's residence, legend of origin from a banyan (vata-vriksha), name 'Vatvruksh Swami Samarth Maharaj Devsthan'"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Akkalkot",
+    "what_it_supports": "Akkalkot in Solapur district; Vatavruksh Mandir complex surrounds the banyan tree under which he preached; samadhi at Cholappa's home"
+   },
+   {
+    "url": "https://mail.solapurpolice.gov.in/Tourist-akkalkot",
+    "what_it_supports": "Government (Solapur police) tourism page: temple built around banyan tree; main temple, sabha mandap, accommodation; free meals twice daily; Samadhimath at Cholappa's house; death anniversary on Chaitra Shuddha Trayodashi"
+   }
+  ],
+  "notes": "No official trust/devasthan website could be confirmed: searches surfaced only Wikipedia, aggregators (YatraDham, templepurohit, timing sites), Maharashtra Tourism and a police tourism page, none linking to a trust site. Maharashtra Tourism pages maharashtratourism.gov.in/-/akkalkot was fetched but truncated and carries no timings; /temple/akkalkot/ was refused by the fetch tool (not on allowlist) and was not retried. Timings are therefore null; only an aggregator (unverified) lists them, so confirm with the temple before publishing. Source conflict: Wikipedia says he stayed about 22 years in Akkalkot (arrived 1856); the Solapur police page says 21 of his 40 years' incarnation were in Akkalkot and he arrived at start of Shaka 1779; description uses Wikipedia's figures with attribution. The Wikipedia Swami Samarth page does not give a birth date and origins are legendary. Wikipedia Akkalkot mentions the temple being in Gogaon; not used. No numbers on visitors, festival dates or directions included because not supported by a source read."
+ },
+ {
+  "slug": "alandi-dnyaneshwar-temple",
+  "official_website": null,
+  "description": "Alandi, on the Indrayani river in Pune district, is the burial place of Sant Dnyaneshwar, the thirteenth-century Marathi saint who composed the Dnyaneshwari, a Marathi commentary on the Bhagavad Gita, and is counted among the founders of the Varkari tradition. According to Wikipedia, he entered sanjeevan samadhi in 1296 beneath the Siddheshwar temple complex, which also contains the Ajanvriksha tree. A temple over the samadhi is dated to roughly 1580 to 1600, with later additions by Maratha nobles, the Peshwa and the Shinde family. A news report says trustees installed a 22 kg gold kalash on the samadhi temple in August 2025. Each year the saint's padukas travel from Alandi to Pandharpur in the Wari procession.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Alandi",
+    "what_it_supports": "Location on Indrayani, samadhi 1296 in Siddheshwar complex, Ajanvriksha, temple built c.1580-1600 with later Peshwa/Shinde additions, annual palkhi to Pandharpur, Kartik Vadya Ekadashi festival"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Dnyaneshwar",
+    "what_it_supports": "Dnyaneshwari as Marathi commentary on the Gita, Varkari founder, samadhi 1296 on Kartik dark 13th at Siddheshwara complex, padukas carried to Pandharpur"
+   },
+   {
+    "url": "https://www.freepressjournal.in/amp/pune/video-gold-kalash-installed-at-sant-dnyaneshwar-temple-in-punes-alandi-cm-fadnavis-dcm-shinde-present",
+    "what_it_supports": "News report (15 Aug 2025): 22 kg gold kalash installed on the Samadhi Mandir by the Sansthan trustees"
+   }
+  ],
+  "notes": "Wikipedia points to maulialandi.com as the Sansthan site but it could not be fetched, so it is not added. Please check it. | Research notes: Official website not confirmed. The Wikipedia page cites archived maulialandi.com as 'Dnyaneshwar Samadhi Trust' and the 2014 Blogspot page links to it, but I could not fetch it (www.maulialandi.com was refused by the fetch tool as not on the session allowlist; not retried or mirrored) and no source states it is the official site, so official_website is null. Reviewer: if maulialandi.com is verified as the Sansthan site, timings can be taken from it. dnyaneshwarmaulinewasa.org is the Newasa temple trust, NOT Alandi. Timings null; only an aggregator lists them (6:00-21:00), unverified. Date conflicts: Wikipedia dates the temple c.1580-1600 (Ambekar Deshpande), aggregator says 1570; description uses Wikipedia. Dnyaneshwar's birth year varies (1275 vs 1271) and is omitted. Trust name appears variously as Shri Dnyaneshwar Maharaj Sansthan Committee / Samadhi Sansthan. Maharashtra Tourism Dehu-Alandi page fetched but truncated, nothing used. Gold kalash event Aug 2025 is from one news report. Festival crowd figures (60-70k per Ekadashi) from Wikipedia deliberately not included. No festival dates were verified."
+ },
+ {
+  "slug": "pali-ballaleshwar-temple",
+  "official_website": "https://shreeballaleshwarpali.org/",
+  "description": "Ballaleshwar at Pali, in Raigad district, is one of the eight Ashtavinayak Ganesha shrines and is unusual in being named after a devotee, Ballal, rather than the deity. According to tradition, Ballal, a merchant's son, was punished by his father for worshipping Ganesha with village children; Ganesha then appeared and agreed to remain in Pali in the stone bearing the devotee's name. The broken stone is worshipped as Dhundi Vinayak. The devasthan's history page describes restoration of an older temple from about 1751 under Baburao Phadnis, a sabhamandap built between 1902 and 1908, and repairs completed in 1932. Wikipedia describes an east-facing temple between Sarasgad fort and the Amba river. The temple is open daily with an evening aarti.",
+  "timings_official": "As shown on the official site (shreeballaleshwarpali.org, pages read 30 Oct 2026): temple open for darshan 5:00 AM to 10:30 PM daily, and not opened after 10:30 PM; daily evening aarti at 8:00 PM. Site also lists abhishek-team timings 5:30 AM-1:00 PM and 4:00 PM-7:00 PM. No other aarti times are given.",
+  "sources": [
+   {
+    "url": "https://shreeballaleshwarpali.org/",
+    "what_it_supports": "Devasthan name, address in Pali, Sudhagad taluka, Raigad; hours 5:00-22:30; trustee-run site titled Official Website; ISO 9001:2015 in 2018"
+   },
+   {
+    "url": "https://shreeballaleshwarpali.org/mr/temple-activities",
+    "what_it_supports": "Darshan 5:00-22:30, evening aarti 8:00 PM, abhishek slots, Chaturthi evening programme"
+   },
+   {
+    "url": "https://shreeballaleshwarpali.org/mr/our-history",
+    "what_it_supports": "Restoration under Baburao Phadnis from c.1751, sabhamandap 1902-1908, repairs 1929-1932"
+   },
+   {
+    "url": "https://shreeballaleshwarpali.org/mr/about-temple",
+    "what_it_supports": "Deity Ballaleshwar / Ballal Vinayak; trustee board named, term to March 2027"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ballaleshwar_Pali",
+    "what_it_supports": "Ashtavinayak status, named after devotee Ballal, legend, Dhundi Vinayak, location between Sarasgad and Amba river, east-facing"
+   },
+   {
+    "url": "https://maharashtratourism.gov.in/ashtavinayak/pali/",
+    "what_it_supports": "Government tourism page (truncated on fetch): Ganesha, one of eight Ashtavinayak temples, only one named after a devotee"
+   }
+  ],
+  "notes": "Website is self-declared official with trustee board and address; no registration number was shown. Timings listed here are read from Marathi pages through a summary: re-read the live site. | Research notes: Official site identified from search results and checked: it is run by Shree Ballaleshwar Devasthan Pali (copyright footer, Pali/Sudhagad/Raigad address, named trustee board and manager, ISO certificate, titled Official Website). It shows no trust registration number, so confirmation is by self-identification, not registration or government link; reviewer may want to confirm (a Facebook page 'ballaleshwardevasthan' also appeared in search, not fetched). Pages are in Marathi and were read via the fetch tool's summarizer, so reviewer should re-check the timings text on the live page: darshan 5:00 AM to 10:30 PM and aarti 8:00 PM. Source conflict on history: Wikipedia says built 1640 by Moreshwar Vitthal Sindkar and rebuilt in stone 1760 by 'Shri Fadnis'; the devasthan's page gives restoration from about 1751 to about 1770, and itself gives inconsistent start years (1751, 1751-52, 1758-59), so the description states 'about 1751' with attribution and omits the 1640 and 1760 dates. Hall dimensions, pillar counts, diamond-eyes and bell details from Wikipedia not used. Temple timings on the site may vary on festival days (Bhadrapad/Magh); not checked. Prices for abhishek on the site deliberately omitted."
+ },
+ {
+  "slug": "varad-vinayak-mahad",
+  "official_website": null,
+  "description": "The Varadvinayak temple stands beside a pond at Mahad village in Khalapur taluka, Raigad district, and is counted among the eight Ashtavinayak Ganesha shrines of Maharashtra. Ganesha is worshipped here as Varadvinayak in a self-manifested (swayambhu) image that faces east with its trunk curving to the left. According to tradition, the image was found submerged in the neighbouring lake in 1690, and according to Wikipedia the present temple was built or restored in 1725 by the Peshwa-era sardar Ramji Mahadev Biwalkar. Four elephant figures guard the temple's sides, and the complex also holds images of Mushika, the Navagraha and a Shivalinga. Wikipedia adds that devotees may enter the sanctum to worship the idol directly, and that large crowds gather for Magha Chaturthi.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Varadvinayak",
+    "what_it_supports": "Location, swayambhu idol, east-facing/left trunk, 1690 find in lake, 1725 Biwalkar, four elephants, Mushika/Navagraha/Shivalinga, sanctum access, Magha Chaturthi crowds"
+   },
+   {
+    "url": "https://maharashtratourism.gov.in/ashtavinayak/mahad/",
+    "what_it_supports": "Ganesha temple at Mahad village, Raigad district, one of the eight Ashtavinayak (page text was truncated; little else)"
+   },
+   {
+    "url": "https://raigad.gov.in/en/tourist-place/religious-places-in-raigad/",
+    "what_it_supports": "District government page: Ashtavinayak status, 1725 Biwalkar, Navagraha/Mushaka/Shivalinga, four elephants, Khalapur taluka"
+   }
+  ],
+  "notes": "No official trust website found: searches surfaced only Wikipedia, government tourism pages, blogs and aggregators; none names a trust site. official_website and timings_official are null. Non-official site ashtavinayak.in lists temple hours 5:30 AM to 9:00 PM and phone 02142 242 263 but its owner is unstated and its text is dated (says lamp burning '107 years', festival info for 2020), so do not publish as official. Wikipedia says the idol was found in 1690 and temple built 1725; ashtavinayak.in agrees and names the finder as Dhondu Paudkar (single non-official source, omitted). ashtavinayak.in also says the original idol was immersed and a new one consecrated, with a district-court suit pending (unverified, not in description; reviewer may check current status). Wikipedia notes Mahad (Raigad) is distinct from Mahaad town. Pin code shown as both 410202 and 410205 on that site: unresolved. Lamp 'burning since 1892' claim comes from Wikipedia/ashtavinayak.in only, omitted. WebFetch summaries of the Wikipedia pages were machine-generated; reviewer should spot check against the live page."
+ },
+ {
+  "slug": "ranjangaon-mahaganapati",
+  "official_website": null,
+  "description": "Mahaganapati Temple at Ranjangaon, in Shirur taluka of Pune district about 50 km from Pune, is one of the eight Ashtavinayak shrines of Maharashtra, where Ganesha is worshipped as Mahaganapati. The idol is also called Mahotkat and, according to Wikipedia, is described as having ten trunks and twenty hands. Wikipedia gives the main construction as 9th to 10th century while also noting that it appears to be Peshwa-era work; it records that Madhavrao I had a basement room made for the idol and that Sardar Kibe of Indore later renovated the temple. The east-facing temple has a large entrance gate topped by a nagarkhana (drum house).",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Ranjangaon_Ganpati",
+    "what_it_supports": "Location, Mahotkat name, ten trunks/twenty hands, 9th-10th century date and Peshwa-era appearance, Madhavrao I basement room, Sardar Kibe renovation, east-facing, gate and nagarkhana"
+   },
+   {
+    "url": "https://maharashtratourism.gov.in/?p=8330",
+    "what_it_supports": "Government tourism page: Mahaganapati form of Ganesha, one of eight Ashtavinayak, about 50 km from Pune"
+   }
+  ],
+  "notes": "Edited by review: Tripurasur legend removed (only a non-official site). Confirm the 9th to 10th century date against another source. | Research notes: No official website confirmed. ashtavinayak.in names the trust as 'Shree Kshetra Ranjangaon Ganpati Devstan Trust' but the site itself does not state who runs it, so it is not treated as official; no trust-run site was found. timings_official is null. For reference only (non-official, ashtavinayak.in): open 5:00 AM-10:00 PM; abhishek 5:30 AM, aarti 7:30 AM, mahapuja 11:30 AM-12:30 PM, evening aarti 7:30 PM, shej aarti 10:30 PM; page contains 2020-dated content and two PIN codes (412110, 412209) and lists the taluka as both Shirur and Junnar. Wikipedia and the Maharashtra Tourism page say Shirur taluka. The 9th-10th century date conflicts in spirit with 'Peshwa-era' appearance, both reported by Wikipedia; the description shows both with attribution. The Tripurasur legend is from a single non-official source; reviewer may drop it. Distance 'about 50 km' per tourism page and Wikipedia; ashtavinayak.in says 51.5 km. Maharashtra Tourism page text was truncated. Wikipedia fetch was a machine summary; spot check."
+ },
+ {
+  "slug": "nageshwar-temple",
+  "official_website": null,
+  "description": "Nageshwar Jyotirlinga Temple lies on the Saurashtra coast in Devbhumi Dwarka district, about 18 km from Dwarka city according to Gujarat Tourism. It is dedicated to Shiva as Nageshwar and is counted among the twelve Jyotirlingas. According to the associated legend, the demon Daruka imprisoned the devotee Supriya, whose chanting of Shiva's name brought the god to defeat him. Tourism pages describe a large hall leading to the sanctum, an underground sanctum holding the lingam, and an 80-foot seated statue of Shiva at the site. Gopi Talav Tirth is nearby, and Maha Shivaratri is the festival most often cited. The Nageshwar claim is also made for Aundha in Maharashtra and Jageshwar in Uttarakhand, and Wikipedia says the location of Darukavana remains debated.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Nageshwar_Jyotirlinga",
+    "what_it_supports": "Dwarka/Devbhumi Dwarka location, one of twelve Jyotirlingas, Daruka-Supriya legend, Maha Shivaratri, competing claims of Aundh and Jageshwar, Darukavana debate; also lists www.nageshwarjyotirling.com as official website"
+   },
+   {
+    "url": "https://gujarattourism.com/saurashtra/devbhoomi-dwarka/nageshwar-jyotirlinga.html",
+    "what_it_supports": "About 18 km from Dwarka city, Shiva, large hall leading to sanctum, Gopi Talav Tirth, Shivratri"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/gujarat/dwarka/nageshwar-jyotirlinga",
+    "what_it_supports": "Saurashtra coast, underground sanctum, 80-foot seated Shiva statue, legend of Daruka and Supriya"
+   }
+  ],
+  "notes": "Wikipedia lists nageshwarjyotirling.com but it could not be fetched, so it is not added. Several places claim the Nageshwar Jyotirlinga; the text says so. | Research notes: official_website is null. The English Wikipedia infobox/page references www.nageshwarjyotirling.com as the official site, but the fetch tool blocked it (URL not on allowlist), so I could not confirm that it is run by a trust or committee; no workaround attempted. Reviewer should open it manually and check for a trust name/registration; if confirmed, timings from it can replace null. timings_official is null. Non-official YatraDham page (private company) lists darshan 6:00 AM-12:30 PM and 5:00 PM-9:30 PM, aarti 6:00 AM, 12:00 PM, 7:00 PM, 9:00 PM; Gujarat Tourism says only 'dawn to dusk'; these conflict, so none used. Distance from Dwarka: Gujarat Tourism 18 km; YatraDham 17 km in one section and 15 km in another. Incredible India states Dwarka only, no distance. Wikipedia says the site is in Dwarka; most other sources say it is outside town (about 15-18 km); description follows Gujarat Tourism. Gujarat Tourism says the lingam is believed to be 'the first' Jyotirlinga; this is a belief and omitted. Incredible India says the lingam is carved from Dwarka Shila and resembles a Teen Mukhi Rudraksha; omitted as unverified elsewhere. Incredible India also claims the design follows Vaastu and a 'sleeping posture' and mentions archaeological evidence of five earlier cities; omitted as unverified. The 80-foot statue is a modern addition per Incredible India only. Wikipedia fetch was machine-summarised; spot check."
+ },
+ {
+  "slug": "shamlaji-temple",
+  "official_website": null,
+  "description": "Shamlaji, in Gujarat's Aravalli district, is a Vishnu temple on the bank of the Meshwo river, in a valley ringed by wooded hills. The black image of the deity is worshipped as Gadadhar, a name linked to the unusually large mace he holds, and local tribal communities also revere him as Kaliyo Dev, the Dark Divine. According to Wikipedia, the present building mainly dates from the 15th to 16th centuries, though construction may have begun around the 11th century, and the sanctum sculpture is probably much older, perhaps 7th to 8th century. Gujarat Tourism describes a two-storey structure of white sandstone and brick, with scenes from the Ramayana and Mahabharata carved on its outer walls. Devotees also bathe in the river, and a large annual fair is held at Kartik Purnima.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Shamlaji",
+    "what_it_supports": "Vishnu as Gadadhar/Trivikrama, Meshwo riverbank and wooded-hill setting, Kaliyo Dev tribal veneration, 11th c. start / 15th-16th c. present structure, sanctum sculpture probably 7th-8th c., river bathing, Kartik Purnima fair, carved outer walls"
+   },
+   {
+    "url": "https://gujarattourism.com/north-zone/aravalli/shamlaji-temple.html",
+    "what_it_supports": "Aravalli district listing, Gadadhar black image, white sandstone and brick two-storey structure, Ramayana/Mahabharata carvings, Meshwo river setting (government tourism page, not the temple's official site)"
+   }
+  ],
+  "notes": "Wikipedia lists shreeshamlajivishnutemple.org but it could not be fetched, so it is not added. | Research notes: Official site: Wikipedia's external links give shreeshamlajivishnutemple.org as the trust site (archived 2021), but Fetch tool returned URL_NOT_ON_ALLOWLIST for shreeshamlajivishnutemple.org, so it was not fetched and not confirmed as official by me; no workaround attempted. Reviewer should open it and confirm trust name before using it. Timings: Gujarat Tourism page has a 'Visiting Hours' heading with no hours; no official timings obtained, so null. Conflicts: Wikipedia dates the Harishchandrani Chauri temple to 9th c. in one place and 10th c. in another (not used in description). Gujarat Tourism says shrine believed to be at least ~500 years old, which sits loosely with Wikipedia's 15th-16th c.; both are consistent with the description's hedged wording. Wikipedia notes recent 'Krishnaization' of the image (golden flute); not included. Fair date (Kartik Purnima) is from Wikipedia only; dates vary yearly. Bhiloda taluka not confirmed in any fetched source, so omitted. Gujarat Tourism and Wikipedia give slightly different coordinates; not used. Wikipedia lists 'Trivikrama' form, Gujarat Tourism says 'Sakshi Gopal, or Gadadhar'; description uses Gadadhar."
+ },
+ {
+  "slug": "chotila-chamunda-temple",
+  "official_website": null,
+  "description": "The Chamunda Mataji temple stands at the top of Chotila hill, above the town of Chotila in Surendranagar district, Gujarat. The goddess Chamunda, regarded as a form of Mahakali, is worshipped here. According to tradition, the demons Chand and Mund attacked Mahakali, who beheaded them and was then declared by Ambika to be worshipped as Chamunda. Pilgrims climb a long flight of steps to reach the shrine on the summit.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://surendranagar.nic.in/?p=26062",
+    "what_it_supports": "Chamunda as form of Mahakali, Chand-Mund legend, temple at top of Chotila hill, Chotila in Surendranagar district (page on a nic.in government domain, but fetched text did not name its publisher)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Chotila",
+    "what_it_supports": "Chotila hill and the flight of steps (Wikipedia)"
+   }
+  ],
+  "notes": "Edited by review: folklore, Navratri and Kartik claims removed because only a non-official site supported them. The description is short on purpose. Timings and website not found. | Research notes: Official site: web search found no trust/devasthan site; none confirmed, so null. No official timings found. Non-official timing sources conflict: YatraDham blog (Sept 2025) says 5:00 AM-7:30 PM, aarti 6:00 AM Mon-Sat / 5:30 AM Sun / 6:00 PM, Purnima morning aarti 4:00 AM, open 24 hours in Navratri; the Wikipedia mirror says 5 AM to 5:30 PM. Not put in timings_official. Step count conflicts (620 in Wikipedia mirror; ~366 originally and ~700 after renovation per apnisanskriti), hill height conflicts (1,173 ft vs ~1,250 ft), so no numbers given. Distances in sources also conflict (e.g. Rajkot 60 km vs 40 miles); omitted. A 2026-08-15 deshgujarat headline mentions a devotee/security staff clash at the temple; I did not fetch it and did not use it, but reviewer may want to check for any recent entry-rule or security changes. Wikipedia mirror is an unofficial copy dated Oct 2023; reviewer should verify against live Wikipedia. The surendranagar.nic.in page does not state its publisher in the fetched text."
+ },
+ {
+  "slug": "mehandipur-balaji-temple",
+  "official_website": null,
+  "description": "Mehandipur Balaji temple in Dausa district, Rajasthan, is dedicated to Hanuman, worshipped here as Balaji. According to local lore, the image manifested miraculously in the hills; no founding date or builder is recorded in the sources we checked. Alongside Balaji, the sanctum is described as holding representations of Pret Raj Sarkar and Kotwal Bhairav. The temple is best known for a tradition among devotees that attending darshan and following its rituals brings relief from what they understand as spirit affliction, and from mental and physical distress. These are matters of belief rather than established fact, and the temple's practices have also been the subject of academic and psychiatric study. The Ghata Mehandipur Balaji Trust is reported to run education, health and welfare work. Pilgrims come from Rajasthan and elsewhere throughout the year.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Mehandipur_Balaji_Temple",
+    "what_it_supports": "Hanuman as Balaji, Dausa district Rajasthan, temple's own claim of ancient manifestation, devotee belief in relief from spirit affliction and disorders (attributed as belief), academic/psychiatric studies, Ghata Mehandipur Balaji Trust and its charitable work, pilgrims year-round"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/rajasthan/dausa/mehndipur-balaji",
+    "what_it_supports": "Government tourism page: local-lore manifestation in the hills, Pret Raj Sarkar and Kotwal Bhairav in sanctum, no founding date given"
+   }
+  ],
+  "notes": "Wikipedia lists shribalajimehandipur.org but it could not be fetched, so it is not added. Sensitive topic: wording is neutral and attributes the practice to belief. | Research notes: Official site: Wikipedia lists shribalajimehandipur.org as the official website, but Fetch tool returned URL_NOT_ON_ALLOWLIST for shribalajimehandipur.org, so it was not fetched and not confirmed as official by me; no workaround attempted. Reviewer should open it, confirm the trust name, and capture timings/aarti from it. Timings: Incredible India (government tourism, not official) states 6:00 AM-8:00 PM; not placed in timings_official; unverified. Also shows Tuesdays and Saturdays as especially auspicious (not used). Many Mehandipur-area sites run by individuals or agents claim to be official; none were used. Spirit-affliction practice described neutrally and attributed to devotee belief; Wikipedia states it does not verify these beliefs. Wikipedia spells the place 'Mahendipur' in its infobox. Distances (Jaipur ~110 km etc.) in the tourism page omitted from description. Temple is in Todabhim/Sikrai area per some listings, not confirmed in fetched sources; omitted."
+ }
+]
