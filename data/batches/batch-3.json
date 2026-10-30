@@ -1,0 +1,54 @@
+[
+ {
+  "slug": "saptashringi-temple",
+  "official_website": "https://ssndtonline.org/",
+  "description": null,
+  "timings_official": "As shown on the trust site (Oct 2026, undated): Kakad Aarti 5:30 AM; Panchamrit Mahapooja 7:00 to 9:00 AM; Mahanaivedya Aarti 12:00 noon; Sanj Aarti 7:00 PM. General darshan hours are not listed on the home page.",
+  "sources": [
+   {
+    "url": "https://ssndtonline.org/",
+    "what_it_supports": "Trust name (Shree Saptashrung Niwasini Devi Trust), address, phone, aarti schedule, bhaktniwas, live darshan and online services"
+   }
+  ],
+  "notes": "Confirmed official: the site names the trust, its address at Saptashrung Gad (Kalwan, Nashik) and its office phone and email. No registration number is shown. Its online pooja booking and vastra donation links were placeholders, and a leftover COVID pop-up is on the page. The site lists a live darshan page, general and VIP darshan passes, bhaktniwas and a Navratri section; details are on pages my tool did not read."
+ },
+ {
+  "slug": "shamlaji-temple",
+  "official_website": "https://www.shreeshamlajivishnutemple.org/",
+  "description": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.shreeshamlajivishnutemple.org/",
+    "what_it_supports": "Owner named as Shree Shamlaji Vishnu Mandir Trust, Shamlaji (Reg. No. A/22/Aravalli); temple on the Meshvo river; also called Dholi Dhajawala for its white flag"
+   }
+  ],
+  "notes": "Confirmed official: the footer names Shree Shamlaji Vishnu Mandir Trust with a registration number. The home page lists no darshan timings or contact details (a Darshan Timings page exists but was not readable). It mentions a gaushala, Shyamal Van, silver coins of 5, 10 and 20 grams sold at the temple, and an online donation form. The site gives the temple's name as Dholi Dhajawala (white-flag temple); this could be added to the description later."
+ },
+ {
+  "slug": "mehandipur-balaji-temple",
+  "official_website": "https://shribalajimehandipur.org/",
+  "description": null,
+  "timings_official": "As shown on the site (undated): morning aarti 6:00 to 6:40; morning darshan 7:00 to 11:00; rajbhog 11:30 to 12:00; afternoon darshan 12:00 to 6:50; evening aarti 6:00 to 6:40 PM; temple closes 9:00 PM. Monday, Wednesday and Friday: darshan closed 4:00 to 6:00 PM for the special shringar. The site says timings may change by order of the management.",
+  "sources": [
+   {
+    "url": "https://shribalajimehandipur.org/",
+    "what_it_supports": "Shri Ghata Mehandipur Balaji Mandir Trust named in footer and meta description as official; address, timings, how to reach, trust history"
+   }
+  ],
+  "notes": "Declared official by the site (trust name in the footer and meta description); no registration number shown. The listed times overlap (afternoon darshan to 6:50 while the evening aarti is at 6:00), so confirm with the trust before using them. The site gives road access on NH 11, about 103 km from Jaipur, Bandikui Junction about 35 km and Jaipur airport about 115 km. It says free lunch packets are given to devotees and that the trust runs a hospital and schools. Rules on dress, photography and mobiles are not stated."
+ },
+ {
+  "slug": "jejuri-khandoba-temple",
+  "official_website": "https://www.khandoba.com/",
+  "description": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.khandoba.com/",
+    "what_it_supports": "Website of the Jejuri temple, as supplied by the portal owner"
+   }
+  ],
+  "notes": "Supplied by you as the temple's website (a live darshan page on khandoba.com). My research tool could not open this site and a web search did not confirm who runs it, so I could not check it myself. Please open it once and make sure it is Shree Martand Dev Sansthan's own site before applying."
+ }
+]
