@@ -299,6 +299,7 @@ export default function AdminDashboard() {
               <a href="/admin/kuldevi" style={{ fontSize:13, fontWeight:700, color:C.ink, textDecoration:'none', border:'1px solid #ddd', borderRadius:100, padding:'6px 14px', background:'white' }}>Kuldevi submissions</a>
               <a href="/admin/kuldevi-verified" style={{ fontSize:13, fontWeight:700, color:C.ink, textDecoration:'none', border:'1px solid #ddd', borderRadius:100, padding:'6px 14px', background:'white' }}>Verified kuldevi links</a>
               <a href="/admin/temple-import" style={{ fontSize:13, fontWeight:700, color:C.ink, textDecoration:'none', border:'1px solid #ddd', borderRadius:100, padding:'6px 14px', background:'white' }}>Import temples</a>
+              <a href="/admin/temple-batches" style={{ fontSize:13, fontWeight:700, color:C.ink, textDecoration:'none', border:'1px solid #ddd', borderRadius:100, padding:'6px 14px', background:'white' }}>Temple batches</a>
               <a href="/api/admin/temple-gaps" style={{ fontSize:13, fontWeight:700, color:C.ink, textDecoration:'none', border:'1px solid #ddd', borderRadius:100, padding:'6px 14px', background:'white' }}>Download temple gaps (CSV)</a>
               <a href="/admin/users" style={{ fontSize:13, fontWeight:700, color:C.ink, textDecoration:'none', border:'1px solid #ddd', borderRadius:100, padding:'6px 14px', background:'white' }}>User accounts check</a>
               {tab!=='group_yatra' && tab!=='announcement' && (

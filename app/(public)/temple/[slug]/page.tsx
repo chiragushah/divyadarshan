@@ -207,6 +207,12 @@ export default async function TemplePage({ params }: Props) {
             <p className="text-base leading-relaxed mb-4" style={{ color:'var(--muted)' }}>
               {t.extended_description || t.description}
             </p>
+            {t.description_sources?.length > 0 && (
+              <p className="text-xs mb-4" style={{ color:'var(--muted2)' }}>
+                Sources:{' '}
+                {t.description_sources.map((u: string, i: number) => { let h = u; try { h = new URL(u).hostname.replace(/^www\./, '') } catch {} ; return <span key={u}>{i > 0 && ' · '}<a href={u} target="_blank" rel="noopener noreferrer" style={{ textDecoration:'underline' }}>{h}</a></span> })}
+              </p>
+            )}
 
             <div className="flex items-center justify-between mb-6">
               <ReportButton templeSlug={t.slug} templeName={t.name} />

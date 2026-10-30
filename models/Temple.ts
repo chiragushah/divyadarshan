@@ -68,6 +68,9 @@ export interface ITemple extends Document {
   image_credit?: string
   image_credit_url?: string
   enriched_at?: Date
+  description_sources?: string[]
+  description_batch?: string
+  description_verified_at?: Date
   enrich_status?: string
   rating_avg: number
   rating_count: number
@@ -139,6 +142,9 @@ const TempleSchema = new Schema<ITemple>(
     image_credit:         { type: String },
     image_credit_url:     { type: String },
     enriched_at:          { type: Date },
+    description_sources:  { type: [String], default: undefined },
+    description_batch:    { type: String },
+    description_verified_at: { type: Date },
     enrich_status:        { type: String },
     rating_avg:           { type: Number, default: 0 },
     rating_count:         { type: Number, default: 0 },
