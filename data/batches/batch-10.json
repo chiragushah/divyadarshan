@@ -1,0 +1,1341 @@
+[
+ {
+  "slug": "achaleshwar-mahadev-temple",
+  "official_website": null,
+  "description": "Achaleshwar Mahadev Temple lies just outside Achalgarh fort in Abu Road tehsil, Sirohi district, a few kilometres from Mount Abu. It is dedicated to Shiva as Achaleshwar, 'the immovable lord'. Instead of a conventional carved image, the sanctum has a natural stone form; local tradition holds that the shrine was built around the toe or footprint of Shiva, and a hollow beneath it is said never to fill with water. According to Wikipedia, the temple is believed to date from the 9th century and to be Paramara work, with the nearby fort renamed Achalgarh by Maharana Kumbha in 1452. Near the temple a four-tonne Nandi cast in panchadhatu, five metals, bears an inscription dated 1407; popular legend says the Nandi guards the temple from invaders, and that hidden bees have saved it on several occasions. Visitors also see quartz idols, a pond with three stone buffalo figures, and a large Champa tree. Maha Shivaratri is the principal festival.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Achaleshwar_Mahadev_Temple",
+    "what_it_supports": "Location, Sirohi district, 9th-century Paramara attribution, Kumbha 1452, Nandi 1407, toe/footprint tradition, three buffalo statues"
+   },
+   {
+    "url": "https://www.thedivineindia.com/amp/5997.html",
+    "what_it_supports": "Commercial site: Maha Shivaratri as main festival, Champa tree, toe worship, water-never-fills crater tradition, bees legend"
+   }
+  ],
+  "notes": "No official temple/trust website found (search returned only Wikipedia, travel and aggregator sites) so official_website null. Timings (5am-7pm on thedivineindia) are not official so null. Wikipedia says 'footprint', thedivineindia says 'thumb/toe'; description says 'toe or footprint' attributed to local tradition. 'Few kilometres from Mount Abu' is general knowledge not stated in fetched sources (Abu Road station given as ~35.6 km by thedivineindia is a different point); reviewer may check the Mount Abu distance (commonly ~11 km) before keeping it. No coordinates in sources.",
+  "new_temple": {
+   "name": "Achaleshwar Mahadev Temple",
+   "city": "Achalgarh (near Mount Abu)",
+   "district": "Sirohi",
+   "state": "Rajasthan",
+   "deity": "Shiva (Achaleshwar Mahadev)",
+   "type": "Shaiva",
+   "lat": null,
+   "lng": null
+  }
+ },
+ {
+  "slug": "adhar-devi-temple-mount-abu",
+  "official_website": null,
+  "description": "Adhar Devi Temple, also called Arbuda Devi Temple, is a cave shrine in the hills just outside the town of Mount Abu, about 3 km from the main bus station. It is dedicated to Goddess Durga in her form as Arbuda Devi, the goddess associated with the Arbuda (Abu) hills. Reaching it involves climbing a flight of 365 steps cut into the rock. The sanctum sits inside a natural cleft, and devotees must stoop or crawl through a narrow passage to enter, with the interior lit by lamps. Local belief says the name 'Adhar' refers to the goddess's lip, which is said to have fallen here, and that her image appears suspended in mid-air. These accounts are traditional and no founding date or builder is given in the sources consulted. The temple is busiest during the nine days of Navratri. Nearby is Doodh Baori, a well regarded locally as sacred.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.incredibleindia.gov.in/en/rajasthan/mount-abu/adhar-devi-temple",
+    "what_it_supports": "Government tourism page: cave, Durga, 365 steps, narrow crevice, lamp-lit sanctum"
+   },
+   {
+    "url": "https://ecoheritage.cpreec.org/?p=7513",
+    "what_it_supports": "CPREEC: ~3 km from Mount Abu town, Arbuda Devi, lip legend, mid-air image belief, Navratri crowds"
+   },
+   {
+    "url": "https://www.trawell.in/rajasthan/mount-abu/arbuda-devi-temple-adhar-devi-temple",
+    "what_it_supports": "Travel site: 3 km from bus station, 365 stairs, Doodh Baori, Navratri; no history given"
+   }
+  ],
+  "notes": "Wikipedia page blocked by allowlist. No official trust website found; official_website null. Sirohi district is not stated in the fetched pages (Mount Abu is in Sirohi district per general knowledge and the Achaleshwar Wikipedia page) - reviewer to confirm. No founding history available in any source; description deliberately makes no dating claim. 'Arbuda hills presiding goddess' is a light inference from the name Arbuda; reviewer may soften. Timings 5AM-8PM appear only on a travel site so null. The lip legend: sources say 'lower lip' (CPREEC) vs 'Adhar of Durga' (trawell); kept as 'lip'. Not claimed as a Shakti Peeth. No coordinates in sources.",
+  "new_temple": {
+   "name": "Adhar Devi (Arbuda Devi) Temple",
+   "city": "Mount Abu",
+   "district": "Sirohi",
+   "state": "Rajasthan",
+   "deity": "Arbuda Devi (Durga)",
+   "type": "Shakta",
+   "lat": null,
+   "lng": null
+  }
+ },
+ {
+  "slug": "ajanta-caves",
+  "official_website": null,
+  "description": "The Ajanta Caves are rock-cut Buddhist monuments carved into the wall of a horseshoe-shaped gorge of the Waghur river in Chhatrapati Sambhajinagar (formerly Aurangabad) district. The site has about thirty caves (originally numbered 1 to 29, with a few more identified later), a mix of viharas, or monasteries, and chaitya-grihas, or prayer halls. Wikipedia reports that work began in the 2nd century BCE and continued to about 480 CE, with an earlier phase linked to Satavahana-era patronage and a later Mahayana phase producing the most elaborate caves. Scholars disagree on the dates of the second phase; Walter Spink argues it mostly fell in 460 to 480 CE under the Vakataka king Harishena. The walls and ceilings carry paintings and sculpture that depict the Buddha and the Jataka tales of his past lives. A British officer, John Smith, drew wider attention to the caves in 1819, though local people already knew them. UNESCO inscribed Ajanta as a World Heritage Site in 1983, and the Archaeological Survey of India maintains it.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Ajanta_Caves",
+    "what_it_supports": "Location, 36 identifiable foundations, dating and Spink debate, Jataka paintings, John Smith 1819, UNESCO 1983 ref 242, ASI role, coordinates 20.55333N 75.70028E"
+   },
+   {
+    "url": "https://www.asiaurangabadcircle.com/about.html",
+    "what_it_supports": "ASI Aurangabad Circle lists Ajanta (and Ellora) among the World Heritage monuments it maintains"
+   }
+  ],
+  "notes": "Wikipedia fetched OK. Cave count: Wikipedia says 36 identifiable foundations with original numbering 1-29, so the description says 'about thirty caves'; check wording. District is now officially Chhatrapati Sambhajinagar (Aurangabad renamed); Wikipedia and ASI page still use Aurangabad. Cave sits near Ajanta village / Sillod-Jalgaon border; confirm tehsil if needed. This is a protected ASI monument, not an actively managed temple trust, so official_website is null (ASI/UNESCO/tourism pages are excluded by rules). Timings/ticketing are ASI-run (closed Mondays is commonly stated but NOT verified here), so null. UNESCO page itself was not fetched; the 1983 inscription is from Wikipedia only. Fine to treat as a heritage entry rather than a puja temple.",
+  "new_temple": {
+   "name": "Ajanta Caves",
+   "city": "Ajanta",
+   "district": "Chhatrapati Sambhajinagar",
+   "state": "Maharashtra",
+   "deity": "Buddha (Buddhist monastic and worship caves; Jataka narratives)",
+   "type": "Buddhist",
+   "lat": 20.55333,
+   "lng": 75.70028
+  }
+ },
+ {
+  "slug": "ashapura-mata-temple-mata-no-madh",
+  "official_website": null,
+  "description": "Mata no Madh is a village in Lakhpat taluka of Kutch district, about 105 km from Bhuj according to Wikipedia, and is the seat of the Ashapura Mata temple. The goddess is regarded as the family deity of the former Jadeja rulers of Kutch and is described on the Kachchh district administration's tourism page as the patron deity of Kachchh. According to Wikipedia, the temple was built in the 14th century by two Karad Vania men, Ajo and Anagor, and the 1819 earthquake damaged it and it was rebuilt in 1823; the 2001 earthquake caused further damage, which was later repaired. The main image is a red-painted stone figure about six feet high, reported to have come from Marwar. The shrine has a passage for walking around the deity. Large crowds gather during the Chaitra and Ashvin Navaratri festivals, with Ashvin considered the more important. A second Ashapura shrine on a nearby hill and a cave shrine at Jagora hill are also mentioned in the area.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Mata_no_Madh",
+    "what_it_supports": "location, 105 km from Bhuj, coordinates 23.54N 68.94E, 14th-c. construction, 1819/1823/2001 events, image, Navaratri, nearby shrines"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ashapura_Mata",
+    "what_it_supports": "Ashapura Mata as kuldevi of Jadejas; Kutch temple renovated c.1300 AD by Karad Vanias"
+   },
+   {
+    "url": "https://kachchh.nic.in/tourist-place/mata-na-madh",
+    "what_it_supports": "Lakhpat taluka, Kachchh; kuldevi of former Jadeja rulers and patron deity of Kachchh (district govt page)"
+   }
+  ],
+  "notes": "No official trust website found or verified (searches returned only Wikipedia, utsav.gov.in, kachchh.nic.in, travel/aggregator sites); official_website null. Timings not taken (only third-party sites such as yatradham carry them). Wikipedia says 105 km from Bhuj; its Ashapura Mata article says about 80 km north of Bhuj - distances conflict, 105 km used. Wikipedia says no formal trust (Bhuvas/Kapadis/Chauhan priests) - a reviewer may check current management. Lat/lng are village coordinates from Wikipedia infobox, not the shrine itself. Wikipedia text on 1762 bell legend and 1743 hill temple deliberately omitted as less certain.",
+  "new_temple": {
+   "name": "Ashapura Mata Temple, Mata no Madh",
+   "city": "Mata no Madh",
+   "district": "Kutch (Kachchh)",
+   "state": "Gujarat",
+   "deity": "Ashapura Mata",
+   "type": "Shakta",
+   "lat": 23.54,
+   "lng": 68.94
+  }
+ },
+ {
+  "slug": "aundha-nagnath-temple",
+  "official_website": null,
+  "description": "Aundha Nagnath is a Shiva temple in the village of Aundha Nagnath in Hingoli district, in Maharashtra's Marathwada region. According to Wikipedia, the base, outer walls and sanctum belong to the Yadava period and use the Hemadpanti method of fitted stone without mortar, while the upper portion and spire were rebuilt later, probably in the 18th century. The sanctum lies below ground level and is reached by steps, and the Nandi pavilion stands behind the temple rather than in front. Wikipedia also states that the Archaeological Survey of India protects it as a monument of national importance. Devotees revere Nagnath as one of the twelve Jyotirlingas, a status also linked to the Nageshwar shrine in Gujarat. Local tradition credits the Pandavas with the first temple, and the renovation is commonly attributed to Ahilyabai Holkar. Festivals include Mahashivratri with a chariot procession, and Shravan Mondays, when pilgrims carry holy water on foot.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Aundha_Nagnath_Temple",
+    "what_it_supports": "Location, Hemadpanti base, later rebuild, below-ground sanctum, Nandi pavilion, ASI status, Pandava tradition, Ahilyabai, festivals, coordinates"
+   },
+   {
+    "url": "https://marathwadatourism.com/en/?p=1995",
+    "what_it_supports": "Hingoli district location, 13th-century Seuna/Yadava attribution, Mahabharata-era tradition, repair by Ahilyabai Holkar, below-ground linga"
+   }
+  ],
+  "notes": "Wikipedia fetched directly. Marathwada Tourism is a tourism portal (second source, not independent of tradition claims). No official trust website found in searches; official_website null. Timings null. Jyotirlinga status is traditional and shared with other claimants (Nageshwar); phrased as devotee belief. Dating of the present upper structure (18th c.) is 'likely' per Wikipedia; reviewer may want ASI confirmation.",
+  "new_temple": {
+   "name": "Aundha Nagnath Temple",
+   "city": "Aundha Nagnath",
+   "district": "Hingoli",
+   "state": "Maharashtra",
+   "deity": "Shiva (Nagnath)",
+   "type": "Shaiva",
+   "lat": 19.537087,
+   "lng": 77.041508
+  }
+ },
+ {
+  "slug": "baroli-temples",
+  "official_website": null,
+  "description": "The Baroli (Badoli) temple complex lies near Rawatbhata in Chittorgarh district, close to the Chambal river and about 45 km southeast of Kota. It is a group of early medieval stone temples, usually dated to the 10th century and attributed to the Pratihara period, though some sources give the 10th to 11th centuries. Wikipedia counts eight temples within a walled enclosure and a ninth roughly a kilometre away, dedicated to forms of Shiva, Durga, Vishnu and Ganesha. The Ghateshwara Mahadeva temple is the largest and best preserved, with a finely carved tower, a lotus-patterned ceiling in the sanctum, a Nandi before the shrine and five lingas; its name is linked to one resembling an inverted pot. Other shrines are partly ruined. The Archaeological Survey of India lists eight of the temples as a monument of national significance. The complex is set among peepal, mango and jamun trees.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Baroli_Temples",
+    "what_it_supports": "Location, coordinates 24 57 29 N 75 35 37 E, deities, 10th century Gurjara-Pratihara, Ghateshwara features, ASI control"
+   },
+   {
+    "url": "https://www.wikiwand.com/en/articles/Badoli_Temples",
+    "what_it_supports": "Eight temples plus ninth 1 km away, setting among peepal/mango/jamun trees, condition"
+   },
+   {
+    "url": "https://exhibits.jioinstitute.edu.in/spotlight/baroli-group-of-temples",
+    "what_it_supports": "ASI list: monument of national significance, Jodhpur Circle, 10th-11th century, Ghateshwar Nandi and rangamandapa"
+   }
+  ],
+  "notes": "en.wikipedia.org Baroli page was blocked on the first fetch and succeeded on a retry; Wikiwand mirror gives consistent content. Temple count is inconsistent across sources (8 vs 9; Wikipedia itself says both); description follows the 8-plus-1 wording. Coordinates converted from Wikipedia DMS 24 57 29 N, 75 35 37 E. No official website (ASI/state pages do not qualify). Timings null. Active-worship status not verified. Jio Institute page quotes ASI listing (Jodhpur Circle).",
+  "new_temple": {
+   "name": "Baroli Temples (Badoli)",
+   "city": "Baroli (Rawatbhata)",
+   "district": "Chittorgarh",
+   "state": "Rajasthan",
+   "deity": "Shiva (Ghateshwara Mahadeva is the principal shrine); also Durga, Vishnu, Ganesha, Trimurti",
+   "type": "Shaiva",
+   "lat": 24.9581,
+   "lng": 75.5936
+  }
+ },
+ {
+  "slug": "bet-dwarka-temple",
+  "official_website": null,
+  "description": "Bet Dwarka, also written Beyt Dwarka, is an inhabited island at the mouth of the Gulf of Kutch in Devbhumi Dwarka district, about 2 km across the water from Okha and roughly 25 km from Dwarka town. It is a Krishna pilgrimage centre. According to Wikipedia, the island's two main shrines are the Dwarkadhish Temple and the Shri Keshavraiji Temple, and its temples date from around the end of the 18th century. Gujarat Tourism credits the founding of the principal temple to Vallabhacharya and records the belief that Krishna stayed here, reading the name as 'bet', meaning gift. Another source describes Keshavraiji as the ishtdev (chosen deity) of the Pushkarna community. Wikipedia also notes that underwater and onshore finds point to settlement from the Late Harappan period onward. Pilgrims cross by ferry from Okha, and since February 2024 the Sudarshan Setu sea bridge has linked the island to the mainland.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Bet_Dwarka",
+    "what_it_supports": "Location, coordinates (22°26'58\"N 69°7'2\"E), two main Krishna temples, late-18th-century dating of island temples, archaeology, ferry and Sudarshan Setu bridge (inaugurated Feb 2024)"
+   },
+   {
+    "url": "https://gujarattourism.com/saurashtra/devbhoomi-dwarka/bet-dwarka.html",
+    "what_it_supports": "Vallabhacharya attribution, Krishna residence belief, meaning of 'bet', access via Okha; lists visiting hours 7:30-12 and 4:30-18:00 (not official temple timings)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Shri_Keshavraiji_Temple,_Bet_Dwarka",
+    "what_it_supports": "Keshavraiji as Krishna and ishtdev of Pushkarna community; Pushkarna-built; registers about 250 years old"
+   }
+  ],
+  "notes": "Entry is the island temple complex, not a single shrine. No official temple/committee website found in search; none verified, so official_website null. Timings only seen on Gujarat Tourism (govt tourism page), so timings_official null. Sources conflict/are vague on dating: Wikipedia says island temples built around end of 18th century with no builder named; Gujarat Tourism credits Vallabhacharya (16th c. tradition) with founding; Keshavraiji page says registers ~250 yrs old and calls it ancient. Description attributes each. Gujarat Tourism calls Sudarshan Setu 'longest cable bridge'; Wikipedia says sea bridge ~2 km; I avoided superlatives. Coordinates from Wikipedia infobox. All three pages were fetched successfully.",
+  "new_temple": {
+   "name": "Bet Dwarka Temple (Beyt Dwarka)",
+   "city": "Bet Dwarka (Beyt Dwarka island, near Okha)",
+   "district": "Devbhumi Dwarka",
+   "state": "Gujarat",
+   "deity": "Krishna (Keshavraiji / Dwarkadhish)",
+   "type": "Vaishnava",
+   "lat": 22.45194,
+   "lng": 69.09583
+  }
+ },
+ {
+  "slug": "bhadrakali-temple-ahmedabad",
+  "official_website": null,
+  "description": "Bhadrakali Temple stands within the Bhadra Fort precinct in the old walled city of Ahmedabad, in the Manek Chowk area. Its goddess, Bhadrakali, is honoured as a guardian of the city; Wikipedia describes the black four-armed image as a form of Lakshmi. Accounts of the temple's origin differ. The Ahmedabad Municipal Corporation's city website links it with King Karnadev of the Solanki dynasty, founder of Karnavati. Wikipedia instead says the shrine occupies a room in the north wing of the Azam Khan Sarai, built in 1637, and was converted during Maratha rule. Gujarat Tourism says Bhadra Fort, raised by Ahmad Shah I in 1411, took its name from the temple, while a plaque cited by Wikipedia ties the name to a Rajput citadel at Anhilwada-Patan. Navratri draws large numbers of visitors, with Garba and Raas. A newspaper reported that the temple trust organised a procession of the goddess's footprints on Ahmedabad's 614th foundation anniversary.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Bhadra_Fort",
+    "what_it_supports": "Fort coordinates, 1411 construction, Azam Khan Sarai 1637, temple as converted room under Maratha rule, black four-armed image, name origin accounts"
+   },
+   {
+    "url": "https://gujarattourism.com/central-zone/ahmedabad/bhadra-fort.html",
+    "what_it_supports": "Fort named after nearby Bhadrakali temple; a Kali temple is within the fort"
+   },
+   {
+    "url": "https://ahmedabadcity.gov.in/StaticPage/bhadrakali_temple",
+    "what_it_supports": "Link to King Karnadev/Solanki dynasty, guardian deity of the city, Navratri crowds, Garba/Raas"
+   },
+   {
+    "url": "https://english.gujaratsamachar.com/news/gujarat/ahmedabads-historic-first-bhadrakali-procession-on-foundation-day-after-614-years",
+    "what_it_supports": "Bhadrakali Temple Trust organised first Nagar Yatra on 614th foundation anniversary; temple records credit Karnadev"
+   }
+  ],
+  "notes": "Origin accounts conflict (Karnadev/Solanki per AMC and temple records quoted by Gujarat Samachar; Maratha-era conversion of a room per Wikipedia); description states both neutrally. Wikipedia, which gave the Maratha-era claim, supplies no year. A site bhadrakalimaa.com was named as the temple's official site in a 2016 hindupad.com article, but the fetch was blocked by the allowlist and it could not be verified (and hindupad mentions a 'temple board', not a trust), so official_website null; reviewer should check it manually. A 'Bhadrakali Temple Trust' exists per Gujarat Samachar and DeshGujarat. Coordinates are those of Bhadra Fort (Wikipedia), within which the temple sits; AMC page says Manek Chowk on the Sabarmati bank, slightly different framing. Wikipedia mentions a Siddique Kotwal legend and a lamp tradition, omitted as unverified folklore. Gujarat Tourism visiting hours 8am-6pm refer to the fort, not the temple; timings null. News about a court case on priest income share and the trust's requests to AMC exists (deshgujarat) but was not used.",
+  "new_temple": {
+   "name": "Bhadrakali Temple, Ahmedabad",
+   "city": "Ahmedabad",
+   "district": "Ahmedabad",
+   "state": "Gujarat",
+   "deity": "Bhadrakali",
+   "type": "Shakta",
+   "lat": 23.02361,
+   "lng": 72.58111
+  }
+ },
+ {
+  "slug": "bhadreshwar-jain-temple",
+  "official_website": null,
+  "description": "Bhadreshwar, in Mundra taluka of Kutch, is a Shvetambar Jain pilgrimage site, also called Vasai Jain Tirth. According to Wikipedia, the main shrine holds three white marble images: Ajitanatha, dated 1565 CE, flanked by Shantinatha and a seven-hooded Parshvanatha, both dated 1175 CE. The complex follows the plan of the Dilwara temples at Mount Abu, with a main shrine of about 15 by 26 metres ringed by 52 subsidiary shrines. Tradition recorded in the nineteenth-century Bantvijaya chronicles places its origins in 516 BCE, though Gujarat Tourism calls such early dates unreliable and unverified. Wikipedia reports that the merchant Jagdusha extensively renovated it in the thirteenth century. Earthquakes damaged it repeatedly, most severely in January 2001, after which it was rebuilt. The temple is administered by the Seth Vardhaman Kalyanji Trust.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Bhadreshwar_Jain_Temple",
+    "what_it_supports": "Location, coordinates (22°54'42.1\"N 69°54'14\"E), Shvetambar, images and dates, Dilwara-style plan, 52 shrines, Bantvijaya chronicle 516 BCE, Jagdusha 13th c., earthquakes incl. 2001, Seth Vardhaman Kalyanji Trust"
+   },
+   {
+    "url": "https://gujarattourism.com/kutch-zone/kutch/bhadreshwar.html",
+    "what_it_supports": "516 BC founding described as unreliable; oral account of first temple 45 years after Mahavir; 52 shrines; white marble; sunrise-sunset visiting (tourism page)"
+   }
+  ],
+  "notes": "CONFLICTS: founding dates - Wikipedia 516 BCE (Bantvijaya), another page (rannutsav.com, commercial) says 449 BC; Gujarat Tourism calls 516 BC unreliable. Description attributes and hedges. Main deity: Wikipedia says Ajitanatha; Gujarat Tourism says a shrine reputedly holds original Parshvanath idol; Wikipedia says Parshvanatha installed by Kapil Kevali Muni (tradition). Complex also includes late-12th-century mosques (Gujarat Tourism/Wikipedia); omitted from description for length - reviewer may add. Official website: the Seth Vardhaman Kalyanji Trust is named but no trust-run site found/verified; anandjikalyanji pedhi (Anandji Kalyanji Trust) appeared in search but was not opened and is a separate entity; official_website null. Timings null. Trust name taken from Wikipedia only (single source).",
+  "new_temple": {
+   "name": "Bhadreshwar Jain Temple (Vasai Jain Tirth)",
+   "city": "Bhadreshwar (Bhadresar)",
+   "district": "Kutch",
+   "state": "Gujarat",
+   "deity": "Ajitanatha (main image); Parshvanatha traditionally associated",
+   "type": "Jain",
+   "lat": 22.911694,
+   "lng": 69.903889
+  }
+ },
+ {
+  "slug": "bhavnath-mahadev-temple-junagadh",
+  "official_website": null,
+  "description": "Bhavnath Mahadev Temple stands at the foot of Mount Girnar on the edge of Junagadh, close to Girnar Taleti, where the climb up the hill begins, and near Damodar Kund. Shiva is worshipped here as Bhavnath, and local tradition holds that the linga appeared on its own. According to the account summarised on Wikipedia, a garment of Shiva and Parvati is said to have fallen at Mrigi Kund while they travelled over the Girnar hills, which is why the pond is held sacred. The temple is best known for the five-day Bhavnath fair, also called the Girnar Mahashivratri Mela, held in the month of Magha (February to March) and reaching its peak at midnight on Maha Shivratri. Naga sadhus of the Dashanami tradition arrive in procession, often on elephants, and bathe in Mrigi Kund before worship. In 2025 the Junagadh district administration took over management of the temple after the tenure of its mahant ended.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.wikiwand.com/en/articles/Bhavnath",
+    "what_it_supports": "Wikipedia mirror: location at Girnar foot, self-manifested linga, Mrigi Kund legend, five-day Magha fair, Naga sadhus"
+   },
+   {
+    "url": "https://gujarattourism.com/fair-and-festival/mahashivratri-mela.html",
+    "what_it_supports": "Gujarat Tourism: near Damodar Kund, Girnar Taleti; swayambhu linga tradition; Mrigi Kund bathing; midnight mahapuja"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/festivals-and-events/gujarat/shivratri-bhavnath-fair",
+    "what_it_supports": "five-day fair ending on Maha Shivratri; Naga sadhus on elephants; Mrugikund"
+   },
+   {
+    "url": "https://deshgujarat.com/2025/08/01/junagadh-administration-takes-over-bhavnath-temple-management/",
+    "what_it_supports": "Aug 2025 administration takeover after mahant's tenure expired; trust manages properties"
+   }
+  ],
+  "notes": "Official website null: search surfaced a news item (Daily Excelsior) saying a Deputy CM launched a Bhavnath Temple website, but the article could not be fetched/URL not seen, and management is now with the district administration (a government page would not qualify). Reviewer should locate that site and decide. en.wikipedia.org/wiki/Bhavnath direct fetch was blocked by allowlist; the wikiwand mirror was used. No coordinates in any fetched source, so lat/lng null. Timings not taken. The Incredible India page contains an evident error ('7 meters' parikrama) - not used. Gujarat Tourism gives 2026 fair as 11-15 Feb; fair dates vary yearly so none stated.",
+  "new_temple": {
+   "name": "Bhavnath Mahadev Temple, Junagadh",
+   "city": "Junagadh",
+   "district": "Junagadh",
+   "state": "Gujarat",
+   "deity": "Shiva (Bhavnath Mahadev)",
+   "type": "Shaiva",
+   "lat": null,
+   "lng": null
+  }
+ },
+ {
+  "slug": "birla-mandir-jaipur",
+  "official_website": null,
+  "description": "Birla Mandir, also known as the Lakshmi Narayan Temple, stands on raised ground at the foot of Moti Dungri hill in the Tilak Nagar area of Jaipur. It is dedicated to Vishnu as Narayan and his consort Lakshmi, with a shrine to Ganesha also noted. The B. M. Birla Foundation built it, and it was completed in 1988. It is built entirely of white marble in a modern style, topped by three domes, and the images of Lakshmi and Narayan are described as carved from a single block. Its paintings and carvings show Hindu deities and mythological scenes alongside philosophers, saints and historical figures. The temple is set within gardens and is lit up in the evening, which makes it a prominent landmark below the hill.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://cavac.at/cavacopedia/Birla%20Mandir%2C%20Jaipur",
+    "what_it_supports": "Tilak Nagar, Moti Dungari, deities, B.M. Birla Foundation, construction 1977, opened 22 Feb 1988, white marble, three towers, floodlighting (mirror of Wikipedia text)"
+   },
+   {
+    "url": "https://ipfs.ssi.eecc.de/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Birla_Mandir%2C_Jaipur.html",
+    "what_it_supports": "Three domes, stained glass, Lakshmi-Narayan from single marble piece, multi-faith figures, gardens, 1988, foot of Moti Dungari"
+   }
+  ],
+  "notes": "en.wikipedia.org page itself blocked; both sources are Wikipedia mirrors (not independent of each other). Mirror 1 says 'three towers', mirror 2 says 'three domes'; description uses 'three domes'. Mirror 2 says built by Birla Group; mirror 1 says B.M. Birla Foundation; description uses the Foundation. No ASI/trust source found; no official site identified. No coordinates retrieved. Spelling Moti Dungari/Dungri varies.",
+  "new_temple": {
+   "name": "Birla Mandir (Lakshmi Narayan Temple)",
+   "city": "Jaipur",
+   "district": "Jaipur",
+   "state": "Rajasthan",
+   "deity": "Lakshmi Narayan (Vishnu and Lakshmi)",
+   "type": "Vaishnava",
+   "lat": null,
+   "lng": null
+  }
+ },
+ {
+  "slug": "charbhuja-temple-garhbor",
+  "official_website": null,
+  "description": "Charbhuja Temple is in Garhbor village, Kumbhalgarh tehsil, Rajsamand district, roughly 112 km from Udaipur according to Wikipedia. Its deity is Charbhuja Nath, the four-armed form of Vishnu; the image is described as 85 cm tall and holding a conch, discus, mace and lotus. Wikipedia reportedly dates the completion of the temple to 1444 AD, though the article is thinly sourced. The Incredible India tourism page gives no date but relays a legend that a devotee named Gang Dev, guided by a dream, found the idol in a river, and that the image is said to have been worshipped by the Pandavas; it adds that the idol was hidden in water during turbulent periods. A tall shikhara rises over the sanctum, and a stone elephant stands on each side of the entrance. Festivals listed by Wikipedia include Jal Jhulni, Fagotsav, Janmashtami and Annakut.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Charbhuja",
+    "what_it_supports": "Location, tehsil, distances, coordinates (approximate), 1444 AD, 85 cm four-armed image, architecture, festivals"
+   },
+   {
+    "url": "https://incredibleindia.gov.in/en/rajasthan/udaipur/charbhuja-temple",
+    "what_it_supports": "Vishnu deity, Gang Dev dream legend, Pandava tradition, idol submerged for safety; no date"
+   }
+  ],
+  "notes": "Wikipedia is weak here (flagged for rewrite, 'citation needed'; calls builder 'Bharat Pandiya' which I did not repeat; infobox says Vishnu while body says Krishna). Coordinates are Wikipedia's rounded 25.2667,73.6833. Incredible India lists the temple under Udaipur but places it in Rajsamand district; district set to Rajsamand per Wikipedia. No official website found; none confirmed. Timings null.",
+  "new_temple": {
+   "name": "Charbhuja Temple, Garhbor",
+   "city": "Garhbor",
+   "district": "Rajsamand",
+   "state": "Rajasthan",
+   "deity": "Charbhuja Nath (four-armed Vishnu)",
+   "type": "Vaishnava",
+   "lat": null,
+   "lng": null
+  }
+ },
+ {
+  "slug": "dwarkadhish-temple-kankroli",
+  "official_website": null,
+  "description": "Dwarkadhish Temple stands on the southern bank of Rajsamand Lake at Kankroli, Rajsamand district. It belongs to the Pushtimarg tradition founded by Vallabhacharya, and its presiding deity, Krishna as Dwarkadhish, is counted among the tradition's seven swaroops. Accounts say the image was originally at Gokul and was moved to Ahmedabad in the Mughal period before being brought to Mewar and installed first at the village of Asotiya. After Rajsamand Lake was built, that shrine was flooded, and higher ground was granted for the present temple. Sources disagree on dates: Wikipedia gives 1671 for the invitation to Mewar and 1676 as the completion year, while a heritage-portal account gives 1726 for installation at Asotiya and about 1776 for the new site. The haveli-style building overlooks the lake. Festival days noted by a heritage portal include Poonam (full moon) days, Holi, Diwali, Ram Navami, Janmashtami and Akshaya Tritiya.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Dwarkadhish_Kankroli",
+    "what_it_supports": "Location, Pushtimarg, seven swaroops, Mewar/haveli style, 1671/1676, Asotiya, lake flooding, new site, Gosain priests"
+   },
+   {
+    "url": "https://ecoheritage.cpreec.org/?p=6149",
+    "what_it_supports": "Hill beside lake, 1726 and c.1776 dates, haveli style, festivals, third peeth of Pushtimarg"
+   }
+  ],
+  "notes": "Dates conflict between the two sources (1671/1676 vs 1726/c.1776) and the patron differs (Maharana Raj Singh in Wikipedia vs 'Maharana Ranjitsinhji' in cpreec); description states dates neutrally and omits the patron. No official trust site found; Wikipedia lists a shrinathjihelpline.com page which is a third-party helpline, not trust-run, so website null. Coordinates not given by sources. Timings null. Only two sources (one Wikipedia, one heritage portal); a Devasthan Department/ASI source would strengthen.",
+  "new_temple": {
+   "name": "Dwarkadhish Temple, Kankroli",
+   "city": "Kankroli",
+   "district": "Rajsamand",
+   "state": "Rajasthan",
+   "deity": "Krishna as Dwarkadhish",
+   "type": "Vaishnava",
+   "lat": null,
+   "lng": null
+  }
+ },
+ {
+  "slug": "eklingji-temple",
+  "official_website": null,
+  "description": "Eklingji is a Shiva temple complex at Kailashpuri in Girwa tehsil, Udaipur district, about 20 km north of Udaipur city and near Nagda, the former capital of Mewar. The deity is regarded as the kuladevata of Mewar's ruling house, and the Maharanas are traditionally described as acting on the god's behalf as his regent or dewan. The form is often described as Harihara. The 15th-century Ekalinga Mahatmya credits Bappa Rawal with building the first temple in the 8th century, which Live History India calls a legend. Wikipedia says that temple was destroyed during sultanate invasions and the shrine was rebuilt several times. Sources mention renovation by Hamir, Mokal and Rana Kumbha, and the last major rebuilding under Rana Raimal (reigned 1473 to 1509). Live History India associates his reign with the present black marble image, whose four faces are explained as Brahma, Vishnu, Surya and Rudra. Wikipedia notes the site likely began under the Pashupata sect. It is described as a private shrine of the Mewar family, though the public may pray there.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Eklingji",
+    "what_it_supports": "Location, Harihara form, kuladevata, Ekalinga Mahatmya, Bappa Rawal 8th c., destruction, Hamir, Kumbha, Raimal, Pashupata/Nath/Ramanandi custody"
+   },
+   {
+    "url": "https://livehistoryindia.com/story/monuments/shri-eklingji-the-maharanas-in-the-service-of-god",
+    "what_it_supports": "20 km north of Udaipur, Bappa Rawal as legend, Mokal renovation, Raimal black marble image with four faces, Maharanas as custodians, private shrine of Mewar family"
+   }
+  ],
+  "notes": "No official website verified: temple is a private Mewar family shrine and searches surfaced only third-party and travel sites; official_website null, timings null (many third-party timings exist but are not official). Wikipedia gave no coordinates, so lat/lng null. Sources conflict on who did what: Wikipedia says Kumbha rebuilt and Raimal funded the last rebuilding and installed the present idol; Live History India says Mokal renovated and Raimal replaced the lingakar form with the black marble image; description lists renovators without assigning exclusive credit. Live History India calls the idol 'five-faced' but lists four faces plus a central lingam; description says four faces. Wikipedia's infobox shows '108' temples with no explanation; not used. Neither source mentions Lakulisha (often linked to Eklingji elsewhere), so not claimed. Wikipedia does not mention the Mewar head's present role; not stated.",
+  "new_temple": {
+   "name": "Eklingji Temple",
+   "city": "Kailashpuri (near Nagda)",
+   "district": "Udaipur",
+   "state": "Rajasthan",
+   "deity": "Eklingji (Shiva, Harihara form)",
+   "type": "Shaiva",
+   "lat": 24.7413,
+   "lng": 73.7221
+  }
+ },
+ {
+  "slug": "gajanan-maharaj-temple-shegaon",
+  "official_website": "https://www.gajananmaharaj.org/",
+  "description": "Shri Gajanan Maharaj Sansthan in Shegaon, Buldhana district, Maharashtra, is the trust that looks after the samadhi temple of the saint Gajanan Maharaj. Wikipedia records that he first appeared in Shegaon, probably on 23 February 1878, and lived there until he entered samadhi on 8 September 1910; his origins are uncertain. The Sansthan states that it was formed on 12 September 1908 with twelve trustees, and that the samadhi temple was built of black stone brought from Wadegaon in Balapur and later renovated in marble. It lists rules in force since the first trustees' meetings, including separate entrances for women and men and a limit on how long visitors may stay. Each year the Shree Punyatithi Utsav marks the samadhi anniversary on Rishi Panchami, with a procession of palkhi, elephant, horse and warkari dindis through the town.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gajanan_Maharaj",
+    "what_it_supports": "Life dates, Shegaon, Buldhana district, sansthan formation 1908"
+   },
+   {
+    "url": "https://www.gajananmaharaj.org/sgmsenglish/aboutsanstha.htm",
+    "what_it_supports": "Sansthan formation, black stone from Wadegaon, marble renovation, rules"
+   },
+   {
+    "url": "https://www.gajananmaharaj.org/sgmsenglish/punyatithi.htm",
+    "what_it_supports": "Punyatithi Utsav, 8 Sept 1910, procession"
+   }
+  ],
+  "notes": "official_website set to gajananmaharaj.org: the About page is written in the trust's own voice and names 'Shree Gajanan Maharaj Sansthan, Shegaon', but the fetch tool returned no footer/copyright text and the homepage fetch was blocked by the allowlist, so footer-level confirmation is missing; reviewer should check the footer. The About page is internally inconsistent on 1908 vs 1909 for the first meeting; description uses 1908 (matches Wikipedia). Timings: only festival-day kirtan times appeared, no regular darshan timings, so timings_official null. Coordinates not given by Wikipedia; null. Miracle claims deliberately omitted. Typed Other (saint samadhi tradition). Maharashtra Tourism page for Shegaon was too thin to use.",
+  "new_temple": {
+   "name": "Shri Gajanan Maharaj Sansthan, Shegaon",
+   "city": "Shegaon",
+   "district": "Buldhana",
+   "state": "Maharashtra",
+   "deity": "Sant Gajanan Maharaj (samadhi shrine)",
+   "type": "Other",
+   "lat": null,
+   "lng": null
+  }
+ },
+ {
+  "slug": "ganpatipule-temple",
+  "official_website": "https://ganpatipule.co.in",
+  "description": "Ganpatipule is a small coastal village on the Konkan shore of Ratnagiri district, roughly 25 to 30 km from Ratnagiri town. Its temple is dedicated to Ganesha, worshipped here as a swayambhu, or self-manifested, image that faces west toward the Arabian Sea; the temple trust describes him as the Western Sentinel deity and counts the site among the Ashta Dwar Devata. According to local tradition, a Brahmin named Balbhatji Bhide, who rented the village, fasted and worshipped in the forest and was shown the image in a vision; a cowherd then saw a cow's milk flowing over the spot, and clearing it revealed the idol. Wikipedia describes the idol as about 400 years old and records a folk explanation of the name Ganpatipule. The trust's own history page dates the shrine to the Peshwa era. Magh Chaturthi and Gauri Ganpati are among the major festivals, and the beach beside the temple is part of the visit.",
+  "timings_official": "Darshan: 5:00 am to 9:00 pm. Aarti: 5:00 am, 12:00 pm and 7:00 pm. Sankashti Chaturthi palanquin procession: 4:00 pm. (As listed on ganpatipule.co.in.)",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Ganpatipule",
+    "what_it_supports": "Town in Ratnagiri district, west-facing swayambhu idol, ~400-year-old claim, folklore on the name, festivals, coordinates 17.1448N 73.2666E"
+   },
+   {
+    "url": "https://ganpatipule.co.in/Eng/History",
+    "what_it_supports": "Trust's own history: Peshwa-era dating, Bhide legend, cow/milk legend, Paschim Dwar-Devata, Ashta Dwar Devata; timings; footer 'Sansthan Shreedev Ganpatipule'"
+   },
+   {
+    "url": "https://utsav.gov.in/view-darshan/sansthan-shreedev-ganpatipule",
+    "what_it_supports": "Independent restatement of temple location in Ratnagiri district, nearest station about 30 km (government cultural portal, repeats trust text)"
+   }
+  ],
+  "notes": "Official site ganpatipule.co.in confirmed by footer 'Copyright 2016 Sansthan Shreedev Ganpatipule' (trust name). No injected instructions seen, but meta keywords are stuffed and there are typos and a stray 'Pandanus Odoratissimus' fragment; some nav links are placeholders; reviewer should eyeball the page. Official history page has an internal inconsistency ('about 1600 years before' the Mughal period) and Mudgal Purana claim is unsourced, so description attributes these to the trust or omits them; the 'Peshwa era' vs 'Mughal period' legend also differ. Timings were read via a summarising fetch, so re-check on the live page before display. utsav.gov.in appears to copy the trust text, so it is not fully independent. Coordinates are for the village (Wikipedia), not the shrine.",
+  "new_temple": {
+   "name": "Ganpatipule Temple (Swayambhu Ganesh)",
+   "city": "Ganpatipule",
+   "district": "Ratnagiri",
+   "state": "Maharashtra",
+   "deity": "Ganesha (Swayambhu Ganpati, west-facing)",
+   "type": "Ganapatya",
+   "lat": 17.1448,
+   "lng": 73.2666
+  }
+ },
+ {
+  "slug": "gondeshwar-temple-sinnar",
+  "official_website": null,
+  "description": "Gondeshwar Temple stands in Sinnar, a town in Nashik district roughly 30 km southeast of Nashik city on the Nashik-Pune highway. It is a Shiva temple in the Bhumija style, built of basalt and generally dated to the 11th or 12th century under the Seuna (Yadava) dynasty. Local tradition credits a chief named Rav Govinda with commissioning it, though Wikipedia notes that a suggested link to the feudatory Govinda-raja lacks historical evidence. The complex follows a panchayatana plan: a central Shiva shrine with a large linga, surrounded by four smaller shrines to Surya, Vishnu, Parvati and Ganesha, all set on a rectangular platform of about 125 by 95 feet. The main shrine has a Nagara-style tower whose finial has been lost, and a mandapa with porches on three sides. Exterior walls carry scenes from the Ramayana. Wikipedia names Maha Shivratri as the main festival.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gondeshwar_Temple,_Sinnar",
+    "what_it_supports": "Location, coordinates 19 51 05N 74 00 07E, dynasty, date, Bhumija, panchayatana, shrines, dimensions, Ramayana scenes, Shivratri, ASI as governing body"
+   },
+   {
+    "url": "https://nashik.com/?p=305",
+    "what_it_supports": "About 30 km southeast of Nashik on Nashik-Pune highway; Shaiva panchayatan; black basalt"
+   }
+  ],
+  "notes": "Wikipedia lists ASI as governing body (infobox); not independently confirmed from an ASI page, so protection status is not stated in the description. Nashik.com gives a conflicting 12th-13th century date and says one part was built under Adilshahi rule; the Yadava attribution (Wikipedia) is used and nashik.com's Adilshahi claim is not repeated. Nashik.com also calls the style Hemadpanthi. Coordinates 19.8514,74.0019 are the Wikipedia infobox DMS converted. No official trust website found; website null; timings null. Only two sources, one a local portal, so a second authoritative source (ASI/Maharashtra archaeology dept) would strengthen this.",
+  "new_temple": {
+   "name": "Gondeshwar Temple",
+   "city": "Sinnar",
+   "district": "Nashik",
+   "state": "Maharashtra",
+   "deity": "Shiva (with subsidiary shrines to Surya, Vishnu, Parvati, Ganesha)",
+   "type": "Shaiva",
+   "lat": 19.8514,
+   "lng": 74.0019
+  }
+ },
+ {
+  "slug": "gopnath-mahadev-temple",
+  "official_website": null,
+  "description": "Gopnath Mahadev Temple is a Shiva shrine on the Gulf of Khambhat coast in Talaja taluka of Bhavnagar district, about 22 km from Talaja and some 75 km from Bhavnagar city. The adjoining Gopnath Beach takes its name from the temple. Wikipedia describes the temple as nearly 700 years old, although it gives no source for this figure, so the age should be treated as traditional. The temple is closely linked with the Gujarati poet-saint Narsinh Mehta, who was born in nearby Talaja. According to Wikipedia's article on him, he fasted and meditated for seven days beside a secluded Shiva linga at Gopnath, where Shiva is said to have shown him Krishna and the gopis in the raslila at Vrindavan. Two flags are reported at the site, associated with the Shiva temple and a Vishnu temple, and the beach article also mentions a fort of the Gohil rulers.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gopnath_Beach",
+    "what_it_supports": "Talaja taluka, Bhavnagar district; 75 km from Bhavnagar, 22 km from Talaja; temple 'nearly 700 years' (unsourced); two flags; fort of Gohilvad"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Narsinh_Mehta",
+    "what_it_supports": "born Talaja; fasted 7 days at Shiva linga at Gopnath Mahadev Mandir; vision of Krishna and gopis"
+   },
+   {
+    "url": "https://curlytales.com/dedicated-to-gopnath-shiva-this-700-yo-temple-in-gujarat-lends-its-name-to-the-adjacent-beach/amp",
+    "what_it_supports": "travel/media: ~700 years; Maitraka claim from a visitor; 22 km from Talaja"
+   }
+  ],
+  "notes": "Weak sourcing: temple facts rest on Wikipedia (beach article, age tagged unsourced) plus travel media; no ASI/state or trust page found. pravase.co.in fetch failed (account suspended) so it is listed but not relied on. Official website null, none found. No coordinates in fetched sources so lat/lng null. Timings not taken. Wikipedia does not explicitly say the Narsinh Mehta episode took place in Talaja taluka's Gopnath; it names 'Gopnath mahadev Mandir' - identification with this temple is by Wikipedia's naming. Tradition of Narsinh Mehta is attributed in text. Reviewer should check whether a separate Gopnath temple trust site exists.",
+  "new_temple": {
+   "name": "Gopnath Mahadev Temple",
+   "city": "Gopnath",
+   "district": "Bhavnagar",
+   "state": "Gujarat",
+   "deity": "Shiva (Gopnath Mahadev)",
+   "type": "Shaiva",
+   "lat": null,
+   "lng": null
+  }
+ },
+ {
+  "slug": "govind-dev-ji-temple-jaipur",
+  "official_website": null,
+  "description": "Govind Dev Ji Temple lies within the City Palace complex in Jaipur and is dedicated to Krishna as Govind Dev, together with Radha. According to Wikipedia, the image is counted among the seven principal Goswami deities of Vrindavan, and tradition holds that it was made by Bajranabh, Krishna's great-grandson. Rupa Goswami is said to have rediscovered it and built a temple in Vrindavan around 1535. After Vrindavan was attacked in 1670 the icons were moved, first to Kaman, and the journey to Jaipur took many years. Maharaja Sawai Jai Singh II laid out the Kanak Vrindavan garden in 1713, and the deity was installed at Surya Mahal in 1727. A popular account says the deity appeared to the king in a dream and asked to be brought to Jaipur. The temple has a large Satsang Hall with a 119-foot single-span concrete roof. Crowds gather especially at Janmashtami.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Govind_Dev_Ji_Temple",
+    "what_it_supports": "City Palace location, Radha-Krishna, Bajranabh tradition, Rupa Goswami c.1535, 1670 attack, Kaman, 1713 Kanak Vrindavan, 1727 installation, Satsang Hall 119 ft, coordinates"
+   },
+   {
+    "url": "https://prod.incredibleindia.gov.in/content/incredible-india-v2/en/destinations/jaipur/govind-devji-temple.html",
+    "what_it_supports": "City Palace complex, Radha-Krishna, dream legend of Jai Singh II, Janmashtami crowds"
+   }
+  ],
+  "notes": "Incredible India page says Raja Man Singh took over construction in 1890 after Jai Singh's death; this conflicts with/does not match Wikipedia's 18th-century establishment by Jai Singh II and was left out. Wikipedia lists mandirshrigovinddevjijaipur.org as website but it could not be fetched (allowlist); official_website null. Coordinates from Wikipedia infobox. Wikipedia says Jai Singh II 'established' the temple; I cited 1727 installation at Surya Mahal (Wikipedia spelling 'Surya Mahala'). Guinness claim omitted as unverified.",
+  "new_temple": {
+   "name": "Govind Dev Ji Temple",
+   "city": "Jaipur",
+   "district": "Jaipur",
+   "state": "Rajasthan",
+   "deity": "Radha-Govind Dev (Krishna)",
+   "type": "Vaishnava",
+   "lat": 26.9288302,
+   "lng": 75.8239547
+  }
+ },
+ {
+  "slug": "harihareshwar-temple",
+  "official_website": null,
+  "description": "Harihareshwar is a coastal town in Shrivardhan taluka of Raigad district, sometimes called Dakshin Kashi and Dev-ghar, the house of God. Its Shiva temple, dedicated to Harihareshwar, houses a Shiva linga, and visitors are expected to see the smaller Kalbhairav temple first. The Maharashtra Tourism Development Corporation describes the temple as medieval, states that Chhatrapati Shivaji Maharaj visited in 1674 and that Peshwa Bajirao I renovated it in 1723 after a fire, and names four surrounding hills: Harshinachal, Harihar, Pushpadri and Brahmadri. Wikipedia notes that the pradakshina path around the temple runs along the seashore and advises against using it at high tide. According to Wikipedia, Yashawant Balawant Nagle, a sardar serving the Queen of Janjira, donated much of his property toward temple management and began the Kalbhairav Jayanti festival.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Harihareshwar",
+    "what_it_supports": "Raigad district, Shrivardhan taluka, Dakshin Kashi, Kalbhairav first, seashore pradakshina, Nagle donation and Kalbhairav Jayanti, coordinates 17.995N 73.025E"
+   },
+   {
+    "url": "https://mtdc.co/en/explore-maharashtra/heritage-destinations/harihareshwar-temple",
+    "what_it_supports": "Medieval, Shivaji visit 1674, Peshwa Bajirao I renovation 1723, four hills, Pradakshina Marg"
+   }
+  ],
+  "notes": "Peshwa renovation (1723) and Shivaji visit (1674) come only from MTDC (state tourism body); Wikipedia does not mention them, so they are attributed to MTDC in the text. MTDC says a Pradakshina Marg was built by Chandrarao More (not used). Coordinates are Wikipedia's for the town/temple area. No official devasthan website found; website null; timings null.",
+  "new_temple": {
+   "name": "Harihareshwar Temple",
+   "city": "Harihareshwar",
+   "district": "Raigad",
+   "state": "Maharashtra",
+   "deity": "Shiva (Harihareshwar); Kalbhairav shrine adjoining",
+   "type": "Shaiva",
+   "lat": 17.995,
+   "lng": 73.025
+  }
+ },
+ {
+  "slug": "jagannath-temple-ahmedabad",
+  "official_website": "https://jagannathjiahd.org/",
+  "description": "Shree Jagannathji Mandir stands at Jamalpur Darwaja in Ahmedabad and is dedicated to Jagannath, with Balarama and Subhadra. According to the temple's own history page, the site was once forest beside the Sabarmati where the ascetic Hanumandasji installed an image of Maruti. His successor Sarangdasji is said to have received a vision after visiting Puri, instructing him to install Jagannath, Baldevji and Subhadraji, and the shrine became a Jagannath temple. The history page places the site's origins about 460 years ago. The same page describes a gaushala and a renovation of the complex between 1996 and 2000. The temple is best known for Ahmedabad's Rath Yatra, which it says Mahant Narsinhdasji began in 1878 and which is held on Ashadha Shukla Dwitiya. The procession, preceded by a ritual route-cleaning by the Gujarat Chief Minister, covers about 14 km and is celebrated as a public festival of Gujarat.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://jagannathjiahd.org/history/",
+    "what_it_supports": "temple's own history: Hanumandasji, Sarangdasji, Puri vision, mahants, gaushala/sadavrat, 1996-2000 renovation; footer 'Copyrights @ Shree Jagannathji Mandir'"
+   },
+   {
+    "url": "https://jagannathjiahd.org/rath-yatra/",
+    "what_it_supports": "Rath Yatra started 1878 by Mahant Narsinhdasji; Ashadha Shukla Dwitiya; Pahindvidhi by CM; address Jamalpur Darwaja, Ahmedabad 380022"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Rath_Yatra_(Ahmedabad)",
+    "what_it_supports": "Rath Yatra since 1878, ~14 km procession, Pahind Vidhi, Lokotsav"
+   },
+   {
+    "url": "https://ipfs.aleph.im/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Jagannath_Temple%2C_Ahmedabad.html",
+    "what_it_supports": "Wikipedia mirror: Jamalpur locality; established by Sarangdasji about 450 years ago"
+   }
+  ],
+  "notes": "Website jagannathjiahd.org: footer reads 'Copyrights @ Shree Jagannathji Mandir | All Rights Reserved', designed by 8webcom.com; no trust name stated, no spam seen on history page (homepage fetch blocked by allowlist, so homepage not checked for injected text). Official history says ~460 years, Wikipedia says ~450 years - description cites Wikipedia's figure only. Official site says Hanumandasji founded Maruti shrine; Wikipedia silent. Timings: official Daily Darshan page not fetched, so timings_official null. No coordinates in sources so null. Wikipedia mirror (not live page) used for temple article.",
+  "new_temple": {
+   "name": "Jagannath Temple, Jamalpur, Ahmedabad",
+   "city": "Ahmedabad",
+   "district": "Ahmedabad",
+   "state": "Gujarat",
+   "deity": "Jagannath (with Balarama and Subhadra)",
+   "type": "Vaishnava",
+   "lat": null,
+   "lng": null
+  }
+ },
+ {
+  "slug": "jagdish-temple-udaipur",
+  "official_website": null,
+  "description": "Jagdish Temple stands in the old city of Udaipur, a short walk from the City Palace. It is dedicated to Vishnu, worshipped here as Jagdish, also called Jagannath Rai or Lakshmi Narayan, and the sanctum holds a four-armed black stone image. Maharana Jagat Singh I of Mewar is credited with building it, with completion usually dated to 1651 (a site information board gives 1652). The temple is described as Maru-Gurjara in style and stands on a raised platform. A flight of 32 marble steps, with stone elephants at the entrance, leads up to the shrine, where a brass Garuda stands facing the sanctum. The main spire, reported at about 79 feet, is decorated with sculpted dancers, horsemen, elephants and musicians, and the halls have carved pillars and painted walls. Four smaller shrines around the main one are dedicated to Ganesha, Surya, Shakti and Shiva. It remains an active centre of Vaishnava worship in the heart of Udaipur.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.rajasthantourplanner.com/Udaipur-Tour-Planner/About-Udaipur/Jagdish-Temple-Udaipur.html",
+    "what_it_supports": "Builder Jagat Singh, 1651, Vishnu/Laxmi Narayan, black stone four-armed image, three storeys, 79 ft spire, Garuda, four subsidiary shrines, near City Palace Bara Pol"
+   },
+   {
+    "url": "https://www.bhaktibharat.com/amp/en/mandir/jagdish-mandir",
+    "what_it_supports": "Builder Jagat Singh I, 1651, Indo-Aryan style, three storeys, elephants/dancers/horse riders on staircase, 79 ft spire, Old City location"
+   }
+  ],
+  "notes": "Wikipedia page could not be fetched (allowlist). Both sources are commercial/devotional aggregators, not ASI or trust sources; reviewer should confirm 1651 and builder against Wikipedia/ASI. Rajasthantourplanner says it is 'within the City Palace complex' while also giving 150 m from Bara Pol; description says 'a short walk from' to stay safe. Idol described as Jagannath by bhaktibharat vs Vishnu/Laxmi Narayan by the other; description lists both names. Sources mention a folk belief and Mughal damage without citation; both omitted. Official site could not be fetched (not on session allowlist), so ownership could not be confirmed; official_website left null. Timings left null.",
+  "new_temple": {
+   "name": "Jagdish Temple",
+   "city": "Udaipur",
+   "district": "Udaipur",
+   "state": "Rajasthan",
+   "deity": "Vishnu as Jagdish (Jagannath Rai / Lakshmi Narayan)",
+   "type": "Vaishnava",
+   "lat": 24.5798,
+   "lng": 73.6839
+  }
+ },
+ {
+  "slug": "jyotiba-temple-wadi-ratnagiri",
+  "official_website": null,
+  "description": "Jyotiba Temple stands on a hill near Wadi Ratnagiri in Kolhapur district, Maharashtra, roughly 18 to 20 km from Kolhapur and at an altitude of about 3,100 feet. It is dedicated to Jyotiba, also called Kedareshwar, shown with four arms and regarded in local tradition as a combined form of Brahma, Vishnu and Shiva. Wikipedia places him in the Nath sampradaya and credits him with defeating the demons Ratnasur and Raktabhoj. According to the sources consulted, the present Jyotiba temple was built by Ranoji Shinde in 1730 on the site of an earlier Kedareshwar shrine, with a second Kedareshwar temple added by Daulatrao Shinde in 1808 and a Ramling temple around 1780 by Malji Nilam Panhalkar. Sundays are dedicated to Jyotiba. The largest gathering is the fair on Chaitra Poornima, when devotees scatter pink gulal over the hill, and a second fair follows in Vaishakha.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Jyotiba_Temple",
+    "what_it_supports": "Location, altitude, four-armed idol, Nath sampradaya, demons, shrine builders and dates, fairs (read via an IPFS Wikipedia mirror, ipfs.ssi.eecc.de, because en.wikipedia.org/wiki/Jyotiba_Temple was not on the allowlist)"
+   },
+   {
+    "url": "https://trawell.in/maharashtra/kolhapur/jyotiba-temple",
+    "what_it_supports": "Same construction dates, Kedareshwar name, Chaitra and Vaishakh yatras"
+   },
+   {
+    "url": "https://maharashtratourism.gov.in/festivals/jyotiba-jatra/",
+    "what_it_supports": "Location near Wadi Ratnagiri, deity described as a manifestation of Shiva, jatra exists"
+   }
+  ],
+  "notes": "Direct Wikipedia URL blocked; used a mirror of the Wikipedia article. Coordinates (16.7, 74.2333 from 16 42'N 74 14'E) are coarse, from that mirror; reviewer should verify. Distance from Kolhapur varies by source (18 vs 20 km). Trawell names Navaji Sayaji/Kedar baba as founder of the original shrine; Wikipedia attributes it traditionally to Navji Saya; left out of the description. Typed Other because the deity is a regional folk/Nath-tradition deity described variously as Shiva manifestation. No official Devasthan site found (the temple is understood to be administered by a state-linked devasthan committee, not verified); official_website null; timings null.",
+  "new_temple": {
+   "name": "Jyotiba Temple, Wadi Ratnagiri",
+   "city": "Wadi Ratnagiri",
+   "district": "Kolhapur",
+   "state": "Maharashtra",
+   "deity": "Jyotiba (Kedareshwar)",
+   "type": "Other",
+   "lat": null,
+   "lng": null
+  }
+ },
+ {
+  "slug": "kaila-devi-temple-karauli",
+  "official_website": null,
+  "description": "Kaila Devi Temple stands in Kailadevi village in Karauli district, on the banks of the Kalisil river amid the Aravalli hills, roughly 23 km from Karauli town. The presiding goddess, Kaila Devi, is worshipped as Mahalakshmi and Mahayogini, and the shrine also holds a statue of Chamunda. The temple's own website describes her as Yogmaya and as the presiding deity of the Yaduvanshi rulers. According to Wikipedia, the present marble temple was begun by Maharaja Gopal Singh in 1723 and completed in 1730; its large courtyard has a chequered floor, a Bhairon shrine and a Hanuman shrine called Languriya facing the sanctum. The Chamunda image is said to have been brought from Gagraun fort. The main annual fair is held in Chaitra (March-April) and lasts about a fortnight, and the temple's website also mentions a fair during Ashwin Navratri. The temple site lists a daily morning and evening arti.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://cavac.at/cavacopedia/Kaila%20Devi%20Temple",
+    "what_it_supports": "Wikipedia mirror: location, district, deities, 1723-1730 construction, courtyard layout, Chamunda from Gagraun, Chaitra fair"
+   },
+   {
+    "url": "https://www.kailadevitemple.com/?p=1689",
+    "what_it_supports": "Official site home page: Yogmaya, Yaduvanshi family deity, Chaitra and Ashwin Navratri fairs, arti, footer 'Copyright Shri Kailadevi Temple'"
+   }
+  ],
+  "notes": "en.wikipedia.org page was blocked by allowlist; facts taken from a Wikipedia mirror (cavac.at) - reviewer should confirm against live Wikipedia. Official site: footer reads 'Copyright Shri Kailadevi Temple. All Right Reserved.' and meta calls it the official website, nav has 'About Sansthan'; no trust name stated. No spam or injected text found, but site has typos, duplicated nav and placeholder '#' links. Timings set null on purpose: site text reads '4:00 AM - 8;30 pm All Days' (typo) with Mangla arti 5:00 AM and Sandaya arti 7:30 PM; reviewer may copy after verifying. Site also calls it a Shakti Peetha; not included in description as it is a contested/traditional claim. No coordinates in sources.",
+  "new_temple": {
+   "name": "Kaila Devi Temple",
+   "city": "Kailadevi (near Karauli)",
+   "district": "Karauli",
+   "state": "Rajasthan",
+   "deity": "Kaila Devi (worshipped as Mahalakshmi / Mahayogini; Chamunda also enshrined)",
+   "type": "Shakta",
+   "lat": 26.335083,
+   "lng": 76.893806
+  }
+ },
+ {
+  "slug": "kalaram-mandir-nashik",
+  "official_website": null,
+  "description": "Kalaram Mandir stands in Panchavati, the part of Nashik on the Godavari that tradition associates with the forest stay of Rama, Sita and Lakshmana during their exile. The name means Black Rama, after the dark stone image worshipped in the sanctum, where Sita and Lakshmana are also enshrined; a black Hanuman image stands at the entrance. Accounts credit Sardar Rangarao Odhekar with building the present temple in the late 18th century, one source giving 1788. Local folklore says he dreamed of a dark Rama figure lying in the Godavari and recovered it from the river. Wikipedia notes that an older shrine may have existed earlier and that the idol's claimed great age is unverified. The complex is built of dark stone and is known for its pillared halls. Ramnavami, Dasara and Chaitra Padwa are celebrated here, and in 1930 the temple became the focus of B. R. Ambedkar's Kalaram Temple Entry Satyagraha for Dalit access.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kalaram_Temple",
+    "what_it_supports": "Location, deity, Odhekar rebuilding c.1700s, dream legend, caveat on unverified idol age, festivals, 1930 satyagraha, coordinates 20.00694N 73.795E"
+   },
+   {
+    "url": "https://www.apnisanskriti.com/kalaram-temple-panchavati-nasik-maharashtra",
+    "what_it_supports": "Odhekar built it in 1788, dark stone, Panchavati/exile tradition, festivals (Dasara, Ramnavami, Chaitra Padwa)"
+   }
+  ],
+  "notes": "Wikipedia fetched OK. Sources conflict on details: Wikipedia says 'around the 1700s', 84 pillars; apnisanskriti says 1788, ~96 pillars; so description avoids pillar count and says 'late 18th century'. Wikipedia mentions possible Rashtrakuta-era original, flagged as estimate. Official site NOT found: search returned no Kalaram Sansthan site; tourism.nmc.gov.in is municipal (also blocked by robots) so not used. Apnisanskriti is an aggregator (weak source). Coordinates from Wikipedia infobox. Timings null.",
+  "new_temple": {
+   "name": "Kalaram Mandir",
+   "city": "Nashik (Panchavati)",
+   "district": "Nashik",
+   "state": "Maharashtra",
+   "deity": "Shri Rama (black stone idol, with Sita and Lakshmana)",
+   "type": "Vaishnava",
+   "lat": 20.00694,
+   "lng": 73.795
+  }
+ },
+ {
+  "slug": "kalo-dungar-dattatreya-temple",
+  "official_website": null,
+  "description": "Kalo Dungar, the Black Hill, rises to 462 m and is described by Wikipedia and Gujarat Tourism as the highest point in Kutch. It lies in the Khavda area, roughly 83 to 97 km north of Bhuj, depending on the source. A temple of about 400 years' age, dedicated to Dattatreya, stands on the hill. According to local tradition, Dattatreya met starving jackals here and offered his own body to feed them, and it renewed itself as they ate. A second tradition names a holy man, Lakkh Guru, who fed the hill's jackals. Accounts say the temple's priests prepare cooked rice as prasad, which is set out for jackals after the evening aarti. From the edge of the hill, visitors look across the Great Rann of Kutch. The area is close to the Pakistan border and under army jurisdiction, and Gujarat Tourism states that photography is not allowed. Visitors need their own transport.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kalo_Dungar",
+    "what_it_supports": "Elevation 462 m, coordinates, Khavda/Kutch, 400-year-old Dattatreya temple, jackal and Lakkh Guru legends, evening aarti prasad"
+   },
+   {
+    "url": "https://www.gujarattourism.com/kutch-zone/kutch/kalo-dungar.html",
+    "what_it_supports": "About 90 km north of Bhuj, Rann views, army jurisdiction, photography not allowed, own transport, jackal legend"
+   },
+   {
+    "url": "https://ecoheritage.cpreec.org/kalo-dungar/",
+    "what_it_supports": "Corroborates 462 m, ~400-year temple, both legends, rice prasad after evening arati (distance given as 97 km from Bhuj)"
+   }
+  ],
+  "notes": "No temple-run website found; official_website null and timings null. Distance to Bhuj conflicts (Wikipedia 97 km and 83 km, Gujarat Tourism ~90 km, cpreec 97 km), so description gives a range. The 400-year age is repeated by all sources but appears to derive from a single tourism text, so treat as traditional. Wikipedia page itself is flagged as needing citations. Coordinates are the hill's (Wikipedia), not necessarily the temple's. Temple management/trust not named by any source. Wikipedia also mentions the 'magnetic hill' claim, judged an optical illusion by a GSDMA/ISR/IIT Kanpur study; omitted from description.",
+  "new_temple": {
+   "name": "Kalo Dungar Dattatreya Temple",
+   "city": "Kalo Dungar (near Khavda)",
+   "district": "Kutch",
+   "state": "Gujarat",
+   "deity": "Dattatreya",
+   "type": "Other",
+   "lat": 23.93417,
+   "lng": 69.81389
+  }
+ },
+ {
+  "slug": "kapaleshwar-temple-nashik",
+  "official_website": null,
+  "description": "Kapaleshwar Temple is a Shiva shrine in Panchavati, on the Godavari in Nashik, close to Ramkund and about two kilometres from the main bus stand according to Tour My India. Deccan Herald describes it as roughly 250 years old. Its best-known feature is that the Nandi bull is not placed before the linga as it is in most Shiva temples. A local legend, as retold by Deccan Herald, holds that Shiva, burdened with the sin of killing a Brahmin after cutting off Brahma's fifth head, found no relief through penance until Nandi advised him to bathe in the Godavari. Shiva is then said to have accepted Nandi as his guru, which is the reason given for Nandi's placement. Tour My India notes the temple is busy on Mondays and looks its most impressive during Shivratri, and Incredible India describes the shrine as decorated with sculptures and carvings in Panchavati, the area traditionally associated with Rama's exile.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.deccanherald.com/content/338903/a-pilgrims-progress-panchavati.html",
+    "what_it_supports": "Approx. 250 years old; Nandi legend; Brahma-hatya"
+   },
+   {
+    "url": "https://www.tourmyindia.com/states/maharashtra/kapaleshwar-mandir-nashik.html",
+    "what_it_supports": "Near Ramkund, 2 km from bus stand, Mondays and Shivratri, Shiva meditation legend"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/maharashtra/nashik/panchvati",
+    "what_it_supports": "Panchavati on Godavari, Rama's exile tradition, Kapaleshwar decorated with sculptures"
+   }
+  ],
+  "notes": "Sources conflict on Nandi: Deccan Herald says the Nandi is not placed in front of the linga; Tour My India says there is no Nandi statue at all. Description uses the softer wording 'not placed before the linga'; reviewer should verify on site. 'Only temple in India without Nandi' claims on aggregator sites were deliberately not used. Wikipedia article for this temple was blocked by the allowlist, so no Wikipedia source. Sources are tourism/media only; no ASI or trust source found; weak sourcing overall. No coordinates, official website or timings found; all null.",
+  "new_temple": {
+   "name": "Kapaleshwar Temple",
+   "city": "Nashik (Panchavati)",
+   "district": "Nashik",
+   "state": "Maharashtra",
+   "deity": "Shiva (Kapaleshwar)",
+   "type": "Shaiva",
+   "lat": null,
+   "lng": null
+  }
+ },
+ {
+  "slug": "kayavarohan-temple",
+  "official_website": null,
+  "description": "Kayavarohan, also called Karvan, is a village in Vadodara district about 30 km from Vadodara city. It is known for a Shiva temple dedicated to Lakulisha, whom the Pashupata tradition regards as an incarnation of Shiva. Wikipedia places Lakulisha in the second century CE and calls the village his birthplace. The name is explained as 'descent of the body', linked to the belief that Shiva took form here, and the Shiva Purana is cited as counting the place among its 68 Shiva tirthas. Tradition credits the sage Vishwamitra with installing the lingam, which depicts Shiva as a meditating yogi. The present Brahmeshvara Jyotirshivalinga Temple was consecrated on 3 and 4 May 1974 under Swami Kripalvanandji, with the deity brought from a smaller older shrine, according to the Swami's own website. The temple has carved walls and pillars and an underground meditation cave. Maha Shivratri is the best-known festival, when many men dress as Shiva.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kayavarohan",
+    "what_it_supports": "Location, coordinates, Lakulisha/Pashupata, name meaning, 68 teerthas, Vishwamitra tradition, Maha Shivratri, meditation cave"
+   },
+   {
+    "url": "https://www.apnisanskriti.com/kayavarohan-temple-vadodara-gujarat",
+    "what_it_supports": "Corroborates legend, lingam iconography, present structure completed 1974 by Kripalvanandji, carved walls, cave, Shivratri, ~30 km from Vadodara"
+   },
+   {
+    "url": "https://swamikripalvananda.org/?p=5394",
+    "what_it_supports": "Prana Pratishtha of the new Brahmeshvara Jyotirshivalinga Temple on 3-4 May 1974; Lakulisha moved from a small temple; chairman of Shri Kayavarohan Tirtha Seva Samaj"
+   }
+  ],
+  "notes": "No temple/trust website verified; the Shri Kayavarohan Tirtha Seva Samaj is named as the 1974 organising body, but no site of its own found. swamikripalvananda.org is the Swami's personal site, not the temple's, so not used as official_website. pravase.co.in fetch failed (account suspended). Taluka ambiguity: brief says Karjan; search listings show 'Tal. Dabhoi' for Kayavarohan sites, and Wikipedia gives only the district. District Vadodara is consistent across sources. Dating conflict: Wikipedia says Lakulish and Karvan temples were 'rebuilt and restored' in late 20th century, apnisanskriti says 'completed 1974'; both consistent with 1974 consecration. Second-century and Ramayana-era claims are traditional or unsupported by dated evidence. Wikipedia mentions ASI listing and a museum at Karvan; not verified independently. Highway reference: NH 8 (older) vs NH 48 (current). Coordinates are the village's (Wikipedia). Timings null.",
+  "new_temple": {
+   "name": "Kayavarohan (Lakulisha) Temple",
+   "city": "Kayavarohan (Karvan)",
+   "district": "Vadodara",
+   "state": "Gujarat",
+   "deity": "Lakulisha (Shiva), Brahmeshvara Jyotirshivalinga",
+   "type": "Shaiva",
+   "lat": 22.067,
+   "lng": 73.25
+  }
+ },
+ {
+  "slug": "khatu-shyamji-temple",
+  "official_website": null,
+  "description": "Khatu Shyamji Temple is in the town of Khatu in Sikar district, about 17 km from Reengus railway station. The deity, Khatu Shyam, is identified by devotees with Barbarika, the grandson of Bhima in the Mahabharata. In the traditional account, Barbarika offered his head to Krishna, who blessed him to be worshipped in the Kali age under the name Shyam, and the temple is believed to house that head. Local legend, as reported by Wikipedia, credits a ruler named Roop Singh Chauhan with building the first temple in 1027 CE after a dream led to the image being found at a nearby pond; the present white marble building is in Rajasthani style. The annual Falgun fair, held in February to March, draws very large crowds, and many pilgrims walk the Nishaan Yatra from Reengus carrying flags. A Shyam Mandir Committee is said to oversee temple administration.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Khatu_Shyam_Temple",
+    "what_it_supports": "Sikar district, Barbarika legend, Roop Singh Chauhan 1027 CE legend, marble structure, Falgun Mela, Nishaan Yatra, coordinates 27°21'52\"N 75°24'12\"E"
+   },
+   {
+    "url": "https://utsav.gov.in/view-darshan/shri-shyam-mandir-khatushyamji-1",
+    "what_it_supports": "Barbarika story, Krishna's blessing, Reengus 17 km, Jaipur airport 95 km"
+   },
+   {
+    "url": "https://khatu.org/2023/05/shyam-mandir-committee.html",
+    "what_it_supports": "Existence of Shyam Mandir Committee (independent blog, weak)"
+   }
+  ],
+  "notes": "Wikipedia (fetched) lists https://khatu-shyam.in/ as official site; I could not fetch it, so official_website null. khatu.org is an independent ad-supported blog, not official; committee statement rests only on it (and says committee set up 1986), treat as weak. Wikipedia does not say who built the current structure or when. Lat/lng from Wikipedia infobox. Wikipedia title is 'Khatu Shyam Temple'. Description says 'about 17 km from Reengus' per utsav.gov.in. Heavy crowd claim phrased as 'very large crowds' (Wikipedia says millions; omitted figure as unverified).",
+  "new_temple": {
+   "name": "Khatu Shyamji Temple",
+   "city": "Khatu",
+   "district": "Sikar",
+   "state": "Rajasthan",
+   "deity": "Khatu Shyam (Barbarika, Krishna worshipped as Shyam)",
+   "type": "Vaishnava",
+   "lat": 27.3645,
+   "lng": 75.4033
+  }
+ },
+ {
+  "slug": "kopeshwar-temple-khidrapur",
+  "official_website": null,
+  "description": "Kopeshwar Temple is a Shiva temple in Khidrapur village on the Krishna river, in Kolhapur district, Maharashtra, about 60 km east of Kolhapur city. Wikipedia attributes its construction to the Shilahara king Gandaraditya and dates it to the 11th or 12th century, noting an inscription that records a renovation in 1136 under the Yadava ruler Singhadev; another account suggests construction may have begun earlier under the Chalukyas, so the dating is not settled. The plan has four parts: the open-roofed Swargamandapa with 48 carved pillars, a sabha mandapa, an antechamber and the sanctum. The exterior and interior carry sculptures of deities, dancers and scenes from the epics, and the base is described as a platform of carved elephants. Unusually for a Shiva temple, a Vishnu image known as Dhopeshwar is described alongside the Kopeshwar linga, and there is no Nandi shrine; a local legend connects this to Shiva and Daksha. Many sculptures are damaged, and, according to Live History India, the site is under the care of the Archaeological Survey of India.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kopeshwar_Temple",
+    "what_it_supports": "Location, Gandaraditya, 1136 Yadava inscription, four-part plan, 48 pillars, Dhopeshwar Vishnu idol, no Nandi, coordinates"
+   },
+   {
+    "url": "https://livehistoryindia.com/story/monuments/unearthing-maharashtras-khajuraho-the-temple-of-kopeshwar",
+    "what_it_supports": "Elephant platform, sculpture themes, Nandi legend, damage, ASI custodianship, alternate dating"
+   }
+  ],
+  "notes": "Dating conflict: Wikipedia gives 1109-1178 CE / 11th-12th c. under Shilahara Gandaraditya; Live History India says construction possibly began in the 7th c. under Chalukyas and was completed c. 12th c.; description uses Wikipedia and states 11th or 12th. Wikipedia says 'Vishnu idol', Live History says Vishnu linga; description says 'image'. Distance from Kolhapur given as about 60 km by Live History. ASI custodianship stated by Live History only; reviewer should confirm against ASI Kolhapur/Pune circle list. No official trust site; official_website null. Timings null.",
+  "new_temple": {
+   "name": "Kopeshwar Temple, Khidrapur",
+   "city": "Khidrapur",
+   "district": "Kolhapur",
+   "state": "Maharashtra",
+   "deity": "Shiva (Kopeshwar)",
+   "type": "Shaiva",
+   "lat": 16.615898,
+   "lng": 74.685138
+  }
+ },
+ {
+  "slug": "koteshwar-mahadev-temple",
+  "official_website": null,
+  "description": "Koteshwar is a small village near the mouth of Kori Creek in western Kutch, and its Shiva temple stands close to the sea where the desert meets the coast. Wikipedia says the present fort and temples were built in 1820 (Samvat 1877) by the merchants Sundarji and Jetha Shivji, and that Rao Pragmalji I ordered a silver canopy over the linga in 1863. Local tradition holds that Ravana received a Shiva linga as a boon but dropped it here; as a penalty it multiplied into many identical lingas, and Ravana carried off one, leaving the original, around which the temple rose. Accounts differ on how many lingas appeared, and the name is explained as ten million forms of the deity. Gujarat Tourism describes the site as the westernmost outpost of construction in India, open from sunrise to sunset, and a short distance from Narayan Sarovar.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Koteshwar,_Kutch",
+    "what_it_supports": "Location, coordinates (23.700N 68.533E), 1820 construction, 1863 silver canopy, Ravana legend, name meaning, Hinglaj association"
+   },
+   {
+    "url": "https://gujarattourism.com/kutch-zone/kutch/koteshwar-mahadev-temple.html",
+    "what_it_supports": "Shiva linga deity, Ravana legend with differing counts, westernmost-outpost description, sunrise-to-sunset visiting (tourism page, not official timings), access"
+   }
+  ],
+  "notes": "No temple trust website found; official_website null. Timings only from Gujarat Tourism, so null. Source conflicts: distance to Narayan Sarovar (Wikipedia ~4 km, Gujarat Tourism ~2 km) and distance to Bhuj (178 km vs 154 km) - both omitted from description. Wikipedia mentions Chinese traveller Hiuen-Tsiang as earliest mention but gives no date; omitted. Alauddin Khalji iron-nails story is a local story per Wikipedia; omitted. Several other 'Koteshwar' temples exist (e.g., Koteshwar in Bharuch/Ambaji); this entry is the Kutch one, coordinates confirm Lakhpat taluka coast. Wikipedia text claims linga 'Bhairava of Hinglaj Mata' belief; omitted as uncorroborated.",
+  "new_temple": {
+   "name": "Koteshwar Mahadev Temple",
+   "city": "Koteshwar",
+   "district": "Kutch",
+   "state": "Gujarat",
+   "deity": "Shiva (Koteshwar Mahadev, Kotilingeshwar)",
+   "type": "Shaiva",
+   "lat": 23.7,
+   "lng": 68.533
+  }
+ },
+ {
+  "slug": "mahudi-jain-temple",
+  "official_website": null,
+  "description": "Mahudi, historically Madhupuri, is a Shvetambar Jain pilgrimage centre in Mansa taluka, Gandhinagar district. According to Wikipedia, the temple was established in 1917 CE by the monk Buddhisagarsuri (Gujarat Tourism dates the installation of the Ghantakarna Mahavir image to 1923) on land donated by Vadilal Kalidas Vora, with a founding group of four trustees. The central deity is Padmaprabhu, the sixth Tirthankara, in a 22-inch marble image. A separate shrine honours Ghantakarna Mahavir, regarded in the tradition as a protector deity and shown holding a bow and arrow. Devotees offer sukhdi, a sweet prepared on site; custom requires that it be eaten within the complex area and not carried out. A large bell outside the shrine is climbed by devotees to ring it, and a havan is held at the Ghantakarna shrine each year on Kali Chaudas. Gujarat Tourism notes that the site is believed to be ancient, citing Brahmi inscriptions found in the area.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Mahudi_Jain_Temple",
+    "what_it_supports": "Location (Mansa taluka, Gandhinagar), coordinates (23°29'36\"N 72°47'E), 1917 establishment, Buddhisagarsuri, Vora land donation, trustees, Padmaprabhu 22-inch idol, Ghantakarna shrine, sukhdi rules, Kali Chaudas havan"
+   },
+   {
+    "url": "https://jaintreasures.org.uk/mahudi/",
+    "what_it_supports": "Independent confirmation of 1917, Buddhisagar Suri, Padmaprabhu 22-inch marble image, protector shrine and sukhdi custom"
+   },
+   {
+    "url": "https://gujarattourism.com/central-zone/gandhinagar/mahudi-jain-temple.html",
+    "what_it_supports": "Ancient site and Brahmi inscriptions claim, bell, sukhadi custom; states Ghantakarna idol installed 1923 and lists district as Mehsana"
+   }
+  ],
+  "notes": "CONFLICTS: (1) Establishment 1917 (Wikipedia, Jain Treasures) vs Ghantakarna idol installed 1923 (Gujarat Tourism) - the dates may refer to different events; description uses 1917 per two sources. (2) District: Wikipedia and brief say Gandhinagar (Mansa taluka); Gujarat Tourism text says Mehsana (older district boundary likely) - Gandhinagar used. No official trust website found; mahudijaintirth.blogspot.com is a blog and jainsite/jaintreasures are third-party, so official_website null. Timings null (Gujarat Tourism has empty hours section). Miracle claims on Gujarat Tourism omitted. 'Ancient 2000 years' claim is tourism page's inference, attributed softly.",
+  "new_temple": {
+   "name": "Mahudi Jain Temple (Ghantakarna Mahavir)",
+   "city": "Mahudi (Madhupuri), Mansa taluka",
+   "district": "Gandhinagar",
+   "state": "Gujarat",
+   "deity": "Padmaprabhu (6th Tirthankara); Ghantakarna Mahavir as protector deity",
+   "type": "Jain",
+   "lat": 23.493333,
+   "lng": 72.783333
+  }
+ },
+ {
+  "slug": "muktidham-temple-nashik",
+  "official_website": null,
+  "description": "Muktidham is a marble temple complex at Nashik Road in Nashik, founded in 1971 by the industrialist Jairambhai Dayabhai Chauhan, known as J. D. C. Bytco, who oversaw its construction. According to Wikipedia it is run privately through the Jairambhai Dayabhai Chauhan (Bytco) Charitable Trust. The complex is best known for its replicas of the twelve Jyotirlingas, described as built to the dimensions of the originals and sanctified at their respective pilgrimage centres. A Krishna temple has wall paintings of Krishna's life and the Mahabharata by the painter Raghubir Mulgaonkar, and the walls also carry the eighteen chapters of the Gita. Incredible India lists further shrines to Lakshmi, Hanuman, Durga and Ganesha and calls the white marble structure an example of Rajput architecture. Wikipedia mentions Makrana marble carved by Rajasthani sculptors, and a dharamshala for at least 200 pilgrims is part of the site.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Muktidham",
+    "what_it_supports": "1971 founding, Krishna temple, Jyotirlinga replicas, Mulgaonkar paintings, Gita chapters, Makrana marble, dharamshala"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/J._D._C._Bytco",
+    "what_it_supports": "Founder name, Charitable Trust, managed by his sons"
+   },
+   {
+    "url": "https://incredibleindia.gov.in/en/maharashtra/nashik/muktidham",
+    "what_it_supports": "Other shrines, Rajput architecture description, Nashik Road location"
+   }
+  ],
+  "notes": "No coordinates in sources; null. Incredible India timings (6am-7pm) not from an official temple source, so timings null. Official website not found; a templesofindia.org listing exists under the trust name but is an aggregator, so website null. A Navbharat Live article about a Bytco trust controversy appeared in search results and was NOT read; reviewer should check for any current trust dispute before publication. Type set Other (multi-deity, 20th-century temple).",
+  "new_temple": {
+   "name": "Muktidham Temple",
+   "city": "Nashik Road",
+   "district": "Nashik",
+   "state": "Maharashtra",
+   "deity": "Krishna; replicas of the twelve Jyotirlingas; shrines to Lakshmi, Hanuman, Durga, Ganesha",
+   "type": "Other",
+   "lat": null,
+   "lng": null
+  }
+ },
+ {
+  "slug": "narayan-sarovar-temple",
+  "official_website": null,
+  "description": "Narayan Sarovar is a pilgrimage village on Kori Creek in Lakhpat taluka of Kutch, in far western Gujarat. Hindus count its lake among the five sacred lakes, the Panch Sarovar, and legend links its waters to the Sarasvati River. According to Wikipedia, a walled courtyard holds seven stone temples, led by Trikamrai, a form of Vishnu, whose image in black marble is the principal deity. The others include Lakshminarayan, Adinarayan, Govardhannath, Dwarkanath, Lakshmiji and Kalyanray. Wikipedia dates Trikamrai and Lakshminarayan to 1734, built by Mahakunvar, wife of Rao Deshalji I, and calls Adinarayan much older. The 1819 earthquake damaged the Trikamrai dome, which was later rebuilt. Pilgrims bathe in the lake, and a fair runs from the tenth to fifteenth of Kartik, when funeral rites are performed beside the water. The ancient Koteshwar Mahadev Shiva temple lies a few kilometres away. Bhuj is about 154 km distant.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Narayan_Sarovar",
+    "what_it_supports": "Location, coordinates, Panch Sarovar, seven temples, Trikamrai black marble image, 1734 construction, 1819 earthquake, Kartik fair, Koteshwar about 4 km"
+   },
+   {
+    "url": "https://incredibleindia.gov.in/en/gujarat/kutch/narayan-sarovar",
+    "what_it_supports": "Pilgrimage site on Kori Creek, one of five sacred lakes, Saraswati legend, bathing, November fair"
+   },
+   {
+    "url": "https://www.gujarattourism.com/kutch-zone/kutch/koteshwar-mahadev-temple.html",
+    "what_it_supports": "154 km from Bhuj; Koteshwar nearby (stated as ~2 km)"
+   }
+  ],
+  "notes": "No official trust/committee website found; official_website null, timings null. Slug asked for Narayan Sarovar temple; Koteshwar Mahadev is a separate temple and was only mentioned as nearby (it could merit its own entry). Koteshwar distance conflicts (Wikipedia ~4 km NW, Gujarat Tourism ~2 km), so 'a few kilometres' used. Wikipedia's temple dates (1734, 1828) not independently confirmed by a second source. Incredible India says Koteshwar fair is in February and Narayan Sarovar fair in November; Wikipedia gives Chaitra and Kartik fairs. Wikipedia cites a source that the Mahabharata mentions the lake; not used. Coordinates are the village's (Wikipedia, 23 deg 40'30\"N 68 deg 32'17\"E).",
+  "new_temple": {
+   "name": "Narayan Sarovar Temple (Trikamrai)",
+   "city": "Narayan Sarovar",
+   "district": "Kutch",
+   "state": "Gujarat",
+   "deity": "Trikamrai (Vishnu)",
+   "type": "Vaishnava",
+   "lat": 23.675,
+   "lng": 68.53806
+  }
+ },
+ {
+  "slug": "narsobawadi-datta-mandir",
+  "official_website": null,
+  "description": "Narsobawadi, also called Nrusinhwadi, is a riverside pilgrim town in Kolhapur district, about 45 km from Kolhapur city, where the Krishna and Panchganga rivers meet. The temple is dedicated to Dattatreya and, according to Wikipedia, houses no idol, only two padukas (sacred footwear) linked to Shri Nrusinha Saraswati (1378-1458), regarded in the Dattatreya tradition as an incarnation of the deity. He is believed to have lived here for twelve years, and Kolhapur Tourism notes that the Gurucharitra text calls the place Amarapur. Kolhapur Tourism states that the present temple was built by Adilshah of Vijapur, who granted two villages for its upkeep, while the Incredible India site describes it as a 15th-century temple. Wikipedia lists festivals including Datta Jayanti, Narasimha Jayanti and Dakshin Dwar Sohla, when river water flows through the temple from its north gate to its south gate.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Narsobawadi",
+    "what_it_supports": "Padukas, Nrusinha Saraswati dates, 12-year stay per Guru Charitra, festivals, coordinates 16.69N 74.60E"
+   },
+   {
+    "url": "https://www.kolhapurtourism.org/?p=893",
+    "what_it_supports": "45 km from Kolhapur, confluence, Amarapur, Adilshah built present temple, two villages granted"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/maharashtra/kolhapur/narsobawadi-temple",
+    "what_it_supports": "Kolhapur location, Krishna-Panchganga confluence, 15th-century description"
+   }
+  ],
+  "notes": "Wikipedia infobox says Sangli district but its text places the town in Shirol tehsil, Kolhapur district; Kolhapur Tourism and Incredible India both say Kolhapur, so Kolhapur used (reviewer: confirm). Dating differs: Incredible India says 15th century, Kolhapur Tourism credits Adilshah of Vijapur (Adil Shahi period, later); both attributed, not reconciled. Wikipedia gives no founding date. Coordinates are Wikipedia's approximate town coordinates, not the temple's. Official trust site (Shri Dattatreya Devasthan) not found in search; website null. Incredible India lists timings 5-12 and 15:30-20:00 but it is not an official temple source, so timings null. Wikipedia-direct fetch was initially blocked in one form but the standard article URL worked. Type set Vaishnava as nearest category; Dattatreya is a composite Brahma-Vishnu-Shiva deity (Datta sampradaya).",
+  "new_temple": {
+   "name": "Narsobawadi Dattatreya Temple",
+   "city": "Narsobawadi (Nrusinhwadi)",
+   "district": "Kolhapur",
+   "state": "Maharashtra",
+   "deity": "Dattatreya (worshipped through the padukas of Shri Nrusinha Saraswati)",
+   "type": "Vaishnava",
+   "lat": 16.69,
+   "lng": 74.6
+  }
+ },
+ {
+  "slug": "parli-vaijnath-temple",
+  "official_website": null,
+  "description": "Shri Vaidyanath, also called Vaijnath, is a Shiva temple in the town of Parli Vaijnath in Beed district, Maharashtra. Wikipedia lists it as the fifth of the twelve Jyotirlingas, an identification also claimed for Vaidyanath temples at Deoghar and Baijnath. The building is in the Hemadpanthi style, roughly 75 to 80 feet tall, with a brass-plated door on the east side. Accounts of its age differ: one visitor guide places the original construction in the Yadava period, around the 12th or 13th century, while Wikipedia's infobox credits Ahilyabai Holkar with 18th-century work on the temple. Local tradition links the name Vaidyanath to Shiva as lord of physicians, and tells how a linga given to Ravana became fixed here after it was set on the ground. Mahashivratri is the main festival, and the Vaijnath Devasthan Trust is named by Wikipedia as the governing body.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Shri_Vaijnath_Temple",
+    "what_it_supports": "Location, Hemadpanthi style, height, east door, fifth jyotirlinga, Ahilyabai/18th-century infobox, trust, Mahashivratri, coordinates"
+   },
+   {
+    "url": "https://www.pilgrimagetour.in/blog/history-of-parli-vaijnath-temple",
+    "what_it_supports": "12th-13th century Yadava origin claim, Ravana linga and physician legends"
+   }
+  ],
+  "notes": "Dating conflict: Wikipedia infobox says 18th c./Ahilyabai Holkar but the article text mentions renovation in 1706, which predates Ahilyabai (1725-1795); the pilgrimagetour blog repeats the 1706 date and itself flags it as likely an error. Description therefore avoids 1706. Pilgrimagetour.in is a travel blog, weak source. Maharashtra Tourism page fetched had no usable history. Jyotirlinga listing order (5th) is per Wikipedia; Parli's claim is traditional. No official trust site found; official_website null. Timings null.",
+  "new_temple": {
+   "name": "Parli Vaijnath Temple (Shri Vaidyanath)",
+   "city": "Parli Vaijnath",
+   "district": "Beed",
+   "state": "Maharashtra",
+   "deity": "Shiva (Vaidyanath)",
+   "type": "Shaiva",
+   "lat": 18.84277,
+   "lng": 76.53539
+  }
+ },
+ {
+  "slug": "ramtek-gad-mandir",
+  "official_website": null,
+  "description": "Ramtek Gad Mandir is a group of temples on a hill above the town of Ramtek, about 50 km from Nagpur in Nagpur district. The main shrine is dedicated to Rama and Sita, with a Lakshmana temple in front and smaller shrines to Hanuman and Garuda nearby, all inside a walled, fort-like compound. According to local tradition, the name comes from a vow (tek) taken by Rama, and the hill is tied to his southward journey during exile and to the sage Agastya. Rama's footprints were worshipped here for a long time before the present temple; accounts credit Raghuji Bhonsle of Nagpur with building it in the 18th century after his victory at Deogarh, in Hemadpanthi style; one travel account adds that Yadava-era work stood here earlier. Tradition also holds that the poet Kalidasa composed the Meghaduta in these hills. Ram Navami and Kartik Utsav are among the major occasions observed here.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq.ipfs.4everland.io/wiki/Ramtek.html",
+    "what_it_supports": "Mirror of Wikipedia Ramtek article: Ramtek is in Nagpur district, ~50 km from Nagpur, coordinates 21 24N 79 20E, tradition of Rama's vow, Bhonsle credited with the present temple after Deogarh, Kalidasa tradition"
+   },
+   {
+    "url": "https://inditales.com/ramtek-gadh-mandir-ramayana-nagpur/",
+    "what_it_supports": "Travel-blog detail: Yadava-era origins, 18th-century Bhosle rebuild, Hemadpanthi style, Rama-Sita main shrine, Lakshman, Hanuman and Garuda shrines, Agastya Ashram, Ram Navami and Kartik Utsav"
+   },
+   {
+    "url": "https://maharashtratourism.gov.in/?p=8282",
+    "what_it_supports": "State tourism page confirms a sacred town about 50 km from Nagpur with an ancient Shri Ram temple (text truncated)"
+   },
+   {
+    "url": "https://www.thebridgechronicle.com/news/maharashtra/maharashtra-ramtek-ram-temple-trust-bill",
+    "what_it_supports": "July 2026 news that the Maharashtra assembly passed a bill creating a Shri Ram Mandir Trust (Ramtek) under government supervision; temple property currently managed by a sub-divisional officer"
+   }
+  ],
+  "notes": "Direct en.wikipedia.org fetch was blocked; used a Wikipedia mirror via search (verify against live Wikipedia). Strongest detail on the fort-temple (Yadava-era origin, Bhonsle build) comes from a single travel blog, inditales.com, so those claims are weakly sourced; the Wikipedia mirror only says the present temple is about 400 years old and credits Raghuji Bhonsle after Deogarh. Wikipedia says some sources date Ramtek temple to Yadava period; blog says 12th-14th century, unverified. Ramtek town also has the Shantinatha Jain temple (separate site, not covered). No official temple website found; as of July 2026 the temple's governance was being reconstituted by a new law, so the Ramtek trust name/site may change; official_website null. Coordinates are for the town (Wikipedia mirror), not the hill shrine. Timings null. Kalidasa and Ramayana claims are traditional and attributed as such.",
+  "new_temple": {
+   "name": "Ramtek Gad Mandir (Ramtek Fort Temple)",
+   "city": "Ramtek",
+   "district": "Nagpur",
+   "state": "Maharashtra",
+   "deity": "Shri Rama (with Sita and Lakshmana)",
+   "type": "Vaishnava",
+   "lat": 21.4,
+   "lng": 79.3333
+  }
+ },
+ {
+  "slug": "rani-sati-temple-jhunjhunu",
+  "official_website": null,
+  "description": "Rani Sati Temple is in Jhunjhunu town, the headquarters of Jhunjhunu district in Rajasthan's Shekhawati region. The temple is dedicated to Rani Sati, also called Narayani Devi or Dadiji. In the legend, a young bride's husband is killed and she dies on his funeral pyre; other versions say she died resisting capture. Accounts of her life vary widely, and sources place her death anywhere from the 13th to the 17th century. Tradition links her to Uttara of the Mahabharata, and devotees regard her as a manifestation of Shakti or Durga. According to Wikipedia, the shrine began in 1912 as simple memorial mounds, and a larger complex was built between 1917 and 1936 with funds from the Jalan family of the Agarwal community. The marble complex has no statue of the goddess; a trident is worshipped and a portrait hangs in the main hall. The grounds also include shrines to Hanuman, Ganesha and Shiva and twelve smaller sati shrines. Sati practice and its glorification are prohibited under Indian law (the Commission of Sati (Prevention) Act, 1987). According to Wikipedia, after the 1987 Deorala case the courts allowed worship of Rani Sati inside the temple but did not permit ceremonies celebrating the sati or the annual fair on the outer grounds.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Rani_Sati_Temple",
+    "what_it_supports": "Location, coordinates, legend variants, death-date range, layout, no statues, shrines, aarti"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Rani_Sati",
+    "what_it_supports": "1912 mounds, 1917-1936 construction with Jalan clan funds, Shakti worship, Supreme Court order after 1987"
+   },
+   {
+    "url": "https://www.apnisanskriti.com/rani-sati-temple-jhunjhunu-rajasthan",
+    "what_it_supports": "Narayani Bai legend, twelve smaller sati temples, view of her as Durga incarnation, death-date variation (1215-1595)"
+   }
+  ],
+  "notes": "Sensitive topic: sati glorification is prohibited under Indian law (Commission of Sati (Prevention) Act, 1987); description is neutral and attributes everything, and includes the court restriction. Wikipedia lists www.dadisati.in as official website but fetch was blocked and no trust name verified, so website null. Wikipedia 'Rani Sati Temple' gives death dates 1295/1595/14th/17th c.; apnisanskriti says 1215-1595 and '16th century / 400 years' for the temple, which conflicts with the 1912-1936 construction in Wikipedia; description follows Wikipedia/Rani Sati article and says death 'from the 13th to the 17th century' (1215/1295 are 13th c.). Reviewer should check the Supreme Court detail (chunari ceremonies and fair) against the judgment (Calcutta High Court then Supreme Court, as per Wikipedia). Timings null.",
+  "new_temple": {
+   "name": "Rani Sati Temple, Jhunjhunu",
+   "city": "Jhunjhunu",
+   "district": "Jhunjhunu",
+   "state": "Rajasthan",
+   "deity": "Rani Sati (Narayani Devi, Dadiji), worshipped as a form of Shakti",
+   "type": "Shakta",
+   "lat": 28.13528,
+   "lng": 75.40361
+  }
+ },
+ {
+  "slug": "ranthambore-ganesh-temple",
+  "official_website": null,
+  "description": "Trinetra Ganesh Temple sits inside Ranthambore Fort, within Ranthambore National Park near Sawai Madhopur in eastern Rajasthan. The deity is a three-eyed form of Ganesha, revered as the first god invoked before new undertakings. According to Wikipedia, local belief places the shrine's origin at more than 700 years ago: while besieged by Alauddin Khilji's army around 1299-1301, the Chauhan ruler Hammir is said to have dreamed of Ganesha and then raised the temple at a self-manifested image. Outlook Traveller notes this belongs to temple tradition rather than documented history. The temple is known for letters, many of them wedding invitations, posted to Ganesha from across India and abroad, and priests place the mail before the deity. Wednesdays are especially busy, and a large fair takes place on Bhadrapada Shukla Chaturthi around Ganesh Chaturthi. The fort is part of the UNESCO-listed Hill Forts of Rajasthan, and visitors enter through the protected tiger reserve area.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://mdwiki.org/wiki/Trinetra_Ganesh_Temple,_Ranthambore",
+    "what_it_supports": "Wikipedia mirror: location, 700-year local belief, Hammir/Khilji siege 1299-1301, letters tradition, Bhadrapad Chaturthi fair, coordinates 26.01748, 76.45323"
+   },
+   {
+    "url": "https://www.wikiwand.com/en/articles/Ranthambor",
+    "what_it_supports": "Ranthambore Fort: district, Trinetra Ganesha temple inside fort, Wednesday crowds, UNESCO 2013 Hill Forts of Rajasthan"
+   },
+   {
+    "url": "https://www.outlooktraveller.com/experiences/places-of-interest/ganesh-chaturthi-2026-why-devotees-send-wedding-invitations-to-ranthambores-trinetra-ganesh-temple",
+    "what_it_supports": "Tradition vs history caveat, wedding invitations, three-eyed meaning, Forest Dept note on tiger reserve access"
+   }
+  ],
+  "notes": "en.wikipedia.org blocked; facts and coordinates from mdwiki.org mirror of the Wikipedia article - reviewer should confirm against live Wikipedia. Coordinates are the temple page infobox values. No official trust website found in search (only travel/aggregator/news results) so null; timings null. Wikipedia infobox elevation inconsistent (482 m vs 1,579 ft) - not used. Outlook says the image appeared on a fort wall while Wikipedia says dream-guided to a self-manifested idol; description uses only the shared dream element. Wikiwand fort article says temple 'built in the 12th and 13th centuries' - conflicts with the ~1300 CE local tradition; not stated in description. Wikipedia-family claims linking the deity to Ramayana/Krishna legends omitted.",
+  "new_temple": {
+   "name": "Ranthambore Ganesh Temple (Trinetra Ganesh)",
+   "city": "Ranthambore (Sawai Madhopur)",
+   "district": "Sawai Madhopur",
+   "state": "Rajasthan",
+   "deity": "Ganesha (Trinetra, three-eyed Ganesha)",
+   "type": "Ganapatya",
+   "lat": 26.01748,
+   "lng": 76.45323
+  }
+ },
+ {
+  "slug": "rudra-mahalaya-siddhpur",
+  "official_website": null,
+  "description": "Rudra Mahalaya, also called Rudramal, is the ruined remains of a large Shaiva temple complex in Siddhpur, Patan district. According to Wikipedia, construction began in 943 CE under the Chaulukya ruler Mularaja and the complex was completed and consecrated in 1140 CE by Jayasimha Siddharaja. It is described as a sandstone structure in the Maru-Gurjara style. The complex was damaged during a Delhi Sultanate raid in the late 1290s, attributed to Alauddin Khalji's forces, and later in the early fifteenth century Ahmad Shah I of Gujarat demolished much of it and reused its western portion as a congregational mosque. What survives today is limited, chiefly two ornamental gateways (torans) and a few pillars of the central structure (a Wikipedia claim awaiting citation). The site is listed by the Archaeological Survey of India as a monument of national importance, under number N-GJ-164.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Rudra_Mahalaya_Temple",
+    "what_it_supports": "Location, coordinates (23°55'09\"N 72°22'45\"E), 943/1140 CE dates, Mularaja and Siddharaja, destruction by Alauddin Khalji and Ahmad Shah I, Maru-Gurjara style, ASI number N-GJ-164, surviving torans and pillars"
+   },
+   {
+    "url": "https://www.bharattemples.com/rudra-mahalaya-temple-patan-gujarat",
+    "what_it_supports": "Confirms Patan district, 943 and 1140 dates, 1296 dismantling and conversion of western portion to mosque; commercial devotional site, weaker"
+   }
+  ],
+  "notes": "Official website null: site is an ASI-protected ruin, no trust site found. Timings null. District: Wikipedia Rudra Mahalaya page does not state district; Patan taken from bharattemples address and Siddhpur being in Patan district (Wikipedia Siddhpur page appeared in search but I did not open it) - reviewer should confirm. Wikipedia infobox gives destruction as 1296 and 1414, with Ahmad Shah I reign 1410-44; bharattemples says mosque conversion 1410-1414 - minor date inconsistency, description keeps 'early fifteenth century'. Wikipedia says 'surviving torans/pillars' claim needs citation. bharattemples claims (1,600 pillars, 300x230 ft, triple-storied, Nagara style) unsourced and conflict with Wikipedia's Maru-Gurjara style; omitted. Because the Rudra shrine no longer functions in the original, worship status of the site should be verified; I did not state it as an active temple. Contested: Alauddin Khalji vs Ulugh Khan (his general) - same event.",
+  "new_temple": {
+   "name": "Rudra Mahalaya Temple (Rudramal)",
+   "city": "Siddhpur",
+   "district": "Patan",
+   "state": "Gujarat",
+   "deity": "Shiva (Rudra)",
+   "type": "Shaiva",
+   "lat": 23.919167,
+   "lng": 72.379167
+  }
+ },
+ {
+  "slug": "sanwaliya-seth-temple",
+  "official_website": null,
+  "description": "Sanwaliya Seth Temple stands at Mandphiya (also spelt Mandafiya) on the Chittorgarh-Udaipur highway in Chittorgarh district, roughly 40 km from Chittorgarh city. It is dedicated to Krishna, worshipped as Sanwaliya Seth, and Wikipedia describes it as ranking second in importance for Vaishnava devotees after Shrinathji at Nathdwara. According to local tradition, in 1840 a cowherd named Bholaram Gurjar dreamed of idols buried near Bagund village, and digging reportedly uncovered three Krishna images. One was installed at Mandphiya, another at Bhadsora, and the third stayed at the discovery site at Chapar; each place became a temple, all within about 5 km of one another. Festivals mentioned by tourism and reference sources include Holi, Navratri, Ram Navami, and Diwali with Annakoot. A major annual fair, the Jal Jhulani Ekadashi mela, is held around Bhadrapad Shukla Ekadashi.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Sawariya_Seth_Temple",
+    "what_it_supports": "Location, Chittorgarh district, 1840 legend, three idols, second in importance after Nathdwara (as stated there)"
+   },
+   {
+    "url": "https://www.iasgyan.in/daily-current-affairs/shree-sanwariya-seth-temple",
+    "what_it_supports": "Three temples within ~5 km, ~40 km from Chittorgarh, legend, festival list, Jaljhulani Ekadashi fair"
+   },
+   {
+    "url": "https://utsav.gov.in/view-darshan/sanwaliya-ji-temple",
+    "what_it_supports": "Mandafiya village on Chittorgarh-Udaipur highway, three idols story, Chittorgarh as nearest rail station"
+   }
+  ],
+  "notes": "Official website NOT set: Wikipedia lists shrisanwariyaseth.org as official, but direct fetch was blocked by the allowlist so no footer/trust name could be confirmed. Reviewer should check it (also check for Mandir Mandal trust name; the temple is administered by a Mandir Mandal, not confirmed from sources fetched). Legend details differ slightly: Bholaram (Wikipedia, iasgyan 'Bholaram Gurjar'), Bholanath Gurjar (utsav.gov.in). Spelling varies: Mandphiya/Mandafiya/Mandfiya/Mandaphiya. Timings not available from official source. Coordinates not given by a source.",
+  "new_temple": {
+   "name": "Sanwaliya Seth Temple, Mandphiya",
+   "city": "Mandphiya (Mandafiya)",
+   "district": "Chittorgarh",
+   "state": "Rajasthan",
+   "deity": "Krishna as Sanwaliya Seth",
+   "type": "Vaishnava",
+   "lat": null,
+   "lng": null
+  }
+ },
+ {
+  "slug": "sas-bahu-temples-nagda",
+  "official_website": null,
+  "description": "Sas Bahu Temples are a pair of Hindu temples at Nagda village in Girwa tehsil, Udaipur district, close to Eklingji. The larger shrine is called Sas and the smaller Bahu, words meaning mother-in-law and daughter-in-law in present usage; the original name is given as Sahasrabahu, \"thousand-armed\", an epithet of Vishnu. The Archaeological Survey of India describes the complex as a twin Vaishnava group and, on stylistic grounds, assigns the intact north-east shrine to the last quarter of the tenth century, while Wikipedia notes that a 2018 ASI board gives the early eleventh century. The twin temples stand on a moulded platform and are entered through a detached makara-torana gateway on the east. The larger temple is ringed by ten subsidiary shrines. The outer walls are mostly plain, but the interiors carry relief carving including Ramayana scenes, and corner images show Brahma, Shiva and Vishnu. The site is a protected monument and has no entry fee.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Sahasra_Bahu_Temples",
+    "what_it_supports": "Location, coordinates, Maru-Gurjara style, 10 and 4 subsidiary shrines, late 10th c. (infobox) vs early 11th c. (2018 ASI board), name derivation"
+   },
+   {
+    "url": "https://asijaipurcircle.nic.in/Nagda - Sas Bahu temple.html",
+    "what_it_supports": "ASI Jaipur Circle: Girwa tehsil, Udaipur district; twin Vaishnava complex; late 10th c. stylistic date; Brahma/Shiva/Vishnu icons; makara-torana; protected under 1951 notification; no entry fee"
+   },
+   {
+    "url": "https://incredibleindia.gov.in/en/rajasthan/udaipur/sas-bahu-temples",
+    "what_it_supports": "Name meaning Sahastrabahu/Sas Bahu, Ramayana carvings, plain exterior, proximity to Eklingji"
+   }
+  ],
+  "notes": "Conflicts: (1) Wikipedia infobox names the deity Virabhadra while also saying the name derives from Sahasra-Bahu (Vishnu); ASI says twin Vaishnava complex; description follows ASI. (2) Dating: late 10th c. (ASI, Wikipedia infobox) vs early 11th c. (2018 ASI board per Wikipedia). (3) Wikipedia says Bahu temple has 4 subsidiary shrines, ASI says 5-shrined complex; description avoids the number for Bahu. (4) discoverudaipur.in credits a Kachchhwaha king Mahipala and a Shiva shrine for the smaller temple; treated as unreliable local account and not used. Wikipedia lists district oddly as 'Nagda'; ASI confirms Udaipur district. Official website: none (ASI-protected monument, govt owned). Timings: none.",
+  "new_temple": {
+   "name": "Sas Bahu Temples (Sahasra Bahu Temples), Nagda",
+   "city": "Nagda",
+   "district": "Udaipur",
+   "state": "Rajasthan",
+   "deity": "Vishnu as Sahasrabahu (ASI describes a twin Vaishnava complex)",
+   "type": "Vaishnava",
+   "lat": 24.73611,
+   "lng": 73.72083
+  }
+ },
+ {
+  "slug": "shrinathji-temple-nathdwara",
+  "official_website": "https://www.nathdwaratemple.org/",
+  "description": "Shrinathji Temple in Nathdwara, in Rajsamand district, is a major Vaishnava pilgrimage centre of the Pushtimarg tradition and is managed by the Nathdwara Temple Board, set up under the Nathdwara Temple Act of 1959. It houses Shrinathji, a form of Krishna shown as a child with one arm raised, recalling the lifting of Govardhan Hill. According to Wikipedia, the image was first worshipped at Govardhan near Mathura and was moved in 1672 to keep it safe from Aurangzeb; tradition holds that when the cart carrying it sank in mud at Sihad, the priests took this as a sign to install it there, with the support of Maharana Raj Singh of Mewar. The deity is carved in black marble. The building is described as haveli-like, in Mewar style, and its spire carries a kalasha and seven flags. Worship is treated as seva to a living child-Lord, with the image dressed and offered meals several times a day. Janmashtami, Holi and Diwali are among the principal festivals.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Shrinathji_Temple",
+    "what_it_supports": "Location, district, 1672 relocation, Sihad tradition, Raj Singh of Mewar, Pushtimarg, seva, haveli-style architecture, black marble image, festivals, lists nathdwaratemple.org as official site"
+   },
+   {
+    "url": "https://www.nathdwaratemple.org/",
+    "what_it_supports": "Official site of the Nathdwara Temple Board"
+   },
+   {
+    "url": "https://www.indiacode.nic.in/bitstream/123456789/22458/1/nathdwara_temple_act_english.pdf",
+    "what_it_supports": "Nathdwara Temple Act 1959"
+   }
+  ],
+  "notes": "Single source only (Wikipedia, fetched); no second independent source retrieved. Wikipedia lists https://www.nathdwaratemple.org/ as official website but I could not fetch it (allowlist) to confirm it is run by the Shri Nathdwara Temple Board, so official_website null; reviewer may verify and set. Wikipedia gives no coordinates. Description attributes the 1672 move and Sihad story to Wikipedia/tradition. 'Seven times a day' dressing paraphrased as 'several times'.",
+  "new_temple": {
+   "name": "Shrinathji Temple",
+   "city": "Nathdwara",
+   "district": "Rajsamand",
+   "state": "Rajasthan",
+   "deity": "Shrinathji (Krishna as lifter of Govardhan)",
+   "type": "Vaishnava",
+   "lat": null,
+   "lng": null
+  }
+ },
+ {
+  "slug": "trinetreshwar-temple-tarnetar",
+  "official_website": null,
+  "description": "Trinetreshwar Temple is a Shiva temple at Tarnetar, a village in Surendranagar district near the town of Thangadh. The name refers to Shiva as the three-eyed lord. Accounts of its origin differ: one Wikipedia article attributes it to Mihira Bhoja and the eighth century and describes a Pratihara or Maru-Gurjara style, while another says it is believed to belong to the Solanki era and was rebuilt by the king of Lakhtar in memory of his son. The original date should be treated as uncertain. Three kunds, named Vishnu, Brahma and Shiv, are described around the temple, and local belief equates bathing in them with bathing in the Ganges. The temple hosts the Tarnetar fair, which is held each year, with dates announced annually (the Incredible India listing gave 14 to 17 September for 2026). The fair is linked in tradition to the swayamvara of Draupadi in the Mahabharata and is said to have begun some 200 to 250 years ago.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Trinetreshwar_Temple",
+    "what_it_supports": "Tarnetar, Surendranagar; coordinates 22.64583N 71.21333E; Mihira Bhoja, 8th century; Pratihara/Maru-Gurjara style"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Tarnetar",
+    "what_it_supports": "near Thangadh; three kunds; Solanki-era belief; reconstruction by Karansinghji of Lakhtar; Ganges belief"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/festivals-and-events/gujarat/Tarnetar-Fair-2026",
+    "what_it_supports": "fair 14-17 Sept 2026; Draupadi swayamvar link; fair began ~200-250 years ago; name means three-eyed god"
+   }
+  ],
+  "notes": "Sources conflict on dating/builder: Wikipedia temple page says 8th century Mihira Bhoja; Tarnetar page says Solanki era (later centuries) with Lakhtar reconstruction; both stated attributed. Style also inconsistent within the temple page (Pratihara in text, Maru-Gurjara in infobox). Official website null: none found (tarnetar.com appeared in search but is a commercial/tourism-style site, not fetched or verified). Timings not taken. Coordinates from Wikipedia infobox/Tarnetar page. Fair dates change yearly; 2026 dates given as listed.",
+  "new_temple": {
+   "name": "Trinetreshwar Mahadev Temple, Tarnetar",
+   "city": "Tarnetar",
+   "district": "Surendranagar",
+   "state": "Gujarat",
+   "deity": "Shiva (Trinetreshwar, the three-eyed lord)",
+   "type": "Shaiva",
+   "lat": 22.64583,
+   "lng": 71.21333
+  }
+ },
+ {
+  "slug": "yogeshwari-devi-temple-ambajogai",
+  "official_website": null,
+  "description": "Yogeshwari Devi Temple is in Ambajogai, a town in Beed district of the Marathwada region, on the Jayanti river; the town's name is traditionally linked to the goddess, who is also called Jogai. Wikipedia describes the temple as dedicated to Yogeshwari, a form of Parvati or Durga, and as the family deity of many households across Maharashtra, with Konkan pilgrims especially associated with it. Local accounts describe her as the slayer of the demon Dantasura, and say the temple is built in the Hemadpanthi style, with an east-facing entrance, a nagarkhana, a lamp tower, a tall spire among four smaller ones, and a sacred tank called Sarveshwar Tirth beside the north gate. Chaitra and Ashwin Navratri, Holi and Diwali are observed here, with a fair at Dussehra. Ambajogai also has the Shivleni rock-cut caves and several medieval temples, and the poet-saints Mukundraj and Dasopant are linked to the town.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Ambajogai",
+    "what_it_supports": "Town in Beed district, Yogeshwari as a form of Parvati/Durga, kuladevata of many families, town names, nearby caves and medieval temples, coordinates 18.75147N 76.36763E"
+   },
+   {
+    "url": "https://www.apnisanskriti.com/yogeshwari-ambajogai-beed-maharashtra",
+    "what_it_supports": "Hemadpanthi style, entrance layout, Sarveshwar Tirth, Dantasura/Mahishasura legends, festivals, western bank of the Jayanti river"
+   },
+   {
+    "url": "https://marathwadatourism.com/en/?p=3369",
+    "what_it_supports": "Corroborates Hemadpanti style and layout, Chitpavan/Konkanastha Brahmin kuladevata claim, Dussehra festival, poet-saints Mukundraj and Dasopant"
+   }
+  ],
+  "notes": "Wikipedia has no dedicated article fetched (en.wikipedia.org/wiki/Yogeshwari_Devi_Temple was blocked by allowlist); used the Ambajogai article. maharashtratourism.gov.in page was truncated and gave no temple detail. Legends differ (Mahishasura vs Dantasura; Marathwada Tourism calls it a Shakti Peetha, which is a contested/regional claim and was left out). Hemadpanthi attribution comes from aggregator/tourism sites, not an ASI or scholarly source; keep as 'local accounts'. Wikipedia also says Chitpavan/Konkan families; Marathwada Tourism says Chitpavan Brahmins specifically. Wikipedia's temple-adjacent claim of an 'unusual Vinayaki idol in the shikhara' is not used. No official trust/devasthan website found, so null. Coordinates are for the town. Timings null.",
+  "new_temple": {
+   "name": "Yogeshwari Devi Temple",
+   "city": "Ambajogai",
+   "district": "Beed",
+   "state": "Maharashtra",
+   "deity": "Goddess Yogeshwari (Jogai), a form of Parvati/Durga",
+   "type": "Shakta",
+   "lat": 18.75147,
+   "lng": 76.36763
+  }
+ }
+]
