@@ -18,7 +18,11 @@ export async function previewBatch(batchId: string): Promise<{ id: string; title
     const r: Row = { slug: item.slug, name: t?.name || item.slug, found: !!t, changes: [], skipped: [], item }
     if (!t) { r.skipped.push('Temple not found on the portal'); return r }
     if (item.description && item.description.trim().length >= MIN_DESC) {
+      const was = item.replaces_batch ? BATCHES.find(x => x.id === item.replaces_batch)?.items.find(i => i.slug === item.slug) : undefined
+      const untouched = !!was?.description && String(t.description || '').trim() === was.description.trim()
       if (textLen(t) < MIN_DESC) r.changes.push({ field: 'description', from: t.description || '', to: item.description.trim() })
+      else if (untouched && item.description.trim() !== String(t.description || '').trim()) r.changes.push({ field: 'description', from: t.description || '', to: item.description.trim() })
+      else if (item.replaces_batch && !untouched) r.skipped.push('The live text has been changed since ' + item.replaces_batch + ', so it is kept')
       else r.skipped.push('Already has a full description, so it is kept')
     } else r.skipped.push('No verified description in this batch')
     if (isHttps(item.official_website)) {

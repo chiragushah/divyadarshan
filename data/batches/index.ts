@@ -3,6 +3,7 @@ import b2 from './batch-2.json'
 import b3 from './batch-3.json'
 import b4 from './batch-4.json'
 import b5 from './batch-5.json'
+import b6 from './batch-6.json'
 
 export interface BatchItem {
   slug: string
@@ -11,6 +12,8 @@ export interface BatchItem {
   timings_official: string | null
   sources: { url: string; what_it_supports: string }[]
   notes: string | null
+  /** Correction of text this earlier batch applied: replaces the live description only if it still equals that batch's text. */
+  replaces_batch?: string
 }
 export interface Batch { id: string; title: string; items: BatchItem[] }
 
@@ -21,4 +24,5 @@ export const BATCHES: Batch[] = [
   { id: 'batch-3', title: 'Batch 3: Official websites you supplied (checked)', items: b3 as unknown as BatchItem[] },
   { id: 'batch-4', title: 'Batch 4: Mahur, Lenyadri, Dehu, Ellora, Elephanta, Dwarka, Girnar, Ahmedabad, Kesariyaji, Jaipur, Jeen Mata', items: b4 as unknown as BatchItem[] },
   { id: 'batch-5', title: 'Batch 5: Ambaji, Dwarka, Trimbak, Siddhivinayak, Shirdi, Dagdusheth, Dilwara, Ranakpur, Ashtavinayak and more (25 temples)', items: b5 as unknown as BatchItem[] },
+  { id: 'batch-6', title: 'Batch 6: Corrections to Batches 2 and 4 (from the independent QC audit)', items: b6 as unknown as BatchItem[] },
 ]
