@@ -4,6 +4,8 @@ import b3 from './batch-3.json'
 import b4 from './batch-4.json'
 import b5 from './batch-5.json'
 import b6 from './batch-6.json'
+import b7 from './batch-7.json'
+import b8 from './batch-8.json'
 
 export interface BatchItem {
   slug: string
@@ -25,4 +27,6 @@ export const BATCHES: Batch[] = [
   { id: 'batch-4', title: 'Batch 4: Mahur, Lenyadri, Dehu, Ellora, Elephanta, Dwarka, Girnar, Ahmedabad, Kesariyaji, Jaipur, Jeen Mata', items: b4 as unknown as BatchItem[] },
   { id: 'batch-5', title: 'Batch 5: Ambaji, Dwarka, Trimbak, Siddhivinayak, Shirdi, Dagdusheth, Dilwara, Ranakpur, Ashtavinayak and more (25 temples)', items: b5 as unknown as BatchItem[] },
   { id: 'batch-6', title: 'Batch 6: Corrections to Batches 2 and 4 (from the independent QC audit)', items: b6 as unknown as BatchItem[] },
+  { id: 'batch-7', title: 'Batch 7: Pune and Mumbai temples, Swaminarayan mandirs, Mount Abu and more (29 temples)', items: b7 as unknown as BatchItem[] },
+  { id: 'batch-8', title: 'Batch 8: Corrections to Batch 1 (from the independent QC audit)', items: b8 as unknown as BatchItem[] },
 ]
