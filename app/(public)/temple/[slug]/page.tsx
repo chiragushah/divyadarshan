@@ -83,7 +83,11 @@ export default async function TemplePage({ params }: Props) {
     _id: { $ne: temple._id },
   }).select('slug name state city deity has_live rating_avg image_url').limit(4).lean() as any[]
 
-  const t = { ...temple, id: temple._id.toString() }
+  const t: any = { ...temple, id: temple._id.toString() }
+  // Timings, facilities, pooja prices and travel tips on most records are generic placeholders that nobody has verified.
+  // Hidden until each is confirmed from an official source. Set to true to show them again.
+  const SHOW_UNVERIFIED_DETAILS = false
+  if (!SHOW_UNVERIFIED_DETAILS) { t.timing = undefined; t.facilities = {}; t.how_to_reach = undefined; t.poojas = [] }
   const facilities = t.facilities || {}
   const nearby = t.nearby_places || []
 
@@ -207,6 +211,9 @@ export default async function TemplePage({ params }: Props) {
             <p className="text-base leading-relaxed mb-4" style={{ color:'var(--muted)' }}>
               {t.description_batch ? t.description : (t.extended_description || t.description)}
             </p>
+            {!SHOW_UNVERIFIED_DETAILS && (
+              <p className="text-xs mb-4" style={{ color:'var(--muted2)' }}>Timings, facilities, pooja details and travel tips are being checked against each temple's official source and will appear here once confirmed. Please check with the temple before you travel.</p>
+            )}
             {t.description_sources?.length > 0 && (
               <p className="text-xs mb-4" style={{ color:'var(--muted2)' }}>
                 Sources:{' '}

@@ -1,0 +1,372 @@
+[
+ {
+  "slug": "ambika-mata-temple-jagat",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "state",
+    "from": "Gujarat",
+    "to": "Rajasthan"
+   }
+  ]
+ },
+ {
+  "slug": "hatkeshwar-temple-vadodara",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Vadodara",
+    "to": "Vadnagar"
+   }
+  ]
+ },
+ {
+  "slug": "stambheshwar-mahadev",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Gujarat",
+    "to": "Kavi Kamboi"
+   }
+  ]
+ },
+ {
+  "slug": "jivdani-temple-virar",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Mumbai",
+    "to": "Virar"
+   }
+  ]
+ },
+ {
+  "slug": "haldeshwar-mahadev-temple",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Rajasthan",
+    "to": "Siwana"
+   }
+  ]
+ },
+ {
+  "slug": "eme-temple",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Gujarat",
+    "to": "Vadodara"
+   }
+  ]
+ },
+ {
+  "slug": "talaja-caves",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Gujarat",
+    "to": "Talaja"
+   }
+  ]
+ },
+ {
+  "slug": "uparkot-caves",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Gujarat",
+    "to": "Junagadh"
+   }
+  ]
+ },
+ {
+  "slug": "pindara-group-of-temples",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Gujarat",
+    "to": "Pindara"
+   }
+  ]
+ },
+ {
+  "slug": "nasik-caves",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Maharashtra",
+    "to": "Nashik"
+   }
+  ]
+ },
+ {
+  "slug": "lenyadri",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Maharashtra",
+    "to": "Junnar"
+   }
+  ]
+ },
+ {
+  "slug": "kolvi-caves",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Rajasthan",
+    "to": "Kolvi"
+   }
+  ]
+ },
+ {
+  "slug": "ellora-caves",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "India",
+    "to": "Ellora"
+   },
+   {
+    "field": "state",
+    "from": "India",
+    "to": "Maharashtra"
+   }
+  ]
+ },
+ {
+  "slug": "kuda-caves",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "India",
+    "to": "Kuda"
+   },
+   {
+    "field": "state",
+    "from": "India",
+    "to": "Maharashtra"
+   }
+  ]
+ },
+ {
+  "slug": "manmodi-caves",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "India",
+    "to": "Junnar"
+   },
+   {
+    "field": "state",
+    "from": "India",
+    "to": "Maharashtra"
+   }
+  ]
+ },
+ {
+  "slug": "shivneri-caves",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "India",
+    "to": "Junnar"
+   },
+   {
+    "field": "state",
+    "from": "India",
+    "to": "Maharashtra"
+   }
+  ]
+ },
+ {
+  "slug": "tulja-caves",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "India",
+    "to": "Junnar"
+   },
+   {
+    "field": "state",
+    "from": "India",
+    "to": "Maharashtra"
+   }
+  ]
+ },
+ {
+  "slug": "colgong-rock-temple",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "India",
+    "to": "Colgong"
+   },
+   {
+    "field": "state",
+    "from": "India",
+    "to": "Bihar"
+   }
+  ]
+ },
+ {
+  "slug": "parihaspore",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "state",
+    "from": "Kashmir",
+    "to": "Jammu & Kashmir"
+   }
+  ]
+ },
+ {
+  "slug": "purmandal",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "state",
+    "from": "Jammu",
+    "to": "Jammu & Kashmir"
+   }
+  ]
+ },
+ {
+  "slug": "chinese-temples-in-kolkata",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "India",
+    "to": "Kolkata"
+   },
+   {
+    "field": "state",
+    "from": "India",
+    "to": "West Bengal"
+   }
+  ]
+ },
+ {
+  "slug": "trimbakeshwar-temple",
+  "official_website": null,
+  "description": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://trimbakeshwartrust.com/about",
+    "what_it_supports": "Footer: Copyright Shri Trimbakeshwar Devsthan Trust; the trust runs this site"
+   }
+  ],
+  "notes": "Location/website correction. Applied only if the live value is still the old one shown.",
+  "set_fields": [
+   {
+    "field": "official_website",
+    "from": "https://trimbakeshwar.org",
+    "to": "https://trimbakeshwartrust.com/"
+   }
+  ]
+ }
+]

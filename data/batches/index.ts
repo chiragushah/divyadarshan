@@ -9,6 +9,7 @@ import b8 from './batch-8.json'
 import b9 from './batch-9.json'
 import b10 from './batch-10.json'
 import b11 from './batch-11.json'
+import b12 from './batch-12.json'
 
 export interface BatchItem {
   slug: string
@@ -22,6 +23,8 @@ export interface BatchItem {
   /** Present only for a temple that is not on the portal yet; applying the batch creates it with just these verified basics. */
   /** Exact old text currently live; the verified description replaces it only while the live text is still exactly this (so nothing edited since is lost). */
   replaces_live?: string
+  /** Corrections to location or website fields. Each is applied only while the live value is still `from`. */
+  set_fields?: { field: 'city' | 'state' | 'district' | 'official_website'; from: string | null; to: string }[]
   new_temple?: { name: string; city: string; district?: string | null; state: string; deity: string; type: string; lat?: number | null; lng?: number | null }
 }
 export interface Batch { id: string; title: string; items: BatchItem[] }
@@ -39,4 +42,5 @@ export const BATCHES: Batch[] = [
   { id: 'batch-9', title: 'Batch 9: remaining Maharashtra, Gujarat and Rajasthan temples (39 temples)', items: b9 as unknown as BatchItem[] },
   { id: 'batch-10', title: 'Batch 10: 45 NEW temples in Maharashtra, Gujarat and Rajasthan (creates new pages)', items: b10 as unknown as BatchItem[] },
   { id: 'batch-11', title: 'Batch 11: Replace old unsourced text with verified descriptions (81 temples)', items: b11 as unknown as BatchItem[] },
+  { id: 'batch-12', title: 'Batch 12: Location and website corrections (22 temples)', items: b12 as unknown as BatchItem[] },
 ]
