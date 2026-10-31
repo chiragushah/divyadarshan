@@ -1,0 +1,713 @@
+[
+  {
+    "slug": "baps-swaminarayan-mandir-vadodara",
+    "official_website": "https://www.baps.org/atladara",
+    "description": "The BAPS Swaminarayan Mandir at Atladra stands on Shastri Yagnapurushdas Marg on the outskirts of Vadodara, Gujarat. It belongs to the Swaminarayan tradition and is run by the Bochasanwasi Akshar Purushottam Swaminarayan Sanstha (BAPS). According to the sanstha's own pages, Shastriji Maharaj opened it in July 1945 after a devotee from the village gave him land that Swaminarayan is said to have visited. The sanctum area has three shrines: Harikrishna Maharaj with Narayan and Lakshmi, the central shrine of Akshar and Purushottam (Dham, Dhami, Mukta), and a shrine for the Guru Parampara and Sukh Shayya. The mandir hosts weekly assemblies for different age groups and festivals such as Vasant Panchami and Janmashtami.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://swaminarayan.org/globalnetwork/india/atladra.htm",
+        "what_it_supports": "BAPS-run (Swaminarayan Aksharpith) Atladra page: address, opened July 1945 by Shastriji Maharaj, land story, three shrines, weekly assemblies, annual festivals, BAPS copyright footer. No daily darshan hours."
+      },
+      {
+        "url": "https://www.baps.org/atladara/connect/news/chandan-adornments-of-murtis-2026",
+        "what_it_supports": "Official BAPS Atladara mandir site page: BAPS logo/footer (BAPS Swaminarayan Sanstha), address Shastri Yagnapurushdas Marg, Atladara, Vadodara 390012; no darshan timings on page."
+      }
+    ],
+    "notes": "Official website set to https://www.baps.org/atladara (BAPS Swaminarayan Sanstha, the managing organisation, runs it; footer confirmed on a sub-page of that site). The root URL itself was refused by the fetch allowlist, so only a news sub-page was opened. No daily darshan/aarti timings found on the pages opened (swaminarayan.org page lists only weekly assemblies Sundays 5-7 pm, which are not darshan hours), so timings null; reviewer should check the 'Visit' page on baps.org. The phone number shown by the fetch summary on baps.org looked like a placeholder; the older swaminarayan.org page lists (0265) 268 0121; verify before publishing. Portal city/state (Vadodara, Gujarat) look right; Atladra is a village on the Vadodara outskirts. The swaminarayan.org history is the sanstha's own account (devotional), so wording is attributed. Listing note: swaminarayan.org page is an older BAPS site and may be dated."
+  },
+  {
+    "slug": "baps-swaminarayan-mandir-gondal",
+    "official_website": null,
+    "description": "The BAPS Swaminarayan Mandir in Gondal, in Rajkot district of Gujarat, is a temple of the Swaminarayan tradition run by BAPS. It is best known for the Akshar Deri, a shrine marking the cremation place of Gunatitanand Swami, who BAPS followers regard as the first spiritual successor of Swaminarayan. According to Wikipedia, the shrine was built in 1867-68, and a larger temple was later raised around it, with murtis installed in 1934. The complex has several shrines, including Akshar Purushottam in the central sanctum, and Yogi Smruti Mandir, a memorial and museum on the life of Yogiji Maharaj. Devotees perform a daily morning mahapuja at the Akshar Deri, and the shrine was renovated for its 150th anniversary.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Akshar_Deri",
+        "what_it_supports": "Wikipedia: Akshar Deri location in the Gondal BAPS temple, Gunatitanand Swami cremation site, 1867-68 construction, larger temple murtis installed 24 May 1934, daily mahapuja, Yogi Smruti Mandir, BAPS management, 150th anniversary renovation."
+      },
+      {
+        "url": "https://www.swaminarayan.org/globalnetwork/india/gondal.htm",
+        "what_it_supports": "BAPS-run page: address Yogiji Maharaj Road, Gondal 360311; five shrines; Yogi Smruti Mandir museum; mandir opened May 1934; weekly assemblies; BAPS/Aksharpith copyright. No daily darshan hours."
+      },
+      {
+        "url": "https://www.baps.org/akd150",
+        "what_it_supports": "Official BAPS page for Akshar Deri 150th anniversary: Akshar Deri as memorial shrine of Gunatitanand Swami in the Gondal mandir complex; 150th celebrations; BAPS footer. No timings/address."
+      }
+    ],
+    "notes": "official_website null: the BAPS Gondal mandir page (likely baps.org/gondal) was refused by the fetch allowlist and not opened; only an event page (baps.org/akd150) and the older swaminarayan.org page were seen. Reviewer can confirm and set to the baps.org Gondal page. No official daily darshan timings found, so null. Sources differ on history: Wikipedia says the original shrine was commissioned by Queen Mother Moghiba; swaminarayan.org says King Sangramsinhji had it built; the description avoids naming a builder of the shrine. Portal name 'BAPS Swaminarayan Mandir Gondal' matches; Gondal is in Rajkot district, Gujarat (listing looks right). Wikipedia is CC BY-SA, attribute. BAPS statements about Gunatitanand Swami as successor are the sanstha's belief and are attributed as such."
+  },
+  {
+    "slug": "baps-swaminarayan-mandir-surat",
+    "official_website": "https://www.baps.org/surat",
+    "description": "The BAPS Shri Swaminarayan Mandir in Surat, Gujarat, belongs to the Swaminarayan tradition and is administered by BAPS. According to an older BAPS page about the Surat mandir (which gives a Tapi-bank location near Sardar Bridge, whereas the current BAPS site lists an address at Kanad), its foundation stone was laid on 27 April 1985 by Pramukh Swami Maharaj and the murtis were consecrated on 16 December 1996, after an earlier smaller mandir in the city's Nanavati area, which held murtis brought from the closed Kampala temple in Uganda. The main building has three shrines: Harikrishna Maharaj with Radha-Krishna Dev; Swaminarayan with Gunatitanand Swami and Gopalanand Swami; and Ghanshyam Maharaj. A hostel and weekly devotional gatherings for different age groups operate on site. BAPS describes its mandirs as open to everyone, with modest dress and quiet expected of visitors.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://swaminarayan.org/globalnetwork/india/surat.htm",
+        "what_it_supports": "BAPS-run (Aksharpith) Surat page: older address near Sardar Bridge on the Tapi; 1975 Nanavati hari mandir with Kampala murtis; foundation 27 April 1985; consecration 16 December 1996; three shrines; weekly mandals; hostel."
+      },
+      {
+        "url": "https://www.baps.org/surat/visit",
+        "what_it_supports": "Official BAPS Surat mandir page: current listed address Jahangirpura-Karamala Rd, Kanad, Surat 394520; phones; mandir open to all; BAPS Swaminarayan Sanstha footer. Hours not visible."
+      },
+      {
+        "url": "https://www.baps.org/surat/learn/mandirs-and-satsang",
+        "what_it_supports": "Official BAPS Surat page: general description of BAPS mandirs, visitor etiquette (modest dress, shoes off, silence). No local history."
+      }
+    ],
+    "notes": "Address conflict: the older swaminarayan.org page gives Pramukh Swami Marg near Sardar Bridge, Surat 395009 (Tapi bank), whereas the current baps.org Surat page gives Jahangirpura-Karamala Rd, Kanad, Surat 394520. They may be two different BAPS sites (a newer mandir at Kanad vs the 1996 mandir) or a relocation; not resolved. The description therefore gives no street location and attributes the 1985/1996 history to the older BAPS page; reviewer should confirm which mandir the portal entry refers to. official_website set to https://www.baps.org/surat (BAPS Swaminarayan Sanstha footer confirmed on /surat/visit); the bare /surat root was refused by the allowlist, not opened. Darshan timings not visible in fetched content (page has a 'Today's Hours' widget), so null. Phones differ in format but match (0261) 279 6344."
+  },
+  {
+    "slug": "eme-temple",
+    "official_website": null,
+    "description": "The EME Temple, also called the Dakshinamurti Temple, is on the campus of the EME (Electronics and Mechanical Engineers) School of the Indian Army in Vadodara, Gujarat. According to Wikipedia, it was built in February 1966 under the school's first Commandant, and a separate Navgraha shrine was added in 2023. The main deity is Shiva as Dakshinamurti, the teacher facing south. Its modern dome is said to be inspired by Buckminster Fuller's geodesic design, and Wikipedia reports that its elements are meant to reflect several faiths, a claim it marks as needing a citation. The grounds hold a collection of old stone sculptures, about 108 by Wikipedia's count, a replica of the Amarnath linga and a silver arch inscribed Om Namah Shivaya. It is maintained by the Indian Army through the school. Because it lies on a military campus, visitors may need permission or identification to enter.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/EME_Temple",
+        "what_it_supports": "Wikipedia: location on EME School campus, Vadodara; built Feb 1966; Dakshinamurti (Shiva); geodesic dome design; sculptures; Navgraha temple 2023; Army-run; stated timings (not used)."
+      },
+      {
+        "url": "https://historyofvadodara.in/eme-temple/",
+        "what_it_supports": "Local heritage blog (not official): Dakshinamurti deity facing south, Army cantonment location, geodesic dome, statues count (106), timings 6:30 AM-8:30 PM (conflicts with Wikipedia)."
+      }
+    ],
+    "notes": "Identified: EME Temple (Dakshinamurti Temple), within the EME School / Army cantonment area, Vadodara; portal city/state fine. Being on a military campus, public access may need ID or permission; reviewer should check. No official website exists that I could find (it is run by the Indian Army/EME School, no temple site opened). Timings conflict: Wikipedia says 6:00 AM-9:00 PM daily, historyofvadodara.in says 6:30 AM-8:30 PM; neither is official, so timings null. Statue count differs (about 108 vs 106) and the 'symbols of five religions' claim is flagged as uncited on Wikipedia; description attributes it and uses 'about 108 by Wikipedia's count'. Wikipedia text is CC BY-SA, attribute."
+  },
+  {
+    "slug": "gir-somnath-jain-temples",
+    "official_website": null,
+    "description": "Prabhas Patan, a locality of Veraval in Gir Somnath district, Gujarat, is a pilgrimage town best known for the Somnath Jyotirlinga, and it also has a Shwetambar Jain temple, the Chandraprabh Swami Jain Derasar. According to Wikipedia, the Jain temple lies next to the Daityusudan temple, north of Somnath. Jain pilgrim directories describe the main image as a white Chandraprabhu, the eighth Tirthankara, seated in padmasana, and list the ancient images of Dokadia Parshwanath and Mallinath, an Agam shrine in the basement and a dharamshala. These sources say the place is mentioned in Jain literature as Chandra Prabhas, and attribute the first temple to the legendary emperor Bharat; these accounts are traditional and unverified here. This entry covers only the Chandraprabh Swami Derasar; Jain pilgrim sources mention other temples nearby.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Prabhas_Patan",
+        "what_it_supports": "Wikipedia: Prabhas Patan is a locality of Veraval, Gir Somnath; Chandraprabh Swami Jain temple adjacent to Daityusudan temple north of Somnath."
+      },
+      {
+        "url": "https://jainmandir.org/Temple/Shri-Chandraprabh-Swami-Jain-Derasar,-Prabhas-Patan,-Veraval,-District---Gir-Somnath-(Gujarat)",
+        "what_it_supports": "Jain directory (not official): Shwetambar derasar, Dokadia Parshwanath image, Agams on copper plates, dharamshala, PIN 362268, listed timings (not used)."
+      },
+      {
+        "url": "https://www.jainheritagecentres.com/jainism-in-india/gujarat/prabhaspatan/",
+        "what_it_supports": "Jain Heritage Centres portal (not official): white Chandraprabhu idol in padmasana, Agam Mandir in basement, Dokariya Parshwanath and Mallinath images, tradition of Bharat Chakravarti, mentions in Shatrunjaya Mahatmya, renovations."
+      }
+    ],
+    "notes": "The portal name 'Gir Somnath Jain Temples' is a generic, plural entry; only one Jain temple (Chandraprabh Swami Jain Derasar, Prabhas Patan) could be identified, and the description covers only that. Reviewer should rename or confirm intent (the Wikipedia page says there is just one Jain temple listed; JHC says seven other temples are nearby and that old Jain sculpture is in a mosque in the town). No temple trust or official website found, so null. Timings (5:30-11:30 AM, 5:30-8:30 PM) appear only on jainmandir.org, a directory, so not used. Management not stated in any source. All historical claims (Bharat Chakravarti, Vikram-era renovations) are traditional accounts from JHC and unverified. Wikipedia CC BY-SA."
+  },
+  {
+    "slug": "pindara-group-of-temples",
+    "official_website": null,
+    "description": "Pindara is a village in Kalyanpur taluka of Devbhoomi Dwarka district, on the Gulf of Kutch about eleven miles east of Dwarka. The group consists of five small temples and a long pillared hall inside an enclosure. According to Wikipedia they are dated to the 7th to 10th centuries and are linked with the Saindhava rulers, and locals connect the site with the sage Durvasa. Some shrines are of the Phamsana type with stepped, penthouse-style roofs, and one panel shows the marriage of Shiva and Parvati. The complex is a Monument of National Importance maintained by the Archaeological Survey of India. Offshore, researchers have reported the remains of a submerged temple complex. The Mahabharata lists Pindaraka as a holy bathing place.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Pindara_Group_of_Temples",
+        "what_it_supports": "Location, five temples and mandapa, 7th-10th c. dating, Saindhava link, Shiva, Durvasa association, Phamsana style, ASI Monument of National Importance (N-GJ-121), submerged remains found 2007."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Pindara,_Gujarat",
+        "what_it_supports": "Village near Dwarka on Gulf of Kutch; Mahabharata mentions of Pindaraka as tirtha; submerged temple complex surveyed by NIO."
+      }
+    ],
+    "notes": "Identified as the ASI-protected Pindara temples (Durvasa Rishi Ashram), Kalyanpur taluka, Devbhoomi Dwarka district; not the same as Dwarkadhish. No official website exists for a monument; no ASI/government page was opened, so timings null (ASI Vadodara Circle page not checked). Wikipedia's Pindara village article says a submerged temple legend (Yadava clash) and rishi curse of Yadavas are uncited, so those were excluded. Wikipedia's Pindara village page did not mention Durvasa; the Durvasa association comes only from the group article ('locals associate'). Distance 'eleven miles east of Dwarka' is from Wikipedia. Reviewer: confirm whether the site is staffed/entry timings with ASI, and current sea-erosion condition."
+  },
+  {
+    "slug": "swaminarayan-mandir-bhuj",
+    "official_website": "https://www.swaminarayan.faith",
+    "description": "Bhuj is the main town of Kutch district in Gujarat, and this Swaminarayan temple stands there in the Swaminarayan Sampradaya tradition. According to the temple's own history page and Wikipedia, devotees from Bhuj asked Swaminarayan to have a temple built, and he sent Vaishnavanand Swami with a team of saints; the original building was completed and its images installed in 1823. The January 2001 earthquake badly damaged the old structure, though the images were reported unharmed, and the images were later moved to a new temple a short distance away, inaugurated in 2010. Wikipedia describes the new temple as marble and gold, dedicated to Nar Narayan with Radha Krishna, and associated with the Nar Narayan Dev Gadi.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Swaminarayan_Mandir,_Bhuj",
+        "what_it_supports": "Original Bhuj temple: built under Vaishnavanand Swami, completed 1823, Nar Narayan, destroyed in 2001 earthquake."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/New_Swaminarayan_temple,_Bhuj",
+        "what_it_supports": "New temple completed 2010, marble and gold, Nar Narayan Dev Gadi; lists bhujmandir.org as official site."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/List_of_Swaminarayan_temples",
+        "what_it_supports": "Original temple 1823, 2001 damage, new temple 2010."
+      },
+      {
+        "url": "https://www.swaminarayan.faith/about/bhuj-temple-history",
+        "what_it_supports": "Temple's own history: request at Fuldol in Gadhada, saints arrived 1822, murtis installed 15 May 1823, 2001 earthquake damage, new temple nearby."
+      },
+      {
+        "url": "https://www.swaminarayan.faith",
+        "what_it_supports": "Site of Shree Swaminarayan Temple Bhuj: Tirth Dham address, phones, contact page, online donation link."
+      }
+    ],
+    "notes": "official_website chosen: swaminarayan.faith, which presents itself as the Shree Swaminarayan Temple Bhuj site with address, phones, contact and donation link, but it does not name the trust/gadi explicitly; Wikipedia's new-temple article instead lists bhujmandir.org (fetch refused, URL_NOT_ON_ALLOWLIST, unverified). Reviewer may confirm which domain the temple prefers. Timings: neither page shows them (Daily Darshan link exists, not read) so null. Date conflict: Wikipedia new-temple page says original temple built 1824, other pages say 1823; kept 1823 (temple site). Portal entry may refer to the old (earthquake-damaged) or new temple; description covers both. Gadi affiliation (Nar Narayan Dev Gadi) is from Wikipedia only."
+  },
+  {
+    "slug": "swaminarayan-mandir-dholera",
+    "official_website": null,
+    "description": "Dholera is a historic port town in Ahmedabad district, Gujarat, about 30 km from Dhandhuka. According to Wikipedia and the Kalupur-branded temple page, this three-domed Swaminarayan temple was planned by senior disciples including Nishkulanand Swami and Atmanand Swami on land gifted by a devotee, Darbar Punjabhai. Swaminarayan is said to have installed the images on 19 May 1826. The central sanctum holds Madan Mohan Dev and Harikrishna Maharaj, with Hanuman and Ganapati near the stairway, and further shrines including Shesh-shayi, Suryanarayan, Dharm-Bhakti, Ghanshyam Maharaj and Shankar-Parvati. Wikipedia counts it among the nine temples built during Swaminarayan's lifetime and says Adbhutanand Swami was appointed its first mahant.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Shri_Swaminarayan_Mandir,_Dholera",
+        "what_it_supports": "Location, founding disciples, land donation, 19 May 1826 installation, deities, three spires, first mahant."
+      },
+      {
+        "url": "https://swaminarayan.in/mandirs/india/shree-swaminarayan-mandir-dholera",
+        "what_it_supports": "Kalupur-branded page: history, deities, contact numbers, a posted daily schedule; links to dholeradham.org."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/List_of_Swaminarayan_temples",
+        "what_it_supports": "Dholera entry: 19 May 1826, Madan Mohan Dev and Hari Krishna Maharaj."
+      }
+    ],
+    "notes": "Own site possibly dholeradham.org (linked from the Kalupur page) but fetch was refused (not on allowlist), so unverified; official_website null. swaminarayan.in is the Kalupur (Ahmedabad Gadi) site, not confirmed as the temple's own, so its displayed schedule (06:00-12:00, 15:30-20:30, week of 31 Oct 2026, page showed 'Closed') was not used; timings null. Neither source states the gadi; Dholera is generally understood to be in the Ahmedabad Gadi area but this was not sourced. Wikipedia's reference link to swaminarayansatsang.com not opened. Reviewer: confirm owner site and timings."
+  },
+  {
+    "slug": "swaminarayan-mandir-dholka",
+    "official_website": null,
+    "description": "Dholka is a town in Ahmedabad district, Gujarat, about 48 km southwest of Ahmedabad. The Swaminarayan temple here, located in the Lilajpur area, is described on the Kalupur-branded Swaminarayan site as built by Swaminarayan at devotees' request, with its Shree Murlimanohar Dev images installed in Vikram Samvat 1883, which that page equates to 1827. Wikipedia's Dholka article calls it one of the oldest Swaminarayan temples, establishing it in 1883, which appears to be the same Samvat date. Wikipedia's list of Swaminarayan temples groups Dholka with Muli and Jetalpur among temples ordered by Swaminarayan. A separate BAPS temple also stands in the town.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://swaminarayan.in/mandirs/india/shree-swaminarayan-mandir-dholka",
+        "what_it_supports": "Address (Lilajpur, Dholka 387810), phone, VS 1883 installation of Murlimanohar Dev, built at devotees' request; lists swaminarayanmandirdholka.co.in."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Dholka",
+        "what_it_supports": "Dholka 48 km SW of Ahmedabad; one of the oldest Swaminarayan temples (1883); separate BAPS temple."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/List_of_Swaminarayan_temples",
+        "what_it_supports": "Dholka grouped with Muli and Jetalpur as temples ordered by Swaminarayan."
+      }
+    ],
+    "notes": "swaminarayanmandirdholka.co.in (named on the Kalupur page) could not be fetched (not on allowlist), so unverified; official_website null. Timings appeared on swaminarayan.in (05:00-12:00, 15:00-20:30) but that is not confirmed as the temple's own site; null. Date conflict: swaminarayan.in says installation VS 1883 (=1827), Wikipedia's list says these temples were completed after Swaminarayan's death with pratishta by Sahajanand Swami (Swaminarayan died 1830), and Wikipedia Dholka page just says '1883'; not reconciled, so no confident year is given beyond attribution. Gadi not stated by any source opened. The wording 'ordered by Swaminarayan' is Wikipedia's. Reviewer: confirm date and the temple's own site."
+  },
+  {
+    "slug": "swaminarayan-mandir-jetalpur",
+    "official_website": null,
+    "description": "Jetalpur lies in Ahmedabad district, Gujarat, on National Highway 228 roughly 17 km from Ahmedabad and about 5 km from Bareja. According to the government's Utsav portal, the temple was built under Swaminarayan and is also called the Prasadi temple. Before construction, the senior saint Ramanand Swami had started a free kitchen (annakshetra) at Jetalpur, served by Gangama, and at her request the temple was built; the images were installed in Vikram Samvat 1882, on the eighth day of the dark half of Falgun. The deities named are Revti-Baldevji and Harikrishna Maharaj. The Utsav page also names Ramanand Swami among saints said to have lived at Jetalpur for long periods. Wikipedia's Jetalpur page says Swaminarayan himself commissioned the temple.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://utsav.gov.in/view-darshan/shree-swaminarayan-mandir-jetalpur-1",
+        "what_it_supports": "Government Utsav portal: location on NH 228, Prasadi temple, annakshetra and Gangama, VS 1882 installation, deities, no timings."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Jetalpur",
+        "what_it_supports": "Jetalpur in Ahmedabad district; temple commissioned by Swaminarayan."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/List_of_Swaminarayan_temples",
+        "what_it_supports": "Jetalpur grouped among temples ordered by Swaminarayan; table gives Revati-Baldevji."
+      }
+    ],
+    "notes": "No official site found. Wikipedia's list table gives the location as Jamnagar and lists Nar Narayan Dev Gadi, while the narrative says it was completed after Swaminarayan's death; the Utsav portal and the Jetalpur article place it near Ahmedabad (Wikipedia's location is likely an error). Gadi affiliation is unclear across sources so it is omitted. Conflicting dates (VS 1882 install per Utsav vs 'completed after his death' per Wikipedia list) are not reconciled. Utsav page gives no timings. yatradham/other aggregators not used. A news item on a bicentenary celebration (newkerala) was only seen in search results. Reviewer: confirm site, gadi and management with the temple."
+  },
+  {
+    "slug": "swaminarayan-mandir-junagadh",
+    "official_website": null,
+    "description": "Junagadh is a city in Gujarat lying at the foot of Mount Girnar, and this Swaminarayan temple stands in the centre of town. According to Wikipedia, Swaminarayan ordered its construction and Brahmanand Swami supervised the work; the foundation stone was laid on 10 May 1826 and the images were installed on 1 May 1828. Ranchhodrai and Trikamrai are enshrined in the inner sanctum, with Radharaman Dev and Harikrishna Maharaj in the eastern wing and Siddheswar Mahadev, Parvati, Ganesha and Nandishwar on the western side. The building has five spires and many sculptures, and Wikipedia's photo caption mentions a canopy over Swaminarayan's footprints. Wikipedia says Gunatitanand Swami was the first mahant and served in that role for over forty years.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Shri_Swaminarayan_Mandir,_Junagadh",
+        "what_it_supports": "Location, foundation and installation dates, deities, five spires, chhatri of footprints, Gunatitanand Swami as first mahant; lists swaminarayanmandirjunagadh.com."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/List_of_Swaminarayan_temples",
+        "what_it_supports": "Junagadh: installed 1 May 1828, Ranchhodrai and Trikamrai, five domes, Brahmanand Swami supervised."
+      }
+    ],
+    "notes": "swaminarayanmandirjunagadh.com (given on Wikipedia) was refused by the fetch tool (not on allowlist), so unverified; official_website null. No timings from an official source. Gadi not stated in sources opened; Junagadh is commonly associated with the Vadtal Gadi but this was not verified, so not stated. I did not open swaminarayan.in's Junagadh page. Reviewer: verify the website and current management."
+  },
+  {
+    "slug": "swaminarayan-mandir-muli",
+    "official_website": null,
+    "description": "Muli is a village in Surendranagar district in Saurashtra, on the Bhogavo River, according to Wikipedia. Its Swaminarayan temple stands on Muli Road and enshrines Harikrishna Maharaj, Radha Krishna, Ranchhodji-Trikamji and Dharmadev-Bhaktimata. According to the swaminarayan.in temple listing, the building was raised by Brahmanand Swami, is shaped like an aircraft with several towers, and Bhagwan Swaminarayan himself consecrated the images on 17 January 1823 (Wikipedia's list of Swaminarayan temples instead says the Muli temple was completed after his death). The same listing says he visited Muli many times and stayed for periods ranging from a fortnight to over a year. Devotees are said to gather in large numbers at Vasant Panchami, when the Acharya of the Nar Narayan Dev Gadi, Ahmedabad, blesses them.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://swaminarayan.in/temples/asia/123-shree-swaminarayan-mandir-muli",
+        "what_it_supports": "Address, deities, Brahmanand Swami as builder, consecration 17 Jan 1823, Vasant Panchami gathering, Dattatreya ashram/Alarka step-well tradition, phone +91 87586 87444. No timings, no management named."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Muli,_Gujarat",
+        "what_it_supports": "Muli is a village in Surendranagar district, Saurashtra, on the Bhogavo River, about 21 km SW of Surendranagar. Does not mention the temple."
+      }
+    ],
+    "notes": "No official temple website found; swaminarayan.in is a directory-style listing whose owner is not stated, so it was used only as a source, not as official_website. Its text oddly calls Muli a base associated with Dwarka; not used. Management not stated (presumably Nar Narayan Dev Gadi, Ahmedabad, as the Acharya blesses devotees, but no source says so; do not state). No timings available. Dates/claims (1823 consecration, 32 visits, built in under two years) come from that single listing only; reviewer may verify with the Gadi or Wikipedia's Swaminarayan temples list (appeared in search, not opened). Portal location of Gujarat is consistent."
+  },
+  {
+    "slug": "stambheshwar-mahadev",
+    "official_website": null,
+    "description": "Stambheshwar Mahadev is a Shiva shrine at Kavi Kamboi village in Jambusar tehsil of Bharuch district, Gujarat, on the Gulf of Khambhat shore. Its Shivling, said by Wikipedia to be about four feet high, is submerged by the sea at high tide and reappears as the water recedes, which happens roughly twice a day, so visits are timed to the tide. According to local tradition, Kartikeya set up the linga after slaying the demon Tarakasura; India TV attributes this account to the Kumarika Khanda of the Skanda Purana. Wikipedia lists Shravan, Maha Shivratri and full-moon or new-moon days as popular times for visiting. India TV also describes it as the 'disappearing temple' of Gujarat, about 40 miles from Vadodara.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Stambheshwar_Mahadev",
+        "what_it_supports": "Location (Kavi Kamboi, Jambusar tehsil, Bharuch district, Gulf of Khambhat), Shivling about 4 ft, tidal submergence twice daily, Kartikeya/Tarakasura tradition, Skanda Purana mention, festival times. Mentions stambheshwarmahadev.com."
+      },
+      {
+        "url": "https://www.indiatvnews.com/news/india/stambheshwar-mahadev-the-disappearing-temple-of-gujarat-20538.html/page/2",
+        "what_it_supports": "News article: about 40 miles from Vadodara, Kavi Kamboi; Shiva linga; found around 150 years ago; Kartikeya tradition citing Kumarika Khanda of Skanda Purana (article truncated)."
+      }
+    ],
+    "notes": "PORTAL LISTING CHECK: the temple is in Bharuch district (Jambusar tehsil), not Vadodara district; it is only roughly 40 miles from Vadodara per India TV. Fix listing if it says Vadodara district. Official website: Wikipedia points to stambheshwarmahadev.com but the fetch tool refused it (URL_NOT_ON_ALLOWLIST), so unverified; reviewer should open it and confirm it names the temple trust/committee before using. Managing body not named in any fetched source. Timings null: tide-dependent and vary daily; no official timings seen. Search results also showed trawell, yatradham, blogs, not used. The '150 years ago' claim is from India TV only and conflicts in spirit with tradition of ancient origin; omitted from reliance."
+  },
+  {
+    "slug": "talaja-caves",
+    "official_website": null,
+    "description": "The Talaja Caves are a group of rock-cut caves on the hills at Talaja in Bhavnagar district, Gujarat, near the Shetrunji river. They are a Buddhist monastic site; according to Wikipedia, the group has about 30 excavations, roughly half of them water tanks, and the chaitya and cells are dated there to the 2nd century BC, with Jain emblems later added to some cells and halls. The best-known feature is the Ebhal Mandapa, a large hall with octagonal pillars, and the facades carry chaitya-window motifs. Gujarat Tourism says the caves are about 2,000 years old and lie a short walk uphill; the same hill also holds a Jain temple and the Khodiyar Mata temple, so several traditions share the site. Dating is debated, and some historians treat it as uncertain.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Talaja_Caves",
+        "what_it_supports": "Location, ~30 caves with ~15 water tanks, Buddhist chaitya/cells 2nd c. BC, Jain emblems later, Ebhal Mandapa, chaitya-window facades, dating dispute."
+      },
+      {
+        "url": "https://gujarattourism.com/saurashtra/bhavnagar/talaja-hills.html",
+        "what_it_supports": "Gujarat Tourism: 13 caves on hill reached in 15-20 min walk; ~2,000 years old; Jain temple and Khodiyar Mata temple on same hill; Ebhala Mandapa with four octagonal pillars. Visiting Hours heading has no hours."
+      }
+    ],
+    "notes": "Not a Hindu temple: Buddhist rock-cut cave group with later Jain use. Discrepancy: Wikipedia says ~30 caves, Gujarat Tourism says 13 caves on the hill (and ~30 elsewhere on its page); description uses Wikipedia's figure with attribution. Dating differs (2nd c. BC vs end of 1st c. CE per other historians). No official site and no timings found; Gujarat Tourism page gives none. Protection status (ASI/state) not verified. Reviewer may add the Jain hilltop temple as a separate entry if not present."
+  },
+  {
+    "slug": "uparkot-caves",
+    "official_website": null,
+    "description": "The Uparkot Caves are a Buddhist rock-cut monastic complex inside the old Uparkot fort area of Junagadh, Gujarat, near the Adi Kadi step-well, and form part of the Junagadh Buddhist Cave Groups. According to Wikipedia, quoting the Archaeological Survey of India, the excavations rise in tiers: an upper level with a deep square water tank and a pillared chamber, and a lower level with rooms, a corridor and carved pillars, with bench recesses and horseshoe-shaped chaitya-window ornament. Wikipedia assigns them to the 2nd to 3rd century AD, though one caption in the article gives a different date, so the dating should be treated as approximate. Wikipedia lists an assembly hall and a meditation cell among its features. The site appears in ASI's list of ticketed monuments.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Uparkot_Caves",
+        "what_it_supports": "Location, features per ASI quotation, tiers, water tank, dating 2nd-3rd c. AD (caption conflict), ticketed monument citation."
+      },
+      {
+        "url": "https://www.gujarattourism.com/saurashtra/junagadh/buddhist-caves.html",
+        "what_it_supports": "Gujarat Tourism page on Junagadh Buddhist caves (mainly Khapra Kodiya group, same fort area): dawn-to-dusk hours, online ticketing via ASI link, caves cut as monks' quarters. Page covers the Khapara Kodia group, not clearly Uparkot caves specifically."
+      }
+    ],
+    "notes": "Not a Hindu temple; Buddhist caves. Gujarat Tourism page is about Khapra Kodiya group (a separate cave group in the same fort area), so its dawn-to-dusk hours are NOT confirmed for Uparkot and timings_official is null; reviewer should check ASI Vadodara circle page. Wikipedia's 2nd-3rd c. AD dating conflicts with Gujarat Tourism's 'little over 2,000 years' for the neighbouring group and a 1st c. caption. Entry may overlap with portal's other Junagadh Buddhist caves entries (Khapra Kodiya, Baba Pyara); check for duplicates. No official site (ASI/government pages not eligible)."
+  },
+  {
+    "slug": "baps-swaminarayan-mandir-mumbai",
+    "official_website": "https://www.baps.org/mumbai/home",
+    "description": "This is the BAPS Shri Swaminarayan Mandir at Swaminarayan Chowk, Swami Gnanjivandas Marg, opposite Dadar Central Railway station in Dadar East, Mumbai. It belongs to the Swaminarayan tradition and the BAPS Swaminarayan Sanstha, which runs the temple website. According to a swaminarayan.org page, the foundation stone was laid on 22 November 1979 and Pramukh Swami Maharaj opened the three-spired pink stone mandir in December 1983, beside Akshar Bhuvan, a centre Yogiji Maharaj set up in 1961. That page lists five shrines, including Harikrishna Maharaj with Radha-Krishna, the guru parampara, and Ghanshyam Maharaj. The temple site describes it as a place of worship open to all and sets a modest dress code covering shoulders and knees; visitors are asked to leave bags in their vehicles.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://www.baps.org/mumbai/home",
+        "what_it_supports": "Official BAPS Mumbai page: address, phones +91 22 2414 1125 / 2414 4000, BAPS Swaminarayan Sanstha credit, recent events. Hours not shown in fetched text."
+      },
+      {
+        "url": "https://www.baps.org/mumbai/visit",
+        "what_it_supports": "Official visit page: address, email info.mumbai@in.baps.org, open to all, dress code, belongings rule. Hours expand dynamically, not captured."
+      },
+      {
+        "url": "https://swaminarayan.org/globalnetwork/india/mumbai.htm",
+        "what_it_supports": "Foundation stone 22 Nov 1979, opening Dec 1983 by Pramukh Swami Maharaj, five shrines, Akshar Bhuvan 1961 history. Not the official BAPS domain."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Shri_Swaminarayan_Mandir,_Mumbai_(disambiguation)",
+        "what_it_supports": "Confirms the Dadar BAPS mandir is separate from other Mumbai Swaminarayan temples (Bhuleshwar, Ghatkopar, Mulund, Kandivali)."
+      },
+      {
+        "url": "https://www.baps.org/mumbai/connect",
+        "what_it_supports": "Address and phone confirmation."
+      },
+      {
+        "url": "https://www.baps.org/mumbai/inspiration",
+        "what_it_supports": "Address, phone, copyright BAPS Swaminarayan Sanstha."
+      }
+    ],
+    "notes": "Identified as the Dadar East temple (the portal entry is ambiguous; Mumbai has other Swaminarayan temples at Bhuleshwar, Ghatkopar, Mulund, Kandivali which are not BAPS-Dadar). Official site baps.org/mumbai is run by BAPS Swaminarayan Sanstha with address, contacts; it has no explicit donation/booking page seen, but is the organisation's own site. Timings: the page has a 'Today's Hours' widget whose times did not render in the fetch tool, so timings_official is null; reviewer should read them directly at https://www.baps.org/mumbai/visit. History facts (1979, 1983, 1961) come from swaminarayan.org, a non-official domain, so attributed to it."
+  },
+  {
+    "slug": "bhuleshwar-temple-yawat",
+    "official_website": null,
+    "description": "Bhuleshwar Temple is a Shiva shrine on a hill near Yawat in Daund taluka, Pune district, Maharashtra, roughly 45 km from Pune. Wikipedia gives an 8th-century date and a restoration around 1230 CE in the Yadava period, though its account of the origin is inconsistent; local belief credits the Pandavas with building it. Wikipedia describes it as built of dark basalt with carved walls. Its best-known feature is a sculpture of Ganesha in female form, called Ganeshwari. A folk tale says sweets offered to the linga disappear. Wikipedia adds that some sculptures were defaced in the past and that the temple is a protected monument; the protection listing was not independently checked. Maha Shivratri is its main festival.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Bhuleshwar_Temple",
+        "what_it_supports": "Location near Yawat/Pune district (~45 km from Pune), hilltop, Shiva, 8th-century date claim, Pandava tradition, c.1230 CE Yadava restoration, basalt structure, Ganeshwari image, pedha folk tale, Mughal damage, protected monument, Maha Shivratri. No management or timings stated."
+      }
+    ],
+    "notes": "No official temple/trust website found; search results showed only Wikipedia, blogs and aggregators (trawell, tripoto etc.), none opened or used. Wikipedia gives no external official link, no timings, no managing body. Wikipedia's text places the temple in 'Malshiras' (Pune district) while the portal says Yawat; Yawat is in Daund taluka, so the Malshiras wording looks like a Wikipedia error or loose usage - reviewer should confirm taluka. Wikipedia itself is inconsistent on the build date (8th century vs a 'Krishnadevaraya, 1200 century' claim); description uses only the 8th-century claim, attributed. Protected-monument status is Wikipedia's claim only; ASI/state list not checked. Timings and entry rules unverified; no official source."
+  },
+  {
+    "slug": "ellora-jain-caves",
+    "official_website": null,
+    "description": "Caves 30 to 34 form the Jain group of the Ellora rock-cut complex near Aurangabad (Chhatrapati Sambhajinagar), Maharashtra, a World Heritage Site looked after by the Archaeological Survey of India. According to the ASI Aurangabad Circle, the group probably began around 800 CE and continued into the 11th century, and unlike most Ellora caves it faces south. Cave 30 is known as Chhota Kailas. Cave 32, the Indra Sabha, has a monolithic elephant in its courtyard facing a tall Manastambha pillar. Caves 32 and 33 (Jagannath Sabha) are linked by a first-floor passage, and the ASI says both retain notable later-period murals. Government tourism text notes the Jain caves hold the most surviving ceiling paintings at Ellora.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://asiaurangabadcircle.com/monuments/ellora/elloraCaves.php",
+        "what_it_supports": "ASI Aurangabad Circle: Jain group c.800 CE to 11th century, five excavations, faces south, Cave 30 Chhota Kailas, Cave 32 Indra Sabha elephant and Manastambha, Cave 33 Jagannath Sabha, murals in link passage. No timings."
+      },
+      {
+        "url": "https://prod.incredibleindia.gov.in/content/incredible-india-v2/en/destinations/aurangabad/ellora-caves.html",
+        "what_it_supports": "Incredible India (government tourism): Jain caves are caves 30-34; Ellora a World Heritage Site since 1983, maintained by ASI; Indra Sabha; most ceiling paintings among Ellora caves. No timings."
+      }
+    ],
+    "notes": "Monument, so no temple/trust site applies (official_website null; ASI circle page is a government page, not a temple site). Timings and weekly closed day were NOT stated on either government page opened, so null. Wikipedia (Ellora Caves), UNESCO and Britannica pages were refused by the fetch allowlist; sahapedia kept redirecting in a loop. Dating conflict: ASI says Jain group c.800-11th century; Incredible India says all Ellora caves were cut between 4th and 9th century (generic, no separate Jain date); description uses the ASI figure, attributed. 'Aurangabad' is the older name of Chhatrapati Sambhajinagar. Reviewer should check ASI/ticketing for current hours, closed day (commonly reported Tuesday, unverified) and fees."
+  },
+  {
+    "slug": "global-vipassana-pagoda",
+    "official_website": "https://www.globalpagoda.org/",
+    "description": "The Global Vipassana Pagoda is a meditation monument at Gorai, Borivali West, Mumbai, on a peninsula between Gorai creek and the Arabian Sea. According to Wikipedia, it was built entirely from voluntary donations in Burmese style, modelled on the Shwedagon Pagoda in Yangon, as thanks to Myanmar and to Sayagyi U Ba Khin for preserving Vipassana, which S. N. Goenka taught in a non-sectarian form. Its central stone dome has no supporting pillars, and the hall is said to seat more than 8,000 meditators. Relics of the Buddha are enshrined in the dome, and the monument was inaugurated in February 2009. The adjoining Dhamma Pattana centre holds ten-day Vipassana courses, offered free of charge, and the complex includes a museum on the Buddha's life.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Global_Vipassana_Pagoda",
+        "what_it_supports": "Location, donation-funded construction, Burmese/Shwedagon model, U Ba Khin and Goenka, pillarless dome, 8,000+ capacity, relics, Feb 2009 inauguration, museum, Dhamma Pattana centre; names globalpagoda.org as official website."
+      },
+      {
+        "url": "https://www.dhamma.org/en/global",
+        "what_it_supports": "Vipassana network page: monument honours the Buddha and his teaching, thanks Myanmar and U Ba Khin, hall for 8,000, genuine relics. No visiting hours; says only that the pagoda site is global.dhamma.org."
+      }
+    ],
+    "notes": "Official website probably globalpagoda.org (named by Wikipedia; dhamma.org points to global.dhamma.org) but both were refused by the fetch allowlist, so neither could be confirmed and official_website is null; reviewer should open globalpagoda.org and check it names the trust (Global Vipassana Foundation, unverified) and lists visiting hours/contact. Timings not found in any opened source. Dimension figures in Wikipedia (dome 29 m high, 85.15 m internal diameter, 99.06 m tall) look internally inconsistent, so omitted. 'Seven Wonders of Maharashtra' recognition omitted (superlative). Only Wikipedia and dhamma.org were opened; no government source."
+  },
+  {
+    "slug": "gurudwara-sachkhand-sri-hazur-sahib",
+    "official_website": "https://hazursahib.com/",
+    "description": "Takht Sachkhand Sri Hazur Abchalnagar Sahib stands on the bank of the Godavari at Nanded, Maharashtra, and is one of the five Sikh takhts. It marks where Sri Guru Gobind Singh Ji passed away in 1708, shortly after designating the Sri Guru Granth Sahib as the eternal Guru. According to Wikipedia, the present building was raised under Maharaja Ranjit Singh between 1832 and 1837, and the inner sanctum, Angitha Sahib, stands at the Guru's cremation site. The gurdwara board's website says it runs the shrine day to day, along with accommodation, free langar, a hospital and schools, and offers live darshan online. A laser show at Gobind Bagh nearby tells the story of the ten Gurus.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://hazursahib.com/",
+        "what_it_supports": "Official site of the Takht Sachkhand Sri Hazur Abchalnagar Sahib Gurdwara Board: contact (24x7 helpline, email), address, online donation, room booking, live darshan, Guru Gobind Singh passing in Nanded 1708. No darshan timings on page fetched."
+      },
+      {
+        "url": "https://hazursahib.com/web/board_members",
+        "what_it_supports": "Board page: Gurudwara Sachkand Board manages Takhat Sri Hazur Sahib; runs accommodation, langar, Dashmesh Hospital, schools, ITI, library."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Hazur_Sahib",
+        "what_it_supports": "Formal name, Godavari bank, one of five takhts, Ranjit Singh building 1832-37, cremation site, Angitha Sahib, 1956 Act board, laser show, lists hazursahib.com as official site."
+      },
+      {
+        "url": "https://marathwadatourism.com/en/?p=3385",
+        "what_it_supports": "Corroborates history, Angitha Sahib, relics, Gobind Bagh laser show (government regional tourism site)."
+      }
+    ],
+    "notes": "DUPLICATE: the portal also has takht-sri-hazur-sahib-nanded; both name the same shrine (Takht Sachkhand Sri Hazur Abchalnagar Sahib, a.k.a. Hazur Sahib). Recommend merging the two entries; the same official website applies to both. Official site confirmed by its own content (names the Gurdwara Board, contact, donation and room-booking pages). No darshan timings on the pages opened (it links a 'Daily Schedule Puja Patth' page which was not fetched), so timings null; reviewer may check hazursahib.com for the daily schedule. Management is contested: a 2015 Maharashtra amendment and a 2025 row over non-Sikh administrators were reported (Tribune/SGPC, only seen as search headlines, not opened), so no claims about who administers it now beyond the site's own statements. Wikipedia and the site differ slightly in naming (Sachkand/Sachkhand); the portal slug 'gurudwara-sachkhand-sri-hazur-sahib' is fine. Marathwada Tourism says the Guru's place was named Takht Sahib after the Guru Granth Sahib installation; description keeps to the better-sourced points. Wikipedia mentions heritage buildings demolished in 2007; omitted as contested."
+  },
+  {
+    "slug": "karla-caves",
+    "official_website": null,
+    "description": "Karla (Karli) lies about 11 km from Lonavala in Maharashtra and holds a group of Buddhist rock-cut shrines and monasteries. According to Wikipedia, they were developed over several centuries, from the 2nd century BCE to the 5th century CE, with donations from local merchants, monks, nuns and rulers supporting the community. The centrepiece is the Great Chaitya hall (Cave 8), which Wikipedia calls the largest and best preserved of its period, notable for its scale and its carved pillars and figures. The caves are a protected monument under the Archaeological Survey of India. Beside the caves stands the temple of Goddess Ekvira (Ekveera), worshipped especially by the Agri and Koli communities of Mumbai. Local tradition holds that the Pandavas built the temple in a single night during their exile; this is a legend, not a documented history. The temple is a separate, living place of worship.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://wikiwand.com/EN/Karla_Caves",
+        "what_it_supports": "Wikiwand copy of Wikipedia article: Karli near Lonavala; Buddhist rock-cut shrines; 2nd c. BCE to 5th c. CE; Cave 8 Great Chaitya largest and best preserved; ASI protected; traders/Satavahana/Western Satrap patronage"
+      },
+      {
+        "url": "https://dharmawiki.org/index.php/Ekavira_Mata_Mandir",
+        "what_it_supports": "DharmaWiki (community wiki): Ekvira Mata temple at Karla hill; Pandava-built legend; surrounded by caves under archaeology department"
+      }
+    ],
+    "notes": "Wikipedia pages (en.wikipedia.org Karla_Caves/Karla_caves and Ekvira) were refused by the fetch allowlist (URL_NOT_ON_ALLOWLIST); content came via the Wikiwand mirror, so cite as Wikipedia (CC BY-SA) but reviewer should confirm. The Wikiwand text did not mention Ekvira; the Ekvira detail rests on DharmaWiki only (community wiki, weak) and is kept attributed as legend. Two separate things: ASI-protected Buddhist caves and the Ekvira Devi temple (managed by a temple trust, name not verified). No official Ekvira trust website found; search surfaced only aggregators/news, so official_website null. Search result mentions a Lonavala Ekvira temple dress code announcement (lokshahi.com) - not opened. No timings from ASI or any official source, null. Reviewer should check: ASI ticketing/timings page, Ekvira trust site, and whether portal intends the caves or the temple (listing names both)."
+  },
+  {
+    "slug": "khunya-murlidhar-pune",
+    "official_website": null,
+    "description": "Khunya Murlidhar is an old Krishna temple in Pune, with images of Krishna as Murlidhar, the flute-bearer, together with Radha. According to the Wikipedia list of Hindu temples in Pune, it was built in 1797 by Sadashiv Raghunath, known as Dada Gadre. The same list says the name Khunya, which suggests bloodshed, comes from a violent episode in which Dada Gadre fought the army of Peshwa Bajirao II over the idol and sixty men were killed. This account is traditional and is given here only as Wikipedia reports it.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/List_of_Hindu_temples_in_Pune",
+        "what_it_supports": "Wikipedia list: Khunya Murlidhar, Krishna and Radha idols, built 1797 by Sadashiv Raghunath (Dada Gadre), origin of name and clash with Bajirao II's army, 60 killed"
+      },
+      {
+        "url": "https://yappe.in/maharashtra/pune/khunya-murlidhar-mandir/1856675",
+        "what_it_supports": "Map directory (aggregator, weak): address in Sadashiv Peth; one reviewer gives 1798; timings listed there not used"
+      }
+    ],
+    "notes": "Very thin sourcing: only one encyclopedic source (Wikipedia list entry, itself unreferenced in the summary I got). Date conflict: Wikipedia says 1797, a directory reviewer says 1798. Location: directory gives Bhopatkar Rd, Sadashiv Peth; not confirmed by a better source, so omitted from description (portal listing says Pune only; check peth). The Hitavada article that surfaced is about a different Murlidhar Mandir in Nagpur - ignore. No official website or trust found; timings 7:00-12:30 appear only on an aggregator, not used. Description is at the lower end for detail; reviewer may want a Pune heritage or Marathi source."
+  },
+  {
+    "slug": "mahakali-caves",
+    "official_website": null,
+    "description": "The Mahakali Caves, also called the Kondivite or Kondivita Caves, are a Buddhist rock-cut monastery in Andheri East, Mumbai, on a hill near the SEEPZ area. Wikipedia counts 19 caves in two groups, four to the north-west and fifteen to the south-east, carved in black basalt. Most are viharas, or monks' cells; the largest, Cave 9, is a chaitya hall with a stupa and several badly mutilated Buddha figures. Wikipedia places the excavation between the 4th century BCE and the 6th century CE, while the Incredible India page gives the 1st century BCE to the 6th century CE, so the dating is uncertain and the individual caves are dated differently. The site is a Buddhist monastery complex rather than a place of Hindu worship.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mahakali_Caves",
+        "what_it_supports": "Wikipedia: Andheri East location; Buddhist monastery; 19 caves in two groups; Cave 9 chaitya; basalt; dates 4th c. BCE to 6th c. CE; cisterns"
+      },
+      {
+        "url": "https://incredibleindia.gov.in/en/maharashtra/mumbai/mahakali-caves",
+        "what_it_supports": "Incredible India (Ministry of Tourism): Buddhist rock-cut caves, 1st c. BCE-6th c. CE, 19 caves in two groups, cisterns, Pali inscriptions, visiting hours 9:00-16:00"
+      }
+    ],
+    "notes": "Date conflict: Wikipedia 4th c. BCE-6th c. CE vs Incredible India 1st c. BCE-6th c. CE (description states both). Group sizes differ: Wikipedia says 4 NW + 15 SE; Incredible India says Group I has 15 and Group II 4; consistent in total (19). Management: Wikipedia says only fenced/walled (flagged unclear); ASI/Maharashtra protection not confirmed from a source I opened. Timings 9:00-16:00 are on Incredible India (government tourism, not an official monument page), so timings_official left null; reviewer may accept. No official website exists for a monument."
+  },
+  {
+    "slug": "mandapeshwar-caves",
+    "official_website": null,
+    "description": "The Mandapeshwar Caves, are a rock-cut Shiva shrine near Mount Poinsur in Borivali, Mumbai. According to Wikipedia, Buddhist monks first carved the caves as viharas and Brahmins later occupied them as a Shaivite shrine. The cave has a sanctum, an antechamber, a pillared hall and an open forecourt, with lion-flanked steps. Sculptures include Nataraja, Lakulisa, Sadashiva and Ardhanarishvara, and a panel of the wedding of Shiva and Parvati is visible through a square window. Wikipedia says the ruins of a Portuguese church from 1544 stand above the cave. It also says most carvings are now damaged. Sources disagree on its age, with estimates ranging from about the 4th to 6th century to the 8th century, and the site is described as an archaeological heritage site protected under law.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mandapeshwar_Caves",
+        "what_it_supports": "Wikipedia: Borivali location near Mount Poinsur; Buddhist origin then Brahmanical Shiva shrine; sculptures; Portuguese church 1544 above; damaged carvings; protected heritage site"
+      },
+      {
+        "url": "https://ecoheritage.cpreec.org/mandapeshwar-cave/",
+        "what_it_supports": "CPR Environmental Education Centre eco-heritage page: sanctum/antarala/mandapa/courtyard, lion staircases, Nataraja, Lakulisa, Sadashiv, Ardhanarishvara, Shiva-Parvati marriage; 8th century vs 1500-1600 years conflict; church ruins on top"
+      }
+    ],
+    "notes": "Age conflict inside the sources themselves: 8th century (lead) vs 6th century / 1,500-1,600 years (body). Description states 6th or 8th. The alternate name Montperir comes from the portal listing/search titles, not a fetched sentence. Wikipedia says the Indian Archaeology Society is cited as protector and it is on a Mumbai Circle protected list; I could not confirm ASI/State Archaeology status from an official page. The cave is a Shaivite shrine but with Buddhist origins; not a regularly staffed temple as far as sources say. No official website; no official timings (null). Frontierindia, bijoor.me, puratattva and others appeared in search but were not opened."
+  },
+  {
+    "slug": "nasik-caves",
+    "official_website": null,
+    "description": "The Nasik Caves, known locally as Pandavleni or the Trirashmi caves, are a group of about twenty-four rock-cut caves on the Trirashmi hill roughly 8 km south of Nashik city. According to Wikipedia they are mainly Buddhist viharas, with one chaitya hall, Cave 18, that has a stone stupa; Cave 11 is dedicated to the Jain Tirthankara Rishabhanatha. The caves carry many donor inscriptions, and the Cave 10 record of Ushavadata is described as the earliest known use of Sanskrit (in a hybrid form) in western India. Wikipedia assigns the work to roughly the 1st century BCE to the 6th century CE, with different caves in different periods. Some scholars, per Wikipedia, link the name Pandavleni to the Pandavas. A Government of India page says the caves face east, so morning is best for viewing.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Nasik_Caves",
+        "what_it_supports": "Wikipedia: Trirashmi hill 8 km south of Nashik; 24 caves; Buddhist and Jain; Cave 18 chaitya; Cave 11 Jain; inscriptions; dates by cave; Pandava name link"
+      },
+      {
+        "url": "https://ffo.gov.in/locations/locationInformation/279",
+        "what_it_supports": "Government of India (ffo.gov.in) location page: 24 caves, Trirashmi, east-facing, midway up hill, reached by steps, Kshatrapa/Satavahana/Abhira context; no timings given"
+      }
+    ],
+    "notes": "Date conflicts: Wikipedia gives per-cave dates (c.100-70 BCE for Cave 19 to 2nd c. CE and a 6th c. CE alteration); ffo.gov.in says 3rd c. BCE-2nd c. CE. Description keeps the range loose and attributes it. Wikipedia says Pandavleni is Buddhist and Jain; it is not a Hindu temple. Wikipedia does not state who manages the site; ASI/Maharashtra Archaeology administration is not confirmed (ffo.gov.in refers visitors to the Maharashtra Department of Archaeology and Museums). No official timings available in an opened source, so null. Search results mention newly found caves at Trirashmi hill (iasbaba, gktoday) - not opened. No official website."
+  },
+  {
+    "slug": "omkareshwar-mandir-pune",
+    "official_website": null,
+    "description": "Omkareshwar is a Shiva temple on the bank of the Mutha river in Shaniwar Peth, in the old part of Pune. According to the Pune Heritage site, Krishnajipant Chitrav built it between 1740 and 1760, in the Peshwa period, and Wikipedia's Shaniwar Peth article also lists it among the historic temples there. The east-facing complex has a gateway with a nagarkhana (drum house), a courtyard ringed by small rooms and a Nandi shrine before the main hall. The sanctum holds a large Shivalinga, and the roof is described as having nine domes and nine spires. Other shrines include Vishnu, Bhavani, Ganesh, Hanuman and Shani. The ghat nearby served as a cremation ground, and Mahashivaratri and Shravani Somvar are the main festivals.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://puneheritage.defindia.org/?p=106",
+        "what_it_supports": "Pune Heritage (Development Education & Research Foundation/DEF): builder and 1740-1760 dates, riverside location, layout, nine domes/towers, Shivalinga, other shrines, festivals, cremation ground, 1961 flood"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Shaniwar_Peth,_Pune",
+        "what_it_supports": "Wikipedia: Omkareshwar dedicated to Shiva, historic temple in Shaniwar Peth; ghat on Mutha used as cremation ground until 1971"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/List_of_Hindu_temples_in_Pune",
+        "what_it_supports": "Wikipedia list: Omkareshwar a Mahadeo temple on the river, Peshwa-era 18th century"
+      }
+    ],
+    "notes": "Wikipedia article 'Omkareshwar Temple' appeared in search but is likely the Madhya Pradesh jyotirlinga page; it was not opened. Dating differs by source detail: Pune Heritage gives 1740-1760; an Indian Express note cited in Wikipedia marks '273 years' in 2011 (about 1738), so approx. No managing trust named in any opened source; no official website found (punetourism.co.in, yappe, splenden etc. are aggregators and were not used). Timings: Pune Heritage says open all day, which is not an official temple timetable, so null. Reviewer should check the temple's trust/Pune Municipal Corporation or Pune Heritage for opening hours. Portal listing (Shaniwar Peth, Pune) matches sources."
+  },
+  {
+    "slug": "parvati-hill-pune",
+    "official_website": null,
+    "description": "Parvati Hill is a hillock in Pune, Maharashtra, and after Vetal Hill the second-highest point in the city, at about 640 m above sea level. Its summit holds a complex of temples to Shiva as Devdeveshwar, Vitthal and Rukmini, Vishnu, Kartikeya, Surya and Bhawani. According to Wikipedia, the blackstone Devdeveshwar temple was completed in 1749 under the Peshwa Balaji Baji Rao, with a gold pinnacle added in 1760, on a hill earlier owned by the Patil Taware family. A Peshwa-era museum displays weapons, coins and household objects, and the Peshwa's memorial stands on the hill. Visitors climb a flight of stone steps to reach the shrines.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Parvati_Hill",
+        "what_it_supports": "Location, height, ranking after Vetal Hill, shrines, Devdeveshwar construction 1749 and pinnacle 1760, Taware family, museum, steps. Also states 5 am-10 pm timings (Wikipedia, not official)."
+      }
+    ],
+    "notes": "Only Wikipedia was opened. Wikipedia cites parvatidarshan.in but does not call it official; the fetch tool refused it (URL_NOT_ON_ALLOWLIST), so no official website confirmed (null). Timings of 5 am-10 pm appear only on Wikipedia, not an official site, so timings_official is null. Wikipedia gives conflicting step counts (103 in infobox, 108 in text) so no count is given. Wikipedia also says the Taware Devi image reportedly cured Kashibai's leg ailment, prompting the Peshwa to build the complex; omitted as legend. Wikipedia also notes an unfinished old Buddhist cave halfway up. Management (trust/Devasthan) not stated in any opened source."
+  },
+  {
+    "slug": "pohale-caves",
+    "official_website": null,
+    "description": "The Pohale Caves, also spelled Pohala or Pawala, are a small group of Buddhist rock-cut caves in Kolhapur district, Maharashtra, roughly 15 km north-east of Kolhapur city and close to the hill of Jyotiba. According to Wikipedia, the group includes a large vihara, or monastic hall, with columns on three sides and a ring of small cells around a central hall; a chaitya, or shrine hall; and another cave with a raised rock-cut seat for a teacher and a water cistern. The caves are described as rather plain, and no excavation date is given by the source, which draws on an 1897 survey of antiquarian remains in the Bombay Presidency and Archaeological Survey of India records.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Pohale_Caves",
+        "what_it_supports": "Location (Kolhapur district, ~15 km NE of Kolhapur, near Jyotiba), Buddhist tradition, vihara/chaitya/teacher's seat and cistern, plain character, 1897 list and ASI as sources."
+      }
+    ],
+    "notes": "Identified with confidence as Kolhapur district (not Pune/Raigad as the brief guessed); portal listing should be checked for district/city. Only Wikipedia opened; search results showed kolhapurtourism.org and durgbharari.in but not opened. Wikipedia's dimensions text is garbled so none quoted; no number of caves stated. No official website or timings; ASI/state monument page not found. Visiting access/safety not verified."
+  },
+  {
+    "slug": "shirwal-caves",
+    "official_website": null,
+    "description": "The Shirwal Caves, also written Shriwal, are a Buddhist rock-cut cave group near the village of Shirwal, about 48 km south of Pune on Wikipedia's account. The complex is listed as fifteen excavations: one chaitya, a prayer or shrine hall, and fourteen viharas that served as monastic dwellings. The caves are described as plain and are said to belong to an early phase of Buddhism, though the source gives no specific dates. It is a Buddhist monastic site rather than a Hindu temple.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Shirwal_Caves",
+        "what_it_supports": "Location (~48 km south of Pune), Buddhist, 15 caves (1 chaitya, 14 viharas), plain, early Buddhism, Ahir 2003 reference."
+      }
+    ],
+    "notes": "Only Wikipedia opened; it does not name the district. Shirwal is in Khandala taluka of Satara district per the brief; not verified from an opened source. Wikipedia says 48 km south of Pune; the brief says Satara district - plausible but unconfirmed. No official website, timings or ASI/state page found. Sources such as placesnearpune.com and aroundus.com appeared in search but were not opened (aggregators). Access conditions unverified."
+  },
+  {
+    "slug": "shivleni-caves",
+    "official_website": null,
+    "description": "The Shivleni Caves, also called Jogai Mandap, are rock-cut cave temples at Ambajogai in Beed district, Maharashtra, about half a kilometre north-west of the Yogeshwari temple on the bank of the Jayvanti river. It is a Shaiva (Hindu) rock-cut complex. According to Wikipedia, the complex has a courtyard and mandap, a central Nandi mandap, and an inner hall with 32 pillars and sculptures of Shiva, the Saptamatrukas and Ganesha. Wikipedia dates the caves to the reign of the Paramara king Udayaditya, citing an inscription of Saka 1066. Local legend links the place to the wedding of Jogaidevi, a form of Amba, and its stone elephants. Wikipedia describes it as a state-protected monument.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Shivleni_Caves",
+        "what_it_supports": "Location at Ambajogai, Jayvanti river, 32-pillar hall, Nandi mandap, Shiva/Saptamatruka/Ganesha sculptures, Udayaditya dating and inscription, Jogaidevi legend, state-protected status."
+      }
+    ],
+    "notes": "Identified as Shivleni (Jogai Mandap) caves at Ambajogai, Beed district (Wikipedia names the area; district itself only implied via gazetteer title 'Bhir'). NOT the Shivneri caves at Junnar (Buddhist) - portal reviewer should confirm the listing is not mixed up. Only Wikipedia opened. No official website or timings; Maharashtra Archaeology Dept page not found. Wikipedia's Udayaditya dating (c. 1060-1087) given as Wikipedia's claim; not independently verified."
+  },
+  {
+    "slug": "red-jogeshwari-temple-pune",
+    "official_website": null,
+    "description": "Shree Tambdi Jogeshwari is a temple of the goddess Jogeshwari in central Pune, Maharashtra. According to the Free Press Journal, it is regarded as one of the city's guardian deities, a 15th-century shrine, and Pune's Gram Daivat, and tradition holds that Shivaji sought its blessings before a Deccan campaign. Its Ganesh mandal, the second of the five revered Ganpatis of Pune's festival ranking, is known for a red-coloured Ganpati idol, which draws crowds on Tuesdays, and the article says Bal Gangadhar Tilak ranked this Ganpati among the most revered of Pune in 1893. The same article says the Shri Tambdi Jogeshwari Trust, set up in 1992, oversees the mandal.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://www.freepressjournal.in/pune/ganpatis-of-pune-tambadi-jogeshwari-ganpati-history-significance-legacy-2",
+        "what_it_supports": "Tambadi Jogeshwari temple, red Ganpati idol, 15th-century claim, Gram Daivat, Shivaji, Tilak, trust founded 1992."
+      },
+      {
+        "url": "https://www.freepressjournal.in/pune/punes-piwali-jogeshwari-temple-where-yellow-rice-offerings-are-believed-to-help-find-life-partners",
+        "what_it_supports": "Different temple: Piwali (yellow) Jogeshwari, Shukrawar Peth; used to rule out confusion."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/List_of_Hindu_temples_in_Pune",
+        "what_it_supports": "Lists Tambdi Jogeshwari as an old temple in the city centre dedicated to Jogeshwari, a guardian deity of Pune."
+      }
+    ],
+    "notes": "IDENTITY IS AN INFERENCE: no opened source uses the exact phrase 'Red Jogeshwari'. 'Tambdi' means red in Marathi (my own knowledge, not from an opened source), and a search hit (zeenews Marathi, 'Pune's third largest Red Jogeshwari Ganpati') was robots-blocked, so unread. Description therefore covers Tambdi Jogeshwari; reviewer must confirm this is the portal's intended entry and that it is not the Piwali (yellow) Jogeshwari of Shukrawar Peth. Free Press Journal calls the Ganpati second most revered in Tilak's 1893 ranking; sources elsewhere vary on rank (the zeenews headline says third), so rank was not asserted beyond the article. No official website found (none mentioned); no official timings."
+  },
+  {
+    "slug": "morya-gosavi-mangalmurti-chinchwad",
+    "official_website": "https://chinchwad.chinchwaddeosthan.org/",
+    "description": "In Chinchwad, now part of the Pimpri-Chinchwad area near Pune, stands the wada, or old mansion-temple, of Mangalmurti, a form of Ganesha, beside the samadhi shrine of the saint Morya Gosavi. According to the trust's website, the saint received this image from the Karha river at Morgaon, and it sits on a throne in a large wooden assembly hall lit by glass lamps. The same page says the child Shivaji visited, and that his mother Jijau's offerings of jewellery are worn by the deity during the saint's Sanjeevan Samadhi festival. Wikipedia describes Morya Gosavi as a key figure of the Ganapatya tradition. The shrine is run by the Chinchwad Deosthan Trust, which also oversees Morgaon, Theur, Siddhatek and Narangi.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://chinchwad.chinchwaddeosthan.org/greatness-of-sri-k%e1%b9%a3etra-chinchwad/sri-ma%e1%b9%81galamurti-wa%e1%b8%8da/?lang=en",
+        "what_it_supports": "Trust page on Mangalmurti Wada: idol from Karha river at Morgaon, wooden hall, Shivaji/Jijau offerings, Chinchwad Deosthan Trust manages Chinchwad, Morgaon, Theur, Siddhatek, Narangi. No contact, donation or timings on this page."
+      },
+      {
+        "url": "https://morgaon.chinchwaddeosthan.org/sri-k%e1%b9%a3etra-morgaon/?lang=en",
+        "what_it_supports": "Sister (Morgaon) site of same trust: footer 'Chinchwad Deosthan Trust', trust office address, phone and email; confirms the domain is the trust's. Its timings are for Morgaon only."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Morya_Gosavi",
+        "what_it_supports": "Wikipedia: Morya Gosavi as Ganapatya saint, moved to Chinchwad, sanjeevan samadhi, memorial temple inscription 1658-59; dates of the saint disputed (13th-17th c.)."
+      }
+    ],
+    "notes": "Website: chinchwad.chinchwaddeosthan.org is the Chinchwad subdomain of the trust's multi-site; the trust name is stated on it and on the sister Morgaon site (which lists office, phone, email chinchwaddeosthantrust@gmail.com). The root domain chinchwaddeosthan.org itself was refused by the fetch tool (not on allowlist), so reviewer may confirm the root and whether there are donation/booking pages. Timings: the only timings seen were the Morgaon temple's (Kakad aarti 5:00 etc.), NOT Chinchwad, so timings_official is null. Chinchwad page itself shows no timings. Description 'wada' is the page's term; saint's dates are disputed per Wikipedia so none given. Other results (punekarnews dress-code item) not opened. Portal naming 'Morya Gosavi Mangalmurti' is fine; the trust calls the building Mangalmurti Wada beside the Samadhi shrine."
+  },
+  {
+    "slug": "swaminarayan-mandir-mumbai-bhuleshwar",
+    "official_website": null,
+    "description": "Shri Swaminarayan Mandir stands in the Bhuleshwar area of south Mumbai and belongs to the Swaminarayan Sampraday. According to Wikipedia, a devotee named Ranchhoddas Pranjeevandas first converted his own house into a temple in 1868, and the present three-spired stone building was completed in 1903. The central shrine holds Laxminarayan Dev with Ghanshyam Maharaj, the eastern shrine Radha Golokvihari with Hari Krishna Maharaj, and Shiva, Ganesha and Hanuman are also honoured. Wikipedia notes a carved facade, a flight of steps to the assembly hall, and a dome painted with scenes from Krishna's life. It is listed there as part of the Laxminarayan Dev Gadi based at Vadtal. Festivals include Ram Navami, Janmashtami and Mahashivratri.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Shri_Swaminarayan_Mandir,_Mumbai",
+        "what_it_supports": "Wikipedia: location, 1868 origin, 1903 structure, deities, Vadtal (Laxminarayan Dev Gadi) affiliation, architecture, festivals. Lists no official website."
+      }
+    ],
+    "notes": "No official temple website could be confirmed. Wikipedia lists none (references are swaminarayansatsang.com and an archived swaminarayan.org.in page, not verified as official). Searches returned only Wikipedia mirrors and aggregators (gokshetra, templepurohit, myoksha etc.), not used. The Vadtal Gadi site (swaminarayanvadtalgadi.org, redirects to svg.org) exists; the redirect target was refused by the fetch tool, so whether it has a Mumbai Bhuleshwar page with contact/timings is unchecked; a reviewer should look there. Timings null. Wikipedia 1868/1903 dates kept as attributed. Listing looks right (Bhuleshwar, Mumbai)."
+  },
+  {
+    "slug": "takht-sri-hazur-sahib-nanded",
+    "official_website": "https://hazursahib.com/",
+    "description": "Takht Sachkhand Sri Hazur Abchalnagar Sahib is a gurdwara in Nanded, Maharashtra, on the bank of the Godavari, and one of the five Takhts of the Sikhs. It marks the place where Guru Gobind Singh ji passed away in 1708, after declaring the Guru Granth Sahib the eternal Guru. According to the Takht's own history page, a gurdwara was built on the site between 1832 and 1837 under Maharaja Ranjit Singh. The Takht is administered by the Takht Sachkhand Sri Hazur Abchalnagar Sahib Gurdwara Board, Nanded. Its website lists a daily maryada beginning in the early hours with Prakash of Sri Guru Granth Sahib ji, followed by kirtan and katha, and also describes langar, accommodation and other services for visiting sangat.",
+    "timings_official": "Daily schedule per official site (hazursahib.com/web/daily_schedule_puja_patth): 2:00 am holy water from Godavari for ishnan of Takht Sahib; 2:15 Sukhmani Sahib path begins; 3:15 Prakash of Sri Guru Granth Sahib ji; 3:40 Hukamnama from Sri Guru Granth Sahib ji and Sri Dasam Granth Sahib ji; 3:45 Asa Ji Di Var kirtan to 6:15; 6:30-8:00 morning prashad offering, installation of Sri Guru Granth Sahib ji and Anand Sahib Chowky with Hukamnama from both Granths; 8:00 katha; 10:15 start and conclusion of Akhand Path, Sehaj Path and Saptah Path; 11:30 kirtan ends, katha of Sri Dasam Granth; 12:00-1:00 pm cleaning of Takht Sahib and Harmander Sahib; 3:00 Deg Prashad bhog; 4:00-5:00 katha from Suraj Prakash; 5:00 Sodar kirtan; 6:30 Rehras Sahib; 7:30 Aarti, Chowki Swaiye and historical shastar darshan; 8:45 Kirtan Sohila.",
+    "sources": [
+      {
+        "url": "https://hazursahib.com/",
+        "what_it_supports": "Official site: names the Takht Sachkhand Sri Hazur Abchalnagar Sahib Gurdwara Board, Nanded; contact (24x7 call centre, email, Gurudwara Road address), donation and online room-booking links."
+      },
+      {
+        "url": "https://hazursahib.com/web/history",
+        "what_it_supports": "Official history: Guru Gobind Singh ji at Nanded 1708, Guru Granth Sahib as eternal Guru, Banda Singh Bahadur, gurdwara built 1832-37 under Maharaja Ranjit Singh, one of five Takhts, near Godavari."
+      },
+      {
+        "url": "https://hazursahib.com/web/board_members",
+        "what_it_supports": "Confirms Takht is controlled by Gurudwara Sachkand Board, Nanded; lists services (langar, accommodation, Dashmesh Hospital, schools). Member list empty on the page."
+      },
+      {
+        "url": "https://hazursahib.com/web/daily_schedule_puja_patth",
+        "what_it_supports": "Official Daily Schedule (Puja Patth) used for timings_official."
+      }
+    ],
+    "notes": "DUPLICATE of portal entry gurudwara-sachkhand-sri-hazur-sahib; recommend merging. Official site confirmed by naming the Board, contact, donation and booking pages. Schedule shows maryada times, not necessarily hours open to visitors; tool summary paraphrased the long 6:30-8:00 entry, so reviewer should check the page for exact wording and seasonal changes (e.g. summer/winter). Did not open Wikipedia (Hazur Sahib) or the SGPC/Tribune items about Board administration/Maharashtra Act disputes; these exist in search results, not used. Site's board members page is incomplete (count 0, blank president)."
+  },
+  {
+    "slug": "jaisalmer-jain-temples",
+    "official_website": null,
+    "description": "Inside the walls of Jaisalmer Fort in Rajasthan lies a group of seven Shvetambara Jain temples built of local yellow sandstone. According to Wikipedia they are dedicated to the tirthankaras Parshvanatha, Chandraprabha, Rishabhanatha, Sambhavanatha, Shitalanatha, Shantinatha and Kunthunatha, and were established from the 12th century and completed in the 16th. Wikipedia describes the Parshvanatha temple as the oldest, its main shrine ringed by 52 small shrines, and notes a library of manuscripts, the Gyan Bhandar, at the Sambhavanatha temple. The Incredible India tourism page mentions walls carved with animals and human figures and a black-stone image of Parshvanath with a serpent hood canopy. The fort is part of the UNESCO Hill Forts of Rajasthan group.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Jaisalmer_Fort_Jain_temples",
+        "what_it_supports": "Seven Shvetambara temples, tirthankaras, 12th-16th c. dating (Chandraprabha 1509; inscriptions 1416 and 1440), Parshvanatha oldest with 52 shrines, Gyan Bhandar, UNESCO Hill Forts of Rajasthan (2013)."
+      },
+      {
+        "url": "https://www.incredibleindia.gov.in/en/rajasthan/jaisalmer/a-journey-through-its-religious-spots",
+        "what_it_supports": "Government tourism page: Rishabhdev and Sambhavnath temples, carved animals/people, Parsvanath black-stone idol with hoods; says 12th-15th centuries (differs from Wikipedia)."
+      }
+    ],
+    "notes": "No official website: no temple-trust site was found (search results were tour operators and aggregators). The management trust (commonly a Jain shwetambar trust/Jaisalmer Jain sangh) was not confirmed by any opened source, so not stated. No official timings: ASI/government pages with timings were not opened; aggregator timings not used. Date conflict: Wikipedia says 12th century to 16th; Incredible India says about 12th-15th; description uses Wikipedia with attribution. Tool summaries paraphrase pages, so the 52-shrine and 1509 details should be double-checked against Wikipedia text. Fort entry/dress/photography rules not verified."
+  },
+  {
+    "slug": "kolvi-caves",
+    "official_website": null,
+    "description": "The Kolvi Caves lie near Kolvi village in Jhalawar district, southeastern Rajasthan, cut into a laterite hill. They are a Buddhist rock-cut site, not a Hindu temple. Wikipedia counts about fifty caves and reports that, of 64 monk cells once recorded, the Archaeological Survey of India has verified 45 similar structures. The site includes stupas and chaitya halls with Buddha figures in meditation and standing poses, some with circumambulation paths, and a standing Buddha about twelve feet tall showing the dharmachakra gesture. Wikipedia, citing Cunningham's observations, places the site at about 700 to 900 CE, with the style roughly 8th to 9th century CE,, later than the Bagh and Dhamnar caves, and describes a predominantly Mahayana character. Many figures are weathered, with their faces lost to natural decay.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Kolvi_Caves",
+        "what_it_supports": "Location, about 50 caves, ASI verification of 45 structures, roughly 700-900 CE dating, stupas, chaityas, 12-foot Buddha, weathering. Wikipedia states no formal protection status."
+      }
+    ],
+    "notes": "Sole opened source is Wikipedia. ASI Jaipur Circle page (asijaipurcircle.nic.in) was blocked by robots, so ASI protection status and any visiting hours are unverified. Incredible India (Jhalawar Buddhist heritage) page appeared in search but was not opened. No official website exists to my knowledge; none found. Wikipedia dating (700-900 CE vs 8th-9th) is its own wording; attribute as such. Kolvi is also spelled Kholvi. Access/visiting rules unverified; the site is remote and weathered, check before promoting to visitors."
+  },
+  {
+    "slug": "sanghiji-jain-temple-sanganer",
+    "official_website": null,
+    "description": "Sanghiji is a Digambar Jain temple in Sanganer, about 16 km from Jaipur, Rajasthan, and a noted pilgrimage site of the tradition. According to Wikipedia, its principal deity is Rishabhanatha (Adinatha), the first Tirthankara, and the idol is traditionally described as extremely ancient. The red-stone temple follows the Nagara style with Maru-Gurjara touches such as carved pillars, bracket figures and lotus ceilings, and has a decorated double-storey entrance and several shikharas. Wikipedia cites a torana inscription dated V.S. 1011 for the final building phase. Its underground levels are said to be kept closed to visitors, and a 1999 account reports that a Jain monk, Muni Sudhasagar, brought out a number of idols from the temple. The shrine is managed by the Shri Digamber Jain Atishaya Kshetra Mandir committee.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Sanghiji",
+        "what_it_supports": "Location, deity, Nagara/Maru-Gurjara style, entrance and shikharas, inscription dated V.S. 1011, underground levels, 1999 idols, management committee."
+      },
+      {
+        "url": "https://encyclopediaofjainism.com/?p=109595",
+        "what_it_supports": "Official-style name and postal address (Jain Mohalla, Sanganer, Jaipur 303902) and phone numbers 0141-2730390, 2731952; no website, committee or timings."
+      }
+    ],
+    "notes": "No official temple/trust website found or confirmed; search returned only Wikipedia, aggregators and Jain directories. No official timings. Wikipedia marks some details (inner layout) as needing citations; the 'about 4000 years old' idol claim was left out as unsupported. Phone numbers come from a directory (encyclopediaofjainism.com), not the temple; reviewer should verify. Dates stated are inscription-based per Wikipedia and should be treated as such."
+  },
+  {
+    "slug": "sitaleshwar-temple",
+    "official_website": null,
+    "description": "The Sitaleshwar Temple is a Shiva temple at Jhalrapatan in Jhalawar district, Rajasthan, and belongs to the Chandrabhaga group of temples on the town's edge. According to Wikipedia, the sanctum holds a Shiva lingam with a Nandi facing it in the hall, and the temple was built in the 7th century with its pillared hall added in the 10th. It faces east and has a hall, an antechamber and a square sanctum. The original tower collapsed, leaving a flat roof with a small dome. The pillars are carved with female figures, directional guardians and ascetics, and the sanctum doorway shows Ganga and Yamuna and Lakulisa in the lintel. It is listed as a Monument of National Importance by the Archaeological Survey of India.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Sitaleshwar_Temple",
+        "what_it_supports": "Location at Jhalrapatan, Chandrabhaga group, Shiva lingam, 7th-century date and 10th-century hall, layout, collapsed shikhara, pillar and doorway carving, ASI Monument of National Importance (N-RJ-71)."
+      }
+    ],
+    "notes": "Identified as the Sitaleshwar (Shitleshwar) Mahadev Temple, Jhalrapatan, Jhalawar, on Wikipedia's article; entry name was ambiguous but this is the only prominent Sitaleshwar temple found in Rajasthan. Only Wikipedia was opened for facts; its dates are scholarly estimates. No temple trust site; ASI/Rajasthan government monument pages were not opened, so timings null. Reviewer should confirm the portal's listing location is Jhalrapatan."
+  },
+  {
+    "slug": "tijara-fort-jain-temple",
+    "official_website": null,
+    "description": "The Tijara Jain temple (Chandraprabhu Atishaya Kshetra) is a Digambar Jain temple at Dehra in Tijara town, in the Khairthal-Tijara district (formerly Alwar) of Rajasthan, and is regarded as an atishaya kshetra, a pilgrimage place associated with miracles. It is dedicated to Chandraprabhu, the eighth Tirthankara. According to Wikipedia, the temple was established after an idol of Chandraprabha was recovered from the ground on 16 August 1956, and a second small idol was found in 1972, which supported the belief that the site had long been a dehra. The principal image is a white marble Chandraprabhu with an inscription dated 1497 CE. The complex has a manastambha, a Chandragiri Vatika, and shrines to Parshvanatha, Padmavati and the Navagraha.",
+    "timings_official": null,
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Tijara_Jain_temple",
+        "what_it_supports": "Location, Chandraprabhu deity, 1956 and 1972 idol finds, 1497 inscription on mulnayak, complex features (manastambha, Chandragiri Vatika, Parshvanatha, Padmavati, Navagraha shrines)."
+      },
+      {
+        "url": "https://www.incredibleindia.gov.in/en/rajasthan/alwar/tijara-jain-temple",
+        "what_it_supports": "Government tourism page: founded 1956 after recovering Chandraprabhu idol; atishay kshetra; Jain and Islamic architectural blend; red sandstone and white marble."
+      }
+    ],
+    "notes": "No official temple/committee website found. Timings: Incredible India page lists 7:00 AM-5:00 PM, but it is a tourism page for a non-monument, not the temple, so not used (null). Wikipedia gives conflicting founding years (1956 in text, 1986 in infobox); description uses 1956, which Incredible India also supports. Name 'Tijara Fort': the temple is in Tijara town, and no source opened ties it to the fort; the portal title may be misleading. Wikipedia says Khairthal-Tijara district, while the portal says Alwar (older district). Dates before 1956 such as the 1497 inscription are as per Wikipedia."
+  }
+]
