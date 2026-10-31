@@ -17,6 +17,8 @@ export interface BatchItem {
   notes: string | null
   /** Correction of text this earlier batch applied: replaces the live description only if it still equals that batch's text. */
   replaces_batch?: string
+  /** Present only for a temple that is not on the portal yet; applying the batch creates it with just these verified basics. */
+  new_temple?: { name: string; city: string; district?: string | null; state: string; deity: string; type: string; lat?: number | null; lng?: number | null }
 }
 export interface Batch { id: string; title: string; items: BatchItem[] }
 

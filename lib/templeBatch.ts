@@ -6,7 +6,7 @@ const MIN_DESC = 120
 export const isHttps = (u: unknown) => typeof u === 'string' && /^https:\/\/[^\s/]+\.[^\s]+$/.test(u)
 const textLen = (t: any) => String(t?.extended_description || t?.description || '').trim().length
 
-export interface Change { field: 'description' | 'official_website'; from: string; to: string }
+export interface Change { field: 'description' | 'official_website' | 'create'; from: string; to: string }
 export interface Row { slug: string; name: string; found: boolean; changes: Change[]; skipped: string[]; item: BatchItem }
 
 /** What applying this batch would change. Only empty or too-short fields are filled; nothing already good is overwritten. */
@@ -16,7 +16,14 @@ export async function previewBatch(batchId: string): Promise<{ id: string; title
   const rows: Row[] = b.items.map(item => {
     const t = docs.find(d => d.slug === item.slug)
     const r: Row = { slug: item.slug, name: t?.name || item.slug, found: !!t, changes: [], skipped: [], item }
-    if (!t) { r.skipped.push('Temple not found on the portal'); return r }
+    if (!t) {
+      const n = item.new_temple
+      if (n && item.description && item.description.trim().length >= MIN_DESC) {
+        r.name = n.name
+        r.changes.push({ field: 'create', from: '', to: `${n.name}, ${n.city}${n.district ? ' (' + n.district + ' district)' : ''}, ${n.state}. Deity: ${n.deity}. Type: ${n.type}.${isHttps(item.official_website) ? ' Website: ' + item.official_website + '.' : ''}\n\n${item.description.trim()}` })
+      } else r.skipped.push('Temple not found on the portal')
+      return r
+    }
     if (item.description && item.description.trim().length >= MIN_DESC) {
       const was = item.replaces_batch ? BATCHES.find(x => x.id === item.replaces_batch)?.items.find(i => i.slug === item.slug) : undefined
       const untouched = !!was?.description && String(t.description || '').trim() === was.description.trim()
@@ -43,6 +50,20 @@ export async function applyBatch(batchId: string, slugs: string[]) {
   const chosen = pv.rows.filter(r => r.changes.length && (!slugs.length || slugs.includes(r.slug)))
   const log: any[] = []
   for (const r of chosen) {
+    const mk = r.changes.find(c => c.field === 'create')
+    if (mk) {
+      const n = r.item.new_temple!
+      if (await (Temple as any).exists({ slug: r.slug })) continue
+      await (Temple as any).create({
+        slug: r.slug, name: n.name, state: n.state, city: n.city, district: n.district || undefined, deity: n.deity, type: n.type,
+        description: r.item.description!.trim(), categories: [n.type], has_live: false,
+        ...(isHttps(r.item.official_website) ? { official_website: r.item.official_website } : {}),
+        ...(typeof n.lat === 'number' && typeof n.lng === 'number' ? { lat: n.lat, lng: n.lng } : {}),
+        description_batch: batchId, description_verified_at: new Date(), description_sources: r.item.sources.map(s => s.url),
+      })
+      log.push({ slug: r.slug, created: true, fields: ['create'] })
+      continue
+    }
     const set: any = { description_batch: batchId, description_verified_at: new Date() }
     for (const c of r.changes) set[c.field] = c.to
     if (r.changes.some(c => c.field === 'description')) set.description_sources = r.item.sources.map(s => s.url)
@@ -58,6 +79,7 @@ export async function undoBatch(batchId: string) {
   const rec: any = await col().findOne({ _id: batchId as any })
   if (!rec || rec.undone_at) throw new Error('This batch is not currently applied.')
   for (const it of rec.items) {
+    if (it.created) { await (Temple as any).deleteOne({ slug: it.slug, description_batch: batchId }); continue }
     const unset: any = { description_batch: '', description_verified_at: '' }
     const set: any = {}
     for (const f of it.fields) {
