@@ -205,7 +205,7 @@ export default async function TemplePage({ params }: Props) {
 
             {/* Description */}
             <p className="text-base leading-relaxed mb-4" style={{ color:'var(--muted)' }}>
-              {t.extended_description || t.description}
+              {t.description_batch ? t.description : (t.extended_description || t.description)}
             </p>
             {t.description_sources?.length > 0 && (
               <p className="text-xs mb-4" style={{ color:'var(--muted2)' }}>
