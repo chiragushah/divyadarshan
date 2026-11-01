@@ -14,6 +14,7 @@ import b13 from './batch-13.json'
 import b14 from './batch-14.json'
 import b15 from './batch-15.json'
 import b16 from './batch-16.json'
+import b17 from './batch-17.json'
 
 export interface BatchItem {
   slug: string
@@ -51,4 +52,5 @@ export const BATCHES: Batch[] = [
   { id: 'batch-14', title: 'Batch 14: Verified descriptions for 60 more temples (Maharashtra, Gujarat, Rajasthan, Goa, Karnataka)', items: b14 as unknown as BatchItem[] },
   { id: 'batch-15', title: 'Batch 15: Verified descriptions for 73 temples (Tamil Nadu, Kerala, Andhra Pradesh, Telangana)', items: b15 as unknown as BatchItem[] },
   { id: 'batch-16', title: 'Batch 16: Verified descriptions for 76 temples (Uttar Pradesh, Madhya Pradesh, Delhi, Haryana, Uttarakhand)', items: b16 as unknown as BatchItem[] },
+  { id: 'batch-17', title: 'Batch 17: Verified descriptions for 79 temples (Himachal, Punjab, West Bengal, Odisha, Bihar, Jharkhand, Assam, J&K, Chhattisgarh, Arunachal, Tripura)', items: b17 as unknown as BatchItem[] },
 ]
