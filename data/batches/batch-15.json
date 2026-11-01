@@ -1,0 +1,1524 @@
+[
+ {
+  "slug": "achankovil-sastha-temple",
+  "official_website": null,
+  "description": "Achankovil Sastha Temple is in Achankovil, within Aryankavu panchayat in Kollam district, Kerala, close to the Achankovil river. It is dedicated to Sastha, called locally Achankovil Andavan or Achankovil Arasan, and is listed by Wikipedia among five major Sastha temples of Kerala, with Kulathupuzha, Aryankavu, Sabarimala and Kanthamala. The deity is portrayed as a householder with two consorts, Purna and Pushkala, one on each side, and the complex has subordinate shrines including Bhagavati, Ganesha, Kartikeya, Durga and Nagaraja, plus a serpent grove. Local tradition holds that the idol was consecrated by Parashurama. The temple is known for a traditional snakebite remedy of sandalwood paste and herbal medicine, and the deity is revered as a healer; Wikipedia notes the evidence is largely anecdotal, and prompt medical care remains essential after a bite. Festivals include the ten-day Mandala Puja in the Malayalam month of Dhanu, the Revathi Puja in Makaram and a chariot festival, the Therottam. According to Wikipedia, the Travancore Devaswom Board administers the temple and the architecture is Dravidian in style.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Achankovil_Sastha_Temple",
+    "what_it_supports": "Location (Aryankavu panchayat, Kollam), deity names, Purna/Pushkala, subordinate shrines, Parashurama tradition, snakebite treatment, festivals, TDB administration, Dravidian style, one of five Sastha temples"
+   },
+   {
+    "url": "https://www.travancoredevaswomboard.org/about",
+    "what_it_supports": "Travancore Devaswom Board is a body constituted under the Travancore-Cochin Hindu Religious Institutions Act 1950 administering 1,248 temples in the former Travancore state (general support for TDB administration only; page does not mention Achankovil)"
+   }
+  ],
+  "notes": "Identity clear. Only one detailed source (Wikipedia); the oneindia and hindutone pages appeared in search but were not fetched. TDB administration is Wikipedia's claim and consistent with TDB's remit, but no TDB page specific to Achankovil was fetched, so please verify on TDB's Achankovil page. TDB's site (travancoredevaswomboard.org) is a Board-wide site, not a temple-specific one; I did not set it as this temple's official_website. Snakebite treatment described as a tradition, not a medical claim; do not present as a cure. Timings not found on an official source.",
+  "replaces_live": "Ancient Sastha (Ayyappa) temple in the Achankovil forest. One of five Sastha temples. Important pilgrimage."
+ },
+ {
+  "slug": "airavatesvara-temple-darasuram",
+  "official_website": null,
+  "description": "Airavatesvara Temple stands at Darasuram, a locality beside Kumbakonam in Thanjavur district, Tamil Nadu, and is dedicated to Shiva. According to Wikipedia it was built by the Chola king Rajaraja II in the mid-twelfth century, with completion placed around 1166 CE. By tradition, its name comes from Indra's white elephant Airavata, said to have regained its white colour after worshipping Shiva at this site. The sanctum houses a lingam of roughly 1.5 metres beneath a vimana about 24 to 25 metres high, depending on the source. The Rajagambhiram mandapa is shaped like a stone chariot with carved wheels and horses, and the pillars and friezes show Puranic episodes and the lives of the Nayanmar saints. A separate shrine honours the goddess. Smaller than the Thanjavur and Gangaikondacholapuram temples, it is valued for the detail of its carving. It belongs to the UNESCO-listed Great Living Chola Temples.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Airavatesvara_Temple",
+    "what_it_supports": "Location, Rajaraja II, 1166 CE completion, vimana, chariot mandapa, UNESCO group, Nayanmar reliefs"
+   },
+   {
+    "url": "https://www.thenewsminute.com/amp/story/tamil-nadu/darasurams-treasure-trove-carvings-intricate-airavateshwara-temple-35386",
+    "what_it_supports": "Airavata legend, 1.5 m lingam, 25 m vimana, carvings, UNESCO 2004 listing, smaller scale than other two Chola temples"
+   },
+   {
+    "url": "https://tntemplesproject.in/Airavateswarar-Darasuram-Thanjavur",
+    "what_it_supports": "Kumbakonam/Thanjavur location, ASI maintenance, UNESCO status, Raja Gambhira mantapam"
+   }
+  ],
+  "notes": "No official temple-run website found; the site is ASI-maintained (ASI/state tourism pages do not qualify). Timings 7-12 and 17-20 appear on tntemplesproject.in (not official), so timings_official is null. Dates conflict mildly: Wikipedia gives Rajaraja II reign 1146-1172, The News Minute 1143-1173; description says 'mid-twelfth century'. Wikipedia infobox gives UNESCO inscription 1987 vs text 2004 (2004 extension); description avoids the year. UNESCO page itself (whc.unesco.org) was blocked by the allowlist so not verified directly; reviewer may add it. Wikipedia notes the cause of past damage is uncertain; omitted.",
+  "replaces_live": "Third Great Chola Temple. Airavata (Indras elephant) worshipped Shiva here. 12th century. UNESCO World Heritage."
+ },
+ {
+  "slug": "alampur-jogulamba-temple",
+  "official_website": null,
+  "description": "Jogulamba Temple at Alampur, Jogulamba Gadwal district, Telangana, stands on the Tungabhadra near its meeting with the Krishna. Wikipedia describes the goddess Jogulamba as a form of Shakti, shown seated on a corpse with a scorpion, frog and lizard on her head; the name is said to mean mother of yogis. Shaktism lists Alampur among the eighteen Maha Shakti Peethas, where Sati's upper teeth are held to have fallen. Wikipedia reports an origin around the 7th century CE and destruction by the Bahmani Sultans in 1390, with the icon sheltered in the nearby Bala Brahmeswara temple until the shrine was rebuilt at its original site in 2005. The setting is the Navabrahma temple complex, nine Shiva temples attributed to the Badami Chalukyas of the 7th-8th centuries. The Telangana tourism site mentions an Alampur site museum established in 1952. The temple was included in the Government of India's PRASAD pilgrimage scheme in 2019, according to Wikipedia.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Jogulamba_Temple,_Alampur",
+    "what_it_supports": "deity, Shakti Peetha claim, 1390 destruction, 2005 rebuild, PRASAD"
+   },
+   {
+    "url": "https://telanganatourism.gov.in/blog/28-02-2020.html",
+    "what_it_supports": "location, Navabrahma dating, site museum, Roudra form"
+   }
+  ],
+  "notes": "Two sources only. A direct Wikipedia fetch under another URL was blocked, so the article title 'Alampur Jogulamba Temple' vs 'Jogulamba Temple, Alampur' was not compared. Attributions of the 1390 destruction are from Wikipedia; sensitive: kept to a neutral, attributed statement (avoided the communal framing). Administering body (Telangana Endowments Dept.) not confirmed by a source, so omitted. No official website found. Distance figures differ (210 vs 220 km from Hyderabad), omitted.",
+  "replaces_live": "One of 18 Maha Shakti Peethas. Goddess Jogulamba — Sati in terrible form. At confluence of Krishna and Tungabhadra."
+ },
+ {
+  "slug": "annavaram-satyanarayana-temple",
+  "official_website": null,
+  "description": "Sri Veera Venkata Satyanarayana Swamy Temple crowns Ratnagiri Hill at Annavaram, in Kakinada district (formerly East Godavari), Andhra Pradesh, close to the Pampa River. The deity is Satyanarayana, a form of Vishnu, worshipped with Anantha Lakshmi and Shiva. The district tourism page describes the cylindrical main image as joining the Hindu Trinity in a single form. According to temple tradition recounted on Wikipedia, a Brahmin and a local ruler dreamed that Vishnu wished to be installed on the hill; the idol was found beneath a Krishna Kutaja tree and consecrated on 6 August 1891, and the shrine was rebuilt in stone in 1933-34. The two-storey temple is designed to resemble a chariot with four wheels. It is best known for the Satyanarayana Vratam, performed in a mandapam on the premises, with large gatherings during the month of Karthika. The district tourism page also lists a Kalyana Mahotsavam of the deity, which it places in May. The Andhra Pradesh Endowments Department administers it through the Devasthanam.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Satyanarayana_Temple,_Annavaram",
+    "what_it_supports": "Kakinada district, tradition of discovery, 6 Aug 1891 consecration, 1933-34 stone rebuild, chariot design, Vratam, Endowments administration"
+   },
+   {
+    "url": "https://eastgodavari.ap.gov.in/lord-sri-veera-venkata-satya-narayana-swamy-vari-devasthanam-annavaram/",
+    "what_it_supports": "District govt page: two-storey shrine, yantra, Trinity image, Kalyana Mahotsavam in May, Sankhavaram mandal"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Annavaram",
+    "what_it_supports": "Kakinada district, Ratnagiri Hill, Pampa River, Karthika crowds"
+   },
+   {
+    "url": "https://www.utsav.gov.in/view-darshan/annavaram",
+    "what_it_supports": "Govt portal: Satyadeva with Anantha Lakshmi and Shiva, Hari-Hara-Hiranyagarbha"
+   }
+  ],
+  "notes": "Wikipedia links annavaramdevasthanam.nic.in as the Devasthanam site, but fetching it was blocked by the allowlist, so footer/ownership could not be confirmed; official_website left null. Reviewer should verify that site's footer/trust name and consider setting it. Also an .nic.in/Endowments-run site could be judged govt-run; judgment call. Timings not taken (no official source read). Wikipedia says 'second most important pilgrimage site in AP' - omitted as unattributed superlative. District: portal says East Godavari; as of Wikipedia it is Kakinada district (2022 reorganisation).",
+  "replaces_live": "Lord Veera Venkata Satyanarayana atop Ratnagiri hill. Major pilgrimage for AP devotees. Satyanarayana Puja tradition."
+ },
+ {
+  "slug": "arunachaleswarar-temple",
+  "official_website": null,
+  "description": "Arunachaleswarar Temple, also called Annamalaiyar Temple, stands at the foot of the Arunachala hill in Tiruvannamalai, Tamil Nadu. It is dedicated to Shiva, worshipped as Annamalaiyar in the form of a fire lingam, with Parvati as Unnamulai Ammai. It is counted among the Pancha Bhoota Sthalams, the five Shiva temples linked to the natural elements, and here the element is fire. According to Wikipedia, the present masonry dates to the Chola period, with major additions under the Vijayanagara rulers, and the eastern Rajagopuram, about 66 metres and eleven tiers tall, was completed under the Nayaks. Wikipedia describes the complex as covering roughly 10 hectares. The temple is praised in the Tevaram hymns. Its best-known festival is Karthigai Deepam, held in the Tamil month of Karthigai, which ends with a flame lit on the hill. Devotees also walk the roughly 14 km girivalam circuit around the hill, especially on full-moon days. According to Wikipedia, the Tamil Nadu HR&CE Department currently administers the temple.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Arunachalesvara_Temple",
+    "what_it_supports": "Location, deities, Pancha Bhoota/Paadal Petra status, Chola/Vijayanagara history, 66 m eastern gopuram, ~10 ha area, Karthigai Deepam, girivalam ~14 km, HR&CE administration"
+   },
+   {
+    "url": "https://shivatemples.com/nnaadu/nn22.php",
+    "what_it_supports": "District (Tiruvannamalai), deities, Pancha Bhoota Sthalam, 217 ft eastern gopuram, Karthigai Deepam, girivalam ~14 km"
+   }
+  ],
+  "notes": "Candidate official/temple-administration sites could not be fetched (not on the session allowlist, curl blocked), so no website is set. Likely official/HR&CE host arunachaleswarartemple.tnhrce.in is a state department domain and was unverified. Source conflict: Wikipedia says five prakarams and four large gopurams; shivatemples.com says six prakarams and nine gopurams, so counts were omitted from the description. shivatemples.com also calls the eastern tower the second tallest in Tamil Nadu; not used. Search results showed a July 2026 news item (organiser.org) on an HR&CE temple property dispute; not used, reviewer may wish to be aware. Wikipedia attributes the ASI 2002 episode and litigation; omitted. Confirm Tevaram attribution before publishing.",
+  "replaces_live": "Pancha Bhuta Stala for Agni (fire). Sacred hill Arunachala believed to be Shiva himself. Karthigai Deepam beacon visible for miles."
+ },
+ {
+  "slug": "attukal-bhagavathy-temple",
+  "official_website": null,
+  "description": "Attukal Bhagavathy Temple stands at Attukal on the banks of the Killi river in Thiruvananthapuram, Kerala, roughly two kilometres south-east of the Sree Padmanabhaswamy Temple. The presiding deity is Attukal Amma, regarded as Bhagavathy, a form of Bhadrakali or Parvati, and is often identified with Kannaki, the heroine of the Tamil epic Silappadikaram. According to traditional accounts, the goddess appeared as a young girl to the head of the Mulluveettil family and later directed him in a dream to consecrate her at a spot marked by signs. Shiva and Ganesha are among the other deities worshipped. The temple is best known for the Attukal Pongala, a ten-day festival in the Malayalam month of Kumbham (February-March) in which women cook sweet rice offerings in clay pots in the open. According to Wikipedia, the Guinness Book of World Records recorded the gathering in 1997 and again in 2009; the Attukal Temple Trust expected 3.5 to 4 million women at the 2026 Pongala on 3 March.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Attukal_Temple",
+    "what_it_supports": "Location in Thiruvananthapuram, Bhadrakali/Kannaki identification, Pongala, Guinness listing"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Attukal_Pongala",
+    "what_it_supports": "Ten-day Kumbham festival, rituals, Guinness 1997 (about 1.5 million) and 2009 (about 2.5 million), 3 March 2026 date"
+   },
+   {
+    "url": "https://www.etvbharat.com/en/state/thiruvananthapuram-stands-ready-for-attukal-pongala-enn26030204271",
+    "what_it_supports": "Attukal Temple Trust, 3.5-4 million expected in 2026, Killi river bank, ~2 km from Padmanabhaswamy, sub-deities"
+   },
+   {
+    "url": "https://www.thekeralatemples.com/templeinfo/bhagavathy/aattukaal.htm",
+    "what_it_supports": "Mulluveettil legend, Kannaki link, Attukal Bhagavathy Temple Trust as registered administering body"
+   }
+  ],
+  "notes": "No official temple/trust website could be verified: guessed domains (attukal.org, attukaltemple.org, etc.) were unreachable from this environment and search surfaced none; so null. thekeralatemples.com is a third-party listing (legend text attributed to tradition accordingly). Wikipedia text says 'over 3 million women' while the 2009 Guinness figure on the Pongala page is ~2.5 million and the 2026 expectation is 3.5-4 million: figures are year-specific; description uses attributed figures only. keralatemples.info gives different distances/numbers (e.g. 300,000 women), clearly unreliable and not used. Timings not available from an official source.",
+  "replaces_live": "Guinness World Record for largest gathering of women. Pongala festival draws 3 million women to cook."
+ },
+ {
+  "slug": "brihadeeswarar-temple",
+  "official_website": null,
+  "description": "Brihadisvara (Brihadeeswarar) Temple stands in Thanjavur, Tamil Nadu, on the south bank of the Cauvery, and is dedicated to Shiva, worshipped as a large linga in the sanctum. UNESCO records that the Chola king Rajaraja I (r. 985-1012 CE) began construction possibly in 1003-1004 CE and consecrated it in 1009-1010 CE. The granite main tower, or vimana, has thirteen tiers crowned by an octagonal sikhara; UNESCO gives its height as about 59.82 m, though other publications quote figures near 63 m. The complex includes a colonnaded enclosure with sub-shrines, an entrance gopura and a monolithic Nandi. UNESCO notes mural paintings and carvings of 81 of the 108 karanas on the walls. The temple was inscribed as a World Heritage Site in 1987 and forms part of the Great Living Chola Temples. According to Wikipedia, the Archaeological Survey of India protects the monument, while the Thanjavur Palace Devasthanam, whose hereditary trustee is head of the Thanjavur Maratha family, manages the temple. The Brahan Natyanjali dance festival is held around Maha Shivaratri.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://whc.unesco.org/en/list/250/",
+    "what_it_supports": "builder, construction/consecration dates, vimana height 59.82 m, 13 tiers, murals, karanas, 1987 inscription"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Brihadisvara_Temple",
+    "what_it_supports": "location, Nandi, ASI protection, Palace Devasthanam trusteeship, Brahan Natyanjali, conflicting height figures"
+   },
+   {
+    "url": "https://www.sahapedia.org/conversation-babaji-bhonsle",
+    "what_it_supports": "Babaji Bhonsle describes the palace devasthanam as controlling about 88 temples (does not use the term hereditary trustee)"
+   }
+  ],
+  "notes": "Official website: none verified; no temple/devasthanam-run site found via search (Thanjavur Palace Devasthanam site not located). Timings not available from an official source. Conflicts: vimana height 59.82 m (UNESCO) vs 63.4 m / 65.83 m (Wikipedia, the latter apparently an elevation) vs 61 m (UNESCO Russian text); Nandi dimensions differ within Wikipedia. Wikipedia's 'hereditary trustee' wording is not confirmed by the Sahapedia interview; reviewer should verify before stating trusteeship strongly. Hosts of wikipedia.org were fetchable only via search-result URLs.",
+  "replaces_live": "UNESCO World Heritage. Built by Raja Raja Chola I in 1010 CE. Vimana among tallest temple towers in world."
+ },
+ {
+  "slug": "buddha-temple-buddhamangalam",
+  "official_website": null,
+  "description": "The Buddha Temple is a small Buddhist shrine in Buddhamangalam village, Kilvelur taluk, Nagapattinam district, Tamil Nadu. It is dedicated to the Buddha, shown in a seated image on a pedestal whose face is no longer clearly visible. Wikipedia describes it as one of the earlier Buddhist centres in Tamil Nadu but gives no date for the shrine or the image. The Way of Bodhi website reports that the statue was found in the surrounding fields and is now kept in a newly built vihara beside them, which local people said was funded by a group of Buddhists from Thailand. It explains the village name as meaning an auspicious place of the Buddha. Both sources describe the site as poorly maintained, and Way of Bodhi adds that window grills at the vihara had been stolen. The village is a farming community, so visitors should expect a modest rural site rather than a developed pilgrimage centre.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Buddha_Temple,_Buddhamangalam",
+    "what_it_supports": "Location (Buddhamangalam, Kilvelur taluk, Nagapattinam district), dedication to the Buddha, seated statue with indistinct face, one of the earlier Buddhist centres in Tamil Nadu, not maintained; cites Dinamalar 2014 etc."
+   },
+   {
+    "url": "https://wayofbodhi.org/buddha-statues-of-buddhamangalam-and-peruncheri",
+    "what_it_supports": "Statue found in fields, now in newly built vihara, Thai Buddhist sponsorship per locals, name meaning, poor condition, stolen window grills, farming village"
+   }
+  ],
+  "notes": "Identified with confidence as the Buddhamangalam (also written Puthamangalam) Buddha image near Kilvelur, Nagapattinam district. No date for the statue found in either source (the 8th-10th c. date on the Wayofbodhi page belongs to the Peruncheri statue, not this one). Both sources are thin; Wikipedia relies on Tamil press (Dinamalar 2014, Minnambalam 2018, etc.), Wayofbodhi is a hobbyist/Buddhist heritage site. No ASI/state protection mentioned. No official trust/website found; none claimed. Timings not available. Vihara may now be a Buddhist (not Hindu) site: portal should not present it as a Hindu temple; description uses Buddhist terms.",
+  "replaces_live": "The Buddha Temple is a temple dedicated to Buddha, at Buddhamangalam, Nagapattinam district, Tamil Nadu, India.\n"
+ },
+ {
+  "slug": "buddha-temple-perunjeri",
+  "official_website": null,
+  "description": "The Buddha Temple at Perunjeri (also spelled Perunchery) is a Buddhist shrine in Mayiladuthurai district, Tamil Nadu, said to lie about half a kilometre off the Sundrappanchavadi-Kilianur road on the Mayiladuthurai-Thiruvarur route. According to Wikipedia, its main image is a Buddha statue about 5 feet 3 inches tall (another account gives about 5 feet 7 inches), showing the tradition's usual iconographic features: tightly coiled hair, a flame-like crest above the head, elongated ears and an upper garment. The pedestal carries a Tamil inscription that is reported to be faint and hard to read. Wikipedia notes the statue was originally found about a furlong from the present shrine, and gives no date for either the statue or the temple; one independent account assigns the image to roughly the 8th to 10th century CE. The shrine is still in use, with local people lighting lamps before the image. It belongs to the wider group of Buddha images that survive in the Kaveri delta region, several of which a 2014 Dinamalar report described as poorly maintained. No detailed history, trust or visiting arrangements are documented in the sources consulted.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Buddha_Temple,_Perunjeri",
+    "what_it_supports": "Location (Mayiladuthurai district), statue height 5 ft 3 in, iconography, faint Tamil inscription, find-spot a furlong away, still worshipped, cites 2014 Dinamalar report"
+   }
+  ],
+  "notes": "Only one fetched source (Wikipedia), which is thin and undated; description stays within it. Second source (Ponni Buddha blog, 2013) appeared in search but was not read, so not used. No official site, ASI or state page found. Do not confuse with the Madras High Court case (Aug 2022, W.P. 4715 of 2011) about a Buddha sculpture treated as Thalaivetti Muniyappan at Periyeri, Kottai Road, Salem district: LiveLaw spells it Periyeri/Salem, not Perunjeri, so it is a different place and was deliberately excluded. Wikipedia does not name the taluk. Diverging spelling Perunjeri/Perunchery/Perunjeri.",
+  "replaces_live": "The Buddha Temple is a temple dedicated to Buddha, at Perunjeri, Mayiladuthurai district, Tamil Nadu, India.\n"
+ },
+ {
+  "slug": "chakkulathukavu-devi-temple",
+  "official_website": "https://chakkulathukavutemple.org/",
+  "description": "Chakkulathukavu Sree Bhagavathy Temple is a Devi temple at Neerattupuram in Thalavady panchayat, Alappuzha district, Kerala, near Thiruvalla and on the banks of the Pampa river. The presiding deity, Chakkulathamma, is regarded as a form of Durga. The temple's own account also mentions a Vana Durga idol, subsidiary shrines to Shiva, Sastha, Vishnu and others, and an adjoining Hanuman shrine. Its founding legend, as told by the temple, speaks of a hunter who came upon a sand-covered shell that the sage Narada opened to reveal a Vana Durga image, and the temple states that it is almost 3,000 years old, a claim not independently dated. The major festival described by Wikipedia is the Pongala in the month of Vrischikam (November-December), when women cook rice, coconut and jaggery in earthen pots; the temple reports very large gatherings. Other observances include Thrikkarthika, Nirapara around Vishu, Panthrandu Noyambu from the first to the twelfth of Dhanu, and Naree Pooja. The temple is managed by a trust whose managing trustees include its chief priest, and a separate charitable trust, the Chakkulathamma Sanjeevani Ashramam Charitable Trust, runs social, education and health programmes.",
+  "timings_official": "Darshan: 5 AM TO 1PM & 4.30PM TO 8PM",
+  "sources": [
+   {
+    "url": "https://chakkulathukavutemple.org/about-temple/",
+    "what_it_supports": "Official: location, Chakkulathamma/Durga, Vana Durga idol, upa devas, Hanuman shrine, founding legend (hunter, sand shell), ~3,000-year claim, Pattamana Illom, 1981 renovation, festivals, darshan timings."
+   },
+   {
+    "url": "https://chakkulathukavutemple.org/adminidtration/",
+    "what_it_supports": "Official: trustees/priests, Chakkulathamma Sanjeevani Ashramam Charitable Trust; footer 'Chakkulathukavutemple. All Rights Reserved' confirms site ownership."
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Chakkulathukavu_Temple",
+    "what_it_supports": "Neerattupuram, Thalavady panchayat, Alappuzha district; Durga/Chakkulathamma; Pongala in Vrischikam; Panthrandu Noyampu; Pampa river; near Thiruvalla."
+   },
+   {
+    "url": "https://dtpcalappuzha.com/destination/chakkulathukavu-sree-bhagavathi-temple",
+    "what_it_supports": "District Tourism Promotion Council listing: Pampa banks, Pongala, Panthrandu Noyampu, timings 5:00-1:00 and 4:30-8:00 (matches official), ~3,000-year belief."
+   },
+   {
+    "url": "https://templesofkerala.org/alappuzha/chakkulathukavutemple.html",
+    "what_it_supports": "Third-party corroboration of deity, address, festivals."
+   }
+  ],
+  "notes": "Official site chakkulathukavutemple.org verified via the Administration page (trustee list, charitable trust, copyright footer '2026. Chakkulathukavutemple. All Rights Reserved', developer credit VICORPORATE PVT LTD). Discrepancies between sources: Pongala crowd/queue length is given as about 20 km (Wikipedia, templesofkerala) vs 40-50 km (official site); description avoids a figure. Kerala Tourism places the temple 'about 30 km southeast of Alappuzha ... between the Pamba and Manimala rivers' and lists Thiruvalla, while Wikipedia/DTPC say Alappuzha district banks of Pampa; the village Neerattupuram/Thalavady is in Alappuzha district on the Pathanamthitta border, so district assignment should be confirmed by reviewer (portal lists Alappuzha; consistent with Wikipedia and the official site). The ~3,000-year age is the temple's/DTPC's claim only; the official site also records a 1981 renovation and a 1851 incident behind Thrikkarthika, not used. Timings are copied verbatim from the official About page and should be re-checked by the team since festival days differ.",
+  "replaces_live": "Goddess Chakkulathamma. Snake boat race (Vallamkali) associated with temple. Backwater Kerala tradition."
+ },
+ {
+  "slug": "chidambaram-nataraja-temple",
+  "official_website": null,
+  "description": "The Nataraja Temple at Chidambaram, in Cuddalore district of Tamil Nadu, is a Shaiva temple where Shiva is worshipped as Nataraja, the lord of dance. The goddess Shivakama Sundari has her own shrine. According to Wikipedia, the temple is counted among the Pancha Bhuta Sthalams, with its sanctum linked to the element of space (akasha). The inner sanctum, the Chit Sabha, contains the Chidambara Rahasyam, a curtained space that devotees understand as representing the formless presence of the deity. The complex covers roughly 40 acres across four courtyards, with nine gopurams, halls such as the Kanaka Sabha and the thousand-pillared Raja Sabha, and the Sivaganga tank. According to Wikipedia, the temple drew patronage from Pallava, Chola, Pandya, Vijayanagara and Nayaka rulers over many centuries; the western gopuram is dated to about 1150 CE. The temple is praised in the Tevaram hymns. It is managed by the Podhu Dikshitars, its hereditary priests, whose management role has been the subject of administrative and legal disputes with the Tamil Nadu government, some of which are reported to be continuing. Margazhi Thiruvadhirai and Aani Thirumanjanam are among its major festivals.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Nataraja_Temple,_Chidambaram",
+    "what_it_supports": "Location (Cuddalore district), Nataraja/Shivakama Sundari, Pancha Bhuta Sthalam link, Chidambara Rahasyam, 40 acres/four courtyards/nine gopurams, halls and Sivaganga tank, dynastic patronage and c.1150 CE western gopuram, Tevaram, Dikshitars as hereditary trustees, festivals."
+   },
+   {
+    "url": "https://tamilnadutourisminfo.com/?p=5643",
+    "what_it_supports": "Independent corroboration of location, ~40 acres, four courtyards, nine gopurams, Chit Sabha and Raja Sabha, Chidambara Rahasyam, festivals (Margazhi Thiruvadhirai, Aani Thirumanjanam). Third-party site, not official."
+   },
+   {
+    "url": "https://www.deccanherald.com/india/after-standoff-devotees-allowed-to-worship-from-chidambaram-temple-stage-1232114.html",
+    "what_it_supports": "Podhu Dikshithars manage the temple; 2014 Supreme Court ruling set aside 2009 Madras HC order; HR&CE vs Dikshithars dispute over kanagasabai access."
+   },
+   {
+    "url": "https://thesouthfirst.com/tamilnadu/11-podhu-dikshithars-of-chidambaram-temple-booked/",
+    "what_it_supports": "June 2023 Aani Thirumanjanam standoff, May 2022 GO allowing devotees on the Kanaka Sabha stage, Dikshithars' contrary position."
+   }
+  ],
+  "notes": "No official website found or verified. Searches surfaced only third-party, blog and aggregator pages (hindutone, gokshetra, yatradham, esamskriti, etc.); no site with a Podhu Dikshitars Committee footer was found, so official_website is null and timings_official is null. Third-party sites give timings of about 6 AM-12 PM and 5-10 PM but these are unverified and not used. Wikipedia article read at en.wikipedia.org/wiki/Nataraja_Temple,_Chidambaram (the article is titled Thillai Nataraja Temple); other title variants were blocked by the fetch allowlist. I deliberately left out the Padal Petra Sthalam claim and the Sangam-era origin claim because they were not confirmed in fetched text. The administration dispute is live and politically sensitive (HR&CE seeking to take over; FIR against 11 Dikshithars in June 2023); the description mentions it only neutrally. Reviewer should check current status of the HR&CE/Dikshithar dispute before publishing. Dating: Wikipedia says Pandya gopurams mid-13th century and Krishnadevaraya finished the north gopuram 1509-1530; tamilnadutourisminfo says Cholas/Pandyas expanded in 12th-13th centuries; neutral, no hard conflict.",
+  "replaces_live": "Pancha Bhuta Stala for Akasha (sky). Lord Nataraja's cosmic dance enshrined. Unique Dikshitar priest management tradition."
+ },
+ {
+  "slug": "chottanikkara-devi-temple",
+  "official_website": null,
+  "description": "Chottanikkara Temple stands at Chottanikkara, a suburb of Kochi in Ernakulam district, Kerala. The presiding deity is the Mother Goddess worshipped as Rajarajeswari, who according to Wikipedia is invoked as Saraswathi in the morning, Lakshmi at noon and Kali (Durga in Kerala Tourism's account) in the evening. The same pedestal also carries an image of Mahavishnu, which has given rise to the names Ammenarayana and Bhadrenarayana. Wikipedia states that the Cochin Devaswom Board administers the temple, and Kerala Tourism says it dates to the 10th century CE. Local legend tells of a forest tribesman, Kannappan, and his daughter Pavizham, and links the story to the origin of the shrine. Kerala Tourism highlights the Makam Thozhal festival, held on the Makam star in the Malayalam month of Kumbham (roughly mid-February to mid-March), and notes a popular belief that the Goddess relieves mental illness. Navarathri and Thrikarthika are also celebrated.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Chottanikkara_Temple",
+    "what_it_supports": "Location, deity forms, Vishnu on same pedestal, Cochin Devaswom Board administration, Kannappan legend, festivals"
+   },
+   {
+    "url": "https://www.keralatourism.org/temples/ernakulam/chottanikkara",
+    "what_it_supports": "Ernakulam/Kochi location, Rajarajeswari three forms, 10th-century date, Makam Thozhal, popular belief about healing, pointer to chottanikkarabhagavathy.org"
+   }
+  ],
+  "notes": "Official website: Kerala Tourism points to https://www.chottanikkarabhagavathy.org/ but it is not on the fetch allowlist so ownership (devaswom/committee footer) could NOT be verified; set to null, reviewer should check and likely adopt if it carries Cochin Devaswom Board attribution. Minor conflict: evening form is Kali (Wikipedia) vs Durga (Kerala Tourism). 10th-century date is Kerala Tourism's 'said to'. Legend detail beyond the names is left out. Timings not available from an official source.",
+  "replaces_live": "Goddess Rajeshwari by day, Durga at dusk, Kali by night — three forms in one. Famous for mental illness cures."
+ },
+ {
+  "slug": "courtallam-kutralanathar-temple",
+  "official_website": null,
+  "description": "Kutralanathar Temple, also called Thirukkutralanathar, stands at Courtallam (Kutralam) in the Tenkasi area of Tamil Nadu, a town known for its waterfalls. It is a Shiva shrine where the deity is worshipped as Kutralanathar alongside the goddess Kuzhalvoimozhi Amman, according to the Tirunelveli district website. The temple is listed among the Thevaram-sung Paadal Petra Sthalams, and the same site records 89 inscriptions. Local tradition holds that the sage Agastya converted an earlier Vishnu image into a Shiva linga here, and the earliest Chola-period inscription calls the deity Thirukkutrala Perumal. Close by is the Chitra Sabha, a hall of Nataraja counted among the five Pancha Sabhas, with a copper-plated roof and paintings made with natural dyes. According to the same site, work on the hall began under Parakrama Pandiyan (1422-1483). The temple has five processional cars, and its listed festivals include the Chithrai Vishu, Aippasi Vishu and Thiruvathirai celebrations.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://tirunelveli.nic.in/arulmigu-thirukkutralanathasamy-templecourtallam/",
+    "what_it_supports": "Location, deities, Thevaram mention, 89 inscriptions, Perumal references, Agastya tradition, Chitra Sabha (copper roof, herbal-dye paintings, Parakrama Pandiyan attribution), five temple cars, festivals"
+   },
+   {
+    "url": "https://tenkasi.nic.in/tourist-place/arulmigu-kutraalanatha-swamy-thirukkoil-kutraalam/",
+    "what_it_supports": "Shaivite shrine, Sangam-age antiquity, Sambandar Devaram, Agastya tradition, Chitra Sabha as one of five dance halls"
+   },
+   {
+    "url": "https://shivatemples.com/pnaadu/pn13.html",
+    "what_it_supports": "Paadal Petra Sthalam listing, Sambandar pathigam, sthala purana, Chitra Sabha as Pancha Sabha about 1 km away (secondary/devotional site)"
+   }
+  ],
+  "notes": "No official website verified: the temple is run by the Tamil Nadu HR&CE Dept; no temple-run site could be found or confirmed. Wikipedia (Thirukutralam) is not on the fetch allowlist so only its search snippet was seen; not cited. District pages (tirunelveli.nic.in) still name Tirunelveli district; Tenkasi district was split off later, portal's Tenkasi is correct. District pages do not state the administering body; HR&CE administration is not asserted in the description. The Chitra Sabha is a separate structure (about 1 km away per shivatemples, 'north of the main temple' per district page). Timings not available from an official source.",
+  "replaces_live": "Shiva temple near the Courtallam waterfalls — called the Spa of South India. Refreshing pilgrimage experience."
+ },
+ {
+  "slug": "dwaraka-tirumala",
+  "official_website": null,
+  "description": "Sri Venkateswara Swamy Temple at Dwaraka Tirumala is a Vishnu temple dedicated to Venkateswara, set on the Seshachala hill in a village now listed under Eluru district, Andhra Pradesh (older references place it in West Godavari). It is widely called Chinna Tirupati, the smaller Tirupati. According to local tradition, a sage named Dwaraka found a self-manifested image of Venkateswara after long penance, and an anthill grew over the lower part of the figure; a second, complete image was installed behind it; Wikipedia attributes this image to Ramanuja while also saying it was brought from Tirupati. The Dravidian-style complex has a five-storeyed rajagopuram facing south and three other gateway towers, and the sanctum tower is described as Nagara in style. Wikipedia credits the zamindar Dharma Appa Rao (active from 1762 to about 1827) with building the vimana, mantapa, gopura and enclosure wall. The Sri Venkateswara Swamy Vari Devasthanam manages the temple. Tiru Kalyanotsavam is held twice a year, and Wikipedia also lists a Teppotsavam (float festival) in November.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Venkateswara_Temple,_Dwaraka_Tirumala",
+    "what_it_supports": "Eluru district, Seshachala hill, two idols (Ramanuja attribution), legend, Dharma Appa Rao, Dravidian architecture, Devasthanam, festivals"
+   },
+   {
+    "url": "https://www.utsav.gov.in/view-darshan/dwaraka-tirumala-temple-1",
+    "what_it_supports": "Sage Dwaraka legend, five-storey rajagopuram facing south, Nagara-style vimana, Devasthanam management (government culture portal)"
+   },
+   {
+    "url": "https://westgodavari.ap.gov.in/?p=2805",
+    "what_it_supports": "District site lists it under West Godavari pilgrimage places; Dwaraka legend, Chinna Tirupati name"
+   },
+   {
+    "url": "https://elurutourism.ap.gov.in/dwarakatirumala.html",
+    "what_it_supports": "Eluru tourism page: Venkateswara temple, anthill legend, nearest town Eluru"
+   }
+  ],
+  "notes": "Official site: Wikipedia lists www.dwarakatirumala.org, but WebFetch of it was blocked by the allowlist, so no footer or trust name could be verified; official_website left null. Reviewer may confirm manually. Timings: Eluru tourism page gives 6am-9pm but is not the temple's own site, so null. District conflict: Wikipedia says Eluru district (post-2022 reorganisation); older and some current AP govt pages say West Godavari. Wikipedia attributes the vimana/mantapa works to Dharma Appa Rao, while Utsav describes the vimana as Nagara style; both included, attributed. Legend is stated as tradition. Wikipedia's income and footfall figures were excluded as unsourced to the temple.",
+  "replaces_live": "Chinna Tirupati (Small Tirupati). Lord Venkateswara on Dwaraka Hill. Important AP pilgrimage."
+ },
+ {
+  "slug": "ekambareswarar-temple",
+  "official_website": null,
+  "description": "Ekambareswarar Temple in Kanchipuram, Tamil Nadu, is a Shiva shrine where the deity is worshipped as a Prithvi (earth) lingam, with Parvati honoured as Elavarkuzhali. Wikipedia states the temple has existed since at least 600 CE and attributes the original foundation to the Pallavas, the present masonry to the Cholas in the 9th century, and later expansion, including the pillared hall and the southern gopuram, to the Vijayanagara period. Devotional tradition holds that a mango tree in the precincts is about 3,500 years old, and local legend tells of Parvati's penance beneath a mango tree on the Vegavati's bank. The shrine is a Paadal Petra Sthalam, praised in the Tevaram hymns of Sambandar, Appar and Sundarar. Its main festival is Panguni Uthiram in March-April, culminating in the celebration of the divine wedding. The Hindu Religious and Charitable Endowments Department of Tamil Nadu administers it; after major renovation, a consecration (Maha Kumbhabhishekam) was reported as held on 8 December 2025, the first in about 17 years.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Ekambareswarar_Temple_(Kanchipuram)",
+    "what_it_supports": "deity, dating, gopuram, mango tree belief, legends, Tevaram, festival, HR&CE"
+   },
+   {
+    "url": "https://www.theweek.in/wire-updates/national/2025/10/12/mes12-tn-temple-consecration.html",
+    "what_it_supports": "HR&CE administration, 8 Dec 2025 consecration, Pallava/Chola/Vijayanagara contributions"
+   },
+   {
+    "url": "https://prod.incredibleindia.gov.in/content/incredible-india-v2/en/destinations/kanchipuram/ekambareswarar-temple.html",
+    "what_it_supports": "Pallava origin, Prithvi lingam, Panch Bhoota, 1509 gopuram"
+   }
+  ],
+  "notes": "No official website found; Wikipedia lists none, and HR&CE is state govt (not accepted). Conflicts: gopuram height (Wikipedia 57 vs 58.5 m; Incredible India says 172 ft for raja gopuram), festival length 10 vs 13 days. Wikipedia's Sangam-era mention and Sankara remodel claims were left out as weak. The 8 Dec 2025 consecration was announced beforehand (The Week); reviewer should confirm it took place before saying so. Mango tree age is tradition only.",
+  "replaces_live": "Pancha Bhuta Stala for Earth. Ancient mango tree over 3,500 years old. Five branches represent five Vedas."
+ },
+ {
+  "slug": "ernakulam-shiva-temple",
+  "official_website": null,
+  "description": "The Ernakulam Shiva Temple, known to devotees as Ernakulathappan (Lord of Ernakulam), stands on the Durbar Hall Ground in central Kochi, Kerala. Wikipedia describes the presiding Shiva in the Gourisankara form, with a lingam regarded as self-manifested, and a sanctum that faces west toward the sea. Local tradition links the site to Arjuna's penance and to Shiva appearing as the hunter Kirata, and to a cursed sage who worshipped the buried lingam. Wikipedia credits the Kochi rulers with settling in Ernakulam after the 17th-century Dutch siege of Fort Kochi, and records a renovation from 1843 under Diwan Edakkunni Sankara Warrier, after which the complex opened to the public in 1846. The structure follows the Kerala style, with a circular sanctum and a two-storey western gopuram. The Cochin Devaswom Board administers it. The annual festival falls in the Malayalam month of Makaram, with flag hoisting, caparisoned elephants, panchavadyam and a ceremonial bath; Maha Shivaratri and Thiruvathira are also observed.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Ernakulam_Shiva_Temple",
+    "what_it_supports": "deity, location, legends, 1843-46 renovation, architecture, festival, CDB"
+   },
+   {
+    "url": "https://ernakulam.nic.in/?p=30545",
+    "what_it_supports": "Ernakulam district site: west-facing, Durbar Hall Ground, Cochin Devaswom Board, royal temple tradition"
+   }
+  ],
+  "notes": "Identified as Ernakulathappan Temple (Ernakulam Shiva Temple), Durbar Hall Ground, Ernakulam, Kochi; matches the portal entry. Wikipedia article carries a multiple-issues banner; its Sangam/Chera claim was omitted. Wikipedia lists https://www.eranakulamsivatemple.org/ as official, but fetch was blocked by the allowlist, so ownership (devaswom/temple committee footer) could not be confirmed; website set to null. Reviewer can verify it manually.",
+  "replaces_live": "Important Shiva temple in Kochi district. Siva Linga worshipped with strong local tradition."
+ },
+ {
+  "slug": "gangai-konda-cholapuram",
+  "official_website": null,
+  "description": "Gangaikonda Cholapuram, in Ariyalur district of Tamil Nadu, served as a capital under Rajendra Chola I, son of Rajaraja Chola I. Its Brihadisvara temple is dedicated to Shiva, worshipped as a lingam, with the goddess Periya Nayagi also honoured. According to Wikipedia, the temple was completed in 1035 CE, although some experts place construction earlier, near 1020. It follows the Dravidian style. Its nine-storey vimana rises about 55 metres, roughly three metres lower than the tower at Thanjavur, a difference that historians cited by Wikipedia read as deliberate, out of respect for his father's work. A large seated Nandi faces the sanctum. The sanctum walls carry reliefs, among which Nataraja and Saraswati are the most prominent, and the temple also preserves bronzes. It belongs to UNESCO's Great Living Chola Temples group, is maintained by the Archaeological Survey of India as a protected monument, and continues to host Saivite worship, with festivals such as Shivaratri, Aipassi Pournami and Thiruvadirai.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Brihadisvara_Temple,_Gangaikonda_Cholapuram",
+    "what_it_supports": "Location, deity, builder, 1035 CE vs c.1020 dating, vimana height, Nandi, reliefs, ASI custody, UNESCO group, festivals"
+   },
+   {
+    "url": "https://www.dtnext.in/news/tamilnadu/explore-chola-dynastys-heritage-and-history-at-gangaikonda-cholapuram",
+    "what_it_supports": "Ariyalur district; served as Chola capital under Rajendra I; UNESCO recognition; sculptures"
+   }
+  ],
+  "notes": "UNESCO whc.unesco.org and ASI sites were not on the fetch allowlist (UNESCO fetch failed), so UNESCO/ASI claims rest on Wikipedia and DT Next only; a reviewer should confirm against UNESCO list 250. Wikipedia is internally inconsistent on the UNESCO inscription year (1987 vs 2004); description avoids giving a year. Wikipedia infobox lists 'Sadhaya vila' undescribed; omitted. No temple-run website exists: site is ASI-protected; official-looking sites not found. Timings not taken (no official site).",
+  "replaces_live": "Another Great Chola Temple. Built by Rajendra Chola I in 1035 CE. Slightly smaller than Brihadeeswarar but equally magnificent."
+ },
+ {
+  "slug": "gnana-saraswati-temple-basar",
+  "official_website": null,
+  "description": "Basar, also spelt Basara, is a town in Nirmal district, Telangana, on the bank of the Godavari near the Maharashtra border. Its Gnana Saraswati temple is dedicated to Saraswati, goddess of learning, with an image of Lakshmi beside her in the sanctum and a Mahakali shrine nearby. According to Telangana Tourism, after the Kurukshetra war the sage Vyasa settled in the Dandaka forest, shaped sand images of Saraswati, Lakshmi and Kali, and the place is said to take its name from him. The present temple is reportedly the work of a Karnataka king, Bijialudu, and Wikipedia adds that idols were reinstated in the 17th century by a chieftain of Nandagiri after earlier destruction. The temple is widely used for aksharabhyasam, the ceremony in which children are introduced to writing before starting school. Daily worship begins around 4 am, and major festivals include Maha Shivaratri and Devi Navaratrulu. Wikipedia places the Basar railway station about 2.4 km away.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gnana_Saraswati_Temple",
+    "what_it_supports": "Nirmal district, Godavari bank, deities, Vyasa legend, Bijialudu, 17th-century reinstatement, aksharabhyasam, daily puja, festivals, station distance"
+   },
+   {
+    "url": "https://telanganatourism.gov.in/blog/21-02-2019-basara.html",
+    "what_it_supports": "Vyasa and sand images legend, name origin, Bijialudu, 4 am worship, aksharabhyasam, Shivaratri/Navarathrulu, Maharashtra border proximity"
+   },
+   {
+    "url": "https://ecoheritage.cpreec.org/basar/",
+    "what_it_supports": "Legend of three forms of Shakti, Vyasapuri to Basara name, Maha Lakshmi and Maha Kali shrines"
+   }
+  ],
+  "notes": "No official website verified: searches show Telangana Endowments-run temple and aggregator sites (yatradham, templesinindiainfo), not confirmed as the temple's own. Guessed domains unreachable. Dates and administrator of founding are traditional; 'sixth century' founding for Bijialudu on Wikipedia not repeated. Local tradition (Vedavathi monolith, Valmiki tank) omitted as unverified. Wikipedia page notes some idols were destroyed and reinstated, described neutrally. Timings not taken.",
+  "replaces_live": "Saraswati temple on the banks of Godavari. Vijayadasami — children start formal education here. Unique tradition."
+ },
+ {
+  "slug": "guruvayur-krishna-temple",
+  "official_website": null,
+  "description": "The Guruvayur Temple, in Guruvayur town, Thrissur district, Kerala, is dedicated to Guruvayurappan, a four-armed standing form of Vishnu worshipped as Krishna. According to Wikipedia, the roughly 1.2 m image is carved from shaligram stone and holds a conch, discus, mace and lotus. Tradition, drawing on the Gurupavanapura Mahatmya of the Narada Purana, holds that Vishnu created the idol, that Uddhava later retrieved it, and that Brihaspati and Vayu installed it at the present site. The temple is built in Kerala style, with a roof of copper sheets plated with gold. Its ritual system follows a framework formalised by Chennas Ravinarayanan Nambudiri (1427-1527), whose family holds the hereditary post of thantri. It was opened to all Hindus on 2 June 1947 following a temple-entry campaign led by K. Kelappan and A. K. Gopalan. The Guruvayur Devaswom, a statutory body, administers it under the Government of Kerala. Melpathur Narayana Bhattathiri's 16th-century Sanskrit work Narayaneeyam is associated with the temple.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Guruvayur_Temple",
+    "what_it_supports": "deity, location, administration, legend, architecture, thantri, temple-entry 1947, Narayaneeyam"
+   },
+   {
+    "url": "https://dtpcthrissur.com/destination/guruvayur-sree-krishna-temple",
+    "what_it_supports": "appeared in search as district tourism page for the temple; not fetched, listed only as an unverified second pointer"
+   }
+  ],
+  "notes": "Official website: null. The Guruvayur Devaswom has an official site (believed guruvayurdevaswom.in) but it was blocked by the fetch allowlist (URL_NOT_ON_ALLOWLIST), so ownership and footer could not be confirmed; searches returned only Wikipedia, legal documents and third-party sites (guruvayoorlive.in is not the Devaswom). Reviewer should verify the Devaswom domain manually. Timings null. Second source: Wikipedia (Guruvayur Temple) was the only fetched page with detail; the Devaswom Board Wikipedia page and Guruvayoor Devaswom Act 1978 (indiacode) appeared in search but were not fetched, so the statutory-body claim rests on Wikipedia alone. Dating: sanctum said to be complete around 14th century (Kokasandesam mention); earliest temple records 17th century. Wikipedia reports a 2025 Kerala High Court ruling on thantri eligibility and Animal Welfare Board citations on Punnathur Kotta; both omitted as contested/sensitive. Wikipedia says Guruvayurappan embodies the Janardana form of Vishnu.",
+  "replaces_live": "Most important Krishna temple in Kerala. Famous captive elephants. Strict entry rules. Lord Guruvayurappan."
+ },
+ {
+  "slug": "irinjalakuda-koodalmanikyam-temple",
+  "official_website": "https://koodalmanikyam.com",
+  "description": "Koodalmanikyam Temple is in Irinjalakuda, Thrissur district, Kerala. The presiding image is a four-armed form of Vishnu, generally believed to represent Bharata, brother of Rama, and worshipped as Sangameswara; the temple's own website explains the name Koodalmanikyam as the Malayalam rendering of that title. By tradition it belongs to the four-temple Nalambalam circuit, with Rama at Thriprayar, Lakshmana at Moozhikulam and Shatrughna at Payammal, which devotees visit together, especially in the month of Karkidakam. The earliest record is a stone inscription of the Chera king Sthanu Ravi, dated 854/55 CE, noting a land grant. The ten-acre walled complex has an eastern gopuram, a circular sanctum with a copper-plated roof and a Koothambalam, the temple theatre. According to Wikipedia, its customs differ from most Kerala temples, with three daily pujas and offerings limited to lotus, tulasi and thechi. The main annual festival is held in the month of Medam (April-May). Since 1971 a Government of Kerala-appointed committee, chaired by the Thrissur District Collector, has managed the temple through the Koodalmanikyam Devaswom.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://koodalmanikyam.com/temple.html",
+    "what_it_supports": "Official: location, ten-acre layout, 854 AD inscription, Cochin/Travancore history, 1971 govt takeover, Collector-chaired committee, Devaswom address, Unnai Warrier"
+   },
+   {
+    "url": "https://koodalmanikyam.com/legand.html",
+    "what_it_supports": "Official: Nalambalam legend, Chathurbahu Vishnu believed Bharata, Sangameswara name"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Koodalmanikyam_Temple",
+    "what_it_supports": "Thrissur district, 854/55 CE Sthanu Ravi Kulasekhara inscription, three daily pujas, offerings, Medam festival"
+   }
+  ],
+  "notes": "Official site koodalmanikyam.com confirmed: footer '(c) Koodalmanikyam Temple', address 'Koodalmanikyam Devaswom, Irinjalakuda 680 121', contact@koodalmanikyam.com. Site is dated (Google+ link, placeholder social links, typos, no timings page text surfaced) but no injected content seen. Wikipedia claims 'only ancient temple dedicated to Bharata' - omitted as unsuperlative-safe. Minor name variants: Stanu Ravi Varman (official) vs Sthanu Ravi Kulasekhara (Wikipedia). 2025 Manorama news hit mentions caste-discrimination allegations at the temple; not used or verified - reviewer may want to be aware.",
+  "replaces_live": "Only temple in Kerala dedicated to Bharata (Rams brother). Unique in all of India. Ancient lineage."
+ },
+ {
+  "slug": "jambukeswarar-temple",
+  "official_website": null,
+  "description": "The Jambukeswarar Temple at Thiruvanaikaval, in Tiruchirappalli district, Tamil Nadu, is dedicated to Shiva as Jambukeswarar and to Parvati as Akilandeswari. It is counted among the five Pancha Bhoota Sthalams, where the sanctum lingam represents water; the other four are at Kanchipuram, Chidambaram, Tiruvannamalai and Srikalahasti. Local tradition holds that Parvati fashioned a lingam of Kaveri water beneath a jambu tree and worshipped it here, and that two of Shiva's attendants, reborn as an elephant and a spider, were freed from a curse at the site; the name is explained as 'holy elephant forest'. The complex has five enclosures, and according to Wikipedia the fourth contains a hall of nearly 800 pillars. The sanctum is described as having a constant flow of water and is viewed through a stone window with nine openings. Inscriptions record Chola-era grants of the 11th and 12th centuries, with Hoysala work in the 13th. Sambandar, Appar and Sundarar sang here, and the temple is administered by the Tamil Nadu HR&CE Department.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Jambukeswarar_Temple,_Thiruvanaikaval",
+    "what_it_supports": "deities, location, five enclosures, Pancha Bhoota Sthalam, legend, Chola and Hoysala dating, HR&CE administration"
+   },
+   {
+    "url": "https://tntemplesproject.in/Jambukeswarar-Tiruvanaikkaa-Tiruchirappalli",
+    "what_it_supports": "Thevaram poets, inscriptions, nine-opening window, constant water in sanctum, meaning of name"
+   }
+  ],
+  "notes": "Official website: none verified. The temple is run by the Tamil Nadu HR&CE Department (govt), so any tnhrce.gov.in page would not qualify under the brief; searches surfaced no trust or temple-owned site. Timings null (no official source). Timings seen on a non-official page (tntemplesproject.in): 6-12 and 4-8, not used. Source conflicts: Wikipedia infobox credits Kochengat Cholan with a '2nd century AD' completion (citation-needed) and calls the rajagopuram Hoysala; tntemplesproject says Koccengannan built 78 maadakoils while Wikipedia says 70 temples, and tntemplesproject says seven gopurams vs Wikipedia's seven-tiered rajagopuram plus smaller ones. Description avoids these. Wikipedia mentions Hoysala king Someswara 1236-37 CE; tntemplesproject only says 13th-century Hoysala renovation. Thevaram attribution comes from tntemplesproject only (Wikipedia lists it as Paadal Petra Sthalam without naming poets). Priest dressed as Parvati at noon puja, Natyanjali festival and Dikshitar kritis were omitted but are sourced if wanted. A WebFetch of Wikipedia was summarized by a tool, so exact figures (796 pillars) should be rechecked before quoting.",
+  "replaces_live": "Pancha Bhuta Stala for Water (Appu). Sanctum has natural underground spring with water constantly at ankle-level."
+ },
+ {
+  "slug": "kalugumalai-jain-rock-cut-temples",
+  "official_website": null,
+  "description": "The Kalugumalai Jain Beds are a group of rock-cut Jain reliefs on a rocky hill at Kalugumalai, a panchayat town in Thoothukudi district, Tamil Nadu. According to Wikipedia, the earliest work dates to the 8th century, in the reign of the Pandya king Parantaka Nedunjadaiya (768-800 CE), and the site belonged to the Digambara tradition. Around 150 niches and reliefs show Tirthankaras, including Parshvanatha flanked by two yakshas, and Gomateshwara. Labels and donor records are in the Vatteluttu script; Wikipedia counts 98 Jain inscriptions, 21 of them mentioning women mendicants, and the CPREEC heritage site notes donors ranging from artisans and cultivators to some high-ranking persons, as well as provision for teaching Jain doctrine. CPREEC says patronage declined after the 13th century. The Tamil Nadu Department of Archaeology maintains the beds as a protected monument. They are distinct from Vettuvan Koil, an unfinished 8th-9th century monolithic Shiva temple in the same town, and from the later Murugan temple, Kalugasalamoorthy.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kalugumalai_Jain_Beds",
+    "what_it_supports": "Location, 8th c. dating, Digambara, ~150 niches, 98 inscriptions, ~21 on women ascetics, TN Archaeology Dept protection, distinction from Vettuvan Koil"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Kalugumalai",
+    "what_it_supports": "Thoothukudi district, Parshvanatha with two yakshas, Vatteluttu, Vettuvan Koil (8th-9th c. Hindu monolith) and Kalugasalamoorthy (Murugan, 18th c.)"
+   },
+   {
+    "url": "https://ecoheritage.cpreec.org/kazhugumalai-caves",
+    "what_it_supports": "Donor groups, teaching of Jain doctrine, post-13th c. decline, Vatteluttu labels"
+   }
+  ],
+  "notes": "No official trust site exists (site is state-protected, not a worship trust). Neither Wikipedia page was cross-checked against a primary ASI/TN Archaeology page (not found in search). 'Protected monument' status rests on Wikipedia only; reviewer should confirm on tnarch.gov.in. Wikipedia fetch summaries were via a summarising tool, so the 98/21 inscription figures should be spot-checked. Wikipedia calls the site 'Jain Beds'; portal name 'Jain Rock-Cut Temples' is a common alternate. Spelling variants: Kazhugumalai/Kalugumalai.",
+  "replaces_live": "Kalugumalai (Kazhugumalai) in Thoothukudi district has magnificent Jain rock-cut sculptures dating to the 8th century. The sculptures carved on the granite hill depict Tirthankaras in various postures. Considered one of the finest examples of early Pandya-period Jain art. Also has a famous Murugan temple nearby."
+ },
+ {
+  "slug": "kanaka-durga-temple",
+  "official_website": null,
+  "description": "Kanaka Durga Temple stands on Indrakeeladri hill beside the Krishna River in Vijayawada, NTR district, Andhra Pradesh. Its presiding deity is Kanaka Durga, shown with eight arms standing over the demon Mahishasura; according to Wikipedia, the main image is about 1.2 metres tall. Local tradition holds that the sage Indrakila did penance here and that the goddess made the hill her home. Both she and Malleswara Swamy, a form of Shiva, are described as self-manifested, and the goddess is placed to Shiva's right, which the Government of India's Utsav portal reads as a sign of Shakti's primacy. Wikipedia notes a Telugu inscription dated 1229 CE, of the Chola era, found at Veligandla village. The Dravidian-style complex also has shrines to Nataraja, Kartikeya and Hanuman. Dasara and Navaratri is the principal festival, with a boat festival; Varalakshmi Vratam and the Sakambhari festival are also observed. The Sri Durga Malleswara Swamy Varla Devasthanam manages the temple.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kanaka_Durga_Temple",
+    "what_it_supports": "Location, iconography and image height, Indrakila legend, 1229 CE inscription, Dravidian style, other shrines, festivals, Devasthanam administration, self-manifested claim"
+   },
+   {
+    "url": "https://utsav.gov.in/view-darshan/sri-kanakadurga-temple-1",
+    "what_it_supports": "Hilltop on Krishna bank, Durga and Malleswara both worshipped as Swayambhu, Durga on Shiva's right, Navaratri, Devasthanam management"
+   }
+  ],
+  "notes": "Website: Wikipedia lists kanakadurgamma.org as the official site, but that fetch was blocked by the allowlist, so footer/trust name could not be verified; left null. A 2013 hindupad article only mentions a trial site (durgamma.com) and warns nothing about fakes. Reviewer should open kanakadurgamma.org and check footer for Sri Durga Malleswara Swamy Varla Devasthanam before setting it. Many third-party booking/darshan sites (gokshetra etc.) exist and must not be used. Timings null. Swayambhu status is tradition (Wikipedia notes it is uncited); described as 'described as self-manifested'. Wikipedia names NTR district (formerly Krishna district).",
+  "replaces_live": "Goddess Kanaka Durga on Indrakeeladri hill beside Krishna river. Powerful Shakti site. Spectacular during Navratri."
+ },
+ {
+  "slug": "kanchi-kamakshi-temple",
+  "official_website": null,
+  "description": "Kamakshi Amman Temple stands in the town of Kanchipuram, Kanchipuram district, Tamil Nadu, and is dedicated to Kamakshi, worshipped as a form of Parvati and as Shakti. Built in the Dravidian style on about five acres, it has a sanctum with a seated image of the goddess, with a Sri Chakra yantra in front that temple tradition credits to Adi Shankara. Smaller shrines honour Bangaru (Golden) Kamakshi, Adi Shankara and Saraswati, and a separate shrine is dedicated to Varaha. According to Wikipedia, the temple may have been founded by the Pallavas between the 5th and 8th centuries, while another account attributes it to the Cholas in the 14th century, with later changes in the 14th and 17th centuries. Devotional tradition counts it among the Shakti Peethas, holding that the navel of Sati fell here. Wikipedia reports that the Kamakoti Peetham administers it. Navaratri, Masi Pooram and a chariot festival are among the observances, and Fridays are regarded as especially sacred.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kamakshi_Amman_Temple",
+    "what_it_supports": "Location, deity, shrines, architecture, Pallava/Chola dating, Shakti Peetha tradition, Shankara association, festivals, Kamakoti Peetham administration"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/tamil-nadu/kanchipuram/kamatchi-amman-temple",
+    "what_it_supports": "Deity as form of Parvati/Shakti, Dravidian design, Navaratri as main festival (government tourism page; no founding date given)"
+   },
+   {
+    "url": "https://kanchikamakshi.org/tag/kumbhabhishekam",
+    "what_it_supports": "Site header calls itself the Official Website of Sri Kamakshi Ambal Devasthanam; links to kamakoti.org (Shrimatam)"
+   }
+  ],
+  "notes": "Official site: kanchikamakshi.org header/title self-describes as the 'Official Website of Sri Kamakashi Ambal Devasthanam' and links to the Kamakoti Mutt site, but the footer only says 'Powered by WordPress' with no trust/copyright name, and only a tag page could be fetched (homepage fetch was blocked by the allowlist). Reviewer should confirm the domain via the temple/Kamakoti Peetham before publishing; set to null if not confirmed. Timings: Incredible India lists 5:30-12:15 and 16:00-20:15, but that is not an official temple source, so timings_official is null. Dating conflict: Wikipedia gives Pallava (5th-8th c.) vs Chola (14th c., Babu 2020); described neutrally. Wikipedia's 'Shakti Peetha' count claims and 'Kamakoti Nayaki' name are tradition/uncited; kept attributed.",
+  "replaces_live": "One of the three most powerful Shakti Peethas. Adi Shankaracharya installed Sri Chakra here."
+ },
+ {
+  "slug": "kanyakumari-devi-temple",
+  "official_website": null,
+  "description": "Kumari Amman Temple, also known as the Bhagavathy Amman Temple, stands in Kanyakumari town in Kanniyakumari district, Tamil Nadu, at the southern tip of mainland India where the Bay of Bengal, Arabian Sea and Indian Ocean meet. It is dedicated to Devi Kanya Kumari, a virgin form of Parvati; according to Wikipedia, the main image shows the goddess standing with a rosary. Local legend holds that she slew the demon Banasura, and that her intended marriage to Shiva did not take place after the sage Narada made a rooster crow before the appointed hour. Tradition credits Parashurama with consecrating the shrine. The temple is enclosed by stone walls, and its eastern gate is kept closed except on certain days. Major observances include a ten-day Vaisakha festival in May or June and the nine-day Navaratri festival in September or October. Wikipedia states that the Tamil Nadu Hindu Religious and Charitable Endowments Department administers the temple.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Devi_Kanya_Kumari",
+    "what_it_supports": "Location, deity iconography, legends (Banasura, Narada/rooster, Parashurama), HR&CE administration, festivals (Vaisakha, Navaratri, Kalabham)"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/tamil-nadu/kanniyakumari/kumari-amman-temple",
+    "what_it_supports": "Stone-walled enclosure, eastern gate normally sealed and opened on certain days, festivals"
+   },
+   {
+    "url": "https://kanniyakumari.nic.in/?p=23247",
+    "what_it_supports": "Legend of Banusura/Narada; car festival (May/June) and Navaratri (Sept/Oct); Devasthanam office contact"
+   },
+   {
+    "url": "https://tntemplesproject.in/Bhagavati-Kanyakumari-Kanyakumari",
+    "what_it_supports": "Location, Banasura legend, eastern gate remaining closed"
+   }
+  ],
+  "notes": "No official temple website found. Searches returned only aggregators/blogs/tourism pages; none confirmed as run by the temple or HR&CE. Timings are not from an official site (null); third-party sources conflict (Wikipedia 6-11 AM / 4-8 PM; district NIC page 4:30 AM-12:15 PM / 4-8:15 PM; TN Temples Project 4:30-12:30 / 4-8). Sources conflict on temple age (3,000+ years per Incredible India/blogs vs 'more than 2000' in the same TN Temples Project page) and on which door is the entrance (Wikipedia: western door; Incredible India: northern gate); both omitted from the description. Shakti Peetha count conflicts (52 per Wikipedia, 108 per Incredible India); omitted. The Wikipedia page for the Kumari Amman section used an alternate title (Devi Kanya Kumari); the en.wikipedia Kanyakumari town page fetch was blocked by the allowlist. Reviewer should confirm HR&CE administration against hrce.tn.gov.in.",
+  "replaces_live": "Goddess Kanyakumari at the southernmost tip of India where three seas meet. Diamond nose ring visible from sea at night."
+ },
+ {
+  "slug": "kapaleeshwarar-temple",
+  "official_website": null,
+  "description": "Kapaleeshwarar Temple stands in Mylapore, Chennai, and is dedicated to Shiva as Kapaleeshwarar, worshipped as a lingam, with Parvati as Karpagambal. According to Wikipedia, the area's name, Mylai, derives from a tradition of Parvati worshipping Shiva as a peahen. The shrine is praised in the Tevaram hymns of the Nayanar saints, including a pathigam by Sambandar, and is counted among the Paadal Petra Sthalams. Wikipedia says the temple is generally thought to date from the 7th-century Pallava period, while the Tamil Nadu Temples Project website argues that the original shrine stood nearer the seashore and that the present site was rebuilt under Vijayanagara rule around the 16th century. The Dravidian complex has a tall eastern gopuram of the early twentieth century and a large tank on its western side. Its main festival, Panguni Peruvizha in March-April, includes the Arubathimoovar procession honouring the 63 Nayanars. The Tamil Nadu HR&CE Department administers the temple.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kapaleeshwarar_Temple",
+    "what_it_supports": "Location, deities, 7th-century Pallava view, tank, gopuram, Panguni Peruvizha/Arubathimoovar, Tevaram/Paadal Petra status, HR&CE administration"
+   },
+   {
+    "url": "https://tntemplesproject.in/Kapaleeswarar-Mylapore-Chennai",
+    "what_it_supports": "Original shrine believed near seashore; relocation and Vijayanagara rebuild c. 16th century; Sambandar pathigam"
+   },
+   {
+    "url": "https://hindutone.com/temples/kapaleeshwarar-temple-guide/",
+    "what_it_supports": "Early 20th-century east gopuram; HR&CE administration; festivals (weak, guide site)"
+   }
+  ],
+  "notes": "Official site candidate mylaikapaleeswarar.tnhrce.in (cited by Wikipedia) is an HR&CE state-government domain and could not be fetched (not on allowlist), so official_website=null and timings=null. Dating conflict: Wikipedia says 7th-century Pallava build; tntemplesproject says rebuilt at current site in 16th c. under Vijayanagara; description presents both. Wikipedia's gopuram figures are internally inconsistent (about 40 m vs 120 ft/1906) so no height given. Popular 'Portuguese destroyed it' tradition not found in fetched sources, so omitted. 'Kapaleeshwarar/Kapaleeswarar' spelling varies.",
+  "replaces_live": "7th century Dravidian temple in Mylapore. Legend of Parvati worshipping as a peacock (mayil). Major festival draws huge crowds."
+ },
+ {
+  "slug": "keesaragutta-temple",
+  "official_website": null,
+  "description": "Keesaragutta Temple stands on a small hill at Keesara in Medchal-Malkajgiri district, Telangana, roughly 30 to 35 km from central Hyderabad, depending on the source. It is a Shiva temple whose main lingam is called Ramalingeswara; Telangana Tourism lists Bhavani and Sivadurga as his consorts, while Wikipedia names Parvati. According to local legend, Rama installed the lingam to atone for killing Ravana. Hanuman, sent to fetch a lingam from Varanasi, arrived late, so Shiva himself provided a self-manifested lingam. Hanuman is said to have scattered the lingams he brought, and many are still found on the hill and worshipped. Tradition also says Rama named the hill Kesarigiri after Hanuman's father Kesari, which became Keesara. Excavations near the temple have reported brick structures, lingas and fortification walls attributed to the Chalukya era, and Wikipedia mentions rock-cut caves and an early Telugu inscription dated on paleography to the 4th-5th century CE. Maha Shivaratri and the month of Karthika draw large crowds.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Keesaragutta_Temple",
+    "what_it_supports": "location, legend, dating conflicts, archaeology, festivals"
+   },
+   {
+    "url": "https://telanganatourism.gov.in/blog/13-june-2017-keesaragutta.html",
+    "what_it_supports": "consorts Bhavani and Sivadurga, distance, legend, excavation notes"
+   }
+  ],
+  "notes": "Official website: null; no temple or endowments-department site found (searches returned Wikipedia, Telangana Tourism and aggregators). Management body not stated in either fetched source (Telangana Endowments Department presumed, unverified). Timings null. Conflicts: temple 'established 100 BCE' (Wikipedia infobox, unreferenced) and inscription '5th century' vs '4th to 5th centuries' within Wikipedia; distance 30 km (Wikipedia) vs 35 km (Telangana Tourism). Consorts: Wikipedia Parvati vs Telangana Tourism Bhavani and Sivadurga. Wikipedia also reports 12 Jain Tirthankara idols found in 2014; not included. Telangana Tourism blog is govt, used as source only. Hanuman-precedence detail is from Wikipedia only.",
+  "replaces_live": "Ancient cave Shiva temple near Hyderabad. 1,100-year-old temple with Ramalingeshwara and Someswara shrines."
+ },
+ {
+  "slug": "kilimarathukavu-temple",
+  "official_website": "https://www.kilimarathukavu.com/",
+  "description": "Kilimarathukavu Temple is at Kadakkal in Kollam district, Kerala. The temple is known as the Shiva Parvathy temple, and the temple's own website lists Mahanadan, Ganapati, Murugan, Sastha, Hanuman, Navagraha and Naga shrines; the Hanuman shrine stands in the middle of the temple pond. According to local legend, Arjuna received the Pashupatastra from Shiva at this spot during the Pandavas' exile, and Shiva is said to have left a Shivalingam at the spot. A Kerala temples directory tells a version in which a mystical bird led Arjuna to a kilimaram tree beside a stream, a story that matches the temple's name. Wikipedia states that an earlier temple was destroyed, leaving only the idols, and that a new temple in traditional Kerala style was built in the twenty-first century. The Travancore Devaswom Board took over the temple in 2011. Observances named include Maha Shivaratri, Navaratri with Vidyarambham for young children, Skanda Shashti, Mandalapooja and Hanuman Jayanti.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kilimarathukavu_Temple",
+    "what_it_supports": "Location (Kadakkal, Kollam), deities, Arjuna/Pashupatastra legend, destroyed earlier temple, 21st-century rebuild, TDB takeover 2011, festivals"
+   },
+   {
+    "url": "https://templesofkerala.org/kollam/kilimarathukavusivaparvathytemple.html",
+    "what_it_supports": "Kadakkal address, deity list, Hanuman shrine in pond, kilimaram-tree legend"
+   },
+   {
+    "url": "https://www.kilimarathukavu.com/",
+    "what_it_supports": "Temple's own deity list, Hanuman shrine in pond, events; footer '(c) 2026 Kilimarathukavu Temple'"
+   },
+   {
+    "url": "https://kilimarathukavu.com/?p=9",
+    "what_it_supports": "Deity pages: Ardhanarishvara Shiva with Parvathy, Mahanadan, Navaratri/Vidyarambham, thantri named"
+   }
+  ],
+  "notes": "Identified with confidence: Kilimarathukavu Siva Parvathy Temple, Kadakkal, Kollam district (also Wikipedia title Kilimarathukavu Temple). No other Kilimarathukavu temple found. Website: kilimarathukavu.com footer reads '(c) 2026 Kilimarathukavu Temple' and content (Hanuman in pond, Shiva-Parvathy, Murugan, Sastha, thantri) matches the Kadakkal temple, but the page names no trust/committee and does not state a location; the temple is under Travancore Devaswom Board per Wikipedia, so the site may be run by a temple committee/devotee group. Reviewer should confirm with a call or the temple that the domain is official. Timings not published on the site (null). Wikipedia's 'Kilimaram' name legend is only on templesofkerala.org, so attributed there. Legend details differ slightly between sources; stated minimally. Wikipedia lists a 'Shiva and Mahanadan' pair vs. the Wikipedia infobox 'Shiva Parvathy'; site calls main deity Shiva as Ardhanarishvaran with Parvathy.",
+  "replaces_live": "\n\n\n\nKilimarathukavu Shiva Parvathy Temple  is a Hindu temple located in Kadakkal Kollam district, Kerala, India. The temple deities include the cult images of 'Dharma Shastha', and an epithet of Ayyappan is also present within the temple. Kilimarathukavu Temple was taken over by the Travancore Devas"
+ },
+ {
+  "slug": "kodungallur-bhagavathy-temple",
+  "official_website": null,
+  "description": "Sree Kurumba Bhagavathy Temple in Kodungallur, Thrissur district, Kerala, is dedicated to Bhadrakali, a fierce form of the Mother Goddess, locally called Kodungallur Amma. According to Wikipedia, the image faces north and has eight arms; the temple is regarded as head of 64 Bhadrakali kavus of Malabar. Traditions about its origin differ: one links the installation to Parasurama and the slaying of the demon Darika, while another identifies the goddess with Kannagi, whom the Chera king Senguttuvan is said to have enshrined in the Sangam period. Its best-known observances are the Bharani festival in the Malayalam months of Kumbham and Meenam, which features the Kavutheendal rite, and the four-day Thalappoli in Makaram. According to Wikipedia, ritual chicken sacrifice at the temple has been banned under Kerala law since 1978. The Cochin Devaswom Board took over administration in 1950, after earlier management by the Kodungallur royal family.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kodungallur_Sree_Kurumba_Bhagavathy_Temple",
+    "what_it_supports": "Location, deity, legends, Bharani, Thalappoli, administration 1950, 1978 sacrifice ban"
+   },
+   {
+    "url": "https://kodungallursreekurumbabhagavathytemple.org/pages/abouttemple",
+    "what_it_supports": "Corroborates Bhadrakali, north-facing, 64 temples claim, Saptamatrika shrine (ownership of site unverified)"
+   }
+  ],
+  "notes": "Candidate site kodungallursreekurumbabhagavathytemple.org: page names no trust/Devaswom/committee, no footer/copyright, malformed metadata and typos, so ownership cannot be confirmed; official_website=null. cochindevaswomboard.org (statutory board) could not be fetched (not on allowlist). The 'oldest functioning temple' claim is deliberately omitted (Wikipedia and the unverified site make it without a source). Only one reasonably reliable source plus an unverified site; a Kerala Tourism or Cochin Devaswom Board page should be added by a reviewer. Ritual abuse songs/Kavutheendal described only by name to stay neutral.",
+  "replaces_live": "Kurumba Bhagavathy. Bharani festival with unique procession tradition. Ancient powerful Shakti site."
+ },
+ {
+  "slug": "kottarakkara-mahadeva-temple",
+  "official_website": null,
+  "description": "The Kottarakkara Sree Mahaganapathi Kshethram is in Kottarakkara town, Kollam district, Kerala. Wikipedia and Kerala Tourism describe Shiva as the central deity, with a Ganesha shrine that gives the temple its popular name; Parvati, Murugan, Ayyappan and Nagaraja are also enshrined. A traditional account says the temple was originally a Shiva shrine, and that the master carpenter Perumthachan carved the Ganapathi image from jackfruit wood and installed it at the Shiva shrine. The temple is best known for unniyappam, a sweet fried offering made with rice and banana in ghee, which Wikipedia lists among the temple's main offerings. One aggregator site links the temple to Ramanattam, a Ramayana-based dance form, and to a legend of the Kottarakkara Thampuran. One source reports that the temple belonged to the Kottarakkara royal family and is now under the Travancore Devaswom Board.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kottarakkara_Sree_Mahaganapathi_Kshethram",
+    "what_it_supports": "Location, Kollam district, Shiva central deity with Ganesha emphasis, other deities, unniyappam main offering"
+   },
+   {
+    "url": "https://www.keralatourism.org/temples/kollam/kottarakkara-mahaganapathi",
+    "what_it_supports": "Shiva as main deity, Ganesha sub-shrine, unniyappam"
+   },
+   {
+    "url": "https://www.hindu-blog.com/2021/03/kottarakkara-ganapathy-temple-history-unniyappam-story.html",
+    "what_it_supports": "Perumthachan legend, unniyappam details, Kathakali/Ramanattam tradition (blog; legend only)"
+   },
+   {
+    "url": "https://templesinindiainfo.com/?p=47661",
+    "what_it_supports": "Royal family ownership, Travancore Devaswom Board, Ramanattam link, Thampuran legend (aggregator; weak)"
+   }
+  ],
+  "notes": "Identification: this is the temple widely called Kottarakkara Ganapathy / Sree Mahaganapathi Kshethram; Shiva is the main deity (one source says Ganapathi is a minor deity, another says Ganapathi is the principal draw), so 'Mahadeva Temple' is defensible as the Shiva aspect but is not the temple's usual name. Official site listed on Wikipedia (kottarakaramahaganapathi.org) could not be fetched (allowlist), so unverified; null. Devaswom Board status comes from an aggregator only. Wikipedia text on history and Kathakali was thin; Kathakali and Perumthachan claims rest on blogs and are attributed as tradition. Original name given as Manikanteswaram by one blog and Kizhakkekara Siva Kshethram by another (conflict, not used).",
+  "replaces_live": "Ancient Shiva temple with unique Kathakali tradition — Kathakali originated in this temple compound."
+ },
+ {
+  "slug": "kumbakonam-temples",
+  "official_website": null,
+  "description": "Kumbakonam, in Thanjavur district of Tamil Nadu, is often called a temple town, and Wikipedia counts about 188 Hindu temples within its municipal limits. The cluster includes Shaiva and Vaishnava shrines. Among the best known are the Adi Kumbeswarar temple, described by Wikipedia as the city's oldest Shaivite shrine, with origins traced to about the 7th century; the Nageswaraswamy temple, which has a separate Surya shrine; the Sarangapani temple, the largest Vaishnavite temple in the city with a twelve-tiered gopuram; and the Ramaswamy temple, noted for its Ramayana depictions and built under Govinda Dikshitar. Many of these temples are linked to the Mahamaham festival, held once every 12 years at the Mahamaham tank, which Wikipedia says drew over four million pilgrims in 2016. Two Shiva shrines on the outskirts, Kottaiyur Kodeeswarar and Sakkottai Amirthakadeswarar, are listed as Padal Petra Sthalams, sites praised in the Tevaram hymns.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kumbakonam",
+    "what_it_supports": "Temple town, ~188 temples, Adi Kumbeswarar origins, Nageswaraswamy Surya shrine, Sarangapani 12-tier gopuram, Ramaswamy/Govinda Dikshitar, Mahamaham every 12 years, 2016 attendance, Thanjavur district"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/List_of_Hindu_temples_in_Kumbakonam",
+    "what_it_supports": "Individual temple list with tradition and notes; Padal Petra Sthalam status of Kottaiyur Kodeeswarar and Amirthakadeswarar; 12 Shiva and 5 Vishnu temples linked to Mahamaham"
+   }
+  ],
+  "notes": "Entry is a cluster, not one temple; description is written as a group. Official website null: no single official site exists for the cluster. Individual temples are under HR&CE Tamil Nadu (not verified here). Kumbakonam page says Adi Kumbeswarar is 'oldest Shaivite shrine'; that is attributed to Wikipedia in the text. Only two Wikipedia pages used (same publisher, not fully independent); no ASI/tourism source fetched. Kottaiyur and Sakkottai temples are on the outskirts, not in the core.",
+  "replaces_live": "City of temples — Adi Kumbeswarar, Sarangapani, Ramaswamy and more. Mahamaham tank festival every 12 years."
+ },
+ {
+  "slug": "mahanandi-temple",
+  "official_website": null,
+  "description": "Mahanandi is a village in Nandyal district, Andhra Pradesh, on the eastern side of the Nallamala hills. Its Mahanandiswara Swamy Temple is dedicated to Shiva and is one of the nine Nandi shrines of the area known as the Nava Nandulu, according to Wikipedia. The district administration dates the temple to the 7th century CE, and Wikipedia attributes the original structure to the Badami Chalukyas, with additions in later centuries and Vijayanagara-style elements. The temple is best known for its pushkarini ponds, which are fed by perennial springs; Wikipedia reports a steady water depth of about five feet, and the district page notes that objects on the pond floor remain visible. Nearby sites include the Kodandaramalayam and Kameswari Devi temples. The main annual festival, Maha Shivaratri, falls in February or March, and the temple draws pilgrims through the year.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://nandyal.ap.gov.in/tourist-place/mahanandi/",
+    "what_it_supports": "District government page: location, 7th-century date, perennial springs, clear pushkarani, nearby temples, festival"
+   },
+   {
+    "url": "https://wiki.riteme.site/wiki/Mahanandi",
+    "what_it_supports": "Mirror of Wikipedia Mahanandi article: Nandyal district, Nava Nandulu, Badami Chalukya attribution, water depth, Maha Shivaratri"
+   }
+  ],
+  "notes": "No official Devasthanam site found; search returned only govt district pages and aggregators, so website and timings null. en.wikipedia.org/wiki/Mahanandi was blocked by allowlist; used a Wikipedia mirror, so reviewer should verify against live Wikipedia. Distance from Nandyal conflicts (district page about 14 km; Wikipedia mirror about 21 km), so omitted. Mahanandi is in Nandyal district (formed 2022, earlier Kurnool district).",
+  "replaces_live": "One of nine Nandi shrines. Sacred water tank with crystal-clear spring. Lord Mahanandiswara. Peaceful setting."
+ },
+ {
+  "slug": "malanada-duryodhana-temple",
+  "official_website": "https://www.malanada.com",
+  "description": "The Poruvazhy Peruviruthy Malanada Temple is in Edakkad ward of Poruvazhy village, Kunnathoor taluk, Kollam district, Kerala. Its focus of worship is traditionally held to be Duryodhana of the Mahabharata. There is no idol and no sanctum; a raised platform, the althara, stands in the deity's place, and devotees worship through a personal act of resolve called sankalpam. Local tradition says Duryodhana, wandering in exile in search of the Pandavas, rested in these hills, was offered toddy by an elderly woman and then worshipped Shiva for the local people. Toddy is among the traditional offerings. The main festival, Malakkuda, falls in the Malayalam month of Meenam (March-April) and is known for the Kettukazhcha, in which large crafted figures are carried to the hill. According to Wikipedia, a ritual called Pallipaana is held once in twelve years, most recently in 2023. According to Wikipedia, the temple is run by the Malanada Devaswom, whose committee is elected by members of seven local karas.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Poruvazhy_Peruviruthy_Malanada_Temple",
+    "what_it_supports": "Location (Edakkad, Poruvazhy, Kunnathoor taluk, Kollam), no idol/althara, sankalpam, legend, toddy, Kettukazhcha, Malakkuda timing, Pallipaana 2023, devaswom committee of seven karas"
+   },
+   {
+    "url": "https://www.pilgrimaide.com/temples/poruvazhy-peruviruthy-malanada-temple",
+    "what_it_supports": "Confirms no deity/sanctum, althara, Malakkuda, Pallippana every 12 years, Poruvazhy Peruviruthy Malanada Devaswom as manager"
+   },
+   {
+    "url": "https://www.hindu-blog.com/2018/09/duryodhana-temple-in-kerala-malanada.html",
+    "what_it_supports": "Blog (weak): Malayappooppan name, toddy offering, Kurava priest, Meena masam festival; gives an alternative legend version"
+   }
+  ],
+  "notes": "No official Devaswom website found; pilgrimaide lists none. official_website null. Legend variants differ (Wikipedia/Malayalam passage: toddy and recognition of community; English blog: food and shelter after losing way); description uses the toddy version and attributes it to local tradition. Wikipedia says Kunnathoor taluk, Kollam district; pilgrimaide says 'Kunnathoor, Kollam'; blog gives ~17 km from Karunagappally, not verified. The Kurava-Kaurava link and 'only Duryodhana temple in South India' claim are unverified and omitted. Community-linked details (priests, kudumbayogams) kept out for neutrality. Spelling/name: Peruviruthy vs Peruvruthy.",
+  "replaces_live": "One of the very few temples in the world dedicated to Duryodhana. Located in Poruvazhy, Kollam. Duryodhana is worshipped as a just king and brave warrior. Major festival draws thousands annually."
+ },
+ {
+  "slug": "meenakshi-amman-temple",
+  "official_website": null,
+  "description": "The Meenakshi Sundareswarar Temple stands on the southern bank of the Vaigai River in Madurai, Tamil Nadu. Its presiding goddess is Meenakshi, regarded as a form of Parvati, who is worshipped alongside her consort Sundareswarar, a form of Shiva. According to Wikipedia, Tamil literature points to a shrine here by the mid-6th century CE, while the earliest surviving masonry dates to the Pandya ruler Sadayavarman Kulasekaran I, who reigned from 1190 to 1216. The complex was damaged during Malik Kafur's raid of 1311, was rebuilt under Vijayanagara rule, and was greatly expanded by the Madurai Nayaks in the 16th and 17th centuries. It covers about 14 acres of concentric walled enclosures with about 14 gopurams (towers), the tallest of them the southern tower at roughly 52 metres. It also has the Hall of a Thousand Pillars and the Golden Lotus Tank. The annual Chithirai festival includes the celebration of the divine wedding of Meenakshi and Sundareswarar. The temple is administered by the Hindu Religious and Charitable Endowments Department of Tamil Nadu.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Meenakshi_Temple",
+    "what_it_supports": "Location, deities, dating, 1311 raid, Vijayanagara rebuilding, Nayak expansion, 14 gopurams, tallest gopuram height, 14-acre area, Thousand Pillar Hall, Golden Lotus Tank, Chithirai festival, HR&CE administration"
+   },
+   {
+    "url": "https://www.dtnext.in/news/tamilnadu/madurai-meenakshi-amman-temple-launches-new-website",
+    "what_it_supports": "News report that temple authorities launched maduraimeenakshi.hrce.tn.gov.in as the temple's only official site, state-maintained; old site maduraimeenakshi.org retired"
+   }
+  ],
+  "notes": "Only one detailed source (Wikipedia) was successfully read for the facts; the temple is very well documented elsewhere but I did not read a second independent source for architecture/history. Candidate official site https://maduraimeenakshi.hrce.tn.gov.in/ : fetch was blocked by the allowlist so I could not verify the page footer/owner. It is a state-government (HR&CE) domain; DT Next reports it as the temple's sole official site announced by the temple Executive Officer. Set to null per the strict rule; a reviewer with browser access may confirm and set it (it is arguably the temple's own site since HR&CE administers the temple). Timings not taken as official site could not be read. The old maduraimeenakshi.org was a private-developer site and is shut down; do not use.",
+  "replaces_live": "Spectacular Dravidian complex with 14 gopurams. Dedicated to Goddess Meenakshi and Lord Sundareshwara. Architectural wonder of South India."
+ },
+ {
+  "slug": "narasimha-swamy-temple-mattapally",
+  "official_website": null,
+  "description": "The Yogananda Lakshmi Narasimha Swamy Temple stands on the bank of the Krishna River at Mattapalli (Mattampally), in Suryapet district, Telangana, a district carved out of the former Nalgonda district. The main deity is Narasimha, the man-lion form of Vishnu, worshipped in the Yoga posture inside a cave sanctum under a hooded Sheshanaga canopy, along with Rajyalakshmi and Chenchu Lakshmi. Sources differ on dating: Wikipedia says the temple was built in the 11th century by Anumala Machi Reddy, while The Hans India places it in the 13th century. Local tradition holds that Narasimha appeared to Machi Reddy in a dream and that the image is self-manifested. The temple follows the Vaikhanasa agama, is administered by the Telangana Endowments Department, and is known for offering free daily meals. Special bathing ghats were built here for the 2016 Krishna Pushkaralu. According to The Hans India, observances include Narasimha Jayanti, Vaikunta Ekadasi and Brahmotsavam, and devotees traditionally perform pradakshinas after bathing in the river.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Yogananda_Lakshmi_Narasimha_Swamy_Temple",
+    "what_it_supports": "Mattampally mandal, Suryapet district (formerly Nalgonda), deity/consorts, 11th c. Anumala Machi Reddy, dream/self-manifested tradition, Vaikhanasa, Endowments, annadanam, Pushkaralu ghats 2016"
+   },
+   {
+    "url": "https://thehansindia.com/featured/sunday-hans/maha-kshetram-mattapalli-yoga-laxmi-narasimha-temple-711194",
+    "what_it_supports": "Krishna bank, Huzurnagar constituency, cave sanctum with Sheshanaga canopy, 13th c. dating, festivals, pradakshina custom"
+   }
+  ],
+  "notes": "No official temple/devasthanam site found. Only two sources read (Wikipedia + a newspaper feature); dating conflict 11th vs 13th c. Hans India also reports miracle/cure claims and a rare conch - deliberately left out. Wikipedia's Chennuri family committee management not used. Open hours appear in Hans India but are not official, so timings null. Description says 'Narasimha Swamy' generically vs actual dedication Yogananda/Yoga Lakshmi Narasimha.",
+  "replaces_live": "Ancient Narasimha (man-lion Vishnu) temple. Pillar from which Narasimha emerged depicted here."
+ },
+ {
+  "slug": "neelamperoor-palli-bhagavathi-temple",
+  "official_website": null,
+  "description": "Neelamperoor Palli Bhagavathi Temple is a goddess shrine at Neelamperoor in the Kuttanad region of Alappuzha district, Kerala. Sources variously name the deity as Palli Bhagavathi, Kathyayani or Vanadurga. According to Sahapedia, the temple is said to have been built between AD 250 and 300. Local tradition holds that the Chera ruler Cheraman Perumal, after a debate between Hindu and Buddhist scholars, became a Buddhist monk and spent his last days here; the same tradition says he built a Buddha vihara here. The temple is best known for the Neelamperoor Padayani, a fifteen-day festival held in the Malayalam month of Chingam, in which large effigies called kolams are made from areca stems, banana sheaths, lotus leaves and flowers and performed at night. Decorated swan effigies, from small ones to very large ones, are offered to the deity, and the effigy procession is described by Alappuzha tourism as Kettukazhcha.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.sahapedia.org/neelamperoor-padayani-festival-of-kerala",
+    "what_it_supports": "Alappuzha/Kuttanad location, AD 250-300 traditional date, Perumal legend, 15-day Padayani, kolam materials"
+   },
+   {
+    "url": "https://www.dtpcalappuzha.com/destination/neelamperoor-palli-bhagavathi-temple",
+    "what_it_supports": "Alappuzha district, deity Karthiyayani, Padayani in Chingam, Kettukazcha"
+   },
+   {
+    "url": "https://www.keralatourism.org/kerala-article/neelamperoor-patayani/667",
+    "what_it_supports": "Chingam festival, effigy procession, swan effigies, starts after Thiruvonam"
+   },
+   {
+    "url": "https://ipfs.ssi.eecc.de/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Neelamperoor_Palli_Bhagavathi_Temple.html",
+    "what_it_supports": "Mirror of Wikipedia article: Vanadurga deity, Kathyayini shrine, Meenam festival, priest lineage"
+   }
+  ],
+  "notes": "No official website found. en.wikipedia.org page for this temple was blocked; used an IPFS mirror (check against live Wikipedia). Deity name conflicts across sources (Palli Bhagavathi/Karthiyayani/Kathyayini/Vanadurga); description lists them. Wikipedia mirror text did not name the district and hinted at Kottayam (road reference near Kurichy); Sahapedia and the Alappuzha DTPC place it in Alappuzha (Kuttanad), and trawell lists Kottayam. Temple is near the Alappuzha-Kottayam border; reviewer should confirm. Buddhist origin is a tradition, not established fact. Sahapedia says the swan effigy is about 12 m; Kerala Tourism says up to 20 ft... figures not in description for that reason. Timings not found.",
+  "replaces_live": "\n\n\n\nNeelamperoor Palli Bhagavathi Temple is a Hindu temple dedicated to Bhagavathy, situated at Neelamperoor in Alappuzha district of Kerala, India. The temple is known for padayani festival. The principal deity is Vanadurga (Durga or Kali).\n"
+ },
+ {
+  "slug": "nellaiappar-temple-tirunelveli",
+  "official_website": null,
+  "description": "Nellaiappar Temple is a Shiva temple on the northern bank of the Thamirabarani River in Tirunelveli, Tamil Nadu. Shiva is worshipped as Nellaiappar and Parvati as Kanthimathi Amman, in separate shrines later linked by the Sangili Mandapam, which Wikipedia says was built in 1647. The original complex is traditionally credited to the Pandyas, with later contributions from the Nayaks and others. Wikipedia describes the complex as about 5.9 hectares, and notes the Mani Mandapam, whose carved pillars are said to produce musical notes when struck. The temple is a Paadal Petra Sthalam praised in the Tevaram hymns of the Nayanmars, including Sambandar and Appar, and it is also listed as one of the Pancha Sabhai temples, associated with the copper hall (Thamira Sabhai). Major festivals include the Aani Brahmotsavam in June to July, the Aippasi Tirukalyanam and Arudra Darisanam. The HR&CE Department of Tamil Nadu administers the temple.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Nellaiappar_Temple",
+    "what_it_supports": "Location, deities, Pandya attribution, Sangili Mandapam 1647, 5.9 ha, Mani Mandapam, Paadal Petra, Pancha Sabhai, festivals, HR&CE"
+   },
+   {
+    "url": "https://tntemplesproject.in/Nellaiappar-Tirunelveli-Tirunelveli",
+    "what_it_supports": "District, Paadal Petra and Pancha Sabhai status, Nellai Govindan shrine, Thamira Sabhai (TN Temples Project, private WordPress blog by 'Aniruddh', not official)"
+   }
+  ],
+  "notes": "Candidate official/temple-administration sites could not be fetched (not on the session allowlist, curl blocked), so no website is set. tntemplesproject.in lists timings 5:30-12:30 and 4:00-8:30 but it is NOT official, so timings_official is null. Wikipedia itself is internally inconsistent on the construction date (infobox ~700 CE vs later 13th-17th c. additions), so no construction date was stated. Only two sources, one of them an unofficial blog.",
+  "replaces_live": "Ancient Shiva temple with musical pillars producing seven notes. Goddess Kanthimathi. Major Tirunelveli pilgrimage."
+ },
+ {
+  "slug": "padmanabhaswamy-temple",
+  "official_website": null,
+  "description": "Sree Padmanabhaswamy Temple is a Vishnu temple in Thiruvananthapuram, Kerala. The deity is Vishnu as Anantha Padmanabha, shown reclining on the serpent Shesha, with Sridevi and Bhudevi. It is one of the 108 Divya Desams, praised in Tamil hymns including those of Nammalvar, according to Wikipedia. Britannica says rebuilding under Marthanda Varma of Travancore began after 1729, and in 1750 he dedicated his kingdom to the deity, and the rulers of Travancore are described as governing on the deity's behalf. Wikipedia describes an architecture that blends Kerala and Tamil styles, a seven-tier gopuram, a long pillared corridor, a single-stone sanctum platform and the Padma Theertham tank. The temple's vaults were inventoried under court direction from 2011, and reports of their contents vary by source. Wikipedia reports that in July 2020 the Supreme Court of India overturned a 2011 Kerala High Court judgment and upheld the Travancore royal family's role in administering the temple; sources differ on the details of the present governance arrangement. Entry rules are described by Wikipedia as limited to Hindus, with a prescribed dress code.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Padmanabhaswamy_Temple",
+    "what_it_supports": "Deity, Divya Desam, architecture, Supreme Court 13 July 2020 ruling, vault inventory from 2011, entry and dress code"
+   },
+   {
+    "url": "https://britannica.com/place/Padmanabhaswamy-Temple",
+    "what_it_supports": "Marthanda Varma rebuilding after 1729, 1750 dedication, 2011 inventory, 2011 High Court and 2020 Supreme Court rulings"
+   }
+  ],
+  "notes": "Candidate official/temple-administration sites could not be fetched (not on the session allowlist, curl blocked), so no website is set. Sensitive topic: vault valuations and the 2016 missing-gold reports and the Kallara B (Vault B) dispute are deliberately NOT stated in the description because figures differ widely and are contested; Britannica gives about 1 trillion rupees, Wikipedia says valuations vary. Wikipedia does not fully reconcile the 2020 Supreme Court ruling with the later administrative-committee description; wording kept to 'upheld the royal family's role in administration'. Reviewer should verify current governance (committee under District Judge) against a primary source. Entry restriction (Hindus only, dress code) is stated by Wikipedia; confirm against the temple's official site before publishing any visitor guidance. Likely official site sreepadmanabhaswamytemple.org was not fetchable so not set.",
+  "replaces_live": "World's richest temple (Rs 1 lakh crore+ endowment). Reclining Vishnu on Adi Shesha. Extremely strict dress code."
+ },
+ {
+  "slug": "palani-murugan-temple",
+  "official_website": null,
+  "description": "Arulmigu Dhandayuthapani Swamy Temple crowns Sivagiri hill in Palani, Dindigul district, Tamil Nadu, and is counted among the Six Abodes of Murugan. The presiding deity is Murugan as Dhandayuthapani, a youthful ascetic carrying a staff and wearing a loincloth. According to Wikipedia, the Sangam-era text Tirumurukarruppatai mentions the site as Thiruvavinankudi, and later dynasties including the Cheras, Cholas, Pandyas and Madurai Nayaks are associated with the temple; accounts of its earliest phase differ. Temple tradition holds that the sage Bogar fashioned the main idol from a compound of nine substances known as navapashanam. The sanctum is described as early Dravidian in style, and its vimana is gold-plated. Thaipusam, Panguni Uthiram, Vaikasi Visakam and Surasamharam are the major festivals, with kavadi carrying and tonsure prominent among devotional practices. The temple's prasadam, Panchamirtham, carries a Geographical Indication tag. Pilgrims can climb the steps or a sloping path, or use the winch or ropeway. The temple is administered by the Tamil Nadu government's Hindu Religious and Charitable Endowments Department.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Dhandayuthapani_Swamy_Temple",
+    "what_it_supports": "history, Sangam reference, dynasties, architecture, navapashanam tradition, festivals, Panchamirtham GI tag, ropeway, HR&CE administration, dating conflicts"
+   },
+   {
+    "url": "https://dindigul.nic.in/tourist-place/arulmigu-dhandayuthapani-swamy-temple-palani/",
+    "what_it_supports": "Dindigul district government page: Sivagiri hill, Six Abodes, access by steps/winch/ropeway, Murugan iconography"
+   },
+   {
+    "url": "https://www.hinduismtoday.com/hpi/2023/08/04/madras-high-court-allows-palani-temple-to-retain-sign-board-restricting-entry-of-non-hindus/",
+    "what_it_supports": "HR&CE oversight through a joint director and executive officer"
+   }
+  ],
+  "notes": "Official website: not set. The HR&CE-run temple portal (palani.hrce.tn.gov.in) could not be fetched (not on allowlist), so unverified; reviewer may check it. Dindigul NIC page is a district govt page, not the temple's own site, so its timings were deliberately not used. Wikipedia's dating is internally inconsistent (Chera 2nd-5th c. CE vs Sangam reference); description therefore avoids a founding date. Wikipedia also reports a 2004 replacement idol controversy (allegations in 2019, IIT Madras findings); omitted from description as contested/off-topic; reviewer may decide. Non-Hindu entry restriction notice exists (Madras HC 2023, Hinduism Today); not included in description. Hill height and step count not found in sources, so omitted.",
+  "replaces_live": "Murugan atop Sivagiri hill. Kavadi procession during Thaipusam is spectacular. One of most visited temples."
+ },
+ {
+  "slug": "parassinikadavu-muthappan-temple",
+  "official_website": null,
+  "description": "Parassinikadavu Muthappan Temple, also called Parassini Madappura, stands on the bank of the Valapattanam river in Parassinikadavu, Kannur district, Kerala, roughly 18 to 20 km from Kannur town, depending on the source. Its deity is Sree Muthappan, regarded by local tradition as a manifestation of Shiva in the form of a hunter. Worship departs from the Brahminical temple practice common in Kerala: the deity is ritually enacted through Theyyam in two forms, Vellattam and Thiruvappana. Wikipedia says both are performed daily, while Kerala Tourism describes Theyyam every night from October to February. The customary offerings include toddy and fish, which Kerala Tourism says is not found at other temples in the state. Dogs are regarded as the deity's companions, and dog images flank the entrance, according to Wikipedia. Puthari Thiruvappana, on 16 Vrischikam, opens the temple's ritual year, and the major Thiruvappana Mahotsavam is held over three days in Kumbham. Kerala Tourism notes that devotees of all religions are admitted.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Muthappan_Temple",
+    "what_it_supports": "location, deity, Theyyam forms, daily performance, offerings, dogs, festivals, Malabar Devaswom Board"
+   },
+   {
+    "url": "https://keralatourism.org/malabar/parassinikadavu-muthappan-temple/174",
+    "what_it_supports": "Kerala Tourism: 18 km NE of Kannur, nightly Theyyam Oct-Feb, dried fish and toddy offerings, all religions admitted"
+   },
+   {
+    "url": "https://templesofkerala.org/kannur/parassinimadappurasreemuthappantemple.html",
+    "what_it_supports": "Puthari Thiruvappana 16 Vrischikam, final Thiruvappana 30 Kanni, hunter form of Shiva (third-party site)"
+   }
+  ],
+  "notes": "Official website: none verified; the Madappura's own site was not found in search (templesofkerala.org is a third-party directory). Timings not available from an official source. Conflicts: distance from Kannur 18 km (Kerala Tourism) vs 20 km (Wikipedia); Theyyam daily morning and evening (Wikipedia) vs nightly Oct-Feb (Kerala Tourism); offerings 'fish, meat and toddy' (Wikipedia) vs 'dried fish and toddy' (Kerala Tourism). Wikipedia lists Malabar Devaswom Board as governing body, but the Madappura is widely described as run by a hereditary/trust arrangement; not confirmed in sources read, reviewer should verify. Free daily meal tradition not found in any source read, so omitted. Wikipedia associates the temple mainly with the Thiyya community; omitted.",
+  "replaces_live": "Ritual performed as Theyyam dance. Dogs and toddy are offered — completely unique Kerala tradition."
+ },
+ {
+  "slug": "pazhamudircholai-murugan-temple",
+  "official_website": null,
+  "description": "Pazhamudircholai Murugan Temple, also called Solaimalai Murugan Temple, is a hill temple on the outskirts of Madurai, Tamil Nadu, in the Alagar hills. It is dedicated to Murugan and is counted among the six Arupadaiveedu, the abodes of Murugan. According to Wikipedia, the temple originally honoured only the vel, Murugan's divine spear, and shrines to Murugan with his consorts Valli and Deivanai, and to Ganesha, were added later. A popular legend tells how Murugan, in disguise, shook a naaval tree to offer fruits to the poet Avvaiyar, who did not recognise him. The shrine is mentioned in early Tamil literature, including the Sangam-era Tirumurukarruppatai of Nakkeerar and the Silappatikaram, and in hymns of Arunagirinathar. Wikipedia states it is administered by the Hindu Religious and Charitable Endowments Department of the Government of Tamil Nadu.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Murugan_Temple,_Pazhamudircholai",
+    "what_it_supports": "Location near Madurai, Murugan, Arupadaiveedu, vel originally, later shrines, Kanda Puranam legend, literary mentions, HR&CE administration"
+   },
+   {
+    "url": "https://tntemplesproject.in/Murugan-Alagar-Koil-Madurai",
+    "what_it_supports": "Alagar hills location north of Madurai, one of six Arupadai Veedu, vel as original deity, Nayak-period construction claim"
+   }
+  ],
+  "notes": "Identity clear: Solaimalai/Pazhamudircholai on Alagar hills ~20-25 km N of Madurai (Wikipedia gives only 'outskirts of Madurai'; blog says 29 km). Wikipedia gives no construction date; blog says Nayak era and mentions a shift to the hill under Tirumalai Nayak, but wording is ambiguous and unsourced, so left out. No official temple website found: the temple is managed by HR&CE (tnhrce.gov.in is a state-govt site, excluded by brief); it is administered together with the nearby Kallazhagar (Alagar) temple. Timings seen only on an unofficial blog (6 am-6 pm), so timings_official is null and hours are not in the description. Wikipedia also exists under title 'Arulmigu Solaimalai Murugan Temple'. Tourism/aggregator pages not used.",
+  "replaces_live": "Sixth of Aarupadai Veedu — forest Murugan. Natural cave setting in Alagar Kovil hills. Peaceful sanctuary."
+ },
+ {
+  "slug": "phanigiri",
+  "official_website": null,
+  "description": "Phanigiri is an early historic Buddhist site on a hill at Phanigiri village, Nagaram mandal, Suryapet district, Telangana, about 40 km from Suryapet town. According to Wikipedia, it dates from the 1st century BCE to the 4th century CE and is related to the stupa complexes of Amaravati and Nagarjunakonda. The remains include a large stupa, apsidal chaitya halls with stupas, and monastic viharas. Reports describe sculpted panels of episodes from the Buddha's life and Jataka tales, Brahmi inscriptions, a life-size stucco Bodhisattva figure unearthed in 2019, and two large footprints believed to be the Buddha's. Excavations have yielded pottery, beads and coins of the Satavahana and Ikshvaku periods; in 2024 officials reported a pot of about 3,730 lead coins attributed to the Ikshvaku era. Deccan Chronicle describes the site as a centre of both Hinayana and Mahayana Buddhism. The same paper reported in June 2026 that the Telangana heritage department was to launch a conservation programme here, funded through corporate social responsibility money, after a foundation stone ceremony on 22 June.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Phanigiri",
+    "what_it_supports": "Suryapet district, ~40 km from Suryapet, 1st c. BCE-4th c. CE, stupa, apsidal halls, viharas, footprints, 2019 stucco Bodhisattva, name origin"
+   },
+   {
+    "url": "https://www.deccanchronicle.com/southern-states/telangana/phanigiri-gajulabanda-buddhist-sites-to-undergo-conservation-1965104",
+    "what_it_supports": "Hinayana and Mahayana centre, chaitya halls, panels, Brahmi inscriptions, Satavahana/Ikshvaku coins, June 2026 conservation by state heritage department"
+   },
+   {
+    "url": "https://etvbharat.com/en/!bharat/pot-containing-lead-coins-of-ikshvaku-period-found-in-phanigiri-buddhist-temple-site-in-telangana-enn24040502806",
+    "what_it_supports": "Nagaram mandal location, April 2024 find of ~3,730 lead coins attributed to Ikshvaku period"
+   }
+  ],
+  "notes": "Not a Hindu temple: ETV Bharat calls it a 'Buddhist temple site', but it is an ancient Buddhist monastic and stupa complex; described in Buddhist terms. No official website (state heritage department / ASI pages are not temple trust sites anyway). No protected-monument status found in any source. Wikipedia names an earlier village name Dharmachakrapuram, derived by some sources and not independently confirmed, so omitted. Nagaram mandal appears only in ETV Bharat. Distance and 1st c. BCE-4th c. CE dating are from Wikipedia only; the Deccan Chronicle piece (June 2026) says the conservation programme was to be inaugurated and the foundation stone laid on 22 June 2026, so 'began' is slightly forward-looking; reviewer may soften. Wikipedia article was fetched via summary, not read line by line.",
+  "replaces_live": "\n\n\n\n\nPhanigiri is a Buddhist site in Suryapet district, Telangana. It dates to the 1st Century BCE - 4th century CE period.\nThe site is a major discovery in the history of the early India. It is closely related to the stupa complexes at Amaravati and Nagarjunakonda.\n"
+ },
+ {
+  "slug": "pydithalli-ammavari-temple",
+  "official_website": null,
+  "description": "The Pydithalli Ammavari Temple is in Vizianagaram town, Andhra Pradesh, near the Pedda Cheruvu tank. The goddess Pydithalli Ammavaru is regarded by local people as the village deity of Vizianagaram. According to local tradition, she was Pydimamba, a sister of the Vizianagaram ruler Vijaya Rama Raju, who died around the time of the Battle of Bobbili in 1757; accounts differ on the details, and Wikipedia notes there is no reliable evidence about her birth or personal life. One telling holds that fishermen later found her image on the western bank of the tank; the festival includes an umbrella made of fishing nets associated with the fishermen's community. The temple is best known for the Sirimanotsavam, held on the first Tuesday after Vijayadashami. A tall wooden pole, the sirimanu, is carried in procession between the temple and the fort with the temple priest seated atop it, while the Vizianagaram royal family watches from the fort. Wikipedia reports that the festival draws about two to three lakh visitors.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Sirimanothsavam",
+    "what_it_supports": "Location near Pedda Cheruvu, village deity, Pydimamba and Bobbili 1757 tradition, fishermen/net umbrella, festival day, sirimanu procession, royal family, attendance estimate, note about lack of evidence"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/andhra-pradesh/vizianagaram/sri-pydithalli-ammavari-temple",
+    "what_it_supports": "Tourism page confirming Vizianagaram location, Pydimamba as sister of Vijaya Rama Raju, Sirimanotsavam on first Tuesday after Vijayadashami, 2-3 lakh devotees, alternative dream-and-idol version"
+   }
+  ],
+  "notes": "No official temple/devasthanam website found. official_website null. Two sources only, both secondary. Legend conflicts: Wikipedia has Pydimamba ill with smallpox, fishermen finding the idol; Incredible India says she died in grief and directed a soldier in a dream to the idol west of the lake; description attributes to local tradition and keeps only the common core. Wikipedia also mentions a second temple at Three Lanterns junction and a Vanam Gudi opposite the railway station; which is the main temple the portal intends should be checked. Opening hours (6 AM-8 PM) appear only on the tourism page, so not used. Attendance estimate is from Wikipedia and attributed.",
+  "replaces_live": "Powerful Shakti temple of Vizianagaram district. Goddess protects fishermen. Unique coastal Shakti tradition."
+ },
+ {
+  "slug": "rajarajeswaram-temple-thanjavur",
+  "official_website": null,
+  "description": "Rajarajeswaram, today better known as the Brihadisvara (Brihadeeswarar) Temple, stands in Thanjavur, Tamil Nadu, on the south bank of the Kaveri. It is a Shaiva temple built by the Chola emperor Rajaraja I. UNESCO records construction beginning around 1003-1004 CE and consecration around 1009-1010 CE. The name Rajarajesvaram means the temple of the lord of Rajaraja; locals also call it Peruvudaiyar Kovil or Thanjai Periya Kovil. Built of granite in Chola style, it has a 16-storey vimana, a monolithic Nandi weighing about 25 tonnes and a linga about 8.7 metres high; sources give slightly different heights for the tower, around 60 metres or more. Tamil and Grantha inscriptions record many gifts to the temple, and Chola-era frescoes inside the temple were rediscovered in 1931. UNESCO inscribed the temple as a World Heritage property in 1987, and the listing was extended in 2004 to form the Great Living Chola Temples with Gangaikondacholapuram and Darasuram. According to Wikipedia, the Archaeological Survey of India protects the monument, while the Thanjavur palace Devasthanam, through a hereditary trustee, manages the temple. Maha Shivaratri and the Brahan Natyanjali dance festival are observed here.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Brihadisvara_Temple",
+    "what_it_supports": "Location, Shiva, builder, 1003-1010 CE, alternate names (Rajarajesvaram, Peruvudaiyar Kovil, Thanjai Periya Kovil), granite/Chola style, 16-storey vimana, Nandi ~25 t, linga ~8.7 m, inscriptions, frescoes found 1931, UNESCO, ASI protection and Devasthanam management, festivals."
+   },
+   {
+    "url": "https://whc.unesco.org/en/list/250/",
+    "what_it_supports": "Rajaraja I (985-1012 CE), construction c.1003-04, consecration 1009-10, World Heritage 1987, 2004 extension to Great Living Chola Temples, vimana about 59.82 m (English) vs 61 m (Russian text)."
+   },
+   {
+    "url": "https://thanjavur.info/?p=4244",
+    "what_it_supports": "Alternative names including RajaRajeswara Temple/Rajarajesvaram; Rajaraja named it Rajarajesvaram; dating discrepancies (foundation 1002, built 1004-1009, finished 1010). Local info site, not authoritative."
+   }
+  ],
+  "notes": "Identification: Rajarajeswaram/Rajarajesvaram is the original Chola-era name of the Brihadisvara (Brihadeeswarar, Periya Kovil) Temple in Thanjavur; no separate Rajarajeswaram temple in Thanjavur was found. Dating varies between sources (foundation 1002 vs 1003-04; completion 1009 vs 1010); description uses UNESCO's framing. Tower height varies (59.8 m / 61 m / 63.4 m / 66 m across sources); description deliberately gives only 'around 60 metres or more'. Nandi weight and linga height from Wikipedia only. Administration claim (Thanjavur palace Devasthanam, hereditary trustee) is from Wikipedia only and not verified on an official site; the thanjavur.info page did not describe present administration. No official temple website was found or verified; timings_official null. Single strong secondary plus UNESCO; no ASI or Devasthanam page fetched.",
+  "replaces_live": "The Great Living Chola Temple. Raja Raja Chola Is masterpiece. Shadow of 216-foot vimana disappears at noon."
+ },
+ {
+  "slug": "ramanathaswamy-temple",
+  "official_website": null,
+  "description": "Ramanathaswamy Temple is on Rameswaram island in Ramanathapuram district, Tamil Nadu, and is reckoned among the twelve Jyotirlinga shrines of Shiva. Its presiding deity is Ramanathaswamy, with the goddess Parvathavardhini. According to tradition drawn from the Ramayana, Rama worshipped Shiva here; the sanctum holds a sand lingam attributed to Rama or Sita, depending on the telling, and a lingam said to have been brought by Hanuman. Wikipedia lists it among the Paadal Petra Sthalams sung by Appar, Sundarar and Sambandar, and among the Char Dham pilgrimage sites. The present structure grew over centuries, with contributions credited to the Pandyas, Sri Lankan and Jaffna rulers, and the Setupatis of Ramanathapuram, one of whom built the third corridor in the late 18th century. Wikipedia reports corridors totalling about 3,850 feet, an outer corridor with roughly 1,212 pillars, and 22 sacred theerthams inside the temple.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Ramanathaswamy_Temple",
+    "what_it_supports": "Location, Jyotirlinga/Paadal Petra/Char Dham status, history and patrons, corridor and pillar figures, 22 theerthams, HR&CE administration"
+   },
+   {
+    "url": "https://www.tamilnadutourism.tn.gov.in/destinations/rameswaram-temple",
+    "what_it_supports": "Deities, Ramayana-linked sand lingam tradition (attributed to Sita here), Vishwalingam, 22 holy water bodies inside temple"
+   }
+  ],
+  "notes": "Official website not verified: rameswaramtemple.tnhrce.in (HR&CE-hosted) and similar are not on the fetch allowlist, so not confirmed; also it would be a state-department page. Sources differ on who made the sand lingam (Rama per Wikipedia, Sita per TN Tourism) and on where Hanuman's lingam came from (Kailash vs Kashi); description hedges both. Corridor length and 'longest corridor' superlative are Wikipedia claims and omitted/attributed. Timings not available from an official source.",
+  "replaces_live": "Jyotirlinga on Pamban Island, part of Char Dham. Famous 1,212m corridor — longest in world — with 22 sacred wells."
+ },
+ {
+  "slug": "sabarimala-ayyappa-temple",
+  "official_website": null,
+  "description": "Sabarimala Sree Dharma Sastha Temple stands on a hill about 1,260 m high in Ranni taluk, Pathanamthitta district, Kerala, and is dedicated to Ayyappan, also known as Dharma Sastha. Wikipedia says it is managed by the Travancore Devaswom Board, an autonomous statutory body, while the Thazhamon Madom family holds traditional authority in religious matters. The main pilgrimage is the 41-day Mandala season, and the temple also opens for Makaravilakku on 14 January and for the first five days of each Malayalam month. Pilgrims climb eighteen sacred steps, which by custom are reserved for those carrying the irumudikkettu. Entry of women aged 10 to 50 was restricted by custom; the Kerala High Court upheld this in 1991. On 28 September 2018 the Supreme Court, by 4:1, held the restriction unconstitutional in Indian Young Lawyers Association v State of Kerala, with Justice Indu Malhotra dissenting. A review bench referred wider questions to a larger bench in November 2019. A nine-judge bench heard the reference in April and May 2026 and reserved judgment on 14 May 2026; at the time of writing no judgment had been reported.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://wikiwand.com/en/Sabarimala_Temple",
+    "what_it_supports": "Location, elevation, Ayyappan/Dharma Sastha, TDB management, Thazhamon Madom, season, 18 steps, Makaravilakku, 1991 Kerala HC, 2018 SC 4-1, Indu Malhotra dissent"
+   },
+   {
+    "url": "https://www.travancoredevaswomboard.org/about",
+    "what_it_supports": "TDB is an autonomous body constituted under Travancore-Cochin Hindu Religious Institutions Act XV of 1950; header names Travancore Devaswom Board; footer credits TDB EDP Department; site links to Sabarimala pooja timings, calendar, vazhipadu"
+   },
+   {
+    "url": "https://www.scobserver.in/court-case/sabarimala-review",
+    "what_it_supports": "Case name Indian Young Lawyers Association v State of Kerala, 28 Sept 2018 4:1, review referral 14 Nov 2019 by 3:2, nine-judge bench hearings April-May 2026, judgment reserved 14 May 2026, listed as pending (updated 4 June 2026)"
+   },
+   {
+    "url": "https://www.scobserver.in/?p=19760",
+    "what_it_supports": "Nine-judge bench to examine Articles 25 and 26, hearing began 7 April 2026"
+   }
+  ],
+  "notes": "Legal status is time-sensitive: as of the Supreme Court Observer page (updated 4 June 2026) judgment was reserved and the case pending; I could not confirm whether judgment has since been delivered (today is 2026-11-01). Reviewer must re-check before publishing and update/trim the last sentence. The wikiwand/Wikipedia text I read gave Feb 2019 for referral and did not name the case; I used the Supreme Court Observer for the case name and the 14 Nov 2019 referral date (Wikipedia summary appeared inaccurate/incomplete there). Website judgment: travancoredevaswomboard.org is the site of the Travancore Devaswom Board, a statutory board that runs Sabarimala; confirmed on the /about page by the header naming the Board, the Board's own constitution text, and footer crediting TDB EDP Department. So it qualifies as the managing body's own site. Caveat: the site's home page could not be fetched (allowlist), only /about; footer reads 2020. Not used: sabarimala.kerala.gov.in (state govt portal, excluded). Timings: the site only links to a pooja timing page which I could not read, so timings_official null. Wikipedia source name says 'Sabarimala Sree Dharma Sastha Temple'; official renaming to 'Sabarimala Sree Ayyappaswamy Temple' reported in Nov 2016 news, later reported as retained name; not used.",
+  "replaces_live": "Hilltop forest temple. Millions observe 41-day austerity. One of Earth's largest annual pilgrimages."
+ },
+ {
+  "slug": "shakuni-temple-pavithreswaram",
+  "official_website": null,
+  "description": "The Shakuni temple at Pavithreswaram, in Kottarakkara taluk of Kollam district, Kerala, is dedicated to Shakuni, the maternal uncle of the Kauravas in the Mahabharata. One blog gives its name as the Mayamkottu Malancharuvu Malanada temple. One blog says Pavithreswaram's name comes from a story that the Kauravas divided their weapons here (Pakutheswaram, later Pavithreswaram). The Hindu has described it as touted to be the only Shakuni temple in India. Rather than a conventional temple building, worship is reported to take place on a raised platform holding the images, with a granite seat believed to have been Shakuni's. One blog reports that offerings include tender coconut, silk and toddy. The Hindu reports that comparable Kaurava shrines in the region are served by hereditary priests from the Kurava community, using Malayalam invocations rather than Sanskrit mantras. One blog says the Kurava community maintains this temple and that a Malakkuda festival is held in the month of Makaram, a claim not corroborated elsewhere.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Pavithreswaram",
+    "what_it_supports": "Pavithreswaram is in Kottarakkara taluk, Kollam district; lists a Mayam kottu Malanada Temple (does not describe a Shakuni temple)"
+   },
+   {
+    "url": "https://www.inkl.com/news/dussasana-dussala-are-revered-in-these-kollam-temples",
+    "what_it_supports": "The Hindu (Navamy Sudhish) syndicated piece: 'touted as the only Sakuni temple in India', hereditary Kurava priests, Malayalam invocations"
+   },
+   {
+    "url": "https://www.hindu-blog.com/2009/02/temple-dedicated-to-shakuni-of.html",
+    "what_it_supports": "Weak blog source: Mayamkottu Malancharuvu Malanada Temple name, weapon-division etymology, granite throne, offerings, Kurava community upkeep, Malakkuda festival in Makaram"
+   }
+  ],
+  "notes": "Sources are thin: one reputable newspaper item (The Hindu via inkl, only partly about this shrine), Wikipedia (place only) and an unsourced blog, whose page also carries unrelated sidebar content and an AI-training notice; blog claims are attributed and the festival/management claim is flagged uncorroborated. Wikipedia's 'Mayam kottu Malanada Temple' is assumed to be this shrine through name similarity with the blog; reviewer should confirm. Do not confuse with Malanada Duryodhana Temple (Kerala Tourism, Poruvazhy area, Kollam district), a separate shrine. No official site found; nothing on timings. Wording 'The Hindu has described' relies on inkl's syndication, not the original page.",
+  "replaces_live": "Unique temple dedicated to Shakuni, the prince of Gandhara from Mahabharata. Located in Pavithreswaram village. Locals believe Shakuni was wronged and worship him for protection and justice."
+ },
+ {
+  "slug": "simhachalam-temple",
+  "official_website": null,
+  "description": "Simhachalam Temple, formally the Sri Varaha Lakshmi Narasimha Swamy Temple, is a Vishnu temple on the Simhachalam hills near Visakhapatnam, Andhra Pradesh. Its main deity is Varaha Narasimha, a combined form of Vishnu, with Lakshmi worshipped as Simhavalli Thayar. According to Wikipedia, the image is covered in sandalwood paste for most of the year and resembles a lingam. Local tradition, the Sthala Purana, credits Prahlada with the original shrine. The earliest inscription Wikipedia mentions dates to 1087 CE, and the Eastern Ganga king Narasingha Deva I is credited with rebuilding much of the present temple in the 13th century. The Visakhapatnam district website notes Chola, Velanadu and Eastern Ganga associations. Wikipedia describes an architectural mixture of Eastern Ganga, Eastern Chalukya and Chola styles, a west-facing temple and nearly 500 inscriptions. Chandanotsavam, held on Akshaya Tritiya, is a major festival at which the paste is removed. According to Wikipedia, the Simhachalam Devasthanam board administers the temple, with members of the Pusapati Gajapathi family as hereditary trustees.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Varaha_Lakshmi_Narasimha_temple,_Simhachalam",
+    "what_it_supports": "Deity, Sthala Purana, 1087 CE inscription, Narasingha Deva I, architecture, ~500 inscriptions, Chandanotsavam, Devasthanam administration"
+   },
+   {
+    "url": "https://visakhapatnam.ap.gov.in/religion/",
+    "what_it_supports": "Location about 16 km from Visakhapatnam, deity, Chola/Velanadu/Ganga inscriptions, festivals (district govt site, publisher not named on page)"
+   }
+  ],
+  "notes": "Candidate official/temple-administration sites could not be fetched (not on the session allowlist, curl blocked), so no website is set. Dating conflict: Wikipedia cites 1087 CE inscription; the district site cites Kulottunga I inscription of AD 1098-99; both stated neutrally (only the 1087 date and 'Chola' noted). Wikipedia gives two hill elevations (300 m vs 800 m) and the district site says 244 m; elevation omitted. Wikipedia's account of Ramanuja and a conversion legend is contested by some Vaishnavites and was omitted. Official site (simhachalamdevasthanam.net or AP endowments site) unverified. Sri Vaishnava Pancharatra worship per Wikipedia not included.",
+  "replaces_live": "Lord Narasimha on Simhachala hill. Idol covered with sandalwood paste — only revealed on Akshaya Tritiya."
+ },
+ {
+  "slug": "sirkazhi-thoniappar-temple",
+  "official_website": null,
+  "description": "This multi-level Shiva complex in Sirkazhi, Mayiladuthurai district, Tamil Nadu, is known variously as the Sattainathar or Brahmapureeswarar temple. According to Wikipedia it has three shrines on three levels: Brahmapureeswarar at the base, Thoniappar with the consort Periyanayaki in the middle, and Sattainathar, worshipped as Bhairava, above. Local tradition derives the name Thoniappar from a legend in which Shiva carried the 64 arts on a raft (thoni) at the time of the cosmic deluge. The temple is a Paadal Petra Sthalam: the child-saint Thirugnanasambandar is traditionally held to have been born in Sirkazhi, and the town has 71 Tevaram hymns, mostly his, according to the TN Temples Project. Wikipedia dates the entrance porch to the 10th-11th centuries, with Chola enlargements between the 11th and 13th. The Dravidian complex has seven-tiered gopurams and numerous water bodies, and eight Bhairava images are enshrined. Dharmapuram Adheenam, a Saivite mutt, is recorded as maintaining it. A ten-day festival takes place in the Tamil month of Chithirai.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Sattainathar_Temple,_Sirkazhi",
+    "what_it_supports": "three levels, dating, administration by Dharmapuram Adheenam, festival, architecture"
+   },
+   {
+    "url": "https://tntemplesproject.in/Brahmapureeswarar-Sirkazhi-Nagapattinam",
+    "what_it_supports": "Tevaram hymn count, Sambandar birthplace, multi-level structure, Ashta Bhairava"
+   }
+  ],
+  "notes": "Two sources only, both secondary. Administration by Dharmapuram Adheenam is as stated by Wikipedia ('as of 1987' era data); verify current status (HR&CE may also be involved). No official site found. Timings on tntemplesproject (6-12:30, 4-9) are not official so left null. Wikipedia says Sambandar's birth via tradition; the Thoniappar legend is tradition.",
+  "replaces_live": "Paadal Petra Sthalams. Thoniappar (boat-Shiva) legend. One of the divinely certified Shaiva temples."
+ },
+ {
+  "slug": "siruvapuri-balamurugan-temple",
+  "official_website": null,
+  "description": "Siruvapuri, near Chinnambedu in Thiruvallur district, Tamil Nadu, has a temple to Balasubrahmanya, a name of Murugan. According to the Dinamalar temple directory, the standing image is about 4.5 feet tall and is shown hand in hand with his consort Valli. Shrines to Shiva as Annamalaiyar and Parvati as Unnamulai Ambal stand to the right of the main sanctum, and a sanctum for the poet-saint Arunagirinathar faces it. Wikipedia reports that temple records date the structure to more than five centuries ago, and that Arunagirinathar, the 14th-century poet, is said to have visited several times and sung verses from his Thiruppugazh here. Local tradition links the place to the Ramayana: Dinamalar records a tradition that Lava and Kusa, the sons of Rama, were born here, whereas Wikipedia says only that they visited. According to Dinamalar, worship on Poosam star days is believed to help marriage prospects, as the wedding of Murugan and Valli is said to have fallen on a Poosam day, and devotees offer milk abhishekam in thanksgiving when their wishes are fulfilled.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Siruvapuri_Sri_Balasubrahmanyam_temple",
+    "what_it_supports": "Thiruvallur district; Murugan with Shiva/Parvati shrines; 'over five centuries' per temple records; Arunagirinathar; Lava-Kusa legend (visited)"
+   },
+   {
+    "url": "https://temple.dinamalar.com/en/new_en.php?id=40",
+    "what_it_supports": "Siruvapuri/Chinnampedu location; 4.5 ft standing image with Valli; Annamalaiyar and Unnamulai shrines; Arunagirinathar sanctum; Lava-Kusa born here; Poosam; about 500 years old"
+   }
+  ],
+  "notes": "No official website found; the temple is a Tamil Nadu HR&CE temple (government), which is not eligible. Sources conflict mildly on Lava/Kusa (Wikipedia: visited; Dinamalar: born here); description states both attributed. Wikipedia gives no village beyond temple name; Dinamalar gives Siruvapuri, Chinnampedu. Dinamalar says all images except Murugan's are emerald stone and the peacock is emerald; omitted as unverified claim. Festivals not documented in either source. Blog and aggregator sites (veludharan, hindupad, oneindia) seen in search but not used.",
+  "replaces_live": "Ancient Murugan as a child (Balamurugan). Holy waters of the tank cure skin diseases per tradition."
+ },
+ {
+  "slug": "sittannavasal-cave-temple",
+  "official_website": null,
+  "description": "Sittannavasal, in Pudukkottai district, Tamil Nadu, is a Jain site centred on the rock-cut Arivar Koil, a cave shrine of the Arihants associated with Tamil Shramana monks; Wikipedia explains the village name as 'abode of great saints', though scholars differ on its derivation. The west-facing cave has an ardha-mandapa and a small cubical sanctum whose reliefs show seated Tirthankaras beneath triple umbrellas and a teacher (acharya) in a niche, while a relief of Parshvanatha, the 23rd Tirthankara, appears under a five-hooded serpent. Scholars differ on its date: it has been attributed to the Pallava king Mahendravarman I (580-630 CE) or to a Pandya patron, with a 9th-century Pandya extension and an inscription of about 815 CE recording repairs by the acharya Ilam Gautaman. Fresco-secco paintings on the ceiling show a lotus tank with fish, birds and elephants, which some scholars read as the Samavasarana, the divine assembly hall of a Tirthankara. Nearby are the Ezhadipattam rock beds with Brahmi inscriptions, used by Jain ascetics for austerities. The Archaeological Survey of India maintains the site.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Sittanavasal_Cave",
+    "what_it_supports": "location, Arivar Koil, Jain reliefs, murals, dating, ASI protection"
+   },
+   {
+    "url": "https://puratattva.in/sittanavasal-the-legacy-of-chitrasutra/",
+    "what_it_supports": "Pallava vs Pandya debate, Srivallabha/Ilan Gautaman inscription, Ezhadipattam beds, Samavasarana interpretation"
+   }
+  ],
+  "notes": "Official website: null; the site is an ASI-protected monument (govt), no trust site found. Timings null. Dating conflicts: Wikipedia gives Sramana period 2nd c. BCE to 900 CE; Puratattva dates the bed inscriptions to early 3rd c. BCE and the cave to 7th-8th c. CE; Pallava (Dubreuil) vs Pandya attribution is contested, so the description attributes it. Neither source mentions the Mutharaiyar dynasty, so it was left out. Samavasarana reading is Ramachandran's; Thomas considers the evidence slim (Puratattva) - description says 'some scholars'. Wikipedia calls the beds 'Ezhadippattam' and Puratattva 'Eladipattam' (17 beds); spelling should be standardised by the reviewer. Two ticketed ASI monuments at the site (cave and Ezhadipattam beds) per Puratattva. Wikipedia fetch was tool-summarised; recheck exact dates before quoting.",
+  "replaces_live": "Sittannavasal in Pudukkottai district is a Jain cave temple dating to the 2nd century BCE. Famous for its beautiful Jain frescoes painted on the ceiling — considered comparable to Ajanta paintings. The paintings depict lotus pond, fish, geese and Tirthankaras. A protected monument of national importance."
+ },
+ {
+  "slug": "sree-vadakkunnathan-temple",
+  "official_website": null,
+  "description": "The Vadakkunnathan Temple stands on raised ground in the centre of Thrissur, Kerala, within a stone wall enclosing about nine acres. Shiva is the main deity, with Parvati, Shankaranarayana, Rama and Ganesha among the shrines in the complex. According to local tradition, the sage Parashurama founded the shrine, and no construction date is recorded in the sources consulted, so the temple's origin rests on tradition. The Thrissur district website and Wikipedia describe it as a classical example of Kerala architecture, with gopurams on four sides, a koothambalam theatre hall and Mahabharata murals. The lingam is traditionally covered by a large mound of ghee built up from daily abhishekam. According to Wikipedia, the temple and its murals are declared a National Monument under the AMASR Act, and a conservation project completed in 2015 received a UNESCO Asia-Pacific award. Thekkinkadu Maidan, the ground surrounding the temple, is the main venue of the Thrissur Pooram, and Maha Shivaratri is described as the temple's principal festival.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Vadakkunnathan_Temple",
+    "what_it_supports": "Location, nine-acre wall, deities, Parashurama tradition, architecture, murals, ghee lingam, National Monument status (AMASR Act per ASI), 2015 conservation and UNESCO Asia-Pacific award, Thrissur Pooram venue, Maha Shivaratri."
+   },
+   {
+    "url": "https://thrissur.nic.in/?p=25821",
+    "what_it_supports": "District government page: classical Kerala architecture, four-sided gopurams, kuttambalam, Mahabharata murals, Nalambalam shrines, Koothambalam, Thekkinkadu Maidan as Pooram venue, town named after the temple."
+   },
+   {
+    "url": "https://sreewadakkunathantemple.org/",
+    "what_it_supports": "Tradition that Parasurama consecrated the original shrine, historians have not determined the date, deities list. NOT verified as official (see notes)."
+   },
+   {
+    "url": "https://www.verdictum.in/court-updates/high-courts/kerala-high-court-cochin-devaswom-board-v-the-deputy-director-2024ker28879-vadakkunnathan-kshethra-waste-disposal-thrissur-pooram-1530756",
+    "what_it_supports": "Cochin Devaswom Board's statutory oversight role in relation to the temple's festivals (implied only, not an explicit administration statement)."
+   }
+  ],
+  "notes": "official_website is null. sreewadakkunathantemple.org (spelling Wadakkunathan) appears in search as 'The Sree Wadakkunathan Temple' and its content is temple-specific, but the page has no copyright line, no named operator (footer only says 'Powered by Enovyx Infotech LLP', link points to '#'), mentions the Venugopalaswamy Kainkaryam Trust of Chennai (restoration funder) without saying it runs the site, and contains an unrelated injected-looking line ('Pond Cranes live in wetlands...') plus typos and leftover popup text. Per brief, unverified, so null. Wikipedia's external links list this domain as official, so a reviewer may wish to confirm with the Devaswom/temple office. The Cochin Devaswom Board (cochindevaswomboard.org) is the likely managing body but no fetched page explicitly states it; I did not assert it in the description. Wikipedia's claims that the temple is the 'only' one where the lingam is not visible is tagged citation-needed and omitted; the 'koothambalam over 1,600 years old' and Perumthachan claims are speculative and omitted. Age conflict: site says Parasurama consecrated it 'at least 4,000 years ago' (tradition), Wikipedia notes murals are over 350 years old and temple documents say nearby temples are older. Timings not on any verified official page.",
+  "replaces_live": "Ancient Shiva temple. Thrissur Pooram — mother of all elephant festivals — held at this temple."
+ },
+ {
+  "slug": "sri-mulavasam",
+  "official_website": null,
+  "description": "Srimulavasa (Sri Mulavasam, also Tirumulavata) was a Buddhist vihara and pilgrimage centre on the Kerala coast in the early medieval period. Scholars place it somewhere along the Alappuzha coast, between Ambalappuzha and Thrikkunnappuzha; its exact site is not fixed in these sources. It is known chiefly from the Paliyam copper plates, dated on the currently accepted view to 898 CE, in which the Ay king Vikramaditya Varaguna granted land to the vihara. The bilingual Tamil and Sanskrit plates open with verses honouring the Buddha, the Dharma-Sangha and Avalokitesvara. The Mushika Vamsa Kavya, composed around the 11th century, also mentions the shrine and says an Ezhimala prince protected it from the sea with stone blocks. A Buddha image found in Gandhara bears an inscription naming Mulavasa Lokanatha of the southern country, which Wikipedia reads as a sign of the centre's wider standing.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Srimulavasa_Vihara",
+    "what_it_supports": "Identity, location between Ambalappuzha and Thrikkunnappuzha, Paliyam plates 898 AD, Mushika Vamsa Kavya, Gandhara Buddha image inscription"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Vikramaditya_Varaguna",
+    "what_it_supports": "Ay ruler, Paliyam plates content and bilingual form, 898 AD dating (other proposals 868, 925), vihara in Chera kingdom"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Buddhism_in_Kerala",
+    "what_it_supports": "Alappuzha coast, Thrikkunnapuzha, Ay/Ezhimala patronage, claim it had lost its name by the 10th century"
+   }
+  ],
+  "notes": "Identified as the lost medieval Buddhist vihara Srimulavasa. No official site and no known surviving structure, so website null. All sources are Wikipedia (which cites Narayanan, Veluthat, Menon, Gurukkal, Gopinatha Rao); no ASI/state source consulted. Wikipedia's Buddhism in Kerala says the centre lost its name by the 10th century, which sits oddly with the 11th-century Mushika Vamsa Kavya mention; left out of description. Site is not a visitable temple, so timings/darshan do not apply.",
+  "replaces_live": "\n\n\n\n\nSri Mulavasam, also spelled Sreemoolavasam, was a Buddhist temple and centre of pilgrimage on the south-western coast of India. Some scholars postulate its location to be in between Ambalappuzha and Thrikkunnappuzha of Alappuzha district, Kerala. At its inception, it was a Hinayana seat of lear"
+ },
+ {
+  "slug": "srikalahasti-temple",
+  "official_website": null,
+  "description": "Srikalahasti Temple is a Shiva temple in Srikalahasti town, Tirupati district, Andhra Pradesh, about 36 km from Tirupati. Shiva is worshipped as Srikalahasteeswara and Parvati as Gnana Prasunambika. It is counted among the five Pancha Bhoota Sthalams, where the presiding linga is associated with air (Vayu), and is known as a Rahu-Ketu kshetra, where rituals to mitigate the influence of these two shadow planets are offered. Incredible India dates the inner temple to the 5th century, attributes the outer temple and main structure to Rajendra Chola I in the 11th century and credits the Vijayanagara Empire with the tall rajagopuram. According to Wikipedia, the Vijayanagara king Krishnadevaraya is credited with the main gopuram and a hundred-pillared hall, dated 1516 CE. The main gopuram, about 37 m (120 ft), collapsed on 26 May 2010 and was rebuilt and consecrated on 18 January 2017. The temple follows the Dravidian style. A 13-day Brahmotsavam coinciding with Maha Shivaratri is among its major festivals.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Srikalahasteeswara_temple",
+    "what_it_supports": "location, deities, Pancha Bhoota, Rahu-Ketu, Krishnadevaraya/1516, gopuram height, 2010 collapse and 2017 rebuild, festivals"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/srikalahasti-temple",
+    "what_it_supports": "Incredible India: Tirupati district, 5th-c. inner temple, Rajendra Chola I, Rahu-Ketu kshetra, Vayu linga"
+   }
+  ],
+  "notes": "Official website: NOT set. srikalahastitemple.org.in explicitly says it is 'not the official temple website' (independent pilgrim guide, ad-network ID, unreliable claims such as TTD running lodges); its timings and sevas were not used. The Devasthanam's real site (believed srikalahasthi.org) could not be fetched (not on allowlist), so unverified. Conflicts: rajagopuram height 120 ft/37 m (Wikipedia) vs 'roughly 120 meter' (Incredible India, likely an error); inner-temple 5th c. CE vs earliest Saiva hymn references. Claims about the temple staying open during eclipses and camphor linga are tradition-only and omitted from the description.",
+  "replaces_live": "Pancha Bhuta Stala for Vayu (air). Spider, serpent, elephant tridevtas alongside Shiva. Important Rahu-Ketu puja site."
+ },
+ {
+  "slug": "srirangam-ranganathaswamy",
+  "official_website": null,
+  "description": "Sri Ranganathaswamy Temple stands on Srirangam island between the Kaveri and Kollidam rivers, near Tiruchirappalli in Tamil Nadu. It is dedicated to Ranganatha, a form of Vishnu, with his consort Ranganayaki, and UNESCO's tentative-list entry ranks it first among the 108 Divya Desams of the Vaishnava tradition. That entry describes a Dravidian complex of seven concentric enclosures over about 156 acres, with 21 gopurams, around 50 sub-shrines, several sacred pools and a Vijayanagara-period hall of pillars. The 13-tier Rajagopuram rises roughly 72-73 metres and, according to Wikipedia, was completed in 1987. More than 640 published inscriptions record patronage by Chola, Pandya, Hoysala and Vijayanagara rulers, among others. UNESCO's text places the temple's origin in the 1st century CE, while Wikipedia notes that the inscriptions range from about the 7th to the 17th centuries. Wikipedia also records a rebuilding in 1371 under the Vijayanagara commander Kumara Kampana. The Tamil Nadu HR&CE Department administers the temple. Its Margazhi Pagal Pathu and Ra Pathu festival, which includes Vaikunta Ekadashi, is a major observance.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://whc.unesco.org/en/tentativelists/5894/",
+    "what_it_supports": "Island location, 108 Divya Desams, 156 acres, seven enclosures, 21 gopurams, ~50 sub-shrines, 9 pools, 72 m Rajagopuram, 640+ inscriptions, 1st c. CE origin"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Srirangam_Ranganathaswamy_temple",
+    "what_it_supports": "(via wikiwand mirror) deity/consort, 1987 completion, 1311 raid, 1371 rebuild, HR&CE administration, Margazhi festival"
+   }
+  ],
+  "notes": "Official site not identified: searches returned only Wikipedia/aggregators; the temple is run by TN HR&CE (government), so any hrce.tn.gov.in page would not qualify anyway. en.wikipedia.org fetch was blocked; Wikipedia content read via wikiwand mirror. Conflicts: Wikipedia gives 'over 600'/'over 800' inscriptions and 81 vs 50+ shrines; UNESCO says 640+ inscriptions and ~50 sub-shrines; Rajagopuram 72 m (UNESCO) vs 73 m (Wikipedia); origin 1st c. CE (UNESCO) vs inscriptions from late 1st c. BCE (Wikipedia). Description uses hedged ranges.",
+  "replaces_live": "World's largest functioning Hindu temple (631 acres, 7 enclosures). Lord Ranganatha (reclining Vishnu). Premier Divya Desam."
+ },
+ {
+  "slug": "srisailam-mallikarjuna",
+  "official_website": null,
+  "description": "The Bhramaramba Mallikarjuna Temple at Srisailam, in Nandyal district, Andhra Pradesh, is dedicated to Shiva as Mallikarjuna and to Parvati as Bhramaramba. Wikipedia lists it as one of the twelve Jyotirlingas of Shiva, as one of the Shakta pithas, and as a Paadal Petra Sthalam. According to Wikipedia, Satavahana-era inscriptions indicate the temple existed from about the 2nd century, the Vanni Reddi rulers of the 12th to 13th centuries built the Veerasheromandapam and the steps to the river, and the Vijayanagara king Harihara I is credited with most later additions in the 14th and 15th centuries. The complex covers about two hectares, with four gopurams, enclosing walls about 183 m by 152 m, and an east-facing sanctum approached through a Vijayanagara-period Mukha Mandapa with sculpted pillars. A flight of 852 steps leads to the Krishna river at Patal Ganga. Wikipedia names Maha Shivaratri as the major festival and says the Government of Andhra Pradesh administers the temple.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Mallikarjuna_Temple,_Srisailam",
+    "what_it_supports": "Location, deities, Jyotirlinga/Shakti pitha/Paadal Petra status, Satavahana, Reddi, Vijayanagara history, architecture dimensions, 852 steps, Maha Shivaratri, government administration"
+   },
+   {
+    "url": "https://utsav.gov.in/view-darshan/srisailam-temple",
+    "what_it_supports": "Run by Sri Bhramaramba Mallikarjuna Swamy Varla Devasthanam (Executive Officer contact); Shiva and Shakti worshipped together; Mallikarjuna listed as 2nd Jyotirlinga, Bhramaramba as 6th Maha Shakti Peetha (Govt of India culture portal, not official temple site)"
+   }
+  ],
+  "notes": "Identity clear. The devasthanam's own website could not be verified: srisailamonline.com was blocked by the allowlist and no search result surfaced a confirmed devasthanam-run domain, so official_website is null. Do not guess a URL. Wikipedia mentions 'Andhra Pradesh Endowments Department' as its official info source; that is state govt, excluded. Kakatiya connection was not in the Wikipedia text I read; omitted. Wikipedia counts Shakta pitha lists differently (18 Maha vs 52); description says only 'one of the Shakta pithas'. The utsav.gov.in page says 'only temple with both icons in one premise' (traditional claim, not used). Shrine is inside Nagarjunasagar-Srisailam Tiger Reserve (Wikipedia citing Times of India) - not used. Timings not available from an official source.",
+  "replaces_live": "Jyotirlinga deep in Nallamala forest on Krishna river. Goddess Bhramaramba Devi also enshrined. Remote and powerful."
+ },
+ {
+  "slug": "swamimalai-murugan-temple",
+  "official_website": null,
+  "description": "Swaminatha Swamy Temple at Swamimalai, near Kumbakonam in Thanjavur district, Tamil Nadu, is dedicated to Murugan in his form as Swaminatha, a name linked to the tradition that he taught his father Shiva. It is counted among the Arupadaiveedu, the six abodes of Murugan. According to tradition, Murugan explained the meaning of the Pranava mantra, Om, to his father Shiva here, which gives the deity his name. The shrine crowns an artificial hillock about 18 metres high, reached by 60 steps that are said to correspond to the years of the Tamil sixty-year cycle. The main image, about 1.8 metres tall, holds a staff, and the vehicle shown is an elephant rather than the usual peacock. Shrines of Sundareswarar and Meenakshi stand at the foot of the hill. The poet Nakkeerar in the Tirumurugatruppadai and Arunagirinathar in the Tiruppugazh are named as having sung of the temple. Wikipedia reports that the Tamil Nadu Hindu Religious and Charitable Endowments Department maintains it, and Vaikasi Visakam is its principal festival.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Swaminatha_Swamy_Temple",
+    "what_it_supports": "Location, deity, hill/steps, elephant mount, Om legend, Arupadaiveedu, Nakkeerar/Arunagirinathar, HR&CE maintenance, Vaikasi Visakam"
+   },
+   {
+    "url": "https://tntemplesproject.in/Swaminathar-Swamimalai-Thanjavur",
+    "what_it_supports": "Thanjavur district, 9 km from Kumbakonam, 60 steps, Sundareswarar-Meenakshi shrine at ground level, poets, alternate sthala puranams (state HR&CE-linked project site)"
+   },
+   {
+    "url": "https://www.oneindia.com/temples/swaminathaswamy-temple-swamimalai-t1136",
+    "what_it_supports": "Corroborates 60-ft hillock, 60 steps, elephant mount; also claims Sangam origin and Parantaka Chola I expansion (not used in description)"
+   }
+  ],
+  "notes": "No official temple website verified: Wikipedia cites swaminathaswamytemple.org (archived only) and that domain was blocked by the allowlist; the only trust-like site found, kamakoti.org Swamimalai Veda Parayanam Trust, is a separate trust, not the temple. Dating conflict: OneIndia says Sangam-period origin and expansion by Parantaka Chola I and damage in the 1740 Anglo-French war; Wikipedia and tntemplesproject give no dynasty or date, so these were left out as unsupported by a second independent source. Timings differ across aggregators (5-12/4-10 on tntemplesproject vs 6-1/4-9 on OneIndia); none official, so null. tntemplesproject does not state HR&CE, but Wikipedia does.",
+  "replaces_live": "One of six Aarupadai Veedu. Murugan taught the Pranava Mantra to his own father Shiva here. Unique theological tradition."
+ },
+ {
+  "slug": "thillai-nataraja-temple-chidambaram",
+  "official_website": null,
+  "description": "The Thillai Nataraja Temple stands in Chidambaram, Cuddalore district, Tamil Nadu, and is dedicated to Shiva as Nataraja, lord of the cosmic dance. According to Wikipedia, Shiva is worshipped here chiefly in anthropomorphic dancing form rather than as a linga (a small crystal linga is also kept in the Chit Sabha), and the temple is mentioned in hymns of the seventh century. The earliest verifiable inscriptions date to the early tenth century under the Chola king Aditya I, and the present complex took much of its form in the Chola period, with later work by Pandya, Vijayanagara and Nayaka patrons. It covers about 16 hectares within four concentric courtyards and has nine gopurams, the eastern one carrying 108 reliefs of classical dance postures. The Chit Sabha sanctum, the thousand-pillared hall and the Shivaganga tank are among its key features. The TN Temples Project lists a Govindaraja Perumal shrine, a Vaishnava Divya Desam, inside the complex. Wikipedia describes the Dikshitar community as its hereditary priests and trustees.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Nataraja_Temple,_Chidambaram",
+    "what_it_supports": "Location, deity, Thevaram mention, dating (Aditya I inscriptions), later patronage, 16 ha / four prakarams / nine gopurams, 108 karana reliefs, sabhas, Shivaganga tank, Dikshitar administration"
+   },
+   {
+    "url": "https://tntemplesproject.in/Natarajar-Chidambaram-Cuddalore",
+    "what_it_supports": "Location in Cuddalore district, Natarajar/Sivakami, Govindaraja Perumal shrine as Divya Desam, Thillai history"
+   }
+  ],
+  "notes": "No official website verified. Searches surfaced no site confirmed as run by the Podu Dikshitar committee (Sri Sabhanayagar temple) - only aggregators, blogs and esamskriti articles. Candidate sites would need footer verification; none fetched. Timings from TN Temples Project (6:00-12:30, 4:30-22:00) are third-party, so not used. Wikipedia text used does not use the term 'Podu Dikshitar'; esamskriti/Tribune results discuss them but were not fetched. Dating of gopurams has internal inconsistencies in Wikipedia (eastern gopuram attributed to both Sundara Pandya and Koperunsingan II), so not stated. Only two sources fetched; further independent source (ASI/HR&CE) would strengthen it. Note: Tamil Nadu govt took over administration in 1987 and the Supreme Court restored Dikshitar control in 2014 per widely reported history; not verified here and left out of the description.",
+  "replaces_live": "Pancha Bhuta Stala for Akasha. Natarajas cosmic dance in golden hall. Sacred Chidambara Rahasyam."
+ },
+ {
+  "slug": "thiruparankundram-murugan-temple",
+  "official_website": null,
+  "description": "Thiruparankundram Subramaniya Swamy Temple lies at the foot of a rocky hill in Thiruparankundram, a suburb of Madurai, Tamil Nadu. It is dedicated to Murugan with his consort Deivanai and is counted among the Six Abodes of Murugan (Arupadaiveedu); according to Wikipedia, the Sangam-era Tirumurukarruppatai mentions it. The sanctum is rock-cut, and Wikipedia attributes the original temple to the Pandyas around the 6th century CE, noting also that Tamil-Brahmi inscriptions in nearby hilltop caverns are dated to the 1st century BCE and may relate to Jainism. Shiva, Vishnu, Durga and Ganesha are also worshipped here. The Madurai Nayaks added pillared halls, and a seven-tiered gopuram rises at the entrance. Skanda Shashti in the Tamil month of Aipasi, ending with the Surasamharam enactment, is its best-known festival. The hill also holds the Sikandar Badhusha dargah, and the question of lighting the Karthigai Deepam lamp on the hill has been before the courts. The temple is administered by the Tamil Nadu HR&CE Department.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Subramaniya_Swamy_Temple,_Thiruparankundram",
+    "what_it_supports": "Location, deities, Arupadaiveedu, Pandya 6th-century attribution, Tamil-Brahmi caves, Nayak additions, gopuram, festivals, HR&CE"
+   },
+   {
+    "url": "https://ecoheritage.cpreec.org/tirupparankundram/",
+    "what_it_supports": "Rock-cut cave temple, deities, 41 inscriptions, shrines within"
+   },
+   {
+    "url": "https://www.thenewsminute.com/tamil-nadu/madras-hc-allows-lighting-of-karthigai-deepam-near-thiruparankundram-hill-dargah",
+    "what_it_supports": "Hill shares site with Sikandar Badhusha dargah; Dec 2025 Madurai Bench order on lamp lighting; dargah/Waqf Board position"
+   }
+  ],
+  "notes": "No official temple-run site verified (HR&CE govt pages not fetched/confirmed), so website and timings null. Dispute handling: description only states the dargah shares the hill and that litigation exists; no merits. Facts for reviewer: per The News Minute, on 1 Dec 2025 Justice G.R. Swaminathan of the Madurai Bench quashed the executive officer's 3 Nov decision and directed lighting at the Deepathoon; dargah representatives and the Waqf Board backed the officer's position; ThePrint headline says the TN government moved the Supreme Court. Matter may have moved on since (appeals, SC); recheck before publication or drop that sentence. Wikipedia's account that the temple was a Jain shrine for a period before reconversion is contested and omitted. Source disagreement on position in the Six Abodes order (Wikipedia: first in Tirumurukarruppatai; CPREEC page: fourth) so no ordinal given.",
+  "replaces_live": "One of six Aarupadai Veedu. Rock-cut Murugan in cave. Murugan married Devasena here per legend."
+ },
+ {
+  "slug": "thiruthani-murugan-temple",
+  "official_website": null,
+  "description": "The Subramaniya Swamy temple at Tiruttani (also spelled Thiruthani) stands in Thiruvallur district, Tamil Nadu, and is counted among the six abodes of Murugan (Arupadaiveedu). It crowns Thanigai hill, which is reached by 365 steps said to represent the days of the year. Tradition holds that Murugan came to this hill to calm his anger after defeating the asura Surapadman,. The site is also associated with his marriage to Valli. Wikipedia notes that the town is mentioned in the Sangam text Tirumurukarruppadai and that Arunagirinathar composed hymns here. Murugan is shown standing with the vajra vel and an elephant mount, unlike his usual iconography, and the temple has a nine-tiered gopuram and shrines to Valli and Deivanai. Major observances include Aadi Krittikai and the New Year step festival on 31 December.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Subramaniya_Swamy_Temple,_Tiruttani",
+    "what_it_supports": "District, six abodes, 365 steps, legend, Sangam and Arunagirinathar references, iconography, gopuram, shrines, festivals; lists www.tiruttanitemple.com as official site; HR&CE administered"
+   },
+   {
+    "url": "https://ecoheritage.cpreec.org/tiruttani/",
+    "what_it_supports": "Thiruvallur district, ~84 km from Chennai, Thanigai hill legend, 365 steps, Aadi Krittikai and 31 Dec step festival, monthly Krittikai"
+   }
+  ],
+  "notes": "Wikipedia infobox lists www.tiruttanitemple.com but the site could not be fetched (not on allowlist), so footer/trust identity unverified; official_website set null. Likely the HR&CE-run site, reviewer should open it and confirm before setting. No construction date given by Wikipedia; none claimed. ecoheritage.cpreec.org is a CPR Environmental Education Centre heritage page (secondary). Description does not repeat the rudraksha-sanctum or hollow-chest claims, which are devotional claims from the secondary source.",
+  "replaces_live": "One of six Aarupadai Veedu. Murugan pacified after war here. Hilltop with 365 steps. Near Chennai."
+ },
+ {
+  "slug": "thiruvannamalai-adi-annamalayar",
+  "official_website": null,
+  "description": "Adi Annamalaiyar Temple, also written Adi Annamalai or Ani Annamalai, is a Shiva temple in the suburb of Adi Annamalai, near Tiruvannamalai town in Tamil Nadu. It is a separate shrine from the main Arunachaleswarar Temple, although it lies along the girivalam, the circuit walked around the sacred Annamalai hill. The presiding deity is Shiva as Adi Annamalaiyar, also called Adi Arunachaleswarar, worshipped as a lingam; the goddess is Adi Abithakujalambal, who has her own shrine. According to Wikipedia, the lingam is regarded as self-manifested and the temple is said to be older than the main Tiruvannamalai temple, though no date is given. The same source lists it among the Vaippu Sthalams, places mentioned in the hymns of the Nayanar saint Appar.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Adi_Annamalaiyar_Temple,_Adi_Annamalai",
+    "what_it_supports": "Village/district, deities, swayambhu lingam, claimed to predate main temple, Vaippu Sthalam (Appar)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Adi_Annamalai",
+    "what_it_supports": "Adi Annamalai as suburb/town panchayat of Tiruvannamalai Taluk; temple on the girivalam route"
+   },
+   {
+    "url": "https://pradosham.com/girivalam.php",
+    "what_it_supports": "Devotional site stating the Adi Annamalai temple praised in Devaram lies on the girivalam path (14 km circuit)"
+   },
+   {
+    "url": "https://tamilnadu-favtourism.blogspot.com/2019/06/aadhi-annamalai-temple-thiruvannamalai.html?m=1",
+    "what_it_supports": "Personal blog (weak): subsidiary shrines, Unnamalai theertham, saint images, parihara-sthalam claim, about 6-7 km from town"
+   }
+  ],
+  "notes": "Identified as the Adi Annamalaiyar temple at Adi Annamalai, NOT the Arunachaleswarar Temple. No temple-owned or HR&CE page located; official_website null. Source quality is modest (Wikipedia stubs, one devotional site, one personal blog); the 'older than main temple' claim is traditional and is attributed. Wikipedia pages give no legend, architecture or timings. The blog says the temple comes right after Varuna Lingam on the girivalam path, not independently confirmed, so omitted. Spelling varies: Adi/Adhi/Aadhi/Ani Annamalai.",
+  "replaces_live": "Second sanctum within Arunachaleswarar complex. Adi Annamalayar — primordial Shiva form. Even older sanctum."
+ },
+ {
+  "slug": "thiruvottiyur-thyagaraja-temple",
+  "official_website": null,
+  "description": "The Thyagaraja Temple at Thiruvottiyur, in northern Chennai, is a Shiva temple where the presiding form is worshipped as Adipureeswarar and, in the processional form, as Thyagarajaswami; the goddess is Vadivudai Amman, also called Tripurasundari, in her own shrine. According to Wikipedia, the temple has Pallava-period origins and was later expanded under the Cholas, and it is praised in the Tevaram hymns of Appar, Sambandar and Sundarar. Inscriptions at the temple include a record dated 954 CE. Historian V. Sriram, quoted by The News Minute, notes records of dance performances here from the tenth century. Local tradition holds that Sundarar married Sangiliyar under the temple's magizham tree, and the wedding is still celebrated annually. The Maasi Brahmotsavam (February-March) is the main festival. The temple is administered by the Tamil Nadu Hindu Religious and Charitable Endowments Department.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Thyagaraja_Temple,_Tiruvottiyur",
+    "what_it_supports": "Deities, Pallava/Chola history, Tevaram, 954 CE inscription, Maasi Brahmotsavam, HR&CE administration"
+   },
+   {
+    "url": "https://www.thenewsminute.com/features/dance-and-deities-history-north-chennais-thiruvottiyur-thyagaraja-temple-94411",
+    "what_it_supports": "10th-century dance records, deity names, historian V. Sriram's account"
+   },
+   {
+    "url": "https://tiruvallur.nic.in/?p=22957",
+    "what_it_supports": "Vadivudaiamman, Sundarar-Sangili wedding under magizham tree, annual festival (district govt page)"
+   }
+  ],
+  "notes": "No official temple website found; it is run by HR&CE (tnhrce.gov.in is a government page, so not eligible). No official timings were found. Search results also list the temple under Tiruvallur (tiruvallur.nic.in, bharattemples); Thiruvottiyur is a northern Chennai locality, reviewer should confirm the current district label. Dating claims vary: 'first temple in the world' / '2000-year-old' claims on blogs and tiruvallur.nic.in were deliberately omitted as unverified. Sundarar-Sangili wedding is traditional claim, attributed.",
+  "replaces_live": "Ancient Shiva temple in north Chennai. Shiva as Thyagaraja (king of dance). One of the five sabha temples."
+ },
+ {
+  "slug": "thousand-pillar-temple",
+  "official_website": null,
+  "description": "The Thousand Pillar Temple, also called Rudreshwara Swamy Temple or Veyyi Sthambhala Gudi, stands at the foot of Hanamkonda hill in Hanamkonda, Warangal region, Telangana. It is attributed to the Kakatiya king Rudra Deva, and several sources give 1163 CE as the date, though Telangana Tourism also cites a longer span of 1175 to 1324. The temple is a triple shrine (trikutalayam) to Shiva, Vishnu and Surya on a raised star-shaped platform, in Chalukyan and early Kakatiya style. One source notes that only the Shiva shrine remains in worship, as the Vishnu and Surya images are missing. Features include polished dolerite sculpture, rock-cut elephants and a monolithic dolerite Nandi facing the Shiva shrine. Its foundation uses the sandbox technique, with deep pits filled with sand. The Archaeological Survey of India maintains it as a protected monument.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://telanganatourism.gov.in/blog/07-11-blog-1000-pillar-temple.html",
+    "what_it_supports": "Location, Rudra Deva, deities, star-shaped trikutalayam, Chalukyan/early Kakatiya style, sandbox foundation, Nandi, rock-cut elephants, conflicting date range"
+   },
+   {
+    "url": "https://www.newsbharati.com/Encyc/2022/3/17/Rudreshwara-the-1000-pillar-temple-of-Warangal-.html",
+    "what_it_supports": "1163 CE, only Shiva shrine in worship, Vishnu/Surya idols missing, ASI management, protected monument, location at base of Hanamkonda hill"
+   },
+   {
+    "url": "https://www.iasgyan.in/daily-current-affairs/kakatiya-architecture-and-thousand-pillar-temple-restoration",
+    "what_it_supports": "Alternate names, 1163 CE, ASI restoration of Kalyana Mandapam, materials and sandbox foundation"
+   }
+  ],
+  "notes": "Identified: Thousand Pillar (Rudreshwara/Rudreswara Swamy) Temple, Hanamkonda, Warangal region, Telangana. The en.wikipedia page was blocked by the allowlist, so Wikipedia is not cited; sources are a state tourism blog and two secondary news/education pages (no ASI page fetched) - reviewer should check ASI Hyderabad Circle listing. Date conflict: 1163 CE vs a 1175-1324 range on the same Telangana Tourism page. Telangana Tourism says deities are Vishnu, Shiva, Surya with Rudreswara as presiding; newsbharati says only Shiva is worshipped. No official trust/website exists; ASI-protected, so no site claimed. Timings null.",
+  "replaces_live": "\n\n\n\n\nThe Thousand Pillar Temple or Rudreswara Swamy Temple is a historical Hindu temple located in the city of Hanamakonda, Telangana, India. It is dedicated to Shiva, Vishnu and Surya. The Thousand Pillar Temple, along with the Warangal Fort and the Kakatiya Kala Thoranam were added to the tentativ"
+ },
+ {
+  "slug": "thrissur-paramekkavu-temple",
+  "official_website": null,
+  "description": "Paramekkavu Bhagavathy Temple is a Devi shrine in Round East, Thrissur, Kerala, and one of the two principal participants in the Thrissur Pooram. Wikipedia notes that Sakthan Thampuran, the Cochin ruler, divided the participating temples into a Paramekkavu side and a Thiruvambadi side, with Paramekkavu heading one group. The Pooram itself dates to 1796, according to Wikipedia. Its procession reaches the Vadakkunnathan Temple, and fifteen caparisoned elephants from each side face one another in the kudamattam display. The Illanhi Thara Melam is associated with the goddess in tradition. Local legend, as recorded on thekeralatemples.com, holds that the goddess was brought from Thirumadhamkunnu, and identifies her as Vaishnavy among the Seven Mothers. The name is said to derive from consecration beneath a Paro tree. The Paramekkavu Devaswom is listed as trustee. The temple also observes Navarathri over nine days, with rituals including Chuttuvilakku, Saraswathi Pooja and Ezhuthiniruthu on Vijayadashami, according to Kerala Tourism's festival listing.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Paramekkavu_Bagavathi_Temple",
+    "what_it_supports": "deity, location, Pooram group, Devaswom"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Thrissur_Pooram",
+    "what_it_supports": "1796 origin, procession, kudamattam"
+   },
+   {
+    "url": "https://www.thekeralatemples.com/templeinfo/bhagavathy/paramekkavu_bhagavathy.htm",
+    "what_it_supports": "legends, Vaishnavy, trustee"
+   },
+   {
+    "url": "https://www.keralatourism.org/1000festivals//assets/uploads/pdf/1507750086-0.pdf",
+    "what_it_supports": "Round East, name origin, Navarathri, Illanhi Thara Melam"
+   }
+  ],
+  "notes": "No official website found. Founding date is undocumented (legend only). 'Name from Paro tree' appears in Kerala Tourism PDF only. Deity naming varies (Bhagavathy / Vaishnavy). Thekeralatemples.com is a directory, not authoritative. Wikipedia 'one of the largest Bagavathi temples' claim was omitted.",
+  "replaces_live": "Paramekkavu Bhagavathy faces Vadakkunnathan in Thrissur Pooram. One of the two main temples in the festival."
+ },
+ {
+  "slug": "tiruchendur-murugan-temple",
+  "official_website": null,
+  "description": "The Subramaniya Swamy Temple, commonly called Tiruchendur Murugan Temple, stands on the seashore at Tiruchendur in Thoothukudi district, Tamil Nadu. It is dedicated to Murugan, whose main image in the sanctum is a granite figure, and it is one of the six Arupadaiveedu, the abodes of Murugan, and the only one on the seacoast according to the Eco Heritage site. Tradition links the shrine to the story of Murugan's victory over the asura Surapadman, recounted in the Kanda Puranam. Eco Heritage describes the Surasamharam reenactment of that victory on the seashore as part of the Skanda Sashti festival in the Tamil month of Aippasi, and also notes the twelve-day Vaikasi Visakam festival; Wikipedia lists Thaipusam among the major festivals. Wikipedia describes a Tamil-style complex with a tall multi-tiered gateway tower, and a spring-fed well, Nali Kinaru, where devotees bathe after the sea. Wikipedia records that the Dutch East India Company occupied the temple from 1646 to 1648. The Hindu Religious and Charitable Endowments Department of Tamil Nadu maintains the temple.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Subramaniya_Swamy_Temple,_Tiruchendur",
+    "what_it_supports": "Location, Arupadaiveedu, Surapadman legend, Dutch occupation 1646-48, Nali Kinaru, festivals, HR&CE administration"
+   },
+   {
+    "url": "https://ecoheritage.cpreec.org/tiruchendur/",
+    "what_it_supports": "Thoothukudi district, only Arupadaiveedu on the sea, festivals incl. Skanda Sashti (CPREEC Eco Heritage site, government-supported centre, not the temple's own site)"
+   }
+  ],
+  "notes": "Candidate official/temple-administration sites could not be fetched (not on the session allowlist, curl blocked), so no website is set. Source conflict: Wikipedia says the rajagopuram has nine tiers and is 48 m; Eco Heritage says eleven tiers, so the tier count is omitted. Wikipedia does not mention Skanda Sashti; Eco Heritage does. Wikipedia says the Dutch occupation context; kept neutral. Likely official site is on an HR&CE domain (state govt) and unverified. Wikipedia says ISO certification in 2016 (not used).",
+  "replaces_live": "One of six Aarupadai Veedu. Coastal clifftop. Lord Murugan as commander who defeated Surapadman."
+ },
+ {
+  "slug": "tirumala-venkateswara-temple",
+  "official_website": "https://www.tirumala.org",
+  "description": "The Sri Venkateswara Swamy temple stands on Venkatadri, the seventh of the seven peaks of the Tirumala hills in Tirupati district, Andhra Pradesh, beside the Swami Pushkarini tank. It is dedicated to Venkateswara, a form of Vishnu also called Balaji, Govinda and Srinivasa, and follows the Vaikhanasa Agama. According to Wikipedia, the temple is traditionally linked to the Tondaiman rulers and was later patronised by the Pallavas, Cholas, Pandyas and the Vijayanagara dynasty; it cites a 966 CE endowment by the Pallava queen Samavai and about 640 inscriptions in Kannada, Sanskrit, Tamil and Telugu. The sanctum is topped by a gold-plated vimana, the Ananda Nilayam, within three concentric compound walls. Its main festival is the nine-day Brahmotsavam, held annually in the autumn, around September to October. The temple is run by Tirumala Tirupati Devasthanams, governed by a Board of Trustees and an Executive Officer under the Andhra Pradesh endowments law, Act 30 of 1987.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.tirumala.org",
+    "what_it_supports": "Official TTD homepage: copyright TTD 2015-2026, Board of Trustees under Act 30 of 1987, Executive Officer, 12 temples, Venkateswara temple at Tirumala (page read via summary tool)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Venkateswara_Temple,_Tirumala",
+    "what_it_supports": "Location, deity, Vaikhanasa Agama, history and patrons, 966 CE endowment, 640 inscriptions, architecture, Brahmotsavam"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Tirumala_Tirupati_Devasthanams",
+    "what_it_supports": "TTD trust under Andhra Pradesh government, lists www.tirumala.org as a TTD website, also ttdevasthanams.ap.gov.in"
+   }
+  ],
+  "notes": "Website: tirumala.org qualifies. The homepage self-identifies as the official site of TTD (copyright TTD 2015-2026, administrative office K.T. Road Tirupati, governance under Act 30 of 1987), and Wikipedia's TTD article independently lists it. Caveat: my WebFetch returned a summarised view, not raw footer HTML, and the TTD board page (tirumala.org/TTDBoard.aspx) appeared in search. TTD also has ttdevasthanams.ap.gov.in (state government portal): not used as official site. Beware fake lookalike sites (TTD itself warns; Deccan Chronicle and UNI items appeared in search but were not read). Timings are not copied: the official pages were not read in a form allowing exact quoting and timings vary by darshan/seva. Dating conflict: Wikipedia gives TTD established 1932 (TTD article) and 1933 (temple article); description avoids it. 'Construction c. 300 CE' and visitor numbers (about 24 million per year) are Wikipedia claims and are omitted.",
+  "replaces_live": "World's richest and most visited temple. 100,000+ pilgrims daily. Famous laddu prasadam and head-tonsuring tradition."
+ },
+ {
+  "slug": "triprayar-sri-rama-temple",
+  "official_website": null,
+  "description": "The Sree Rama temple at Triprayar, in Thrissur district, Kerala, stands on the bank of the Karuvannur river (also called the Thirupurayar), a few kilometres from the Arabian Sea. According to Wikipedia, it is one of the four temples of the Nalambalam Yatra, dedicated to Rama and his brothers Bharata, Lakshmana and Shatrughna. A traditional account recorded on a devotional blog says fishermen found the four images in the sea and gave them to Vakkayil Kaimal, a minister of the Ayiroor Kovilakam, who installed them at Triprayar, Moozhikulam, Irinjalakuda and Payammal. The presiding image is described there as a four-armed stone figure covered in panchaloha, holding a conch, discus, mace and rosary. Devotees feed fish in the river on the temple's east side, a rite called meenootu. The same blog names Triprayar Ekadasi, in the Malayalam month of Vrischikam, as the most important festival. The temple was once under the Zamorins, later passed to the Dutch, the Mysore rulers and the Cochin rulers, and is now governed by the Cochin Devaswom Board.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Triprayar",
+    "what_it_supports": "Thrissur district; river/sea location; Nalambalam Yatra; history of control (Zamorin, Dutch, Mysore, Cochin); Cochin Devaswom Board"
+   },
+   {
+    "url": "https://www.hindu-blog.com/2021/01/triprayar-temple-history-and-unknown-facts.html",
+    "what_it_supports": "Fishermen/Vakkayil Kaimal legend, four-armed iconography, meenootu, Triprayar Ekadasi (weak, blog source)"
+   }
+  ],
+  "notes": "Wikipedia's dedicated 'Thriprayar Temple' page could not be fetched (not on allowlist); the town page 'Triprayar' was used. Legend and iconography come from a single weak blog and are attributed in text; a reviewer should verify against Cochin Devaswom Board material or a scholarly source. Blog says the river is called 'Theevra' while Wikipedia says Thirupurayar/Karuvannur; description uses Wikipedia's name. Cochin Devaswom Board (cochindevaswomboard.org) is a statutory board covering many temples, not the temple's own site, so official_website is null. Guessed temple domains were unreachable from this environment.",
+  "replaces_live": "One of four Krishna temples forming a chakra around Guruvayur. Rama idol said to have been worshipped by Brahma."
+ },
+ {
+  "slug": "vaitheeswaran-koil",
+  "official_website": null,
+  "description": "Vaitheeswaran Koil is a Shiva temple in the town of Vaitheeswarankoil, near Mayiladuthurai in Tamil Nadu. Shiva is worshipped as Vaidyanathar or Vaitheeswaran, interpreted as the God of healing, with his consort Thaiyalnayaki; Murugan as Muthukumaraswamy, Dhanvantari and Angaraka also have shrines. According to Wikipedia, it is one of the nine Navagraha temples of Tamil Nadu, associated with Mars (Angaraka), and local tradition holds that Angaraka was cured of leprosy here. The temple is praised in the seventh-century Tevaram hymns of Thirunavukkarasar and Sambandar and is classified as a Paadal Petra Sthalam. The Dravidian complex has a five-tiered gopuram, a sacred tank called Siddhamirtham and a neem as its sacred tree. Five inscriptions, mostly from the reign of Kulothunga Chola I (1070-1120 CE), record gifts and renovations. Wikipedia states that the Dharmapuram Adheenam, a Saiva monastic order, maintains the temple, and that Brahmotsavam is held in the Tamil months of Pankuni and Thai. The town is also known for palm-leaf (nadi) astrology, traditionally attributed to the sage Agathiyar.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Vaitheeswaran_Koil",
+    "what_it_supports": "deity, Navagraha association, Tevaram/Paadal Petra status, inscriptions, architecture, Dharmapuram Adheenam, festivals, nadi astrology, Mayiladuthurai district"
+   },
+   {
+    "url": "https://www.wikiwand.com/en/articles/Vaitheeswaran_Koil",
+    "what_it_supports": "mirror of Wikipedia; confirms Mayiladuthurai district and Dharmapuram Adheenam (not independent)"
+   },
+   {
+    "url": "https://tamilnadu-favtourism.blogspot.com/2015/09/vaidyanatha-swami-temple-vaitheeswaran.html",
+    "what_it_supports": "older blog listing the temple under Nagapattinam (weak source; shows pre-2020 district)"
+   }
+  ],
+  "notes": "Weak sourcing: only Wikipedia (plus its mirror) could be read; no ASI/state tourism/official trust page was fetchable. Official website: none verified; 'cultureandheritage.org ... Official Website' result is a blog, not the temple's site; HR&CE/Dharmapuram Adheenam site not found. Timings not available from an official source. Wikipedia infobox lists four towers while text says five-tiered gopuram plus two inner gopurams; description sticks to the five-tiered gopuram. Reviewer should check district against current records (Mayiladuthurai district was created from Nagapattinam; Wikipedia now says Mayiladuthurai).",
+  "replaces_live": "Shiva as healer. Mars (Sevvai) dosha remedied here. Miraculous waters of Siddhamrita tank. Ancient Navagraha pilgrimage."
+ },
+ {
+  "slug": "varkala-janardana-temple",
+  "official_website": null,
+  "description": "The Janardanaswamy Temple at Varkala, in Thiruvananthapuram district, Kerala, is a Vishnu shrine where the deity, Janardanaswamy (also called Varkaleswara locally), is shown standing, facing east, with four arms; Sridevi and Bhudevi are in the main shrine. According to Wikipedia, tradition credits Brahma with founding the temple and a Pandya king with restoring it, while an inscription records partial renovation under Umayamma Rani (1677-84 CE); the claim of very great antiquity is unreferenced there. One legend explains the town's name from the bark garment (valkalam) that the sage Narada dropped here. The architecture is described as Pandya-Kerala in style, with a circular sanctum under a conical copper dome and a square mandapa carrying wooden Navagraha carvings. Devotees regard the place as suited to ancestral rites, so Varkala is called Dakshina Kashi and Dakshina Gaya, and bathing at nearby Papanasam beach is believed to wash away sins. The ten-day Arattu festival in Meenam opens with flag hoisting and ends with the deity's holy bath in the sea.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Janardanaswamy_Temple",
+    "what_it_supports": "deity, location, legend, architecture, renovation inscription, Arattu festival, Dakshina Kashi/Gaya, Papanasam beach"
+   },
+   {
+    "url": "https://keralatourism.org/varkala/varkala-history.php",
+    "what_it_supports": "Brahma/Pandyan legend, Narada valkalam etymology, 'Southern Varanasi' epithet"
+   }
+  ],
+  "notes": "Official website: null. The temple is under the Travancore Devaswom Board (assumed; not stated in the fetched Wikipedia text, which does not mention TDB). travancoredevaswomboard.org appeared in search but it is a board-level site, not the temple's own, and no temple-specific page was verified. Timings null. Second source Kerala Tourism (govt) gives no date and mentions Pandyan king told by Brahma to build the temple; it calls Varkala 'Southern Varanasi'. Dating conflicts: Wikipedia says Pandya restoration around 1st century BCE (not used as fact); Wikipedia states 'originally founded by Brahma' as tradition. Papanasam beach detail comes from Wikipedia only. Kerala Tourism says Varkala is about 50 km from Thiruvananthapuram while Wikipedia says about 25 km; distance omitted from description. Sivagiri Mutt/Sree Narayana Guru connection not covered by fetched sources and not described.",
+  "replaces_live": "Ancient Vishnu temple at scenic Varkala clifftop. Janardhana — Vishnu who responds to human prayer. 2,000+ years old."
+ },
+ {
+  "slug": "vemulawada-rajarajeswara-temple",
+  "official_website": null,
+  "description": "Sri Raja Rajeshwara Swamy Temple is in Vemulawada, in Rajanna Sircilla district of Telangana, about 38 km from Karimnagar. Devotees know the presiding deity, a form of Shiva, as Rajanna, with Raja Rajeshwari Devi and Ganesha also enshrined and Anantha Padmanabha Swamy as guardian deity, according to Telangana Tourism. Vemulawada was the capital of the Vemulawada Chalukyas, who Wikipedia says ruled from 750 to 973 CE; local legend credits a king named Raja Narendra with building the temple after a vision. The site is also called Dakshina Kasi and Harihara Kshetram because of its Shaiva and Vaishnava shrines. A well-known offering is Kode Mokku, in which devotees lead a bull around the temple, and pilgrims traditionally bathe in the Dharma Gundam tank before darshan. A dargah within the temple precincts is cited by Telangana Tourism as a symbol of religious tolerance. Maha Shivaratri is a major festival, along with Sri Rama Navami and Bathukamma.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Raja_Rajeswara_Temple,_Vemulawada",
+    "what_it_supports": "Location, district, deities, Vemulawada Chalukyas 750-973 CE, Kode Mokku, festivals; lists vemulawadatemple.telangana.gov.in as website"
+   },
+   {
+    "url": "https://telanganatourism.gov.in/blog/sri-raja-rajeshwara-temple.html",
+    "what_it_supports": "Deity forms, Raja Narendra legend, Dakshina Kasi/Harihara names, dargah, Dharma Gundam, distances"
+   },
+   {
+    "url": "https://hindutone.com/temples/vemulawada-rajeshwara-temple-guide/",
+    "what_it_supports": "Dargah within premises, Kode Mokku, Dharma Gundam tradition (weak guide site)"
+   }
+  ],
+  "notes": "Wikipedia lists vemulawadatemple.telangana.gov.in but it could not be fetched (not on allowlist); it is a state-government domain and ownership/footer unconfirmed, so official_website=null; reviewer can verify and set it, along with timings. Wikipedia's 750-930 CE temple completion date is marked citation needed and was not used. Dargah described only as cited by Telangana Tourism.",
+  "replaces_live": "Important Shiva temple — called Dakshina Kashi (Kashi of South). Bhimashankar form of Shiva. Massive festivals."
+ },
+ {
+  "slug": "vijayawada-kanaka-durga",
+  "official_website": null,
+  "description": "The Kanaka Durga Temple stands on Indrakeeladri hill beside the Krishna river in Vijayawada, Andhra Pradesh. The goddess Kanaka Durga is shown in her eight-armed Mahishasura Mardini form. According to the national culture portal, she and Malleswara, a form of Shiva, are enshrined together as self-manifested deities, with Durga placed to Malleswara's right. According to Wikipedia, legend holds that the sage Indrakila performed penance and the goddess agreed to dwell on his hill to protect the region from demons. Wikipedia also notes a Telugu inscription dated 1229 CE, found at Veligandla, that records a donation to Malleswaradeva at Indrakiladri. The complex includes shrines to Nataraja, Kartikeya and Hanuman. The temple is administered by the Sri Durga Malleswara Swamy Varla Devasthanam. Dasara (Navaratri) is the main festival, with the goddess adorned in special alankaram forms on successive days and a boat festival (Teppotsavam) following the processions, while Sakambhari in Ashadha and Varalakshmi Vratam in Sravanam are also observed.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kanaka_Durga_Temple",
+    "what_it_supports": "Location, Indrakeeladri, eight-armed Mahishasura Mardini image, Indrakila legend, 1229 CE inscription, other shrines, Dasara/Teppotsavam, Sakambhari, Varalakshmi Vratam, governing body name."
+   },
+   {
+    "url": "https://utsav.gov.in/view-darshan/sri-kanakadurga-temple-1",
+    "what_it_supports": "Ministry of Culture portal: Kanaka Durga and Malleswara as swayambhu deities, Durga on Malleswara's right, Navarathri as main festival, location on Indrakeeladri on the Krishna."
+   },
+   {
+    "url": "https://krishna.ap.gov.in/?p=40520",
+    "what_it_supports": "Krishna district government page: self-manifested deity, Mahishasura Mardini form with eight arms, Dasara; describes the legend differently (boon to Keela)."
+   },
+   {
+    "url": "https://cultureandheritage.org/sri-kanaka-durga-temple-vijayawada-the-divine-abode-on-indrakeeladri-hill",
+    "what_it_supports": "Third-party: official name Sri Durga Malleswara Swamy Varla Devasthanam, Navaratri alankarams. Names 'Indra' rather than Indrakila in the legend."
+   }
+  ],
+  "notes": "Official website NOT confirmed. Wikipedia names kanakadurgamma.org; the domain appears in search under the title 'Sri Durga Malleswara Swamy Varla Devasthanam' (also www.kanakadurgamma.org/Booking), but fetches returned only page metadata (title), with no footer, copyright or operator text, so ownership could not be verified. An older domain old.durgamma.com also appears, and a HinduPad article refers to a trial site at durgamma.com. Reviewer should open kanakadurgamma.org in a browser, confirm the footer/Devasthanam/Executive Officer name, and then set it. Timings null. Legend variants: Wikipedia says sage Indrakila; the AP district page says the goddess appeared on 'Keela' mountain to fulfil a boon to Keela; cultureandheritage says 'Indra'. Description attributes the Indrakila version to Wikipedia. Wikipedia marks the Kaalika Purana / Durga Saptashati mentions as needing citation, omitted. Arjuna and Adi Shankara associations were not found in fetched text and are omitted. The temple is under AP Endowments Department control in practice, but no fetched source states this, so it is not claimed.",
+  "replaces_live": "Indrakeeladri hill. Golden Goddess. Navratri celebrations are among Indias grandest."
+ },
+ {
+  "slug": "yadagirigutta-temple",
+  "official_website": null,
+  "description": "The Sri Lakshmi Narasimha Swamy temple at Yadagirigutta, in Yadadri Bhuvanagiri district, Telangana, stands on a hillock roughly 60 km from Hyderabad and is dedicated to Narasimha, an avatar of Vishnu. According to the Skanda Purana as summarised by Wikipedia, the sage Yada did penance here and Narasimha appeared in five forms: Jvala, Gandabherunda, Yogananda, Ugra and Lakshmi Narasimha, which is why it is also called Pancha Narasimha Kshetram. The deities are enshrined in a cave sanctum. Sources describe its worship as following Vaishnava Agama traditions, variously given as Tenkalai or Pancharatra. A major reconstruction in black stone ran from 2016 and was completed in March 2022, after which the temple was inaugurated by the then Chief Minister; Wikipedia reports the cost as about 1,800 crore rupees and the expansion from roughly 2 to 16 acres. The Brahmotsavam is described by Incredible India as the main annual festival.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Sri_Lakshmi_Narasimha_Swamy_Temple,_Yadagirigutta",
+    "what_it_supports": "District, distance, deity, Skanda Purana legend, five forms, Tenkalai, 2016-2022 reconstruction, cost, acreage; lists yadagiriguttatemple.telangana.gov.in as official site"
+   },
+   {
+    "url": "https://telanganatourism.gov.in/blog/12-09-tourism.html",
+    "what_it_supports": "Five forms, Pancha Narasimha Kshetram, cave shrine, Pancharatra Agamam, location"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/telangana/bhongir/sri-lakshmi-narasimha-swamy-temple-yadadri-temple-yadagirigutta-temple",
+    "what_it_supports": "Cave temple, Brahmotsavam as annual highlight, expansion 2 to 16 acres, Tenkalai"
+   }
+  ],
+  "notes": "Official-looking site yadagiriguttatemple.telangana.gov.in is a state govt domain and could not be fetched; per rules govt pages do not qualify, so null. Reviewer should check whether the Devasthanam runs a separate own site. Conflicts: distance from Hyderabad 65 km (Wikipedia) vs 58 km (Telangana Tourism); agama given as Tenkalai/South Indian Agama (Wikipedia) vs Pancharatra (Tourism); legend names Yada as son of Rishyasringa (Wikipedia) vs Yadarishi in Tretayuga (Tourism). Cost figure is as reported, not verified independently. Incredible India lists timings; not official, not used.",
+  "replaces_live": "Lord Narasimha renovated to international standards. Most important Narasimha temple in South India."
+ },
+ {
+  "slug": "yaganti-uma-maheswara-temple",
+  "official_website": null,
+  "description": "Sri Yaganti Uma Maheswara Temple is at Yaganti near Banaganapalle in Nandyal district, Andhra Pradesh, roughly 100 km from Kurnool, according to Wikipedia. Shiva and Parvati are worshipped together as Uma Maheswara in a single stone, with Nandi also venerated. Wikipedia attributes the temple to the 15th century and the Sangama rulers Harihara and Bukka Raya of Vijayanagara, but marks this as uncited. Local legend says the sage Agastya meant to install a Venkateswara image here but its toenail broke, after which Shiva declared the site suited to him because it resembled Kailash. A large stone Nandi stands before the temple, and devotees believe it is slowly growing; this is local belief rather than an established fact. A small pond, the Pushkarini, is fed by water flowing through a Nandi's mouth, and nearby caves are associated with Agastya, Venkateswara, Veerabrahmendra and Chitteppa. The Nandyal district website notes that Maha Shivaratri draws large crowds.",
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Yaganti_temple",
+    "what_it_supports": "Nandyal district location, deity, 15th-century Vijayanagara attribution (citation needed), Agastya legend, Nandi belief, Pushkarini, caves, Maha Shivaratri"
+   },
+   {
+    "url": "https://nandyal.ap.gov.in/temple-tourism/",
+    "what_it_supports": "Uma Maheswara Swamy as deity, near Banganapalle/Nandyal, sculpted tower, large Nandi, Maha Shivaratri crowds"
+   }
+  ],
+  "notes": "Official website not found: searches returned only Wikipedia, aggregators and the district site; yagantitemple.com is not on the allowlist and unconfirmed. Temple is under AP Endowments Dept per general knowledge but no fetched source states it, so not asserted. Distances differ: ~100 km from Kurnool and 14 km from Banaganapalle (Wikipedia) vs ~11 km from Banganapally and 58 km from Nandyal (district site); description uses only the Kurnool figure. Wikipedia's 15th-century Vijayanagara builder claim is flagged 'citation needed' there, so a reviewer should look for ASI/archaeological dating before stating it more firmly. Timings not available from an official source.",
+  "replaces_live": "Shiva-Parvati temple where the Nandi idol is growing — measurably larger every few years. Scientists mystified."
+ }
+]
