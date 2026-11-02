@@ -22,8 +22,8 @@ export async function GET(req: NextRequest) {
   const find = new URL(req.url).searchParams.get('find')
   if (find) {
     const slugs = find.split(',').map(s => s.trim()).filter(Boolean).slice(0, 4)
-    const ts: any[] = await (Temple as any).find({ slug: { $in: slugs } }).select('slug name city state').lean()
-    const results = await Promise.all(ts.map(async t => ({ slug: t.slug, candidates: await findPhotos(t.name, t.city, t.state) })))
+    const ts: any[] = await (Temple as any).find({ slug: { $in: slugs } }).select('slug name city state lat lng').lean()
+    const results = await Promise.all(ts.map(async t => ({ slug: t.slug, candidates: await findPhotos(t.name, t.city, t.state, t.lat, t.lng) })))
     return NextResponse.json({ results })
   }
   const all: any[] = await (Temple as any).find({}).select('slug name city state image_url image_credit').sort({ name: 1 }).lean()

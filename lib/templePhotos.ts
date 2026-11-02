@@ -2,7 +2,7 @@
 export const GENERIC_MARKERS = ['Durga_Temple%2C_Varanasi', 'Kashi_Vishwanath_Temple.jpg', 'Ranganathaswamy-Temple-Srirangam', 'Vrindavan_ISKCON_temple', 'Dagdusheth_Halwai_Ganapati_Temple_Pune']
 export const isGeneric = (u?: string | null) => !!u && GENERIC_MARKERS.some(m => u.includes(m))
 
-export interface Candidate { title: string; page_url: string; image_url: string; license: string; credit: string; credit_url: string; match: boolean }
+export interface Candidate { title: string; page_url: string; image_url: string; license: string; credit: string; credit_url: string; match: boolean; distance_km: number | null; confidence: 'high' | 'check' }
 
 const UA = { 'User-Agent': 'DivyaDarshanam/1.0 (https://divyadarshanam.org; contact@divyadarshanam.org)' }
 const STOP = new Set(['temple', 'mandir', 'shri', 'sri', 'shree', 'devi', 'the', 'of', 'in', 'at', 'ji', 'dham', 'mata', 'maharaj', 'swami', 'temples', 'mandirs'])
@@ -15,9 +15,11 @@ async function j(url: string): Promise<any> {
   try { const r = await fetch(url, { headers: UA, signal: ctrl.signal }); return r.ok ? await r.json() : null } catch { return null } finally { clearTimeout(t) }
 }
 
-export async function findPhotos(name: string, city: string, state: string): Promise<Candidate[]> {
+const km = (a: number, b: number, c: number, d: number) => { const r = (x: number) => x * Math.PI / 180; const h = Math.sin(r(c - a) / 2) ** 2 + Math.cos(r(a)) * Math.cos(r(c)) * Math.sin(r(d - b) / 2) ** 2; return 6371 * 2 * Math.asin(Math.sqrt(h)) }
+
+export async function findPhotos(name: string, city: string, state: string, lat?: number | null, lng?: number | null): Promise<Candidate[]> {
   const q = `${name} ${city && city !== state ? city : ''} ${state}`.replace(/\s+/g, ' ').trim()
-  const s = await j(`https://en.wikipedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=${encodeURIComponent(q)}&gsrlimit=4&prop=pageimages|info&piprop=thumbnail|name&pithumbsize=800&inprop=url`)
+  const s = await j(`https://en.wikipedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=${encodeURIComponent(q)}&gsrlimit=4&prop=pageimages|info|coordinates&piprop=thumbnail|name&pithumbsize=800&inprop=url&coprimary=primary`)
   const pages: any[] = Object.values(s?.query?.pages || {}).sort((a: any, b: any) => (a.index || 0) - (b.index || 0))
   const want = tokens(name)
   const out: Candidate[] = []
@@ -33,10 +35,14 @@ export async function findPhotos(name: string, city: string, state: string): Pro
     const src = String(p.thumbnail.source).split('?')[0].replace('://thumb.wikimedia.org/', '://upload.wikimedia.org/').replace(/\/\d+px-/, '/800px-')
     const title: string = p.title
     const tt = new Set(tokens(title))
+    const co = p.coordinates?.[0]
+    const dist = co && typeof lat === 'number' && typeof lng === 'number' ? Math.round(km(lat, lng, co.lat, co.lon) * 10) / 10 : null
+    const cover = want.length ? want.filter(w => tt.has(w)).length / want.length : 0
+    const match = want.length > 0 && want.some(w => tt.has(w))
     out.push({
       title, page_url: p.fullurl || `https://en.wikipedia.org/wiki/${encodeURIComponent(title)}`, image_url: src, license,
       credit: `${artist.slice(0, 80)} / ${license}`, credit_url: info?.descriptionurl || `https://commons.wikimedia.org/wiki/${encodeURIComponent(file)}`,
-      match: want.length > 0 && want.some(w => tt.has(w)),
+      match, distance_km: dist, confidence: match && cover >= 0.6 && dist !== null && dist <= 5 ? 'high' : 'check',
     })
   }
   return out

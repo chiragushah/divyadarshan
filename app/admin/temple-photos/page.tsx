@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 
 interface Need { slug: string; name: string; city: string; state: string; current: string | null; reason: string }
-interface Cand { title: string; page_url: string; image_url: string; license: string; credit: string; credit_url: string; match: boolean }
+interface Cand { confidence: 'high' | 'check'; distance_km: number | null; title: string; page_url: string; image_url: string; license: string; credit: string; credit_url: string; match: boolean }
 interface Log { id: string; at: string; count: number; undone: boolean }
 
 const INK = '#2A1A0E', SAF = '#C0570A', LINE = '#E8DCCB'
@@ -39,7 +39,7 @@ export default function TemplePhotos() {
       if (!r.ok) { setErr('Search stopped (' + r.status + '). Press Find photos again to continue.'); break }
       const d = await r.json()
       setCands(c => { const n = { ...c }; for (const x of d.results) n[x.slug] = x.candidates; return n })
-      setPick(p => { const n = { ...p }; for (const x of d.results) { const k = x.candidates.findIndex((c: Cand) => c.match); if (k >= 0) n[x.slug] = k } return n })
+      setPick(p => { const n = { ...p }; for (const x of d.results) { const k = x.candidates.findIndex((c: Cand) => c.confidence === 'high'); if (k >= 0) n[x.slug] = k } return n })
       setDone(Math.min(i + 4, slugs.length))
     }
     setSearching(false)
@@ -73,7 +73,7 @@ export default function TemplePhotos() {
         <button onClick={search} disabled={searching || !need.length} style={{ background: SAF, color: '#fff', border: 0, borderRadius: 100, padding: '10px 20px', fontWeight: 700, cursor: 'pointer' }}>
           {searching ? `Searching… ${done}/${need.filter(n => !cands[n.slug]).length + done}` : 'Find photos'}
         </button>
-        <span style={{ fontSize: 13, color: '#6b5a48' }}>{chosen.length} selected</span>
+        <span style={{ fontSize: 13, color: '#6b5a48' }}>{chosen.length} selected ({chosen.filter(([s, k]) => cands[s][k].confidence === 'high').length} auto-checked, the rest need your eyes)</span>
       </div>
       <div style={{ display: 'grid', gap: 12 }}>
         {need.map(n => {
@@ -90,7 +90,7 @@ export default function TemplePhotos() {
                         <img src={prox(c.image_url)} alt={c.title} style={{ width: '100%', height: 130, objectFit: 'cover', borderRadius: 6 }} />
                         <div style={{ marginTop: 6 }}>
                           <input type="radio" name={n.slug} checked={pick[n.slug] === k} onChange={() => setPick(p => ({ ...p, [n.slug]: k }))} /> <b>{c.title}</b>
-                          {!c.match && <div style={{ color: '#b45309' }}>Name does not match, check carefully</div>}
+                          {c.confidence === 'high' ? <div style={{ color: '#2e7d32' }}>Auto-checked: name matches and the article's map pin is {c.distance_km} km from the temple</div> : <div style={{ color: '#b45309' }}>{c.match ? 'Name matches' : 'Name does not match'}{c.distance_km === null ? ', no map pin to confirm' : `, map pin ${c.distance_km} km away`}. Check carefully</div>}
                           <div style={{ color: '#6b5a48' }}>{c.credit}</div>
                           <a href={c.page_url} target="_blank" rel="noopener noreferrer" style={{ color: SAF }}>Open article</a>
                         </div>
