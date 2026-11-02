@@ -1,0 +1,547 @@
+[
+ {
+  "slug": "kalinjar-fort-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "state",
+    "from": "Madhya Pradesh",
+    "to": "Uttar Pradesh"
+   }
+  ]
+ },
+ {
+  "slug": "deogarh-jain-temples",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "state",
+    "from": "Madhya Pradesh",
+    "to": "Uttar Pradesh"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Lalitpur"
+   }
+  ]
+ },
+ {
+  "slug": "danteshwari-temple-jagdalpur",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Bastar",
+    "to": "Dantewada"
+   }
+  ]
+ },
+ {
+  "slug": "chamunda-devi-temple-kangra",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Kangra",
+    "to": "Padar (Dadh)"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Kangra"
+   }
+  ]
+ },
+ {
+  "slug": "shanaleshwara-swayambhu-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Punjab",
+    "to": "Nalas"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Patiala"
+   }
+  ]
+ },
+ {
+  "slug": "bhima-devi-temple-site-museum",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Haryana",
+    "to": "Pinjore"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Panchkula"
+   }
+  ]
+ },
+ {
+  "slug": "deur-kothar",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Madhya Pradesh",
+    "to": "Teonthar"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Rewa"
+   }
+  ]
+ },
+ {
+  "slug": "dharmrajeshwar",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description. Tag corrected to match the verified description. Tag corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Madhya Pradesh",
+    "to": "Chandwasa"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Mandsaur"
+   },
+   {
+    "field": "deity",
+    "from": "Buddha",
+    "to": "Shiva"
+   },
+   {
+    "field": "type",
+    "from": "Buddhist",
+    "to": "Shaiva"
+   }
+  ]
+ },
+ {
+  "slug": "harihar-dham",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Jharkhand",
+    "to": "Bagodar"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Giridih"
+   }
+  ]
+ },
+ {
+  "slug": "jharkhand-dham",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Jharkhand",
+    "to": "Dhanwar"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Giridih"
+   }
+  ]
+ },
+ {
+  "slug": "kalpeshwar",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Uttarakhand",
+    "to": "Urgam"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Chamoli"
+   }
+  ]
+ },
+ {
+  "slug": "kanaganahalli",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Karnataka",
+    "to": "Sannati"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Kalaburagi"
+   }
+  ]
+ },
+ {
+  "slug": "karneshwar-dham",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Jharkhand",
+    "to": "Karon"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Deoghar"
+   }
+  ]
+ },
+ {
+  "slug": "ketakeshwar-dewal",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Assam",
+    "to": "Tezpur"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Sonitpur"
+   }
+  ]
+ },
+ {
+  "slug": "kilimarathukavu-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Kerala",
+    "to": "Kadakkal"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Kollam"
+   }
+  ]
+ },
+ {
+  "slug": "mata-kuan-rani-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Himachal Pradesh",
+    "to": "Mandi"
+   }
+  ]
+ },
+ {
+  "slug": "neelamperoor-palli-bhagavathi-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Kerala",
+    "to": "Neelamperoor"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Alappuzha"
+   }
+  ]
+ },
+ {
+  "slug": "phanigiri",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Telangana",
+    "to": "Phanigiri"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Suryapet"
+   }
+  ]
+ },
+ {
+  "slug": "pohale-caves",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Maharashtra",
+    "to": "Pohale"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Kolhapur"
+   }
+  ]
+ },
+ {
+  "slug": "shivleni-caves",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Maharashtra",
+    "to": "Ambajogai"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Beed"
+   }
+  ]
+ },
+ {
+  "slug": "sitaleshwar-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Rajasthan",
+    "to": "Jhalrapatan"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Jhalawar"
+   }
+  ]
+ },
+ {
+  "slug": "sundernath",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Bihar",
+    "to": "Kursakanta"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Araria"
+   }
+  ]
+ },
+ {
+  "slug": "thousand-pillar-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Telangana",
+    "to": "Hanamkonda"
+   }
+  ]
+ },
+ {
+  "slug": "trilokinath-temple-at-tunde",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Location corrected to match the verified description. Location corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "city",
+    "from": "Himachal Pradesh",
+    "to": "Tunde"
+   },
+   {
+    "field": "district",
+    "from": null,
+    "to": "Lahaul and Spiti"
+   }
+  ]
+ },
+ {
+  "slug": "yamunotri-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Tag corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "deity",
+    "from": "Durga/Shakti",
+    "to": "Goddess Yamuna"
+   }
+  ]
+ },
+ {
+  "slug": "gangotri-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Tag corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "deity",
+    "from": "Durga/Shakti",
+    "to": "Goddess Ganga"
+   }
+  ]
+ },
+ {
+  "slug": "bhoramdeo-temple-chhattisgarh",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Tag corrected to match the verified description.",
+  "set_fields": [
+   {
+    "field": "type",
+    "from": "UNESCO",
+    "to": "Shaiva"
+   }
+  ]
+ },
+ {
+  "slug": "golden-temple-amritsar",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Website: SGPC (managing body) page for Sri Harmandir Sahib.",
+  "set_fields": [
+   {
+    "field": "official_website",
+    "from": "https://www.goldentempleamritsar.org",
+    "to": "https://sgpc.net/sri-harmandir-sahib/"
+   }
+  ]
+ },
+ {
+  "slug": "pali-ballaleshwar-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Website: temple trust site.",
+  "set_fields": [
+   {
+    "field": "official_website",
+    "from": null,
+    "to": "https://shreeballaleshwarpali.org/"
+   }
+  ]
+ }
+]

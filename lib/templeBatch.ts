@@ -12,7 +12,7 @@ export interface Row { slug: string; name: string; found: boolean; changes: Chan
 /** What applying this batch would change. Only empty or too-short fields are filled; nothing already good is overwritten. */
 export async function previewBatch(batchId: string): Promise<{ id: string; title: string; rows: Row[] } | null> {
   const b = BATCHES.find(x => x.id === batchId); if (!b) return null
-  const docs: any[] = await (Temple as any).find({ slug: { $in: b.items.map(i => i.slug) } }).setOptions({ includeHidden: true }).select('slug name hidden description extended_description official_website city state district timing how_to_reach').lean()
+  const docs: any[] = await (Temple as any).find({ slug: { $in: b.items.map(i => i.slug) } }).setOptions({ includeHidden: true }).select('slug name deity type hidden description extended_description official_website city state district timing how_to_reach').lean()
   const rows: Row[] = b.items.map(item => {
     const t = docs.find(d => d.slug === item.slug)
     const r: Row = { slug: item.slug, name: t?.name || item.slug, found: !!t, changes: [], skipped: [], item }
@@ -95,9 +95,9 @@ export async function applyBatch(batchId: string, slugs: string[]) {
       else set[c.field.startsWith('set:') ? c.field.slice(4) : c.field] = c.to
     }
     if (r.changes.some(c => c.field === 'description')) set.description_sources = r.item.sources.map(s => s.url)
-    const prev = await (Temple as any).findOne({ slug: r.slug }).setOptions({ includeHidden: true }).select('name hidden description official_website description_sources description_batch description_verified_at city state district timing how_to_reach timing_source timing_verified_at').lean()
+    const prev = await (Temple as any).findOne({ slug: r.slug }).setOptions({ includeHidden: true }).select('name deity type hidden description official_website description_sources description_batch description_verified_at city state district timing how_to_reach timing_source timing_verified_at').lean()
     await (Temple as any).updateOne({ slug: r.slug }, { $set: set })
-    log.push({ slug: r.slug, previous: { name: prev?.name ?? null, description: prev?.description ?? null, official_website: prev?.official_website ?? null, description_sources: prev?.description_sources ?? null, city: prev?.city ?? null, state: prev?.state ?? null, district: prev?.district ?? null, timing: prev?.timing ?? null, how_to_reach: prev?.how_to_reach ?? null, timing_source: prev?.timing_source ?? null, timing_verified_at: prev?.timing_verified_at ?? null }, fields: r.changes.map(c => c.field) })
+    log.push({ slug: r.slug, previous: { name: prev?.name ?? null, deity: prev?.deity ?? null, type: prev?.type ?? null, description: prev?.description ?? null, official_website: prev?.official_website ?? null, description_sources: prev?.description_sources ?? null, city: prev?.city ?? null, state: prev?.state ?? null, district: prev?.district ?? null, timing: prev?.timing ?? null, how_to_reach: prev?.how_to_reach ?? null, timing_source: prev?.timing_source ?? null, timing_verified_at: prev?.timing_verified_at ?? null }, fields: r.changes.map(c => c.field) })
   }
   await col().replaceOne({ _id: batchId as any }, { _id: batchId, applied_at: new Date(), items: log }, { upsert: true })
   return { applied: log.length, skipped: pv.rows.length - log.length }

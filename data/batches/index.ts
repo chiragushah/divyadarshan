@@ -19,6 +19,7 @@ import b18 from './batch-18.json'
 import b19 from './batch-19.json'
 import b20 from './batch-20.json'
 import b21 from './batch-21.json'
+import b22 from './batch-22.json'
 
 export interface BatchItem {
   slug: string
@@ -33,7 +34,7 @@ export interface BatchItem {
   /** Exact old text currently live; the verified description replaces it only while the live text is still exactly this (so nothing edited since is lost). */
   replaces_live?: string
   /** Corrections to location or website fields. Each is applied only while the live value is still `from`. */
-  set_fields?: { field: 'name' | 'city' | 'state' | 'district' | 'official_website'; from: string | null; to: string }[]
+  set_fields?: { field: 'name' | 'deity' | 'type' | 'city' | 'state' | 'district' | 'official_website'; from: string | null; to: string }[]
   /** Verified practical details. timing replaces the live placeholder; how_to_reach is added only while the live value is empty. */
   set_details?: { timing?: string | null; timing_source?: string | null; how_to_reach?: Record<string, string> | null }
   /** Reversible removal from the portal (the record is kept, only hidden). Undo brings it back. */
@@ -65,4 +66,5 @@ export const BATCHES: Batch[] = [
   { id: 'batch-19', title: 'Batch 19: Official timings for 13 more temples (second research pass, QC-checked)', items: b19 as unknown as BatchItem[] },
   { id: 'batch-20', title: 'Batch 20: Hide 5 entries that are not Indian temples (Kartarpur, Nankana Sahib, Gandhi Sagar, Kangra Fort, Kinnaur Kailash) and rename 2 (reversible)', items: b20 as unknown as BatchItem[] },
   { id: 'batch-21', title: 'Batch 21: Hide 13 duplicate entries, keeping one of each pair (reversible)', items: b21 as unknown as BatchItem[] },
+  { id: 'batch-22', title: 'Batch 22: Location, tag and website corrections (about 30 temples)', items: b22 as unknown as BatchItem[] },
 ]
