@@ -1,0 +1,223 @@
+[
+ {
+  "slug": "babulnath-temple-mumbai",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://babulnathmandir.org/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing from the temple or its managing body; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Darshan Monday 6 am to 10 pm; Tuesday to Sunday 6 am to 9 pm. Aarti 5.30-6.30 am, 11.30 am-12.30 pm, 5.30-6.30 pm, 7.45-8.15 pm",
+   "timing_source": "https://babulnathmandir.org/"
+  }
+ },
+ {
+  "slug": "shri-mahavirji-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.shreemahaveerji.com/home/index",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing from the temple or its managing body; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Main temple (Nij Mandirji) 5:00 AM to 10:00 PM; Dhyan Mandir 7:30-9:00 AM and 2:30-4:00 PM; Aarti 6:45 PM; Kshetrapal Baba chola 10:00 AM-12:00 PM and 8:00-9:00 PM; Abhishek/Shantidhara 6:00 AM. Per trust website; confirm with reception before travel.",
+   "timing_source": "https://www.shreemahaveerji.com/home/index"
+  }
+ },
+ {
+  "slug": "shani-shingnapur-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.shanidev.com/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing from the temple or its managing body; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Temple Opens: 4 AM to 10:30 PM; Aarti: 4:30 AM (1st), 12:00 PM (2nd), Sunset (3rd)",
+   "timing_source": "https://www.shanidev.com/"
+  }
+ },
+ {
+  "slug": "vithoba-temple-pandharpur",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://vitthalrukminimandir.org/daily_schedule.php",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing from the temple or its managing body; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Namdev Payari door opens 4:00 AM (Kakad Aarti and Nitya Puja till 5:30 AM); Darshan 6:00 AM - 11:00 AM (closed 10:45-11:00 AM for Maha Naivedya); 11:15 AM - 4:30 PM (closed 4:40-5:00 PM for Poshakh); 5:00 PM - 11:15 PM; Namdev Payari door closed 1:00 AM - 4:00 AM",
+   "timing_source": "https://vitthalrukminimandir.org/daily_schedule.php"
+  }
+ },
+ {
+  "slug": "tulja-bhavani-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://shrituljabhavani.org/en/dailyworship-timings",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing from the temple or its managing body; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Daily ritual schedule (not darshan hours): 4:30 AM Charanatirtha & Kakad Aarti; 6:00-10:00 AM Abhishek Puja; 11:00 AM Vastralankar Puja, Aarti, Dhupaarti; 7:00-9:00 PM Abhishek Puja; 9:30 PM Vastralankar Puja, Aarti, Dhupaarti and Prakshal Puja; 1:00 AM Charanatirtha only during crowded periods. Times may change during crowded periods.",
+   "timing_source": "https://shrituljabhavani.org/en/dailyworship-timings"
+  }
+ },
+ {
+  "slug": "durgiana-temple-amritsar",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://durgianamandir.in/mandir-timings/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing from the temple or its managing body; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Darshan opens 5:15 AM; closed 6:00-7:15 AM; closed 1:00-3:00 PM (rest time of Thakur Ji); short breaks at 3:45 PM, 5:45 PM, 8:00 PM and 8:30 PM (Shayan Bhog), reopening 4:00 PM, 6:00 PM, 8:15 PM and 9:00 PM; closed from 9:30 PM until next morning. Aarti is seasonal (summer vs winter) on the temple page.",
+   "timing_source": "https://durgianamandir.in/mandir-timings/"
+  }
+ },
+ {
+  "slug": "somnath-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://somnath.org/faq",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing from the temple or its managing body; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Darshan 6:00 AM to 10:00 PM; Aarti 7:00 AM, 12:00 PM, 7:00 PM; Light and Sound Show 8:00-9:00 PM",
+   "timing_source": "https://somnath.org/faq"
+  }
+ },
+ {
+  "slug": "irinjalakuda-koodalmanikyam-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.koodalmanikyam.com/timing.html",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing from the temple or its managing body; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Morning darshan 4:00-7:30 AM, 8:15-10:45 AM, 11:15-11:30 AM (Ethirthu pooja 7:30-8:15, Ucha pooja 10:45-11:15); Evening darshan 5:00-7:45 PM, 8:15-8:20 PM (Athazha pooja 7:45-8:15 PM)",
+   "timing_source": "https://www.koodalmanikyam.com/timing.html"
+  }
+ },
+ {
+  "slug": "vaishno-devi-shrine",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://legacy.maavaishnodevi.org/introduction.aspx",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing from the temple or its managing body; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Darshans are open round the clock throughout the year (darshan suspended during Aarti, which is twice daily just before sunrise and just after sunset and takes nearly two hours)",
+   "timing_source": "https://legacy.maavaishnodevi.org/introduction.aspx"
+  }
+ },
+ {
+  "slug": "chintamani-theur-ashtavinayak",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://theur.chinchwaddeosthan.org/theur/?lang=en",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing from the temple or its managing body; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Daily ritual schedule (not darshan hours): Kakad Aarti 5 AM; Puja, Naivedya & Dhuparati 7:30 AM; Panchopchar Puja & Mahanaivedya 12 PM; Prakshal Puja & Poshakh 3 PM; Dhuparati & Aarti to Avaran Deities 8 PM; Maha Aarti & Mantrapushpa 8:30 PM; Shejarati 10:30 PM. Darshan opening/closing hours not published on the page.",
+   "timing_source": "https://theur.chinchwaddeosthan.org/theur/?lang=en"
+  }
+ },
+ {
+  "slug": "baps-swaminarayan-mandir-vadodara",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.baps.org/Global-Network/India/Atladra(Baroda)/Visitor-Info.aspx",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing from the temple or its managing body; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Darshan open 7:30-10:15 AM, 11:15 AM-12:00 noon, 4:00-6:00 PM, 7:00-8:15 PM (closed 10:15-11:15 AM Rajbhog Thal, 12:00-4:00 PM, 6:00-7:00 PM Thal); Mangla Arti 6:00 AM, Shangar 7:30 AM, Rajbhog 11:15 AM, Sandhya 7:00 PM, Shayan 8:15 PM",
+   "timing_source": "https://www.baps.org/Global-Network/India/Atladra(Baroda)/Visitor-Info.aspx"
+  }
+ },
+ {
+  "slug": "mehandipur-balaji-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://shribalajimehandipur.org/faqs/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing from the temple or its managing body; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Temple open daily 6:00 AM-9:00 PM; darshan usually 7:00-11:00 AM, 12:00 PM-6:50 PM, 6:50-9:00 PM; Morning aarti 6:00-6:40 AM, Evening aarti 6:50-7:30 PM (darshan paused during aarti); Mon/Wed/Fri darshan closed 4:00-6:00 PM for Shri Balaji chola/shringar. Per temple FAQ (appears last revised 2025); reconfirm before relying.",
+   "timing_source": "https://shribalajimehandipur.org/faqs/"
+  }
+ },
+ {
+  "slug": "iskcon-juhu-mumbai",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.iskconmumbai.com/temple-timing",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing from the temple or its managing body; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Open all days. Mangala arati 4:30 AM; Tulsi-Puja 5:00 AM; Sringar darshan 7:15 AM; Guru puja 7:25 AM; Bhagavatam class 8:00 AM; Raj Bhoga arati 12:30 PM; Usthapana arati 4:15 PM; Sandhya arati 7:00 PM; Bhagavad-gita discourse 7:30 PM; Shayana arati 8:30 PM. Temple closed 1:00 PM - 4:00 PM and 9:00 PM - 4:30 AM (next day)",
+   "timing_source": "https://www.iskconmumbai.com/temple-timing"
+  }
+ }
+]
