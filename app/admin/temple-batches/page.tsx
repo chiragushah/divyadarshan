@@ -65,6 +65,7 @@ export default function TempleBatches() {
     <div style={{ minHeight: '100vh', background: '#FBF6EE', color: INK, fontFamily: 'system-ui, sans-serif' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '24px 16px 60px' }}>
         <Link href="/admin/dashboard" style={{ fontSize: 13, color: SAF, textDecoration: 'none' }}>← Admin dashboard</Link>
+        <Link href="/admin/temple-photos" style={{ fontSize: 13, color: SAF, textDecoration: 'none', marginLeft: 16 }}>Temple photos →</Link>
         <h1 style={{ fontSize: 26, margin: '8px 0 4px' }}>Temple batches</h1>
         <p style={{ fontSize: 14, color: '#6b5a48', margin: '0 0 18px', maxWidth: 760 }}>
           Each batch is researched from official sources, with every source listed. It only fills fields that are empty or too short and never overwrites a good description. Nothing goes live until you apply it, and you can undo a batch at any time.
