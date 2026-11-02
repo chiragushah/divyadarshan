@@ -20,6 +20,7 @@ import b19 from './batch-19.json'
 import b20 from './batch-20.json'
 import b21 from './batch-21.json'
 import b22 from './batch-22.json'
+import b23 from './batch-23.json'
 
 export interface BatchItem {
   slug: string
@@ -67,4 +68,5 @@ export const BATCHES: Batch[] = [
   { id: 'batch-20', title: 'Batch 20: Hide 5 entries that are not Indian temples (Kartarpur, Nankana Sahib, Gandhi Sagar, Kangra Fort, Kinnaur Kailash) and rename 2 (reversible)', items: b20 as unknown as BatchItem[] },
   { id: 'batch-21', title: 'Batch 21: Hide 13 duplicate entries, keeping one of each pair (reversible)', items: b21 as unknown as BatchItem[] },
   { id: 'batch-22', title: 'Batch 22: Location, tag and website corrections (about 30 temples)', items: b22 as unknown as BatchItem[] },
+  { id: 'batch-23', title: 'Batch 23: 5 verified descriptions for previously unverified temples, and 19 unverifiable entries hidden (reversible)', items: b23 as unknown as BatchItem[] },
 ]
