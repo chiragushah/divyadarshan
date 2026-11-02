@@ -1,0 +1,1579 @@
+[
+ {
+  "slug": "baps-akshardham-gandhinagar",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://akshardham.com/gujarat/visitor-info",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Open Tue-Sun, first entry 10:00 AM, last entry 7:30 PM; Mandir darshan 10:00 AM-7:30 PM; Arti 10:00 AM and 6:30 PM; Exhibitions ticket window 10:30 AM-5:30 PM; Water Show after sunset (currently 7:30 PM); CLOSED every Monday",
+   "timing_source": "https://akshardham.com/gujarat/visitor-info"
+  }
+ },
+ {
+  "slug": "chakkulathukavu-devi-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://chakkulathukavutemple.org/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Darshan 5:00 AM - 1:00 PM, 4:30 PM - 8:00 PM",
+   "timing_source": "https://chakkulathukavutemple.org/"
+  }
+ },
+ {
+  "slug": "dharmasthala-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.shridharmasthala.org/temple-routine/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Gates open 4:00 AM; darshan 6:30 AM - 2:30 PM (briefly paused around 12:00-12:15 PM for Mahapooja/Nithyabali; ends at end of queue or 2:30 PM, whichever first); evening darshan 5:00 PM - 8:30 PM (Mahapooja 8:30 PM, Nithyabali 8:45 PM). Timings may vary on special occasions.",
+   "timing_source": "https://www.shridharmasthala.org/temple-routine/"
+  }
+ },
+ {
+  "slug": "global-vipassana-pagoda",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://globalpagoda.org/pagoda-tour",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Open on all days, 9:00 AM - 7:00 PM",
+   "timing_source": "https://globalpagoda.org/pagoda-tour"
+  }
+ },
+ {
+  "slug": "iskcon-temple-delhi",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://iskcondelhi.com",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Open daily 4:30 AM - 9:00 PM; sanctum closed for rest 1:00 PM - 4:00 PM; Mangala Aarti 4:30 AM, Sringar 7:15 AM, Raj Bhog 12:30 PM, Dhup 4:15 PM, Sandhya 7:00 PM, Shayana 8:30 PM. Mangala and Sandhya timings shift ~30 min between summer and winter; festival days follow a special schedule (temple office 011-2623-5133).",
+   "timing_source": "https://iskcondelhi.com"
+  }
+ },
+ {
+  "slug": "mahabodhi-temple-bodh-gaya",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://bodhgayatemple.com/temple-timing/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Open daily; Mahabodhi Mahavihara opens 5:00 AM, closes 9:00 PM (Sutta chanting/meditation 5:30-6:00 AM; Kheer offering 10:00 AM; chanting 6:00-7:00 PM)",
+   "timing_source": "https://bodhgayatemple.com/temple-timing/"
+  }
+ },
+ {
+  "slug": "marikamba-temple-sirsi",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://marikambatemple.com/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Temple services (seva) hours: 7:00 AM - 10:00 PM on Tuesdays and Fridays; 7:00 AM - 9:00 PM on other days (as stated on the temple site; not labelled explicitly as darshan hours)",
+   "timing_source": "https://marikambatemple.com/"
+  }
+ },
+ {
+  "slug": "ram-lalla-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://srjbtkshetra.org/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Free darshan 7:00-9:00 AM, 9:00-11:00 AM, 11:00 AM-12:00 PM, 1:30-3:00 PM, 3:00-5:00 PM, 5:00-7:00 PM, 7:00-8:30 PM; Aarti: Mangal 4:30 AM, Shringar 6:30 AM, Shayan 9:30 PM",
+   "timing_source": "https://srjbtkshetra.org/"
+  }
+ },
+ {
+  "slug": "swaminarayan-akshardham-delhi",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://akshardham.com/visitor-info#timings",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Open Tue-Sun, first entry 10:00 AM, last entry 6:30 PM, closed every Monday; Mandir darshan 10:00 AM - 8:00 PM, Arti 10:30 AM and 6:00 PM; Abhishek Mandap 10:00 AM - 8:00 PM; Exhibitions ticket window 11:00 AM - 6:00 PM; Water Show after sunset (listed 7:30 PM)",
+   "timing_source": "https://akshardham.com/visitor-info#timings"
+  }
+ },
+ {
+  "slug": "baidyanath-temple-deoghar",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://babadham.org/timings/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Door opens 4:00 AM (Kancha Jal 4:10 AM), closes 4:00 PM; reopens 6:00 PM (Shringar Puja 6:10 PM), closes 8:00 PM. Extended hours during Shravani Mela (Jul-Aug) and Mahashivratri.",
+   "timing_source": "https://babadham.org/timings/"
+  }
+ },
+ {
+  "slug": "belur-math-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://belurmath.org",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Open 6:30 AM - 11:30 AM, 3:30 PM - 8:30 PM",
+   "timing_source": "https://belurmath.org"
+  }
+ },
+ {
+  "slug": "dilwara-jain-temples",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.kppedhi.org/dilwara-jain-temple-mount-abu-sirohi/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Jain devotees (pooja & darshan) 7:00 AM - 8:00 PM; all tourists (non-Jain) 11:00 AM - 5:00 PM",
+   "timing_source": "https://www.kppedhi.org/dilwara-jain-temple-mount-abu-sirohi/"
+  }
+ },
+ {
+  "slug": "gurudwara-sachkhand-sri-hazur-sahib",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://hazursahib.com/web/daily_schedule_puja_patth",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Daily programme (no separate darshan hours published): Prakash 3:15 AM; Asa Ji Di War 3:45-6:15 AM; Katha 8:00 AM; cleaning of Takhat Sahib 12:00-1:00 PM; Rehras 6:30 PM; Aarti 7:30 PM; Kirtan Sohela 8:45 PM",
+   "timing_source": "https://hazursahib.com/web/daily_schedule_puja_patth"
+  }
+ },
+ {
+  "slug": "kamakhya-devi-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://maakamakhya.org",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Regular schedule: temple door opens 8:00 AM (after 5:30 AM Pithasthana bath, 6:00 AM puja); closes 1:00 PM for cooked offerings; reopens 2:30 PM; closes for night 5:15 PM; Aarti 7:30 PM. A special schedule (opens 9:00 AM, closes 1:00 PM, closes at sunset) applies during Saradiya Durga Puja.",
+   "timing_source": "https://maakamakhya.org"
+  }
+ },
+ {
+  "slug": "mahabodhi-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://bodhgayatemple.com/temple-timing/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Open daily; Mahabodhi Mahavihara opens 5:00 AM, closes 9:00 PM (Sutta chanting/meditation 5:30-6:00 AM; Kheer offering 10:00 AM; chanting 6:00-7:00 PM)",
+   "timing_source": "https://bodhgayatemple.com/temple-timing/"
+  }
+ },
+ {
+  "slug": "morya-gosavi-mangalmurti-chinchwad",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://chinchwad.chinchwaddeosthan.org/sri-ma%E1%B9%81galamurti/?lang=en",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Darshan 5:00 AM - 1:00 PM and 4:00 PM - 9:45 PM; Mukha Darshan only 1:00-4:00 PM; Abhishek 8:00 AM; evening worship 9:30 PM",
+   "timing_source": "https://chinchwad.chinchwaddeosthan.org/sri-ma%E1%B9%81galamurti/?lang=en"
+  }
+ },
+ {
+  "slug": "shirdi-sai-baba-samadhi",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://sai.org.in/en/faq",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Darshan queue opens 6:00 AM to 9:30 PM per Sansthan FAQ; Kakad Aarti 5:15 AM, Madhyan Aarti 12 noon, Dhoop Aarti at sunset, Shej Aarti 10:00 PM. Timings may change on festival days; check sai.org.in notices.",
+   "timing_source": "https://sai.org.in/en/faq"
+  }
+ },
+ {
+  "slug": "siddhivinayak-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.siddhivinayak.org/temple-schedule/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Wed-Mon: Kakad Aarti 5:30-6:00 AM; Darshan 6:00 AM-12:00 PM; Naivedhya 12:05-12:30 PM; Darshan 12:30-7:00 PM; Dhup Aarti 7:00-7:10 PM; Darshan 7:10-7:20 PM; Aarti 7:30-8:00 PM; Darshan 8:00-9:50 PM; Shejaarti 9:50 PM. Tuesday: Darshan 3:15-4:45 AM; Kakad Aarti 5:00-5:30 AM; Darshan 5:30 AM-12:00 PM and 12:30-7:00 PM (Naivedhya 12:05-12:30 PM); Dhup Aarti 7:00-7:10 PM; Darshan 7:10-8:45 PM; doors closed for pooja/aarti 8:45-10:10 PM; Darshan 10:10-11:30 PM; Shejaarti 11:45 PM. Special schedules on Vinayaki/Sankashti Chaturthi, Ganesh Jayanti, Ganesh Chaturthi.",
+   "timing_source": "https://www.siddhivinayak.org/temple-schedule/"
+  }
+ },
+ {
+  "slug": "swaminarayan-mandir-bhuj",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.swaminarayan.faith/temples/bhuj-temple",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Prayer 5:45 AM - 11:20 AM and 3:30 PM - 8:30 PM daily; Aarti 5:45 AM, 7:00 AM, 11:20 AM, 7:00 PM, 8:30 PM",
+   "timing_source": "https://www.swaminarayan.faith/temples/bhuj-temple"
+  }
+ },
+ {
+  "slug": "baidyanath-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://babadham.org/timings/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Official page: temple open daily 4:00 AM-9:00 PM (headline). Door schedule: opens 4:00 AM (Kancha Jal 4:10 AM), closes 4:00 PM; reopens 6:00 PM (Shringar Puja 6:10 PM), closes 8:00 PM. Timings may vary during Shravani Mela (Jul-Aug) and Mahashivratri.",
+   "timing_source": "https://babadham.org/timings/"
+  }
+ },
+ {
+  "slug": "bhimashankar-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://shreebhimashankar.com/en/temple-schedule/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Official notice (undated): darshan only 7:00 AM-11:00 AM during Sabhamandap/stairs construction, no end date; confirm with temple. Regular schedule: opens 5:00 AM, closes 9:30 PM (darshan 5:30 AM-12:00 PM, 12:20-2:45 PM, 3:20-7:30 PM, 8:00-9:30 PM).",
+   "timing_source": "https://shreebhimashankar.com/en/temple-schedule/"
+  }
+ },
+ {
+  "slug": "dagdusheth-halwai-ganpati",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.dagdushethganpati.com/temple-schedule",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Darshan 5:30 AM-11:00 PM (darshan paused during aartis). Abhishek Shrungar 6:00-7:15 AM, Suprabhatam Aarti 7:30-7:45 AM, Naivedyam Aarti 1:30-2:00 PM, Madhyana Aarti 3:00-3:15 PM, Mahamangal Aarti 8:00-9:00 PM, Shejarti 10:30-10:45 PM. Festival-day timings may differ.",
+   "timing_source": "https://www.dagdushethganpati.com/temple-schedule"
+  }
+ },
+ {
+  "slug": "gajanan-maharaj-temple-shegaon",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://gajananmaharaj.org/sgmsenglish/faqs.htm",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Per Sansthan FAQ: temple opens 5:00 AM, closing prayer (Shejarti) at 9:30 PM; devotees already in queue at closing are admitted. Abhishek 5:30-7:30 AM.",
+   "timing_source": "https://gajananmaharaj.org/sgmsenglish/faqs.htm"
+  }
+ },
+ {
+  "slug": "iskcon-temple-bangalore",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.iskconbangalore.org/temple-schedule/",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Hare Krishna Hill: darshan opens 7:15 AM (Shringara Darshana Arati); Rajbhog Arati 12:30 PM; altar doors reopen 4:15 PM (Dhupa Arati); Sandhya Arati 7:00 PM; Shayana Arati 8:15 PM, darshan closes after it. Mangala Arati 4:30 AM. Exact closing clock time and midday closure not published.",
+   "timing_source": "https://www.iskconbangalore.org/temple-schedule/"
+  }
+ },
+ {
+  "slug": "kashi-vishwanath-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://shrikashivishwanath.org/general/rituals",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Temple opens 2:30 AM; Mangala Aarti 3:00-4:00 AM; General Darshan 4:00-11:00 AM; Midday Bhog Aarti 11:30 AM-12:00 PM; Darshan 12:00 PM-7:00 PM; Sapta Rishi Aarti 7:00-8:30 PM then Darshan till 9:00 PM; Shringar/Bhog Aarti from 9:00 PM; Shayan Aarti from 10:30 PM; Closes 11:00 PM",
+   "timing_source": "https://shrikashivishwanath.org/general/rituals"
+  }
+ },
+ {
+  "slug": "mahalakshmi-temple-mumbai",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://mahalakshmi-temple.com/darshan",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Open daily 6:00 AM - 10:00 PM; darshan paused for Morning Aarti 6:45-7:30 AM, Naivedya 11:45 AM-12:20 PM, Evening Dhoop Aarti 6:15-6:40 PM, Evening Aarti 7:20-7:45 PM",
+   "timing_source": "https://mahalakshmi-temple.com/darshan"
+  }
+ },
+ {
+  "slug": "omkareshwar-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://shriomkareshwar.org/Schedules.aspx",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Mangal Arti & Bhog 4:30-5:00 AM; Mangal Darshan 5:00 AM-12:20 PM; Madhyanha Bhog 12:20-1:15 PM; Madhyanha Darshan 1:15-4:00 PM; Sayamkalin Shringar 4:00-4:15/4:30 PM; Shringar Darshan to 9:30 PM; Shayan Arti 9:30-10:00 PM; Shayan Darshan 10:00-10:30 PM",
+   "timing_source": "https://shriomkareshwar.org/Schedules.aspx"
+  }
+ },
+ {
+  "slug": "shri-mata-mansa-devi-temple-panchkula",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://mansadevi.org.in/darshan-timing.php",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Winter: Mandir 5:00 AM-9:00 PM; aarti morning 5:30 or 6:00 AM, evening 6:00 or 6:30 PM. Summer: Mandir 4:00 AM-10:00 PM; aarti morning 4:30 or 5:00 AM, evening 7:00 or 7:30 PM. Bhog 11:00-11:15 AM daily. Season switchover dates not published.",
+   "timing_source": "https://mansadevi.org.in/darshan-timing.php"
+  }
+ },
+ {
+  "slug": "sringeri-sharada-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.sringeri.net/pilgrim-info/temple-timings",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Sharadamba Temple normal days: 6:00 AM - 2:00 PM and 4:00 PM - 9:00 PM; Maha-Mangalarati 10:00 AM, 12:00 PM, 7:30 PM",
+   "timing_source": "https://www.sringeri.net/pilgrim-info/temple-timings"
+  }
+ },
+ {
+  "slug": "tirumala-venkateswara-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.tirumala.org/DailySevas.aspx",
+    "what_it_supports": "Timing text"
+   }
+  ],
+  "notes": "Official timing as read from the temple/managing body page; seasonal and festival hours may differ.",
+  "set_details": {
+   "timing": "Sarvadarshanam (TTD): Mon/Tue 07:00-19:00 & 20:00-01:00; Wed 09:30-19:00 & 20:00-01:00; Thu 08:00-19:00 & 20:00-01:00; Fri 09:00-20:00 & 21:00-22:00; Sat/Sun 07:30-19:00 & 20:00-01:00. May continue beyond 01:00 subject to demand. Darshan suspended during Ekanta Seva preparations.",
+   "timing_source": "https://www.tirumala.org/DailySevas.aspx"
+  }
+ },
+ {
+  "slug": "achaleshwar-mahadev-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.bhaktibharat.com/en/mandir/shri-achaleshwar-mahadev-mandir",
+    "what_it_supports": "distance from Mount Abu, Abu Road station, Udaipur airport"
+   },
+   {
+    "url": "https://www.apnisanskriti.com/achaleshwar-mahadev-temple-abu-road-sirohi-rajasthan",
+    "what_it_supports": "Abu Road nearest station; conflicting distances"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/rajasthan/mount-abu/adhar-devi-temple",
+    "what_it_supports": "Udaipur airport about 185 km from Mount Abu"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest major airport is Maharana Pratap Airport, Udaipur, roughly 185-195 km away (Incredible India puts Udaipur about 185 km from Mount Abu; the temple is a further ~11 km beyond).",
+    "by_train": "Nearest railway station is Abu Road, roughly 30-40 km from the temple (about 27-29 km from Mount Abu town plus the climb to Achalgarh); sources vary.",
+    "by_road": "The temple is next to Achalgarh Fort, about 11 km north of Mount Abu town; taxis and buses run from Mount Abu."
+   }
+  }
+ },
+ {
+  "slug": "aundha-nagnath-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Aundha_Nagnath",
+    "what_it_supports": "coordinates, airport, rail, NH361"
+   },
+   {
+    "url": "https://maharashtratourism.gov.in/temple/aundha-nagnath/",
+    "what_it_supports": "no travel info"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest regional airport is Nanded, about 70-88 km (Wikipedia gives both figures); Aurangabad airport is about 210 km.",
+    "by_train": "Chondi station is about 21 km away; Hingoli and Parbhani junctions also used.",
+    "by_road": "Connected by National Highway 361 to Hingoli, Parbhani and Nanded; a bus stop with long-distance buses."
+   }
+  }
+ },
+ {
+  "slug": "bhadreshwar-jain-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://gujarattourism.com/kutch-zone/kutch/bhadreshwar.html",
+    "what_it_supports": "distances from Bhuj and Mandvi, airport, buses"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is Bhuj Airport (about 3 km north of Bhuj); Bhadreshwar is about 75 km by road from Bhuj.",
+    "by_train": "Bhuj railway station is the rail link cited by Gujarat Tourism (daily Bhuj-Ahmedabad services); Bhadreshwar is about 75 km by road from Bhuj.",
+    "by_road": "About 75 km from Bhuj and about 69 km east of Mandvi via Mundra, close to the coast; state buses and jeeps run from Bhuj."
+   }
+  }
+ },
+ {
+  "slug": "dwarkadhish-temple-kankroli",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kankroli",
+    "what_it_supports": "Kankroli on NH-48, about 68 km north of Udaipur, railway station, coords about 25.067N 73.883E"
+   },
+   {
+    "url": "https://www.tourmyindia.com/states/rajasthan/dwarkadhish-temple-kankroli.html",
+    "what_it_supports": "About 65 km from Udaipur by road"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is likely Maharana Pratap Airport, Udaipur; Udaipur city is about 65-68 km from Kankroli and the airport lies beyond the city.",
+    "by_train": "Kankroli has a railway station on the Mavli-Marwar Junction line.",
+    "by_road": "Kankroli is on NH 48 (Udaipur-Ajmer road), about 65-68 km north of Udaipur, next to Rajsamand town on Rajsamand Lake."
+   }
+  }
+ },
+ {
+  "slug": "gopnath-mahadev-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gopnath_Beach",
+    "what_it_supports": "Temple near beach; 22 km from Talaja, 75 km from Bhavnagar"
+   },
+   {
+    "url": "https://www.gujarattourism.com/tripplanner/details/226",
+    "what_it_supports": "Bhavnagar airport/rail context (page covers Takhteshwar, not Gopnath)"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Bhavnagar airport is the nearest per gujarattourism Bhavnagar page (about 3.5 km from Bhavnagar town); road distance to Gopnath about 75 km.",
+    "by_road": "About 22 km from Talaja and about 75 km from Bhavnagar city, near Gopnath beach on the Gulf of Khambhat."
+   }
+  }
+ },
+ {
+  "slug": "jagdish-temple-udaipur",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.incredibleindia.gov.in/en/rajasthan/udaipur/jagdish-temple",
+    "what_it_supports": "Old city location near City Palace; nearest airport UDR and station UDZ; no distances"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Jagdish_Temple,_Udaipur",
+    "what_it_supports": "Coordinates 24.5798N 73.6839E; short walk from City Palace"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is Maharana Pratap Airport (UDR), Udaipur; the sources consulted give no distance.",
+    "by_train": "Nearest station is Udaipur City Railway Station (UDZ); the sources consulted give no distance.",
+    "by_road": "In the old city of Udaipur, just outside the City Palace complex, a short walk from the City Palace. No road distances found in sources."
+   }
+  }
+ },
+ {
+  "slug": "kalo-dungar-dattatreya-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.gujarattourism.com/kutch-zone/kutch/kalo-dungar.html",
+    "what_it_supports": "Bhuj airport about 4 km from city, hill about 90 km north of Bhuj, own transport needed, army jurisdiction"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Kalo_Dungar",
+    "what_it_supports": "Coordinates 23.93417N 69.81389E; Bhuj 83/97 km; Khavda 12/25 km; SH45; temple about 400 years old; army post at top"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Bhuj airport (about 4 km from Bhuj city); Kalo Dungar is about 90 km north of Bhuj.",
+    "by_road": "About 83-97 km from Bhuj (sources differ) and about 12-25 km from Khavda (sources differ), via State Highway SH45 with a branch road to the hill. Own vehicle needed for the final stretch per Gujarat Tourism."
+   }
+  }
+ },
+ {
+  "slug": "kopeshwar-temple-khidrapur",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://wiki.riteme.site/wiki/Kopeshwar_temple",
+    "what_it_supports": "Kolhapur 60 km, Sangli station 36 km, Krishna river location"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_train": "Sangli railway station is the nearest major station, about 36 km per Wikipedia (road distance may be somewhat longer).",
+    "by_road": "About 60 km east of Kolhapur; also reached from Sangli."
+   }
+  }
+ },
+ {
+  "slug": "narayan-sarovar-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Narayan_Sarovar",
+    "what_it_supports": "coordinates, Bhuj airport 150 km, Naliya 60 km"
+   },
+   {
+    "url": "https://gujarattourism.com/kutch-zone/kutch/koteshwar-mahadev-temple.html",
+    "what_it_supports": "Bhuj 154 km, Narayan Sarovar 2 km from Koteshwar"
+   },
+   {
+    "url": "https://kachchh.nic.in/?p=27362",
+    "what_it_supports": "Naliya listed as nearest"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Bhuj airport, about 150 km by road.",
+    "by_train": "Naliya railway station (terminus of the Gandhidham-Naliya line) is the nearest per Kachchh district and Wikipedia, about 60 km; broad-gauge Bhuj-Naliya passenger service was only trialled in 2025, so check current services.",
+    "by_road": "About 150 km from Bhuj by road (Gujarat Tourism gives 154 km to Koteshwar, 2 km from Narayan Sarovar); Lakhpat taluka, Kutch."
+   }
+  }
+ },
+ {
+  "slug": "rani-sati-temple-jhunjhunu",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Jhunjhunu",
+    "what_it_supports": "Jaipur nearest airport; NH 11 and SH 8; Jhunjhunu railway station on North Western Railway"
+   },
+   {
+    "url": "https://www.apnisanskriti.com/rani-sati-temple-jhunjhunu-rajasthan",
+    "what_it_supports": "Jaipur airport about 184 km; rail and local road access"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Rani_Sati_Temple",
+    "what_it_supports": "Temple location and coordinates"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is Jaipur International Airport, about 184 km away (Apni Sanskriti); Wikipedia's Jhunjhunu page also names Jaipur as the nearest airport.",
+    "by_train": "Jhunjhunu railway station (North Western Railway) in Jhunjhunu city is the nearest railhead; distance to the temple not stated by sources.",
+    "by_road": "Temple is within Jhunjhunu city; Jhunjhunu is on NH 11 and SH 8. Local transport from the city to the temple is described by Apni Sanskriti; no distance given."
+   }
+  }
+ },
+ {
+  "slug": "sas-bahu-temples-nagda",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://incredibleindia.gov.in/en/rajasthan/udaipur/sas-bahu-temples",
+    "what_it_supports": "Udaipur airport and City station nearest; about 22 km from Udaipur"
+   },
+   {
+    "url": "https://hindutemples-india.blogspot.com/2021/10/sahasra-bahu-temples-nagda-rajasthan.html",
+    "what_it_supports": "Distances to Eklingji, Udaipur, station, airport, Nathdwara; about 2 km off NH 58"
+   },
+   {
+    "url": "https://www.trawell.in/rajasthan/udaipur/sas-bahu-temple-sahastra-bahu-temple",
+    "what_it_supports": "About 23 km from Udaipur City station; 2.5 km from Eklingji"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is Maharana Pratap Airport, Udaipur, roughly 40 km away (single blog estimate).",
+    "by_train": "Udaipur City railway station is the nearest, about 23-24 km away.",
+    "by_road": "Nagda is about 20-23 km from Udaipur city, about 2 km off the Udaipur-Nathdwara highway, and about 2.5 km from Eklingji Temple; Nathdwara is about 31 km."
+   }
+  }
+ },
+ {
+  "slug": "adhar-devi-temple-mount-abu",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.incredibleindia.gov.in/en/rajasthan/mount-abu/adhar-devi-temple",
+    "what_it_supports": "airport, station, steps, location"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is Maharana Pratap Airport, Udaipur, about 185 km from Mount Abu.",
+    "by_train": "Nearest railway station is Abu Road, about 28 km from Mount Abu.",
+    "by_road": "Temple is in Mount Abu, on a rocky hill reached by 365 stone steps from the base; Mount Abu is connected by road to cities in Rajasthan and Gujarat (no road distances given)."
+   }
+  }
+ },
+ {
+  "slug": "baroli-temples",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Baroli_Temples",
+    "what_it_supports": "coordinates, distance from Kota"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/rajasthan/chittorgarh/baroli-temples",
+    "what_it_supports": "nearest airport and station names"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_road": "Complex is on the edge of Rawatbhata, Chittorgarh district, near the Chambal River, about 45 km from Kota."
+   }
+  }
+ },
+ {
+  "slug": "bhavnath-mahadev-temple-junagadh",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.mahashivratri.org/shiva-temples/bhavnath-mahadev-temple.html",
+    "what_it_supports": "Temple at foot of Girnar near Damodar Kund, about 8 km from Junagadh; Rajkot airport about 110 km"
+   },
+   {
+    "url": "https://junagadh.nic.in/?p=2807",
+    "what_it_supports": "Junagadh district site: Rajkot airport about 100 km, Western Railway, highways"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Keshod Airport is the nearest, about 39 km south-west of Junagadh, with limited scheduled flights (Wikipedia). Rajkot Airport, about 100-110 km away, is the larger alternative.",
+    "by_train": "Junagadh railway station (Western Railway) serves the city; the temple is about 8 km from Junagadh city. Station-to-temple distance is not stated in sources.",
+    "by_road": "About 8 km from Junagadh city, at the foot of Girnar hills near Damodar Kund; Junagadh is served by national/state highways and state buses."
+   }
+  }
+ },
+ {
+  "slug": "eklingji-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.apnisanskriti.com/eklingi-temple-udaipur-rajasthan-2815",
+    "what_it_supports": "22 km from Udaipur, station 18 km, airport 25 km"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Eklingji",
+    "what_it_supports": "Location Kailashpuri, Girwa tehsil, near Nagda"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is Maharana Pratap (Dabok) Airport, Udaipur, about 21 km from Udaipur city centre; the temple is about 22 km north of the city, so expect a longer drive from the airport (exact distance not sourced).",
+    "by_train": "Udaipur City railway station is the nearest major station; the temple is about 22-24 km north of Udaipur city.",
+    "by_road": "About 22-24 km north of Udaipur city (roughly 35-45 minutes by cab); at Kailashpuri near Nagda, Girwa tehsil."
+   }
+  }
+ },
+ {
+  "slug": "govind-dev-ji-temple-jaipur",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Govind_Dev_Ji_Temple",
+    "what_it_supports": "Location inside City Palace complex; coords 26.9288N 75.8240E; aarti schedule"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_road": "Located inside the City Palace complex, in the old city of Jaipur."
+   }
+  }
+ },
+ {
+  "slug": "jyotiba-temple-wadi-ratnagiri",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://utsav.gov.in/view-darshan/shri-jyotiba-temple-1",
+    "what_it_supports": "Location in Panhala tehsil; Kolhapur station about 21 km, bus stand about 25 km, Chipi about 182 km"
+   },
+   {
+    "url": "https://trawell.in/maharashtra/kolhapur/jyotiba-temple",
+    "what_it_supports": "Temple about 20 km from Kolhapur; Kolhapur airport about 30 km; Kolhapur station about 20 km"
+   },
+   {
+    "url": "https://maharashtratourism.gov.in/temple/jyotiba/",
+    "what_it_supports": "Temple atop Sahyadri hills near Kolhapur, about 3,129 ft; no travel detail"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Kolhapur Airport is the nearest airport, roughly 30 km away (single private source; approximate).",
+    "by_train": "Kolhapur railway station, about 20-21 km away.",
+    "by_road": "Wadi Ratnagiri, Jyotiba hill, Panhala tehsil, Kolhapur district; about 20 km from Kolhapur city (Kolhapur bus stand about 25 km per utsav.gov.in); reached by local bus or cab from Kolhapur."
+   }
+  }
+ },
+ {
+  "slug": "kapaleshwar-temple-nashik",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://nashik.gov.in/?p=23710",
+    "what_it_supports": "Temple listed among Panchavati temples on left bank of Godavari; airport, station and bus stand distances for Nashik city"
+   },
+   {
+    "url": "https://www.bharattemples.com/?p=28260",
+    "what_it_supports": "Address Panchavati, Nashik 422003; under 2 km from main bus stand"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Ojhar (Nashik) airport, about 24 km from the city centre per the Nashik district site.",
+    "by_train": "Nashik Road railway station, about 10 km from the city centre.",
+    "by_road": "In Panchavati on the left bank of the Godavari, Nashik city; Nashik Central Bus Stand about 3 km from the city centre (a private source says the temple is under 2 km from the main bus stand)."
+   }
+  }
+ },
+ {
+  "slug": "koteshwar-mahadev-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://gujarattourism.com/kutch-zone/kutch/koteshwar-mahadev-temple.html",
+    "what_it_supports": "154 km from Bhuj, 2 km from Narayan Sarovar, Bhuj airport"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Narayan_Sarovar",
+    "what_it_supports": "Naliya about 60 km from Narayan Sarovar; Koteshwar about 4 km NW"
+   },
+   {
+    "url": "https://kachchh.nic.in/?p=27362",
+    "what_it_supports": "Naliya listed as nearest transport point"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Bhuj Airport is the nearest airport with domestic flights, about 4 km from Bhuj city; the temple is about 154 km from Bhuj by road.",
+    "by_train": "Bhuj is the railhead for long-distance trains (about 154 km by road from the temple). Naliya, about 60 km from Narayan Sarovar, is on the Bhuj-Naliya line.",
+    "by_road": "About 154 km from Bhuj; the temple is about 2-4 km from Narayan Sarovar, in western Kutch. Public buses to Narayan Sarovar run twice daily (Gujarat Tourism); a private vehicle is needed beyond."
+   }
+  }
+ },
+ {
+  "slug": "narsobawadi-datta-mandir",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Narsobawadi",
+    "what_it_supports": "coordinates, Kolhapur/Sangli distances, Jaysingpur station"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/maharashtra/kolhapur/narsobawadi-temple",
+    "what_it_supports": "airports and station named, no distances"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Kolhapur Airport is the nearest airport named by Incredible India; Narsobawadi is about 48-52 km from Kolhapur city (airport distance not sourced).",
+    "by_train": "Jaysingpur railway station, about 17 km (Wikipedia). Incredible India instead names Kolhapur as the nearest major station.",
+    "by_road": "About 48-52 km from Kolhapur and about 19-22 km from Sangli, in Shirol taluka on the Krishna river."
+   }
+  }
+ },
+ {
+  "slug": "ranthambore-ganesh-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://rajasthantourplanner.com/blog/?p=15403",
+    "what_it_supports": "Jaipur airport about 160 km; Sawai Madhopur Junction; fort about 12 km from town"
+   },
+   {
+    "url": "https://india-guide.in/plan-a-trip/sawai-madhopur",
+    "what_it_supports": "Fort about 13 km from Sawai Madhopur; Jaipur about 180 km by road"
+   },
+   {
+    "url": "https://mdwiki.org/wiki/Trinetra_Ganesh_Temple,_Ranthambore",
+    "what_it_supports": "Mirror of Wikipedia article with coordinates 26.01748N 76.45323E"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is Jaipur, about 160 km away (Rajasthan Tour Planner); another travel site gives about 180 km road distance from Jaipur to Sawai Madhopur.",
+    "by_train": "Sawai Madhopur Junction is the nearest railway station; the temple is inside Ranthambore Fort, which sources put at about 12-13 km from Sawai Madhopur town.",
+    "by_road": "Temple is inside Ranthambore Fort, about 12-13 km from Sawai Madhopur town; sources describe road links to Jaipur, Ajmer and Kota. Jaipur to Sawai Madhopur is about 180 km by road per India-Guide."
+   }
+  }
+ },
+ {
+  "slug": "trinetreshwar-temple-tarnetar",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Tarnetar",
+    "what_it_supports": "Location near Thangadh, Surendranagar; Rajkot about 90 km; Ahmedabad about 200 km; coordinates"
+   },
+   {
+    "url": "https://pravase.co.in/ThingsToDoDetail/308/67/tarnetar/tarnetar-mahadev",
+    "what_it_supports": "Temple near Thangadh; fair on 4th-6th of bright Bhadra"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest domestic airport is Rajkot, about 90 km away; nearest international airport is Ahmedabad, about 200 km (Wikipedia, Tarnetar).",
+    "by_road": "Tarnetar is a village near Thangadh in Surendranagar district, Gujarat; road distances and routes not given by fetched sources."
+   }
+  }
+ },
+ {
+  "slug": "ajanta-caves",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.trawell.in/maharashtra/ajanta-caves/how-to-reach",
+    "what_it_supports": "distances to Aurangabad, Jalgaon"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/maharashtra/chhatrapati-sambhaji-nagar/ajanta-caves",
+    "what_it_supports": "nearest airport/station names"
+   },
+   {
+    "url": "https://ajantacaves.com/Howtoreach",
+    "what_it_supports": "Jalgaon station recommended; Bhusaval 28 km from Jalgaon"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is Chhatrapati Sambhajinagar (Aurangabad), about 100 km by road.",
+    "by_train": "Nearest stations are Jalgaon (about 60 km) and Aurangabad (about 100 km); Incredible India lists Aurangabad as nearest, ajantacaves.com recommends Jalgaon.",
+    "by_road": "Roads link the caves with Jalgaon (about 60 km) and Aurangabad (about 100 km); buses and taxis serve both routes."
+   }
+  }
+ },
+ {
+  "slug": "bet-dwarka-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://gidb.org/island/images/Bet-Dwarka.pdf",
+    "what_it_supports": "Okha port, airport, station distances"
+   },
+   {
+    "url": "https://www.thehitavada.com/Encyc/2024/2/26/PM-inaugurates-country-s-longest-cable-stayed-bridge.html",
+    "what_it_supports": "Sudarshan Setu 2.32 km, connects Okha and Beyt Dwarka"
+   },
+   {
+    "url": "https://trawell.in/gujarat/dwarka/beyt-dwarka",
+    "what_it_supports": "33 km Dwarka-Okha"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is Jamnagar, about 150 km from Okha port.",
+    "by_train": "Okha railway station is about 1 km from Okha port; Dwarka station is about 33 km from Okha.",
+    "by_road": "Okha is about 33 km from Dwarka by road; the island is reached by boat from Okha jetty, and the Sudarshan Setu cable-stayed bridge (about 2.32 km, inaugurated Feb 2024) now links Okha with the island."
+   }
+  }
+ },
+ {
+  "slug": "birla-mandir-jaipur",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://jaipurtourism.co.in/laxmi-narayan-temple-birla-mandir-jaipur",
+    "what_it_supports": "Tilak Nagar location, station about 5 km (third-party site)"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/rajasthan/jaipur/birla-temple",
+    "what_it_supports": "Nearest airport JAI and station Jaipur Junction"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Jaipur International Airport is the nearest airport.",
+    "by_train": "Jaipur Junction is the nearest station, about 5 km from the temple.",
+    "by_road": "The temple is in Tilak Nagar, central Jaipur, on Jawahar Lal Nehru Marg at the foot of Moti Dungri."
+   }
+  }
+ },
+ {
+  "slug": "ganpatipule-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Ganpatipule",
+    "what_it_supports": "Coords 17.1447N 73.2667E, 26 km to Ratnagiri, Nivali route, Mumbai/Pune distances"
+   },
+   {
+    "url": "https://www.utsav.gov.in/view-darshan/sansthan-shreedev-ganpatipule",
+    "what_it_supports": "Ratnagiri station about 30 km; Chipi airport about 202 km"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "The temple trust page lists Chipi (Sindhudurg) airport, about 202 km away; no nearer airport with scheduled services is confirmed."
+   }
+  }
+ },
+ {
+  "slug": "harihareshwar-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://raigad.gov.in/?p=26314",
+    "what_it_supports": "Raigad district site: nearby Konkan Railway stations (Pen, Roha, Veer), airports at Pune and Mumbai, MSRTC bus links; no distances"
+   },
+   {
+    "url": "https://www.trawell.in/maharashtra/harihareshwar/harihareshwar-temple-kalbhairav-temple",
+    "what_it_supports": "Airport distances, Mangaon railhead about 60 km, temple about 0.5 km from bus stand"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Harihareshwar",
+    "what_it_supports": "Town coordinates 17.995N 73.025E; Pune about 190 km, Mumbai about 210 km"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest listed airports are Pune (about 181 km) and Mumbai (about 207 km).",
+    "by_train": "Mangaon is described as the nearest railhead, about 60 km away (single private source). The Raigad district site lists Pen, Roha and Veer as nearby Konkan Railway stations without distances.",
+    "by_road": "Harihareshwar is in Shrivardhan taluka, Raigad district; about 190 km from Pune and about 210 km from Mumbai. Bus connections are listed to Mumbai, Pune, Alibag, Ratnagiri and Srivardhan. The temple is about 0.5 km from the Harihareshwar bus stand."
+   }
+  }
+ },
+ {
+  "slug": "kaila-devi-temple-karauli",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kaila_Devi_Temple",
+    "what_it_supports": "Coordinates 26.335083N 76.893806E; Karauli 23 km, Gangapur City 34 km, Hindaun 58 km, Jaipur airport 170 km"
+   },
+   {
+    "url": "https://www.kailadevitemple.com/how-to-reach",
+    "what_it_supports": "Airport about 160 km, Gangapur City station about 35 km, road distances from Karauli, Hindaun, Gangapur, Bharatpur"
+   },
+   {
+    "url": "https://www.kailadevitemple.com/?p=1348",
+    "what_it_supports": "Timings and aarti times"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Jaipur Airport is the nearest, about 160 km (temple site) to 170 km (Wikipedia).",
+    "by_train": "Gangapur City is the nearest major railhead, about 34-35 km; Hindaun and Shri Mahavirji are minor stations.",
+    "by_road": "Kailadevi village, Karauli district, on the Kalisil river in the Aravalli hills. By road about 23 km from Karauli, 34 km from Gangapur City, 53-58 km from Hindaun City, about 90 km from Bharatpur; RSRTC buses serve the area, with extra buses during the fair."
+   }
+  }
+ },
+ {
+  "slug": "kayavarohan-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kayavarohan",
+    "what_it_supports": "Coordinates 22.0669N 73.25E; about 30 km from Vadodara; about 11 km from NH 48"
+   },
+   {
+    "url": "https://www.railyatri.in/stations/kayavarohan-kv",
+    "what_it_supports": "Kayavarohan (KV) station on Western Railway and distances to neighbouring stations; train data empty/placeholder"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest major airport is Vadodara; the village is about 30 km from Vadodara.",
+    "by_train": "Kayavarohan (KV) is a small station on Western Railway; Vadodara Junction, about 26-27 km from it, is the main railhead.",
+    "by_road": "Kayavarohan (Karvan) is in Vadodara district, about 30 km from Vadodara and about 11 km from National Highway 48."
+   }
+  }
+ },
+ {
+  "slug": "mahudi-jain-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.gujarattourism.com/central-zone/gandhinagar/mahudi-jain-temple.html",
+    "what_it_supports": "Vijapur station 10 km, Ahmedabad airport, buses"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/gujarat/gandhinagar/mahudi-jain-temple",
+    "what_it_supports": "airport 40 km, Gandhinagar Capital station 30 km"
+   },
+   {
+    "url": "https://jainmandir.org/Temple/Shri-Ghantakaran-Mahavir-Jain-Temple-(Mahudi-Jain-Teerth),-Mahudi,-District-Gandhinagar-(Gujarat)",
+    "what_it_supports": "Mansa tahsil, Gandhinagar district, Vijapur 10 km"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is Sardar Vallabhbhai Patel International Airport, Ahmedabad; Incredible India lists about 40 km, road distance is likely somewhat higher.",
+    "by_train": "Vijapur railway station, about 10 km (Gujarat Tourism, jainmandir.org).",
+    "by_road": "Buses run from Ahmedabad, Gandhinagar and Kalol; Mahudi is in Mansa taluka, Gandhinagar district."
+   }
+  }
+ },
+ {
+  "slug": "parli-vaijnath-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Shri_Vaijnath_Temple",
+    "what_it_supports": "coordinates, NH 161, Nanded airport 130 km, station"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Parli_Vaijnath",
+    "what_it_supports": "station, Ambejogai 25 km"
+   },
+   {
+    "url": "https://maharashtratourism.gov.in/temple/parli-vaijnath/",
+    "what_it_supports": "location in Beed district; no access details"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nanded Airport, about 130 km (Wikipedia).",
+    "by_train": "Parli Vaijnath railway station (PRLI) is in the town.",
+    "by_road": "The temple is in Parli Vaijnath town, Beed district; Ambejogai is about 25 km away."
+   }
+  }
+ },
+ {
+  "slug": "rudra-mahalaya-siddhpur",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://patan.nic.in/?p=3319",
+    "what_it_supports": "Ahmedabad airport about 115 km; Western Railway; highways and buses"
+   },
+   {
+    "url": "https://en.wikivoyage.org/wiki/Siddhpur",
+    "what_it_supports": "Station and bus station in town; Ahmedabad nearest airport"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Rudra_Mahalaya_Temple",
+    "what_it_supports": "Temple coordinates 23 55 09N 72 22 45E"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is Sardar Vallabhbhai Patel International Airport, Ahmedabad, about 115 km from Siddhpur (Patan district site).",
+    "by_train": "Siddhpur railway station (Western Railway) is in the town; Ahmedabad-Patan trains noted by Patan district site. Distance to temple not stated.",
+    "by_road": "Siddhpur is served by national and state highways and GSRTC buses; Wikivoyage notes a bus station in the town. Road distances to the temple not stated."
+   }
+  }
+ },
+ {
+  "slug": "yogeshwari-devi-temple-ambajogai",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://maharashtratourism.gov.in/temple/ambajogai/",
+    "what_it_supports": "Latur/Nanded/Aurangabad airports; Parli Vaijnath/Nanded rail; bus access"
+   },
+   {
+    "url": "https://marathwadatourism.com/en/?p=3369",
+    "what_it_supports": "Temple on west bank of Jayanti River; 25 km from Parli Vaijnath"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ambajogai",
+    "what_it_supports": "Town coordinates 18.75147N 76.36763E; Yogeshwari temple"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_train": "Parli Vaijnath is the nearest railhead, about 20-25 km away.",
+    "by_road": "Temple is in Ambajogai town on the west bank of the Jayanti River; Ambajogai has State Transport bus links to Beed and other Maharashtra cities, and is about 25 km from Parli Vaijnath."
+   }
+  }
+ },
+ {
+  "slug": "ashapura-mata-temple-mata-no-madh",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://temple.yatradham.org/temple/shree-ashapura-mata-temple",
+    "what_it_supports": "distance from Bhuj, airport, station"
+   },
+   {
+    "url": "https://kachchh.nic.in/tourist-place/mata-na-madh",
+    "what_it_supports": "district site names Naliya as nearest"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is Bhuj Airport, about 100 km.",
+    "by_train": "Nearest major railway station is Bhuj, about 100 km.",
+    "by_road": "Mata no Madh is a village in Lakhpat taluka, Kutch, about 105 km from Bhuj by road (Wikipedia); the temple is in the village itself."
+   }
+  }
+ },
+ {
+  "slug": "bhadrakali-temple-ahmedabad",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://temple.yatradham.org/temple/shri-bhadrakali-mata-ji-mandir",
+    "what_it_supports": "address, station, airport distances"
+   },
+   {
+    "url": "https://ahmedabadcity.gov.in/StaticPage/bhadrakali_temple",
+    "what_it_supports": "airport 11 km, Kalupur 5 min drive"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Sardar Vallabhbhai Patel International Airport, about 11 km.",
+    "by_train": "Kalupur (Ahmedabad Junction) Railway Station, a short drive of about 5 minutes.",
+    "by_road": "Located at Bhadra Chowk, Bhadra Fort, in the old city of Ahmedabad; reachable by city bus, auto or taxi."
+   }
+  }
+ },
+ {
+  "slug": "charbhuja-temple-garhbor",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.bharattemples.com/charbhuja-temple-garhbor-kumbhalgarh",
+    "what_it_supports": "Charbhuja Road station; 38 km from Rajsamand, about 103 km from Udaipur"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Charbhuja",
+    "what_it_supports": "Garhbor in Kumbhalgarh tehsil; Kumbhalgarh 32 km, Udaipur 112 km (citation-needed flagged); coords about 25.2667N 73.6833E"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is Maharana Pratap Airport, Udaipur (Dabok), roughly 100-115 km by road.",
+    "by_train": "Charbhuja Road station (North Western Railway, Mavli-Marwar section) is named as the station for Garhbor; distance not stated.",
+    "by_road": "About 32 km from Kumbhalgarh and roughly 100-115 km from Udaipur; about 38 km from Rajsamand district headquarters (bharattemples)."
+   }
+  }
+ },
+ {
+  "slug": "gondeshwar-temple-sinnar",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.bharattemples.com/?p=26920",
+    "what_it_supports": "Sinnar 27 km from Nashik, buses on Nashik-Shirdi route, temple at NE edge"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Gondeshwar_Temple,_Sinnar",
+    "what_it_supports": "Coordinates 19.8514N 74.0019E in Sinnar"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_road": "Sinnar town is about 27 km from Nashik on the Nashik-Shirdi road; temple is on the north-eastern edge of Sinnar town."
+   }
+  }
+ },
+ {
+  "slug": "jagannath-temple-ahmedabad",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.utsav.gov.in/view-darshan/shree-jagannathji-mandir-ahmedabad-1",
+    "what_it_supports": "Address, airport about 10 km, railway about 4 km, bus stand about 2 km"
+   },
+   {
+    "url": "https://heritage.ahmedabadcity.gov.in/details/83/heritage_site/en",
+    "what_it_supports": "Location in Jamalpur near Jamalpur Gate; no address or coordinates"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Jagannath_Temple,_Ahmedabad",
+    "what_it_supports": "Coordinates 23.0114N 72.5809E; Jamalpur location"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Ahmedabad airport, about 10 km away.",
+    "by_train": "Ahmedabad railway station, about 4 km away.",
+    "by_road": "In Jamalpur, Ahmedabad (address Jamalpur Darwaja, Ahmedabad 380022), beside the Sabarmati river; Ahmedabad bus stand about 2 km away."
+   }
+  }
+ },
+ {
+  "slug": "kalaram-mandir-nashik",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://nashik.gov.in/?p=23656",
+    "what_it_supports": "Panchvati location; airport about 24 km, Nashik Road station about 10 km, central bus stand about 3 km"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Kalaram_Temple",
+    "what_it_supports": "Coordinates 20.00694N 73.795E in Panchavati"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Ojhar (Nashik) airport, about 24 km from the city centre per the Nashik district site (another private source says about 30 km).",
+    "by_train": "Nashik Road railway station, about 10 km from the city centre.",
+    "by_road": "In Panchavati, Nashik city; about 3 km from the Nashik Central Bus Stand."
+   }
+  }
+ },
+ {
+  "slug": "khatu-shyamji-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.festivalsofindia.in/khatu-shyamji-fair/how-to-reach",
+    "what_it_supports": "airport, Ringas station, Jaipur and Delhi road distances"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Jaipur International Airport, roughly 80-100 km by road.",
+    "by_train": "Ringas Junction, about 17 km from the temple.",
+    "by_road": "About 80 km from Jaipur via the Jaipur-Sikar highway; about 300 km from Delhi."
+   }
+  }
+ },
+ {
+  "slug": "muktidham-temple-nashik",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://incredibleindia.gov.in/en/maharashtra/nashik/muktidham",
+    "what_it_supports": "Nashik Road suburb, Nasik Road station, airports"
+   },
+   {
+    "url": "https://temple.yatradham.org/temple/kuktidham-mandir",
+    "what_it_supports": "station named; distance figures judged unreliable"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nashik airport (ISK) and Mumbai airport (BOM) are the airports listed by Incredible India; no distance given in the source.",
+    "by_train": "Nasik Road railway station is the nearest station per Incredible India and Yatradham; distance conflicting (Yatradham says about 8 km, not corroborated), so not stated.",
+    "by_road": "Located in the Nashik Road suburb of Nashik city; accessible by road, no distance given by an authoritative source."
+   }
+  }
+ },
+ {
+  "slug": "ramtek-gad-mandir",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://www.tourmyindia.com/states/maharashtra/how-reach-ramtek.html",
+    "what_it_supports": "airport 49 km, road 42 km, Nagpur trains"
+   },
+   {
+    "url": "https://maharashtratourism.gov.in/?p=8282",
+    "what_it_supports": "about 50 km from Nagpur"
+   },
+   {
+    "url": "https://www.incredibleindia.gov.in/en/maharashtra/nagpur/ramtek-temple",
+    "what_it_supports": "Nagpur airport and station named, timings NA"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Dr. Babasaheb Ambedkar International Airport, Nagpur (Sonegaon), about 49 km.",
+    "by_train": "Nagpur Junction is the nearest major railhead; the source lists passenger trains between Nagpur Junction and Ramtek but gives no rail distance.",
+    "by_road": "About 42-50 km from Nagpur by road (tourmyindia 42 km; Maharashtra Tourism about 50 km)."
+   }
+  }
+ },
+ {
+  "slug": "sanwaliya-seth-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Sawariya_Seth_Temple",
+    "what_it_supports": "41 km from Chittorgarh station; 65 km from Dabok airport; Mandfiya location"
+   },
+   {
+    "url": "https://chalbanjare.com/rajasthan/tourist-attraction/shri-sanwaliyaji-seth-prakatya-mandir-Chittorgarh",
+    "what_it_supports": "40-45 km from Chittorgarh on Chittorgarh-Udaipur highway; airport 120 km claim"
+   }
+  ],
+  "notes": "How to reach: approximate distances from public sources, independently checked; verify before travel.",
+  "set_details": {
+   "how_to_reach": {
+    "by_air": "Nearest airport is Maharana Pratap Airport (Dabok), Udaipur, about 65 km (Wikipedia).",
+    "by_train": "Chittorgarh Junction is the nearest major station, about 41 km from the temple (Wikipedia).",
+    "by_road": "Temple is at Mandphiya (Mandfiya), about 40-45 km from Chittorgarh on the Chittorgarh-Udaipur highway."
+   }
+  }
+ }
+]
