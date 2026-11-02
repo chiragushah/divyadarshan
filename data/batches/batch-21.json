@@ -1,0 +1,145 @@
+[
+ {
+  "slug": "mahabodhi-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Duplicate of mahabodhi-temple-bodh-gaya; kept mahabodhi-temple-bodh-gaya.",
+  "hide": {
+   "reason": "Duplicate of mahabodhi-temple-bodh-gaya"
+  }
+ },
+ {
+  "slug": "baidyanath-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Duplicate of baidyanath-temple-deoghar; kept baidyanath-temple-deoghar.",
+  "hide": {
+   "reason": "Duplicate of baidyanath-temple-deoghar"
+  }
+ },
+ {
+  "slug": "shakti-peetha-kalighat",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Duplicate of kalighat-kali-temple; kept kalighat-kali-temple.",
+  "hide": {
+   "reason": "Duplicate of kalighat-kali-temple"
+  }
+ },
+ {
+  "slug": "naina-devi-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Duplicate of naina-devi-temple-bilaspur; kept naina-devi-temple-bilaspur.",
+  "hide": {
+   "reason": "Duplicate of naina-devi-temple-bilaspur"
+  }
+ },
+ {
+  "slug": "omkareshwar-temples",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Duplicate of omkareshwar-temple; kept omkareshwar-temple.",
+  "hide": {
+   "reason": "Duplicate of omkareshwar-temple"
+  }
+ },
+ {
+  "slug": "kurukshetra-brahmasarovar",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Duplicate of brahma-sarovar-kurukshetra; kept brahma-sarovar-kurukshetra.",
+  "hide": {
+   "reason": "Duplicate of brahma-sarovar-kurukshetra"
+  }
+ },
+ {
+  "slug": "thillai-nataraja-temple-chidambaram",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Duplicate of chidambaram-nataraja-temple; kept chidambaram-nataraja-temple.",
+  "hide": {
+   "reason": "Duplicate of chidambaram-nataraja-temple"
+  }
+ },
+ {
+  "slug": "rajarajeswaram-temple-thanjavur",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Duplicate of brihadeeswarar-temple; kept brihadeeswarar-temple.",
+  "hide": {
+   "reason": "Duplicate of brihadeeswarar-temple"
+  }
+ },
+ {
+  "slug": "vijayawada-kanaka-durga",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Duplicate of kanaka-durga-temple; kept kanaka-durga-temple.",
+  "hide": {
+   "reason": "Duplicate of kanaka-durga-temple"
+  }
+ },
+ {
+  "slug": "jwala-ji-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Duplicate of jwala-devi-temple-dharamsala; kept jwala-devi-temple-dharamsala.",
+  "hide": {
+   "reason": "Duplicate of jwala-devi-temple-dharamsala"
+  }
+ },
+ {
+  "slug": "harmandir-sahib-golden-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Duplicate of golden-temple-amritsar; kept golden-temple-amritsar.",
+  "hide": {
+   "reason": "Duplicate of golden-temple-amritsar"
+  }
+ },
+ {
+  "slug": "takht-sri-kesgarh-sahib-anandpur",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Duplicate of gurudwara-anandpur-sahib; kept gurudwara-anandpur-sahib.",
+  "hide": {
+   "reason": "Duplicate of gurudwara-anandpur-sahib"
+  }
+ },
+ {
+  "slug": "antriksh-parshwanath-jain-temple",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Duplicate of lal-mandir-delhi; kept lal-mandir-delhi.",
+  "hide": {
+   "reason": "Duplicate of lal-mandir-delhi"
+  }
+ }
+]
