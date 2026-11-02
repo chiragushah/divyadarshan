@@ -30,6 +30,8 @@ export interface ITemple extends Document {
   facilities?: Record<string, string>
   festivals?: string
   timing?: string
+  timing_source?: string
+  timing_verified_at?: Date
   best_time?: string
   dress_code?: string
   official_website?: string
@@ -109,6 +111,8 @@ const TempleSchema = new Schema<ITemple>(
     facilities:           { type: Schema.Types.Mixed },
     festivals:            { type: String },
     timing:               { type: String },
+    timing_source:        { type: String },
+    timing_verified_at:   { type: Date },
     best_time:            { type: String },
     dress_code:           { type: String },
     official_website:     { type: String },

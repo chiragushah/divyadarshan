@@ -96,11 +96,11 @@ export default function TempleBatches() {
               </div>
               {r.changes.map(c => (
                 <div key={c.field} style={{ marginBottom: 10 }}>
-                  <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, color: '#8a7a68', textTransform: 'uppercase', marginBottom: 4 }}>{c.field.startsWith('set:') ? 'Correct ' + c.field.slice(4).replace('_', ' ') : c.field === 'create' ? 'New temple (will be added to the portal)' : c.field === 'description' ? 'Description' : 'Official website'}</div>
+                  <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, color: '#8a7a68', textTransform: 'uppercase', marginBottom: 4 }}>{c.field.startsWith('set:') ? 'Correct ' + c.field.slice(4).replace('_', ' ') : c.field === 'create' ? 'New temple (will be added to the portal)' : c.field === 'det:timing' ? 'Timing (from the official source)' : c.field === 'det:how_to_reach' ? 'How to reach (added)' : c.field === 'description' ? 'Description' : 'Official website'}</div>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 10 }}>
                     <div style={{ background: '#FBEFEF', borderRadius: 8, padding: 10, fontSize: 13, lineHeight: 1.55 }}><div style={{ fontSize: 11, color: '#a02622', fontWeight: 700 }}>NOW</div>{c.from || <em style={{ color: '#8a7a68' }}>empty</em>}</div>
                     <div style={{ background: '#EEF7EE', borderRadius: 8, padding: 10, fontSize: 13, lineHeight: 1.55 }}><div style={{ fontSize: 11, color: '#2E7D32', fontWeight: 700 }}>PROPOSED</div>
-                      {c.field.startsWith('set:') ? <span>{c.to}</span> : c.field === 'create' ? <span style={{ whiteSpace: 'pre-wrap' }}>{c.to}</span> : c.field === 'official_website' ? <a href={c.to} target="_blank" rel="noopener noreferrer" style={{ color: SAF }}>{c.to}</a> : c.to}</div>
+                      {c.field.startsWith('det:') ? <span style={{ whiteSpace: 'pre-wrap' }}>{c.to}</span> : c.field.startsWith('set:') ? <span>{c.to}</span> : c.field === 'create' ? <span style={{ whiteSpace: 'pre-wrap' }}>{c.to}</span> : c.field === 'official_website' ? <a href={c.to} target="_blank" rel="noopener noreferrer" style={{ color: SAF }}>{c.to}</a> : c.to}</div>
                   </div>
                 </div>))}
               {r.skipped.length > 0 && <div style={{ fontSize: 12, color: '#8a7a68' }}>{r.skipped.join(' · ')}</div>}

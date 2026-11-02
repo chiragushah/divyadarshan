@@ -30,6 +30,8 @@ export interface BatchItem {
   replaces_live?: string
   /** Corrections to location or website fields. Each is applied only while the live value is still `from`. */
   set_fields?: { field: 'city' | 'state' | 'district' | 'official_website'; from: string | null; to: string }[]
+  /** Verified practical details. timing replaces the live placeholder; how_to_reach is added only while the live value is empty. */
+  set_details?: { timing?: string | null; timing_source?: string | null; how_to_reach?: Record<string, string> | null }
   new_temple?: { name: string; city: string; district?: string | null; state: string; deity: string; type: string; lat?: number | null; lng?: number | null }
 }
 export interface Batch { id: string; title: string; items: BatchItem[] }
