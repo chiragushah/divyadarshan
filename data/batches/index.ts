@@ -38,6 +38,8 @@ export interface BatchItem {
   set_fields?: { field: 'name' | 'deity' | 'type' | 'city' | 'state' | 'district' | 'official_website'; from: string | null; to: string }[]
   /** Verified practical details. timing replaces the live placeholder; how_to_reach is added only while the live value is empty. */
   set_details?: { timing?: string | null; timing_source?: string | null; how_to_reach?: Record<string, string> | null }
+  /** A freely licensed photo with its credit; applied only while the temple has no photo or a generic one. */
+  set_image?: { url: string; credit: string; credit_url: string }
   /** Reversible removal from the portal (the record is kept, only hidden). Undo brings it back. */
   hide?: { reason: string }
   new_temple?: { name: string; city: string; district?: string | null; state: string; deity: string; type: string; lat?: number | null; lng?: number | null }
