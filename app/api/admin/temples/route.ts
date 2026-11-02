@@ -15,7 +15,7 @@ function slugify(text: string) {
 
 export async function GET(req: NextRequest) {
   if (!(await verifyAdmin(req))) return NextResponse.json({ error: 'Unauthorised' }, { status: 401 })
-  const temples = await Temple.find().sort({ name: 1 }).select('name state city deity type has_live rating_avg rating_count slug').lean()
+  const temples = await Temple.find().setOptions({ includeHidden: true }).sort({ name: 1 }).select('name state city deity type has_live rating_avg rating_count slug hidden').lean()
   return NextResponse.json({ temples })
 }
 

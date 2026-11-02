@@ -12,7 +12,7 @@ export interface Row { slug: string; name: string; found: boolean; changes: Chan
 /** What applying this batch would change. Only empty or too-short fields are filled; nothing already good is overwritten. */
 export async function previewBatch(batchId: string): Promise<{ id: string; title: string; rows: Row[] } | null> {
   const b = BATCHES.find(x => x.id === batchId); if (!b) return null
-  const docs: any[] = await (Temple as any).find({ slug: { $in: b.items.map(i => i.slug) } }).select('slug name description extended_description official_website city state district timing how_to_reach').lean()
+  const docs: any[] = await (Temple as any).find({ slug: { $in: b.items.map(i => i.slug) } }).setOptions({ includeHidden: true }).select('slug name hidden description extended_description official_website city state district timing how_to_reach').lean()
   const rows: Row[] = b.items.map(item => {
     const t = docs.find(d => d.slug === item.slug)
     const r: Row = { slug: item.slug, name: t?.name || item.slug, found: !!t, changes: [], skipped: [], item }
@@ -42,6 +42,10 @@ export async function previewBatch(batchId: string): Promise<{ id: string; title
       const cur = (t as any)[sf.field] || null
       if (cur === (sf.from || null) && cur !== sf.to) r.changes.push({ field: 'set:' + sf.field, from: cur || '', to: sf.to })
       else r.skipped.push('Correction to ' + sf.field + ' not applied because the live value is no longer "' + (sf.from || 'empty') + '"')
+    }
+    if (item.hide) {
+      if (!t.hidden) r.changes.push({ field: 'hide:flag', from: 'Visible', to: 'Hidden: ' + item.hide.reason })
+      else r.skipped.push('Already hidden')
     }
     const sd = item.set_details
     if (sd) {
@@ -83,16 +87,17 @@ export async function applyBatch(batchId: string, slugs: string[]) {
       continue
     }
     const set: any = {}
-    if (r.changes.some(c => !c.field.startsWith('set:') && !c.field.startsWith('det:'))) { set.description_batch = batchId; set.description_verified_at = new Date() }
+    if (r.changes.some(c => !c.field.startsWith('set:') && !c.field.startsWith('det:') && !c.field.startsWith('hide:'))) { set.description_batch = batchId; set.description_verified_at = new Date() }
     for (const c of r.changes) {
       if (c.field === 'det:timing') { set.timing = c.to; set.timing_source = r.item.set_details?.timing_source || null; set.timing_verified_at = new Date() }
+      else if (c.field === 'hide:flag') { set.hidden = true; set.hidden_reason = r.item.hide!.reason }
       else if (c.field === 'det:how_to_reach') set.how_to_reach = r.item.set_details!.how_to_reach
       else set[c.field.startsWith('set:') ? c.field.slice(4) : c.field] = c.to
     }
     if (r.changes.some(c => c.field === 'description')) set.description_sources = r.item.sources.map(s => s.url)
-    const prev = await (Temple as any).findOne({ slug: r.slug }).select('description official_website description_sources description_batch description_verified_at city state district timing how_to_reach timing_source timing_verified_at').lean()
+    const prev = await (Temple as any).findOne({ slug: r.slug }).setOptions({ includeHidden: true }).select('name hidden description official_website description_sources description_batch description_verified_at city state district timing how_to_reach timing_source timing_verified_at').lean()
     await (Temple as any).updateOne({ slug: r.slug }, { $set: set })
-    log.push({ slug: r.slug, previous: { description: prev?.description ?? null, official_website: prev?.official_website ?? null, description_sources: prev?.description_sources ?? null, city: prev?.city ?? null, state: prev?.state ?? null, district: prev?.district ?? null, timing: prev?.timing ?? null, how_to_reach: prev?.how_to_reach ?? null, timing_source: prev?.timing_source ?? null, timing_verified_at: prev?.timing_verified_at ?? null }, fields: r.changes.map(c => c.field) })
+    log.push({ slug: r.slug, previous: { name: prev?.name ?? null, description: prev?.description ?? null, official_website: prev?.official_website ?? null, description_sources: prev?.description_sources ?? null, city: prev?.city ?? null, state: prev?.state ?? null, district: prev?.district ?? null, timing: prev?.timing ?? null, how_to_reach: prev?.how_to_reach ?? null, timing_source: prev?.timing_source ?? null, timing_verified_at: prev?.timing_verified_at ?? null }, fields: r.changes.map(c => c.field) })
   }
   await col().replaceOne({ _id: batchId as any }, { _id: batchId, applied_at: new Date(), items: log }, { upsert: true })
   return { applied: log.length, skipped: pv.rows.length - log.length }
@@ -103,12 +108,13 @@ export async function undoBatch(batchId: string) {
   if (!rec || rec.undone_at) throw new Error('This batch is not currently applied.')
   for (const it of rec.items) {
     if (it.created) { await (Temple as any).deleteOne({ slug: it.slug, description_batch: batchId }); continue }
-    const unset: any = it.fields.some((f: string) => !f.startsWith('set:') && !f.startsWith('det:')) ? { description_batch: '', description_verified_at: '' } : {}
+    const unset: any = it.fields.some((f: string) => !f.startsWith('set:') && !f.startsWith('det:') && !f.startsWith('hide:')) ? { description_batch: '', description_verified_at: '' } : {}
     const set: any = {}
     for (const f of it.fields) {
       if (f === 'description') { set.description = it.previous.description ?? ''; if (it.previous.description_sources) set.description_sources = it.previous.description_sources; else unset.description_sources = '' }
       if (f.startsWith('set:')) { const k = f.slice(4); if (k !== 'official_website') { if (it.previous[k]) set[k] = it.previous[k]; else unset[k] = '' } else if (it.previous.official_website) set.official_website = it.previous.official_website; else unset.official_website = '' }
       if (f === 'det:timing') { if (it.previous.timing) set.timing = it.previous.timing; else unset.timing = ''; unset.timing_source = ''; unset.timing_verified_at = ''; if (it.previous.timing_source) { set.timing_source = it.previous.timing_source; delete unset.timing_source } if (it.previous.timing_verified_at) { set.timing_verified_at = it.previous.timing_verified_at; delete unset.timing_verified_at } }
+      if (f === 'hide:flag') { unset.hidden = ''; unset.hidden_reason = '' }
       if (f === 'det:how_to_reach') { if (it.previous.how_to_reach) set.how_to_reach = it.previous.how_to_reach; else unset.how_to_reach = '' }
       if (f === 'official_website') { if (it.previous.official_website) set.official_website = it.previous.official_website; else unset.official_website = '' }
     }

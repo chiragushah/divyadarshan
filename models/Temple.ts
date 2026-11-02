@@ -19,6 +19,8 @@ export interface ILiveSlot {
 export interface ITemple extends Document {
   slug: string
   name: string
+  hidden?: boolean
+  hidden_reason?: string
   state: string
   city: string
   deity: string
@@ -147,6 +149,8 @@ const TempleSchema = new Schema<ITemple>(
     image_credit_url:     { type: String },
     enriched_at:          { type: Date },
     description_sources:  { type: [String], default: undefined },
+    hidden:               { type: Boolean, default: false },
+    hidden_reason:        { type: String },
     description_batch:    { type: String },
     description_verified_at: { type: Date },
     enrich_status:        { type: String },
@@ -164,5 +168,13 @@ TempleSchema.index(
 
 // Geo index
 TempleSchema.index({ lat: 1, lng: 1 })
+
+// Hidden temples (reversible, set from the batch tool) are left out of every public and admin read unless a query opts in with .setOptions({ includeHidden: true }).
+for (const op of ['find', 'findOne', 'countDocuments'] as const) {
+  TempleSchema.pre(op, function (this: any, next: () => void) {
+    if (!this.getOptions().includeHidden) this.where({ hidden: { $ne: true } })
+    next()
+  })
+}
 
 export const Temple = models.Temple || model<ITemple>('Temple', TempleSchema)

@@ -1,0 +1,87 @@
+[
+ {
+  "slug": "gurudwara-darbar-sahib-kartarpur",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Kartarpur Sahib is in Narowal district, Pakistan; the portal covers India.",
+  "hide": {
+   "reason": "Located in Pakistan, not India"
+  }
+ },
+ {
+  "slug": "gurudwara-nankana-sahib-india",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Nankana Sahib is in Pakistan; this India entry does not exist.",
+  "hide": {
+   "reason": "No such place in India"
+  }
+ },
+ {
+  "slug": "gandhi-sagar-sanctuary",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Gandhi Sagar Wildlife Sanctuary is a protected area, not a place of worship.",
+  "hide": {
+   "reason": "Wildlife sanctuary, not a temple"
+  }
+ },
+ {
+  "slug": "kangra-fort",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Kangra Fort is a historic fort.",
+  "hide": {
+   "reason": "A fort, not a temple"
+  }
+ },
+ {
+  "slug": "kinnaur-kailash",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Kinnaur Kailash is a mountain peak and trek.",
+  "hide": {
+   "reason": "A mountain, not a temple"
+  }
+ },
+ {
+  "slug": "drupada-nagar-temples",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Name corrected to match the verified description (Kampil / Karna Taal).",
+  "set_fields": [
+   {
+    "field": "name",
+    "from": "Drupada Nagar Temples",
+    "to": "Kampil (Drupada Nagar)"
+   }
+  ]
+ },
+ {
+  "slug": "karna-temple-karnal",
+  "description": null,
+  "official_website": null,
+  "timings_official": null,
+  "sources": [],
+  "notes": "Name corrected to match the verified description (Kampil / Karna Taal).",
+  "set_fields": [
+   {
+    "field": "name",
+    "from": "Karna Temple, Karnal",
+    "to": "Karna Taal, Karnal"
+   }
+  ]
+ }
+]
