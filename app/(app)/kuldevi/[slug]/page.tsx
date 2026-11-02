@@ -61,6 +61,10 @@ export default function KuldeviDetail({ params }: { params: { slug: string } }) 
         {k.sources.map(s => <li key={s.title}>{s.url ? <a href={s.url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--crimson)' }}>{s.title}</a> : s.title}</li>)}
       </ul>
 
+      {k.temple_slug && (
+        <p style={{ fontSize: 14, marginBottom: 14 }}>Temple page: <Link href={`/temple/${k.temple_slug}`} style={{ color: 'var(--crimson)', fontWeight: 600 }}>{k.name}</Link></p>
+      )}
+
       {related.length > 0 && (
         <p style={{ fontSize: 14, marginBottom: 20 }}>Related: {related.map((r: any, i) => <span key={r.slug}>{i > 0 && ' · '}<Link href={`/kuldevi/${r.slug}`} style={{ color: 'var(--crimson)', fontWeight: 600 }}>{r.name}</Link></span>)}</p>
       )}
