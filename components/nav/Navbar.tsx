@@ -1,197 +1,264 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";
-import { ChevronDown, Menu, X, Sparkles, Heart, Globe, PartyPopper, ChefHat, Landmark } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import Logo from "@/components/Logo";
 import GoogleTranslate from "@/components/translate/GoogleTranslate";
 import GaneshaStrip from "@/components/nav/GaneshaStrip";
 
-const PAGE_GROUP: Record<string, string> = {
-  "/explore": "Explore", "/temple": "Explore", "/circuits": "Explore", "/calendar": "Explore",
-  "/plan": "Plan", "/plan/checklist": "Plan", "/plan/budget": "Plan",
-  "/yatra/journal": "My Yatra", "/yatra/goals": "My Yatra",
-  "/yatra/split": "My Yatra", "/yatra/group": "My Yatra", "/profile": "My Yatra",
-  "/admin-request": "My Yatra", "/yatra/manage": "My Yatra",
-};
+type Item = { href: string; label: string; desc: string };
+type Group = { label: string; items?: Item[]; href?: string; also?: string[] };
 
-const NAV_GROUPS = [
-  { label: "Explore", items: [
-    { href: "/explore",       label: "Temple Directory",    desc: "Browse 400+ sacred temples" },
-    { href: "/circuits",      label: "Pilgrimage Circuits", desc: "Curated yatra routes" },
-    { href: "/circuits/builder", label: "Circuit Builder",   desc: "Auto-build a circuit near any city" },
-    { href: "/festivals/upcoming", label: "Upcoming & Reminders", desc: "What's next — add to your calendar" },
-    { href: "/plan/calendar", label: "Festival Calendar",   desc: "Upcoming festivals & events" },
+const NAV: Group[] = [
+  { label: "Temples", also: ["/temple"], items: [
+    { href: "/explore",          label: "Temple directory",    desc: "Search and filter temples across India" },
+    { href: "/circuits",         label: "Pilgrimage circuits", desc: "Char Dham, Jyotirlingas and other classic routes" },
+    { href: "/circuits/builder", label: "Circuit builder",     desc: "Build a route from any city" },
+  ]},
+  { label: "Festivals", items: [
+    { href: "/festivals",          label: "Festival guides",       desc: "Rituals, customs and temples for each festival" },
+    { href: "/festivals/upcoming", label: "Upcoming festivals",    desc: "Dates and calendar reminders" },
+    { href: "/plan/calendar",      label: "Month-by-month guide",  desc: "Where to go and when" },
+    { href: "/festivals/prasad",   label: "Prasad recipes",        desc: "Regional recipes with scaling and shopping lists" },
   ]},
   { label: "Plan", items: [
-    { href: "/plan",           label: "AI Yatra Planner",  desc: "Personalised pilgrimage plan" },
-    { href: "/plan/checklist", label: "Packing Checklist", desc: "What to carry for your yatra" },
-    { href: "/plan/budget",    label: "Budget Calculator", desc: "Estimate your yatra costs" },
+    { href: "/plan",           label: "AI yatra planner",   desc: "A day-by-day itinerary for your trip" },
+    { href: "/plan/checklist", label: "Packing checklist",  desc: "What to carry for your destination" },
+    { href: "/plan/budget",    label: "Budget calculator",  desc: "Estimate costs and savings time" },
+    { href: "/packages",       label: "Yatra packages",     desc: "Curated trips and custom requests" },
   ]},
+  { label: "Manifest", href: "/manifest", also: ["/manifest"] },
+  { label: "Kuldevi",  href: "/kuldevi",  also: ["/kuldevi"] },
   { label: "My Yatra", items: [
-    { href: "/yatra/journal",  label: "My Journal",       desc: "Document your yatra memories" },
-    { href: "/yatra/goals",    label: "Savings Goals",    desc: "Save for your next pilgrimage" },
-    { href: "/yatra/group",    label: "Group Yatras",     desc: "Travel together from any city" },
-    { href: "/yatra/split",    label: "Group Split",      desc: "Split travel expenses" },
-    { href: "/profile",        label: "My Profile",       desc: "Visits, recommendations & goals" },
-    { href: "/yatra/manage",   label: "My Yatra Plans",   desc: "Manage your group yatras" },
-    { href: "/admin-request",  label: "Become Organiser", desc: "Create group yatras for pilgrims" },
+    { href: "/yatra/journal", label: "Journal",         desc: "Record the temples you visit" },
+    { href: "/yatra/goals",   label: "Savings goals",   desc: "Save towards your next yatra" },
+    { href: "/yatra/group",   label: "Group yatras",    desc: "Join a trip with other pilgrims" },
+    { href: "/yatra/split",   label: "Group expenses",  desc: "Split costs fairly" },
+    { href: "/yatra/manage",  label: "My group yatras", desc: "Manage trips you organise" },
+    { href: "/admin-request", label: "Become an organiser", desc: "Apply to create group yatras" },
   ]},
 ];
+
+const ALL_ITEMS: Item[] = NAV.flatMap((g) => g.items ?? []);
+
+// Longest matching href wins, so /festivals/prasad highlights Prasad recipes, not Festival guides.
+function matches(pathname: string, href: string) {
+  return pathname === href || pathname.startsWith(href + "/");
+}
+function bestItem(pathname: string): string | null {
+  let best: string | null = null;
+  for (const it of ALL_ITEMS) {
+    if (matches(pathname, it.href) && (!best || it.href.length > best.length)) best = it.href;
+  }
+  return best;
+}
+function groupActive(g: Group, pathname: string, best: string | null) {
+  if (g.href && matches(pathname, g.href)) return true;
+  if (g.also?.some((p) => matches(pathname, p))) return true;
+  return !!best && !!g.items?.some((i) => i.href === best);
+}
+
+const css = `
+.dd-nav a, .dd-nav button { font-family: inherit; }
+.dd-top { position: relative; display: inline-flex; align-items: center; gap: 4px; height: 72px; padding: 0 14px; background: none; border: 0; cursor: pointer; font-size: 14px; font-weight: 500; color: #3a3631; text-decoration: none; white-space: nowrap; }
+.dd-top::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: 0; height: 2px; background: transparent; }
+.dd-top:hover, .dd-top[aria-expanded="true"] { color: #8B1A1A; }
+.dd-top[data-active="true"] { color: #8B1A1A; font-weight: 600; }
+.dd-top[data-active="true"]::after { background: #8B1A1A; }
+.dd-top:focus-visible, .dd-item:focus-visible, .dd-ghost:focus-visible { outline: 2px solid #8B1A1A; outline-offset: -2px; border-radius: 4px; }
+.dd-panel { position: absolute; top: 100%; left: 0; min-width: 300px; background: #fff; border: 1px solid #e6e1d9; border-top: 2px solid #8B1A1A; border-radius: 0 0 6px 6px; box-shadow: 0 12px 28px rgba(30,20,10,.10); padding: 6px 0; z-index: 100; }
+.dd-panel.right { left: auto; right: 0; min-width: 220px; }
+.dd-item { display: block; padding: 9px 18px; text-decoration: none; border-left: 2px solid transparent; }
+.dd-item:hover { background: #f8f6f2; }
+.dd-item[aria-current="page"] { border-left-color: #8B1A1A; background: #faf7f3; }
+.dd-item .t { display: block; font-size: 14px; font-weight: 500; color: #1f1c18; }
+.dd-item .d { display: block; font-size: 12.5px; color: #7a7368; margin-top: 1px; line-height: 1.35; }
+.dd-item[aria-current="page"] .t { color: #8B1A1A; }
+.dd-ghost { background: none; border: 0; cursor: pointer; font-size: 14px; font-weight: 500; color: #3a3631; padding: 8px 12px; text-decoration: none; }
+.dd-ghost:hover { color: #8B1A1A; }
+.dd-cta { display: inline-block; padding: 8px 16px; border-radius: 4px; background: #8B1A1A; color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; }
+.dd-cta:hover { background: #741515; }
+.dd-div { width: 1px; height: 22px; background: #e6e1d9; margin: 0 6px; }
+.dd-m-head { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 14px 2px; background: none; border: 0; border-bottom: 1px solid #eee9e1; font-size: 15px; font-weight: 600; color: #1f1c18; cursor: pointer; text-align: left; }
+.dd-m-link { display: block; padding: 14px 2px; border-bottom: 1px solid #eee9e1; font-size: 15px; font-weight: 600; color: #1f1c18; text-decoration: none; }
+.dd-m-sub { display: block; padding: 10px 2px 10px 14px; font-size: 14px; color: #3a3631; text-decoration: none; }
+.dd-m-sub[aria-current="page"] { color: #8B1A1A; font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { .dd-nav * { transition: none !important; } }
+`;
 
 export default function Navbar() {
   const pathname = usePathname();
   const { data: session } = useSession();
-  const [openGroup, setOpenGroup] = useState<string | null>(null);
+  const [open, setOpen] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileGroup, setMobileGroup] = useState<string | null>(null);
+  const barRef = useRef<HTMLDivElement>(null);
+  const best = bestItem(pathname);
 
-  const activeGroup = PAGE_GROUP[pathname] ??
-    Object.entries(PAGE_GROUP).find(([key]) => pathname.startsWith(key))?.[1] ?? null;
+  // Close menus on navigation, outside click and Escape.
+  useEffect(() => { setOpen(null); setMobileOpen(false); }, [pathname]);
+  useEffect(() => {
+    const onDown = (e: MouseEvent) => { if (barRef.current && !barRef.current.contains(e.target as Node)) setOpen(null); };
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(null); };
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => { document.removeEventListener("mousedown", onDown); document.removeEventListener("keydown", onKey); };
+  }, []);
+
+  const firstName = session?.user?.name?.split(" ")[0] || "Account";
+  const accountItems: Item[] = [
+    { href: "/profile", label: "Profile", desc: "" },
+    { href: "/manifest/my-sankalpas", label: "My Sankalpas", desc: "" },
+    { href: "/yatra/journal", label: "Journal", desc: "" },
+  ];
 
   return (
     <>
-    <GaneshaStrip />
-    <nav style={{ background:"#FFFFFF", borderBottom:"1.5px solid #E8E8E8", position:"sticky", top:0, zIndex:50, boxShadow:"0 1px 3px rgba(0,0,0,.04)" }}>
-      <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 24px" }}>
-        <div style={{ display:"flex", alignItems:"center", height:88, gap:8 }}>
+      <GaneshaStrip />
+      <nav className="dd-nav" aria-label="Main" style={{ background: "#FFFFFF", borderBottom: "1px solid #e6e1d9", position: "sticky", top: 0, zIndex: 50 }}>
+        <style>{css}</style>
+        <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 24px" }}>
+          <div style={{ display: "flex", alignItems: "center", height: 72 }}>
 
-          <Link href="/" style={{ marginRight:24, textDecoration:"none", flexShrink:0 }}>
-            <Logo variant="horizontal" size="md" />
-          </Link>
-
-          <div className="hidden md:flex" style={{ alignItems:"center", gap:2, flex:1 }}>
-            <Link href="/manifest" style={{ display:"flex", alignItems:"center", gap:6, padding:"7px 12px", borderRadius:9, background:"linear-gradient(135deg,rgba(139,26,26,0.08),rgba(192,87,10,0.08))", border:"1px solid rgba(139,26,26,0.15)", color:"var(--crimson)", fontWeight:700, fontSize:13, textDecoration:"none", whiteSpace:"nowrap" }}>
-              <Sparkles size={15} /> Manifest
+            <Link href="/" aria-label="DivyaDarshanam home" style={{ marginRight: 28, textDecoration: "none", flexShrink: 0, display: "flex", alignItems: "center" }}>
+              <Logo variant="horizontal" size="sm" />
             </Link>
-            {[
-              { href: "/festivals", label: "Festivals", Icon: PartyPopper, on: pathname.startsWith("/festivals") && !pathname.startsWith("/festivals/prasad") },
-              { href: "/festivals/prasad", label: "Prasad Recipes", Icon: ChefHat, on: pathname.startsWith("/festivals/prasad") },
-              { href: "/kuldevi", label: "Kuldevi", Icon: Landmark, on: pathname.startsWith("/kuldevi") },
-            ].map(({ href, label, Icon, on }) => (
-              <Link key={href} href={href} style={{ display:"flex", alignItems:"center", gap:6, padding:"7px 12px", borderRadius:9, background:on?"#8B1A1A":"#FFF5F5", border:"1px solid rgba(139,26,26,0.25)", color:on?"#FFFFFF":"#8B1A1A", fontWeight:700, fontSize:13, textDecoration:"none", whiteSpace:"nowrap" }}>
-                <Icon size={15} /> {label}
-              </Link>
-            ))}
-            {NAV_GROUPS.map((group) => (
-              <div key={group.label} style={{ position:"relative" }}
-                onMouseEnter={() => setOpenGroup(group.label)}
-                onMouseLeave={() => setOpenGroup(null)}>
-                <button style={{ display:"flex", alignItems:"center", gap:5, padding:"7px 12px", borderRadius:8, border:"none", cursor:"pointer", background:activeGroup===group.label?"#FFF5F5":"transparent", color:activeGroup===group.label?"#8B1A1A":"#555555", fontWeight:activeGroup===group.label?600:500, fontSize:14, fontFamily:"'Inter',sans-serif", transition:"all 0.15s" }}>
-                  {group.label}
-                  <ChevronDown size={13} style={{ transform:openGroup===group.label?"rotate(180deg)":"rotate(0)", transition:"transform 0.2s", opacity:0.6 }} />
-                </button>
-                {openGroup === group.label && (
-                  <div style={{ position:"absolute", top:"100%", left:0, marginTop:4, width:240, background:"#FFFFFF", border:"1.5px solid #E8E8E8", borderRadius:12, boxShadow:"0 8px 32px rgba(0,0,0,.1)", padding:"6px", zIndex:100 }}>
-                    {group.items.map((item) => (
-                      <Link key={item.href} href={item.href} style={{ display:"flex", flexDirection:"column", padding:"10px 12px", borderRadius:8, textDecoration:"none", background:pathname===item.href?"#FFF5F5":"transparent" }}
-                        onMouseEnter={e => { if (pathname!==item.href) (e.currentTarget as HTMLElement).style.background="#FAFAFA" }}
-                        onMouseLeave={e => { if (pathname!==item.href) (e.currentTarget as HTMLElement).style.background="transparent" }}>
-                        <span style={{ fontSize:14, fontWeight:500, color:pathname===item.href?"#8B1A1A":"#111111" }}>{item.label}</span>
-                        <span style={{ fontSize:12, color:"#AAAAAA", marginTop:1 }}>{item.desc}</span>
+
+            <div ref={barRef} className="hidden md:flex" style={{ alignItems: "center", flex: 1 }}>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                {NAV.map((g) => {
+                  const active = groupActive(g, pathname, best);
+                  if (!g.items) {
+                    return (
+                      <Link key={g.label} href={g.href!} className="dd-top" data-active={active} aria-current={active ? "page" : undefined}>
+                        {g.label}
                       </Link>
-                    ))}
+                    );
+                  }
+                  const isOpen = open === g.label;
+                  return (
+                    <div key={g.label} style={{ position: "relative" }} onMouseEnter={() => setOpen(g.label)} onMouseLeave={() => setOpen(null)}>
+                      <button className="dd-top" data-active={active} aria-haspopup="true" aria-expanded={isOpen}
+                        onClick={() => setOpen(isOpen ? null : g.label)}>
+                        {g.label}
+                        <ChevronDown size={14} aria-hidden style={{ opacity: .55, transform: isOpen ? "rotate(180deg)" : "none", transition: "transform .15s" }} />
+                      </button>
+                      {isOpen && (
+                        <div className="dd-panel" role="menu">
+                          {g.items.map((it) => (
+                            <Link key={it.href} href={it.href} role="menuitem" className="dd-item" aria-current={best === it.href ? "page" : undefined}>
+                              <span className="t">{it.label}</span>
+                              <span className="d">{it.desc}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+
+              <div style={{ display: "flex", alignItems: "center", marginLeft: "auto", gap: 4 }}>
+                <GoogleTranslate />
+                <span className="dd-div" aria-hidden />
+                {session ? (
+                  <div style={{ position: "relative" }} onMouseEnter={() => setOpen("account")} onMouseLeave={() => setOpen(null)}>
+                    <button className="dd-ghost" aria-haspopup="true" aria-expanded={open === "account"} onClick={() => setOpen(open === "account" ? null : "account")}
+                      style={{ display: "inline-flex", alignItems: "center", gap: 8, height: 72 }}>
+                      <span style={{ width: 28, height: 28, borderRadius: "50%", background: "#8B1A1A", color: "#fff", fontSize: 12, fontWeight: 600, display: "inline-flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+                        {session.user?.image ? <img src={session.user.image} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> : (session.user?.name?.[0] || "U").toUpperCase()}
+                      </span>
+                      {firstName}
+                      <ChevronDown size={14} aria-hidden style={{ opacity: .55 }} />
+                    </button>
+                    {open === "account" && (
+                      <div className="dd-panel right" role="menu">
+                        {accountItems.map((it) => (
+                          <Link key={it.href} href={it.href} role="menuitem" className="dd-item" aria-current={pathname === it.href ? "page" : undefined}>
+                            <span className="t">{it.label}</span>
+                          </Link>
+                        ))}
+                        <div style={{ borderTop: "1px solid #eee9e1", margin: "6px 0" }} />
+                        <button role="menuitem" onClick={() => signOut()} className="dd-item" style={{ width: "100%", textAlign: "left", background: "none", border: 0, borderLeft: "2px solid transparent", cursor: "pointer" }}>
+                          <span className="t">Sign out</span>
+                        </button>
+                      </div>
+                    )}
                   </div>
+                ) : (
+                  <>
+                    <Link href="/auth/signin" className="dd-ghost">Sign in</Link>
+                    <Link href="/auth/signup" className="dd-cta">Create account</Link>
+                  </>
                 )}
               </div>
-            ))}
-          </div>
+            </div>
 
-          <div className="hidden md:flex" style={{ alignItems:"center", gap:10, marginLeft:"auto" }}>
-            <GoogleTranslate />
-            {session ? (
-              <div style={{ display:"flex", alignItems:"center", gap:10 }}>
-                <Link href="/profile" style={{ display:"flex", alignItems:"center", gap:8, padding:"6px 12px", borderRadius:100, border:"1.5px solid #E8E8E8", textDecoration:"none", fontSize:13, fontWeight:500, color:"#333333", background:"#FFFFFF" }}>
-                  <div style={{ width:24, height:24, borderRadius:"50%", background:"linear-gradient(135deg,#8B1A1A,#C0570A)", display:"flex", alignItems:"center", justifyContent:"center", fontSize:10, fontWeight:700, color:"white", overflow:"hidden" }}>
-                    {session.user?.image ? <img src={session.user.image} style={{ width:"100%", height:"100%", objectFit:"cover" }} alt="" /> : (session.user?.name?.[0]||"U")}
-                  </div>
-                  {session.user?.name?.split(" ")[0]}
-                </Link>
-                <button onClick={() => signOut()} style={{ padding:"6px 14px", borderRadius:8, border:"1.5px solid #E8E8E8", background:"transparent", cursor:"pointer", fontSize:13, color:"#888888", fontFamily:"'Inter',sans-serif", fontWeight:500 }}>Sign out</button>
-              </div>
-            ) : (
-              <>
-                <Link href="/auth/signin" style={{ padding:"8px 16px", borderRadius:8, fontSize:14, fontWeight:500, color:"#555555", textDecoration:"none" }}>Sign in</Link>
-                <Link href="/auth/signup" style={{ padding:"8px 18px", borderRadius:8, fontSize:14, fontWeight:600, background:"#8B1A1A", color:"white", textDecoration:"none", border:"1.5px solid #8B1A1A" }}>Get started</Link>
-              </>
-            )}
+            <button className="flex md:hidden" aria-label={mobileOpen ? "Close menu" : "Open menu"} aria-expanded={mobileOpen}
+              onClick={() => setMobileOpen(!mobileOpen)}
+              style={{ marginLeft: "auto", padding: 8, borderRadius: 4, border: "1px solid #e6e1d9", background: "#fff", cursor: "pointer", alignItems: "center" }}>
+              {mobileOpen ? <X size={20} color="#333" /> : <Menu size={20} color="#333" />}
+            </button>
           </div>
-
-          <button className="md:hidden" onClick={() => setMobileOpen(!mobileOpen)}
-            style={{ marginLeft:"auto", padding:8, borderRadius:8, border:"1.5px solid #E8E8E8", background:"white", cursor:"pointer", display:"flex", alignItems:"center" }}>
-            {mobileOpen ? <X size={18} color="#333" /> : <Menu size={18} color="#333" />}
-          </button>
         </div>
-      </div>
 
-      {mobileOpen && (
-        <div style={{ background:"#FFFFFF", borderTop:"1.5px solid #E8E8E8", padding:"12px 24px 20px", maxHeight:"85vh", overflowY:"auto" }}>
-          <div style={{ paddingBottom:16, marginBottom:8, borderBottom:"1px solid #F0F0F0" }}>
-            <Logo variant="horizontal" size="sm" />
-          </div>
-          <Link href="/manifest" onClick={() => setMobileOpen(false)}
-            style={{ display:"flex", alignItems:"center", gap:10, padding:"12px 16px", borderRadius:12, background:"linear-gradient(135deg,rgba(139,26,26,0.08),rgba(192,87,10,0.08))", border:"1.5px solid rgba(139,26,26,0.2)", textDecoration:"none", marginBottom:16 }}>
-            <Sparkles size={20} style={{ color:"var(--crimson)" }} />
-            <div>
-              <div style={{ fontWeight:700, fontSize:14, color:"var(--crimson)" }}>Manifest — Sankalp</div>
-              <div style={{ fontSize:11, color:"#A89B8C" }}>Sacred intentions with deity guidance</div>
-            </div>
-          </Link>
-          <div style={{ display:"flex", gap:10, marginBottom:16 }}>
-            <Link href="/festivals" onClick={() => setMobileOpen(false)} style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center", gap:8, padding:"12px 8px", borderRadius:12, background:"#FFF5F5", border:"1.5px solid rgba(139,26,26,0.25)", color:"#8B1A1A", fontWeight:700, fontSize:14, textDecoration:"none" }}><PartyPopper size={18} /> Festivals</Link>
-            <Link href="/festivals/prasad" onClick={() => setMobileOpen(false)} style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center", gap:8, padding:"12px 8px", borderRadius:12, background:"#FFF5F5", border:"1.5px solid rgba(139,26,26,0.25)", color:"#8B1A1A", fontWeight:700, fontSize:14, textDecoration:"none" }}><ChefHat size={18} /> Prasad Recipes</Link>
-            <Link href="/kuldevi" onClick={() => setMobileOpen(false)} style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center", gap:8, padding:"12px 8px", borderRadius:12, background:"#FFF5F5", border:"1.5px solid rgba(139,26,26,0.25)", color:"#8B1A1A", fontWeight:700, fontSize:14, textDecoration:"none" }}><Landmark size={18} /> Kuldevi</Link>
-          </div>
-          {NAV_GROUPS.map((group) => (
-            <div key={group.label} style={{ marginBottom:16 }}>
-              <p style={{ fontSize:11, fontWeight:700, textTransform:"uppercase", letterSpacing:"0.08em", color:"#AAAAAA", padding:"8px 4px 4px" }}>{group.label}</p>
-              {group.items.map((item) => (
-                <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)}
-                  style={{ display:"flex", alignItems:"center", gap:10, padding:"10px 4px", textDecoration:"none", borderBottom:"1px solid #F8F8F8" }}>
-                  <div>
-                    <div style={{ fontSize:14, fontWeight:500, color:"#1A1A1A" }}>{item.label}</div>
-                    {item.desc && <div style={{ fontSize:12, color:"#AAAAAA", marginTop:1 }}>{item.desc}</div>}
-                  </div>
-                </Link>
-              ))}
-            </div>
-          ))}
-          <button onClick={() => { setMobileOpen(false); (document.querySelector("[data-contribution-btn]") as HTMLElement)?.click() }}
-            style={{ width:"100%", padding:"12px 0", borderRadius:12, border:"none", background:"linear-gradient(135deg,#8B1A1A,#C0570A)", color:"white", fontWeight:700, fontSize:14, cursor:"pointer", marginBottom:12, display:"flex", alignItems:"center", justifyContent:"center", gap:8 }}>
-            <Heart size={16} /> Contribute to DivyaDarshanam
-          </button>
-          <div style={{ marginBottom:16, padding:"12px 16px", borderRadius:10, border:"1px solid #F0F0F0", background:"#FAFAFA" }}>
-            <div style={{ fontSize:11, fontWeight:700, textTransform:"uppercase", letterSpacing:".08em", color:"#AAAAAA", marginBottom:8, display:"flex", alignItems:"center", gap:5 }}><Globe size={12} /> Select Language</div>
-            <GoogleTranslate />
-          </div>
-          <div id="mobile-pwa-install" style={{ marginBottom:12 }} />
-          <div style={{ paddingTop:16, borderTop:"1px solid #F0F0F0" }}>
-            {session?.user ? (
-              <div>
-                <div style={{ display:"flex", alignItems:"center", gap:10, padding:"8px 0", marginBottom:12 }}>
-                  <div style={{ width:36, height:36, borderRadius:"50%", background:"var(--crimson)", display:"flex", alignItems:"center", justifyContent:"center", color:"white", fontWeight:700, fontSize:14, flexShrink:0 }}>
-                    {(session.user.name||session.user.email||"U")[0].toUpperCase()}
-                  </div>
-                  <div>
-                    <div style={{ fontSize:14, fontWeight:600, color:"#1A1A1A" }}>{session.user.name||"Pilgrim"}</div>
-                    <div style={{ fontSize:12, color:"#AAAAAA" }}>{session.user.email}</div>
-                  </div>
+        {mobileOpen && (
+          <div style={{ background: "#fff", borderTop: "1px solid #e6e1d9", padding: "4px 24px 20px", maxHeight: "calc(100vh - 110px)", overflowY: "auto" }}>
+            {NAV.map((g) => {
+              if (!g.items) {
+                return <Link key={g.label} href={g.href!} className="dd-m-link" onClick={() => setMobileOpen(false)}>{g.label}</Link>;
+              }
+              const isOpen = mobileGroup === g.label;
+              return (
+                <div key={g.label}>
+                  <button className="dd-m-head" aria-expanded={isOpen} onClick={() => setMobileGroup(isOpen ? null : g.label)}>
+                    {g.label}
+                    <ChevronDown size={16} aria-hidden style={{ opacity: .6, transform: isOpen ? "rotate(180deg)" : "none" }} />
+                  </button>
+                  {isOpen && (
+                    <div style={{ padding: "2px 0 8px", borderBottom: "1px solid #eee9e1" }}>
+                      {g.items.map((it) => (
+                        <Link key={it.href} href={it.href} className="dd-m-sub" aria-current={best === it.href ? "page" : undefined} onClick={() => setMobileOpen(false)}>{it.label}</Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
-                <Link href="/profile" onClick={() => setMobileOpen(false)} style={{ display:"block", padding:"10px 0", fontSize:14, color:"#1A1A1A", textDecoration:"none", borderBottom:"1px solid #F8F8F8" }}>My Profile</Link>
-                <Link href="/yatra/journal" onClick={() => setMobileOpen(false)} style={{ display:"block", padding:"10px 0", fontSize:14, color:"#1A1A1A", textDecoration:"none", borderBottom:"1px solid #F8F8F8" }}>My Journal</Link>
-                <Link href="/manifest/my-sankalpas" onClick={() => setMobileOpen(false)} style={{ display:"block", padding:"10px 0", fontSize:14, color:"#1A1A1A", textDecoration:"none", borderBottom:"1px solid #F8F8F8" }}>My Sankalpas</Link>
-                <button onClick={() => { signOut(); setMobileOpen(false) }} style={{ width:"100%", marginTop:12, padding:"10px 0", borderRadius:10, border:"1.5px solid #E8E8E8", background:"white", color:"#666", fontSize:14, cursor:"pointer", fontFamily:"inherit" }}>Sign Out</button>
-              </div>
-            ) : (
-              <div style={{ display:"flex", gap:10 }}>
-                <Link href="/auth/signin" onClick={() => setMobileOpen(false)} style={{ flex:1, padding:"11px 0", borderRadius:10, border:"1.5px solid #E8E8E8", background:"white", color:"#1A1A1A", fontSize:14, fontWeight:600, textDecoration:"none", textAlign:"center" }}>Sign In</Link>
-                <Link href="/auth/signup" onClick={() => setMobileOpen(false)} style={{ flex:1, padding:"11px 0", borderRadius:10, border:"none", background:"var(--crimson)", color:"white", fontSize:14, fontWeight:700, textDecoration:"none", textAlign:"center" }}>Sign Up Free</Link>
-              </div>
-            )}
+              );
+            })}
+
+            <div style={{ padding: "16px 0 12px", borderBottom: "1px solid #eee9e1" }}>
+              <div style={{ fontSize: 12, color: "#7a7368", marginBottom: 8 }}>Language</div>
+              <GoogleTranslate />
+            </div>
+            <div id="mobile-pwa-install" style={{ marginTop: 12 }} />
+            <button onClick={() => { setMobileOpen(false); (document.querySelector("[data-contribution-btn]") as HTMLElement)?.click(); }}
+              style={{ width: "100%", margin: "14px 0 0", padding: "11px 0", borderRadius: 4, border: "1px solid #8B1A1A", background: "#fff", color: "#8B1A1A", fontWeight: 600, fontSize: 14, cursor: "pointer" }}>
+              Contribute to DivyaDarshanam
+            </button>
+
+            <div style={{ paddingTop: 16 }}>
+              {session?.user ? (
+                <div>
+                  <div style={{ fontSize: 14, fontWeight: 600, color: "#1f1c18" }}>{session.user.name || "Pilgrim"}</div>
+                  <div style={{ fontSize: 12.5, color: "#7a7368", marginBottom: 6 }}>{session.user.email}</div>
+                  {accountItems.map((it) => (
+                    <Link key={it.href} href={it.href} className="dd-m-sub" style={{ paddingLeft: 0 }} onClick={() => setMobileOpen(false)}>{it.label}</Link>
+                  ))}
+                  <button onClick={() => { signOut(); setMobileOpen(false); }}
+                    style={{ width: "100%", marginTop: 10, padding: "11px 0", borderRadius: 4, border: "1px solid #d9d3c8", background: "#fff", color: "#3a3631", fontSize: 14, fontWeight: 500, cursor: "pointer" }}>Sign out</button>
+                </div>
+              ) : (
+                <div style={{ display: "flex", gap: 10 }}>
+                  <Link href="/auth/signin" onClick={() => setMobileOpen(false)} style={{ flex: 1, padding: "11px 0", borderRadius: 4, border: "1px solid #d9d3c8", color: "#1f1c18", fontSize: 14, fontWeight: 600, textDecoration: "none", textAlign: "center" }}>Sign in</Link>
+                  <Link href="/auth/signup" onClick={() => setMobileOpen(false)} className="dd-cta" style={{ flex: 1, textAlign: "center", padding: "11px 0" }}>Create account</Link>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-      )}
-    </nav>
+        )}
+      </nav>
     </>
   );
 }
