@@ -1,3 +1,4 @@
+import { EXTRA_DIET } from './extraVariants.data'
 // Diet tags per recipe version — derived from the ingredients as written, then reviewed.
 // A tag means the recipe AS WRITTEN fits; strictness differs between families, so always check.
 // jain: no onion, garlic, root vegetables, fresh ginger/turmeric, honey or egg.
@@ -108,5 +109,5 @@ export const DIET: Record<string, DietTag[]> = {
 }
 
 export function dietFor(dish: string, variant: string): DietTag[] {
-  return DIET[dish + '/' + variant] || []
+  return DIET[dish + '/' + variant] || EXTRA_DIET[dish + '/' + variant] || []
 }

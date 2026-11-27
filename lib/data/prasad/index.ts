@@ -44,6 +44,7 @@ import d41 from './dishes/tahiri-akha'
 import d42 from './dishes/chhappan-bhog'
 import d43 from './dishes/annakut'
 import d44 from './dishes/puri-mahaprasad'
+import { EXTRA_VARIANTS } from './extraVariants.data'
 import { FESTIVAL_PRASAD } from './festivalPrasad'
 import type { PrasadEntry } from './festivalPrasad'
 
@@ -51,7 +52,7 @@ export type { PrasadRecipe, RecipeVariant } from './types'
 export type { PrasadEntry } from './festivalPrasad'
 export { FESTIVAL_PRASAD } from './festivalPrasad'
 
-export const PRASAD_RECIPES: PrasadRecipe[] = [
+const BASE_RECIPES: PrasadRecipe[] = [
   d0,
   d1,
   d2,
@@ -98,6 +99,11 @@ export const PRASAD_RECIPES: PrasadRecipe[] = [
   d43,
   d44,
 ]
+
+// Extra regional versions are appended to the dish's own variants.
+export const PRASAD_RECIPES: PrasadRecipe[] = BASE_RECIPES.map(r =>
+  EXTRA_VARIANTS[r.id]?.length ? { ...r, variants: [...r.variants, ...EXTRA_VARIANTS[r.id]] } : r,
+)
 
 const BY_ID = new Map(PRASAD_RECIPES.map(r => [r.id, r]))
 

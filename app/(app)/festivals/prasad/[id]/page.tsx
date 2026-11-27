@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, ChefHat, Clock, Users, Flame, Lightbulb, MapPin, Scale, BookOpen, Wrench, ListChecks, AlertTriangle, Shuffle, Archive, UtensilsCrossed, Eye } from 'lucide-react'
+import { ArrowLeft, ChefHat, Clock, Users, Flame, Lightbulb, MapPin, Scale, BookOpen, Wrench, ListChecks, AlertTriangle, Shuffle, Archive, UtensilsCrossed, Eye, Landmark, Leaf } from 'lucide-react'
 import { FESTIVALS, getFestival } from '@/lib/data/festivals'
 import { PRASAD_RECIPES, getRecipe, getVariant, festivalsFor, recipeHref } from '@/lib/data/prasad'
 import { dietFor, DIET_LABEL } from '@/lib/data/prasad/diet'
 import { shlokasFor } from '@/lib/data/prasad/shlokas'
+import { dishInfo, variantInfo } from '@/lib/data/prasad/enrichment'
 import { baseServings } from '@/lib/prasad/scale'
 import RecipeKit from '@/components/prasad/RecipeKit'
 import BasketLink from '@/components/prasad/BasketLink'
@@ -50,6 +51,8 @@ export default function PrasadRecipePage({ params, searchParams }: Props) {
   const groups = offeredAt.map(x => x.f.deityGroup)
   const shlokas = shlokasFor(groups, fromFestival?.deityGroup)
   const tags = dietFor(recipe.id, variant.id)
+  const info = dishInfo(recipe.id)
+  const vinfo = variantInfo(recipe.id, variant.id)
   const steps = variant.method.map(st => (typeof st === 'string' ? { title: '', text: st } : st))
 
   const backHref = fromFestival ? `/festivals/${fromFestival.slug}` : '/festivals/prasad'
@@ -81,6 +84,32 @@ export default function PrasadRecipePage({ params, searchParams }: Props) {
           <h2 className="font-serif" style={{ fontSize: 20, fontWeight: 600, marginBottom: 8 }}>Why this prasad is made differently</h2>
           <p style={{ fontSize: 15, color: 'var(--ink2)', lineHeight: 1.8, margin: 0 }}>{recipe.meaning}</p>
         </div>
+
+        {/* Where it comes from */}
+        {info && (
+          <div className="card card-p" style={{ marginBottom: 24 }}>
+            <h2 className="font-serif" style={{ fontSize: 20, fontWeight: 600, marginBottom: 8 }}>Where this prasad comes from</h2>
+            {info.origin.split('\n\n').map((para, i) => (
+              <p key={i} style={{ fontSize: 15, color: 'var(--ink2)', lineHeight: 1.8, margin: '0 0 10px' }}>{para}</p>
+            ))}
+            {info.temples && info.temples.length > 0 && (
+              <div style={{ marginTop: 14 }}>
+                <div className="section-title" style={{ marginBottom: 8, display: 'flex', alignItems: 'center', gap: 6 }}>
+                  <Landmark size={14} style={{ color: accent }} /> Temples and places known for it
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 10 }}>
+                  {info.temples.map((t, i) => (
+                    <div key={i} style={{ border: '1px solid var(--ivory3)', borderRadius: 10, padding: '10px 14px', background: 'var(--ivory2)' }}>
+                      <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink)' }}>{t.name}</div>
+                      <div style={{ fontSize: 12.5, color: accent, fontWeight: 600, margin: '1px 0 4px' }}>{t.place}</div>
+                      <div style={{ fontSize: 13.5, color: 'var(--ink2)', lineHeight: 1.6 }}>{t.note}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Variant picker */}
         <div style={{ marginBottom: 22 }}>
@@ -242,6 +271,44 @@ export default function PrasadRecipePage({ params, searchParams }: Props) {
                   <p style={{ fontSize: 14, color: 'var(--ink2)', lineHeight: 1.7, margin: 0 }}>{variant.storage}</p>
                 </div>
               )}
+            </div>
+          )}
+
+          {vinfo && (vinfo.nutrition || vinfo.fasting || vinfo.jain || vinfo.diabetic || (vinfo.allergens && vinfo.allergens.length > 0)) && (
+            <div style={{ marginBottom: 24 }}>
+              <h3 className="font-serif" style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, display: 'flex', alignItems: 'center', gap: 8 }}>
+                <Leaf size={18} style={{ color: accent }} /> Nutrition &amp; fasting
+              </h3>
+              {vinfo.nutrition && (
+                <div style={{ marginBottom: 12 }}>
+                  <div style={{ fontSize: 13, color: 'var(--muted)', marginBottom: 8 }}>Approximate values for {vinfo.nutrition.portion}</div>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))', gap: 10 }}>
+                    {[
+                      ['Energy', `${vinfo.nutrition.kcal} kcal`],
+                      ['Carbohydrate', `${vinfo.nutrition.carbs_g} g`],
+                      ['Protein', `${vinfo.nutrition.protein_g} g`],
+                      ['Fat', `${vinfo.nutrition.fat_g} g`],
+                      ...(vinfo.nutrition.sugar_g !== undefined ? [['Sugar', `${vinfo.nutrition.sugar_g} g`]] : []),
+                    ].map(([k, v]) => (
+                      <div key={k} style={{ background: 'var(--ivory2)', border: '1px solid var(--ivory3)', borderRadius: 10, padding: '9px 12px' }}>
+                        <div style={{ fontSize: 11.5, color: 'var(--muted)', fontWeight: 600 }}>{k}</div>
+                        <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--ink)' }}>{v}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                {vinfo.allergens && vinfo.allergens.length > 0 && (
+                  <div style={{ fontSize: 14, color: 'var(--ink2)', lineHeight: 1.65 }}><strong>Contains: </strong>{vinfo.allergens.join(', ')}</div>
+                )}
+                {vinfo.fasting && <div style={{ fontSize: 14, color: 'var(--ink2)', lineHeight: 1.65 }}><strong>For a fast (vrat): </strong>{vinfo.fasting}</div>}
+                {vinfo.jain && <div style={{ fontSize: 14, color: 'var(--ink2)', lineHeight: 1.65 }}><strong>Jain households: </strong>{vinfo.jain}</div>}
+                {vinfo.diabetic && <div style={{ fontSize: 14, color: 'var(--ink2)', lineHeight: 1.65 }}><strong>Watching sugar: </strong>{vinfo.diabetic}</div>}
+              </div>
+              <p style={{ fontSize: 12, color: 'var(--muted2)', lineHeight: 1.55, margin: '10px 0 0' }}>
+                Estimates from the ingredients as written; they change with your quantities and brands. Not medical advice. Please ask your doctor or dietitian if you manage a health condition.
+              </p>
             </div>
           )}
 
