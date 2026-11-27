@@ -1,0 +1,723 @@
+{
+ "generated": "2026-11-27",
+ "note": "Pages opened by independent fact-checkers for the festival content added in Nov 2026.",
+ "sources": {
+  "gita-jayanti": [
+   "https://48koskurukshetra.com/?p=10",
+   "https://www.tribuneindia.com/news/archive/haryanatribune/brahma-sarovar-immersed-in-festivities-868135",
+   "https://www.tribuneindia.com/news/haryana/international-gita-mahotsav-concludes-with-spiritual-fervour-at-brahma-sarovar",
+   "https://haryanatourism.gov.in/?p=332",
+   "https://iskcondesiretree.com/profiles/blogs/jyotisar-kurukshetra",
+   "https://www.indiatvnews.com/lifestyle/spirituality/gita-jayanti-2025-date-puja-vidhi-mokshada-ekadashi-2025-11-27-1019173",
+   "https://www.goodreturns.in/news/mokshada-ekadashi-vrat-katha-december-1-tithi-muhurat-parana-date-timing-puja-rules-significance-1473285.html",
+   "https://www.festivalsofindia.in/geeta_jayanti",
+   "https://religionnews.com/2024/12/11/hare-krishnas-celebrate-the-birth-of-the-sacred-text-bhagavad-gita/",
+   "https://www.iskconbangalore.org/gita-jayanti/",
+   "https://www.drikpanchang.com/ekadashi/ekadashi-food/ekadashi-fasting-food.html",
+   "https://en.wikipedia.org/wiki/Gita_Mahotsav"
+  ],
+  "narasimha-jayanti": [
+   "https://gokshetra.com/narasimha-jayanti-2026-temples/",
+   "https://www.hindu-blog.com/2020/08/mangalagiri-temple-panakala-narasimha.html",
+   "https://thehansindia.com/andhra-pradesh/simhachalam-braces-for-chandanotsavam-792240",
+   "https://deccanchronicle.com/amp/nation/in-other-news/yadadri-temple-mandates-new-dress-code-from-june-1-894742",
+   "https://temple.dinamalar.com/en/new_en.php?id=542"
+  ],
+  "ratha-saptami": [
+   "https://srikakulam.ap.gov.in/festival/ratha-saptami-festival-of-sun-god-arasavalli-srikakulam/",
+   "https://www.hindu-blog.com/2009/01/how-to-do-ratha-saptami-puja.html",
+   "https://en.wikipedia.org/wiki/Ratha_Saptami",
+   "https://www.thedailyjagran.com/spiritual/triumala-tirupati-ttd-ratha-saptami-2026-date-darshan-significance-and-guidelines-for-devotees-10294331"
+  ],
+  "lohri": [
+   "https://en.wikipedia.org/wiki/Lohri",
+   "https://www.incredibleindia.org/content/incredible-india-v2/en/events/lohri.html",
+   "https://www.manyavar.com/en-in/blog-lohri-celebrations-different-regions-india.html"
+  ],
+  "teej": [
+   "https://en.wikipedia.org/wiki/Teej",
+   "https://www.boldsky.com/yoga-spirituality/festivals/2015/the-various-ways-in-which-teej-is-celebrated-080917.html",
+   "https://www.hindu-blog.com/2007/08/teej-festival-in-2007.html"
+  ],
+  "dattatreya-jayanti": [
+   "https://en.wikipedia.org/wiki/Dattatreya",
+   "https://en.wikipedia.org/wiki/Datta_Jayanti",
+   "https://www.incredibleindia.gov.in/en/festivals-and-events/maharashtra/shree-datta-jayanti",
+   "https://www.hindu-blog.com/2024/01/sri-kshetra-ganagapur-dattatreya-temple-festivals-history.html",
+   "https://en.wikipedia.org/wiki/Narsobawadi",
+   "https://durgbharari.in/audumbar/",
+   "https://www.lokmattimes.com/lifestyle/datta-jayanti-2024-december-14-or-15-know-exact-date-puja-vidhi-history-and-significance-of-dattatreya-jayanti/amp/",
+   "https://en.wikipedia.org/wiki/Shri_Manik_Prabhu_Devasthanam",
+   "https://gujarattourism.com/saurashtra/junagadh/girnar-hill.html",
+   "https://www.hindujagruti.org/hinduism-for-kids/304.html"
+  ],
+  "gangaur": [
+   "https://en.wikipedia.org/wiki/Gangaur",
+   "https://www.festivalsofindia.in/gangaur",
+   "https://www.dailypioneer.com/news/the-sacred-flavours-of-gauris-homecoming",
+   "https://en.wikipedia.org/wiki/Dhinga_Gavar",
+   "https://theculturetrip.com/asia/india/articles/an-introduction-to-rajasthans-traditional-dress"
+  ],
+  "vivaha-panchami": [
+   "https://www.festivalsofindia.in/vivaha-panchami",
+   "https://nepaltraveller.com/sidetrack/vivah-panchami-celebrating-a-divine-union",
+   "https://www.buddhaair.com/blog/7-attractions-of-vivaha-panchami-in-janakpur",
+   "https://kathmandupost.com/art-culture/2019/11/23/vivaha-panchami-when-a-city-turns-into-a-stage"
+  ],
+  "holla-mohalla": [
+   "https://allaboutsikhs.com/2014/01/27/the-sikh-festivals-holla-mohalla/",
+   "https://artsandculture.google.com/story/ugXhoJH4fEGsug",
+   "https://www.reonline.org.uk/?p=2159",
+   "https://en.wikipedia.org/wiki/Hola_Mohalla"
+  ],
+  "chitra-purnima": [
+   "https://en.wikipedia.org/wiki/Chitragupta_temple,_Kanchipuram",
+   "https://en.wikipedia.org/wiki/Chitra_Pournami_(festival)",
+   "https://www.dtnext.in/amp/story/news/tamilnadu/devotion-heritage-harmony-the-inescapable-grandeur-of-chithirai-month-832449",
+   "https://www.chitrasfoodbook.com/?p=3629",
+   "https://youreverydaycook.squarespace.com/blog/chitra-pournami",
+   "https://www.hindu-blog.com/2014/05/chitragupta-puja-on-chithirai-pournami.html",
+   "https://theni.nic.in/tourist-place/mangaladevi/",
+   "https://www.keralatourism.org/temples/idukki/mangala-devi-kannagi-temple",
+   "https://www.templefolks.com/temple-pedia/thirukoteeswarar-temple.html"
+  ],
+  "sabarimala-makaravilakku": [
+   "https://specials.manoramaonline.com/Festival/2016/sabarimala/english/article-1.html",
+   "https://www.onmanorama.com/food/features/2025/12/11/sabarimala-prasadam-significance.html",
+   "https://www.onmanorama.com/food/features/2025/11/26/sabarimala-annadanam-kerala-sadya.html",
+   "https://www.onmanorama.com/food/features/2019/11/27/sabarimala-food-pilgrims-fast-diet-special-dish.html"
+  ],
+  "ananta-chaturdashi": [
+   "https://deshgujarat.com/2022/09/07/anant-chaturdashi-date-rituals-and-story/",
+   "https://www.incredibleindia.gov.in/en/festivals-and-events/maharashtra/ganesh-chaturthi",
+   "https://en.wikipedia.org/wiki/Ananta_Chaturdashi",
+   "https://hindutone.com/spirituality/anant-chaturdashi-2025-complete-guide-to-date-rituals-and-significance/"
+  ],
+  "pana-sankranti": [
+   "https://www.slurrp.com/article/pana-sankranti-odia-new-year-through-culinary-journey-of-odisha-1681369492245",
+   "https://www.orissapost.com/appeasing-goddess-vrinda",
+   "https://esamskriti.com/e/Culture/Festivals/How-PANA-SANKRANTI-is-celebrated-in-Odisha-1.aspx",
+   "https://en.wikipedia.org/wiki/Maha_Bishuba_Sankranti"
+  ],
+  "shankara-jayanti": [
+   "https://www.sringeri.net/announcement/sri-shankara-jayanti-mahotsava-2025",
+   "https://www.britannica.com/biography/Shankara",
+   "https://media.belurmath.org/sri-adi-shankaracharya-jayanti-kalady-may-2025-15732/",
+   "https://kamakoti.org/kamakoti/news/2013/Shankara Jayanthi celebrated at Kalady.html"
+  ],
+  "buddha-purnima": [
+   "https://theculturetrip.com/asia/articles/celebrating-the-buddhas-birthday-in-11-asian-countries",
+   "https://ruralindiaonline.org/article/celebrating-saga-dawa-in-ladakh",
+   "https://www.timeout.com/sri-lanka/things-to-do/vesak-in-sri-lanka",
+   "https://www.britannica.com/topic/Vesak"
+  ],
+  "vishwakarma-puja": [
+   "https://en.banglapedia.org/index.php/Vishvakarma_Puja",
+   "https://cultureandheritage.org/vishwakarma-puja-celebrations-in-india",
+   "https://www.hindu-blog.com/2017/09/biswakarma-puja-date-in-bengal-orissa-assam-jharkhand.html",
+   "https://odishabytes.com/grandeur-of-vishwakarma-puja-back-in-odisha-folklores-about-the-divine-craftsman/amp"
+  ],
+  "pola": [
+   "https://www.incredibleindia.gov.in/en/festivals-and-events/maharashtra/bail-pola",
+   "https://www.incredibleindia.gov.in/en/festivals-and-events/chhattisgarh/teej-pola",
+   "https://www.sahapedia.org/celebration-of-labor-agricultural-festivals-of-hareli-and-pola-chhattisgarh",
+   "https://curlytales.com/what-is-nagpurs-tanha-pola-festival-history-significance-everything-you-need-to-know-about-this-unique-festival"
+  ],
+  "chaitra-navratri": [
+   "https://www.drikpanchang.com/navratri/chaitra-navratri-ghatasthapana.html?year=2026",
+   "https://dekhopanchang.com/en/puja/chaitra-navratri",
+   "https://www.hindu-blog.com/2014/03/chaitra-navratri-puja-vidhi-how-to-do.html",
+   "https://www.hindu-blog.com/2019/03/basanti-puja-importance-of-chaitra-durga-puja-march-april.html",
+   "https://www.drikpanchang.com/navratri/info/navratri.html?lang=en",
+   "https://static.hlt.bme.hu/semantics/external/pages/Rta/en.wikipedia.org/wiki/Navaratri.html",
+   "https://www.britannica.com/topic/Rama-Navami",
+   "https://www.britannica.com/place/Sitamarhi",
+   "https://en.wikipedia.org/wiki/Navreh",
+   "https://organiser.org/2024/03/24/228138/bharat/thaal-barun-a-unique-age-old-tradition-of-kashmir/amp/",
+   "https://www.freepressjournal.in/analysis/india-welcomes-spiritual-spring-as-chaitra-marks-beginning-of-regional-new-years",
+   "https://www.Britannica.Com/topic/Ugadi",
+   "https://www.outlookindia.com/amp/story/brand-studio/how-chaitra-navratri-is-celebrated-across-different-states-in-india",
+   "https://www.outlookindia.com/brand-studio/chaitra-navratri-kanya-pujan-rituals-significance-how-to-perform",
+   "https://www.vegrecipesofindia.com/navratri-fasting-rules-vrat-ka-khana/",
+   "https://www.freepressjournal.in/pune/photo-story-pune-welcomes-gudi-padwa-with-colourful-processions-and-cultural-pride",
+   "https://etvbharat.com/english/state/uttarakhand/devotees-throng-dhari-devi-temple-as-navratri-begins/na20231018172702460460636"
+  ],
+  "mahavir-jayanti": [
+   "https://dailypioneer.com/news/the-sattvic-flavours-of-mahavir-jayanti",
+   "https://www.reonline.org.uk/festivals-calendar/mahavira-jayanti/",
+   "https://www.ebsco.com/research-starters/social-sciences-and-humanities/mahavir-janma-kalyanak",
+   "https://www.outlookindia.com/brand-studio/celebrating-the-life-and-legacy-traditions-of-mahavir-jayanti",
+   "https://www.interfaithamerica.org/article/jains-celebrate-the-founder-of-their-small-but-ancient-faith/",
+   "https://jainpedia.org/themes/practices/monks-and-nuns/monastic-clothing"
+  ],
+  "cheti-chand": [
+   "https://hindutone.com/festivals/cheti-chand-2026-sindhi-new-year-jhulelal-jayanti/",
+   "https://www.freepressjournal.in/analysis/india-welcomes-spiritual-spring-as-chaitra-marks-beginning-of-regional-new-years",
+   "https://www.freepressjournal.in/indore/indore-cheti-chand-celebrated-with-fervour",
+   "https://en.wikipedia.org/wiki/Chalio",
+   "https://organiser.org/2026/03/20/344865/bharat/cheti-chand-a-celebration-of-faith-culture-and-the-new-year-for-the-sindhi-community/",
+   "https://www.festivalsofindia.in/chetichand/rituals",
+   "https://www.oneindia.com/lifestyle/jhulelal-jayanti-2026-date-rituals-sindhi-new-year-cheti-chand-011-8031447.html"
+  ],
+  "nuakhai": [
+   "https://en.wikipedia.org/wiki/Nuakhai",
+   "https://magazines.odisha.gov.in/Orissareview/2012/sep/engpdf/24-26.pdf",
+   "https://magazines.odisha.gov.in/Orissareview/2012/oct/engpdf/14-20.pdf",
+   "https://utsav.gov.in/view-event/nuakhai",
+   "https://odishabytes.com/nabanna-offered-to-goddess-samaleswari-as-western-odisha-celebrates-nuakhai/amp/",
+   "https://www.deccanchronicle.com/nation/in-other-news/nuakhai-2026-western-odisha-celebrates-harvest-kinship-and-cultural-identity-1987540"
+  ],
+  "pradosh-vrat": [
+   "https://en.wikipedia.org/wiki/Pradosha",
+   "https://www.dlshq.org/?p=2374",
+   "https://www.indianetzone.com/11/pradosha_vrata.htm",
+   "https://www.hindu-blog.com/2015/05/pradosh-vrat-vidhi-pradosh-vrat-puja.html",
+   "https://cultureandheritage.org/pradosham-a-sacred-twilight-offering-in-tamil-nadus-shiva-temples"
+  ],
+  "guru-nanak-jayanti": [
+   "https://www.slurrp.com/article/kadha-parshad-and-langar-for-guru-nanak-jayanti-punjabis-share-gurpurab-rituals-1731593088046",
+   "https://zeenews.india.com/culture/langar-to-kada-prasad-culinary-traditions-of-guru-nanak-jayanti-2820597.html",
+   "https://utsav.gov.in/view-event/gurpurab-guru-nanak-dev-jayanti-2024-1",
+   "https://www.thesikhencyclopedia.com/karah-prasad",
+   "https://curlytales.com/india/trending/guru-nanak-jayanti-the-sacred-story-of-karah-prasad-a-symbol-of-selfless-devotion-and-how-to-make-it/",
+   "https://religionsmn.carleton.edu/exhibits/show/sikhgurdwara/sikhsocietymn/sikhvisiting/sikhkarahparshad",
+   "https://www.sikhiwiki.org/index.php/Visiting_a_Gurdwara"
+  ],
+  "paryushan": [
+   "https://dailypioneer.com/news/paryushan-a-cuisine-shaped-by-mindfulness",
+   "https://parasdham.org/?p=15152",
+   "https://parasdham.org/?p=15159",
+   "https://www.festivalsofindia.in/paryushan/fasting",
+   "https://pluralism.org/paryushana-and-the-festival-of-forgiveness"
+  ],
+  "jitiya": [
+   "https://utsav.gov.in/view-event/jivitputrika-vrat",
+   "https://kathmandupost.com/opinion/2018/10/07/jitiya-joys",
+   "https://english.ratopati.com/story/82058/the-festival-of-maternal-love-ie-jitiya",
+   "https://www.slurrp.com/article/jitiya-vrat-2023-date-significance-rituals-and-8-must-have-traditional-foods-1696481367237",
+   "https://en.wikipedia.org/wiki/Jitiya"
+  ],
+  "gayatri-jayanti": [
+   "https://www.drikpanchang.com/hindu-goddesses/gayatri/jayanti/jyeshtha-gayatri-jayanti-date.html?year=2024",
+   "https://www.hindu-blog.com/2009/05/gayatri-jayanti-gayatri-mata-jayanthi.html",
+   "https://www.boldsky.com/yoga-spirituality/gayatri-jayanti-2026-why-devotees-chant-the-gayatri-mantra-and-seek-divine-wisdom-on-this-day-172527.html",
+   "https://www.thehitavada.com/Encyc/2020/6/1/Triple-auspicious-occasion-today.html",
+   "https://www.thehitavada.com/Encyc/2019/6/12/Gayatri-Jayanti-A-sacred-day-to-strengthen-mind-power.html",
+   "https://www.awgp.org/en/festivals/gayatri_jayanti",
+   "https://home.awgpuk.org/index.php/about/founder",
+   "https://www.freepressjournal.in/amp/mumbai/gayatri-jayanti-celebrated-across-maharashtra-with-spiritual-fervour-mass-participation",
+   "https://en.wikipedia.org/wiki/Gayatri_Mantra",
+   "https://www.wisdomlib.org/hinduism/scripture/g%C4%81yatr%C4%AB-mantra/d/doc7659.html",
+   "https://buddhadust.net/dhamma-vinaya/pts/mn/mn.092.horn.pts.htm",
+   "https://cultureandheritage.org/aavani-avittam-sacred-upakarma-ritual-in-tamil-brahmin-homes",
+   "https://www.dtnext.in/news/tamilnadu/avani-avittam-observed-in-tiruchy-with-sacred-thread-changing-rituals"
+  ],
+  "thrissur-pooram": [
+   "https://www.oneindia.com/lifestyle/thrissur-pooram-2026-date-rituals-vadakkunnathan-temple-guide-011-8069679.html",
+   "https://www.onmanorama.com/travel/kerala/2024/04/16/what-is-thrissur-pooram-how-to-enjoy-as-a-tourist-details-itinerary.html"
+  ],
+  "dhammachakra-pravartan-din": [
+   "https://caravanmagazine.in/religion/dignity-fraternity-knowledge-lessons-on-ambedkars-social-democracy-from-deeksha-bhoomi",
+   "https://www.thehitavada.com/Encyc/2024/10/12/Dhammachakra-Pravartan-Din.html",
+   "https://www.nagpurtoday.in/thousands-gather-at-deekshabhoomi-to-celebrate-dhammachakra-pravartan-diwas/10141926",
+   "https://thehitavada.com/Encyc/2022/10/5/Lakhs-throng-Deekshabhoomi-for-Dhamma-Chakra-Pravartan-Din.html"
+  ],
+  "dhanteras": [
+   "https://www.hindu-blog.com/2008/10/how-to-celebrate-dhan-teras-or-what-to.html",
+   "https://en.wikipedia.org/wiki/Dhanteras",
+   "https://thesouthfirst.com/featured/deepavali-marundhu-a-memoir-of-this-magical-mainstay-in-tamil-households/",
+   "https://indiacurrents.com/?p=160719",
+   "https://hindutone.com/festivals/dhanteras-2025-complete-guide-to-date-puja-vidhi-rituals-significance/"
+  ],
+  "appayya-jayanti": [
+   "https://en.wikipedia.org/wiki/Appayya_Dikshita",
+   "https://hindupedia.com/en/Appayya_Dikshitar",
+   "https://www.hindu-blog.com/2019/11/appayya-dikshitar-story-works.html",
+   "https://kamakoti.org/kamakoti/news/2015/Arrival-at-Adayapalam.html",
+   "https://kamakoti.org/kamakoti/news/2015/Camp-Adyapalam-Parayanam.html",
+   "https://advaita-vedanta.org/archives/advaita-l/2019-October/053371.html"
+  ],
+  "thaipusam": [
+   "https://www.malaymail.com/news/malaysia/2025/02/11/not-just-about-kavadi-and-batu-caves-what-is-thaipusam-and-how-did-it-become-massive-in-malaysia/165864",
+   "https://www.roots.gov.sg/ich-landing/ich/thaipusam",
+   "https://biblioasia.nlb.gov.sg/vol-18/issue-4/jan-mar-2023/thaipusam-murugan-singapore/",
+   "https://utsav.gov.in/view-event/thai-pusam-festival-palani-1",
+   "https://en.wikipedia.org/wiki/Palani_Panchamirtham",
+   "https://www.gktoday.in/the-famous-panchamirtham-of-palani-temple-gets-gi-tag/",
+   "https://www.thenewsminute.com/article/tamil-nadu-s-palani-panchamirtham-prasadam-given-gi-tag-107226"
+  ],
+  "mahamastakabhisheka": [
+   "https://en.wikipedia.org/wiki/Mahamastakabhisheka",
+   "https://karnatakatourism.org/experiences/shravanabelagola-mahamastakabhisheka",
+   "https://blogs.lse.ac.uk/southasia/2018/05/04/digambara-jainism-photo-essay-karnataka-shravanabelgola-bahubali",
+   "https://www.deccanherald.com/india/karnataka/shravanabelagola-abounds-vibes-solemnity-1919634",
+   "https://www.theweek.in/leisure/society/2018/02/21/visual-opulence-mahamastakabhisheka-bahubali-gomateshwara-jainism.amp.html"
+  ],
+  "sharad-purnima": [
+   "https://en.wikipedia.org/wiki/Sharada_Purnima",
+   "https://orissapost.com/twin-city-dips-in-celebration-of-womanhood",
+   "https://odishabytes.com/kumar-purnima-know-more-about-this-unique-full-moon-festival-of-odia-girls/amp",
+   "https://www.freepressjournal.in/lifestyle/kojagiri-purnima-2024-why-does-maharashtra-celebrate-this-night-uniquely-know-more-about-the-rituals",
+   "https://www.freepressjournal.in/lifestyle/sharad-purnima-2026-why-is-kheer-kept-under-moonlight-know-the-religious-significance",
+   "https://www.hindu-blog.com/2026/10/khichuri-bhog-offered-on-kojagari.html",
+   "https://curlytales.com/kojagari-lakshmi-puja-from-bhog-prasad-to-rituals-heres-all-about-bengali-lakshmi-puja",
+   "https://www.slurrp.com/article/kojagori-lakshmi-puja-traditional-bhog-offerings-in-bengal-1728897940890",
+   "https://etvbharat.com/english/bharat/kojagara-festival-being-celebrated-in-mithilanchal-of-bihar/na20211019075754466"
+  ],
+  "rath-yatra": [
+   "https://odishatv.in/news/odisha/abadha-mahaprasad-cooked-with-organic-rice-at-gundicha-temple-in-puri-266678",
+   "https://oteats.outlooktraveller.com/features/guides/the-sacred-feast-exploring-food-rituals-of-odishas-rath-yatra",
+   "https://www.orissapost.com/poda-pitha-sweet-tradition-that-flavors-bahuda-yatra/",
+   "https://odishatv.in/news/festivals-events/rath-yatra/this-is-why-adhara-pana-ritual-during-rath-yatra-is-unique-177998",
+   "https://www.deccanherald.com/india/odisha/odisha-observes-rasagola-dibasa-coinciding-with-end-of-rath-yatra-3112221",
+   "https://www.outlookindia.com/brand-studio/street-food-during-rath-yatra-what-devotees-love-to-eat"
+  ],
+  "onam": [
+   "https://onmanorama.com/travel/kerala/2023/08/26/onam-thrikkakara-temple-traditions-stories-food-onakkodi.html",
+   "https://keralatourism.org/onam/onam-market/onakodi",
+   "https://en.wikipedia.org/wiki/Valla_Sadhya"
+  ],
+  "kartik-purnima-dev-deepawali": [
+   "https://hindutone.com/festivals/kartik-purnima-celebration-in-south-india-complete-ritual-guide/",
+   "https://curlytales.com/india/food/what-is-pori-urundai-the-crunchy-tamil-sweet-made-during-karthigai-deepam/",
+   "https://sangam.org/?p=18650",
+   "https://www.discoversikhism.com/sikh_gurdwaras/gurdwara_protocol.html",
+   "https://hindupad.com/jwala-thoranam-jwalathoranotsavam/"
+  ],
+  "tulsi-pujan-diwas": [
+   "https://en.wikipedia.org/wiki/Tulsi_Pujan_Diwas",
+   "https://www.bhaktibharat.com/en/festival/tulsi-pujan-diwas"
+  ],
+  "radha-ashtami": [
+   "https://www.tirthayatra.org/radha-ashtami/",
+   "https://theprint.in/india/radha-ashtami-celebrated-with-religious-fervour-in-mathura/3047709/",
+   "https://www.radhakrishnatemple.net/blog/radhashtami-day-to-seek-radha-blessings/",
+   "https://www.bihariji.org/public/RadhaAshtami.aspx"
+  ],
+  "satyanarayan-vrata": [
+   "https://en.wikipedia.org/wiki/Satyanarayana_Puja",
+   "https://hindutempletalk.org/2024/08/21/satyanarayana-puja-a-comprehensive-guide-to-the-rituals-and-significance/amp/",
+   "https://www.bhaktibharat.org/deities/vishnu/satyanarayana-puja-procedure",
+   "https://en.wikipedia.org/wiki/Satyanarayana_Temple,_Annavaram"
+  ],
+  "ashadhi-ekadashi-pandharpur-wari": [
+   "https://esamskriti.com/a/Maharashtra/Pandharpur-Wari.aspx",
+   "https://www.sahapedia.org/pandharpur-wari-pilgrimage-saints-sandals-and-salvation",
+   "https://www.incredibleindia.gov.in/en/festivals-and-events/maharashtra/pandhrichi-vaari0"
+  ],
+  "tulsi-vivaha": [
+   "https://en.wikipedia.org/wiki/Tulasi_Vivaha",
+   "https://www.festivalsofindia.in/tulsi-vivah/celebrations/amp",
+   "https://imvoyager.com/tulasi-vivaha-tulsi-pooja-uttana-dwadashi/"
+  ],
+  "vishu": [
+   "https://www.slurrp.com/article/vishu-2026-kanji-katta-ada-amp-the-breakfast-traditions-that-start-the-malayalam-new-year-right-1776065122515",
+   "https://www.onmanorama.com/food/features/2022/04/14/how-to-have-vishu-sadya-like-a-true-malayali.html"
+  ],
+  "bhai-dooj": [
+   "https://en.wikipedia.org/wiki/Bhai_Dooj",
+   "https://www.vedantu.com/blog/bhai-dooj-celebration-in-different-indian-states-and-know-its-date-and-significance",
+   "https://dailypioneer.com/agenda/bhai-dooj-the-flavours-of-an-enduring-bond",
+   "https://nepaltraveller.com/sidetrack/bhai-tika-celebrating-sibling-bonds",
+   "https://myrepublica.nagariknetwork.com/news/tihar-color-codes-saptarangi-tika-decoded",
+   "https://www.hindu-blog.com/2021/10/sandalwood-curd-tikka-bengal-bhai-phonta-reason.html"
+  ],
+  "varalakshmi-vratam": [
+   "https://en.wikipedia.org/wiki/Varalakshmi_Vratam",
+   "https://www.hindu-blog.com/2009/07/story-of-varalakshmi-vratam.html",
+   "https://www.karnataka.com/culture/vara-mahalakshmi",
+   "https://karnatakatourism.org/experiences/vara-mahalakshmi-vrata",
+   "https://www.chitrasfoodbook.com/2015/08/varalakshmi-vratham-pooja-procedurepuja.html",
+   "https://www.sakshipost.com/news/telangana/varalakshmi-vratam-2026-complete-puja-vidhanam-481882",
+   "https://bangaloreorbit.com/festivals-in-karnataka/vara-mahalakshmi-festival/vara-mahalakshmi-festival.html"
+  ],
+  "kanwar-yatra": [
+   "https://dailypioneer.com/news/pasta-pizza-momos-kanwar-camps-serve-a-fusion-of-modern-flavours",
+   "https://www.outlookindia.com/society/105-kilometres-for-shiva-news-297819",
+   "https://en.wikipedia.org/wiki/Shravani_Mela",
+   "https://en.wikipedia.org/wiki/Kanwar_Yatra"
+  ],
+  "pitru-paksha": [
+   "https://dailypioneer.com/news/pitru-paksha-the-cuisine-that-keeps-ancestral-memory-alive",
+   "https://youreverydaycook.squarespace.com/blog/srardham-davasam",
+   "https://tourism.bihar.gov.in/en/events/2025/pitripaksha",
+   "https://www.drikpanchang.com/shraddha/info/shraddha.html",
+   "https://www.outlookindia.com/national/bengal-devotees-offer-tarpan-to-ancestors-on-mahalaya"
+  ],
+  "puthandu": [
+   "https://www.hindu-blog.com/2008/04/what-to-do-on-tamil-new-year.html",
+   "https://www.azafashions.com/blog/celebrating-puthandu-in-malaysia",
+   "https://gulfnews.com/food/no-garlic-no-onion-deliciously-vegetarian-a-tamil-feast-from-the-south-of-india-1.1681825084471",
+   "https://www.oneindia.com/lifestyle/puthandu-2026-date-tamil-new-year-rituals-food-wishes-011-8056135.html"
+  ],
+  "baisakhi": [
+   "https://www.utsavpedia.com/?p=13715",
+   "https://pluralism.org/the-khalsa"
+  ],
+  "skanda-sashti": [
+   "https://tiruchendur.org/2020.kandasashti.htm",
+   "https://www.indiatvnews.com/lifestyle/spirituality/soorasamharam-2025-date-timing-rituals-and-tiruchendur-schedule-2025-10-27-1014532",
+   "https://www.dtnext.in/news/tamilnadu/soorasamharam-sea-of-devotees-on-tiruchendur-beach",
+   "https://www.murugan.org/research/venkataraman.htm",
+   "https://www.murugan.org/bhaktas/kachchiappa.htm",
+   "https://en.wikipedia.org/wiki/Kachiyappar",
+   "https://en.wikipedia.org/wiki/Kanda_Shasti_Kavasam",
+   "https://www.wikiwand.com/en/articles/Arupadaiveedu",
+   "https://palani.org/kanda_sashti.htm",
+   "https://www.boldsky.com/yoga-spirituality/skanda-sashti-2023-the-seven-day-celebrations-of-skanda-sashti-at-palani-146963.html",
+   "https://hindutone.com/festivals/skanda-sashti-2026-singapore-malaysia/",
+   "https://www.srikandaswamykovil.org/post/skantha-sashti-thirukalyanam-2022",
+   "https://hindutone.com/festivals/why-kavady-devotees-wear-yellow/",
+   "https://cultureandheritage.org/skanda-sashti-in-subrahmanya-swamy-murugan-temples-of-tamil-nadu",
+   "https://www.thenewsminute.com/tamil-nadu/tamil-nadu-s-palani-panchamirtham-prasadam-given-gi-tag-107226"
+  ],
+  "karthigai-deepam": [
+   "https://www.subbuskitchen.com/thirukarthigai-recipes-karthigai-deepam",
+   "https://www.chitrasfoodbook.com/?p=3893",
+   "https://sangam.org/?p=18650",
+   "https://www.dtnext.in/news/tamilnadu/devotion-in-full-glow-as-barani-and-maha-deepams-lit-in-t-malai",
+   "https://lakshmistores.com/blogs/news/the-significance-and-traditions-of-karthigai-deepam-festival-in-south-india",
+   "https://www.hinduismtoday.com/hpi/?p=16673"
+  ],
+  "kumbh-mela": [
+   "https://www.deccanherald.com/amp/story/india%2Futtar-pradesh%2Fmaha-kumbh-2025-all-you-need-to-know-about-kalpavas-3367152",
+   "https://thehansindia.com/uttarpradesh/kumbh-mela-2025-essential-guide-to-comfortable-and-respectful-attire-for-maha-kumbh-932314",
+   "https://cultureandheritage.org/kumbh-mela-experiencing-the-worlds-largest-gathering-of-faith-in-prayagraj-ujjain-nashik-haridwar",
+   "https://kumbh.gov.in/en/introduction"
+  ],
+  "bihu": [
+   "https://thefederal.com/amp/category/the-eighth-column/why-bihu-celebration-in-assam-is-incomplete-without-pitha-and-laru-166559",
+   "https://www.sentinelassam.com/more-news/editorial/magh-bihu-a-rich-mosaic-of-traditions-feasts-and-sport-in-assamese-heritage"
+  ],
+  "raksha-bandhan": [
+   "https://oteats.outlooktraveller.com/features/guides/this-is-how-different-regions-in-india-celebrate-raksha-bandhan",
+   "https://organiser.org/2025/08/09/306917/bharat/nine-unique-raksha-bandhan-celebrations-across-bharat-diverse-threads-of-love/"
+  ],
+  "pongal": [
+   "https://www.roots.gov.sg/en/ich-landing/ich/pongal",
+   "https://www.tamilnadutourism.tn.gov.in/events/pongal-festival",
+   "https://www.dailymirror.lk/news-features/Thai-Pongal-The-celebration-of-the-Sun-God/131-300051"
+  ],
+  "guru-purnima": [
+   "https://en.wikipedia.org/wiki/Guru_Purnima",
+   "https://zeenews.india.com/photos/lifestyle/from-varanasi-to-kerala-diverse-celebrations-of-guru-purnima-across-india-2768626",
+   "https://www.incredibleindia.gov.in/en/festivals-and-events/maharashtra/shirdi-guru-pournima-festival"
+  ],
+  "nag-panchami": [
+   "https://www.slurrp.com/article/patholi-to-raskadam-nag-panchami-prasads-prepared-across-india-1723178288585",
+   "https://www.outlookindia.com/brand-studio/naag-panchami-rituals-unique-traditions-across-india",
+   "https://www.incredibleindia.gov.in/en/festivals-and-events/maharashtra/nagpanchami"
+  ],
+  "hanuman-jayanti": [
+   "https://www.outlookindia.com/brand-studio/traditional-offerings-to-lord-hanuman-prasad-from-boondi-to-vada-mala",
+   "https://thecsrjournal.in/celebration-of-hanuman-jayanti-across-various-indian-states/",
+   "https://www.sentinelassam.com/more-news/national-news/how-hanuman-jayanti-is-celebrated-across-india"
+  ],
+  "vaikuntha-ekadashi": [
+   "https://hindutone.com/temples/temple-prasadams-offered-on-vaikuntha-ekadashi-across-india/",
+   "https://hindutone.com/temples/vaikuntha-ekadashi-fasting-rules-followed-in-major-indian-temples/",
+   "https://www.hindu-blog.com/2022/12/food-offerings-on-vaikunta-ekadasi-at-srirangam-ranganatha-swamy-temple.html"
+  ],
+  "dussehra-vijayadashami": [
+   "https://www.slurrp.com/article/dussehra-2025-festive-foods-amp-regional-specialities-of-vijayadashami-1759386180559",
+   "https://www.outlooktraveller.com/experiences/heritage/mysuru-to-varanasi-how-india-celebrates-vijayadashami-with-grandeur"
+  ],
+  "ugadi-gudi-padwa": [
+   "https://www.manyavar.com/en-in/blogs/region-wise-new-year-style-ugadi-gudi-padwa.html",
+   "https://www.freepressjournal.in/lifestyle/gudi-padwa-special-heres-why-traditional-paithani-sarees-are-perfect-festive-wear"
+  ],
+  "vasant-panchami": [
+   "https://www.outlookindia.com/brand-studio/basant-ke-pakwan-regional-food-traditions-across-india-on-vasant-panchami",
+   "https://www.outlookindia.com/brand-studio/vasant-panchami-2026-across-india-how-different-cities-welcome-spring",
+   "https://www.outlooktraveller.com/experiences/heritage/of-young-love-and-wisdom-how-kolkata-celebrates-saraswati-pujo"
+  ],
+  "chhath-puja": [
+   "https://www.outlookindia.com/brand-studio/the-ultimate-guide-to-chhath-puja-prasad-offerings-2025",
+   "https://www.azafashions.com/blog/chhath-puja-2026-outfit-guide-saree-colours/"
+  ],
+  "akshaya-tritiya": [
+   "https://www.outlookindia.com/amp/story/brand-studio/how-akshaya-tritiya-is-celebrated-differently-in-maharashtra-odisha-telugu-states",
+   "https://dailypioneer.com/news/cuisine-of-abundance-charity-and-continuity",
+   "https://www.outlookindia.com/brand-studio/akshaya-tritiya-in-jainism-traditions-story-and-spiritual-meaning",
+   "https://thehansindia.com/andhra-pradesh/simhachalam-braces-for-chandanotsavam-792240"
+  ],
+  "maha-shivaratri": [
+   "https://dailypioneer.com/news/maha-shivratri-fasting-faith-and-the-sacred-kitchen",
+   "https://thehimalayanpost.in/Mutton,-Fish,-Walnuts--How-Kashmiri-Pandits-Celebrate-Herath-101086",
+   "https://www.outlookindia.com/brand-studio/unique-mahashivratri-rituals-practised-across-different-regions-of-india"
+  ],
+  "karva-chauth": [
+   "https://dailypioneer.com/agenda/a-celebration-of-devotion-and-culinary-traditions"
+  ],
+  "pateti": [
+   "https://newsmeter.in/lifestyle/sev-to-sali-gosh-here-are-some-parsi-dishes-that-make-jamshedi-navroz-special-745589",
+   "https://www.thebetterindia.com/112242/navroz-new-year-parsi-community-india/"
+  ]
+ },
+ "flags": {
+  "gita-jayanti": [
+   "Existing site food text lists kuttu (and 'singhare/kuttu') as Ekadashi fasting food; Drik Panchang advises avoiding kuttu and samak and notes the debate. Consider softening the site text.",
+   "Existing site prasad says panchamrit, makhana and charnamrit; none were verified."
+  ],
+  "narasimha-jayanti": [
+   "Single-source items rest on a pilgrim-guide site (gokshetra), so the fasting-advice and panakam-kosambari entries are medium confidence.",
+   "Existing site text calls Simhachalam's deity 'sandal-covered' with abhishek on Jayanti; sandalwood is removed only on Akshaya Tritiya, so check what actually happens on Narasimha Jayanti there."
+  ],
+  "ratha-saptami": [
+   "Tirumala dress code and free-food notes rest on one news article (Daily Jagran) that has a date inconsistency; TTD's own page was not opened.",
+   "Existing site says 'chakkara pongal' is the signature offering; sources give 'sweet pongal' (same dish in Tamil Nadu and Andhra usage) so wording should be aligned."
+  ],
+  "lohri": [
+   "Regional coverage is now Punjab only. Wikipedia mentions bobaru in Himachal the day after Lohri; no reliable source for further regional dishes was found.",
+   "Existing site lists Haryana, Delhi and Himachal as regions; those have no verified food or prasad detail yet."
+  ],
+  "teej": [
+   "Existing site prasad says 'mehndi, bangles and green chunri' and food lists malpua, kheer and sattu for Teej; malpua and kheer could not be verified.",
+   "Wikipedia is the main source for regional detail; no temple or government page was found."
+  ],
+  "dattatreya-jayanti": [
+   "Existing site says 'seven-day parayana' and 'Sunthwada prasad'; neither could be verified.",
+   "Existing site says Gangapur is the spelling; sources use Ganagapur.",
+   "Existing site howCelebrated says Girnar pilgrims 'climb to the Dattatreya peak' which is consistent with Gujarat Tourism."
+  ],
+  "gangaur": [
+   "Existing site food list says 'dhaba-batti & churma' (likely dal-bati) and 'gunghat / sweets exchanged'; neither could be verified and the spelling looks wrong. Existing text names the Mewar boat procession at Gangaur Ghat, consistent with Wikipedia's mention of a ghat named after Gangaur.",
+   "Dhinga Gavar is a Jodhpur tradition tied to Baintmar Teej; confirm it is wanted on this page."
+  ],
+  "vivaha-panchami": [
+   "Ramkaleva gifts and teasing appear only on a commercial airline blog; the Kathmandu Post lists Ramkalewa as a ritual but not its details.",
+   "Festivals of India notes that many Mithila and North Indian communities avoid holding weddings on this day; consider adding to the regional field."
+  ],
+  "holla-mohalla": [
+   "Karah prasad composition (wheat flour, ghee, sugar) is standard Sikh practice but was not stated on the pages opened.",
+   "Existing site significance says Guru Gobind Singh established it; Wikipedia gives a first procession at Anandpur on 22 February 1701, while the drafter noted source disagreement on date.",
+   "Existing site prasad says 'Kada prasad'; 'karah' is the more common spelling, check house style."
+  ],
+  "chitra-purnima": [
+   "Existing site text lists 'Chitra Purnima kuzhambu and spiced rice' under food and 'Panchamrit' under prasad; none of the pages opened confirm these, and Tamil home sources instead give pongal, kozhukattai, panagam and neer mor. Founder may want to revise the existing lists.",
+   "Existing text says North India observes Chaitra Purnima with Satyanarayan puja and bathing; this was not checked here."
+  ],
+  "sabarimala-makaravilakku": [
+   "Barefoot walking is not stated on pages I opened (it is in the site's existing text and widely known); kept.",
+   "Existing site text calls aravana and appam 'famous prasad' and lists 'Vibhuti and tulsi'; not verified here.",
+   "Regional dress colours rest on a single 2016 Manorama guide."
+  ],
+  "ananta-chaturdashi": [
+   "Sources disagree on how long the Anant thread is worn (one day, 14 days, one year).",
+   "Existing site text says 'Gharge/puran poli' and 'Tulsi and panchamrit'; puran poli and tulsi are not supported by the pages opened.",
+   "Existing text says Jains observe Paryushan/Das Lakshana; Wikipedia says Digambar Jains mark the last day of Dus Lakshan Parv, so wording could be tightened."
+  ],
+  "pana-sankranti": [
+   "Existing site text lists dahi-pakhala under food; none of the pages opened tie it to this day, so consider removing. Chhatua appears on Wikipedia as a festive food and could be added.",
+   "Existing text says pana is offered to Surya, Jagannath and Hanuman; the pages opened confirm worship of Surya and Hanuman Jayanti on this day, not the Jagannath offering."
+  ],
+  "shankara-jayanti": [
+   "Existing site text says Dwaraka, Puri and Jyotirmath mathas hold programmes; I only confirmed Sringeri, Kanchi and Ramakrishna Advaita Ashrama (Kalady).",
+   "Existing text says 'a life of just 32 years'; not checked here, and dates are disputed.",
+   "Existing prasad list ('Tirtha and vibhuti', 'Fruit and payasam', 'Tulsi and bilva') is not supported by pages opened."
+  ],
+  "buddha-purnima": [
+   "Britannica says Chinese Buddhists mark only the Buddha's birth, on the eighth day of the fourth lunar month, so the China/Hong Kong bathing falls on a different date from Vaishakha Purnima.",
+   "Sri Lanka Vesak (Time Out) page does not itself mention the slaughterhouse closing; that comes from the Culture Trip page."
+  ],
+  "vishwakarma-puja": [
+   "Existing site text lists khichuri and labra, boondi and jalebi as bhog; none confirmed by pages opened.",
+   "Existing text says Bengal and Jharkhand see kite-flying; Banglapedia confirms kite flying."
+  ],
+  "pola": [
+   "Existing site text says puran poli is offered to the bullocks and lists karanji; Incredible India lists puran poli only as a family dish, so the offering claim is unconfirmed (though a common folk practice).",
+   "Existing text lists Telangana; no page confirmed Pola there (related festival is Eruvaka Purnima).",
+   "Gond night worship may involve animal sacrifice in some areas; deliberately not detailed."
+  ],
+  "chaitra-navratri": [
+   "Site significance calls this the second of the year's great Devi festivals; consistent with sources.",
+   "Site food says 'No onion, garlic, grains or salt-fasts'; sources say regular salt and many grains (rice, wheat, sooji, besan) are avoided but vrat grains such as kuttu, rajgira, sama are allowed, so 'grains' is imprecise.",
+   "Gudi Padwa, Ugadi, Navreh pages exist or may exist separately; this text overlaps with them."
+  ],
+  "mahavir-jayanti": [
+   "Site prasad lists 'fruits and dry fruits' and 'sanctified sweets'; sources confirm milk, rice and fruit only; dry fruits and sweets unconfirmed.",
+   "Gujarat dish-to-state pairings come from a newspaper list without state labels; they are standard Gujarati dishes but weakly sourced."
+  ],
+  "cheti-chand": [
+   "Site food lists 'koki', 'lola/mitho lolo' and 'prasad of sweets and coconut'; none confirmed in any opened page, consider removing koki and lola.",
+   "Site says Bahrana Sahib is 'diya, water, coconut, sweets'; sources add jyot, misri, cardamom, fruit, akha and murti; some sources describe a 40-day home worship (Chaliho) before immersion."
+  ],
+  "nuakhai": [
+   "Site significance says Samaleswari of Sambalpur is the presiding deity; sources agree. Site says 'Kheer ... central offering'; Orissa Review lists khiri and manda offered to family deities along with nua, so 'central' is overstated.",
+   "Observances reported in Chhattisgarh and Jharkhand tribal communities under other names; the site region text says western Odisha only."
+  ],
+  "pradosh-vrat": [
+   "Site significance says Shiva 'dances in bliss between the horns of Nandi'; widely repeated but not confirmed in opened pages.",
+   "Site mentions Tamil Nadu somaskanda procession; sources only confirm a festival Shiva-Parvati-on-Nandi procession in South India."
+  ],
+  "guru-nanak-jayanti": [
+   "Site prasad lists 'Karah (semolina/wheat halwa)'; karah prasad is made from whole-wheat flour, not semolina, so correct the site text.",
+   "Site food lists 'Jalebi'; not confirmed in opened pages.",
+   "Draft entries are Punjab-centred; no regional variation outside Punjab was confirmed."
+  ],
+  "paryushan": [
+   "Site prasad lists 'Offerings at the Tirthankara's feet' and 'the merit of fasting and forgiveness'; neither is a confirmed prasad tradition, consider removing.",
+   "Site headline says 8 days (Svetambara) or 10 (Digambara); attire and food entries mostly describe Svetambara-oriented sources. Gujarat and Rajasthan dishes rest on one newspaper article."
+  ],
+  "jitiya": [
+   "Site significance and Wikipedia differ: site calls it a three-day vrat; Wikipedia says three days but eight days in Jharkhand.",
+   "Site food lists 'Jhor bhat' and 'Sattu and fruit', not confirmed in any opened page.",
+   "Day-wise foods vary by family and source; Slurrp lists foods inconsistently by day."
+  ],
+  "gayatri-jayanti": [
+   "TITHI CONFLICT (decision needed). Sources give three answers: (a) Jyeshtha Shukla Ekadashi, the day after Ganga Dussehra (Drik Panchang; Hitavada 2020 says Gayatri appeared on Nirjala Ekadashi); (b) Jyeshtha Shukla Dashami (hindu-blog; Ganga Dussehra day); (c) Shravana Purnima (Drik Panchang lists it as a 'Matantara', Boldsky 2026 gives 28 Aug 2026 on Shravana Purnima, and the site's Sivananda-basis). The Gayatri Pariwar (AWGP) pairs Gayatri Jayanti with Ganga Dussehra (Dashami) and marks Acharya Shriram Sharma's mahasamadhi (2 June 1990) on it; its page names no tithi. Mainstream June observance is the majority view; Shravana Purnima is the minority view. Recommend changing whenText/calendarBasis to June (Jyeshtha Shukla Ekadashi, with the Pariwar keeping Ganga Dussehra) and noting the Shravana Purnima/Avani Avittam view as an alternative. The draft history, Haridwar and South India entries were written to be neutral.",
+   "South India Avani Avittam entries apply only if the site keeps the Shravana Purnima reckoning; Drik says the Shravana Purnima view usually coincides with upakarma.",
+   "Several Pariwar details (Navi Mumbai event) come from a single 2026 Free Press Journal report."
+  ],
+  "thrissur-pooram": [
+   "Food, attire and prasad rest mainly on one popular-media page (OneIndia); entries kept deliberately generic."
+  ],
+  "dhammachakra-pravartan-din": [
+   "Site's existing prasad text says 'Flowers and lamps offered before the Buddha; Dana to the needy'. I could not confirm the flowers/lamps on a reliable page, so the draft does not repeat it; founder may keep the existing line if he has a source.",
+   "Buddhist section should avoid the word 'prasad'; consider relabelling the field 'Offerings and dana' for this festival."
+  ],
+  "dhanteras": [
+   "Tamil marundu is a Deepavali-morning custom, not clearly a Dhanteras one; remove the entry if the founder wants strict Dhanteras content.",
+   "Hindutone also notes some Maharashtra families offer neem leaves and jaggery linked to Dhanvantari; only one source, not added."
+  ],
+  "appayya-jayanti": [
+   "Existing site text says Kalakanteshwara is 'the temple he built' and Adayapalam is 'near Arani' and 'his birthplace shrine'; no opened page confirms he built it. Suggest rewording to 'the Kalakanteshwara temple associated with him'.",
+   "Existing whenText says the date is reckoned by birth-star. Hindupedia gives Uttara Proushthapada (Uttarabhadrapada) nakshatra in Kanya masa, Krishna paksha; the 2019 Srirangam event (14 Oct 2019) and 2015 event (27 Sep 2015) fall in that season. Only one source for the nakshatra.",
+   "Birth year conflict: 1520 (Wikipedia, advaita-l) vs 1554 (Hindupedia). Death age 72 (Hindupedia) vs 73 (Wikipedia).",
+   "No source describes a standard Jayanti vidhi; food, attire and prasad fields omitted rather than filled with generic text."
+  ],
+  "thaipusam": [
+   "Fast length differs: 41 days (Palani, utsav.gov.in) vs 48 days (Malaysia, Singapore).",
+   "Existing site text calls vibhuti and milk abhishekam prasad generally; confirmed only for Singapore."
+  ],
+  "mahamastakabhisheka": [
+   "Kalasha count: Wikipedia and Karnataka Tourism say 1,008; The Week (2018) says 108 on the inaugural day; LSE says 1,008 per day. Draft uses 1,008 but the founder may prefer 'about a thousand'.",
+   "'Prasad' is not a Jain term; consider relabelling this field 'Sanctified offerings' for this page.",
+   "The 8,000 litres figure is 'by some estimates' in a single academic blog."
+  ],
+  "sharad-purnima": [
+   "Odisha sources differ on the Chanda Puja offering (OdishaBytes: khai, ukhuda, jaggery, sugarcane, banana, chhena; OrissaPost: fried paddy, seven fruits, curd, jaggery).",
+   "Kheer region list (UP, Bihar, Jharkhand, MP, Chhattisgarh) rests on Wikipedia only."
+  ],
+  "rath-yatra": [
+   "Suna Besha moved out: if founder wants it, add under a ritual or regional field rather than attire.",
+   "Street-food entry rests on an Outlook Brand Studio page; consider dropping it.",
+   "No reliable devotee attire source found for Rath Yatra; attireByRegion omitted."
+  ],
+  "onam": [
+   "Site's existing Onam text cites Aranmula boat races; if Aranmula Valla Sadhya is wanted, label it as linked to Ashtami Rohini and the Uthrattathi boat season only after checking with a temple source.",
+   "Thrikkakara entries rest on one Onmanorama article."
+  ],
+  "kartik-purnima-dev-deepawali": [
+   "Karthigai Deepam follows the Krittika star and may not fall on Kartik Purnima every year; food entries for the South are for Karthigai/Karthika Pournami generally.",
+   "South Indian food rests on blog-type pages (hindutone, curlytales); no temple trust page found. Nothing found for Varanasi or Odisha attire/food."
+  ],
+  "tulsi-pujan-diwas": [
+   "Wikipedia says this 25 December observance was started in 2014 by Asaram, as an alternative to Christmas; Asaram was later convicted in a criminal case (checked from general knowledge, not opened). The site's wording 'promoted by various Hindu cultural and spiritual organisations' omits this origin. Founder should decide whether to feature this page; there is no distinct regional food or attire tradition, so the content is minimal."
+  ],
+  "radha-ashtami": [
+   "Site's existing food list (panjiri, makhan-mishri) was not confirmed by any page opened.",
+   "No Barsana-specific named sweet found."
+  ],
+  "satyanarayan-vrata": [
+   "Wikipedia is the main history source; the scholarly claims are attributed in the text. A temple or university source would be better.",
+   "Site's existing text says 'Bengal & Odisha' and 'Panjiri in the North'; neither was confirmed. No attire source found; field omitted. Fasting rules differ by family and were not confirmed (one scholar says none required)."
+  ],
+  "ashadhi-ekadashi-pandharpur-wari": [
+   "Site's existing significance says 'one of the oldest continuous pilgrimages in the world' with no source; consider softening.",
+   "Source base is thin (one blog, Sahapedia, Incredible India); no temple committee page confirmed prasad."
+  ],
+  "tulsi-vivaha": [
+   "All entries rest on Wikipedia and two lifestyle blogs; nothing from a temple or trust. Consider keeping this section short."
+  ],
+  "vishu": [
+   "Slurrp page says these breakfast dishes are not part of the sadhya; Onmanorama calls them prasad. Both are kept, worded separately.",
+   "No Guruvayur or Tulu Nadu (Bisu) food source; omitted."
+  ],
+  "bhai-dooj": [
+   "Prasad is not a strict category for this festival; entries are shared sweets and ritual items. Sweets vary by family and come from lifestyle sources.",
+   "Mathura Vishram Ghat Yamuna bath connection confirmed by Vedantu; the site's existing text already covers it."
+  ],
+  "varalakshmi-vratam": [
+   "Skanda Purana attribution rests on karnataka.com and hindu-blog; Wikipedia names no Purana. Phrased as 'popular accounts'.",
+   "Maharashtra is named in the site's regionText but no verified detail was found, so no Maharashtra entry was added; site howCelebrated also mentions a 'yellow thread' in Maharashtra, unverified."
+  ],
+  "kanwar-yatra": [
+   "Dak Bam attire is from a 2016 Outlook report; may vary by year."
+  ],
+  "pitru-paksha": [
+   "Tamil srardham entries rest on one family-cooking blog; customs vary by family."
+  ],
+  "puthandu": [
+   "These prasadByRegion entries describe puja items and customs rather than temple prasad; no named temple prasad was found. Founder may prefer to omit the field."
+  ],
+  "baisakhi": [
+   "Main attire entries rest on one costume-heritage page (Utsavpedia); dress is customary, only the five Ks are prescribed."
+  ],
+  "skanda-sashti": [
+   "Founder to decide: Kanda Puranam date varies by source (8th to 12th c.); wording left broad.",
+   "Site's existing text says 'Tiruchendur: the grandest Soorasamharam ... draws lakhs' (ok) and food list 'Tender rose-apple, honey and fruit' unverified (not checked). 'Sri Lanka' is named in regionText/howCelebrated but no verified Sri Lanka detail was found.",
+   "Existing text says the fast runs from Pratipada for six days; Tiruchendur schedule is 6 days with Thirukalyanam on day 7, consistent."
+  ],
+  "karthigai-deepam": [
+   "Tiruvannamalai prasad entry is thin; consider omitting. Site's significance text calls the festival 'one of the oldest ... older than Diwali' (existing text, unsourced superlative, not checked here)."
+  ],
+  "kumbh-mela": [
+   "Site's significance text calls the Kumbh 'the largest peaceful gathering of humans on earth' (existing superlative, unsourced here; UNESCO lists it as intangible heritage).",
+   "Ujjain has no entry; Har Ki Pauri and Ramkund entries are rites sites rather than true prasad; founder may prefer to drop them."
+  ],
+  "bihu": [
+   "No verified Bohag or Kati Bihu food or prasad. The site's existing prasad mentions 'Offerings to cattle on Goru Bihu', not verified here."
+  ],
+  "raksha-bandhan": [
+   "Gujarat and Uttarakhand entries are ritual offerings, not food prasad. Sources are two media pieces, no temple or scholarly page; South India (Avani Avittam: nei appam, paruppu poli, paal payasam per Outlook Traveller) was not added."
+  ],
+  "pongal": [
+   "Existing site lists 'vadai and payasam' and 'turmeric' under food/prasad; neither was confirmed by an official source.",
+   "No reliable regional attire source found for Tamil Nadu; consider leaving TN attire blank."
+  ],
+  "guru-purnima": [
+   "Rajasthan and Nepal entries rest on one news slideshow and Wikipedia only."
+  ],
+  "nag-panchami": [
+   "Existing site says no frying or grinding on Nag Panchami; sources list chakli (fried) and puran poli for Maharashtra. Customs vary by household; consider softening the existing line.",
+   "Existing site mentions 'dinda and patoli'; patholi confirmed, 'dinda' not checked."
+  ],
+  "hanuman-jayanti": [
+   "Existing site says Tamil Nadu and Andhra observe Hanuman Jayanti on a different date; the CSR Journal says Andhra/Telangana celebrate on Chaitra Purnima (Karnataka in Margashirsha). Check the existing text.",
+   "Sources are general media; no temple trust page confirmed these."
+  ],
+  "vaikuntha-ekadashi": [
+   "All sources are secondary (hindutone aggregator, a blog). Temple-level entries (Bhadrachalam, Guruvayur, Mannargudi, Kanchipuram) are single-source; verify with the temples before investor use.",
+   "Tirupati laddu is a year-round prasad, not specific to this day."
+  ],
+  "dussehra-vijayadashami": [
+   "Secondary media only; no temple or government source found for any region."
+  ],
+  "ugadi-gudi-padwa": [
+   "Attire sources are commercial/styling content; consider omitting Ugadi attire entirely if a stricter bar is wanted."
+  ],
+  "vasant-panchami": [
+   "Sources are brand-content/lifestyle pages; Bengal khichdi and patishapta are single-source (Outlook brand content)."
+  ],
+  "chhath-puja": [
+   "Attire rests on a fashion retailer blog; consider omitting.",
+   "Existing site says no onion or garlic; this is widely held but was not confirmed by a source I opened."
+  ],
+  "akshaya-tritiya": [
+   "Simhachalam annadanam is from a 2023 article about that year's arrangements."
+  ],
+  "maha-shivaratri": [
+   "Abhishekam items are offerings, not eaten prasad; labelled as offerings.",
+   "Herath sources disagree on which deity the pot represents; consider a Kashmiri Pandit source before publishing."
+  ],
+  "karva-chauth": [
+   "Single source (Pioneer); arghya, mother-in-law and thali-passing also appear in the existing site text but were not verified on a second page."
+  ],
+  "pateti": [
+   "Existing site lists Dhansak under food; The Better India also lists it for Navroz lunch, but the drafter omitted it as not traditionally festive for all Parsis. Founder or a Parsi advisor should decide.",
+   "'Prasad' is not a Parsi term; the field is reused for fire-temple offerings and shared sweets, so consider a different label for this page.",
+   "Table item 'image of Zarathustra' is per the source; confirm with a Parsi reviewer."
+  ]
+ }
+}

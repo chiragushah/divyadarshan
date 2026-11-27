@@ -326,6 +326,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── DUSSEHRA / VIJAYADASHAMI ───────────────────────
   {
     slug: 'dussehra-vijayadashami',
+    prasadByRegion: [
+      {
+        "region": "Tamil Nadu and Karnataka",
+        "note": "Sundal (tempered legumes) is made daily during Navaratri and offered as prasad on Vijayadashami."
+      },
+      {
+        "region": "Odisha",
+        "note": "Temple prasad includes ghee-cooked rice with lentils and chhena sweets."
+      },
+      {
+        "region": "Bengal",
+        "note": "In Kolkata married women offer vermilion and sweets to Durga before sindoor khela."
+      },
+      {
+        "region": "Uttar Pradesh and Delhi",
+        "note": "Food is offered to the deity as bhog before it is served to the family."
+      }
+    ],
     image: '/festivals/dussehra-vijayadashami.jpg',
     foodByRegion: [
       { region: 'Gujarat', note: 'Fafda-jalebi — the quintessential Dussehra morning treat.' },
@@ -406,6 +424,46 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── MAHA SHIVARATRI ───────────────────────
   {
     slug: 'maha-shivaratri',
+    foodByRegion: [
+      {
+        "region": "North India",
+        "note": "Fasting meals are mostly grain substitutes served warm for the lingering winter chill; kuttu ki puri is popular."
+      },
+      {
+        "region": "Western India (Maharashtra and Gujarat)",
+        "note": "Fasting tables include sabudana dishes, rajgira breads and peanut-based dishes."
+      },
+      {
+        "region": "Kashmir (Herath)",
+        "note": "Kashmiri Pandits celebrate Herath over several days, with a feast that includes mutton and fish (gad) dishes such as rogan josh and yakhni, unlike the vegetarian fast elsewhere; the celebrations end with Salaam, an exchange of greetings."
+      },
+      {
+        "region": "Odisha and parts of Bengal",
+        "note": "Simple fruit-based fasting and milk offerings; at Lingaraj Temple, Bhubaneswar, devotees fast until the Mahadeep is carried up the spire around 10 PM or midnight, and the fast then ends."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Kashmir (Herath)",
+        "note": "Walnuts soaked in water are kept overnight in a clay pot and distributed as prasad in place of sweets; the pot is worshipped in the form of Watuk (Vatuk) Bhairav."
+      },
+      {
+        "region": "Varanasi",
+        "note": "Devotees offer milk, water, honey and bael leaves to the linga at Kashi Vishwanath."
+      },
+      {
+        "region": "Maharashtra",
+        "note": "Temples perform abhishekam with milk, curd, honey, sugarcane juice and water."
+      },
+      {
+        "region": "South India",
+        "note": "Abhishekam uses milk, tender coconut water, sandalwood paste, vibhuti and bilva leaves."
+      },
+      {
+        "region": "Western India",
+        "note": "Panchamrit of milk, curd, honey, sugar and ghee is distributed afterwards as prasad."
+      }
+    ],
     image: '/festivals/maha-shivaratri.jpg',
     attireByRegion: [
       { region: 'Varanasi & North India', note: 'Simple white or earthy clothing for the all-night vigil; rudraksha malas and vibhuti (sacred ash) on the forehead.' },
@@ -736,6 +794,50 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── HANUMAN JAYANTI ───────────────────────
   {
     slug: 'hanuman-jayanti',
+    foodByRegion: [
+      {
+        "region": "Tamil Nadu, Andhra Pradesh and Karnataka",
+        "note": "Vada mala: a garland of 11, 51 or 108 urad dal vadas spiced with black pepper, described as the most iconic South Indian offering."
+      },
+      {
+        "region": "North India",
+        "note": "Sweet boondi and besan laddoos are favoured; imarti is offered on Tuesdays."
+      },
+      {
+        "region": "Punjab and Haryana",
+        "note": "Many Hanuman temples serve langar, community meals open to all."
+      },
+      {
+        "region": "Maharashtra",
+        "note": "Temples hold bhandaras, community meals, with continuous Chalisa and Ramayana recitation."
+      },
+      {
+        "region": "Andhra Pradesh",
+        "note": "A grand feast distributes prasad to all attendees."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Uttar Pradesh",
+        "note": "Prasad is distributed after Hanuman Chalisa recitation and mantra chanting."
+      },
+      {
+        "region": "Delhi and Rajasthan",
+        "note": "Sweets, especially laddoos, are the main offering."
+      },
+      {
+        "region": "Tamil Nadu and Kerala",
+        "note": "Devotees offer butter, vada malas and tulsi leaves at early temple visits."
+      },
+      {
+        "region": "Andhra Pradesh and Telangana",
+        "note": "Devotees apply sindoor to idols and offer betel leaves."
+      },
+      {
+        "region": "Bihar and Jharkhand",
+        "note": "Sweets and fruits are offered in gratitude."
+      }
+    ],
     image: '/festivals/hanuman-jayanti.jpg',
     attireByRegion: [
       { region: 'North India', note: 'Red and orange — kurta with a red tilak; devotees carry the Hanuman Chalisa for the day-long recitation.' },
@@ -897,6 +999,40 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PONGAL ───────────────────────
   {
     slug: 'pongal',
+    foodByRegion: [
+      {
+        "region": "Tamil Nadu",
+        "note": "Sakkarai pongal of new rice cooked with milk, jaggery and cardamom in a pot until it boils over, and savoury ven pongal; sugarcane is offered alongside. Kaanum Pongal, the fourth day, is marked with a large family meal."
+      },
+      {
+        "region": "Sri Lankan Tamil communities",
+        "note": "Sakkarai (jaggery) pongal and ven (white) pongal are cooked in a clay pot. Only Surya Pongal and Mattu Pongal are observed, mainly Surya Pongal in urban areas."
+      },
+      {
+        "region": "Mattu Pongal (cattle day)",
+        "note": "Cattle are given sweet rice and sugarcane and are decorated with polished horns, flower garlands, beads and bells."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Sri Lankan Tamil communities",
+        "note": "New clothes are worn on Bhogi Pongal, the first day, when old belongings are cleared and homes decorated."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Tamil Nadu",
+        "note": "Freshly cooked pongal and sugarcane are offered to Surya, then shared with the family."
+      },
+      {
+        "region": "Sri Lanka",
+        "note": "The cooked pongal is offered to Lord Ganesha and the Sun God, then shared with family and friends."
+      },
+      {
+        "region": "Singapore",
+        "note": "Pongal and sugarcane are offered in the household prayer room, then shared; prayers on Bhogi are addressed to Indra."
+      }
+    ],
     image: '/festivals/pongal.jpg',
     dates2026: '14–17 January 2026 (Bhogi 14, Thai/Surya Pongal 15, Mattu 16, Kaanum 17)',
     dates2027: '14–17 January 2027',
@@ -962,6 +1098,52 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VASANT PANCHAMI ───────────────────────
   {
     slug: 'vasant-panchami',
+    foodByRegion: [
+      {
+        "region": "Bengal",
+        "note": "Bhog khichdi of rice, lentils and vegetables is shared among devotees; sweets include naru (coconut-jaggery balls), moya (popped Kanakchur rice with date-palm jaggery), patishapta and payesh. Kooler chutney (Indian plum) is a seasonal accompaniment."
+      },
+      {
+        "region": "Bihar",
+        "note": "Dahi chura (flattened rice with curd and jaggery or sugar) and khichdi."
+      },
+      {
+        "region": "Western India",
+        "note": "Sweets made with saffron, turmeric or gram flour are common."
+      },
+      {
+        "region": "Maharashtra and Gujarat",
+        "note": "Puran poli and sukhdi, both made with jaggery and wheat."
+      },
+      {
+        "region": "Karnataka, Andhra Pradesh and Tamil Nadu",
+        "note": "Bisi bele bath and kesari bath in Karnataka; pulihora in Andhra Pradesh and sakkarai pongal in Tamil Nadu; jaggery payasam across the southern states."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Bengal and Eastern India",
+        "note": "Students wear yellow in many shades, to school and neighbourhood Saraswati Puja pandals."
+      },
+      {
+        "region": "North India",
+        "note": "Yellow is worn, in keeping with the mustard-flower colour of the season, often for kite-flying."
+      },
+      {
+        "region": "Western India",
+        "note": "Yellow or light-coloured clothes are worn."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Bengal",
+        "note": "Flowers and fruit, with naru, moya and kooler chutney, are offered to the Goddess; students place books and stationery near the idol."
+      },
+      {
+        "region": "Andhra Pradesh and Tamil Nadu",
+        "note": "Pulihora and sakkarai pongal are offered during prayers."
+      }
+    ],
     image: '/festivals/vasant-panchami.jpg',
     dates2026: '23 January 2026',
     dates2027: '11 February 2027',
@@ -1027,6 +1209,42 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RATH YATRA ───────────────────────
   {
     slug: 'rath-yatra',
+    foodByRegion: [
+      {
+        "region": "Puri – Gundicha Temple (Adapa Mandap)",
+        "note": "During the deities' stay, Abadha (also called Anna Bhog) is served at the Adapa Mandap: ghee rice, sweet dal, vegetable and lentil dishes, mixed vegetables, a leafy stir-fry, a seasonal relish and kheer, cooked in the temple kitchens."
+      },
+      {
+        "region": "Puri – Bahuda (return) and Mausi Maa Temple",
+        "note": "Poda pitha, a cake of rice, black gram, jaggery and coconut cooked in ghee, is offered at the Mausi Maa Temple on the return journey. Mohan bhog (semolina ladoo), chatua and khakra are also named among return-journey offerings."
+      },
+      {
+        "region": "Puri – devotees and street stalls",
+        "note": "Khaja, dalma, pakhala bhata, chhena poda, bara ghuguni and gupchup are commonly sold to visitors during the festival days."
+      },
+      {
+        "region": "Baripada (Mayurbhanj)",
+        "note": "Sraddha ladoo of palm jaggery and chana dal is made in the Mausimaa Temple kitchen and handed out to devotees along the chariot route."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Puri – Anna Mahaprasad",
+        "note": "Rice, dal, vegetable dishes and khichdi cooked in the temple kitchens and shared as Mahaprasad; during the Gundicha stay it is served as Abadha."
+      },
+      {
+        "region": "Puri – Adhara Pana",
+        "note": "A sweet drink of milk, sugar, banana and spices is offered to the deities on the chariots in large earthen pots, which are then broken. It is reported to be not for human consumption."
+      },
+      {
+        "region": "Puri – Bahuda and Niladri Bije",
+        "note": "Khaja is distributed from the temple kitchens on the 13th day as a sign of joy. Rasagola is offered on Niladri Bije; a large pot of it is reported to be prepared by priests of the Baladev Jew temple, Kendrapara."
+      },
+      {
+        "region": "Gundicha stay",
+        "note": "Peetha (rice and gram cakes), kotha bhog, khechudi bhog and thali bhog are offered during the nine-day sojourn."
+      }
+    ],
     image: '/festivals/rath-yatra.jpg',
     dates2026: '16 July 2026 (outward journey); Bahuda (return) ~24 July',
     dates2027: '5 July 2027',
@@ -1092,6 +1310,32 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── ONAM ───────────────────────
   {
     slug: 'onam',
+    foodByRegion: [
+      {
+        "region": "Thrikkakara (Kochi)",
+        "note": "The Vamana temple serves Onasadya on Thiruonam: papad and banana chips, pickles, erissery, dal curry, sambar, olan, pachadi and ginger curry, ending with palada pradhaman and a spoonful of rasam sipped from the palm."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Kerala – women",
+        "note": "Kasavu (cream and gold-bordered) sarees are the preferred Onam dress."
+      },
+      {
+        "region": "Kerala – men",
+        "note": "A mundu paired with a matching shirt."
+      },
+      {
+        "region": "South Kerala – Onakkodi",
+        "note": "New clothes (onakkodi) are given as gifts, especially to close relatives, and worn on Thiruonam to welcome Mahabali."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Thrikkakara Temple",
+        "note": "Poovada is described as the main offering on Thiruonam day; a mud form of Thrikkakarayappan is placed on a banana leaf and coated with rice-flour batter."
+      }
+    ],
     image: '/festivals/onam.jpg',
     dates2026: '26 August 2026 (Thiruvonam); the 10 days run ~17–26 Aug',
     dates2027: '12 September 2027 (Thiruvonam)',
@@ -1158,6 +1402,16 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── UGADI / GUDI PADWA ───────────────────────
   {
     slug: 'ugadi-gudi-padwa',
+    attireByRegion: [
+      {
+        "region": "Maharashtra (Gudi Padwa)",
+        "note": "Women commonly wear Paithani or nauvari sarees with accessories such as green glass bangles, a nath and a chandrakor bindi; men wear a dhoti-kurta."
+      },
+      {
+        "region": "Andhra Pradesh, Telangana and Karnataka (Ugadi)",
+        "note": "New clothes are worn; yellow, green, red and white are popular colours, with silk or cotton sarees for women and kurta or dhoti for men."
+      }
+    ],
     image: '/festivals/ugadi-gudi-padwa.jpg',
     prasadByRegion: [
       { region: 'Andhra, Telangana & Karnataka', note: 'Ugadi pachadi (six-taste mix) offered to the deity first; neem flowers and jaggery.' },
@@ -1232,6 +1486,42 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VAIKUNTHA EKADASHI ───────────────────────
   {
     slug: 'vaikuntha-ekadashi',
+    foodByRegion: [
+      {
+        "region": "Phalahar fast (general)",
+        "note": "Permitted foods include fruit such as banana, apple and pomegranate, milk, buttermilk, coconut water, sabudana and dry fruits; rice and grains are avoided. The fast is broken after sunrise on Dwadashi."
+      },
+      {
+        "region": "Srirangam (Tamil Nadu)",
+        "note": "Nirjala fasting (no food or water) with a night-long vigil is encouraged only for devotees who are physically capable. Temple foods in Margazhi include akkaravadisal, selvar appam (made only in Margazhi) and a very thick sambara dosai flavoured with pepper and dried ginger."
+      },
+      {
+        "region": "Tirupati and Andhra temples",
+        "note": "Phalahar is the usual fast, and prasadam such as tamarind-free pulihora is taken after Vaikuntha Dwara darshan."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Tirumala",
+        "note": "The Tirupati laddu, made of gram flour, sugar, ghee, cashews, raisins and cardamom."
+      },
+      {
+        "region": "Srirangam",
+        "note": "Akkaravadisal, a sweet rice pudding of rice, milk, jaggery, ghee and cardamom."
+      },
+      {
+        "region": "Bhadrachalam",
+        "note": "Pulihora (tamarind rice) and sweet pongal."
+      },
+      {
+        "region": "Guruvayur (Kerala)",
+        "note": "Payasam, including palada payasam, aval with jaggery, and fruits."
+      },
+      {
+        "region": "Mannargudi and Kanchipuram",
+        "note": "Panchamirtham and sundal at Rajagopalaswamy temple, Mannargudi; sundal and payasam at Varadaraja Perumal temple, Kanchipuram."
+      }
+    ],
     image: '/festivals/vaikuntha-ekadashi.jpg',
     attireByRegion: [
       { region: 'Tirumala (Andhra)', note: 'Strict temple dress code — men in dhoti/pancha with upper cloth, women in saree or salwar-kameez with dupatta; traditional only.' },
@@ -1300,6 +1590,48 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── CHHATH PUJA ───────────────────────
   {
     slug: 'chhath-puja',
+    foodByRegion: [
+      {
+        "region": "Day 1 - Nahay-Khay",
+        "note": "After a ritual bath, a simple purifying meal of kaddu bhaat (pumpkin curry with plain rice) is eaten before the fast begins."
+      },
+      {
+        "region": "Day 2 - Kharna",
+        "note": "After a day-long fast, kheer is part of the Kharna meal, after which the waterless fast begins."
+      },
+      {
+        "region": "Festival sweets",
+        "note": "Thekua (whole wheat flour, jaggery and ghee, sometimes with cardamom or coconut, deep-fried) and kasar (small balls of roasted rice flour and jaggery), shared with family and neighbours."
+      },
+      {
+        "region": "Seasonal produce",
+        "note": "Sugarcane, coconut, green bananas, pomelo (daabh nimbu), radish, and turmeric and ginger plants with leaves are used as offerings."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Bihar, Jharkhand and eastern Uttar Pradesh",
+        "note": "Sarees in red, yellow and orange are traditional, linked to marital devotion and Surya; mustard and deep pink are also common and black is avoided. Married women apply sindoor, more fully for the evening arghya."
+      },
+      {
+        "region": "Nepal Terai",
+        "note": "Silk sarees are worn, particularly on the main puja days."
+      },
+      {
+        "region": "Men",
+        "note": "A dhoti-kurta, often yellow or cream."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Bamboo soop",
+        "note": "Thekua, kasar and fruit are arranged in bamboo soop and dauria baskets with sugarcane stalks, green bananas, coconuts, pomelo, turmeric and ginger plants and radish, offered to Surya."
+      },
+      {
+        "region": "Home preparation",
+        "note": "Utensils are washed thoroughly, natural ingredients are used and packaged items are avoided; the preparation is itself treated as worship."
+      }
+    ],
     image: '/festivals/chhath-puja.jpg',
     dates2026: '15 November 2026 (Sandhya Arghya); the 4 days run 13–16 Nov',
     dates2027: '3 November 2027 (Sandhya Arghya)',
@@ -1363,6 +1695,36 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GURU PURNIMA ───────────────────────
   {
     slug: 'guru-purnima',
+    foodByRegion: [
+      {
+        "region": "Ashrams and mathas",
+        "note": "Worship is often followed by a feast for disciples, at which prasada and charnamrita are shared."
+      },
+      {
+        "region": "Rajasthan",
+        "note": "Devotees visit temples, perform aarti, chant hymns in praise of their gurus and give food and clothes to the needy."
+      },
+      {
+        "region": "Nepal",
+        "note": "Observed as Teachers' Day; students give teachers gifts such as delicacies and garlands."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Nepal",
+        "note": "Students give teachers a topi, a cap made of local fabric, along with garlands."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Ashrams and mathas",
+        "note": "Charnamrita, the water used to wash the guru's feet, and prasada are shared after padapuja, the worship of the guru's sandals, which stand for his feet."
+      },
+      {
+        "region": "Temples (Vyasa Puja)",
+        "note": "Vyasa Puja at temples features floral offerings and symbolic gifts; in Kerala it includes Vedic hymn chanting and discourses."
+      }
+    ],
     image: '/festivals/guru-purnima.jpg',
     dates2026: '29 July 2026',
     dates2027: '18 July 2027',
@@ -1426,6 +1788,50 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── NAG PANCHAMI ───────────────────────
   {
     slug: 'nag-panchami',
+    foodByRegion: [
+      {
+        "region": "Coastal Maharashtra and Karnataka",
+        "note": "Patholi: rice-flour batter with coconut and jaggery, steamed in turmeric leaves."
+      },
+      {
+        "region": "Karnataka",
+        "note": "Karida kadubu: steamed rice-flour dumplings filled with grated coconut, green chilli, ginger and cumin, served with ghee."
+      },
+      {
+        "region": "Maharashtra",
+        "note": "Puran poli, kheer and chakli are prepared and offered as naivedya during the puja."
+      },
+      {
+        "region": "Tamil Nadu",
+        "note": "Paal kozhukattai: rice-flour dumplings simmered in sweetened milk with cardamom."
+      },
+      {
+        "region": "West Bengal",
+        "note": "Raskadam: chenna balls soaked in sugar syrup and coated in khoya."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Maharashtra",
+        "note": "Milk, flowers, sweets and turmeric are offered to clay or metal snake idols; milk and honey are poured into anthills decorated with flowers and turmeric paste."
+      },
+      {
+        "region": "Gujarat",
+        "note": "Milk and rice are offered to snake idols; snake images are drawn on walls with geru (red soil paste)."
+      },
+      {
+        "region": "Tamil Nadu",
+        "note": "Turmeric, vermilion and milk are offered to silver, stone or mud snake images and at snake pits; snake-shaped kolams are drawn."
+      },
+      {
+        "region": "Andhra Pradesh and Telangana",
+        "note": "Turmeric, kumkum and milk are offered to small snake figures, and oil lamps are lit near snake holes."
+      },
+      {
+        "region": "West Bengal",
+        "note": "Flowers, milk and sweets are offered at shrines of the serpent goddess Manasa."
+      }
+    ],
     image: '/festivals/nag-panchami.jpg',
     dates2026: '17 August 2026',
     dates2027: '6 August 2027',
@@ -1489,6 +1895,32 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RAKSHA BANDHAN ───────────────────────
   {
     slug: 'raksha-bandhan',
+    prasadByRegion: [
+      {
+        "region": "Rajasthan, UP & Haryana",
+        "note": "Kheer is offered to the gods before the family eats it, and ghevar, a honeycomb-like fried sweet soaked in sugar syrup, is a staple of the day."
+      },
+      {
+        "region": "Maharashtra (Narali Purnima)",
+        "note": "Coastal fishing communities offer coconuts to the sea; narali bhaat, a jaggery-sweetened coconut rice with cardamom, and puran poli are the signature dishes."
+      },
+      {
+        "region": "Odisha (Gamha Purnima)",
+        "note": "The day honours Lord Balabhadra and farm cattle; taal pitha and manda pitha, steamed dumplings, are central to the feast."
+      },
+      {
+        "region": "Punjab",
+        "note": "Sisters apply a tilak on the brother's forehead, and families share sweets such as jalebi and ladoo."
+      },
+      {
+        "region": "Gujarat (Pavitropana)",
+        "note": "Devotees offer water to the Shiva lingam and seek his blessings."
+      },
+      {
+        "region": "Uttarakhand",
+        "note": "Devotees bathe in a river and wear a new sacred thread, and priests tie a raksha sutra on them."
+      }
+    ],
     image: '/festivals/raksha-bandhan.jpg',
     foodByRegion: [
       { region: 'Rajasthan & North India', note: 'Ghevar — the signature Rakhi sweet — along with kaju katli and barfi.' },
@@ -1561,6 +1993,42 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KARVA CHAUTH ───────────────────────
   {
     slug: 'karva-chauth',
+    foodByRegion: [
+      {
+        "region": "Punjab and Haryana (sargi)",
+        "note": "Pre-dawn sargi, typically given by the mother-in-law, includes doodh pheni, meethi seviyan, suji halwa, mathri, pinni or panjiri, and sometimes methi-ajwain paratha or dry black chana. Contents vary by household."
+      },
+      {
+        "region": "Punjab (after moonrise)",
+        "note": "Sabut maa ki dal, kadhi pakora and dry-style pindi chole; in some Punjabi homes kachi lassi is used to end the fast."
+      },
+      {
+        "region": "Uttar Pradesh",
+        "note": "Dal ke fare and urad dal ki kachori."
+      },
+      {
+        "region": "Rajasthan",
+        "note": "Gatte ki sabzi, ker sangri, missi roti and churma."
+      },
+      {
+        "region": "Across North India",
+        "note": "Dahi bade and besani dahi pakori, with desserts such as chawal kheer, makhana kheer and malpua."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "North India (puja thali)",
+        "note": "The thali holds lamps, grains, sweets and the karva; meethi poori, gulgule and mewa laddoo are common offerings, and the thali is passed around during the katha."
+      },
+      {
+        "region": "Karva (clay pot)",
+        "note": "The karva, traditionally filled with water, is used in worship; the water is offered to the moon as arghya."
+      },
+      {
+        "region": "Baya gifts",
+        "note": "Gifts such as coconuts, fruit, clothing and homemade sweets are exchanged between a woman's parental and marital families."
+      }
+    ],
     image: '/festivals/karva-chauth.jpg',
     attireByRegion: [
       { region: 'Punjab & Haryana', note: 'Bridal red or maroon — sarees, lehengas or Punjabi suits — with full solah shringar, the chooda (bangles) and kaleere; the sargi finery chosen by the mother-in-law.' },
@@ -1627,6 +2095,50 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── AKSHAYA TRITIYA ───────────────────────
   {
     slug: 'akshaya-tritiya',
+    foodByRegion: [
+      {
+        "region": "Maharashtra",
+        "note": "Puran poli with katachi amti, aamras (mango pulp) and shrikhand-puri; newly married daughters are invited to their maternal homes and served special dishes."
+      },
+      {
+        "region": "Gujarat and Rajasthan",
+        "note": "Lapsi, a sweet of broken wheat roasted in ghee and cooked with jaggery or sugar; shrikhand in Gujarat and Maharashtra."
+      },
+      {
+        "region": "Telangana and Andhra Pradesh",
+        "note": "Panakam (jaggery and pepper drink) and vadapappu (soaked moong dal)."
+      },
+      {
+        "region": "Karnataka and South India",
+        "note": "Kosambari, thayir sadam (curd rice) and payasam made with chana or moong dal and jaggery."
+      },
+      {
+        "region": "Odisha",
+        "note": "Dalma and dahi pakhala; farmers offer the first handful of rice seed to the gods before the sowing season (Akhi Muthi Anukula)."
+      },
+      {
+        "region": "Jain tradition",
+        "note": "The day recalls Rishabhanatha ending his year-long fast with sugarcane juice offered by King Shreyansha."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Telangana and Andhra Pradesh",
+        "note": "Panakam and vadapappu are offered to the deities as naivedyam."
+      },
+      {
+        "region": "Jain tradition",
+        "note": "Rishabhanatha's idol is bathed with water, milk and sugarcane juice in Snatra Puja; ahara daan (food offering) is made to monks, nuns and the needy."
+      },
+      {
+        "region": "Odisha",
+        "note": "The first handful of rice seed is offered to the gods before sowing."
+      },
+      {
+        "region": "Simhachalam (Andhra)",
+        "note": "At Chandanotsavam the deity, normally covered in sandalwood paste, is shown in its true form (Nija Rupa) once a year; the temple arranges free annadanam for pilgrims."
+      }
+    ],
     image: '/festivals/akshaya-tritiya.jpg',
     dates2026: '19 April 2026',
     dates2027: '8 May 2027',
@@ -1691,6 +2203,40 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KARTIK PURNIMA / DEV DEEPAWALI ───────────────────────
   {
     slug: 'kartik-purnima-dev-deepawali',
+    foodByRegion: [
+      {
+        "region": "Tamil Nadu (Karthigai Deepam)",
+        "note": "Pori urundai (puffed-rice and jaggery balls), nei appam, adhirasam and kara appam are typical, along with maa vilakku, an edible lamp of rice flour and jaggery offered as neivedyam."
+      },
+      {
+        "region": "Andhra Pradesh & Telangana (Karthika Pournami)",
+        "note": "Pulihora, bellam paravannam (jaggery rice pudding), ariselu, bobbatlu, gavvalu and rava laddu are commonly prepared."
+      },
+      {
+        "region": "Kerala",
+        "note": "Unniyappam, nei payasam, ada pradhaman, paal payasam and banana fritters are listed among the offerings."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Sikh community (Guru Nanak Jayanti)",
+        "note": "Visitors to a gurdwara cover their heads and remove their shoes before entering the prayer hall."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Tamil Nadu",
+        "note": "Pori urundai is prepared as naivedyam and shared among the family as prasadam after the prayers."
+      },
+      {
+        "region": "Tiruvannamalai (Tamil Nadu)",
+        "note": "The Karthigai Mahadeepam is lit on top of Annamalai Hill, visible from miles away, ending a nine-day festival."
+      },
+      {
+        "region": "Gurdwaras (Guru Nanak Jayanti)",
+        "note": "Karah prasad is served at gurdwara ceremonies, and langar is free and open to all."
+      }
+    ],
     image: '/festivals/kartik-purnima-dev-deepawali.jpg',
     dates2026: '24 November 2026 (Dev Deepawali observed on the eve, 23 Nov)',
     dates2027: '13 November 2027',
@@ -1755,6 +2301,36 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── THAIPUSAM ───────────────────────
   {
     slug: 'thaipusam',
+    foodByRegion: [
+      {
+        "region": "Tamil Nadu (Palani)",
+        "note": "Thousands of devotees fast for about 41 days before gathering at the Dhandayuthapani temple for Thaipoosam."
+      },
+      {
+        "region": "Malaysia",
+        "note": "Devotees prepare for 48 days with a vegetarian diet and no alcohol or smoking; men typically do not shave or cut their hair in this period."
+      },
+      {
+        "region": "Singapore",
+        "note": "Volunteers provide food and drinks to kavadi bearers; one bearer says he eats something light before beginning his prayers. Panchamirutham (banana, jackfruit, dates, honey and sugar) is among the offerings."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Malaysia (Batu Caves, Penang)",
+        "note": "On the day devotees wear yellow and walk barefoot to the Murugan temple; some shave their heads as a sign of surrender."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Palani, Tamil Nadu",
+        "note": "Palani Panchamirtham, an abhishekam prasadam, is made from banana, jaggery or khandsari sugar, ghee, honey and cardamom, with dates, raisins and sugar candy; it received a GI tag in 2019 and is reported as the first temple prasadam to do so."
+      },
+      {
+        "region": "Singapore",
+        "note": "After the abishekam at the Sri Thendayuthapani Temple, devotees receive sacred ash from the temple."
+      }
+    ],
     image: '/festivals/thaipusam.jpg',
     dates2026: '1 February 2026',
     dates2027: '21 February 2027 (confirm locally)',
@@ -1820,6 +2396,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── THRISSUR POORAM ───────────────────────
   {
     slug: 'thrissur-pooram',
+    foodByRegion: [
+      {
+        "region": "Thrissur, Kerala",
+        "note": "Festival food often includes the Kerala sadya, along with temple prasadam; visitors also eat payasam and Kerala-style dishes at stalls and eateries."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Kerala",
+        "note": "Many people wear traditional Kerala dress, such as the kasavu saree or mundu, which suits the temple setting and long hours in crowds."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Vadakkunnathan Temple, Thrissur",
+        "note": "Devotees come for darshan and make offerings at the temple, and temple prasadam is part of festival food; specific items were not confirmed."
+      }
+    ],
     image: '/festivals/thrissur-pooram.jpg',
     dates2026: '26 April 2026',
     dates2027: 'May 2027 (Pooram asterism in Medam — confirm locally)',
@@ -1883,6 +2477,24 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BAISAKHI ───────────────────────
   {
     slug: 'baisakhi',
+    attireByRegion: [
+      {
+        "region": "Punjab (gurdwara visit)",
+        "note": "Women wear white with an orange dupatta over the head; men follow a similar white and orange scheme with an orange turban."
+      },
+      {
+        "region": "Punjab (Nagar Kirtan processions and melas)",
+        "note": "Brighter dress: women in vibrant lehenga choli or salwar kameez, men in colourful silk kurtas with pyjamas or lungis, with heavy jewellery such as maang tika and paayal. Phulkari work on dupattas is among the handicrafts shown at Baisakhi melas."
+      },
+      {
+        "region": "Punjab (Bhangra and Gidda)",
+        "note": "Bhangra dancers traditionally wear a white kurta with a coloured lungi and a turban (pag), though many colours are seen; Gidda dancers wear salwar kameez or lehenga choli."
+      },
+      {
+        "region": "Khalsa Sikhs",
+        "note": "Initiated Sikhs wear the five Ks at all times: kes (uncut hair, covered by a turban), kangha, kara, kachera and kirpan. The Khalsa was founded on Baisakhi in 1699."
+      }
+    ],
     image: '/festivals/baisakhi.jpg',
     prasadByRegion: [
       { region: 'Punjab', note: 'Kada prasad (sacred wheat-ghee-sugar halwa) and langar served at the gurdwara.' },
@@ -1958,6 +2570,36 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GURU NANAK JAYANTI ───────────────────────
   {
     slug: 'guru-nanak-jayanti',
+    foodByRegion: [
+      {
+        "region": "Gurdwara langar (all regions)",
+        "note": "A free vegetarian meal served to all seated together: dal (such as maa di dal), roti, rice, seasonal sabzi, raita or salad and kheer; halwa is also served."
+      },
+      {
+        "region": "Punjab (homes and festive meals)",
+        "note": "Popular festive dishes include sarson da saag with makki di roti, chole with bhature or kulche, pinni and lassi or chaas, though none is exclusive to the day."
+      },
+      {
+        "region": "Family practice, Mohali and Patiala",
+        "note": "Families describe langar of dal, roti, rice, aloo gobhi or mixed vegetable sabzi, pickle and kheer, with kadha prashad."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Punjab and Sikh communities",
+        "note": "Traditional attire is common: men wear kurta-pyjama with a turban (dastar/pagri), and women wear Punjabi suits or salwar-kameez with a dupatta. Visitors cover their heads and remove their shoes in the gurdwara."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Gurdwaras (all regions)",
+        "note": "Karah (kadha) prasad, made from equal measures of whole-wheat flour, ghee and sugar with water, is placed before the Guru Granth Sahib and, after the ardas, shared with the congregation, who receive it in cupped hands."
+      },
+      {
+        "region": "Punjab homes",
+        "note": "Families prepare kadha prashad with heads covered and shoes removed, chanting \"Waheguru\" while cooking; some add no dry fruit, in keeping with the Gurus' emphasis on simplicity."
+      }
+    ],
     image: '/festivals/guru-nanak-jayanti.jpg',
     dates2026: '24 November 2026',
     dates2027: '14 November 2027 (confirm locally)',
@@ -2022,6 +2664,44 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── MAHAVIR JAYANTI ───────────────────────
   {
     slug: 'mahavir-jayanti',
+    foodByRegion: [
+      {
+        "region": "Gujarat",
+        "note": "Jain households prepare dishes without onion, garlic or root vegetables, such as dudhi muthia, sev tameta, kobi vatana nu shaak and fada ni khichdi, with sweets like shrikhand, lapsi and mohanthal."
+      },
+      {
+        "region": "Rajasthan",
+        "note": "Gatte ki sabzi, kadhi and moong dal are among the dishes listed for the day, cooked without root vegetables."
+      },
+      {
+        "region": "Karnataka and Maharashtra",
+        "note": "Rice- and lentil-based preparations predominate."
+      },
+      {
+        "region": "Fasting households (all regions)",
+        "note": "Practice varies: some devotees keep a full 24-hour fast, others take a simple meal or only fruit and vegetables, and the fast is usually followed by a simple vegetarian family meal."
+      },
+      {
+        "region": "Charity",
+        "note": "Some communities cook meals for people in need as part of the day's giving; the food avoids root vegetables."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Monastic communities",
+        "note": "Svetambara monks and nuns wear white; Digambara monks are unclothed and Digambara nuns wear white. This is standing monastic discipline, not a festival costume."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Jain temples (all regions)",
+        "note": "During the Janma Kalyanak abhishek and puja, devotees bathe the image of Mahavira and offer items such as milk, rice and fruit."
+      },
+      {
+        "region": "Home feast",
+        "note": "At the end of the day, lay families return home to a celebratory vegetarian feast with distinctive recipes."
+      }
+    ],
     image: '/festivals/mahavir-jayanti.jpg',
     dates2026: '31 March 2026',
     dates2027: '18 April 2027',
@@ -2086,6 +2766,60 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BUDDHA PURNIMA ───────────────────────
   {
     slug: 'buddha-purnima',
+    foodByRegion: [
+      {
+        "region": "India",
+        "note": "A vegetarian diet is common, and kheer (rice pudding) is traditionally eaten, recalling Sujata's offering to the Buddha."
+      },
+      {
+        "region": "Nepal (Newar community, Kathmandu Valley)",
+        "note": "Sweet rice pudding is eaten, as in India."
+      },
+      {
+        "region": "Sri Lanka",
+        "note": "Free food stalls called dansal line the roads and welcome everyone. Slaughterhouses and liquor shops close for the two-day Vesak holiday."
+      },
+      {
+        "region": "Thailand and Cambodia",
+        "note": "Laypeople offer food and alms to monks at the temple (Visakha Puja in Thailand, Visak Bochea in Cambodia). Some people avoid meat and alcohol during Vesak."
+      },
+      {
+        "region": "Ladakh (Saga Dawa, Hanle valley)",
+        "note": "Host villages serve the circumambulation procession buns, cold drinks and salt tea."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "India",
+        "note": "Buddhists typically wear white when visiting temples and monasteries to hear sermons."
+      },
+      {
+        "region": "Nepal",
+        "note": "Women often go to temples dressed in white."
+      },
+      {
+        "region": "Sri Lanka",
+        "note": "Buddhist families dress in white and go to temples to observe sil, a day of keeping the precepts."
+      },
+      {
+        "region": "Ladakh (Hanle)",
+        "note": "In a 2022 report of the Saga Dawa procession, women wore traditional dress including the sulma gown."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "India and Nepal",
+        "note": "Offerings to the Buddha include flowers and incense, and kheer is eaten at the festival. Buddhism has no prasad as such, so these are offerings rather than blessed food."
+      },
+      {
+        "region": "Thailand and Cambodia",
+        "note": "Flowers, candles, incense and food are offered at the temple, and monks receive alms."
+      },
+      {
+        "region": "China and Hong Kong",
+        "note": "A bathing ceremony pours scented, blessed water over a statue of the infant Buddha."
+      }
+    ],
     image: '/festivals/buddha-purnima.jpg',
     dates2026: '1 May 2026',
     dates2027: '20 May 2027 (confirm locally)',
@@ -2150,6 +2884,56 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── SABARIMALA MAKARAVILAKKU ───────────────────────
   {
     slug: 'sabarimala-makaravilakku',
+    foodByRegion: [
+      {
+        "region": "During the 41-day vratham (all regions)",
+        "note": "Strictly vegetarian, freshly cooked food; meat, fish and addictive substances are avoided and rice is limited to once a day. Pulses, vegetables and fruit make up much of the diet."
+      },
+      {
+        "region": "Irumudi provisions",
+        "note": "The pilgrim's two-compartment bundle holds puja items such as ghee-filled coconuts, and food such as flattened rice (aval), puffed rice (malar), jaggery and bananas, according to one pilgrim guide."
+      },
+      {
+        "region": "On the forest route (traditional)",
+        "note": "Pilgrims once cooked their own meals on the way, carrying rice and utensils; puzhukku, a vegetable dish of tubers or jackfruit, is a traditional pilgrim dish of the season."
+      },
+      {
+        "region": "Annadanam at Sannidhanam",
+        "note": "Free meals are served under the Travancore Devaswom Board. In November 2025 the Board announced a change from pulao and sambar to a Kerala sadya, so the menu may have changed since."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "All pilgrims",
+        "note": "Simple, single-coloured clothes, usually black, blue or saffron, worn through the vratham, with a tulsi or rudraksha bead chain worn from the start of the penance. Pilgrims walk barefoot."
+      },
+      {
+        "region": "Kerala",
+        "note": "Malayali pilgrims usually wear saffron, according to one pilgrim guide."
+      },
+      {
+        "region": "Tamil Nadu",
+        "note": "Tamil devotees usually prefer blue, and some wear green, per the same guide."
+      },
+      {
+        "region": "Karnataka and Andhra Pradesh",
+        "note": "Black is generally preferred by pilgrims from these states, per the same guide."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Sabarimala Sannidhanam (take-home)",
+        "note": "Aravana payasam, a thick sweet payasam, and appam are the prasadam devotees take home; the Board's food-safety labs test both."
+      },
+      {
+        "region": "Sabarimala daily naivedyam",
+        "note": "Idichu pizhinja payasam (coconut milk and jaggery) at Usha Pooja, ellu payasam (sesame) at night, and panakam, appam and ada at Athazha Pooja."
+      },
+      {
+        "region": "Pre-dawn abhishekam",
+        "note": "Panchamritham of rock candy, jaggery, kadali banana, raisins, ghee, honey, cardamom and dried ginger is prepared for the 3 am abhishekam and sold to take home."
+      }
+    ],
     image: '/festivals/sabarimala-makaravilakku.jpg',
     dates2026: '14 January 2026 (Makaravilakku); season ~mid-Nov 2025 to mid-Jan 2026',
     dates2027: '15 January 2027 (Makaravilakku)',
@@ -2213,6 +2997,48 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── GANGAUR ───────────────────────
   {
     slug: 'gangaur',
+    foodByRegion: [
+      {
+        "region": "Rajasthan (general)",
+        "note": "Ghevar is characteristic of Gangaur and is bought to eat and share with relatives. Gangauri gune (flour shaped like ornaments, sometimes sweetened) and malpua with rabri are also made, though none is obligatory for every community."
+      },
+      {
+        "region": "Rajasthan (sinjara gifts)",
+        "note": "The sinjara sent from a married woman's maternal home traditionally includes ghevar. Mohanthal, churma laddoo, ker-sangri and bajra roti with ghee feature among festive foods."
+      },
+      {
+        "region": "Jodhpur",
+        "note": "Mawa kachori is a local sweet dish named among Gangaur-season foods."
+      },
+      {
+        "region": "Malwa and Nimar (Madhya Pradesh)",
+        "note": "Dal-bafla (baked wheat balls with ghee, dal and chutneys, sometimes churma) is the local festive dish."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Rajasthan",
+        "note": "Women wear traditional clothing and jewellery for the daily worship, and mehndi on hands and feet is part of the festival. Unmarried girls carry lit earthen pots (ghudlia) on their heads."
+      },
+      {
+        "region": "Rajasthan (traditional dress)",
+        "note": "Women's dress is a ghagra, kanchli (blouse) and odhni, with bandhej and laheriya prints popular, and borla or rakhdi head ornaments and jadau jewellery."
+      },
+      {
+        "region": "Jodhpur (Dhinga Gavar)",
+        "note": "At night women, mostly from Pushkarna Brahmin families, patrol the streets in costumes of deities, saints, police officers and other figures, carrying sticks. The Gauri images are dressed in traditional Rajasthani costume and gold jewellery."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Rajasthan (household puja)",
+        "note": "Water, flowers, rice, kumkum and roli are offered with fruit, sweets, mehndi and bangles, and kheer is served as prasad after the puja."
+      },
+      {
+        "region": "Rajasthan (Gauri puja)",
+        "note": "Gangauri gune are shaped from flour and shared among female relatives after worship."
+      }
+    ],
     image: '/festivals/gangaur.jpg',
     dates2026: '21 March 2026 (Gauri Tritiya); the 18 days begin the day after Holi',
     dates2027: '9 April 2027',
@@ -2276,6 +3102,40 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── NARASIMHA JAYANTI ───────────────────────
   {
     slug: 'narasimha-jayanti',
+    foodByRegion: [
+      {
+        "region": "Fasting households",
+        "note": "Many keep a strict nirjala (waterless) fast until the evening puja. Children, the elderly, the unwell and pregnant women are advised a fruit-based phalahara fast instead."
+      },
+      {
+        "region": "Andhra Pradesh (Mangalagiri)",
+        "note": "At the Panakala Narasimha Swamy temple devotees pour panakam (jaggery water) into the deity's open mouth, and about half of it flows back out regardless of the amount."
+      },
+      {
+        "region": "South Indian homes",
+        "note": "Offerings to Narasimha at the evening puja include panakam, kosambari (soaked moong dal salad) and coconut-jaggery sweets."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Yadadri (Telangana)",
+        "note": "For sevas, Nitya Kalyanam and homams women wear a saree or churidar with a chunni, and men a dhoti or white lungi with an upper cloth. General queue darshan is exempt from the dress code."
+      },
+      {
+        "region": "Hill shrines (Sholinghur and others)",
+        "note": "Modest clothing and sturdy footwear are advised for the climb. Sholinghur's Yoga Narasimha shrine is reached by about 1,305 steps."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Mangalagiri (Andhra Pradesh)",
+        "note": "Panakam is poured into the deity's opening, and devotees take home the half that flows back out as prasad."
+      },
+      {
+        "region": "Simhachalam (Visakhapatnam)",
+        "note": "The Varaha Lakshmi Narasimha deity is covered in sandalwood paste all year. The paste is removed only once, on Akshaya Tritiya, for Nija Rupa darshan."
+      }
+    ],
     image: '/festivals/narasimha-jayanti.jpg',
     dates2026: '30 April 2026',
     dates2027: '19 May 2027 (confirm locally)',
@@ -2338,6 +3198,40 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── ASHADHI EKADASHI / PANDHARPUR WARI ───────────────────────
   {
     slug: 'ashadhi-ekadashi-pandharpur-wari',
+    foodByRegion: [
+      {
+        "region": "On the wari route",
+        "note": "Many pilgrims depend on villagers and benefactors for meals and other needs along the walk."
+      },
+      {
+        "region": "Warkari diet",
+        "note": "Warkaris are described as strict vegetarians who avoid alcohol and tobacco."
+      },
+      {
+        "region": "Pandharpur",
+        "note": "One visitor reported a free kheer langar run by a local swami near the temple."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Warkari men",
+        "note": "A white kurta and pyjama or shirt with a white Gandhi cap; some wear colourful turbans."
+      },
+      {
+        "region": "All Warkaris",
+        "note": "A mala of tulsi beads is worn around the neck."
+      },
+      {
+        "region": "Women pilgrims",
+        "note": "Some women carry tulsi plants (or pots of water) on their heads and the tulsi is offered at the temple."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Pandharpur",
+        "note": "Some women carry tulsi plants on their heads to offer at the Vitthal temple."
+      }
+    ],
     image: '/festivals/ashadhi-ekadashi-pandharpur-wari.jpg',
     dates2026: '25 July 2026 (Ashadhi/Devshayani Ekadashi); the Wari walk fills the 3 weeks before',
     dates2027: '13 July 2027',
@@ -2402,6 +3296,44 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KANWAR YATRA ───────────────────────
   {
     slug: 'kanwar-yatra',
+    foodByRegion: [
+      {
+        "region": "Meerut–Delhi camps",
+        "note": "Roadside camps run by organisations serve vegetarian meals cooked without onion and garlic, from poha, jalebi and chhole-puri to pulao, kheer, halwa and lassi, with kesar doodh in clay kulhads after the journey. Many camps now also serve modern snacks such as pasta and momos."
+      },
+      {
+        "region": "Fasting kanwariyas (camps in Uttar Pradesh and Delhi)",
+        "note": "Falahari meals of kuttu (buckwheat) and singhara (water chestnut) flour, potato curry and seasonal fruit; most devotees also fast on the Mondays of Shravan."
+      },
+      {
+        "region": "Sultanganj to Deoghar (Bihar–Jharkhand)",
+        "note": "Pilgrims keep to a vegetarian diet and brahmacharya; many avoid rice and salt, and some live only on fruit or fruit juice."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Haridwar and the Delhi–Uttar Pradesh highways",
+        "note": "Saffron clothes, worn barefoot on the walk, with the decorated kanwar carried on the shoulder."
+      },
+      {
+        "region": "Sultanganj to Deoghar (regular kanwariyas)",
+        "note": "Saffron clothes."
+      },
+      {
+        "region": "Sultanganj to Deoghar (Dak Bam)",
+        "note": "Those who run the route within about 24 hours wear white, with name and contact details written on the back, and carry a whistle, torch, stick and ghungroo belt."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Deoghar (Baidyanath Dham)",
+        "note": "Pilgrims bring back Deoghar peda, chuda and elaichi-dana as prasad."
+      },
+      {
+        "region": "Sultanganj and Baidyanath Dham",
+        "note": "Ganga water is collected at Ajgaibinath Dham, Sultanganj and carried about 105 km barefoot, without the containers touching the ground, to be offered to Shiva at Baidyanath; pilgrims may bathe in the Shivganga pond near the temple first."
+      }
+    ],
     image: '/festivals/kanwar-yatra.jpg',
     dates2026: 'Through Shravan — ~10 July to 9 August 2026 (peaks on Shravan Shivaratri, ~11 Aug)',
     dates2027: 'Through Shravan — late July to late August 2027',
@@ -2466,6 +3398,40 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KARTHIGAI DEEPAM ───────────────────────
   {
     slug: 'karthigai-deepam',
+    foodByRegion: [
+      {
+        "region": "Tamil Nadu (home neivedyam)",
+        "note": "Pori urundai (with aval and nel pori variations), adhirasam, vella seedai, nei appam, thattai and kadalai urundai (groundnut-jaggery balls) are the festival sweets and snacks."
+      },
+      {
+        "region": "Tamil Nadu (edible lamps)",
+        "note": "Maavilakku, small lamps of rice flour and jaggery filled with ghee and a wick, are lit before the deities; some families also make rice-flour or kozhukattai lamps."
+      },
+      {
+        "region": "Tamil Nadu (savouries)",
+        "note": "Milagu adai, also called Thirukarthigai adai (a pepper-spiced adai), vadai, kozhukattai and pongal are made alongside the sweets."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Tamil Nadu (homes)",
+        "note": "Women commonly wear colourful silk saris while drawing kolams at the house entrance."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Tamil Nadu (home puja)",
+        "note": "Pori, adhirasam, vella seedai, vetrilai-pakku (betel leaf and areca nut) and fruit are offered; pori is placed in the lamp."
+      },
+      {
+        "region": "Tiruvannamalai",
+        "note": "The Maha Deepam is lit in a cauldron of ghee and camphor atop Arunachala, and devotees chant 'Annamalaiyarukku Arohara'; in 2022 the HR&CE minister opened a sales centre for prasad and religious texts."
+      },
+      {
+        "region": "Day after Deepam (Tamil homes)",
+        "note": "Simple offerings of fruit, dry grapes or kalkandu (rock-sugar candy) are made on the next evening when lamps are lit again."
+      }
+    ],
     image: '/festivals/karthigai-deepam.jpg',
     dates2026: '23 November 2026',
     dates2027: '12 December 2027 (confirm locally)',
@@ -2530,6 +3496,36 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── KUMBH MELA ───────────────────────
   {
     slug: 'kumbh-mela',
+    foodByRegion: [
+      {
+        "region": "Prayagraj (kalpvas)",
+        "note": "Kalpvasis stay a month at the Mela, rise before sunrise to bathe daily in the Ganga, and eat simple sattvik meals, observing Nitya Vrat (daily fasting) or Kamya Vrat (fasting for a wish)."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Pilgrims and visitors (Prayagraj guidance)",
+        "note": "Light cotton clothing that covers shoulders and legs is advised: sarees or cotton salwar kameez for women, cotton kurta with pyjama, lungi or dhoti for men, plus a shawl or scarf for cold mornings; pilgrims may need to go barefoot at temples and bathing ghats."
+      },
+      {
+        "region": "Kalpvasis at Prayagraj",
+        "note": "Those who take Veeni Daan have the hair shaved except the top-knot and offered to the Ganga."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Prayagraj (Triveni Sangam)",
+        "note": "Kalpvasis perform dev pujan, worship of the deities believed to visit the Sangam during the Kumbh, and give daan of gold, clothing or cows."
+      },
+      {
+        "region": "Haridwar (Har Ki Pauri)",
+        "note": "Ceremonial baths and the Ganga aarti take place at Har Ki Pauri ghat."
+      },
+      {
+        "region": "Nashik (Ramkund)",
+        "note": "The holy dip is taken at Ramkund on the Godavari, a site linked to legends of Lord Rama."
+      }
+    ],
     image: '/festivals/kumbh-mela.jpg',
     dates2026: 'No Kumbh in 2026; the next is the Nashik–Trimbakeshwar Simhastha Kumbh in 2027',
     dates2027: 'Nashik–Trimbakeshwar Simhastha Kumbh (2027); exact Shahi Snan dates set by planetary alignment',
@@ -2595,6 +3591,48 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PITRU PAKSHA ───────────────────────
   {
     slug: 'pitru-paksha',
+    foodByRegion: [
+      {
+        "region": "North India",
+        "note": "Chawal ki kheer, lapsi, pua or malpua, pumpkin, arbi, lauki and parwal dishes, with vada or phulori in some families."
+      },
+      {
+        "region": "Maharashtra",
+        "note": "Tandalachi kheer, puran poli, god shevaya; lal bhoplyachi bhaji, karlyachi bhaji, patvadi, aluchi vadi and amsul chutney, with chana dal or urad dal vada."
+      },
+      {
+        "region": "Andhra Pradesh & Telangana",
+        "note": "Garelu or vada and payasam for naivedyam, with dadhyodanam (seasoned curd rice)."
+      },
+      {
+        "region": "Tamil Nadu (Brahmin srardham)",
+        "note": "Pachadi, parikai pitla, rasam, curd and payasam with urad vadai, adhirasam and ellurundai, followed by three fruits such as banana, mango and jackfruit; no onion or garlic, served on banana leaf."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Tamil Nadu (Brahmin communities)",
+        "note": "Madi vastram: the karta, spouse, siblings and cook wear madi clothes, men a panchakacham with an angavastram and women a nine-yard saree, after a head bath."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Gaya (Bihar)",
+        "note": "Pinda daan is performed on the banks of the Phalgu and at Vishnupad and Akshayavat; Rama is said to have offered pinda for his father Dasharatha at Gaya, and a Sita pind daan tradition continues at the Phalgu."
+      },
+      {
+        "region": "West Bengal (Mahalaya)",
+        "note": "Thousands gather at the Hooghly ghats early on Mahalaya morning to offer tarpan, water offerings with prayers, for departed ancestors."
+      },
+      {
+        "region": "Across India",
+        "note": "Pinda (rice balls bound with ghee, milk, sugar and honey) and tarpan water with black sesame and barley are offered; food is offered to crows before the Brahmins are fed."
+      },
+      {
+        "region": "Tamil Nadu (Brahmin communities)",
+        "note": "At least three Brahmins are invited to the srardham meal; leftovers go to cows or are buried."
+      }
+    ],
     image: '/festivals/pitru-paksha.jpg',
     dates2026: '27 September – 10 October 2026 (Sarva Pitru Amavasya / Mahalaya on 10 Oct)',
     dates2027: '~16 September – 1 October 2027 (Mahalaya ~30 Sep)',
@@ -2660,6 +3698,34 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RADHA ASHTAMI ───────────────────────
   {
     slug: 'radha-ashtami',
+    foodByRegion: [
+      {
+        "region": "Barsana (Shriji Temple)",
+        "note": "Chhappan bhog (56 offerings) and fruits are offered to Radha Rani and prasad is distributed to devotees."
+      },
+      {
+        "region": "Offerings in general",
+        "note": "Sweets such as kalakand, malpua and chandrakala are named as Radha Rani's favourites, along with kheer and fruits."
+      },
+      {
+        "region": "Fasting devotees",
+        "note": "Some keep a nirjala (waterless) or ekabhukta (one meal) fast, others a light fast of fruit and milk. It may be broken the same evening or next morning, traditionally by feeding married women or Brahmins."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Barsana and Rawal",
+        "note": "Chhappan bhog and fruits are offered at the Radha Rani temple and prasad is distributed. At the Ladooji temple in Rawal, which some scriptures name as Radha's birthplace, a Maha Abhishek is held."
+      },
+      {
+        "region": "Vrindavan",
+        "note": "At the Banke Bihari temple, prasad of Bihariji is carried in an evening procession to Nidhivan to be offered to Swami Haridas."
+      },
+      {
+        "region": "Diaspora temples",
+        "note": "Fruit, sweets such as kheer and laddu, and tulsi leaves are offered, and some temples serve mahaprasad after the abhishek."
+      }
+    ],
     image: '/festivals/radha-ashtami.jpg',
     attireByRegion: [
       { region: 'Braj (Barsana)', note: 'Pink and red honour Radha — women in lehengas or sarees, with tulsi malas; the hilltop Shriji temple at its most festive.' },
@@ -2727,6 +3793,32 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── TULSI VIVAHA ───────────────────────
   {
     slug: 'tulsi-vivaha',
+    foodByRegion: [
+      {
+        "region": "Family meal",
+        "note": "After the ceremony many families share a meal such as khichdi or puran poli."
+      },
+      {
+        "region": "Seasonal offerings",
+        "note": "Sugarcane, coconut, fruit and groundnuts are offered, and seasonal produce such as amla and ber is commonly offered rather than elaborate cooked sweets."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Tulsi (the bride)",
+        "note": "The plant is dressed as a bride in a sari or red odhani, with jewellery, a mangalsutra and a bindi."
+      },
+      {
+        "region": "Shaligram (the groom)",
+        "note": "The shaligram stone is dressed in a dhoti and placed beside the Tulsi, with a thread linking the pair."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Seasonal offerings",
+        "note": "Seasonal produce such as sugarcane, amla and ber is commonly offered and shared as prasad."
+      }
+    ],
     image: '/festivals/tulsi-vivaha.jpg',
     dates2026: '21 November 2026',
     dates2027: '10 November 2027',
@@ -2790,6 +3882,40 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── RATHA SAPTAMI ───────────────────────
   {
     slug: 'ratha-saptami',
+    foodByRegion: [
+      {
+        "region": "South India (Andhra, Karnataka, Tamil Nadu)",
+        "note": "Sweet pongal and vadai are offered to Surya and then shared as prasadam. In South India milk is boiled over a fire in the open and offered to the Sun."
+      },
+      {
+        "region": "Puja offerings",
+        "note": "Rice, jaggery, flowers, betel leaves and nuts, coconut, bananas and other fruit, and milk are offered to Surya at the drawn chariot."
+      },
+      {
+        "region": "Tirumala",
+        "note": "TTD provides drinking water, milk, coffee and other food free of charge to devotees waiting in the galleries on the seven-vahana day."
+      },
+      {
+        "region": "Fasting observers",
+        "note": "Some devotees fast completely and others from sunrise to sunset."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Tirumala",
+        "note": "Under the temple dress code men wear a dhoti or kurta-pyjama, and women a saree or churidar kurta with a dupatta."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Arasavalli (Srikakulam)",
+        "note": "Devotees take teertha prasadam, believed to bring wealth and health, and the temple permits Nija Rupa Darshan (view of the deity's true form) on this day."
+      },
+      {
+        "region": "South Indian homes",
+        "note": "Sweet pongal and vadai offered to Surya are shared with the family as prasadam."
+      }
+    ],
     image: '/festivals/ratha-saptami.jpg',
     dates2026: '25 January 2026',
     dates2027: '13 February 2027',
@@ -2854,6 +3980,42 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── SHARAD PURNIMA / KOJAGIRI ───────────────────────
   {
     slug: 'sharad-purnima',
+    foodByRegion: [
+      {
+        "region": "Uttar Pradesh, Bihar, Jharkhand, Madhya Pradesh, Chhattisgarh",
+        "note": "Kheer is cooked at night and left in an open, roofed space under the moon, since moon rays are believed to carry amrita; it is eaten the next day."
+      },
+      {
+        "region": "Maharashtra (Kojagiri Paurnima)",
+        "note": "Masala milk, made with dry fruits and spices, is placed outside in the moonlight before it is drunk; in villages families often pool milk for one large batch."
+      },
+      {
+        "region": "Odisha (Kumar Purnima)",
+        "note": "Unmarried women fast through the day and break it in the evening with fried paddy and fruits from the kula, mixed with curd and jaggery, first offered to the moon before a tulsi plant."
+      },
+      {
+        "region": "Bengal (Kojagari Lakshmi Puja)",
+        "note": "Bhog commonly includes khichuri with labra (mixed vegetables), narkel naru, til naru and payesh; some households add fish and others keep the feast vegetarian."
+      },
+      {
+        "region": "Mithila, Bihar (Kojagra)",
+        "note": "The bride's family brings paan, makhana, coconut and banana to the groom's home, and makhana-batasha and paan are shared among villagers."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "North and central India",
+        "note": "Moon-charged kheer is eaten the following day as prasad."
+      },
+      {
+        "region": "Odisha",
+        "note": "In the evening Chanda Puja, an offering of fried paddy, fruits, jaggery and similar items is made to the moon; sources vary on the exact items."
+      },
+      {
+        "region": "Bengal",
+        "note": "Khichuri, labra, coconut and sesame naru and payesh are offered to Lakshmi as bhog."
+      }
+    ],
     image: '/festivals/sharad-purnima.jpg',
     attireByRegion: [
       { region: 'Braj (Vrindavan)', note: 'Traditional Vaishnava wear — yellow and white — for the moonlit Raas-lila.' },
@@ -2923,6 +4085,40 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VIVAHA PANCHAMI ───────────────────────
   {
     slug: 'vivaha-panchami',
+    foodByRegion: [
+      {
+        "region": "Janakpur (Nepal)",
+        "note": "On the last day, Ramkaleva, guests from Ayodhya are honoured with food, clothing and gifts, and the two families tease each other good-naturedly."
+      },
+      {
+        "region": "Devotees' fast",
+        "note": "Many devotees keep a sattvic fast on the day."
+      },
+      {
+        "region": "Ayodhya",
+        "note": "Temples hold Ram Vivah ceremonies with wedding songs and feasts."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Janakpur (Nepal)",
+        "note": "The couple portraying Ram and Sita in the opening procession wear elaborate headgear and wedding attire. Guests from Ayodhya receive clothing as gifts at Ramkaleva."
+      },
+      {
+        "region": "Ram-Sita temples (general)",
+        "note": "In Chowki Puja the idols are bathed in Gangajal and dressed in yellow and crimson."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Ram-Sita temples (general)",
+        "note": "Bangles and sindoor are offered to the idols after the Gangajal bath."
+      },
+      {
+        "region": "Janakpur (Nepal)",
+        "note": "The procession from Ayodhya brings offerings of ornaments, clothes, sweets, fruit and flowers."
+      }
+    ],
     image: '/festivals/vivaha-panchami.jpg',
     dates2026: '14 December 2026',
     dates2027: '2 December 2027',
@@ -3065,6 +4261,22 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── DHANTERAS ───────────────────────
   {
     slug: 'dhanteras',
+    foodByRegion: [
+      {
+        "region": "Tamil Nadu",
+        "note": "In Tamil homes a herbal marundu (lehyam) is made a day or two before Deepavali and eaten first thing on Deepavali morning; Wikipedia ties it to Dhanatrayodashi and Dhanvantari, which other sources did not confirm."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Maharashtra",
+        "note": "Dry coriander seeds (dhane) lightly pounded with jaggery (gul) are offered as naivedya."
+      },
+      {
+        "region": "Many regions",
+        "note": "Offerings include suji sheera or halwa, almonds and other nuts, milk and sugar, and panchamrit (milk, curd, ghee, honey and sugar); some regions make banana or carrot sweets."
+      }
+    ],
     image: '/festivals/dhanteras.jpg',
     attireByRegion: [
       { region: 'North India', note: 'Festive new clothes to begin Diwali — sarees and suits for women, kurta-pyjama for men; gold bought and worn.' },
@@ -3132,6 +4344,28 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BHAI DOOJ ───────────────────────
   {
     slug: 'bhai-dooj',
+    prasadByRegion: [
+      {
+        "region": "Bengal (Bhai Phonta)",
+        "note": "The sister marks her brother's forehead with sandalwood paste or curd; sweets such as sandesh and rasgulla are part of the celebration."
+      },
+      {
+        "region": "Maharashtra and Goa (Bhau Beej)",
+        "note": "Aarti and tilak are followed by a festive meal, with sweets such as basundi, shrikhand or basundi poori."
+      },
+      {
+        "region": "Gujarat (Bhai Bij)",
+        "note": "Brothers visit their sisters, who welcome them with tilak, aarti and home-cooked food; sweets such as mohanthal and kansar are linked to the day."
+      },
+      {
+        "region": "Haryana and Uttar Pradesh",
+        "note": "A dry coconut (gola) with a sacred thread tied along it is used during the brother's aarti."
+      },
+      {
+        "region": "Nepal and Nepali-speaking communities (Bhai Tika)",
+        "note": "Sisters apply a seven-coloured tika and give a garland of makhmali (Gomphrena globosa) flowers, with sweets, fruit and, among Nepali-speaking communities, sel roti."
+      }
+    ],
     image: '/festivals/bhai-dooj.jpg',
     foodByRegion: [
       { region: 'Maharashtra (Bhau Beej)', note: 'Basundi, puran poli and the brother’s favourite home-cooked meal.' },
@@ -3203,6 +4437,36 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── ANANTA CHATURDASHI ───────────────────────
   {
     slug: 'ananta-chaturdashi',
+    foodByRegion: [
+      {
+        "region": "Vaishnava households (Anant Vrat)",
+        "note": "Fourteen puris and fourteen malpua are placed on a board marked with fourteen kumkum lines, with a bowl of panchamrit. Many keep a fast and break it with sattvic food; some take fruit and milk."
+      },
+      {
+        "region": "Gharge and anarase (vrat katha)",
+        "note": "Fried gharge (gharga) and anarase are prepared for the vow, and half are given to Brahmins, according to a Gujarati retelling."
+      },
+      {
+        "region": "Maharashtra (Ganeshotsav)",
+        "note": "Ukadiche modak (steamed rice-flour dumplings filled with coconut and jaggery) are the best-known naivedya for Ganesha; offerings vary with local food culture."
+      },
+      {
+        "region": "Bihar, eastern Uttar Pradesh and parts of Nepal",
+        "note": "The panchamrit in the Anant puja represents the Kshira Sagara (Ocean of Milk) on which Vishnu rests as Ananta."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Vaishnava households",
+        "note": "The Anant sutra, a kumkum-coloured thread with fourteen knots, is tied on the arm after the puja: the right arm for men and the left for women."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Vaishnava households",
+        "note": "Panchamrit (milk, curd, jaggery, honey and ghee), the fourteen puris and malpua, coconuts, bananas and dry fruits are offered to Vishnu. Sources differ on how long the thread is worn, from a day to fourteen days or a year, depending on custom."
+      }
+    ],
     image: '/festivals/ananta-chaturdashi.jpg',
     dates2026: '25 September 2026',
     dates2027: '14 September 2027',
@@ -3265,6 +4529,28 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── TEEJ ───────────────────────
   {
     slug: 'teej',
+    prasadByRegion: [
+      {
+        "region": "Rajasthan and Punjab (Hariyali Teej)",
+        "note": "Ghevar is the festival sweet of Rajasthan and is also made in parts of Punjab. It is part of the sindhara gifts a mother sends to a married daughter."
+      },
+      {
+        "region": "Haryana",
+        "note": "For the baya offering, a variety of foodstuffs is placed on a thaali at a decorated chowk with an image or idol of Parvati."
+      },
+      {
+        "region": "Bhojpuri-speaking areas, Bihar and eastern UP",
+        "note": "Thekua and pidukia are prepared. In eastern UP, Bihar and Jharkhand women make small clay idols of Shiva, Gauri, Ganesh and Kartikeya, offer sweets and fruit, and immerse the idols in water afterwards."
+      },
+      {
+        "region": "Kajari Teej (UP, MP, parts of Rajasthan)",
+        "note": "Women worship the neem tree and break the fast with sattu."
+      },
+      {
+        "region": "Hartalika Teej (Bihar, UP, parts of Rajasthan)",
+        "note": "Sweets, fruit and vegetables are offered to Parvati after a waterless fast."
+      }
+    ],
     image: '/festivals/teej.jpg',
     foodByRegion: [
       { region: 'Rajasthan', note: 'Ghevar — the monsoon-Teej sweet — with feni and malpua.' },
@@ -3338,6 +4624,22 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VISHWAKARMA PUJA ───────────────────────
   {
     slug: 'vishwakarma-puja',
+    foodByRegion: [
+      {
+        "region": "West Bengal",
+        "note": "Special feasts are arranged for the occasion, including at workplaces. The site's existing text names khichuri as the community bhog, which I could not confirm."
+      },
+      {
+        "region": "Jharkhand and Bihar (Ranchi, Jamshedpur, Dhanbad, Patna)",
+        "note": "Factories and industrial belts hold community feasts, cultural programmes and prize distributions."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Eastern India (Bengal, Jharkhand, Assam, Odisha)",
+        "note": "Fresh fruit is offered to the deity at the puja, and the idol is immersed in water at the end of the festival."
+      }
+    ],
     image: '/festivals/vishwakarma-puja.jpg',
     dates2026: '17 September 2026',
     dates2027: '17 September 2027',
@@ -3399,6 +4701,36 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── CHETI CHAND ───────────────────────
   {
     slug: 'cheti-chand',
+    foodByRegion: [
+      {
+        "region": "Sindhi households (India and diaspora)",
+        "note": "Tahiri (also tairi), a sweet yellow rice dish, is the signature festive dish, with black chana offered alongside."
+      },
+      {
+        "region": "Community gatherings",
+        "note": "Sai bhaji and other Sindhi dishes are shared after the puja."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Sindhi communities",
+        "note": "Families wear clean, preferably new, traditional clothes on the morning of the festival; processions are described as colourful with traditional dress."
+      },
+      {
+        "region": "Ajmer, Jaipur, Udaipur and Mumbai",
+        "note": "Shobha Yatras held in these cities feature participants in traditional attire."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Home Bahrana Sahib",
+        "note": "A kalash with a coconut on top, covered with cloth and decorated with flowers and leaves, stands with a lamp (jyot), sugar candy (misri), cardamom (fota), fruit, akha and a murti of Jhulelal. After worship it is carried to a river or lake and immersed."
+      },
+      {
+        "region": "Sindhi households",
+        "note": "Akha, a sweet of rice, ghee, sugar and flour, is the main offering to Jhulelal; tahiri is also shared as prasad."
+      }
+    ],
     image: '/festivals/cheti-chand.jpg',
     dates2026: '20 March 2026 (the day after Ugadi)',
     dates2027: '8 April 2027',
@@ -3461,6 +4793,36 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PARYUSHAN ───────────────────────
   {
     slug: 'paryushan',
+    foodByRegion: [
+      {
+        "region": "All Jain communities",
+        "note": "Potatoes, onions, garlic, carrots and other root vegetables are avoided, all food and water stop before sunset, and water is boiled and drunk only in daylight. Fasts range from upvas (no food, usually only boiled water), ekasana (one meal) and biyasana (two meals) to ayambil (one plain meal without oil, ghee, milk products or sweets)."
+      },
+      {
+        "region": "Gujarat",
+        "note": "Gujarati Jain households cook dishes such as gathiya nu shaak, papad nu shaak, moong vadi nu shaak and chana dhokli nu shaak, with sweets like mohanthal, sukhdi, lapsi and magaj."
+      },
+      {
+        "region": "Rajasthan",
+        "note": "Dried-vegetable dishes such as gatte ki sabzi and panchkuta (made from dried ker, sangri and dried mango), pakodewali kadhi, and sweets such as churma laddoo and moong dal halwa."
+      },
+      {
+        "region": "Fast-breaking (parna)",
+        "note": "Those who complete a long fast break it with a very simple first meal, and friends and family often feed them to honour the achievement."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "All Jain communities",
+        "note": "White or plain clothing is advised during the eight days as far as possible, and bright or printed clothes are avoided; white makes tiny creatures easier to see, in keeping with non-violence."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Jain practice",
+        "note": "The shared meal of Paryushan is the parna that ends a fast, when those who complete a long fast are fed by friends and loved ones, and the day of Samvatsari closes with forgiveness asked of all beings."
+      }
+    ],
     image: '/festivals/paryushan.jpg',
     dates2026: 'Svetambar 8–15 Sep 2026 (Samvatsari 15 Sep); Digambar Das Lakshan 16–25 Sep 2026',
     dates2027: '~late August – early September 2027 (confirm with your tradition)',
@@ -3523,6 +4885,38 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── JITIYA / JIVITPUTRIKA ───────────────────────
   {
     slug: 'jitiya',
+    foodByRegion: [
+      {
+        "region": "Bihar (Nahay-khay, day 1)",
+        "note": "After the ritual bath, madua (ragi) roti and noni saag, which is cooked without onion or garlic, are eaten."
+      },
+      {
+        "region": "Bihar (Paran)",
+        "note": "Kushi kerao (soaked dried peas), poro saag and pakoda are listed for the day the fast is broken; rice-flour porridge and cucumber are also taken, and in some places noni saag and madua roti."
+      },
+      {
+        "region": "Bihar (festive foods)",
+        "note": "Thekua, madua halwa and pirukiya are listed as festive foods."
+      },
+      {
+        "region": "Nepal Terai (Mithila and Tharu)",
+        "note": "On the first day, married women traditionally eat millet bread and fish; vegetarians take gamhari kheer. Late at night before the fast, a light meal of curd, beaten rice (chura), fruit and sweets called othangan is eaten."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Nepal Terai (Mithila)",
+        "note": "Mustard oil and khari seeds are offered on sponge-gourd leaves to Jimutavahana, and the oil is then applied to the forehead as a blessing."
+      },
+      {
+        "region": "Nepal Terai",
+        "note": "Chura, curd, amot, jaggery, kheer and fruit are offered to the gods and to ancestors, then shared. Clay birds and a clay jackal are placed at the Jimutavahana worship site."
+      },
+      {
+        "region": "Bihar and Jharkhand",
+        "note": "After the third-day bath, naivedya is offered and the fast is broken with rice-flour porridge and cucumber, and in some places noni saag and madua roti."
+      }
+    ],
     image: '/festivals/jitiya.jpg',
     name: 'Jitiya',
     alsoKnown: 'Jivitputrika; Jiutiya; Jitiya Vrat',
@@ -3574,6 +4968,34 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── NUAKHAI ───────────────────────
   {
     slug: 'nuakhai',
+    foodByRegion: [
+      {
+        "region": "Western Odisha homes",
+        "note": "A shared meal is built around the new rice (nua anna), with dal, vegetables and saga bhaja (stir-fried greens), along with khiri (rice pudding), pitha and manda."
+      },
+      {
+        "region": "Western Odisha homes (sweets)",
+        "note": "Arisa pitha and other pithas are prepared, along with khiri. Dish lists vary by household."
+      },
+      {
+        "region": "Rural and tribal communities",
+        "note": "The new rice is eaten from leaves, and the kind of leaf varies by community: mahul, banana, kure, sal or rengal leaves are mentioned."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Samaleswari Temple, Sambalpur",
+        "note": "The new rice (nabanna) is offered to Goddess Samaleswari at a pre-fixed auspicious moment (lagna), with drums, cymbals and conch shells sounding; people eat the new grain only after it has been offered."
+      },
+      {
+        "region": "Family offering in western Odisha",
+        "note": "Families offer the new rice, with khiri and manda, to family deities and to Lakshmi, then eat together; the eldest member distributes the nua and younger members greet their elders."
+      },
+      {
+        "region": "Tribal and forest communities",
+        "note": "The festival is observed under local names such as Nawakhani (Oraon) and Jom Nawa (Munda, Santal and others), with the new crop offered to the deity."
+      }
+    ],
     image: '/festivals/nuakhai.jpg',
     name: 'Nuakhai',
     alsoKnown: 'Nuakhai Juhar; Navakhai',
@@ -3626,6 +5048,34 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── POLA ───────────────────────
   {
     slug: 'pola',
+    foodByRegion: [
+      {
+        "region": "Maharashtra",
+        "note": "Puran poli (jaggery-and-lentil stuffed flatbread) with ghee, jowar or bajra bhakri with vegetable curry, and sheera (semolina dessert), as listed by Incredible India."
+      },
+      {
+        "region": "Chhattisgarh",
+        "note": "Gudha-chila, chausela, anarsa, bada, thethri (savoury) and khurmi (sweet). Clay toy utensils are filled with thethri and khurmi for children."
+      },
+      {
+        "region": "Nagpur (Tanha Pola)",
+        "note": "On the day after Pola, a symbolic gate (toran) is hung with sweets, fruit and chocolates, which are shared with children and young people after it is broken."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Maharashtra",
+        "note": "Bulls are decorated with turmeric, vermilion and garlands and given a tilak; puran poli is the dish prepared for families."
+      },
+      {
+        "region": "Chhattisgarh",
+        "note": "Bullocks are offered kheer and puri. Clay Nandi bulls are worshipped in the evening and offered bhog."
+      },
+      {
+        "region": "Chhattisgarh (Gond community)",
+        "note": "Rice panicles are offered to Bada Dev, and in some areas a senior married man of the household worships in the fields at night."
+      }
+    ],
     image: '/festivals/pola.jpg',
     name: 'Pola',
     alsoKnown: 'Bail Pola; Pithori Amavasya; Moj',
@@ -3677,6 +5127,38 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PANA SANKRANTI ───────────────────────
   {
     slug: 'pana-sankranti',
+    foodByRegion: [
+      {
+        "region": "Odisha",
+        "note": "Pana, a cooling drink of bela (wood apple) pulp with banana, chhena or curd, jaggery or sugar, black pepper and coconut, is widely made and offered; a fruit pana variant uses mango, apple and banana. Recipes vary by household."
+      },
+      {
+        "region": "Odia festive dishes",
+        "note": "A Pana Sankranti food feature lists dalma (dal with vegetables, cooked without onion or garlic), aloo-potala rasa (potato and pointed gourd curry) and chhena poda."
+      },
+      {
+        "region": "Cuttack",
+        "note": "Dahi bara with aloo dum is a popular local pairing."
+      },
+      {
+        "region": "Danda Nata participants",
+        "note": "Performers follow a vegetarian diet during the training that ends on this day."
+      },
+      {
+        "region": "Community giving",
+        "note": "Cold, sweetened drinks such as pana are offered to the thirsty, relatives and friends."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Odisha homes",
+        "note": "Pana is first offered to the household deities, then served to the head of the family, and then shared by everyone."
+      },
+      {
+        "region": "Basundhara Theki (Tulsi worship)",
+        "note": "A water pot with a small hole, or one holding water or pana, is hung from a bamboo tripod over the tulsi chaura so it drips onto the plant, through the month."
+      }
+    ],
     image: '/festivals/pana-sankranti.jpg',
     name: 'Pana Sankranti',
     alsoKnown: 'Maha Vishuba Sankranti; Odia New Year; Vishuva Sankranti',
@@ -3729,6 +5211,28 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── DHAMMACHAKRA PRAVARTAN DIN ───────────────────────
   {
     slug: 'dhammachakra-pravartan-din',
+    foodByRegion: [
+      {
+        "region": "Nagpur (Deekshabhoomi)",
+        "note": "Buddhist localities in Nagpur pool funds to provide free meals, and food stalls stretch for more than a kilometre around the grounds."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Nagpur (Deekshabhoomi)",
+        "note": "Followers commonly wear neat white and blue clothes when visiting the stupa."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Nagpur (Deekshabhoomi)",
+        "note": "The day opens with a Buddha Vandana (chanted homage) and the hoisting of the Panchasheel flag; the Buddhist observance does not use the idea of prasad."
+      },
+      {
+        "region": "Nagpur (Deekshabhoomi)",
+        "note": "Hundreds of stalls sell books by Dr Ambedkar and other authors on the grounds."
+      }
+    ],
     image: '/festivals/dhammachakra-pravartan-din.jpg',
     name: 'Dhammachakra Pravartan Din',
     alsoKnown: 'Ashoka Vijayadashami; Dhamma Chakra Day',
@@ -3778,6 +5282,28 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── MAHAMASTAKABHISHEKA ───────────────────────
   {
     slug: 'mahamastakabhisheka',
+    foodByRegion: [
+      {
+        "region": "Shravanabelagola, Karnataka",
+        "note": "By some estimates about 8,000 litres of milk are used each day of the festival, for both rituals and consumption (LSE photo essay). Volunteers handle food supply for visitors."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Shravanabelagola",
+        "note": "Digambara monks, who have renounced clothing, attend carrying fans of peacock feathers; lay devotees' dress was not described in the sources found."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Shravanabelagola, Karnataka",
+        "note": "At the start, devotees carrying 1,008 specially prepared vessels (kalashas) sprinkle consecrated water on those present."
+      },
+      {
+        "region": "Anointing substances",
+        "note": "The statue is anointed with water, sandalwood paste, vermilion, turmeric, milk, saffron paste, sugarcane juice and curd, with a different material used on different days; flowers are showered from a helicopter on the last day."
+      }
+    ],
     image: '/festivals/mahamastakabhisheka.jpg',
     name: 'Mahamastakabhisheka',
     alsoKnown: 'Bahubali Mahamastakabhisheka; the Grand Anointing',
@@ -3826,6 +5352,26 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── HOLLA MOHALLA ───────────────────────
   {
     slug: 'holla-mohalla',
+    foodByRegion: [
+      {
+        "region": "Anandpur Sahib (langar)",
+        "note": "Villagers around Anandpur run langars as sewa, supplying wheat flour, rice, vegetables, milk and sugar. Women cook, others wash utensils, and everyone eats together seated in rows (pangat). The food is vegetarian."
+      },
+      {
+        "region": "Nihang camps",
+        "note": "Nihang groups bring their own grain and cook, with breakfasts such as stuffed parathas or plain rotis depending on their means."
+      },
+      {
+        "region": "Sweets of the mela",
+        "note": "Halwa and jalebi are popular festive treats."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Anandpur Sahib and gurdwaras",
+        "note": "After the morning prayers and readings from the Guru Granth Sahib, karah prasad (wheat flour, ghee and sugar) is distributed to all in the sangat."
+      }
+    ],
     image: '/festivals/holla-mohalla.jpg',
     name: 'Hola Mohalla',
     alsoKnown: 'Holla Mohalla; the Sikh festival of valour',
@@ -3879,6 +5425,18 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── LOHRI ───────────────────────
   {
     slug: 'lohri',
+    foodByRegion: [
+      {
+        "region": "Punjab",
+        "note": "Gajak, gur rewri (jaggery-sesame sweet), popcorn and peanuts are shared. Sarson da saag with makki di roti is the traditional meal, and til rice (rice with jaggery and sesame) is also made."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Punjab",
+        "note": "Sesame seeds, jaggery, sugar candy, rewri, peanuts and popcorn are tossed into the bonfire and the rest is shared. Milk and water are poured around the fire to thank the Sun God."
+      }
+    ],
     image: '/festivals/lohri.jpg',
     name: 'Lohri',
     alsoKnown: 'Lohdi; the Punjabi bonfire festival',
@@ -3931,6 +5489,30 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── VISHU ───────────────────────
   {
     slug: 'vishu',
+    foodByRegion: [
+      {
+        "region": "Central Kerala",
+        "note": "Savoury Vishu kanji, a porridge of rice, white beans and coconut milk topped with grated coconut, is often served with jackfruit or avial."
+      },
+      {
+        "region": "Thrissur and central Kerala",
+        "note": "Vishu katta, a firm rice cake of unpolished raw rice cooked in coconut milk with cumin and dry ginger, is served with cardamom-flavoured jaggery syrup."
+      },
+      {
+        "region": "Northern Kerala",
+        "note": "Ada, steamed rice-flour parcels in banana leaf filled with jaggery, coconut and cardamom, is often served at breakfast."
+      },
+      {
+        "region": "Vishu sadya",
+        "note": "Served on a plantain leaf: thoran, aviyal, olan, parippu curry, sambar, kalan, rasam, buttermilk and two or three payasams."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Kerala households",
+        "note": "Vishu katta or Vishu kanji is described as prasad, served at breakfast after the Vishukkani is viewed and prayers are offered."
+      }
+    ],
     image: '/festivals/vishu.jpg',
     name: 'Vishu',
     alsoKnown: 'Vishu Kani; the Kerala (Malayali) New Year',
@@ -3983,6 +5565,34 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PUTHANDU ───────────────────────
   {
     slug: 'puthandu',
+    foodByRegion: [
+      {
+        "region": "Tamil Nadu (banana-leaf new-year meal)",
+        "note": "Manga pachadi, medu vada, sambar, rasam, curd and payasam; one Iyengar household's menu added vendakkai mor kuzhambu, paruppu usili and akkaravadisal. Cooked without onion or garlic."
+      },
+      {
+        "region": "Tamil Nadu (panchanga puja households)",
+        "note": "Neem flower pachadi is eaten first on an empty stomach, followed by neer mor, panakam, kosambari, vadai and payasam or poli, with green banana and jackfruit dishes."
+      },
+      {
+        "region": "Tamil diaspora (Malaysia)",
+        "note": "Families serve mango pachadi, sambar, rasam and payasam on banana leaves; the Sri Mahamariamman Temple in Kuala Lumpur is a busy festival hub."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Home panchanga puja",
+        "note": "Vinayaka is invoked first, then the new almanac is placed before the deity, anointed with sandalwood paste, kumkum and turmeric and decorated with flowers, with a simple puja and aarti."
+      },
+      {
+        "region": "Kanni (auspicious first sight)",
+        "note": "In some homes a tray of gold, a mirror, betel leaves, fruit, grains and the new calendar is arranged the night before and viewed on waking."
+      },
+      {
+        "region": "Temples (Tamil Nadu and Malaysia)",
+        "note": "Many families visit temples to pray, and priests read the panchangam and hold prayer ceremonies."
+      }
+    ],
     image: '/festivals/puthandu.jpg',
     name: 'Puthandu',
     alsoKnown: 'Tamil New Year; Varusha Pirappu; Chithirai Vishu',
@@ -4035,6 +5645,34 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── BIHU ───────────────────────
   {
     slug: 'bihu',
+    foodByRegion: [
+      {
+        "region": "Magh (Bhogali) Bihu, Uruka eve",
+        "note": "Women prepare chira (flattened rice), pitha, laru and curd; families gather fish and, if possible, meat for the feast, and in tribal communities women make rice beer."
+      },
+      {
+        "region": "Magh Bihu, Sankranti day",
+        "note": "The meal is vegetarian: tekeli pitha, sunga pitha and sunga saul (sticky rice rolled in milk and gur); the evening meal is rice, black gram curry and fried yam."
+      },
+      {
+        "region": "Day after Magh Bihu",
+        "note": "Maghi panta: soaked leftover rice eaten with dal."
+      },
+      {
+        "region": "Assam (hospitality)",
+        "note": "Pitha, laru (coconut and sesame ladoos), nimki and mah korai are central to the festival; guests are offered a gamosa and then tea with pitha and laru."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Meji / bhelaghar (Magh Bihu dawn)",
+        "note": "Offerings are made to Agni before the structures are set alight; elders bless the gathering, and partly burnt sticks are placed in fields and near fruit trees, believed to boost fertility."
+      },
+      {
+        "region": "Vaishnavite tradition",
+        "note": "After the burning, people gather for devotional hymn singing (nam-prasanga)."
+      }
+    ],
     image: '/festivals/bihu.jpg',
     name: 'Bihu',
     alsoKnown: 'Bohag/Rongali Bihu; Magh/Bhogali Bihu; Kati/Kongali Bihu',
@@ -4087,6 +5725,18 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── TULSI PUJAN DIWAS ───────────────────────
   {
     slug: 'tulsi-pujan-diwas',
+    foodByRegion: [
+      {
+        "region": "Vaishnava temples",
+        "note": "Tulsi leaves are included in the bhog offered to Vishnu."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Homes with a Tulsi plant",
+        "note": "Water is offered to the plant as part of its worship."
+      }
+    ],
     image: '/festivals/tulsi-pujan-diwas.jpg',
     name: 'Tulsi Pujan Diwas',
     alsoKnown: 'Tulsi Pujan Day',
@@ -4135,6 +5785,38 @@ export const FESTIVALS: Festival[] = [
   // ─────────────────────── PATETI (PARSI NEW YEAR) ───────────────────────
   {
     slug: 'pateti',
+    foodByRegion: [
+      {
+        "region": "Navroz breakfast",
+        "note": "Sweet sev (vermicelli cooked in sugar syrup, topped with almonds, raisins and cardamom-nutmeg powder), eaten with sweet dahi."
+      },
+      {
+        "region": "Navroz lunch",
+        "note": "Patra ni machhi (pomfret in green chutney, steamed in banana leaf), sali boti, saffron pulao, and yellow dal with steamed rice."
+      },
+      {
+        "region": "Dessert",
+        "note": "Lagan nu custard, a baked custard of milk, cream, eggs, sugar and nuts, served on auspicious occasions; falooda is also served."
+      },
+      {
+        "region": "Pateti eve",
+        "note": "Homes are decorated with rangolis and torans, and families gather for meals and gifts."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Agiary (fire temple)",
+        "note": "Devotees in traditional dress offer fruit, sandalwood, milk and flowers to the fire."
+      },
+      {
+        "region": "Navroz table (home)",
+        "note": "A table is set with a sacred book, candles, a mirror, an image of Zarathustra, fruits, flowers, coins, sugar and a goldfish bowl."
+      },
+      {
+        "region": "Shared sweets",
+        "note": "Sev with sweet dahi is shared with family and visitors as a festive sweet, not temple prasad."
+      }
+    ],
     image: '/festivals/pateti.jpg',
     name: 'Pateti & Navroz',
     alsoKnown: 'Parsi New Year; Jamshedi Navroz; Nowruz',
@@ -4186,6 +5868,89 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── SKANDA SASHTI ─────────────────────────────
   {
     slug: 'skanda-sashti',
+    history: "The Sangam-era Tirumurugarruppadai, attributed to Nakkirar, praises Murugan and describes the six abodes (Arupadai Veedu), which include Tiruchendur. The story of his victory over the asura Surapadma and his brothers is told in the Sankara Samhita of the Skanda Purana, rendered into Tamil as the Kanda Puranam by Kachiyappa Sivachariyar of Kumarakottam, Kanchipuram; scholars date him variously, from the 8th to about the 10th century or later. A sculpture at Tiruchendur depicts the combat with Surapadma. The Kanda Sashti Kavacham, recited during the vratam, is a much later hymn, composed in the 19th century by Devaraya Swamigal at Chennimalai. The six-day fast and the seashore enactment at Tiruchendur grew out of this Puranic narrative.",
+    ritualSteps: [
+      {
+        "when": "Day 1 (Pratipada, start of the vratam)",
+        "step": "Temples begin with yaga salai puja, and many hoist a sacred flag, followed by kappu kattuthal, the tying of a sacred thread on the deity and on devotees."
+      },
+      {
+        "when": "Days 1 to 5",
+        "step": "Daily abhishekam of the utsava deity, with alankaram (decoration)."
+      },
+      {
+        "when": "Through the six days",
+        "step": "Devotees recite the Kanda Sashti Kavacham. At Palani six works are recited daily, in order: Tirumurugarruppadai, Kandar Kalivenba, Kandar Anubhuti, Kandar Alankaram, Kanda Sashti Kavacham and Kanda Puranam. At home a lamp is lit."
+      },
+      {
+        "when": "Through the six days",
+        "step": "Fasting varies by family and temple, from fruit and milk only or one vegetarian meal a day to a full fast on Sashti, and at Palani some keep a waterless fast. Meat, fish, eggs and alcohol are avoided."
+      },
+      {
+        "when": "Day 6, small hours",
+        "step": "At Tiruchendur the sanctum opens around 1 am and the Vishwaroopa Deeparadhana follows, with the Udaya Marthanda abhishekam and yaga salai pujas in the morning."
+      },
+      {
+        "when": "Day 6, late afternoon",
+        "step": "The utsava image of Jayanthinathar (Chinnakumarar at Palani) is carried in procession, and the battle with Surapadma and his brothers is enacted and the demons overcome (Soorasamharam)."
+      },
+      {
+        "when": "Day 6, after the enactment",
+        "step": "At Tiruchendur a puja follows at the Santhosa Mandapam. Many devotees bathe in the sea and end their fast."
+      },
+      {
+        "when": "Day 7",
+        "step": "Thirukalyanam, the celestial wedding of Murugan with Valli and Deivanai, is held the next day, at Tiruchendur around midnight or early morning, and at Palani at the hill temple and the Periyanayaki temple."
+      }
+    ],
+    regional: [
+      {
+        "region": "Tiruchendur (Thoothukudi)",
+        "note": "Soorasamharam is staged on the seashore in the late afternoon of the sixth day, with the image of Jayanthinathar and images of the asuras brought from the temple to the beach; Thirukalyanam follows the next day."
+      },
+      {
+        "region": "Palani",
+        "note": "Six Tamil devotional works are recited each day, a Soorasamharam drama is performed, and on the sixth day large images of the asuras on chariots are destroyed as Chinnakumarar processes from the hill temple and returns. Murugan's wedding to Valli is held on day seven."
+      },
+      {
+        "region": "Singapore & Malaysia",
+        "note": "Temples such as Sri Thendayuthapani (Singapore) and the Batu Caves Sri Subramaniar Temple (Selangor) hold daily abhishekam and archanai, Kanda Sashti Kavacham and Thiruppugazh recitation, and a Soorasamharam enactment; Tirukalyanam is commonly the day after. Sri Kandaswamy Kovil in Brickfields, Kuala Lumpur, keeps the fast from Pirathamai tithi to Sashti, with the Thirukkalyanam abhishekam the day after."
+      }
+    ],
+    foodByRegion: [
+      {
+        "region": "Tamil Nadu (vratam foods)",
+        "note": "Devotees fast at different levels, from fruit and milk only or one simple vegetarian meal a day to a full fast on Sashti. Meat, fish, eggs and alcohol are avoided."
+      },
+      {
+        "region": "Palani",
+        "note": "Panchamirtham, made of banana, cow ghee, cardamom, jaggery and honey, with dates and sugar candy added, is the temple's best-known offering. Many devotees fast on each Sashti of the festival, some for the whole day and some without water."
+      },
+      {
+        "region": "Tiruchendur",
+        "note": "Devotees end the fast after Soorasamharam, many after bathing in the sea."
+      },
+      {
+        "region": "Singapore & Malaysia",
+        "note": "Practices vary from one vegetarian meal a day to a full fast on Sashti; meat, fish, eggs and alcohol are avoided, and a lamp is lit at home."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Tamil Nadu (kavadi devotees)",
+        "note": "Yellow is commonly worn by kavadi devotees, associated with purity and auspiciousness, and turmeric paste (manjal) is applied to the body before the procession."
+      },
+      {
+        "region": "Kavadi devotees",
+        "note": "Those carrying kavadi (decorated structures carried on the shoulders) often walk long distances barefoot to fulfil vows."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Palani",
+        "note": "Panchamirtham, which carries a Geographical Indication tag, is the best-known prasadam."
+      }
+    ],
     image: '/festivals/skanda-sashti.jpg',
     name: 'Skanda Sashti',
     alsoKnown: 'Kanda Sashti, Soorasamharam, Kandha Shashti',
@@ -4237,6 +6002,101 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── VARALAKSHMI VRATAM ─────────────────────────────
   {
     slug: 'varalakshmi-vratam',
+    history: "Varalakshmi Vratam is known chiefly through its vrata katha rather than dated records. Popular accounts attribute the vow to the Skanda Purana, where Shiva describes it to Parvati as a vow beneficial to married women, though no dated textual source is documented. In the best-known story Charumati (of Kundinyapura in some tellings) is told in a dream to worship Lakshmi in Shravana, and prosperity follows; another telling names Padmavati of Kosala. Accounts differ on whether Lakshmi or Vishnu appears in the dream. The vow is observed on the Friday before Shravana Purnima, mainly in Tamil Nadu, Andhra Pradesh, Telangana and Karnataka.",
+    ritualSteps: [
+      {
+        "when": "Day before (Thursday)",
+        "step": "Wash the puja vessels and lamps, and prepare the thoram: a turmeric-smeared sacred thread of nine strands with nine knots. In Tamil Nadu a padi pooja is done on Thursday evening, with turmeric and kumkum lines at the room entrances and a lamp lit."
+      },
+      {
+        "when": "Friday morning",
+        "step": "Bathe, dress in a silk saree, clean the puja area and draw a rice-flour rangoli. Spread a banana leaf and raw rice on a platform, traditionally in the north-east corner."
+      },
+      {
+        "when": "Before the puja",
+        "step": "Fill a copper, brass or silver kalasha with water, rice, betel leaves, turmeric, coins and flowers. Set mango leaves at the mouth and top it with a turmeric-smeared coconut wrapped in cloth, with the kalasha facing east."
+      },
+      {
+        "when": "Before the puja",
+        "step": "Fix the goddess's face (silver, brass or made of turmeric) to the coconut and adorn it with a new saree, jewellery and flowers. Light two lamps before it."
+      },
+      {
+        "when": "Start of the puja",
+        "step": "Worship Ganesha first, using a small turmeric Ganesha placed on a betel leaf, with jaggery as naivedyam."
+      },
+      {
+        "when": "Main puja",
+        "step": "Invite Lakshmi into the kalasha (avahanam) with flowers and akshata, then worship her with the Ashtottara Shatanamavali (108 names) and, in households that follow it, the sixteen-step shodashopachara. In Karnataka karpoora aarti is performed."
+      },
+      {
+        "when": "Main puja",
+        "step": "Worship the thoram, then tie it on the right wrist. In Tamil Nadu married women also wear a single turmeric thread (pongu nool) around the neck."
+      },
+      {
+        "when": "After worship",
+        "step": "Offer the naivedyam, read or hear the Varalakshmi vrata katha and perform mangala arati."
+      },
+      {
+        "when": "Afternoon or evening",
+        "step": "Invite married women and give vayanam or tamboolam: turmeric, kumkum, betel leaves and nuts, bananas, flowers and often a blouse piece or bangles."
+      },
+      {
+        "when": "Next day (Tamil Nadu: Saturday punar pooja)",
+        "step": "Offer a short puja and respectfully dismantle the kalasha at an auspicious time. Sip a little of the water as theertha and sprinkle or pour the rest around the house or at a tulsi plant. In some Tamil households the kalasha is instead kept in a vessel of rice to retain the goddess until the next year."
+      }
+    ],
+    regional: [
+      {
+        "region": "Tamil Nadu",
+        "note": "Also called Nonbu or Thorakrandhi pooja. A padi pooja is done on Thursday evening and a punar pooja on Saturday. In some households the goddess's face is turned west and the kalasham is placed inside a drum of rice."
+      },
+      {
+        "region": "Andhra Pradesh & Telangana",
+        "note": "The thora has nine strands and nine knots (navasutra). Soaked chickpeas and chalimidi feature among the offerings, and invited women are given turmeric, kumkum, betel leaves, bangles and blouse material."
+      },
+      {
+        "region": "Karnataka (Varamahalakshmi)",
+        "note": "An eight-petalled lotus rangoli marks the spot for the kalasha, which is dressed with a new saree, jewellery and sometimes coins or currency notes. In the evening women visit one another's homes to exchange sweets and offerings."
+      }
+    ],
+    foodByRegion: [
+      {
+        "region": "Tamil Nadu",
+        "note": "Four varieties of kolukattai, payasam and vadai are made the day before as naivedyam."
+      },
+      {
+        "region": "Andhra Pradesh & Telangana",
+        "note": "Garelu, boorelu, pulihora, paramannam, pulagam and chalimidi, with soaked chickpeas and bananas, are commonly offered."
+      },
+      {
+        "region": "Karnataka",
+        "note": "Obbattu, kosambari, puliyogare, huli anna and hesarubele payasa; ven pongal is also prepared as the offering."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Tamil Nadu & Telugu households",
+        "note": "Women bathe and wear a silk saree with gold ornaments; married women wear kumkum and turmeric."
+      },
+      {
+        "region": "Karnataka",
+        "note": "Women wear bright saris and gold jewellery, and married women wear kumkum and turmeric on the forehead."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Tamil Nadu",
+        "note": "Cooked rice, chickpeas, fruit and betel leaves are offered to the participating women; thamboolam of coconut, betel leaf and nut, turmeric, kumkum, a blouse piece, a mirror and a comb is given to invited women."
+      },
+      {
+        "region": "Andhra Pradesh & Telangana",
+        "note": "Vayanam of turmeric, kumkum, betel leaves, bananas, flowers, bangles and blouse material is given, with soaked chickpeas and chalimidi from the naivedyam."
+      },
+      {
+        "region": "Karnataka",
+        "note": "Ven pongal is the offering, with avalakki and sweets shared among women visiting each other's homes."
+      }
+    ],
     image: '/festivals/varalakshmi-vratam.jpg',
     name: 'Varalakshmi Vratam',
     alsoKnown: 'Vara Lakshmi Vrata, Varamahalakshmi',
@@ -4284,6 +6144,87 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── SATYANARAYAN VRATA ─────────────────────────────
   {
     slug: 'satyanarayan-vrata',
+    history: "The vrata is linked in tradition to the Revakhanda of the Skanda Purana and the Pratisargaparvan of the Bhavishya Purana, which describe Satyanarayana worship. Scholars disagree on its age: the Revakhanda passage appears in the Calcutta (Vangavasi) edition but not the Bombay (Venkateshwar Press) one, and some scholars treat it as a later addition. In Bengal the worship developed alongside Satya Pir, a figure honoured by both Hindus and Muslims, and vernacular panchali and pala gana narratives were more popular than Sanskrit accounts; one scholar dates the Sanskritised Satyanarayana to the 17th or early 18th century. One scholar notes it has no restriction of caste or gender and no fixed day.",
+    ritualSteps: [
+      {
+        "when": "Before the puja",
+        "step": "Clean the space, spread a yellow cloth on the altar and place the image of Satyanarayana. Fill a kalash with water, add a mango leaf or tulsi, top it with a coconut and tie a sacred thread around it."
+      },
+      {
+        "when": "Preparation",
+        "step": "Gather the offerings: flowers, tulsi leaves, betel leaves and areca nuts, kumkum, turmeric, panchamrit, bananas and the sheera (wheat flour or rava roasted in ghee with milk, sugar and mashed banana)."
+      },
+      {
+        "when": "Start of puja",
+        "step": "Light the ghee and oil lamps, and use incense and camphor. Invoke Ganesha first."
+      },
+      {
+        "when": "Sankalpa",
+        "step": "Holding water and a flower in the right palm, state the occasion, the family and the request or thanksgiving."
+      },
+      {
+        "when": "Kalash puja",
+        "step": "Invoke the sacred waters into the kalash with the kalash mantra."
+      },
+      {
+        "when": "Main worship",
+        "step": "Perform the sixteen-step shodashopachara worship of Vishnu as Satyanarayana, offering flowers and tulsi leaves."
+      },
+      {
+        "when": "Katha",
+        "step": "Read the five chapters of the Satyanarayana katha aloud while all present listen; some households blow a conch at key moments."
+      },
+      {
+        "when": "Aarti",
+        "step": "Wave the lamp before the deity while everyone sings the Satyanarayana aarti."
+      },
+      {
+        "when": "Conclusion",
+        "step": "Offer the sheera and panchamrit to the deity, then distribute them to all present as prasad."
+      }
+    ],
+    regional: [
+      {
+        "region": "Bengal",
+        "note": "Worship merges with the Satya Pir tradition. Some Bengali Brahmin households worship Satyanarayana with shaligrama stones, and the older offering is sinni of flour or rice, sugar, banana and milk; the popular narrative form is the panchali."
+      },
+      {
+        "region": "Annavaram (Andhra Pradesh)",
+        "note": "The Satyanarayana Swamy temple on Ratnagiri Hill, with its idol consecrated in 1891, has a mandapam for performing the vratam; Ekadashi is considered the most auspicious day, though it is done on other days too."
+      },
+      {
+        "region": "Bihar and Upper India",
+        "note": "Scholars note that the Satya Pir association is found mainly in Bengal; in Bihar and Upper India Satyanarayana is worshipped purely as a form of Vishnu."
+      }
+    ],
+    foodByRegion: [
+      {
+        "region": "Across India",
+        "note": "Sheera of wheat flour or rava roasted in ghee, with warm milk, sugar, mashed ripe banana and cardamom, often with raisins and cashews."
+      },
+      {
+        "region": "Bengal",
+        "note": "Sinni (shirni): a mixture of rice or flour, sugar, banana and milk."
+      },
+      {
+        "region": "All regions",
+        "note": "Panchamrit of milk, curd, honey, ghee and sugar is offered to the deity."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Across India",
+        "note": "Sheera is distributed to everyone present after the aarti, and one guide says no one present should refuse it."
+      },
+      {
+        "region": "Bengal",
+        "note": "Sinni, the older offering of Satya Pir worship, is shared as prasad."
+      },
+      {
+        "region": "Common to all",
+        "note": "Panchamrit is offered and distributed to devotees after the aarti."
+      }
+    ],
     image: '/festivals/satyanarayan-vrata.jpg',
     name: 'Satyanarayan Vrata',
     alsoKnown: 'Satyanarayan Puja, Satyanarayana Swamy Vratam',
@@ -4329,6 +6270,87 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── GITA JAYANTI ─────────────────────────────
   {
     slug: 'gita-jayanti',
+    history: "The Bhagavad Gita, about 700 verses in 18 chapters, is part of the Mahabharata and records Krishna's teaching to Arjuna at Kurukshetra. Tradition places the discourse at Jyotisar, beneath a banyan tree, and the day on Margashirsha Shukla Ekadashi, also kept as Mokshada Ekadashi. The public festival is recent: the Kurukshetra Development Board began a Gita Jayanti Samaroh in 1989-90, at first a short event of religious and cultural programmes. In 2016 the Haryana government made it the International Gita Mahotsav, which now runs for over a week with fairs, mass Gita recitation and a closing Maha Aarti at Brahma Sarovar. ISKCON temples mark the day mainly with Gita distribution and recitation.",
+    ritualSteps: [
+      {
+        "when": "Early morning",
+        "step": "Wake early, bathe, meditate and put on clean clothes. Those keeping the Ekadashi fast observe it fully or on fruit and milk, avoiding grains, rice, onion and garlic."
+      },
+      {
+        "when": "Morning",
+        "step": "Sprinkle Ganga water at the place of worship and set up an image of Krishna instructing Arjuna (or a simple picture of Krishna) with a copy of the Gita."
+      },
+      {
+        "when": "Morning",
+        "step": "Light incense and a lamp before the image."
+      },
+      {
+        "when": "Morning",
+        "step": "Offer flowers, sandalwood paste, tulsi, rice and sweets to Krishna. Vishnu worship and tulsi puja are part of the Mokshada Ekadashi vrat."
+      },
+      {
+        "when": "Morning to midday",
+        "step": "Recite a chapter of the Gita (the 18th is considered especially auspicious) and chant mantras to Krishna and Vishnu. Some temples and ISKCON centres hold all-day recitations."
+      },
+      {
+        "when": "Midday",
+        "step": "Sing the aarti of Krishna and share the prasad among the family."
+      },
+      {
+        "when": "Through the day",
+        "step": "Read or hear the Mokshada Ekadashi vrat katha and spend the day in bhajan and kirtan. Donating food or clothes is encouraged."
+      },
+      {
+        "when": "Evening",
+        "step": "Worship Krishna again. At Kurukshetra, lamps are floated on the Brahma Sarovar and Sannihit Sarovar (deepdan)."
+      },
+      {
+        "when": "Dwadashi, next day",
+        "step": "Break the fast (parana) within the published Dwadashi window after sunrise."
+      }
+    ],
+    regional: [
+      {
+        "region": "Kurukshetra (Haryana)",
+        "note": "Pilgrims bathe in the Brahma Sarovar and Sannihit Sarovar, and lamps are floated on the water in the evening. The Mahotsav adds a Gita Sobha Yatra, a closing Maha Aarti and the 48 Kos Parikrama of Kurukshetra."
+      },
+      {
+        "region": "Jyotisar Tirtha (Kurukshetra)",
+        "note": "The site held to be where the Gita was spoken, about 5 km from Kurukshetra on the Pehowa road. Devotees circumambulate the sacred banyan tree and see the Krishna-Arjuna chariot tableau."
+      },
+      {
+        "region": "Haryana (state festival)",
+        "note": "Organised by the Kurukshetra Development Board with Haryana Tourism. Programmes include a Global Gita Path in which thousands of students recite verses together, shloka recitals, Bhagavad Katha and craft fairs."
+      },
+      {
+        "region": "ISKCON temples (India and abroad)",
+        "note": "Gita distribution is the main focus, as at ISKCON Bangalore. Some temples recite the Gita in Sanskrit through the day (Houston), and others hold a full recitation lasting about three hours (Potomac)."
+      }
+    ],
+    foodByRegion: [
+      {
+        "region": "Ekadashi fast (all regions)",
+        "note": "Grains, rice, pulses, onion and garlic are avoided. A phalahari fast uses fruit and milk, and a ksheerbhoji fast uses milk products."
+      },
+      {
+        "region": "Naktabhoji (one meal before sunset)",
+        "note": "Common foods are sabudana, singhada (water chestnut), shakarkandi (sweet potato), potato and groundnuts. Kuttu and samak (millet rice) are debated as pseudo-grains, so households follow their own family rule."
+      },
+      {
+        "region": "Kurukshetra",
+        "note": "Bhandaras (free community kitchens) serve sattvic meals during the Gita Jayanti festival, and the fairs have food stalls."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Homes (pan-India)",
+        "note": "Tulsi leaves, flowers, rice, sandalwood and sweets are offered to Krishna, and the prasad is then shared among the family."
+      },
+      {
+        "region": "Kurukshetra",
+        "note": "Sattvic bhandara meals are served to pilgrims during the festival."
+      }
+    ],
     image: '/festivals/gita-jayanti.jpg',
     name: 'Gita Jayanti',
     alsoKnown: 'Bhagavad Gita Jayanti, Mokshada Ekadashi',
@@ -4375,6 +6397,97 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── DATTATREYA JAYANTI ─────────────────────────────
   {
     slug: 'dattatreya-jayanti',
+    history: "Dattatreya appears in the Mahabharata and the Puranas (Bhagavata, Markandeya, Brahmanda) as a sage, son of Atri and Anasuya, and is named in the Jabala Upanishad. Wikipedia notes Nath roots in Dattatreya going back to about the 10th century, while Mallinson argues the Naths adopted him around the 18th. The Datta tradition of the Deccan centres on two historical figures held to be his avatars: Sripada Srivallabha (14th century) and Narasimha Saraswati (15th century). Narasimha Saraswati spent the 1441 chaturmas at Audumbar, about 12 years at Narsobawadi and about 23 years at Ganagapur. His life is told in the Marathi Gurucharitra, attributed to Sarasvati Gangadhara. Manik Prabhu (19th century), regarded as a Datta incarnation, founded the Manik Prabhu Sampradaya at Manik Nagar.",
+    ritualSteps: [
+      {
+        "when": "Days before (optional)",
+        "step": "Many families keep the Datta Navratra, a nine-day observance ending on Jayanti, and some read the Gurucharitra in the days before."
+      },
+      {
+        "when": "Dawn",
+        "step": "Bathe early, in a river or with Ganga water, clean the worship space and keep a fast, avoiding meat and negative thoughts."
+      },
+      {
+        "when": "Morning",
+        "step": "Place the image or padukas (footprints) of Dattatreya on a clean seat. Bathe it with holy water and apply sandalwood paste, with turmeric or sindoor in some traditions."
+      },
+      {
+        "when": "Morning",
+        "step": "Offer flowers, garlands, incense, lamps and camphor, with sweets such as ladoo or pedha."
+      },
+      {
+        "when": "Through the day",
+        "step": "Read or hear the Gurucharitra, Dattatreya Vrata Katha, Datta Prabodh or Avadhuta Gita. Some chant his name a fixed number of times, reportedly 1,000."
+      },
+      {
+        "when": "Evening",
+        "step": "Gather at the Datta mandir or home altar for the aarti at the traditional birth time, with bhajans."
+      },
+      {
+        "when": "After the aarti",
+        "step": "Distribute prasad. At Ganagapur, pilgrims keeping the Dattavrat vow ask for food from at least five homes (madhukari)."
+      },
+      {
+        "when": "Day or night",
+        "step": "Share food with those in need."
+      }
+    ],
+    regional: [
+      {
+        "region": "Ganagapur (Kalaburagi, Karnataka)",
+        "note": "At the Matha the Nirguna Padukas of Narasimha Saraswati are seen through a silver window and anointed with kumkuma and ashtagandha rather than washed. A Maha Naivedya is offered in the afternoon, followed by alms collected by volunteers. The town is vegetarian."
+      },
+      {
+        "region": "Narsobawadi (Shirol, Kolhapur, Maharashtra)",
+        "note": "The temple on the Krishna-Panchganga confluence has two padukas, not an image. Daily worship includes Kakad Aarti, Rudrabhishek, an evening Palkhi and Shej Aarti. Datta Jayanti is among its festivals."
+      },
+      {
+        "region": "Audumbar (Sangli, Maharashtra)",
+        "note": "Devotees bathe in the Krishna, take darshan of the Dattapadukas, circle the temple under the audumbar (cluster-fig) trees, and read the Gurucharitra under the tree for merit."
+      },
+      {
+        "region": "Manik Nagar (Humnabad, Karnataka)",
+        "note": "The Manik Prabhu Samsthan holds a Datta Jayanti festival over several days, drawing pilgrims from Maharashtra, Karnataka and Telangana."
+      },
+      {
+        "region": "Mahur (Nanded, Maharashtra)",
+        "note": "India Tourism lists Mahur as a major Datta Jayanti centre. A Mahanubhava temple here has a single-headed image of Dattatreya."
+      },
+      {
+        "region": "Girnar (Junagadh, Gujarat)",
+        "note": "Wikipedia lists Girnar among major Datta Jayanti sites. Gujarat Tourism describes a shrine on Dattatreya peak, reached by a long climb of stone steps (about 10,000 to the summit)."
+      }
+    ],
+    foodByRegion: [
+      {
+        "region": "Ganagapur (Karnataka)",
+        "note": "A Maha Naivedya is offered at the Matha in the afternoon, then alms-food is collected and shared. Meat and alcohol are not brought into the town."
+      },
+      {
+        "region": "Narsobawadi (Maharashtra)",
+        "note": "The town is known for basundi, kandi pedhe and kavathachi (wood-apple) barfi."
+      },
+      {
+        "region": "Home observance (Maharashtra and Karnataka)",
+        "note": "Many keep a fast and avoid non-vegetarian food. Ladoo and pedha are the usual sweets offered."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Ganagapur (Karnataka)",
+        "note": "Visitors are advised to dress modestly and keep silence inside the Matha; there is no prescribed costume."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Ganagapur (Karnataka)",
+        "note": "The afternoon Maha Naivedya is offered at the Matha, and volunteers then collect alms-food."
+      },
+      {
+        "region": "Home and temple worship",
+        "note": "Ladoo or pedha is offered after the Vrata Katha and aarti and distributed. Sharing food with those in need is encouraged."
+      }
+    ],
     image: '/festivals/dattatreya-jayanti.jpg',
     name: 'Dattatreya Jayanti',
     alsoKnown: 'Datta Jayanti',
@@ -4423,6 +6536,95 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── CHITRA PURNIMA ─────────────────────────────
   {
     slug: 'chitra-purnima',
+    history: "Chitragupta, the divine scribe who records human deeds for Yama, is worshipped in parts of India, and Tamil Nadu marks him on the full moon of Chithirai. The best-known shrine is the Chitragupta temple at Kanchipuram, whose masonry is dated by inscriptions to the 9th century CE and attributed to the medieval Cholas; two metal images of Chitragupta and his consort Karnikambal were found during repairs in 1911, and the temple was consecrated in 1918 and 1994. In Madurai the same season is the Chithirai festival, and the 17th-century king Thirumalai Nayak is said to have merged the separate Shaiva and Vaishnava observances into one celebration. In much of North India, Chitragupta Puja is instead held after Diwali.",
+    ritualSteps: [
+      {
+        "when": "The night before",
+        "step": "Clean the house and draw a kolam at the entrance and puja room; many families include Chitragupta's footprints with a small umbrella, hand fan and flag. Some leave the south side of the kolam open as his entrance and wipe it away after the puja."
+      },
+      {
+        "when": "The night before",
+        "step": "Wash a muram (winnowing tray), divide it into nine sections with kolam and fill each with one of the nine grains (navadhaniyam); add a raw mango and a coconut. Write Chitragupta's names on a sheet of paper and keep a pen beside it."
+      },
+      {
+        "when": "Early morning",
+        "step": "Take a head bath and begin the fast. Many keep a salt-free fast (uppilla viratham) and prepare the offerings without salt; some avoid cow's milk and ghee, using buffalo or coconut milk."
+      },
+      {
+        "when": "Morning, before the puja",
+        "step": "Cook the naivedyam: typically unsalted white pongal or chakkarai pongal, sweet pidi kozhukattai, panagam (jaggery water), neer mor (spiced buttermilk) and raw mango pachadi."
+      },
+      {
+        "when": "At an auspicious time, avoiding Rahu Kalam and Yama Kandam",
+        "step": "Light the lamp and set out the muram, paper and pen, betel leaves and nuts, banana and coconut, with the naivedyam in front."
+      },
+      {
+        "when": "During the puja",
+        "step": "Offer the food to Chitragupta, chanting \"Om Hreem Chitraguptaya Namah\", and pray for forgiveness of wrongs."
+      },
+      {
+        "when": "Close of puja",
+        "step": "Show the lamp, incense and camphor aarti."
+      },
+      {
+        "when": "After the puja",
+        "step": "Donate rice, vegetables, dal and a dakshina in the muram, and share the prasad. Some devotees also bathe in a river or temple tank and visit a temple."
+      }
+    ],
+    regional: [
+      {
+        "region": "Kanchipuram (Tamil Nadu)",
+        "note": "Chitragupta temple: Chitra Pournami is the major festival there. Women devotees traditionally fast or eat salt-free food through the day, and village accountants have worshipped here for their profession. The Kayastha community regards Chitragupta as its patron."
+      },
+      {
+        "region": "Thirukkodikaval (Tamil Nadu)",
+        "note": "The Shiva temple (Thirukoteeswarar) has separate shrines for Chitragupta and Yama, and the day is widely observed there."
+      },
+      {
+        "region": "Madurai",
+        "note": "Devotees worship Shiva at the Meenakshi temple, recalling the legend of Indra at Madurai. The city's Chithirai festival brings the Meenakshi Thirukalyanam and Lord Kallazhagar's entry into the Vaigai river."
+      },
+      {
+        "region": "Mangaladevi temple (Vannathiparai, near the Tamil Nadu-Kerala border)",
+        "note": "The hill temple of Kannagi, heroine of the Silappathikaram, is open to pilgrims only during the Chitra Pournami festival. It lies in Theni district, Tamil Nadu, and is also reached from Kerala's Idukki side, where she is called Mangaladevi."
+      },
+      {
+        "region": "North India",
+        "note": "Chitragupta is worshipped mainly after Diwali (Chitragupta Puja)."
+      }
+    ],
+    foodByRegion: [
+      {
+        "region": "Tamil Nadu homes",
+        "note": "Salt-free white pongal or chakkarai pongal, sweet pidi kozhukattai (steamed rice-flour balls with jaggery and coconut) and raw mango pachadi."
+      },
+      {
+        "region": "Cooling drinks",
+        "note": "Panagam (jaggery water) and neer mor (spiced buttermilk) are prepared at home for the puja."
+      },
+      {
+        "region": "Madurai",
+        "note": "During the Chithirai festival neer mor and panakam are given out free in the summer heat, and annadhanam (free meals) is served on the streets around temples."
+      },
+      {
+        "region": "Fasting households",
+        "note": "Salt is avoided (uppilla viratham); some families also avoid cow's milk and milk products that day, using buffalo or coconut milk."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Tamil Nadu homes",
+        "note": "Unsalted white pongal or chakkarai pongal, pidi kozhukattai, panagam and neer mor, with betel leaves, banana and coconut, offered to Chitragupta and then shared."
+      },
+      {
+        "region": "Madurai",
+        "note": "Neer mor and panakam are distributed free as a cooling offering during the festival."
+      },
+      {
+        "region": "Muram offering",
+        "note": "Rice, vegetables, dal and dakshina are placed in the muram and donated after the puja."
+      }
+    ],
     image: '/festivals/chitra-purnima.jpg',
     name: 'Chitra Purnima',
     alsoKnown: 'Chitra Pournami, Chithirai Pournami',
@@ -4469,6 +6671,63 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── ADI SHANKARA JAYANTI ─────────────────────────────
   {
     slug: 'shankara-jayanti',
+    history: "Adi Shankara is traditionally said to have been born at Kaladi (Kalady) on the Periyar river in Kerala to a Nambudiri Brahmin family. His dates are uncertain: older works give 788-820 CE, while modern scholarship generally favours roughly 700-750 CE. At least eleven biographies exist, but all were written centuries after his death and mix legend with tradition, so his life cannot be reconstructed with certainty. Tradition credits him with commentaries on the Brahma Sutra, the principal Upanishads and the Bhagavad Gita, and with founding monasteries at Sringeri, Puri, Dwaraka and Badrinath. Shankara Jayanti falls on Vaishakha Shukla Panchami; Sringeri holds a multi-day Mahotsava each year, and at Kalady the Kanchi Math and the Ramakrishna Advaita Ashrama have held programmes.",
+    ritualSteps: [
+      {
+        "when": "Morning",
+        "step": "A special puja is offered at the shrine or image of Adi Shankara; at Kalady, a Kanchi Math programme included abhishekam, archana and a Ganapathi Homam at the start."
+      },
+      {
+        "when": "Morning",
+        "step": "Some centres perform Rudra Abhishekam or other homas, as at the Kanchi Math programme in Kalady."
+      },
+      {
+        "when": "Morning and evening",
+        "step": "Vedic recitation (parayana) is held; at Sringeri this includes the Vedas and the Sri Vidyaranya Veda Bhashya on all days."
+      },
+      {
+        "when": "Through the day",
+        "step": "Devotees recite Shankara's stotras, and talks recall his life; at Kalady, the Kanakadhara Stotram and the story of his birth have featured."
+      },
+      {
+        "when": "Evening",
+        "step": "Pravachanams (discourses) are given at Sringeri each evening in the presence of the Jagadguru, and evening cultural programmes with stotra recitation are held at Kalady."
+      },
+      {
+        "when": "Evening, in some programmes",
+        "step": "Deeparadhana (lamp offering) before the image of Shankara, and at the Ramakrishna Advaita Ashrama a closing pushparchana (flower offering) and distribution of prasadam."
+      },
+      {
+        "when": "After the festival days",
+        "step": "At Sringeri a rathotsava (chariot procession) of Adi Shankaracharya is held on Shashti, the day after the five-day Jayanti."
+      }
+    ],
+    regional: [
+      {
+        "region": "Sringeri (Karnataka)",
+        "note": "In 2025 the Sringeri Sharada Peetham held a five-day Shankara Jayanti Mahotsava with daily special pujas at the Shankara shrine, Veda parayana, evening discourses, a Veda Pareeksha for students of different Veda shakhas, and a chariot procession on Shashti."
+      },
+      {
+        "region": "Kalady (Kerala), Kanchi Math",
+        "note": "In 2013 the Kanchi Kamakoti Peetham held a six-day Mahotsav at the Adi Shankara Keerthi Sthamba Mandapam, an eight-storey memorial where Shankara's padukas are worshipped daily. It opened with Ganapathi Homam and included Rig Veda Samhita Homam, Rudra Abhishekam and evening stotra recitations."
+      },
+      {
+        "region": "Kalady (Kerala), Ramakrishna Advaita Ashrama",
+        "note": "In 2025 the ashrama marked the day with puja, a homa and bhajans, a talk on Shankara's life, and closed with pushparchana and distribution of prasadam."
+      }
+    ],
+    foodByRegion: [
+      {
+        "region": "Kalady (Kerala)",
+        "note": "In 2025 a local body's Jayanti procession was given sweets and drinking water at the Ramakrishna Advaita Ashrama."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Kalady (Kerala)",
+        "note": "Prasadam is distributed after the pushparchana at the Ramakrishna Advaita Ashrama."
+      }
+    ],
     image: '/festivals/shankara-jayanti.jpg',
     name: 'Adi Shankara Jayanti',
     alsoKnown: 'Shankaracharya Jayanti, Shankara Jayanthi',
@@ -4516,6 +6775,113 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── CHAITRA NAVRATRI ─────────────────────────────
   {
     slug: 'chaitra-navratri',
+    history: "Shakta and Vaishnava Puranas describe Navaratri as held two or four times a year. Chaitra, or Vasanta, Navaratri falls near the spring equinox and is regarded as the second most celebrated, after autumn Sharada Navaratri. It begins on Chaitra Shukla Pratipada, the lunar new year in many regions, and ends on Rama Navami, so in Rama traditions it is a nine-day observance leading to Rama's birth. The same day is Navreh in Kashmir, Gudi Padwa in Maharashtra and Ugadi in Andhra Pradesh, Telangana and Karnataka.",
+    ritualSteps: [
+      {
+        "when": "Pratipada morning",
+        "step": "After bathing, take the sankalpa, stating your name, gotra and the tithi. Ghatasthapana is done in the first third of the day while Pratipada prevails, with Abhijit muhurta as the fallback. Panchang sites advise avoiding Chitra nakshatra and Vaidhriti yoga where possible, though they are not strictly barred."
+      },
+      {
+        "when": "Pratipada",
+        "step": "Spread soil in a clay pot and sow barley (jau). Set a water-filled kalash on it, with five mango leaves at the rim and a coconut wrapped in red cloth on top, and invite Goddess Durga to reside in it for nine days."
+      },
+      {
+        "when": "Pratipada",
+        "step": "Set an image of Durga on a red cloth on a raised platform and light a ghee or sesame-oil lamp. Many households keep it burning for all nine days (akhand jyoti)."
+      },
+      {
+        "when": "Morning and evening, daily",
+        "step": "Offer lamp, incense, flowers, fruit and sweets, and sprinkle a little water on the barley. Many devotees recite the Durga Saptashati or chant the Durga beej mantra."
+      },
+      {
+        "when": "Days 1 to 9",
+        "step": "Worship one form of Navadurga each day, in the order followed in many North Indian traditions: Shailaputri, Brahmacharini, Chandraghanta, Kushmanda, Skandamata, Katyayani, Kalaratri, Mahagauri and Siddhidatri."
+      },
+      {
+        "when": "Throughout the nine days",
+        "step": "Many families keep a fast, whose form varies by family: one meal, fruit and milk, or permitted vrat foods. Onion and garlic are avoided and rock salt (sendha namak) is used."
+      },
+      {
+        "when": "Ashtami or Navami",
+        "step": "Kanya pujan: invite nine young girls, with a boy optionally as Batuk Bhairava, wash their feet, apply tilak, serve halwa, puri and black chana, give gifts and dakshina, and seek their blessings."
+      },
+      {
+        "when": "Navami",
+        "step": "Perform a havan with Durga mantras. The same day is Rama Navami, the birth of Rama."
+      },
+      {
+        "when": "Navami or the day after",
+        "step": "Immerse or respectfully dispose of the kalash contents, with the water poured on a plant, and distribute the grown barley shoots as prasad."
+      }
+    ],
+    regional: [
+      {
+        "region": "Kashmir (Navreh)",
+        "note": "Kashmiri Pandits mark the first day as the new year and honour Goddess Sharika, whose dwelling is placed on Hari Parbat. In the late evening before, a thali of rice, coins, pen and paper, a mirror and a calendar is prepared and seen first thing in the morning."
+      },
+      {
+        "region": "Maharashtra (Gudi Padwa)",
+        "note": "After an early bath and rangoli, a gudi, a bright silk cloth on a bamboo pole decorated with neem and mango leaves and topped with an inverted copper pot, is raised outside the home."
+      },
+      {
+        "region": "Andhra Pradesh, Telangana and Karnataka (Ugadi)",
+        "note": "The day begins with an oil bath, and ugadi pachadi, which mixes sweet, bitter, sour and pungent tastes, is eaten as a reminder to accept all of life's experiences."
+      },
+      {
+        "region": "West Bengal",
+        "note": "Durga worship blends with Basanti Puja and Annapurna Puja, in a calmer mood and with fewer rituals than the autumn Durga Puja."
+      },
+      {
+        "region": "Uttarakhand",
+        "note": "Devotees visit Shakti temples such as Dhari Devi, recite the Durga Saptashati and join devotional singing, with local fairs."
+      },
+      {
+        "region": "Bihar (Ram Navami)",
+        "note": "A Ram Navami fair is held at Sitamarhi, with trade in goods such as pottery, brassware and cloth."
+      }
+    ],
+    foodByRegion: [
+      {
+        "region": "North India (vrat fare)",
+        "note": "Kuttu (buckwheat), singhare (water-chestnut) and rajgira (amaranth) flours for puri and pakora, sama ke chawal (barnyard millet), sabudana, makhana, potato, pumpkin and fruit, with rock salt (sendha namak)."
+      },
+      {
+        "region": "Kanya pujan (north India)",
+        "note": "Sooji halwa, puri and kala chana are served to the girls invited on Ashtami or Navami."
+      },
+      {
+        "region": "Maharashtra (Gudi Padwa)",
+        "note": "Puran poli and shrikhand are the traditional new-year dishes."
+      },
+      {
+        "region": "Andhra Pradesh, Telangana, Karnataka (Ugadi)",
+        "note": "Ugadi pachadi, made with tamarind, neem flowers, jaggery, raw mango and chilli, is the central new-year dish."
+      },
+      {
+        "region": "Kashmir (Navreh)",
+        "note": "Walnuts are eaten with a bitter herb called wye, a reminder to take life's bitter experiences along with the good."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Maharashtra (Gudi Padwa)",
+        "note": "In Gudi Padwa processions, women wear nauvari sarees and men wear kurta-pyjama with a pheta (turban)."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "North India (kanya pujan)",
+        "note": "Halwa, puri and black chana are offered to the girls, who are honoured as forms of the Goddess, along with gifts and dakshina."
+      },
+      {
+        "region": "Households keeping ghatasthapana",
+        "note": "The barley shoots (jau) grown in the clay pot are distributed to devotees as prasad at the end of the festival."
+      },
+      {
+        "region": "Households keeping the kalash",
+        "note": "The coconut from the kalash is commonly made into a sweet, the rice is donated or made into a sweet, and the water is poured on a plant."
+      }
+    ],
     image: '/festivals/chaitra-navratri.jpg',
     name: 'Chaitra Navaratri',
     alsoKnown: 'Vasanta Navaratri, Vasant Navratri, Ram Navratri',
@@ -4564,6 +6930,85 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── PRADOSHA VRATA ─────────────────────────────
   {
     slug: 'pradosh-vrat',
+    history: "The Pradosha vrata is described in the Skanda Purana, in which Sage Shandilya prescribes it to a Brahmin woman, her son and an orphaned prince, who is said to regain his kingdom. A separate account says the gods approached Shiva at twilight on the thirteenth lunar day and found him with Parvati, so that hour is regarded as auspicious. The worship window is traditionally about three hours around sunset. Manuals describe several kinds, from the daily evening Nitya pradosha to Maha Pradosha, which some texts place on a Saturday in the dark fortnight. Today the observance centres on Shiva temples, many of which hold public pradosham worship twice a month.",
+    ritualSteps: [
+      {
+        "when": "Morning",
+        "step": "Take a vow (sankalpa) and begin the fast. Two methods are described: a fast from sunrise to the evening puja, or a 24-hour fast with a night vigil. Those who cannot fast fully keep a partial fast of fruit, water and juices."
+      },
+      {
+        "when": "About an hour before sunset",
+        "step": "Bathe and put on clean clothes before the twilight worship."
+      },
+      {
+        "when": "Pradosha kaal, around sunset",
+        "step": "Worship at a Shiva temple or at home. At home, Shiva is invoked in a kalasha (water pot) set on a lotus mandala and covered with darbha grass, or a Shivalinga or picture of Shiva is used."
+      },
+      {
+        "when": "Pradosha kaal",
+        "step": "Honour Shiva together with Parvati, Ganesha, Kartikeya and Nandi. At temples the Shiva and Nandi images receive abhishekam (ritual bathing)."
+      },
+      {
+        "when": "Pradosha kaal",
+        "step": "Bathe the linga with water and offer bilva (bael) leaves, incense and a lamp. Lighting even a single lamp during pradosha is described as meritorious."
+      },
+      {
+        "when": "Pradosha kaal",
+        "step": "Chant the Maha Mrityunjaya mantra 108 times, or \"Om Namah Shivaya\" if that is not possible."
+      },
+      {
+        "when": "During the puja",
+        "step": "Listen to or read the Pradosha vrata katha, or chapters of the Shiva Purana."
+      },
+      {
+        "when": "Close of the puja",
+        "step": "Perform aarti, take the kalasha or abhishekam water as tirtha and apply sacred ash (vibhuti) to the forehead. Those on the sunrise-to-sunset fast break it after the evening puja."
+      }
+    ],
+    regional: [
+      {
+        "region": "Tamil Nadu temples",
+        "note": "Pradosham at Shiva temples includes abhishekam and lamp worship (deepa aradhana) of the lingam and Nandi, and devotees circle Nandi chanting. Temples named for the observance include Annamalaiyar (Tiruvannamalai), Kapaleeshwarar (Chennai), Meenakshi Sundareswarar (Madurai), Ekambareswarar (Kanchipuram) and the Nataraja temple at Chidambaram."
+      },
+      {
+        "region": "South India",
+        "note": "A festival image of Shiva and Parvati seated on Nandi is taken in procession in some temples."
+      },
+      {
+        "region": "Saturday (Shani or Maha Pradosha)",
+        "note": "Pradosha falling on a Saturday is treated as especially auspicious, and some texts call it Maha Pradosha."
+      }
+    ],
+    foodByRegion: [
+      {
+        "region": "Full fast",
+        "note": "No food through the day; the sunrise-to-sunset fast is broken after the evening puja, while the 24-hour fast with a night vigil runs on until the next morning."
+      },
+      {
+        "region": "Partial fast (all regions)",
+        "note": "Fruit, plain water and fruit juices; sabudana khichdi and sabudana vada are also accepted."
+      },
+      {
+        "region": "Who should not fast fully",
+        "note": "Children, older people, pregnant women and those with health conditions or on serious medication are advised not to keep a complete fast."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "All regions",
+        "note": "Devotees bathe about an hour before sunset; no region-specific costume is associated with the vrata. Many apply vibhuti (sacred ash) on the forehead after the puja."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Temples and homes",
+        "note": "The kalasha or abhishekam water is shared as tirtha, along with vibhuti applied to the forehead."
+      },
+      {
+        "region": "Offerings to Shiva",
+        "note": "Bilva leaves, water, a lamp, incense and food offerings (naivedya) are offered; some texts prescribe a closing gift (dana) of a pot, a cloth and an image of Shiva."
+      }
+    ],
     image: '/festivals/pradosh-vrat.jpg',
     name: 'Pradosha Vrata',
     alsoKnown: 'Pradosham, Pradosh',
@@ -4607,6 +7052,61 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── GAYATRI JAYANTI ─────────────────────────────
   {
     slug: 'gayatri-jayanti',
+    history: "The Gayatri Mantra is found in the Rigveda (Mandala 3, hymn 62, verse 10), addressed to Savitr, the solar deity, and is attributed to the sage Vishvamitra, to whom Mandala 3 is also credited. Teaching it to a young student is an important part of the traditional upanayana ceremony. In the Majjhima Nikaya (92) the Buddha calls Savitri the chief of Vedic metres. In the late twentieth century the All World Gayatri Pariwar, founded by Pt Shriram Sharma Acharya, spread the mantra widely through Gayatri yajnas. Most panchangs place Gayatri Jayanti on Jyeshtha Shukla Ekadashi, the day after Ganga Dussehra; the Gayatri Pariwar marks it with Ganga Dussehra, and another view, which this site follows, places it on Shravana Purnima.",
+    ritualSteps: [
+      {
+        "when": "Early morning",
+        "step": "At Gayatri Chetna Kendras, such as the one at Sanpada, Navi Mumbai, the day begins at about 5:30 am with meditation and aarti."
+      },
+      {
+        "when": "Morning",
+        "step": "Chant the Gayatri Mantra individually or in a group; at the Sanpada Gayatri Temple collective chanting ran until about 9 am."
+      },
+      {
+        "when": "Morning",
+        "step": "Perform a havan (yagya) with the mantra; Gayatri Pariwar centres hold a Panchkundiya Gayatri Mahayagya, and Pariwar families also perform a yagya at home."
+      },
+      {
+        "when": "During the day",
+        "step": "Sanskar ceremonies such as Gayatri Diksha, Yagyopaveet (sacred thread), Annaprashan and Mundan are performed at Gayatri Pariwar centres."
+      },
+      {
+        "when": "Close of the programme",
+        "step": "Take a collective pledge to practise the values of the mantra, then distribute prasad."
+      }
+    ],
+    regional: [
+      {
+        "region": "Haridwar (Uttarakhand)",
+        "note": "Shantikunj, the Gayatri Pariwar headquarters founded by Shriram Sharma Acharya, holds the main celebration, which the Pariwar keeps alongside Ganga Dussehra; it also marks his passing on this day in 1990."
+      },
+      {
+        "region": "Navi Mumbai and Maharashtra",
+        "note": "Gayatri Chetna Kendras, such as the one at Sanpada, hold a morning of collective chanting, a Panchkundiya Gayatri Mahayagya and sanskar ceremonies."
+      },
+      {
+        "region": "Gayatri Pariwar households",
+        "note": "In the 'Gruhe Gruhe Gayatri Yadnya' campaign, begun in 2019, families perform a yagya at home and install a Gayatri image (devsthapna)."
+      }
+    ],
+    foodByRegion: [
+      {
+        "region": "Tamil Nadu and South India",
+        "note": "Where the day coincides with Avani Avittam (upakarma), women prepare a festive vegetarian meal, typically with koottu, avial, paruppu, payasam and appalam."
+      }
+    ],
+    attireByRegion: [
+      {
+        "region": "Tamil Nadu and South India (Avani Avittam)",
+        "note": "Men observing the upakarma wear a veshti and angavastram and change into a new sacred thread (yajnopavita)."
+      }
+    ],
+    prasadByRegion: [
+      {
+        "region": "Sanpada, Navi Mumbai",
+        "note": "Prasad is distributed at the end of the day's programme; no specific items are reported."
+      }
+    ],
     image: '/festivals/gayatri-jayanti.jpg',
     name: 'Gayatri Jayanti',
     alsoKnown: 'Gayatri Japa Day',
@@ -4653,6 +7153,35 @@ export const FESTIVALS: Festival[] = [
   // ───────────────────────────── SRI APPAYYA DIKSHITAR JAYANTI ─────────────────────────────
   {
     slug: 'appayya-jayanti',
+    history: "Appayya Dikshita (Dikshitendra) is dated by many accounts to c. 1520-1593 CE, though Hindupedia gives 1554. He is credited with about a hundred Sanskrit works, among them the Sivarkamanidipika, Parimala, Siddhantaleshasangraha, Kuvalayananda and the devotional Atmarpana Stuti. His patron was Chinna Bomma Nayaka of Vellore, who supported him for nearly three decades; an inscription of 1582 at Adayapalam records Chinna Bomma's endowment of a college of 500 scholars studying the Sivarkamanidipika under him, and an inscription at the Kalakanteshwara temple records an endowment for 500 students. He is said to have died at the Nataraja temple in Chidambaram at about 72 or 73. Jayanti observances are recorded at Adayapalam (2015) and at Sri Sankaragurukulam, Srirangam (2019, with an earlier one noted for 1941).",
+    ritualSteps: [
+      {
+        "when": "Morning",
+        "step": "At some centres a Mrityunjaya homam is performed; the 2019 Jayanti at Sri Sankaragurukulam, Srirangam (Sringeri tradition), opened with one."
+      },
+      {
+        "when": "Through the day",
+        "step": "Devotees hold a parayanam (group recitation) of his works; at Adayapalam in September 2015 one began on the day after the Kanchi Shankaracharya's visit."
+      },
+      {
+        "when": "Afternoon or evening",
+        "step": "Scholars or mutt representatives give a talk on his life and contribution; Srirangam held an evening lecture in 2019 and the Kanchi Shankaracharya spoke at Adayapalam in 2015."
+      },
+      {
+        "when": "Close",
+        "step": "At Adayapalam in 2015 special aarti was offered at the Kalakanteshwara and Ambal shrines and prasadam was blessed for devotees after the talk."
+      }
+    ],
+    regional: [
+      {
+        "region": "Adayapalam, Tamil Nadu",
+        "note": "Traditionally his native village, with the Kalakanteshwara and Ambal temples; in 2015 the Kanchi Shankaracharya arrived the day after the Jayanti, spoke on his role in Vedic and Shastric learning, and was received by descendants, including an 11th-generation member of his line."
+      },
+      {
+        "region": "Srirangam, Tamil Nadu",
+        "note": "Sri Sankaragurukulam, a Sringeri-associated institution, held a Jayanti on 14 October 2019 with a Mrityunjaya homam and an evening lecture; its journal records an earlier Jayanti there on 5 October 1941."
+      }
+    ],
     image: '/festivals/appayya-jayanti.jpg',
     name: 'Sri Appayya Dikshitar Jayanti',
     alsoKnown: 'Appayya Jayanti, Appayya Dikshitendra Jayanti',
