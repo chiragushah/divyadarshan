@@ -75,6 +75,7 @@ const MONTHS = [
     tip: "Rath Yatra in Puri: stay nearby and arrive by 5AM for front-row position.",
     festivals: [
       { name: 'Rath Yatra', temples: 'Puri Jagannath (main), Serampore, Mahesh', desc: "Lord Jagannath chariot procession. Millions pull the rath. One of the most extraordinary sights in India." },
+      { name: 'Gayatri Jayanti', temples: 'Shantikunj Haridwar; Gayatri temples', desc: "Descent of the Gayatri Mantra; mass japa and havan on Jyeshtha Shukla Ekadashi." },
       { name: 'Ashadhi Ekadashi (Wari)', temples: 'Pandharpur Vitthal', desc: "Lakhs of Varkaris walk to Pandharpur singing abhangas." },
     ],
   },
@@ -97,7 +98,6 @@ const MONTHS = [
       { name: 'Teej', temples: 'Parvati temples; Jaipur (Teej Mata)', desc: "Monsoon festival of Parvati. Swings, mehndi and green; women fast for their husbands." },
       { name: 'Pateti', temples: 'Udvada Atash Behram; Parsi agiaries', desc: "Parsi New Year (Navroz). Fire-temple prayers, gara sarees, dhansak." },
       { name: 'Varalakshmi Vratam', temples: 'Ashtalakshmi Chennai, Kolhapur Mahalakshmi', desc: "Married women worship Varalakshmi on the Friday before Shravan Purnima." },
-      { name: 'Gayatri Jayanti', temples: 'Shantikunj Haridwar; Gayatri temples', desc: "Descent of the Gayatri Mantra; mass japa and havan. Also Upakarma (sacred-thread day)." },
     ],
   },
   {
