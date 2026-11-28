@@ -5,14 +5,14 @@ const recipe: PrasadRecipe = {
   name: 'Dalma',
   alsoCalled: 'Dal Ma · Odia Dalma · ଡାଲମା',
   category: 'Savoury',
-  summary: 'Odisha’s temple dal cooked with raw banana, pumpkin and other vegetables, finished with roasted cumin and coconut.',
+  summary: 'Odisha’s everyday and festival dal cooked with raw banana, pumpkin and other vegetables, finished with roasted cumin and coconut. The Puri temple makes its own chilli-free version.',
   meaning:
-    'Dalma is the daily dal of Odisha and one of the central dishes of the Jagannath temple’s Mahaprasad. Toor dal is cooked with chunks of vegetables until both are soft together, then finished with a ghee tempering of cumin, dry red chilli and bay leaf, and with a spoonful of roasted cumin-chilli powder. It is mild, golden, lightly sweet from pumpkin and raw banana, and made entirely without onion, garlic, potato, tomato or cauliflower, following the temple rule that excludes vegetables thought to be foreign to the soil of Odisha.',
+    'Dalma is a staple dal of Odisha, cooked at home for festivals and also offered at the Jagannath temple in Puri, where it is one of the dishes of the Mahaprasad. Dal is cooked with chunks of vegetables until both are soft together, then finished with a ghee tempering of cumin and bay leaf and a spoonful of roasted cumin powder. It is mild, golden and lightly sweet from pumpkin and raw banana, and made without onion, garlic, potato, tomato or cauliflower.\n\nThe recipe given here is the Odia household dalma, which uses dry red chilli and raw papaya. The Puri temple kitchen follows its own permitted-ingredient rules: published accounts say it leaves out chillies and several vegetables (including potato, tomato and cauliflower), so the temple’s dalma is plainer than the home one. If you want to make it temple-style, see the note under Variations.',
   variants: [
     {
       id: 'odisha',
       region: 'Odisha',
-      culture: 'Jagannath temple Mahaprasad and Odia households — Rath Yatra, Ekadashi-free festival days',
+      culture: 'Odia households — Rath Yatra, Nuakhai and festival days (the Puri temple makes a chilli-free version)',
       title: 'Dalma',
       intro:
         'Split toor dal pressure-cooked with raw banana, pumpkin, yam, brinjal and raw papaya, then tempered in ghee with cumin, bay leaf and dry chilli, finished with grated coconut and a pinch of roasted spice powder. It is thick, golden, fragrant and gentle, with no onion or garlic.',
@@ -146,7 +146,7 @@ const recipe: PrasadRecipe = {
       ],
       variations: [
         'Some households add a handful of soaked and crushed chana dal for a firmer, nuttier dalma.',
-        'In a strict temple style, omit hing, coconut and sugar and rely on ghee, cumin and ginger alone.',
+        'For a temple-style dalma, leave out the dry red chillies, the chilli in the dalma masala and the raw papaya, skip the hing, coconut and sugar, and rely on ghee, cumin, bay leaf and ginger alone.',
         'Add drumstick pieces, elephant-foot yam or green papaya in season for a heartier dalma.',
         'A spoon of freshly ground panch phutana (Odia five-spice mix) can replace the plain cumin tempering.',
         'For a fasting day, dalma is generally not eaten as it contains lentils; use vegetables cooked in ghee with rock salt instead.',
