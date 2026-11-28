@@ -77,10 +77,9 @@ export default function SplashScreen() {
           </div>
 
           {/* Logo */}
-          <img src="/dd-logo.png" alt="DivyaDarshanam" style={{
-            height:120,width:'auto',objectFit:'contain',marginBottom:20,
+          <img src="/dd-logo-clean.png" alt="DivyaDarshanam" style={{
+            height:132,width:'auto',objectFit:'contain',marginBottom:20,
             animation:'float 4s ease-in-out infinite',
-            filter:'drop-shadow(0 4px 16px rgba(192,87,10,0.2))',
           }} />
 
           {/* Brand name */}

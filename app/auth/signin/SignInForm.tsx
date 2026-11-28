@@ -180,7 +180,7 @@ export default function SignInForm() {
           {/* LEFT */}
           <div className="left">
             <Link href="/" style={{ display:'flex', alignItems:'center', marginBottom:'2rem', textDecoration:'none' }}>
-              <img src="/dd-logo.png" alt="DivyaDarshanam" style={{ height:120, width:'auto', objectFit:'contain' }} />
+              <img src="/dd-logo-clean.png" alt="DivyaDarshanam" style={{ height:130, width:'auto', objectFit:'contain' }} />
             </Link>
 
             <div className="hero">
@@ -228,7 +228,7 @@ export default function SignInForm() {
             <Link href="/" className="back">← Back to home</Link>
             <div className="form-box">
               <div className="dyn-top">
-                <img src="/dd-logo.png" alt="DivyaDarshanam" />
+                <img src="/dd-logo-clean.png" alt="DivyaDarshanam" />
               </div>
               {pending ? <VerifyNotice email={pending.email} initialWait={pending.wait} onBack={() => { setPending(null); setMode('signup') }} /> : (<>
               <h2 className="form-title">{mode === 'signup' ? 'Begin your yatra' : 'Welcome back'}</h2>
