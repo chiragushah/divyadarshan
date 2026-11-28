@@ -71,24 +71,25 @@ export default function RecipeIndexClient({ dishes, order }: { dishes: IndexDish
             {g.items.map(r => (
               <div key={r.id} className="card" style={{ padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
                 {r.image && (
-                  <Link href={`/festivals/prasad/${r.id}${r.vs.length < r.variants.length ? `?v=${r.vs[0].id}` : ''}`} style={{ display: 'block', lineHeight: 0 }} aria-label={r.name}>
+                  <Link href={`/festivals/prasad/${r.id}${r.vs.length < r.variants.length ? `?v=${r.vs[0].id}` : ''}`} style={{ display: 'block', lineHeight: 0, position: 'relative' }} aria-label={r.name}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={r.image} alt={`${r.name} (illustrative image)`} loading="lazy" style={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', display: 'block' }} />
+                    <span style={{ position: 'absolute', left: 8, bottom: 8, lineHeight: 1.2, fontSize: 10.5, color: '#fff', background: 'rgba(0,0,0,0.55)', borderRadius: 100, padding: '3px 8px' }}>Illustrative image</span>
                   </Link>
                 )}
                 <div style={{ padding: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <Link href={`/festivals/prasad/${r.id}${r.vs.length < r.variants.length ? `?v=${r.vs[0].id}` : ''}`} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <ChefHat size={16} style={{ color: 'var(--crimson)', flexShrink: 0 }} />
-                  <span className="font-serif" style={{ fontSize: 19, fontWeight: 600, color: 'var(--ink)' }}>{r.name}</span>
-                </Link>
-                <p style={{ fontSize: 13.5, color: 'var(--muted)', lineHeight: 1.55, margin: 0 }}>{r.summary}</p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 4 }}>
-                  {r.vs.map(v => (
-                    <Link key={v.id} href={`/festivals/prasad/${r.id}?v=${v.id}`} style={{ textDecoration: 'none', fontSize: 11.5, fontWeight: 600, color: 'var(--crimson)', background: '#8B1A1A12', border: '1px solid #8B1A1A33', borderRadius: 100, padding: '2px 9px' }}>
-                      {v.region.split(' (')[0]}
-                    </Link>
-                  ))}
-                </div>
+                  <Link href={`/festivals/prasad/${r.id}${r.vs.length < r.variants.length ? `?v=${r.vs[0].id}` : ''}`} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <ChefHat size={16} style={{ color: 'var(--crimson)', flexShrink: 0 }} />
+                    <span className="font-serif" style={{ fontSize: 19, fontWeight: 600, color: 'var(--ink)' }}>{r.name}</span>
+                  </Link>
+                  <p style={{ fontSize: 13.5, color: 'var(--muted)', lineHeight: 1.55, margin: 0 }}>{r.summary}</p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 4 }}>
+                    {r.vs.map(v => (
+                      <Link key={v.id} href={`/festivals/prasad/${r.id}?v=${v.id}`} style={{ textDecoration: 'none', fontSize: 11.5, fontWeight: 600, color: 'var(--crimson)', background: '#8B1A1A12', border: '1px solid #8B1A1A33', borderRadius: 100, padding: '2px 9px' }}>
+                        {v.region.split(' (')[0]}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}

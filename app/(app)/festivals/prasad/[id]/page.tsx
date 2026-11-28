@@ -81,9 +81,9 @@ export default function PrasadRecipePage({ params, searchParams }: Props) {
 
       <div className="max-w-5xl mx-auto px-6 py-8">
         {prasadImage(recipe.id) && (
-          <figure style={{ margin: '-26px 0 24px', position: 'relative', zIndex: 1 }}>
+          <figure style={{ margin: '0 auto 24px', maxWidth: 760 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={prasadImage(recipe.id)!} alt={`${recipe.name} (illustrative image)`} style={{ width: '100%', maxHeight: 440, objectFit: 'cover', borderRadius: 14, display: 'block', boxShadow: '0 8px 28px rgba(0,0,0,0.18)' }} />
+            <img src={prasadImage(recipe.id)!} alt={`${recipe.name} (illustrative image)`} style={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', borderRadius: 14, display: 'block', boxShadow: '0 8px 28px rgba(0,0,0,0.18)' }} />
             <figcaption style={{ fontSize: 12, color: 'var(--muted2)', marginTop: 6 }}>Illustrative image, not a photograph of a specific temple offering.</figcaption>
           </figure>
         )}
