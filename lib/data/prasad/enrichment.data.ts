@@ -2185,5 +2185,194 @@ export const VARIANT_INFO: Record<string, VariantInfo> = {
     ],
     "fasting": "Suitable for most fasts as it uses no grain, pulse or regular salt, but check the ghee, jaggery and poppy seeds. Dry ginger, coconut, nuts and jaggery are commonly accepted in vrat.",
     "diabetic": "Jaggery and coconut make it sugar and fat dense even in a small portion. Keep to one spoonful or small piece, and eat it after a meal rather than alone; the ginger does not offset the sugar."
+  },
+  "pana/odisha-adhara-pana": {
+    "nutrition": {
+      "portion": "1 glass (about 200 ml), one-tenth of the recipe",
+      "kcal": 273,
+      "carbs_g": 48.6,
+      "protein_g": 6.9,
+      "fat_g": 6.2,
+      "sugar_g": 35.5
+    },
+    "fasting": "Not for a grain-free fast: it contains parched rice and roasted chickpea flour. Fine for a milk-and-fruit fast only if you leave those two out.",
+    "diabetic": "High in sugar (about 35 g a glass) from sugar, fruit and khoya. A half glass is plenty; make it with less sugar since the fruit already sweetens it.",
+    "allergens": [
+      "Milk"
+    ]
+  },
+  "khaja/bihar-silao": {
+    "nutrition": {
+      "portion": "1 piece (about 40 g), one-twentieth of the batch",
+      "kcal": 179,
+      "carbs_g": 26.7,
+      "protein_g": 2.1,
+      "fat_g": 7.2,
+      "sugar_g": 12.6
+    },
+    "fasting": "Wheat flour, so not suitable for Ekadashi or Navratri fasts that avoid grains.",
+    "diabetic": "A syrup-soaked, deep-fried sweet; one piece is a full portion. Have it after a meal, not on its own.",
+    "allergens": [
+      "Gluten (wheat)",
+      "Milk"
+    ]
+  },
+  "khaja/andhra-madatha-kaja": {
+    "nutrition": {
+      "portion": "1 piece (about 20 g), one-twentieth of the batch",
+      "kcal": 91,
+      "carbs_g": 13.3,
+      "protein_g": 1.1,
+      "fat_g": 3.9,
+      "sugar_g": 6.0
+    },
+    "fasting": "Wheat flour, so not suitable for grain-free fasts.",
+    "diabetic": "Syrup-coated and fried: keep to one small piece, with a meal.",
+    "allergens": [
+      "Gluten (wheat)",
+      "Milk"
+    ]
+  },
+  "laddu/gujarat-churma": {
+    "nutrition": {
+      "portion": "1 laddu (about 60 g), one-twelfth of the batch",
+      "kcal": 314,
+      "carbs_g": 36.8,
+      "protein_g": 4.1,
+      "fat_g": 17.3,
+      "sugar_g": 15.2
+    },
+    "fasting": "Made with whole wheat, so not for grain-free fasts.",
+    "diabetic": "Jaggery and ghee make it dense: about 15 g sugar and 310 kcal a laddu. Half a laddu is a sensible share.",
+    "allergens": [
+      "Gluten (wheat)",
+      "Milk",
+      "Tree nuts (almond, cashew)"
+    ]
+  },
+  "narkel-naru-sandesh/assam-narikol-laru": {
+    "nutrition": {
+      "portion": "1 laru (about 20 g), one-fifteenth of the batch",
+      "kcal": 76,
+      "carbs_g": 8.7,
+      "protein_g": 0.4,
+      "fat_g": 4.7,
+      "sugar_g": 7.5
+    },
+    "fasting": "Coconut and sugar only, so it suits fasts that allow sugar and coconut. Leave out the ghee if you avoid dairy.",
+    "diabetic": "Small and mostly sugar and coconut; one laru is about 7 g of sugar.",
+    "allergens": [
+      "Milk"
+    ]
+  },
+  "diwali-faral/goa-godshe-fov": {
+    "nutrition": {
+      "portion": "1 small bowl of the dry (kalayle) fov, one-fifth of the batch (about 50 g)",
+      "kcal": 126,
+      "carbs_g": 23.2,
+      "protein_g": 1.5,
+      "fat_g": 3.1,
+      "sugar_g": 9.0
+    },
+    "fasting": "Made with flattened rice (a grain), so not for grain-free fasts.",
+    "diabetic": "Jaggery-sweet; the dry version is lighter than the coconut-milk-style one. A small bowl is the portion.",
+    "allergens": [
+      "Tree nuts (coconut)"
+    ]
+  },
+  "diwali-faral/goa-tikshe-fov": {
+    "nutrition": {
+      "portion": "1/4 cup (about 45 g), one-fourteenth of the batch",
+      "kcal": 224,
+      "carbs_g": 24.8,
+      "protein_g": 3.3,
+      "fat_g": 13.0,
+      "sugar_g": 15.7
+    },
+    "fasting": "Contains flattened rice, chana dal and peanuts, so not for grain-free fasts.",
+    "diabetic": "A fried snack with a hot-jaggery coating; a quarter cup is the realistic portion.",
+    "allergens": [
+      "Peanuts",
+      "Sesame",
+      "Tree nuts (coconut)"
+    ]
+  },
+  "sunthavda/dry-powder-janmashtami": {
+    "nutrition": {
+      "portion": "1 small spoonful (about 10 g), one-seventeenth of the batch",
+      "kcal": 47,
+      "carbs_g": 6.4,
+      "protein_g": 0.7,
+      "fat_g": 2.5,
+      "sugar_g": 4.4
+    },
+    "fasting": "Made with nuts, seeds, dry ginger and sugar, with no grain or pulse, so it generally fits fasts that allow dry fruits; check that your fast allows sugar.",
+    "diabetic": "Mostly nuts and seeds with a little sugar: about 4 g sugar a spoonful. A spoonful at a time is traditional.",
+    "allergens": [
+      "Tree nuts (almond, cashew)",
+      "Sesame"
+    ],
+    "jain": "Dry ginger is a root-derived spice; Jain households that avoid it can substitute extra cardamom and fennel."
+  },
+  "labra/bangladesh": {
+    "nutrition": {
+      "portion": "1 serving (about 250 g), one-eighth of the recipe",
+      "kcal": 139,
+      "carbs_g": 16.1,
+      "protein_g": 2.8,
+      "fat_g": 7.9,
+      "sugar_g": 7.2
+    },
+    "fasting": "Contains root vegetables and mixed vegetables; not for fasts that avoid them.",
+    "diabetic": "A vegetable dish with little sugar; the ghee adds most of the calories.",
+    "allergens": [
+      "Mustard (panch phoron)"
+    ],
+    "jain": "Radish, carrot, sweet potato, ginger and other roots are used; Jain households would need to skip those."
+  },
+  "dalma/odisha-habisa-kartika": {
+    "nutrition": {
+      "portion": "1 serving (about 350 g), one-fifth of the recipe",
+      "kcal": 275,
+      "carbs_g": 36.1,
+      "protein_g": 8.5,
+      "fat_g": 11.5,
+      "sugar_g": 2.0
+    },
+    "fasting": "Contains moong dal and vegetables; the Habisa month is its own vegetarian discipline, not a grain-free vrat.",
+    "diabetic": "Low in sugar. Dal and tubers raise blood sugar slowly; keep the rice portion beside it small.",
+    "allergens": [
+      "Milk"
+    ],
+    "jain": "Uses taro, yam, raw banana and ginger (roots and tubers); not suitable as written for Jain households."
+  },
+  "gopalkala/karnataka-mosaru-avalakki": {
+    "nutrition": {
+      "portion": "1 serving (about 220 g), roughly one-third of the recipe",
+      "kcal": 215,
+      "carbs_g": 26.4,
+      "protein_g": 5.7,
+      "fat_g": 9.9,
+      "sugar_g": 6.3
+    },
+    "fasting": "Poha is a grain, so it suits the Janmashtami feast, not a grain-free fast.",
+    "diabetic": "Curd and poha: moderate carbs, very little sugar. Fresh curd adds protein.",
+    "allergens": [
+      "Milk",
+      "Tree nuts (cashew)"
+    ]
+  },
+  "tahiri-akha/kashmiri-pandit-tahar": {
+    "nutrition": {
+      "portion": "1 serving (about 250 g cooked rice), one-fourth of the recipe",
+      "kcal": 329,
+      "carbs_g": 58.5,
+      "protein_g": 5.2,
+      "fat_g": 7.9,
+      "sugar_g": 0.0
+    },
+    "fasting": "Rice is a grain; not for grain-free fasts.",
+    "diabetic": "Plain rice with turmeric; the carbohydrate load is that of rice, so keep to a normal bowl.",
+    "jain": "Turmeric is a rhizome, so this is not suitable for Jain households as written."
   }
 }

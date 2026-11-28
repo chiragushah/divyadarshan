@@ -41,7 +41,7 @@ export const DIET: Record<string, DietTag[]> = {
   'gujiya/maharashtra-karanji': ['jain', 'no-onion-garlic'],
   'panjiri/braj-dhaniya': ['jain', 'vrat', 'no-onion-garlic'],
   'panjiri/punjab-atta': ['jain', 'no-onion-garlic'],
-  'makhan-mishri/braj': ['jain', 'vrat', 'no-onion-garlic'],
+  'makhan-mishri/braj': ['vrat', 'no-onion-garlic'],
   'tilgul/maharashtra-ladoo': ['jain', 'vrat', 'no-onion-garlic'],
   'tilgul/gujarat-chikki': ['jain', 'vrat', 'no-onion-garlic'],
   'tilgul/karnataka-ellu-bella': ['jain', 'vegan', 'no-onion-garlic'],
