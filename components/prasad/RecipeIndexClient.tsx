@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ChefHat, Search } from 'lucide-react'
 import type { DietTag } from '@/lib/data/prasad/diet'
 
-export interface IndexDish { id: string; name: string; summary: string; category: string; variants: { id: string; region: string; tags: DietTag[] }[] }
+export interface IndexDish { id: string; image?: string | null; name: string; summary: string; category: string; variants: { id: string; region: string; tags: DietTag[] }[] }
 
 const FILTERS: { id: DietTag; label: string; hint: string }[] = [
   { id: 'jain', label: 'Jain-friendly', hint: 'No onion, garlic, root vegetables, fresh ginger or honey' },
@@ -69,7 +69,14 @@ export default function RecipeIndexClient({ dishes, order }: { dishes: IndexDish
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(290px, 1fr))', gap: 16 }}>
             {g.items.map(r => (
-              <div key={r.id} className="card" style={{ padding: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
+              <div key={r.id} className="card" style={{ padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                {r.image && (
+                  <Link href={`/festivals/prasad/${r.id}${r.vs.length < r.variants.length ? `?v=${r.vs[0].id}` : ''}`} style={{ display: 'block', lineHeight: 0 }} aria-label={r.name}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={r.image} alt={`${r.name} (illustrative image)`} loading="lazy" style={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', display: 'block' }} />
+                  </Link>
+                )}
+                <div style={{ padding: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
                 <Link href={`/festivals/prasad/${r.id}${r.vs.length < r.variants.length ? `?v=${r.vs[0].id}` : ''}`} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
                   <ChefHat size={16} style={{ color: 'var(--crimson)', flexShrink: 0 }} />
                   <span className="font-serif" style={{ fontSize: 19, fontWeight: 600, color: 'var(--ink)' }}>{r.name}</span>
@@ -81,6 +88,7 @@ export default function RecipeIndexClient({ dishes, order }: { dishes: IndexDish
                       {v.region.split(' (')[0]}
                     </Link>
                   ))}
+                </div>
                 </div>
               </div>
             ))}

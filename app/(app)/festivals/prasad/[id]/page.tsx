@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { ArrowLeft, ChefHat, Clock, Users, Flame, Lightbulb, MapPin, Scale, BookOpen, Wrench, ListChecks, AlertTriangle, Shuffle, Archive, UtensilsCrossed, Eye, Landmark, Leaf } from 'lucide-react'
 import { FESTIVALS, getFestival } from '@/lib/data/festivals'
 import { PRASAD_RECIPES, getRecipe, getVariant, festivalsFor, recipeHref } from '@/lib/data/prasad'
+import { prasadImage } from '@/lib/data/prasad/images'
 import { dietFor, DIET_LABEL } from '@/lib/data/prasad/diet'
 import { shlokasFor } from '@/lib/data/prasad/shlokas'
 import { dishInfo, variantInfo } from '@/lib/data/prasad/enrichment'
@@ -79,8 +80,16 @@ export default function PrasadRecipePage({ params, searchParams }: Props) {
       </div>
 
       <div className="max-w-5xl mx-auto px-6 py-8">
+        {prasadImage(recipe.id) && (
+          <figure style={{ margin: '-26px 0 24px', position: 'relative', zIndex: 1 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={prasadImage(recipe.id)!} alt={`${recipe.name} (illustrative image)`} style={{ width: '100%', maxHeight: 440, objectFit: 'cover', borderRadius: 14, display: 'block', boxShadow: '0 8px 28px rgba(0,0,0,0.18)' }} />
+            <figcaption style={{ fontSize: 12, color: 'var(--muted2)', marginTop: 6 }}>Illustrative image, not a photograph of a specific temple offering.</figcaption>
+          </figure>
+        )}
+
         {/* Why it differs */}
-        <div className="card card-p" style={{ marginTop: -26, marginBottom: 24 }}>
+        <div className="card card-p" style={{ marginTop: prasadImage(recipe.id) ? 0 : -26, marginBottom: 24 }}>
           <h2 className="font-serif" style={{ fontSize: 20, fontWeight: 600, marginBottom: 8 }}>Why this prasad is made differently</h2>
           <p style={{ fontSize: 15, color: 'var(--ink2)', lineHeight: 1.8, margin: 0 }}>{recipe.meaning}</p>
         </div>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { PRASAD_RECIPES } from '@/lib/data/prasad'
+import { prasadImage } from '@/lib/data/prasad/images'
 import type { RecipeCategory } from '@/lib/data/prasad/types'
 import { dietFor } from '@/lib/data/prasad/diet'
 import RecipeIndexClient from '@/components/prasad/RecipeIndexClient'
@@ -24,7 +25,7 @@ const ORDER: RecipeCategory[] = [
 
 export default function PrasadIndexPage() {
   const total = PRASAD_RECIPES.reduce((a, r) => a + r.variants.length, 0)
-  const dishes = PRASAD_RECIPES.map(r => ({ id: r.id, name: r.name, summary: r.summary, category: r.category as string, variants: r.variants.map(v => ({ id: v.id, region: v.region, tags: dietFor(r.id, v.id) })) }))
+  const dishes = PRASAD_RECIPES.map(r => ({ id: r.id, image: prasadImage(r.id), name: r.name, summary: r.summary, category: r.category as string, variants: r.variants.map(v => ({ id: v.id, region: v.region, tags: dietFor(r.id, v.id) })) }))
 
   return (
     <div>
